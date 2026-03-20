@@ -20,7 +20,7 @@ services:
     logging: *default-logging
 
   fluxer_server:
-    image: ${FLUXER_SERVER_IMAGE:-ghcr.io/fluxerapp/fluxer-server:stable}
+    image: ${FLUXER_SERVER_IMAGE:-ghcr.io/rdchatru/rdchat-server:latest}
     container_name: fluxer_server
     restart: unless-stopped
     init: true
