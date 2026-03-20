@@ -129,3 +129,4 @@ volumes:
   fluxer_data:
   meilisearch_data:
   elasticsearch_data:
+  nats_storage:
