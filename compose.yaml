@@ -5,6 +5,25 @@ x-logging: &default-logging
     max-file: '5'
 
 services:
+  fluxer-nats-core:
+    image: nats:2.10-alpine
+    container_name: fluxer-nats-core
+    restart: unless-stopped
+    ports:
+      - "4222:4222"
+      - "8222:8222"
+    logging: *default-logging
+
+  fluxer-nats-jetstream:
+    image: nats:2.10-alpine
+    container_name: fluxer-nats-jetstream
+    restart: unless-stopped
+    command: ["-js"]
+    ports:
+      - "4223:4222" # Mapped to 4223 to avoid conflict with core if on same host
+    volumes:
+      - nats_storage:/data
+    logging: *default-logging
   valkey:
     image: valkey/valkey:8.0.6-alpine
     container_name: valkey
