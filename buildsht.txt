@@ -1,0 +1,5 @@
+docker build \
+  -t ghcr.io/rdchatru/rdchat-server:latest \
+  --build-arg BASE_DOMAIN="fluxer.yourdomain.com" \
+  --build-arg FLUXER_CDN_ENDPOINT="" \
+  -f fluxer_server/Dockerfile .

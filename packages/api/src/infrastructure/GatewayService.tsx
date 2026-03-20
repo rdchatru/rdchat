@@ -261,28 +261,28 @@ export class GatewayService {
 			this.circuitBreakerOpenUntilMs = 0;
 			return false;
 		}
-		this.rejectAllPendingRequests(new ServiceUnavailableError('Gateway circuit breaker open'));
+		new ServiceUnavailableError({ message: 'Gateway circuit breaker open' })
 		return true;
 	}
 
-	private rejectAllPendingRequests(error: Error): void {
-		this.pendingGuildDataRequests.forEach((requests) => {
-			requests.forEach((req) => req.reject(error));
-		});
-		this.pendingGuildDataRequests.clear();
+	// private rejectAllPendingRequests(error: Error): void {
+	// 	this.pendingGuildDataRequests.forEach((requests) => {
+	// 		requests.forEach((req) => req.reject(error));
+	// 	});
+	// 	this.pendingGuildDataRequests.clear();
 
-		this.pendingGuildMemberRequests.forEach((requests) => {
-			requests.forEach((req) => req.reject(error));
-		});
-		this.pendingGuildMemberRequests.clear();
+	// 	this.pendingGuildMemberRequests.forEach((requests) => {
+	// 		requests.forEach((req) => req.reject(error));
+	// 	});
+	// 	this.pendingGuildMemberRequests.clear();
 
-		this.pendingPermissionRequests.forEach((requests) => {
-			requests.forEach((req) => req.reject(error));
-		});
-		this.pendingPermissionRequests.clear();
+	// 	this.pendingPermissionRequests.forEach((requests) => {
+	// 		requests.forEach((req) => req.reject(error));
+	// 	});
+	// 	this.pendingPermissionRequests.clear();
 
-		this.pendingBatchRequestCount = 0;
-	}
+	// 	this.pendingBatchRequestCount = 0;
+	// }
 
 	private recordCircuitBreakerSuccess(): void {
 		this.circuitBreakerConsecutiveFailures = 0;
