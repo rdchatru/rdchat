@@ -3,18 +3,18 @@ ARG BUILD_NUMBER
 ARG BUILD_TIMESTAMP
 ARG RELEASE_CHANNEL=nightly
 
-FROM node:24-alpine AS base
+FROM node:24-slim AS base
 
 WORKDIR /usr/src/app
 
 RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
 
-# Added --no-cache to avoid storing the apk index in the image layer
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
         python3 \
         make \
-        g++
+        g++ \
+        && rm -rf /var/lib/apt/lists/*
 
 FROM base AS deps
 
@@ -78,7 +78,6 @@ RUN pnpm install --frozen-lockfile
 
 RUN pnpm approve-builds msgpackr-extract@3.0.3 @parcel/watcher@2.5.6
 
-# Rebuilding is especially important on Alpine so native modules compile against musl libc
 RUN pnpm rebuild msgpackr-extract @parcel/watcher
 
 FROM deps AS build
@@ -95,22 +94,23 @@ COPY fluxer_media_proxy/data/model.onnx ./fluxer_media_proxy/data/model.onnx
 
 RUN cd fluxer_server && pnpm typecheck
 
-FROM erlang:28-alpine AS gateway-build
+FROM erlang:28-slim AS gateway-build
 
 ARG LOGGER_LEVEL=info
 
 WORKDIR /usr/src/app/gateway
 
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         git \
         curl \
         make \
         gcc \
         g++ \
-        musl-dev \
+        libc6-dev \
         ca-certificates \
-        gettext \
-        bash
+        gettext-base \
+        bash \
+        && rm -rf /var/lib/apt/lists/*
 
 RUN curl -fsSL https://github.com/erlang/rebar3/releases/download/3.24.0/rebar3 -o /usr/local/bin/rebar3 && \
         chmod +x /usr/local/bin/rebar3
@@ -125,17 +125,18 @@ RUN LOGGER_LEVEL=${LOGGER_LEVEL} envsubst '${LOGGER_LEVEL}' < fluxer_gateway/con
 
 FROM deps AS app-build
 
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     ca-certificates \
-    pkgconf \
-    openssl-dev
+    pkg-config \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y --default-toolchain 1.93.0 --target wasm32-unknown-unknown
 ENV PATH="/root/.cargo/bin:${PATH}"
 RUN cargo install wasm-pack
 
 COPY tsconfigs /usr/src/app/tsconfigs
-
+COPY scripts/ ./scripts/ 
 COPY packages/ ./packages/
 COPY fluxer_app/ ./fluxer_app/
 
@@ -149,16 +150,16 @@ ENV FLUXER_CONFIG=/tmp/fluxer-build-config.json
 ENV FLUXER_CDN_ENDPOINT=${FLUXER_CDN_ENDPOINT}
 RUN cd fluxer_app && pnpm lingui:compile && CARGO_BUILD_JOBS=1 pnpm build
 
-FROM node:24-alpine AS production
+FROM node:24-slim AS production
 
 ARG BUILD_SHA
 ARG BUILD_NUMBER
 ARG BUILD_TIMESTAMP
 ARG RELEASE_CHANNEL
 
-LABEL org.opencontainers.image.title="Fluxer Server"
-LABEL org.opencontainers.image.description="Unified Fluxer server for self-hosting - combines all backend services into a single deployable container"
-LABEL org.opencontainers.image.vendor="Fluxer Contributors"
+LABEL org.opencontainers.image.title="RdChat Server"
+LABEL org.opencontainers.image.description="Unified RdChat server for self-hosting - combines all backend services into a single deployable container"
+LABEL org.opencontainers.image.vendor="RdChat Contributors"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later"
 LABEL org.opencontainers.image.source="https://github.com/fluxerapp/fluxer"
 LABEL org.opencontainers.image.documentation="https://docs.fluxer.app"
@@ -168,9 +169,10 @@ LABEL org.opencontainers.image.created="${BUILD_TIMESTAMP}"
 
 WORKDIR /usr/src/app
 
-RUN apk add --no-cache \
+RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
-        ffmpeg
+        ffmpeg \
+        && rm -rf /var/lib/apt/lists/*
 
 RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
 
@@ -194,7 +196,7 @@ RUN mkdir -p /usr/src/app/data/storage && \
         chown -R root:root /opt/data && \
         chown -R root:root /data
 
-ARG INCLUDE_NSFW_ML=false
+ARG INCLUDE_NSFW_ML=true
 
 RUN --mount=type=bind,from=build,source=/usr/src/app/fluxer_media_proxy/data/model.onnx,target=/tmp/model.onnx \
     if [ "$INCLUDE_NSFW_ML" = "true" ]; then \
