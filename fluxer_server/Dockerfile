@@ -89,6 +89,7 @@ RUN pnpm --filter @fluxer/config generate
 COPY fluxer_server/ ./fluxer_server/
 
 RUN pnpm --filter @fluxer/marketing build:css
+RUN pnpm --filter @fluxer/admin build:css
 
 COPY fluxer_media_proxy/data/model.onnx ./fluxer_media_proxy/data/model.onnx
 
@@ -148,7 +149,7 @@ RUN sed -i "s/chat\.example\.com/${BASE_DOMAIN}/g" /tmp/fluxer-build-config.json
 ARG FLUXER_CDN_ENDPOINT=""
 ENV FLUXER_CONFIG=/tmp/fluxer-build-config.json
 ENV FLUXER_CDN_ENDPOINT=${FLUXER_CDN_ENDPOINT}
-RUN cd fluxer_app && pnpm lingui:compile && CARGO_BUILD_JOBS=1 pnpm build
+RUN cd fluxer_app && pnpm lingui:compile && CARGO_BUILD_JOBS=4 pnpm build
 
 FROM node:24-slim AS production
 
