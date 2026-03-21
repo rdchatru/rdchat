@@ -78,8 +78,9 @@ export function withModifiedTime(meta: PageMeta, isoDatetime: string): PageMeta 
 }
 
 export function formatPageTitle(baseTitle: string): string {
-	if (baseTitle === 'Fluxer') return 'Fluxer';
-	return `Fluxer | ${baseTitle}`;
+	// if (baseTitle === 'Fluxer') return 'Fluxer';
+	// return `Fluxer | ${baseTitle}`;
+	return "RdChat";
 }
 
 export function buildMetaTags(ctx: MarketingContext, meta: PageMeta, pageUrl: string): ReadonlyArray<JSX.Element> {
@@ -89,7 +90,7 @@ export function buildMetaTags(ctx: MarketingContext, meta: PageMeta, pageUrl: st
 
 	return [
 		<meta name="description" content={meta.description} />,
-		<meta property="og:site_name" content="Fluxer" />,
+		<meta property="og:site_name" content="RdChat" />,
 		<meta property="og:locale" content={ogLocale} />,
 		<meta property="og:title" content={meta.title} />,
 		<meta property="og:description" content={meta.description} />,
