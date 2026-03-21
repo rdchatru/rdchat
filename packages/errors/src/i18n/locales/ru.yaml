@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Неподт
 usernames_and_tags.username_invalid_characters: Имя пользователя может содержать только латинские буквы (a-z, A-Z), цифры (0-9) и подчеркивания (_).
 usernames_and_tags.username_length_invalid: Имя пользователя должно быть длиной от {min} до {max} символов.
 usernames_and_tags.username_not_available: Это имя пользователя недоступно.
-usernames_and_tags.username_reserved_terms: Имя пользователя не может содержать "RdChat" или "system message".
+usernames_and_tags.username_reserved_terms: Имя пользователя не может содержать "fluxer" или "system message".
 usernames_and_tags.username_reserved_value: Имя пользователя не может быть "everyone" или "here".
 vanity_urls.vanity_url_already_taken: Этот vanity URL уже занят.
 vanity_urls.vanity_url_code_already_taken: Этот код vanity URL уже занят.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Код vanity URL не может содержать "RdChat".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Код vanity URL не может содержать "fluxer".
 vanity_urls.vanity_url_code_length_invalid: Код vanity URL должен быть длиной от {min} до {max} символов.
 vanity_urls.vanity_url_invalid_characters: Vanity URL может содержать только строчные латинские буквы (a-z), цифры (0-9) и дефисы (-).
 webhooks.cannot_modify_system_webhook: Нельзя редактировать системные сообщения.

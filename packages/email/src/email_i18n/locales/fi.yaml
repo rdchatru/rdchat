@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: RdChat-tilisi on tilapäisesti lukittu
+  subject: Fluxer-tilisi on tilapäisesti lukittu
   body: |-
     Hei {username},
 
-    RdChat-tilisi on tilapäisesti lukittu epäilyttävän toiminnan vuoksi.
+    Fluxer-tilisi on tilapäisesti lukittu epäilyttävän toiminnan vuoksi.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Jos uskot, että kyseessä on virhe, ota yhteyttä tukitiimiimme.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 account_scheduled_deletion:
-  subject: RdChat-tilisi poistetaan pysyvästi
+  subject: Fluxer-tilisi poistetaan pysyvästi
   body: |-
     Hei {username},
 
-    RdChat-tilisi on ajastettu poistettavaksi pysyvästi, koska olet rikkonut käyttöehtojamme tai yhteisön sääntöjä.
+    Fluxer-tilisi on ajastettu poistettavaksi pysyvästi, koska olet rikkonut käyttöehtojamme tai yhteisön sääntöjä.
 
     Poistopäivä: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Yhteisön säännöt: {guidelinesUrl}
 
     Valitus:
-    Jos uskot, että päätös on väärä tai perusteeton, voit tehdä valituksen 60 päivän kuluessa. Lähetä valitus osoitteeseen appeals@RdChat.app tästä sähköpostiosoitteesta.
+    Jos uskot, että päätös on väärä tai perusteeton, voit tehdä valituksen 60 päivän kuluessa. Lähetä valitus osoitteeseen appeals@fluxer.app tästä sähköpostiosoitteesta.
 
     Valituksessa:
     - Kerro selkeästi, miksi uskot päätöksen olevan väärä tai perusteeton
     - Liitä mukaan mahdollinen lisätieto ja todisteet
 
-    RdChatin turvallisuustiimin jäsen käsittelee valituksesi ja voi keskeyttää poiston, kunnes lopullinen päätös on tehty.
+    Fluxerin turvallisuustiimin jäsen käsittelee valituksesi ja voi keskeyttää poiston, kunnes lopullinen päätös on tehty.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 account_temp_banned:
-  subject: RdChat-tilillesi on asetettu tilapäinen käyttökielto
+  subject: Fluxer-tilillesi on asetettu tilapäinen käyttökielto
   body: |-
     Hei {username},
 
-    RdChat-tilillesi on asetettu tilapäinen käyttökielto, koska olet rikkonut käyttöehtojamme tai yhteisön sääntöjä.
+    Fluxer-tilillesi on asetettu tilapäinen käyttökielto, koska olet rikkonut käyttöehtojamme tai yhteisön sääntöjä.
 
     Kesto: {durationHours, plural,
       =1 {1 tunti}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Käyttöehdot: {termsUrl}
     - Yhteisön säännöt: {guidelinesUrl}
 
-    Jos uskot, että päätös on väärä tai perusteeton, voit tehdä valituksen osoitteeseen appeals@RdChat.app tästä sähköpostiosoitteesta. Kerro selkeästi, miksi uskot päätöksen olevan väärä. Käsittelemme valituksesi ja vastaamme lopullisella päätöksellämme.
+    Jos uskot, että päätös on väärä tai perusteeton, voit tehdä valituksen osoitteeseen appeals@fluxer.app tästä sähköpostiosoitteesta. Kerro selkeästi, miksi uskot päätöksen olevan väärä. Käsittelemme valituksesi ja vastaamme lopullisella päätöksellämme.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 donation_confirmation:
-  subject: Kiitos RdChat-lahjoituksestasi
+  subject: Kiitos Fluxer-lahjoituksestasi
   body: |-
     Hei,
 
-    Kiitos lahjoituksestasi RdChatille! {interval, select,
+    Kiitos lahjoituksestasi Fluxerille! {interval, select,
       month {Toistuva lahjoituksesi}
       year {Toistuva lahjoituksesi}
       other {Kertamaksusi}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Tukesi pitää RdChatin toiminnassa. Kiitos!
+    Tukesi pitää Fluxerin toiminnassa. Kiitos!
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 donation_magic_link:
-  subject: Hallinnoi RdChat-lahjoituksiasi
+  subject: Hallinnoi Fluxer-lahjoituksiasi
   body: |-
     Hei,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Jos et pyytänyt tätä linkkiä, voit turvallisesti jättää tämän viestin huomiotta.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 dsa_report_verification:
   subject: Vahvista sähköpostiosoitteesi DSA-ilmoitusta varten
   body: |-
     Hei,
 
-    Käytä alla olevaa koodia lähettääksesi Digital Services Actin (DSA) mukaisen ilmoituksen RdChatissa:
+    Käytä alla olevaa koodia lähettääksesi Digital Services Actin (DSA) mukaisen ilmoituksen Fluxerissa:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Jos et pyytänyt tätä, voit jättää tämän viestin huomiotta.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 email_change_new:
-  subject: Vahvista uusi RdChat-sähköpostiosoitteesi
+  subject: Vahvista uusi Fluxer-sähköpostiosoitteesi
   body: |-
     Hei {username},
 
-    Syötä tämä koodi sovellukseen vahvistaaksesi uuden RdChat-sähköpostiosoitteesi:
+    Syötä tämä koodi sovellukseen vahvistaaksesi uuden Fluxer-sähköpostiosoitteesi:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Jos et pyytänyt tätä, voit jättää tämän viestin huomiotta.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 email_change_original:
-  subject: Vahvista RdChat-sähköpostiosoitteen vaihto
+  subject: Vahvista Fluxer-sähköpostiosoitteen vaihto
   body: |-
     Hei {username},
 
-    Saimme pyynnön vaihtaa RdChat-tilisi sähköpostiosoitteen.
+    Saimme pyynnön vaihtaa Fluxer-tilisi sähköpostiosoitteen.
 
     Vahvista vaihto syöttämällä tämä koodi sovellukseen:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Jos et pyytänyt tätä, suojaa tilisi heti.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 email_change_revert:
-  subject: RdChat-sähköpostiosoitteesi vaihdettiin
+  subject: Fluxer-sähköpostiosoitteesi vaihdettiin
   body: |-
     Hei {username},
 
-    RdChat-tilisi sähköpostiosoite vaihdettiin osoitteeseen {newEmail}.
+    Fluxer-tilisi sähköpostiosoite vaihdettiin osoitteeseen {newEmail}.
 
     Jos teit muutoksen itse, sinun ei tarvitse tehdä mitään. Jos et, voit perua muutoksen ja suojata tilisi tämän linkin kautta:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Tämä palauttaa aiemman sähköpostiosoitteesi, kirjaa sinut ulos kaikilta laitteilta, poistaa liitetyt puhelinnumerot, poistaa monivaiheisen tunnistautumisen käytöstä ja edellyttää uuden salasanan asettamista.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 email_verification:
-  subject: Vahvista RdChat-sähköpostiosoitteesi
+  subject: Vahvista Fluxer-sähköpostiosoitteesi
   body: |-
     Hei {username},
 
-    Vahvista RdChat-tilisi sähköpostiosoite klikkaamalla alla olevaa linkkiä:
+    Vahvista Fluxer-tilisi sähköpostiosoite klikkaamalla alla olevaa linkkiä:
 
     {verifyUrl}
 
-    Jos et luonut RdChat-tiliä, voit huoletta jättää tämän viestin huomiotta.
+    Jos et luonut Fluxer-tiliä, voit huoletta jättää tämän viestin huomiotta.
 
     Linkki on voimassa 24 tuntia.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 gift_chargeback_notification:
   subject: Lunastamasi lahjan edut on poistettu
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Jos uskot, että kyseessä on virhe, ota yhteyttä tukitiimiimme ja liitä mukaan kaikki tiedot, jotka sinulla on lahjakoodista ja siitä, milloin lunastit sen.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 harvest_completed:
-  subject: RdChat-tietojesi vienti on valmis ladattavaksi
+  subject: Fluxer-tietojesi vienti on valmis ladattavaksi
   body: |-
     Hei {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Jos et pyytänyt tätä vientiä, vaihda salasanasi heti ja ota yhteyttä tukitiimiimme.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 inactivity_warning:
-  subject: RdChat-tilisi poistetaan käyttämättömyyden vuoksi
+  subject: Fluxer-tilisi poistetaan käyttämättömyyden vuoksi
   body: |-
     Hei {username},
 
-    Emme ole havainneet toimintaa RdChat-tililläsi sitten {lastActiveDate, date, full}.
+    Emme ole havainneet toimintaa Fluxer-tililläsi sitten {lastActiveDate, date, full}.
 
     Jos et kirjaudu sisään viimeistään {deletionDate, date, full} klo {deletionDate, time, short}, tilisi poistetaan pysyvästi käyttämättömyyden vuoksi.
 
     Kirjaudu sisään täällä:
     {loginUrl}
 
-    Jos olet käyttänyt RdChatia hiljattain, ota yhteyttä tukitiimiimme heti.
+    Jos olet käyttänyt Fluxeria hiljattain, ota yhteyttä tukitiimiimme heti.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 ip_authorization:
   subject: Hyväksy kirjautuminen uudesta IP-osoitteesta
   body: |-
     Hei {username},
 
-    Huomasimme kirjautumisyrityksen RdChat-tilillesi uudesta IP-osoitteesta:
+    Huomasimme kirjautumisyrityksen Fluxer-tilillesi uudesta IP-osoitteesta:
 
     IP-osoite: {ipAddress}
     Sijainti: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Tämä vahvistuslinkki on voimassa 30 minuuttia.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 password_change_verification:
-  subject: Vahvista RdChat-salasanan vaihto
+  subject: Vahvista Fluxer-salasanan vaihto
   body: |-
     Hei {username},
 
-    Saimme pyynnön vaihtaa RdChat-tilisi salasanan.
+    Saimme pyynnön vaihtaa Fluxer-tilisi salasanan.
 
     Vahvista vaihto syöttämällä tämä koodi sovellukseen:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Jos et pyytänyt tätä, jonkun saattaa olla pääsy tilillesi. Vaihda salasanasi heti ja ota käyttöön monivaiheinen tunnistautuminen.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 password_reset:
-  subject: Nollaa RdChat-salasanasi
+  subject: Nollaa Fluxer-salasanasi
   body: |-
     Hei {username},
 
-    Pyysit RdChat-salasanan nollausta. Aseta uusi salasana alla olevasta linkistä:
+    Pyysit Fluxer-salasanan nollausta. Aseta uusi salasana alla olevasta linkistä:
 
     {resetUrl}
 
@@ -292,22 +292,22 @@ password_reset:
 
     Linkki on voimassa 1 tunnin.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 registration_approved:
-  subject: RdChat-rekisteröintisi on hyväksytty
+  subject: Fluxer-rekisteröintisi on hyväksytty
   body: |-
     Hei {username},
 
-    Hyviä uutisia: RdChat-rekisteröintisi on hyväksytty.
+    Hyviä uutisia: Fluxer-rekisteröintisi on hyväksytty.
 
-    Voit nyt kirjautua RdChat-sovellukseen täällä:
+    Voit nyt kirjautua Fluxer-sovellukseen täällä:
     {channelsUrl}
 
-    Tervetuloa RdChat-yhteisöön.
+    Tervetuloa Fluxer-yhteisöön.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 report_resolved:
-  subject: RdChat-ilmoituksesi on käsitelty
+  subject: Fluxer-ilmoituksesi on käsitelty
   body: |-
     Hei {username},
 
@@ -316,17 +316,17 @@ report_resolved:
     Turvallisuustiimin vastaus:
     {publicComment}
 
-    Kiitos, että autat pitämään RdChatin turvallisena kaikille. Suhtaudumme kaikkiin ilmoituksiin vakavasti ja arvostamme panostasi yhteisöön.
+    Kiitos, että autat pitämään Fluxerin turvallisena kaikille. Suhtaudumme kaikkiin ilmoituksiin vakavasti ja arvostamme panostasi yhteisöön.
 
-    Jos sinulla on kysyttävää tai huolia tästä lopputuloksesta, ota yhteyttä osoitteeseen safety@RdChat.app.
+    Jos sinulla on kysyttävää tai huolia tästä lopputuloksesta, ota yhteyttä osoitteeseen safety@fluxer.app.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 scheduled_deletion_notification:
-  subject: RdChat-tilisi poistetaan pysyvästi
+  subject: Fluxer-tilisi poistetaan pysyvästi
   body: |-
     Hei {username},
 
-    RdChat-tilisi on ajastettu poistettavaksi pysyvästi.
+    Fluxer-tilisi on ajastettu poistettavaksi pysyvästi.
 
     Poistopäivä: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     Tämä on vakava toimenpide. Tilisi tiedot poistetaan pysyvästi ilmoitettuna ajankohtana.
 
-    Jos uskot, että päätös on väärä, voit tehdä valituksen osoitteeseen appeals@RdChat.app tästä sähköpostiosoitteesta.
+    Jos uskot, että päätös on väärä, voit tehdä valituksen osoitteeseen appeals@fluxer.app tästä sähköpostiosoitteesta.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi
 self_deletion_scheduled:
-  subject: RdChat-tilisi poisto on ajastettu
+  subject: Fluxer-tilisi poisto on ajastettu
   body: |-
     Hei {username},
 
-    Pyysit RdChat-tilisi poistamista. Tilisi poistetaan pysyvästi seuraavana ajankohtana:
+    Pyysit Fluxer-tilisi poistamista. Tilisi poistetaan pysyvästi seuraavana ajankohtana:
 
     {deletionDate, date, full} klo {deletionDate, time, short}
 
     Jos et pyytänyt tätä, kirjaudu sisään tilillesi peruuttaaksesi poiston. Suosittelemme myös vaihtamaan salasanasi tilisi suojaamiseksi.
 
-    – RdChat-tiimi
+    – Fluxer-tiimi
 unban_notification:
-  subject: RdChat-tilisi käyttökielto on poistettu
+  subject: Fluxer-tilisi käyttökielto on poistettu
   body: |-
     Hei {username},
 
-    Hyviä uutisia: RdChat-tilisi käyttökielto on poistettu.
+    Hyviä uutisia: Fluxer-tilisi käyttökielto on poistettu.
 
     {reason, select,
       null {}
       other {Syy: {reason}}
     }
 
-    Voit nyt kirjautua takaisin tilillesi ja jatkaa RdChatin käyttöä normaalisti.
+    Voit nyt kirjautua takaisin tilillesi ja jatkaa Fluxerin käyttöä normaalisti.
 
-    – RdChatin turvallisuustiimi
+    – Fluxerin turvallisuustiimi

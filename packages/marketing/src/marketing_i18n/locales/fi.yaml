@@ -2,7 +2,7 @@ app.communities.community: Yhteisö
 app.communities.community_support: Yhteisötuki
 app.communities.featured_in_discovery: Esillä Löydä-osiossa
 app.communities.moderation.actions_and_tools: Moderointitoiminnot ja työkalut
-app.communities.moderation.report_people_or_communities: Ilmianna ihmiset tai yhteisöt, jotta RdChat pysyy turvallisena kaikille.
+app.communities.moderation.report_people_or_communities: Ilmianna ihmiset tai yhteisöt, jotta Fluxer pysyy turvallisena kaikille.
 app.communities.moderation.tools: Moderointityökalut
 app.communities.roles_permissions_audit.audit_logs: Auditointilokit läpinäkyvyyteen
 app.communities.roles_permissions_audit.granular_roles_and_permissions: Tarkat roolit ja oikeudet
@@ -19,7 +19,7 @@ app.customization.custom_css_themes: Omat CSS-teemat
 app.customization.custom_sounds.entrance_sounds: Omat liittymisäänet
 app.customization.custom_sounds.notification_sounds: Omat ilmoitusäänet
 app.customization.custom_sounds.set_personalized_join_sounds: Aseta omat äänet, kun liityt äänikanaville, jotta kaikki huomaa että olet paikalla.
-app.customization.custom_sounds.upload_custom_notification_sounds: Lataa ja käytä omia ilmoitusääniä, jotta RdChat tuntuu enemmän omalta.
+app.customization.custom_sounds.upload_custom_notification_sounds: Lataa ja käytä omia ilmoitusääniä, jotta Fluxer tuntuu enemmän omalta.
 app.customization.custom_themes: Omat teemat
 app.customization.global_emoji_and_sticker_access: Emoji- ja tarrapaketit kaikkialla
 app.customization.saved_media_and_css: Lisää omia emojeja, tallenna mediaa myöhemmäksi ja muokkaa sovelluksen tyyliä omalla CSS:llä.
@@ -40,7 +40,7 @@ app.messaging.features.search.label: Hae viestihistoriasta
 app.messaging.features.search.quick_switcher_shortcuts: Pikavaihto pikanäppäimillä
 app.messaging.features.search.search_and_quick_switcher: Haku ja pikavaihto
 app.messaging.title: Viestintä
-app.open.open_fluxer: Avaa RdChat
+app.open.open_fluxer: Avaa Fluxer
 app.open.open_web_app: Avaa verkkosovellus
 app.profiles_identity.custom_identity: Oma identiteetti
 app.profiles_identity.customise_per_community: Muokkaa profiiliasi eri tavalla jokaisessa yhteisössä, jossa olet mukana.
@@ -62,18 +62,18 @@ beta_and_access.early_access.label: Varhainen pääsy
 beta_and_access.featured_benefit_line: Kaikki perusjutut joita odotat, ja lisäksi muutama juttu jota et.
 beta_and_access.public_beta: Julkinen beta
 beta_and_access.registration_limited_during_beta: Rajoitamme rekisteröitymisiä betan aikana. Kun pääset sisään, voit antaa kavereille koodin jonon ohittamiseen.
-beta_and_access.try_without_email: Kokeile RdChatia ilman sähköpostia 30 sekunnissa
-community_funding_and_roles.focused_on_product: Tällä hetkellä keskitymme tekemään loistavan tuotteen ja pitämään RdChatin itsenäisenä ja bootstrappattuna.
+beta_and_access.try_without_email: Kokeile Fluxeria ilman sähköpostia 30 sekunnissa
+community_funding_and_roles.focused_on_product: Tällä hetkellä keskitymme tekemään loistavan tuotteen ja pitämään Fluxerin itsenäisenä ja bootstrappattuna.
 community_funding_and_roles.future_paid_roles_heading: Maksullisten roolien tulevaisuus
-community_funding_and_roles.future_paid_roles_note: Rakennamme yhä liiketoimintaa RdChatin ympärille, emmekä ole ihan valmiita maksullisiin rooleihin vielä.
-community_funding_and_roles.non_paid_recurring_role: Ei-maksullinen rooli toistuville avustajille, jotka auttavat muovaamaan RdChatia ydintiimin kanssa.
+community_funding_and_roles.future_paid_roles_note: Rakennamme yhä liiketoimintaa Fluxerin ympärille, emmekä ole ihan valmiita maksullisiin rooleihin vielä.
+community_funding_and_roles.non_paid_recurring_role: Ei-maksullinen rooli toistuville avustajille, jotka auttavat muovaamaan Fluxeria ydintiimin kanssa.
 community_funding_and_roles.sustainability_note: Tuellasi toivomme tekevämme tästä itsenäisestä viestintäalustasta kestävän ja voivamme alkaa tarjoamaan maksullisia rooleja tulevaisuudessa.
 company_and_resources.blog: Blogi
-company_and_resources.careers.careers_at_fluxer: Urat RdChatilla
+company_and_resources.careers.careers_at_fluxer: Urat Fluxerilla
 company_and_resources.careers.label: Urat
-company_and_resources.careers.share_a_bit_about_yourself: Kerro vähän itsestäsi ja siitä, miten haluaisit osallistua – laita viesti osoitteeseen careers@RdChat.app
-company_and_resources.community_team.fluxer_community_team: RdChatin yhteisötiimi
-company_and_resources.community_team.share_feedback_report_bugs: Jaa palautetta, ilmoita bugeista ja auta tekemään RdChatista kaikille tervetullut.
+company_and_resources.careers.share_a_bit_about_yourself: Kerro vähän itsestäsi ja siitä, miten haluaisit osallistua – laita viesti osoitteeseen careers@fluxer.app
+company_and_resources.community_team.fluxer_community_team: Fluxerin yhteisötiimi
+company_and_resources.community_team.share_feedback_report_bugs: Jaa palautetta, ilmoita bugeista ja auta tekemään Fluxerista kaikille tervetullut.
 company_and_resources.company: Yritys
 company_and_resources.company_info: Yritystiedot
 company_and_resources.connect: Yhteys
@@ -89,31 +89,31 @@ company_and_resources.source_and_contribution.code_issues_docs_reviews: Koodi, i
 company_and_resources.source_and_contribution.contribute_code: Osallistu koodilla
 company_and_resources.source_and_contribution.contribute_on_github: Osallistu GitHubissa
 company_and_resources.source_and_contribution.fix_bugs_ship_features: Korjaa bugeja, julkaise ominaisuuksia tai viimeistele käyttökokemus päärepossamme.
-company_and_resources.source_and_contribution.fluxer_built_in_open: RdChatia rakennetaan avoimesti. Valitse tapa, joka sopii siihen, miten haluat auttaa.
+company_and_resources.source_and_contribution.fluxer_built_in_open: Fluxeria rakennetaan avoimesti. Valitse tapa, joka sopii siihen, miten haluat auttaa.
 company_and_resources.source_and_contribution.get_involved: Osallistu
 company_and_resources.source_and_contribution.source_code: Lähdekoodi
-company_and_resources.source_and_contribution.translation.help_translate: Auta kääntämään RdChat ja sen dokumentaatio, jotta se tuntuu aidosti omalta kaikkialla.
+company_and_resources.source_and_contribution.translation.help_translate: Auta kääntämään Fluxer ja sen dokumentaatio, jotta se tuntuu aidosti omalta kaikkialla.
 company_and_resources.source_and_contribution.translation.label: Käännökset ja lokalisointi
-company_and_resources.source_and_contribution.translation.llm_translation_note: Kaikki käännökset ovat tällä hetkellä LLM:n tekemiä ja niitä on tarkistettu vain kevyesti. Olisi hienoa saada oikeita ihmisiä auttamaan RdChatin lokalisoinnissa kielellesi. Lähetä viesti osoitteeseen i18n@RdChat.app, niin otamme mielellämme vastaan panoksesi.
+company_and_resources.source_and_contribution.translation.llm_translation_note: Kaikki käännökset ovat tällä hetkellä LLM:n tekemiä ja niitä on tarkistettu vain kevyesti. Olisi hienoa saada oikeita ihmisiä auttamaan Fluxerin lokalisoinnissa kielellesi. Lähetä viesti osoitteeseen i18n@fluxer.app, niin otamme mielellämme vastaan panoksesi.
 company_and_resources.source_and_contribution.translation.localization_label: Lokalisointi
 company_and_resources.source_and_contribution.view_repository: Näytä repositorio
-company_and_resources.source_and_contribution.want_to_help_build_fluxer: Haluatko auttaa rakentamaan RdChatia?
+company_and_resources.source_and_contribution.want_to_help_build_fluxer: Haluatko auttaa rakentamaan Fluxeria?
 company_and_resources.source_and_contribution.ways_to_contribute: Tapoja osallistua
 donations.business: Yritys
 donations.donate.action: Lahjoita
-donations.donate.label: Lahjoita RdChatille
-donations.donate.description: Tue RdChatia kertaoriantolla tai toistuvalla lahjoituksella
+donations.donate.label: Lahjoita Fluxerille
+donations.donate.description: Tue Fluxeria kertaoriantolla tai toistuvalla lahjoituksella
 donations.donation_disclaimer: Lahjoitukset ovat vapaaehtoisia lahjoja, eivätkä ne anna sinulle mitään tuotetta, palvelua, omistusta tai erityisoikeuksia. Jos etsit premium-ominaisuuksia, katso {0}.
 donations.individual: Yksityishenkilö
 donations.individual_vs_business.answer: Molemmat lahjoitustyypit tukevat samaa asiaa yhtä paljon. Ainoa ero on, että yrityslahjoituksissa voit antaa verotunnisteen (tarvittaessa) ja saat lopuksi PDF-laskun, mikä voi helpottaa yrityksen kirjanpitoa.
 donations.individual_vs_business.question: Mitä eroa on Yksityishenkilöllä ja Yrityksellä?
-donations.infrastructure_costs_detail: Lahjoituksesi auttaa kattamaan RdChatin infrastruktuurikustannuksia, kuten palvelimet, kaistanleveyden, tallennustilan ja uusien ominaisuuksien jatkuvan kehityksen. Se auttaa meitä pitämään alustan kunnossa ja parantamaan sitä kaikille.
+donations.infrastructure_costs_detail: Lahjoituksesi auttaa kattamaan Fluxerin infrastruktuurikustannuksia, kuten palvelimet, kaistanleveyden, tallennustilan ja uusien ominaisuuksien jatkuvan kehityksen. Se auttaa meitä pitämään alustan kunnossa ja parantamaan sitä kaikille.
 donations.minimum_donation: 'Minimilahjoitus: $5 / €5'
 donations.mobile_roadmap_sponsorship: Sponsoroi mobiilin tiekarttaa
 donations.send_one_time_gift: Lähetä kertalahja
 donations.support_future_development: Tue tulevaa kehitystä
 donations.support_message: Auta meitä rakentamaan riippumaton viestintäalusta. Lahjoituksesi rahoittaa alustan infrastruktuuria ja kehitystä.
-donations.tax_deductible.answer: Lahjoitukset RdChatille eivät ole tällä hetkellä verotuksessa vähennyskelpoisia, mutta ne rahoittavat suoraan infrastruktuuriamme ja jatkuvaa kehitystämme.
+donations.tax_deductible.answer: Lahjoitukset Fluxerille eivät ole tällä hetkellä verotuksessa vähennyskelpoisia, mutta ne rahoittavat suoraan infrastruktuuriamme ja jatkuvaa kehitystämme.
 donations.tax_deductible.question: Voinko vähentää lahjoituksen verotuksessa?
 donations.what_it_supports: Mitä lahjoitukseni tukee?
 donations.why_support: Auta meitä rakentamaan erilainen viestintäalusta – avoimen lähdekoodin, yhteisörahoitteinen ja huolella tehty.
@@ -148,8 +148,8 @@ donations.success.message: Kiitos lahjoituksestasi! Arvostamme todella tukeasi.
 donations.success.email_notice: Saat pian vahvistussähköpostin lahjoituksesi tiedoilla ja linkin lahjoittajaportaaliisi.
 donations.success.back_to_donate: Takaisin lahjoitussivulle
 download.download: Lataa
-download.download_app_or_open_in_browser: Lataa sovellus tai avaa RdChat selaimessa ja ala yhdistää yhteisöihisi.
-download.download_fluxer: Lataa RdChat
+download.download_app_or_open_in_browser: Lataa sovellus tai avaa Fluxer selaimessa ja ala yhdistää yhteisöihisi.
+download.download_fluxer: Lataa Fluxer
 download.download_for_prefix: 'Lataa kohteelle '
 download.open_in_browser: Avaa selaimessa
 download.screenshots_courtesy_of: 'Kuvakaappaukset: '
@@ -159,8 +159,8 @@ footer.company_information: Yritystiedot
 footer.connect: Yhteys
 footer.donate: Lahjoita
 footer.download: Lataa
-footer.fluxer: RdChat
-footer.fluxer_platform_ab_swedish_limited: '© RdChat Platform AB (ruotsalainen osakeyhtiö: 559537-3993)'
+footer.fluxer: Fluxer
+footer.fluxer_platform_ab_swedish_limited: '© Fluxer Platform AB (ruotsalainen osakeyhtiö: 559537-3993)'
 footer.help_support_an_independent_communication: Tue itsenäistä viestintäalustaa. Lahjoituksesi rahoittavat alustan infrastruktuurin ja kehityksen.
 footer.partners: Partnerit
 footer.plutonium_tier: Plutonium-taso
@@ -218,8 +218,8 @@ languages.list.thai: Thai
 languages.list.turkish: Turkki
 languages.list.ukrainian: Ukraina
 languages.list.vietnamese: Vietnam
-launch.description: Tutustu RdChatin kehittäjään, projektin tavoitteisiin, käytettäviin tekniikoihin ja tulevaisuuden suunnitelmiin.
-launch.heading: Tarina RdChatin takana
+launch.description: Tutustu Fluxerin kehittäjään, projektin tavoitteisiin, käytettäviin tekniikoihin ja tulevaisuuden suunnitelmiin.
+launch.heading: Tarina Fluxerin takana
 launch.read_more: Lue julkaisublogipostaus
 launch.view_full_roadmap: Näytä koko tiekartta
 misc_labels.design_and_branding: Suunnittelu ja brändäys
@@ -229,12 +229,12 @@ misc_labels.exclusive_features: Eksklusiiviset ominaisuudet
 misc_labels.feature: Ominaisuus
 misc_labels.get_updates: Saat päivitykset, näe tulevat ominaisuudet, keskustele ehdotuksista ja chattaa tiimin kanssa.
 misc_labels.join_and_spread_word: Liity ja levitä sanaa
-misc_labels.join_fluxer_community_contribute: Liity RdChat-yhteisöön ja auta rakentamaan viestinnän tulevaisuutta avoimen lähdekoodin ja yhteisön panoksen kautta.
-misc_labels.join_fluxer_hq: Liity RdChat HQ:hun
+misc_labels.join_fluxer_community_contribute: Liity Fluxer-yhteisöön ja auta rakentamaan viestinnän tulevaisuutta avoimen lähdekoodin ja yhteisön panoksen kautta.
+misc_labels.join_fluxer_hq: Liity Fluxer HQ:hun
 misc_labels.join_multiple_devices: Liity usealta laitteelta samaan aikaan
-misc_labels.join_team_behind_fluxer: Liity RdChatin tekijöiden tiimiin
+misc_labels.join_team_behind_fluxer: Liity Fluxerin tekijöiden tiimiin
 misc_labels.learn_more: Lue lisää
-misc_labels.product_hunt_badge_title: RdChat – avoimen lähdekoodin Discord-tyylinen pikaviesti- ja VoIP-alusta | Product Huntin top postaus
+misc_labels.product_hunt_badge_title: Fluxer – avoimen lähdekoodin Discord-tyylinen pikaviesti- ja VoIP-alusta | Product Huntin top postaus
 misc_labels.profile_badge: Profiilimerkki
 misc_labels.read_the_guide: Lue opas
 misc_labels.ready_to_get_started: Valmis aloittamaan?
@@ -253,11 +253,11 @@ navigation.on_this_page: Tällä sivulla
 navigation.page_not_found.description: Tätä sivua ei ole. Mutta löydettävää riittää lisää.
 navigation.page_not_found.title: Sivua ei löytynyt
 navigation.press.download_assets_intro: Lataa logot, tutustu brändiväreihin ja ota yhteyttä lehdistötiimiimme.
-navigation.press.download_fluxer_assets: Lataa RdChatin logot ja brändimateriaalit ja ota yhteyttä lehdistötiimiimme
+navigation.press.download_fluxer_assets: Lataa Fluxerin logot ja brändimateriaalit ja ota yhteyttä lehdistötiimiimme
 navigation.press.press_and_brand_assets: Lehdistö ja brändimateriaalit
-partner_program.become_partner.apply_email: Hae osoitteessa partners@RdChat.app
+partner_program.become_partner.apply_email: Hae osoitteessa partners@fluxer.app
 partner_program.become_partner.call_to_action: Hae partneriksi
-partner_program.become_partner.heading: Ryhdy RdChat-partneriksi
+partner_program.become_partner.heading: Ryhdy Fluxer-partneriksi
 partner_program.become_partner.if_youre_a_creator_or: Jos olet sisällöntuottaja tai pyörität isoa yhteisöä, kuulisimme mielellämme sinusta.
 partner_program.become_partner.learn_about_partners: Tutustu partnereihin
 partner_program.become_partner.learn_more: Lue lisää
@@ -266,12 +266,12 @@ partner_program.description: Eksklusiivisia etuja ja hyötyjä sisällöntuottaj
 partner_program.label: Partnerit
 partner_program.perks.creator_monetization.description: Varhainen pääsy ansaintaominaisuuksiin ja pienemmät alustamaksut kuin ei-partnereilla.
 partner_program.perks.creator_monetization.label: Tekijän ansainta
-partner_program.perks.custom_vanity_url.description: Saat eksklusiivisen vanity-URLin, kuten RdChat.gg/yourcommunity.
+partner_program.perks.custom_vanity_url.description: Saat eksklusiivisen vanity-URLin, kuten fluxer.gg/yourcommunity.
 partner_program.perks.custom_vanity_url.label: Oma vanity-URL
-partner_program.perks.direct_team_access.description: Liity eksklusiiviseen Partners-yhteisöön, jossa saat suoran yhteyden RdChat-tiimiin.
+partner_program.perks.direct_team_access.description: Liity eksklusiiviseen Partners-yhteisöön, jossa saat suoran yhteyden Fluxer-tiimiin.
 partner_program.perks.direct_team_access.label: Suora pääsy tiimiin
 partner_program.perks.discovery_visibility: Saat lisää näkyvyyttä, kun yhteisösi nostetaan esiin löydettävyydessä.
-partner_program.perks.exclusive_merch.description: Saat vain RdChat Partnerille tarkoitettua merchia ja swagia.
+partner_program.perks.exclusive_merch.description: Saat vain Fluxer Partnerille tarkoitettua merchia ja swagia.
 partner_program.perks.exclusive_merch.label: Eksklusiivinen merch
 partner_program.perks.free_plutonium.description: Saat Plutoniumin ilmaiseksi tilillesi ja kaikki premium-ominaisuudet käyttöön.
 partner_program.perks.free_plutonium.label: Ilmainen Plutonium
@@ -284,20 +284,20 @@ partner_program.perks.vip_voice_servers.label: VIP-äänikanavat
 partner_program.requirements.audience_description: Lyhyt kuvaus yleisöstäsi ja siitä mitä teet
 partner_program.requirements.links_to_content: Linkit sisältöösi tai yhteisöösi (YouTube, Twitch, Discord jne.)
 partner_program.requirements.name_and_username: Nimesi ja käyttäjänimesi alustalla
-partner_program.requirements.usage_plan: Miten aiot käyttää RdChatia yhteisösi kanssa
+partner_program.requirements.usage_plan: Miten aiot käyttää Fluxeria yhteisösi kanssa
 partner_program.who_its_for: 'Sisällöntuottajille ja yhteisöjen omistajille: avaa eksklusiivisia etuja, kuten ilmainen Plutonium, Partner-merkki, omat vanity-URLit ja paljon muuta.'
 partner_program.perks.heading: Partnerin edut
 partner_program.perks.see_perks: Katso edut
-partner_program.apply.instructions: Lähetä meille sähköposti seuraavilla tiedoilla hakeaksesi RdChat Partner -ohjelmaan.
+partner_program.apply.instructions: Lähetä meille sähköposti seuraavilla tiedoilla hakeaksesi Fluxer Partner -ohjelmaan.
 partner_program.apply.response_time: Käymme läpi kaikki hakemukset ja vastaamme muutamassa päivässä.
 platform_support.desktop.available_on_desktop_and_web: Saatavilla työpöydällä ja verkossa
-platform_support.desktop.download_desktop_intro: Lataa RdChat Windowsille, macOS:lle ja Linuxille. Mobiilisovellukset ovat työn alla.
-platform_support.desktop.interface_label: RdChatin työpöytänäkymä
+platform_support.desktop.download_desktop_intro: Lataa Fluxer Windowsille, macOS:lle ja Linuxille. Mobiilisovellukset ovat työn alla.
+platform_support.desktop.interface_label: Fluxerin työpöytänäkymä
 platform_support.desktop.label: Työpöytä
 platform_support.desktop.use_desktop_client_mobile_soon: Käytä työpöytäsovellusta (mobiili tulossa pian)
-platform_support.mobile.install_as_app.add_to_home: Lisää RdChat aloitusnäyttöön, niin selaimen käyttöliittymä piiloutuu.
-platform_support.mobile.install_as_app.done_desktop: Valmista! Nyt voit avata RdChatin kuin tavallisen ohjelman.
-platform_support.mobile.install_as_app.done_mobile: Valmista! Nyt voit avata RdChatin aloitusnäytöltä.
+platform_support.mobile.install_as_app.add_to_home: Lisää Fluxer aloitusnäyttöön, niin selaimen käyttöliittymä piiloutuu.
+platform_support.mobile.install_as_app.done_desktop: Valmista! Nyt voit avata Fluxerin kuin tavallisen ohjelman.
+platform_support.mobile.install_as_app.done_mobile: Valmista! Nyt voit avata Fluxerin aloitusnäytöltä.
 platform_support.mobile.install_as_app.guides.in_chrome: ' Chromessa'
 platform_support.mobile.install_as_app.guides.in_chrome_or_another_browser: ' Chromessa tai muussa PWA-tukea tarjoavassa selaimessa'
 platform_support.mobile.install_as_app.guides.in_safari: ' Safarissa'
@@ -309,11 +309,11 @@ platform_support.mobile.install_as_app.guides.steps.press_install_button_address
 platform_support.mobile.install_as_app.guides.steps.press_install_in_popup: 'Paina avautuvassa ponnahdusikkunassa "Asenna"'
 platform_support.mobile.install_as_app.guides.steps.press_more_menu: 'Paina oikean yläkulman "Lisää" (⋮) -nappia'
 platform_support.mobile.install_as_app.guides.steps.press_share_button: Paina jakamispainiketta (suorakulmio, josta osoittaa nuoli ylös)
-platform_support.mobile.install_as_app.install_fluxer_as_app: Asenna RdChat sovellukseksi
+platform_support.mobile.install_as_app.install_fluxer_as_app: Asenna Fluxer sovellukseksi
 platform_support.mobile.install_as_app.title: Miten asennat sovellukseksi
-platform_support.mobile.interface_label: RdChatin mobiilinäkymä
+platform_support.mobile.interface_label: Fluxerin mobiilinäkymä
 platform_support.mobile.mobile_apps_underway: Mobiilisovellukset ovat työn alla
-platform_support.mobile.mobile_browser_explainer: Rakennamme sovelluksia iOS:lle ja Androidille. Kunnes ne ovat valmiita, RdChat toimii mobiiliselaimessa, ja olemme panostaneet siihen että se tuntuu mahdollisimman paljon sovellukselta.
+platform_support.mobile.mobile_browser_explainer: Rakennamme sovelluksia iOS:lle ja Androidille. Kunnes ne ovat valmiita, Fluxer toimii mobiiliselaimessa, ja olemme panostaneet siihen että se tuntuu mahdollisimman paljon sovellukselta.
 platform_support.mobile.not_full_replacement_yet: Tämä ei vielä korvaa työpöytäsovellusta täysin, ja osa niistä jutuista joita mobiilichatilta odottaisit puuttuu vielä.
 platform_support.mobile.push_notifications: Saat push-ilmoitukset, kun olet pois sovelluksesta.
 platform_support.platforms.android.apk: APK
@@ -339,7 +339,7 @@ press_branding.assets.label: Logo
 press_branding.assets.logo_variants.black_logo: Musta logo
 press_branding.assets.logo_variants.color_logo: Värilogo
 press_branding.assets.logo_variants.white_logo: Valkoinen logo
-press_branding.assets.palette_description: Huolellisesti valittu väripaletti, joka edustaa RdChat-brändiä.
+press_branding.assets.palette_description: Huolellisesti valittu väripaletti, joka edustaa Fluxer-brändiä.
 press_branding.assets.premium_quality: Premium-laatu
 press_branding.assets.primary_brand_color_description: Pääbrändivärimme. Käytä tätä tärkeissä brändielementeissä ja korostuksissa.
 press_branding.assets.symbol_variants.black_symbol: Musta symboli
@@ -355,7 +355,7 @@ press_branding.assets.usage_guidance.symbol_description: Erillinen symboli. Käy
 press_branding.colors.blue_da_ba_dee: Blue Da Ba Dee
 press_branding.colors.white: Valkoinen
 press_branding.colors.black: Musta
-press_branding.contact.story_prompt: Onko sinulla story RdChatista? Haluaisimme kuulla sen.
+press_branding.contact.story_prompt: Onko sinulla story Fluxerista? Haluaisimme kuulla sen.
 press_branding.contact.response_time: Vastaamme yleensä 24 tunnin sisällä.
 pricing_and_tiers.billing.forever: Ikuisesti
 pricing_and_tiers.billing.most_popular: Suosituin
@@ -368,7 +368,7 @@ pricing_and_tiers.free.comparison_label: Ilmainen vs Plutonium
 pricing_and_tiers.free.everything_in_free_plus: 'Kaikki Ilmaisessa, ja lisäksi:'
 pricing_and_tiers.free.full_access_to_all_features: Täysi pääsy kaikkiin ominaisuuksiin
 pricing_and_tiers.free.label: Ilmainen
-pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Huom: Plutonium- ja Visionary-edut koskevat vain virallista RdChat.app-instanssia, eivät kolmannen osapuolen tai itsehostattuja instansseja.'
+pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Huom: Plutonium- ja Visionary-edut koskevat vain virallista Fluxer.app-instanssia, eivät kolmannen osapuolen tai itsehostattuja instansseja.'
 pricing_and_tiers.plutonium.feature_highlights: 500 Mt lataukset, 4 000 merkin viestit, 300 kirjanmerkkiä, 50 emojipakettia ja paljon muuta.
 pricing_and_tiers.plutonium.features.bio_character_limit: Bion merkkiraja
 pricing_and_tiers.plutonium.features.choose_custom_4_digit_tag: Valitse mikä tahansa saatavilla oleva 4-numeroinen tunniste väliltä #0001–#9999 ja tee käyttäjänimestä todella ainutlaatuinen.
@@ -383,7 +383,7 @@ pricing_and_tiers.plutonium.features.message_scheduling: Viestien ajastus
 pricing_and_tiers.plutonium.features.per_community_profiles: Yhteisökohtaiset profiilit
 pricing_and_tiers.plutonium.features.saved_media: Tallennettu media
 pricing_and_tiers.plutonium.features.webhooks_and_bot_support: Webhookit ja bottituki
-pricing_and_tiers.plutonium.get_more_with_plutonium: Saat enemmän RdChat Plutoniumilla
+pricing_and_tiers.plutonium.get_more_with_plutonium: Saat enemmän Fluxer Plutoniumilla
 pricing_and_tiers.plutonium.get_plutonium: Hanki Plutonium
 pricing_and_tiers.plutonium.higher_limits_and_early_access: Korkeammat rajat, eksklusiiviset ominaisuudet ja varhainen pääsy uusiin päivityksiin
 pricing_and_tiers.plutonium.higher_limits_everywhere: Korkeammat rajat kaikkialla
@@ -396,7 +396,7 @@ pricing_and_tiers.visionary.bundle_label: Elinikäinen Plutonium ja Operator Pas
 pricing_and_tiers.visionary.communities_with_team_access: Visionary- ja Operators-yhteisöt, joissa on tiimipääsy
 pricing_and_tiers.visionary.get_visionary: Hanki Visionary
 pricing_and_tiers.visionary.label: Visionary
-pricing_and_tiers.visionary.lifetime_offer_copy: Hanki elinikäinen Plutonium RdChat.appissa sekä Operator Pass itsehostaukseen. Maksa {0} kerran. Saatavilla 1. lokakuuta 2026 asti tai kun kaikki paikat on varattu.
+pricing_and_tiers.visionary.lifetime_offer_copy: Hanki elinikäinen Plutonium Fluxer.appissa sekä Operator Pass itsehostaukseen. Maksa {0} kerran. Saatavilla 1. lokakuuta 2026 asti tai kun kaikki paikat on varattu.
 pricing_and_tiers.visionary.lifetime_operator_pass: Elinikäinen Operator Pass
 pricing_and_tiers.visionary.lifetime_plutonium: Elinikäinen Plutonium
 pricing_and_tiers.visionary.limited_offer_note: 'Rajoitettu tarjous: Visionary sisältää Operator Passin'
@@ -407,8 +407,8 @@ pricing_and_tiers.visionary.purchase_flow: Osta Visionary suoraan sovelluksessa 
 pricing_and_tiers.visionary.slots_left.generic: '{0} / {1} paikkaa jäljellä'
 pricing_and_tiers.visionary.slots_left.visionary_bundle: Vain {0} / {1} Visionary-elinikäistä jäljellä – elinikäinen Plutonium ja Operator Pass
 pricing_and_tiers.visionary.slots_left.visionary_only: '{0} Visionary-paikkaa jäljellä'
-product_positioning.free_and_open_source: RdChat on ilmainen ja avoimen lähdekoodin. Kuka tahansa voi itsehostata ilmaiseksi.
-product_positioning.intro: RdChat on ilmainen ja avoimen lähdekoodin pikaviesti- ja VoIP-alusta kavereille, ryhmille ja yhteisöille.
+product_positioning.free_and_open_source: Fluxer on ilmainen ja avoimen lähdekoodin. Kuka tahansa voi itsehostata ilmaiseksi.
+product_positioning.intro: Fluxer on ilmainen ja avoimen lähdekoodin pikaviesti- ja VoIP-alusta kavereille, ryhmille ja yhteisöille.
 product_positioning.open_source.fully_open_source_agplv3: Täysin avoimen lähdekoodin (AGPLv3)
 product_positioning.open_source.label: Avoin lähdekoodi
 product_positioning.open_source.license: Avoin lähdekoodi (AGPL-3.0)
@@ -416,25 +416,25 @@ product_positioning.self_hosting.connect_from_any_client: Yhdistä millä tahans
 product_positioning.self_hosting.free_self_hosting: Ilmainen itsehostaus
 product_positioning.self_hosting.host_your_own_instance: Aja oma instanssisi
 product_positioning.self_hosting.label: Itsehostaus
-product_positioning.self_hosting.operator_pass.access_to_operators_community: Pääsy RdChat Operators -yhteisöön
+product_positioning.self_hosting.operator_pass.access_to_operators_community: Pääsy Fluxer Operators -yhteisöön
 product_positioning.self_hosting.operator_pass.after_offer_ends_stays_available: Kun tarjous päättyy, Operator Pass on edelleen saatavilla erikseen.
 product_positioning.self_hosting.operator_pass.label: Operator Pass
 product_positioning.self_hosting.operator_pass.note_optional: 'Operator Pass on valinnainen: maksat tuesta ja Operators-yhteisön pääsystä.'
 product_positioning.self_hosting.operator_pass.priority_support_and_operators_access: Prioriteettituki ja pääsy Operators-yhteisöön itsehostaajille
-product_positioning.self_hosting.run_backend_on_your_hardware: Aja RdChatin taustapalvelin omalla raudallasi ja yhdistä sovelluksillamme.
+product_positioning.self_hosting.run_backend_on_your_hardware: Aja Fluxerin taustapalvelin omalla raudallasi ja yhdistä sovelluksillamme.
 product_positioning.self_hosting.switch_between_instances: Vaihda instanssien välillä
 security.found_security_issue: Löysitkö tietoturvaongelman?
 security.report_vulnerabilities: Ilmoita haavoittuvuuksista ja auta pitämään alusta turvallisena.
 security.responsible_disclosure_note: Arvostamme vastuullista ilmoittamista tietoturvabounty-sivun kautta. Annamme Plutonium-koodeja ja Bug Hunter -merkkejä vakavuuden mukaan.
 security.security_bug_bounty: Tietoturvabounty
 security.security_reports: Tietoturvaraportit
-security.testers_access_from_reports: Hyväksytyt raportit antavat pääsyn RdChat Testers -yhteisöön, jossa voit kerätä pisteitä Plutonium-koodeihin ja Bug Hunter -merkkiin.
+security.testers_access_from_reports: Hyväksytyt raportit antavat pääsyn Fluxer Testers -yhteisöön, jossa voit kerätä pisteitä Plutonium-koodeihin ja Bug Hunter -merkkiin.
 social_and_feeds.bluesky.follow_us: Seuraa meitä Blueskyssa
 social_and_feeds.bluesky.label: Bluesky
 social_and_feeds.bluesky.rss_feed: Bluesky RSS-syöte
-social_and_feeds.follow_fluxer: Seuraa @RdChat.app
+social_and_feeds.follow_fluxer: Seuraa @fluxer.app
 social_and_feeds.github: GitHub
 social_and_feeds.rss.blog_rss_feed: Blogin RSS-syöte
-social_and_feeds.rss.fluxer_blog_rss: RdChatin blogin RSS
+social_and_feeds.rss.fluxer_blog_rss: Fluxerin blogin RSS
 social_and_feeds.rss.label: RSS-syöte
 social_and_feeds.stay_updated_cta: Pysy ajan tasalla uutisista, palvelun tilasta ja siitä mitä tapahtuu. Voit myös tilata meidän

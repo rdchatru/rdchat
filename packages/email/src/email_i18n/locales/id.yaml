@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Akun RdChat kamu sementara dinonaktifkan
+  subject: Akun Fluxer kamu sementara dinonaktifkan
   body: |-
     Halo {username},
 
-    Kami menonaktifkan sementara akun RdChat kamu karena terdeteksi aktivitas mencurigakan.
+    Kami menonaktifkan sementara akun Fluxer kamu karena terdeteksi aktivitas mencurigakan.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Kalau kamu merasa ini terjadi karena kesalahan, silakan hubungi tim dukungan kami.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 account_scheduled_deletion:
-  subject: Akun RdChat kamu akan dihapus secara permanen
+  subject: Akun Fluxer kamu akan dihapus secara permanen
   body: |-
     Halo {username},
 
-    Akun RdChat kamu dijadwalkan untuk dihapus secara permanen karena melanggar ketentuan layanan atau pedoman komunitas kami.
+    Akun Fluxer kamu dijadwalkan untuk dihapus secara permanen karena melanggar ketentuan layanan atau pedoman komunitas kami.
 
     Jadwal penghapusan: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Pedoman komunitas: {guidelinesUrl}
 
     Ajukan banding:
-    Kalau kamu merasa keputusan ini keliru atau tidak beralasan, kamu bisa mengajukan banding dalam 60 hari. Kirim email ke appeals@RdChat.app, dan pastikan mengirimnya dari alamat email ini.
+    Kalau kamu merasa keputusan ini keliru atau tidak beralasan, kamu bisa mengajukan banding dalam 60 hari. Kirim email ke appeals@fluxer.app, dan pastikan mengirimnya dari alamat email ini.
 
     Dalam banding kamu:
     - Jelaskan dengan jelas mengapa kamu menilai keputusan ini keliru atau tidak beralasan
     - Sertakan bukti atau konteks yang relevan jika memungkinkan
 
-    Anggota tim keamanan RdChat akan meninjau banding kamu dan dapat menunda penghapusan yang dijadwalkan sampai ada keputusan akhir.
+    Anggota tim keamanan Fluxer akan meninjau banding kamu dan dapat menunda penghapusan yang dijadwalkan sampai ada keputusan akhir.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 account_temp_banned:
-  subject: Akun RdChat kamu sementara ditangguhkan
+  subject: Akun Fluxer kamu sementara ditangguhkan
   body: |-
     Halo {username},
 
-    Akun RdChat kamu sementara ditangguhkan karena melanggar ketentuan layanan atau pedoman komunitas kami.
+    Akun Fluxer kamu sementara ditangguhkan karena melanggar ketentuan layanan atau pedoman komunitas kami.
 
     Durasi: {durationHours, plural,
       =1 {1 jam}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Ketentuan layanan: {termsUrl}
     - Pedoman komunitas: {guidelinesUrl}
 
-    Kalau kamu merasa keputusan ini keliru atau tidak beralasan, kamu bisa mengajukan banding ke appeals@RdChat.app, dan pastikan mengirimnya dari alamat email ini. Jelaskan dengan jelas mengapa kamu menilai keputusan ini keliru. Kami akan meninjau banding kamu dan membalas dengan keputusan kami.
+    Kalau kamu merasa keputusan ini keliru atau tidak beralasan, kamu bisa mengajukan banding ke appeals@fluxer.app, dan pastikan mengirimnya dari alamat email ini. Jelaskan dengan jelas mengapa kamu menilai keputusan ini keliru. Kami akan meninjau banding kamu dan membalas dengan keputusan kami.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 donation_confirmation:
-  subject: Terima kasih atas donasi Anda ke RdChat
+  subject: Terima kasih atas donasi Anda ke Fluxer
   body: |-
     Halo,
 
-    Terima kasih atas donasi Anda ke RdChat! {interval, select,
+    Terima kasih atas donasi Anda ke Fluxer! {interval, select,
       month {Donasi berulang}
       year {Donasi berulang}
       other {Donasi sekali}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Dukungan Anda membantu RdChat tetap berjalan. Terima kasih!
+    Dukungan Anda membantu Fluxer tetap berjalan. Terima kasih!
 
-    – Tim RdChat
+    – Tim Fluxer
 donation_magic_link:
-  subject: Kelola donasi RdChat Anda
+  subject: Kelola donasi Fluxer Anda
   body: |-
     Halo,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Jika Anda tidak meminta tautan ini, Anda dapat mengabaikan email ini dengan aman.
 
-    – Tim RdChat
+    – Tim Fluxer
 dsa_report_verification:
   subject: Verifikasi email kamu untuk laporan DSA
   body: |-
     Halo,
 
-    Gunakan kode di bawah ini untuk mengirim laporan Digital Services Act (DSA) kamu di RdChat:
+    Gunakan kode di bawah ini untuk mengirim laporan Digital Services Act (DSA) kamu di Fluxer:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Kalau kamu tidak meminta ini, kamu bisa mengabaikan email ini.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 email_change_new:
-  subject: Verifikasi email RdChat baru kamu
+  subject: Verifikasi email Fluxer baru kamu
   body: |-
     Halo {username},
 
-    Masukkan kode ini di aplikasi untuk memverifikasi email RdChat baru kamu:
+    Masukkan kode ini di aplikasi untuk memverifikasi email Fluxer baru kamu:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Kalau kamu tidak meminta ini, kamu bisa mengabaikan email ini.
 
-    – Tim RdChat
+    – Tim Fluxer
 email_change_original:
-  subject: Konfirmasi perubahan email RdChat kamu
+  subject: Konfirmasi perubahan email Fluxer kamu
   body: |-
     Halo {username},
 
-    Kami menerima permintaan untuk mengubah alamat email pada akun RdChat kamu.
+    Kami menerima permintaan untuk mengubah alamat email pada akun Fluxer kamu.
 
     Untuk mengonfirmasi perubahan ini, masukkan kode berikut di aplikasi:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Kalau kamu tidak meminta ini, segera amankan akun kamu.
 
-    – Tim RdChat
+    – Tim Fluxer
 email_change_revert:
-  subject: Email akun RdChat kamu telah diubah
+  subject: Email akun Fluxer kamu telah diubah
   body: |-
     Halo {username},
 
-    Alamat email pada akun RdChat kamu telah diubah menjadi {newEmail}.
+    Alamat email pada akun Fluxer kamu telah diubah menjadi {newEmail}.
 
     Kalau kamu yang melakukan perubahan ini, kamu tidak perlu melakukan apa pun. Kalau bukan kamu, kamu bisa membatalkan perubahan ini dan mengamankan akun kamu lewat tautan berikut:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Tindakan ini akan memulihkan alamat email kamu sebelumnya, mengeluarkan kamu dari semua perangkat, menghapus nomor telepon yang tertaut, menonaktifkan MFA, dan meminta kamu membuat kata sandi baru.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 email_verification:
-  subject: Verifikasi alamat email RdChat kamu
+  subject: Verifikasi alamat email Fluxer kamu
   body: |-
     Halo {username},
 
-    Silakan verifikasi alamat email untuk akun RdChat kamu dengan mengklik tautan di bawah ini:
+    Silakan verifikasi alamat email untuk akun Fluxer kamu dengan mengklik tautan di bawah ini:
 
     {verifyUrl}
 
-    Kalau kamu tidak membuat akun RdChat, kamu bisa mengabaikan email ini dengan aman.
+    Kalau kamu tidak membuat akun Fluxer, kamu bisa mengabaikan email ini dengan aman.
 
     Tautan ini berlaku selama 24 jam.
 
-    – Tim RdChat
+    – Tim Fluxer
 gift_chargeback_notification:
   subject: Manfaat dari hadiah yang kamu tukarkan telah dihapus
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Kalau kamu merasa ini keliru, silakan hubungi tim dukungan kami dan sertakan detail yang kamu punya tentang kode hadiah tersebut serta kapan kamu menukarkannya.
 
-    – Tim RdChat
+    – Tim Fluxer
 harvest_completed:
-  subject: Ekspor data RdChat kamu siap diunduh
+  subject: Ekspor data Fluxer kamu siap diunduh
   body: |-
     Halo {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Kalau kamu tidak meminta ekspor ini, segera ganti kata sandi kamu dan hubungi tim dukungan kami.
 
-    – Tim RdChat
+    – Tim Fluxer
 inactivity_warning:
-  subject: Akun RdChat kamu akan dihapus karena tidak aktif
+  subject: Akun Fluxer kamu akan dihapus karena tidak aktif
   body: |-
     Halo {username},
 
-    Kami belum melihat aktivitas di akun RdChat kamu sejak {lastActiveDate, date, full}.
+    Kami belum melihat aktivitas di akun Fluxer kamu sejak {lastActiveDate, date, full}.
 
     Kalau kamu tidak login sebelum {deletionDate, date, full} pukul {deletionDate, time, short}, akun kamu akan dihapus secara permanen karena tidak aktif.
 
     Login di sini:
     {loginUrl}
 
-    Kalau kamu baru-baru ini menggunakan RdChat, segera hubungi tim dukungan kami.
+    Kalau kamu baru-baru ini menggunakan Fluxer, segera hubungi tim dukungan kami.
 
-    – Tim RdChat
+    – Tim Fluxer
 ip_authorization:
   subject: Konfirmasi login dari alamat IP baru
   body: |-
     Halo {username},
 
-    Kami mendeteksi percobaan login ke akun RdChat kamu dari alamat IP baru:
+    Kami mendeteksi percobaan login ke akun Fluxer kamu dari alamat IP baru:
 
     Alamat IP: {ipAddress}
     Lokasi: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Tautan konfirmasi ini berlaku selama 30 menit.
 
-    – Tim RdChat
+    – Tim Fluxer
 password_change_verification:
-  subject: Konfirmasi perubahan kata sandi RdChat kamu
+  subject: Konfirmasi perubahan kata sandi Fluxer kamu
   body: |-
     Halo {username},
 
-    Kami menerima permintaan untuk mengubah kata sandi pada akun RdChat kamu.
+    Kami menerima permintaan untuk mengubah kata sandi pada akun Fluxer kamu.
 
     Untuk mengonfirmasi perubahan ini, masukkan kode berikut di aplikasi:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Kalau kamu tidak meminta ini, seseorang mungkin memiliki akses ke akun kamu. Segera ganti kata sandi kamu dan aktifkan autentikasi dua faktor.
 
-    – Tim RdChat
+    – Tim Fluxer
 password_reset:
-  subject: Reset kata sandi RdChat kamu
+  subject: Reset kata sandi Fluxer kamu
   body: |-
     Halo {username},
 
-    Kamu meminta reset kata sandi RdChat. Gunakan tautan di bawah ini untuk membuat kata sandi baru:
+    Kamu meminta reset kata sandi Fluxer. Gunakan tautan di bawah ini untuk membuat kata sandi baru:
 
     {resetUrl}
 
@@ -292,20 +292,20 @@ password_reset:
 
     Tautan ini berlaku selama 1 jam.
 
-    – Tim RdChat
+    – Tim Fluxer
 registration_approved:
-  subject: Pendaftaran RdChat kamu telah disetujui
+  subject: Pendaftaran Fluxer kamu telah disetujui
   body: |-
     Halo {username},
 
-    Kabar baik: pendaftaran RdChat kamu sudah disetujui.
+    Kabar baik: pendaftaran Fluxer kamu sudah disetujui.
 
-    Sekarang kamu bisa login ke aplikasi RdChat di:
+    Sekarang kamu bisa login ke aplikasi Fluxer di:
     {channelsUrl}
 
-    Selamat datang di komunitas RdChat.
+    Selamat datang di komunitas Fluxer.
 
-    – Tim RdChat
+    – Tim Fluxer
 report_resolved:
   subject: Laporan kamu telah ditinjau
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Tanggapan dari tim keamanan:
     {publicComment}
 
-    Terima kasih sudah membantu menjaga RdChat tetap aman untuk semua orang. Kami menanggapi semua laporan dengan serius dan menghargai kontribusi kamu untuk komunitas.
+    Terima kasih sudah membantu menjaga Fluxer tetap aman untuk semua orang. Kami menanggapi semua laporan dengan serius dan menghargai kontribusi kamu untuk komunitas.
 
-    Kalau kamu punya pertanyaan atau keberatan tentang hasil ini, silakan hubungi safety@RdChat.app.
+    Kalau kamu punya pertanyaan atau keberatan tentang hasil ini, silakan hubungi safety@fluxer.app.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 scheduled_deletion_notification:
-  subject: Akun RdChat kamu akan dihapus secara permanen
+  subject: Akun Fluxer kamu akan dihapus secara permanen
   body: |-
     Halo {username},
 
-    Akun RdChat kamu dijadwalkan untuk dihapus secara permanen.
+    Akun Fluxer kamu dijadwalkan untuk dihapus secara permanen.
 
     Jadwal penghapusan: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     Ini adalah tindakan penegakan yang serius. Data akun kamu akan dihapus secara permanen pada waktu yang dijadwalkan.
 
-    Kalau kamu merasa keputusan ini keliru, kamu bisa mengajukan banding ke appeals@RdChat.app, dan pastikan mengirimnya dari alamat email ini.
+    Kalau kamu merasa keputusan ini keliru, kamu bisa mengajukan banding ke appeals@fluxer.app, dan pastikan mengirimnya dari alamat email ini.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer
 self_deletion_scheduled:
-  subject: Penghapusan akun RdChat kamu telah dijadwalkan
+  subject: Penghapusan akun Fluxer kamu telah dijadwalkan
   body: |-
     Halo {username},
 
-    Kamu meminta untuk menghapus akun RdChat kamu. Akun kamu dijadwalkan untuk dihapus secara permanen pada:
+    Kamu meminta untuk menghapus akun Fluxer kamu. Akun kamu dijadwalkan untuk dihapus secara permanen pada:
 
     {deletionDate, date, full} pukul {deletionDate, time, short}
 
     Kalau kamu tidak meminta ini, login ke akun kamu untuk membatalkan penghapusan. Kami juga menyarankan kamu mengganti kata sandi untuk mengamankan akun kamu.
 
-    – Tim RdChat
+    – Tim Fluxer
 unban_notification:
-  subject: Penangguhan akun RdChat kamu telah dicabut
+  subject: Penangguhan akun Fluxer kamu telah dicabut
   body: |-
     Halo {username},
 
-    Kabar baik: penangguhan akun RdChat kamu sudah dicabut.
+    Kabar baik: penangguhan akun Fluxer kamu sudah dicabut.
 
     {reason, select,
       null {}
       other {Alasan: {reason}}
     }
 
-    Sekarang kamu bisa login lagi dan melanjutkan menggunakan RdChat seperti biasa.
+    Sekarang kamu bisa login lagi dan melanjutkan menggunakan Fluxer seperti biasa.
 
-    – Tim keamanan RdChat
+    – Tim keamanan Fluxer

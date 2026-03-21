@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Tvůj účet RdChat byl dočasně deaktivován
+  subject: Tvůj účet Fluxer byl dočasně deaktivován
   body: |-
     Ahoj {username},
 
-    Tvůj účet RdChat jsme dočasně deaktivovali, protože jsme zaznamenali podezřelou aktivitu.
+    Tvůj účet Fluxer jsme dočasně deaktivovali, protože jsme zaznamenali podezřelou aktivitu.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Pokud si myslíš, že je to omyl, ozvi se prosím na naši podporu.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 account_scheduled_deletion:
-  subject: Tvůj účet RdChat bude smazán
+  subject: Tvůj účet Fluxer bude smazán
   body: |-
     Ahoj {username},
 
-    Tvůj účet RdChat byl označen k trvalému smazání, protože jsi porušil/a naše podmínky používání nebo pravidla komunity.
+    Tvůj účet Fluxer byl označen k trvalému smazání, protože jsi porušil/a naše podmínky používání nebo pravidla komunity.
 
     Datum plánovaného smazání: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Pravidla komunity: {guidelinesUrl}
 
     Odvolání:
-    Pokud se domníváš, že je toto rozhodnutí chybné nebo neopodstatněné, můžeš do 60 dnů podat odvolání na appeals@RdChat.app, a to z této e-mailové adresy.
+    Pokud se domníváš, že je toto rozhodnutí chybné nebo neopodstatněné, můžeš do 60 dnů podat odvolání na appeals@fluxer.app, a to z této e-mailové adresy.
 
     V odvolání prosím:
     - Jasně popiš, proč si myslíš, že je rozhodnutí chybné nebo neopodstatněné
     - Přilož, pokud je to možné, relevantní důkazy nebo dodatečný kontext
 
-    Člen bezpečnostního týmu RdChatu odvolání posoudí a může plánované smazání pozastavit až do vydání konečného rozhodnutí.
+    Člen bezpečnostního týmu Fluxeru odvolání posoudí a může plánované smazání pozastavit až do vydání konečného rozhodnutí.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 account_temp_banned:
-  subject: Tvůj účet RdChat byl dočasně pozastaven
+  subject: Tvůj účet Fluxer byl dočasně pozastaven
   body: |-
     Ahoj {username},
 
-    Tvůj účet RdChat byl dočasně pozastaven, protože jsi porušil/a naše podmínky používání nebo pravidla komunity.
+    Tvůj účet Fluxer byl dočasně pozastaven, protože jsi porušil/a naše podmínky používání nebo pravidla komunity.
 
     Doba trvání: {durationHours, plural,
       one {# hodina}
@@ -74,15 +74,15 @@ account_temp_banned:
     - Podmínky používání: {termsUrl}
     - Pravidla komunity: {guidelinesUrl}
 
-    Pokud se domníváš, že je toto rozhodnutí chybné nebo neopodstatněné, můžeš podat odvolání na appeals@RdChat.app, a to z této e-mailové adresy. Jasně popiš, proč si myslíš, že je rozhodnutí chybné. Odvolání prověříme a ozveme se s výsledkem.
+    Pokud se domníváš, že je toto rozhodnutí chybné nebo neopodstatněné, můžeš podat odvolání na appeals@fluxer.app, a to z této e-mailové adresy. Jasně popiš, proč si myslíš, že je rozhodnutí chybné. Odvolání prověříme a ozveme se s výsledkem.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 donation_confirmation:
-  subject: Děkujeme za příspěvek na RdChat
+  subject: Děkujeme za příspěvek na Fluxer
   body: |-
     Ahoj,
 
-    Děkujeme za příspěvek na RdChat! Tvůj {interval, select,
+    Děkujeme za příspěvek na Fluxer! Tvůj {interval, select,
       month {opakovaný příspěvek}
       year {opakovaný příspěvek}
       other {jednorázový příspěvek}
@@ -109,11 +109,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Tvá podpora pomáhá RdChatu fungovat. Děkujeme!
+    Tvá podpora pomáhá Fluxeru fungovat. Děkujeme!
 
-    – tým RdChatu
+    – tým Fluxeru
 donation_magic_link:
-  subject: Spravuj své příspěvky na RdChat
+  subject: Spravuj své příspěvky na Fluxer
   body: |-
     Ahoj,
 
@@ -127,13 +127,13 @@ donation_magic_link:
 
     Pokud sis to nevyžádal/a, můžeš tento e-mail bezpečně ignorovat.
 
-    – tým RdChatu
+    – tým Fluxeru
 dsa_report_verification:
   subject: Ověř si e-mail pro DSA hlášení
   body: |-
     Ahoj,
 
-    Použij kód níže pro odeslání hlášení podle Digital Services Act (DSA) na RdChatu:
+    Použij kód níže pro odeslání hlášení podle Digital Services Act (DSA) na Fluxeru:
 
     {code}
 
@@ -141,13 +141,13 @@ dsa_report_verification:
 
     Pokud sis to nevyžádal/a, můžeš tento e-mail ignorovat.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 email_change_new:
-  subject: Ověř si nový e-mail u RdChatu
+  subject: Ověř si nový e-mail u Fluxeru
   body: |-
     Ahoj {username},
 
-    Zadej tento kód v aplikaci a potvrď svůj nový e-mail u RdChatu:
+    Zadej tento kód v aplikaci a potvrď svůj nový e-mail u Fluxeru:
 
     {code}
 
@@ -155,13 +155,13 @@ email_change_new:
 
     Pokud sis to nevyžádal/a, můžeš tento e-mail ignorovat.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 email_change_original:
-  subject: Potvrď změnu e-mailu u RdChatu
+  subject: Potvrď změnu e-mailu u Fluxeru
   body: |-
     Ahoj {username},
 
-    Dostali jsme žádost o změnu e-mailové adresy u tvého účtu RdChat.
+    Dostali jsme žádost o změnu e-mailové adresy u tvého účtu Fluxer.
 
     Pro potvrzení změny zadej tento kód v aplikaci:
 
@@ -171,13 +171,13 @@ email_change_original:
 
     Pokud sis to nevyžádal/a, hned si zabezpeč svůj účet.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 email_change_revert:
-  subject: E-mail u tvého účtu RdChat byl změněn
+  subject: E-mail u tvého účtu Fluxer byl změněn
   body: |-
     Ahoj {username},
 
-    E-mailová adresa u tvého účtu RdChat byla změněna na {newEmail}.
+    E-mailová adresa u tvého účtu Fluxer byla změněna na {newEmail}.
 
     Pokud jsi to byl/a ty, nemusíš nic dělat. Pokud ne, můžeš změnu vrátit zpět a zabezpečit účet přes tento odkaz:
 
@@ -185,21 +185,21 @@ email_change_revert:
 
     Tím se obnoví původní e-mailová adresa, odhlásíš se všude, odeberou se propojená telefonní čísla, vypne se vícefaktorové ověřování (MFA) a budeš muset nastavit nové heslo.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 email_verification:
-  subject: Ověř si e-mailovou adresu u RdChatu
+  subject: Ověř si e-mailovou adresu u Fluxeru
   body: |-
     Ahoj {username},
 
-    Ověř prosím e-mailovou adresu u svého účtu RdChat kliknutím na odkaz níže:
+    Ověř prosím e-mailovou adresu u svého účtu Fluxer kliknutím na odkaz níže:
 
     {verifyUrl}
 
-    Pokud sis účet RdChat nezakládal/a, můžeš tento e-mail bez obav ignorovat.
+    Pokud sis účet Fluxer nezakládal/a, můžeš tento e-mail bez obav ignorovat.
 
     Tento odkaz je platný 24 hodin.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 gift_chargeback_notification:
   subject: Výhody z uplatněného dárkového kódu byly odebrány
   body: |-
@@ -211,9 +211,9 @@ gift_chargeback_notification:
 
     Pokud si myslíš, že je to omyl, kontaktuj prosím naši podporu a připoj všechny podrobnosti, které máš o kódu a čase uplatnění.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 harvest_completed:
-  subject: Tvůj export dat z RdChatu je připraven ke stažení
+  subject: Tvůj export dat z Fluxeru je připraven ke stažení
   body: |-
     Ahoj {username},
 
@@ -229,28 +229,28 @@ harvest_completed:
 
     Pokud jsi o tento export nežádal/a ty, hned si změň heslo a kontaktuj naši podporu.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 inactivity_warning:
-  subject: Tvůj účet RdChat bude smazán kvůli neaktivitě
+  subject: Tvůj účet Fluxer bude smazán kvůli neaktivitě
   body: |-
     Ahoj {username},
 
-    Na tvém účtu RdChat jsme od {lastActiveDate, date, full} nezaznamenali žádnou aktivitu.
+    Na tvém účtu Fluxer jsme od {lastActiveDate, date, full} nezaznamenali žádnou aktivitu.
 
     Pokud se nepřihlásíš nejpozději do {deletionDate, date, full} {deletionDate, time, short}, bude tvůj účet kvůli neaktivitě trvale smazán.
 
     Přihlášení:
     {loginUrl}
 
-    Pokud jsi RdChat používal/a nedávno, hned kontaktuj naši podporu.
+    Pokud jsi Fluxer používal/a nedávno, hned kontaktuj naši podporu.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 ip_authorization:
   subject: Povol přihlášení z nové IP adresy
   body: |-
     Ahoj {username},
 
-    Zaznamenali jsme pokus o přihlášení k tvému účtu RdChat z nové IP adresy:
+    Zaznamenali jsme pokus o přihlášení k tvému účtu Fluxer z nové IP adresy:
 
     IP adresa: {ipAddress}
     Poloha: {location}
@@ -263,13 +263,13 @@ ip_authorization:
 
     Tento odkaz pro potvrzení je platný 30 minut.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 password_change_verification:
-  subject: Potvrď změnu hesla u RdChatu
+  subject: Potvrď změnu hesla u Fluxeru
   body: |-
     Ahoj {username},
 
-    Dostali jsme žádost o změnu hesla u tvého účtu RdChat.
+    Dostali jsme žádost o změnu hesla u tvého účtu Fluxer.
 
     Pro potvrzení této změny zadej tento kód v aplikaci:
 
@@ -279,13 +279,13 @@ password_change_verification:
 
     Pokud sis to nevyžádal/a, je možné, že někdo má přístup k tvému účtu. Hned si změň heslo a zapni dvoufaktorové ověřování.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 password_reset:
-  subject: Reset hesla u RdChatu
+  subject: Reset hesla u Fluxeru
   body: |-
     Ahoj {username},
 
-    Požádal/a jsi o reset hesla u RdChatu. Nové heslo si nastav přes odkaz níže:
+    Požádal/a jsi o reset hesla u Fluxeru. Nové heslo si nastav přes odkaz níže:
 
     {resetUrl}
 
@@ -293,22 +293,22 @@ password_reset:
 
     Tento odkaz je platný 1 hodinu.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 registration_approved:
-  subject: Tvoje registrace do RdChatu byla schválena
+  subject: Tvoje registrace do Fluxeru byla schválena
   body: |-
     Ahoj {username},
 
-    Dobrá zpráva – tvoje registrace do RdChatu byla schválena.
+    Dobrá zpráva – tvoje registrace do Fluxeru byla schválena.
 
-    Teď se můžeš přihlásit do aplikace RdChat tady:
+    Teď se můžeš přihlásit do aplikace Fluxer tady:
     {channelsUrl}
 
-    Vítej v komunitě RdChatu.
+    Vítej v komunitě Fluxeru.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 report_resolved:
-  subject: Tvoje hlášení na RdChatu bylo zkontrolováno
+  subject: Tvoje hlášení na Fluxeru bylo zkontrolováno
   body: |-
     Ahoj {username},
 
@@ -317,17 +317,17 @@ report_resolved:
     Odpověď od bezpečnostního týmu:
     {publicComment}
 
-    Díky, že pomáháš udržet RdChat bezpečný pro všechny. Všechna hlášení bereme vážně a vážíme si tvého příspěvku komunitě.
+    Díky, že pomáháš udržet Fluxer bezpečný pro všechny. Všechna hlášení bereme vážně a vážíme si tvého příspěvku komunitě.
 
-    Pokud máš k výsledku dotazy nebo připomínky, napiš na safety@RdChat.app.
+    Pokud máš k výsledku dotazy nebo připomínky, napiš na safety@fluxer.app.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 scheduled_deletion_notification:
-  subject: Tvůj účet RdChat bude smazán
+  subject: Tvůj účet Fluxer bude smazán
   body: |-
     Ahoj {username},
 
-    Tvůj účet RdChat byl označen k trvalému smazání.
+    Tvůj účet Fluxer byl označen k trvalému smazání.
 
     Datum plánovaného smazání: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -338,33 +338,33 @@ scheduled_deletion_notification:
 
     Jde o závažné opatření. Data k účtu budou v uvedeném termínu nenávratně smazána.
 
-    Pokud se domníváš, že je toto rozhodnutí chybné, můžeš podat odvolání na appeals@RdChat.app, a to z této e-mailové adresy.
+    Pokud se domníváš, že je toto rozhodnutí chybné, můžeš podat odvolání na appeals@fluxer.app, a to z této e-mailové adresy.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru
 self_deletion_scheduled:
-  subject: Smazání tvého účtu RdChat je naplánované
+  subject: Smazání tvého účtu Fluxer je naplánované
   body: |-
     Ahoj {username},
 
-    Požádal/a jsi o smazání svého účtu RdChat. Tvůj účet bude trvale smazán dne:
+    Požádal/a jsi o smazání svého účtu Fluxer. Tvůj účet bude trvale smazán dne:
 
     {deletionDate, date, full} {deletionDate, time, short}
 
     Pokud sis to nevyžádal/a, přihlas se ke svému účtu a smazání zruš. Doporučujeme také změnit heslo, aby byl účet lépe zabezpečený.
 
-    – Tým RdChatu
+    – Tým Fluxeru
 unban_notification:
-  subject: Pozastavení tvého účtu RdChat bylo zrušeno
+  subject: Pozastavení tvého účtu Fluxer bylo zrušeno
   body: |-
     Ahoj {username},
 
-    Dobrá zpráva – pozastavení tvého účtu RdChat bylo zrušeno.
+    Dobrá zpráva – pozastavení tvého účtu Fluxer bylo zrušeno.
 
     {reason, select,
       null {}
       other {Důvod: {reason}}
     }
 
-    Teď se můžeš znovu přihlásit a pokračovat v používání RdChatu.
+    Teď se můžeš znovu přihlásit a pokračovat v používání Fluxeru.
 
-    – Bezpečnostní tým RdChatu
+    – Bezpečnostní tým Fluxeru

@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Ton compte RdChat a été temporairement désactivé
+  subject: Ton compte Fluxer a été temporairement désactivé
   body: |-
     Salut {username},
 
-    Ton compte RdChat a été temporairement désactivé en raison d'une activité suspecte.
+    Ton compte Fluxer a été temporairement désactivé en raison d'une activité suspecte.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Si tu penses qu'il s'agit d'une erreur, contacte notre support.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 account_scheduled_deletion:
-  subject: Ton compte RdChat va être supprimé définitivement
+  subject: Ton compte Fluxer va être supprimé définitivement
   body: |-
     Salut {username},
 
-    Ton compte RdChat a été programmé pour une suppression définitive, car tu as enfreint nos conditions d'utilisation ou nos règles de la communauté.
+    Ton compte Fluxer a été programmé pour une suppression définitive, car tu as enfreint nos conditions d'utilisation ou nos règles de la communauté.
 
     Date de suppression : {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Règles de la communauté : {guidelinesUrl}
 
     Faire appel :
-    Si tu penses que cette décision est incorrecte ou injustifiée, tu disposes de 60 jours pour faire appel. Envoie un e-mail à appeals@RdChat.app depuis cette adresse e-mail.
+    Si tu penses que cette décision est incorrecte ou injustifiée, tu disposes de 60 jours pour faire appel. Envoie un e-mail à appeals@fluxer.app depuis cette adresse e-mail.
 
     Dans ton appel :
     - Explique clairement pourquoi tu penses que la décision est incorrecte ou injustifiée
     - Ajoute, si possible, tout élément de preuve ou contexte utile
 
-    Un membre de l'équipe sécurité de RdChat examinera ton appel et pourra suspendre la suppression programmée jusqu'à la décision finale.
+    Un membre de l'équipe sécurité de Fluxer examinera ton appel et pourra suspendre la suppression programmée jusqu'à la décision finale.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 account_temp_banned:
-  subject: Ton compte RdChat a été temporairement suspendu
+  subject: Ton compte Fluxer a été temporairement suspendu
   body: |-
     Salut {username},
 
-    Ton compte RdChat a été temporairement suspendu, car tu as enfreint nos conditions d'utilisation ou nos règles de la communauté.
+    Ton compte Fluxer a été temporairement suspendu, car tu as enfreint nos conditions d'utilisation ou nos règles de la communauté.
 
     Durée : {durationHours, plural,
       =1 {1 heure}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Conditions d'utilisation : {termsUrl}
     - Règles de la communauté : {guidelinesUrl}
 
-    Si tu penses que cette décision est incorrecte ou injustifiée, tu peux faire appel en envoyant un e-mail à appeals@RdChat.app depuis cette adresse e-mail. Explique clairement pourquoi tu penses que la décision est incorrecte. Nous examinerons ton appel et reviendrons vers toi avec notre décision.
+    Si tu penses que cette décision est incorrecte ou injustifiée, tu peux faire appel en envoyant un e-mail à appeals@fluxer.app depuis cette adresse e-mail. Explique clairement pourquoi tu penses que la décision est incorrecte. Nous examinerons ton appel et reviendrons vers toi avec notre décision.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 donation_confirmation:
-  subject: Merci pour votre don à RdChat
+  subject: Merci pour votre don à Fluxer
   body: |-
     Bonjour,
 
-    Merci pour votre don à RdChat ! Votre {interval, select,
+    Merci pour votre don à Fluxer ! Votre {interval, select,
       month {don récurrent}
       year {don récurrent}
       other {don unique}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Votre soutien aide à maintenir RdChat en fonctionnement. Merci !
+    Votre soutien aide à maintenir Fluxer en fonctionnement. Merci !
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 donation_magic_link:
-  subject: Gérez vos dons RdChat
+  subject: Gérez vos dons Fluxer
   body: |-
     Bonjour,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Si vous n'avez pas demandé ce lien, vous pouvez ignorer cet e-mail en toute sécurité.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 dsa_report_verification:
   subject: Vérifie ton adresse e-mail pour un signalement DSA
   body: |-
     Salut,
 
-    Utilise le code ci-dessous pour envoyer ton signalement au titre du Digital Services Act (DSA) sur RdChat :
+    Utilise le code ci-dessous pour envoyer ton signalement au titre du Digital Services Act (DSA) sur Fluxer :
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Si tu n'es pas à l'origine de cette demande, tu peux ignorer cet e-mail.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 email_change_new:
-  subject: Vérifie ta nouvelle adresse e-mail RdChat
+  subject: Vérifie ta nouvelle adresse e-mail Fluxer
   body: |-
     Salut {username},
 
-    Entre ce code dans l'application pour vérifier ta nouvelle adresse e-mail RdChat :
+    Entre ce code dans l'application pour vérifier ta nouvelle adresse e-mail Fluxer :
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Si tu n'es pas à l'origine de cette demande, tu peux ignorer cet e-mail.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 email_change_original:
-  subject: Confirme le changement d'adresse e-mail sur ton compte RdChat
+  subject: Confirme le changement d'adresse e-mail sur ton compte Fluxer
   body: |-
     Salut {username},
 
-    Nous avons reçu une demande de changement d'adresse e-mail sur ton compte RdChat.
+    Nous avons reçu une demande de changement d'adresse e-mail sur ton compte Fluxer.
 
     Pour confirmer ce changement, entre ce code dans l'application :
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Si tu n'es pas à l'origine de cette demande, sécurise ton compte immédiatement.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 email_change_revert:
-  subject: Ton adresse e-mail RdChat a été modifiée
+  subject: Ton adresse e-mail Fluxer a été modifiée
   body: |-
     Salut {username},
 
-    L'adresse e-mail de ton compte RdChat a été remplacée par {newEmail}.
+    L'adresse e-mail de ton compte Fluxer a été remplacée par {newEmail}.
 
     Si c'était toi, tu n'as rien à faire. Si ce n'était pas toi, tu peux annuler le changement et sécuriser ton compte via ce lien :
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Cela restaurera ton ancienne adresse e-mail, te déconnectera de partout, supprimera les numéros de téléphone associés, désactivera l'authentification multifacteur (MFA) et t'obligera à définir un nouveau mot de passe.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 email_verification:
-  subject: Vérifie ton adresse e-mail RdChat
+  subject: Vérifie ton adresse e-mail Fluxer
   body: |-
     Salut {username},
 
-    Vérifie l'adresse e-mail de ton compte RdChat en cliquant sur le lien ci-dessous :
+    Vérifie l'adresse e-mail de ton compte Fluxer en cliquant sur le lien ci-dessous :
 
     {verifyUrl}
 
-    Si tu n'as pas créé de compte RdChat, tu peux ignorer cet e-mail sans risque.
+    Si tu n'as pas créé de compte Fluxer, tu peux ignorer cet e-mail sans risque.
 
     Ce lien est valable 24 heures.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 gift_chargeback_notification:
   subject: Les avantages de ton cadeau utilisé ont été retirés
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Si tu penses qu'il s'agit d'une erreur, contacte notre support et indique tous les détails dont tu disposes sur le code cadeau et la date à laquelle tu l'as utilisé.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 harvest_completed:
-  subject: Ton export de données RdChat est prêt à être téléchargé
+  subject: Ton export de données Fluxer est prêt à être téléchargé
   body: |-
     Salut {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Si tu n'as pas demandé cet export, change ton mot de passe immédiatement et contacte notre support.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 inactivity_warning:
-  subject: Ton compte RdChat va être supprimé pour inactivité
+  subject: Ton compte Fluxer va être supprimé pour inactivité
   body: |-
     Salut {username},
 
-    Nous n'avons constaté aucune activité sur ton compte RdChat depuis le {lastActiveDate, date, full}.
+    Nous n'avons constaté aucune activité sur ton compte Fluxer depuis le {lastActiveDate, date, full}.
 
     Si tu ne te reconnectes pas avant le {deletionDate, date, full} à {deletionDate, time, short}, ton compte sera supprimé définitivement pour inactivité.
 
     Connecte-toi ici :
     {loginUrl}
 
-    Si tu as utilisé RdChat récemment, contacte notre support immédiatement.
+    Si tu as utilisé Fluxer récemment, contacte notre support immédiatement.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 ip_authorization:
   subject: Autorise une connexion depuis une nouvelle adresse IP
   body: |-
     Salut {username},
 
-    Nous avons détecté une tentative de connexion à ton compte RdChat depuis une nouvelle adresse IP :
+    Nous avons détecté une tentative de connexion à ton compte Fluxer depuis une nouvelle adresse IP :
 
     Adresse IP : {ipAddress}
     Localisation : {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Ce lien d'autorisation expire dans 30 minutes.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 password_change_verification:
-  subject: Confirme le changement de ton mot de passe RdChat
+  subject: Confirme le changement de ton mot de passe Fluxer
   body: |-
     Salut {username},
 
-    Nous avons reçu une demande de changement de mot de passe sur ton compte RdChat.
+    Nous avons reçu une demande de changement de mot de passe sur ton compte Fluxer.
 
     Pour confirmer ce changement, entre ce code dans l'application :
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Si tu n'es pas à l'origine de cette demande, quelqu'un a peut-être accès à ton compte. Change ton mot de passe immédiatement et active l'authentification à deux facteurs.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 password_reset:
-  subject: Réinitialise ton mot de passe RdChat
+  subject: Réinitialise ton mot de passe Fluxer
   body: |-
     Salut {username},
 
-    Tu as demandé à réinitialiser ton mot de passe RdChat. Utilise le lien ci-dessous pour définir un nouveau mot de passe :
+    Tu as demandé à réinitialiser ton mot de passe Fluxer. Utilise le lien ci-dessous pour définir un nouveau mot de passe :
 
     {resetUrl}
 
@@ -292,22 +292,22 @@ password_reset:
 
     Ce lien expire dans 1 heure.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 registration_approved:
-  subject: Ton inscription RdChat a été approuvée
+  subject: Ton inscription Fluxer a été approuvée
   body: |-
     Salut {username},
 
-    Bonne nouvelle, ton inscription RdChat a été approuvée.
+    Bonne nouvelle, ton inscription Fluxer a été approuvée.
 
-    Tu peux maintenant te connecter à l'application RdChat ici :
+    Tu peux maintenant te connecter à l'application Fluxer ici :
     {channelsUrl}
 
-    Bienvenue dans la communauté RdChat.
+    Bienvenue dans la communauté Fluxer.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 report_resolved:
-  subject: Ton signalement RdChat a été examiné
+  subject: Ton signalement Fluxer a été examiné
   body: |-
     Salut {username},
 
@@ -316,17 +316,17 @@ report_resolved:
     Réponse de l'équipe sécurité :
     {publicComment}
 
-    Merci d'aider à garder RdChat sûr et agréable pour tout le monde. Nous prenons tous les signalements au sérieux et apprécions ta contribution à la communauté.
+    Merci d'aider à garder Fluxer sûr et agréable pour tout le monde. Nous prenons tous les signalements au sérieux et apprécions ta contribution à la communauté.
 
-    Si tu as des questions ou des inquiétudes à propos de ce résultat, contacte safety@RdChat.app.
+    Si tu as des questions ou des inquiétudes à propos de ce résultat, contacte safety@fluxer.app.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 scheduled_deletion_notification:
-  subject: Ton compte RdChat va être supprimé définitivement
+  subject: Ton compte Fluxer va être supprimé définitivement
   body: |-
     Salut {username},
 
-    Ton compte RdChat a été programmé pour une suppression définitive.
+    Ton compte Fluxer a été programmé pour une suppression définitive.
 
     Date de suppression : {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     C'est une mesure de modération sérieuse. Les données de ton compte seront supprimées définitivement à la date prévue.
 
-    Si tu penses que cette décision est incorrecte, tu peux faire appel en envoyant un e-mail à appeals@RdChat.app depuis cette adresse e-mail.
+    Si tu penses que cette décision est incorrecte, tu peux faire appel en envoyant un e-mail à appeals@fluxer.app depuis cette adresse e-mail.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer
 self_deletion_scheduled:
-  subject: La suppression de ton compte RdChat est programmée
+  subject: La suppression de ton compte Fluxer est programmée
   body: |-
     Salut {username},
 
-    Tu as demandé la suppression de ton compte RdChat. Ton compte sera supprimé définitivement le :
+    Tu as demandé la suppression de ton compte Fluxer. Ton compte sera supprimé définitivement le :
 
     {deletionDate, date, full} à {deletionDate, time, short}
 
     Si tu n'es pas à l'origine de cette demande, connecte-toi à ton compte pour annuler la suppression. Nous te recommandons aussi de changer ton mot de passe pour sécuriser ton compte.
 
-    – L'équipe RdChat
+    – L'équipe Fluxer
 unban_notification:
-  subject: La suspension de ton compte RdChat a été levée
+  subject: La suspension de ton compte Fluxer a été levée
   body: |-
     Salut {username},
 
-    Bonne nouvelle, la suspension de ton compte RdChat a été levée.
+    Bonne nouvelle, la suspension de ton compte Fluxer a été levée.
 
     {reason, select,
       null {}
       other {Motif : {reason}}
     }
 
-    Tu peux maintenant te reconnecter et continuer à utiliser RdChat.
+    Tu peux maintenant te reconnecter et continuer à utiliser Fluxer.
 
-    – L'équipe sécurité de RdChat
+    – L'équipe sécurité de Fluxer

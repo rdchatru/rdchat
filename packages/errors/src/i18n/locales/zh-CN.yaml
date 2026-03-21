@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: 未认领账
 usernames_and_tags.username_invalid_characters: 用户名只能包含拉丁字母(a-z, A-Z)、数字(0-9)和下划线(_)。
 usernames_and_tags.username_length_invalid: 用户名长度必须在 {min} 到 {max} 个字符之间。
 usernames_and_tags.username_not_available: 这个用户名不可用。
-usernames_and_tags.username_reserved_terms: 用户名不能包含 "RdChat" 或 "system message"。
+usernames_and_tags.username_reserved_terms: 用户名不能包含 "fluxer" 或 "system message"。
 usernames_and_tags.username_reserved_value: 用户名不能是 "everyone" 或 "here"。
 vanity_urls.vanity_url_already_taken: 这个个性化链接已被占用。
 vanity_urls.vanity_url_code_already_taken: 这个个性化链接 code 已被占用。
-vanity_urls.vanity_url_code_cannot_contain_fluxer: 个性化链接 code 不能包含 "RdChat"。
+vanity_urls.vanity_url_code_cannot_contain_fluxer: 个性化链接 code 不能包含 "fluxer"。
 vanity_urls.vanity_url_code_length_invalid: 个性化链接 code 长度必须在 {min} 到 {max} 个字符之间。
 vanity_urls.vanity_url_invalid_characters: 个性化链接只能包含小写字母(a-z)、数字(0-9)和连字符(-)。
 webhooks.cannot_modify_system_webhook: 你不能修改系统 webhook。

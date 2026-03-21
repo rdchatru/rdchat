@@ -2,7 +2,7 @@ app.communities.community: Społeczność
 app.communities.community_support: Wsparcie społeczności
 app.communities.featured_in_discovery: Wyróżnione w odkrywaniu
 app.communities.moderation.actions_and_tools: Działania i narzędzia moderacji
-app.communities.moderation.report_people_or_communities: Zgłaszaj osoby lub społeczności, żebyśmy mogli dbać o bezpieczeństwo RdChat dla wszystkich.
+app.communities.moderation.report_people_or_communities: Zgłaszaj osoby lub społeczności, żebyśmy mogli dbać o bezpieczeństwo Fluxer dla wszystkich.
 app.communities.moderation.tools: Narzędzia moderacji
 app.communities.roles_permissions_audit.audit_logs: Dzienniki audytu dla przejrzystości
 app.communities.roles_permissions_audit.granular_roles_and_permissions: Szczegółowe role i uprawnienia
@@ -19,7 +19,7 @@ app.customization.custom_css_themes: Motywy z własnym CSS
 app.customization.custom_sounds.entrance_sounds: Własne dźwięki wejścia
 app.customization.custom_sounds.notification_sounds: Własne dźwięki powiadomień
 app.customization.custom_sounds.set_personalized_join_sounds: Ustaw spersonalizowane dźwięki, gdy dołączasz do kanałów głosowych, żeby było wiadomo, że jesteś.
-app.customization.custom_sounds.upload_custom_notification_sounds: Wgrywaj i używaj własnych dźwięków powiadomień, żeby spersonalizować RdChat po swojemu.
+app.customization.custom_sounds.upload_custom_notification_sounds: Wgrywaj i używaj własnych dźwięków powiadomień, żeby spersonalizować Fluxer po swojemu.
 app.customization.custom_themes: Własne motywy
 app.customization.global_emoji_and_sticker_access: Dostęp do globalnych emoji i naklejek
 app.customization.saved_media_and_css: Dodawaj własne emoji, zapisuj multimedia na później i styluj aplikację własnym CSS.
@@ -40,7 +40,7 @@ app.messaging.features.search.label: Przeszukuj historię wiadomości
 app.messaging.features.search.quick_switcher_shortcuts: Szybki przełącznik ze skrótami klawiaturowymi
 app.messaging.features.search.search_and_quick_switcher: Wyszukiwanie i szybki przełącznik
 app.messaging.title: Wiadomości
-app.open.open_fluxer: Otwórz RdChat
+app.open.open_fluxer: Otwórz Fluxer
 app.open.open_web_app: Otwórz aplikację webową
 app.profiles_identity.custom_identity: Własna tożsamość
 app.profiles_identity.customise_per_community: Dostosuj profil inaczej dla każdej społeczności, do której należysz.
@@ -62,18 +62,18 @@ beta_and_access.early_access.label: Wczesny dostęp
 beta_and_access.featured_benefit_line: Wszystkie podstawy, których oczekujesz, plus kilka rzeczy, których się nie spodziewasz.
 beta_and_access.public_beta: Publiczna beta
 beta_and_access.registration_limited_during_beta: Podczas bety ograniczamy rejestracje. Jak już wejdziesz, możesz dać znajomym kod, żeby ominęli kolejkę.
-beta_and_access.try_without_email: Wypróbuj RdChat bez maila w 30 sekund
-community_funding_and_roles.focused_on_product: Na razie skupiamy się na dowiezieniu świetnego produktu i utrzymaniu RdChat niezależnym, rozwijanym bez inwestorów.
+beta_and_access.try_without_email: Wypróbuj Fluxer bez maila w 30 sekund
+community_funding_and_roles.focused_on_product: Na razie skupiamy się na dowiezieniu świetnego produktu i utrzymaniu Fluxer niezależnym, rozwijanym bez inwestorów.
 community_funding_and_roles.future_paid_roles_heading: Przyszłość płatnych ról
-community_funding_and_roles.future_paid_roles_note: Wciąż budujemy biznes wokół RdChat i jeszcze nie jesteśmy gotowi na płatne role.
-community_funding_and_roles.non_paid_recurring_role: Niepłatna rola dla stałych kontrybutorów, którzy współtworzą RdChat razem z głównym zespołem.
+community_funding_and_roles.future_paid_roles_note: Wciąż budujemy biznes wokół Fluxer i jeszcze nie jesteśmy gotowi na płatne role.
+community_funding_and_roles.non_paid_recurring_role: Niepłatna rola dla stałych kontrybutorów, którzy współtworzą Fluxer razem z głównym zespołem.
 community_funding_and_roles.sustainability_note: Dzięki twojemu wsparciu chcemy uczynić tę niezależną platformę komunikacji zrównoważoną i w przyszłości zacząć oferować płatne role.
 company_and_resources.blog: Blog
-company_and_resources.careers.careers_at_fluxer: Kariera w RdChat
+company_and_resources.careers.careers_at_fluxer: Kariera w Fluxer
 company_and_resources.careers.label: Kariera
-company_and_resources.careers.share_a_bit_about_yourself: Napisz kilka słów o sobie i o tym, jak chcesz się włączyć – wyślij maila na careers@RdChat.app
-company_and_resources.community_team.fluxer_community_team: Zespół społeczności RdChat
-company_and_resources.community_team.share_feedback_report_bugs: Dziel się opinią, zgłaszaj błędy i pomóż sprawić, żeby RdChat był przyjazny dla wszystkich.
+company_and_resources.careers.share_a_bit_about_yourself: Napisz kilka słów o sobie i o tym, jak chcesz się włączyć – wyślij maila na careers@fluxer.app
+company_and_resources.community_team.fluxer_community_team: Zespół społeczności Fluxer
+company_and_resources.community_team.share_feedback_report_bugs: Dziel się opinią, zgłaszaj błędy i pomóż sprawić, żeby Fluxer był przyjazny dla wszystkich.
 company_and_resources.company: Firma
 company_and_resources.company_info: Informacje o firmie
 company_and_resources.connect: Kontakt
@@ -89,31 +89,31 @@ company_and_resources.source_and_contribution.code_issues_docs_reviews: Kod, zg�
 company_and_resources.source_and_contribution.contribute_code: Dodawaj kod
 company_and_resources.source_and_contribution.contribute_on_github: Pomóż na GitHubie
 company_and_resources.source_and_contribution.fix_bugs_ship_features: Naprawiaj bugi, dowoź funkcje albo dopieszczaj doświadczenie w głównym repo.
-company_and_resources.source_and_contribution.fluxer_built_in_open: RdChat powstaje publicznie. Wybierz ścieżkę, która ci pasuje.
+company_and_resources.source_and_contribution.fluxer_built_in_open: Fluxer powstaje publicznie. Wybierz ścieżkę, która ci pasuje.
 company_and_resources.source_and_contribution.get_involved: Zaangażuj się
 company_and_resources.source_and_contribution.source_code: Kod źródłowy
-company_and_resources.source_and_contribution.translation.help_translate: Pomóż tłumaczyć RdChat i jego dokumentację, żeby brzmiał naturalnie wszędzie.
+company_and_resources.source_and_contribution.translation.help_translate: Pomóż tłumaczyć Fluxer i jego dokumentację, żeby brzmiał naturalnie wszędzie.
 company_and_resources.source_and_contribution.translation.label: Tłumaczenia i lokalizacja
-company_and_resources.source_and_contribution.translation.llm_translation_note: Wszystkie tłumaczenia są obecnie generowane przez modele językowe i tylko minimalnie sprawdzane przez ludzi. Chętnie przyjmiemy pomoc prawdziwych osób, żeby dopracować RdChat w twoim języku. Napisz na i18n@RdChat.app – z radością przyjmiemy wkład.
+company_and_resources.source_and_contribution.translation.llm_translation_note: Wszystkie tłumaczenia są obecnie generowane przez modele językowe i tylko minimalnie sprawdzane przez ludzi. Chętnie przyjmiemy pomoc prawdziwych osób, żeby dopracować Fluxer w twoim języku. Napisz na i18n@fluxer.app – z radością przyjmiemy wkład.
 company_and_resources.source_and_contribution.translation.localization_label: Lokalizacja
 company_and_resources.source_and_contribution.view_repository: Zobacz repozytorium
-company_and_resources.source_and_contribution.want_to_help_build_fluxer: Chcesz pomóc budować RdChat?
+company_and_resources.source_and_contribution.want_to_help_build_fluxer: Chcesz pomóc budować Fluxer?
 company_and_resources.source_and_contribution.ways_to_contribute: Sposoby, żeby pomóc
 donations.business: Firma
 donations.donate.action: Wesprzyj
-donations.donate.label: Wesprzyj RdChat
-donations.donate.description: Wesprzyj RdChat jednorazową lub powtarzającą się darowiznę
+donations.donate.label: Wesprzyj Fluxer
+donations.donate.description: Wesprzyj Fluxer jednorazową lub powtarzającą się darowiznę
 donations.donation_disclaimer: Darowizny to dobrowolne wpłaty i nie dają ci żadnego produktu, usługi, własności ani specjalnych praw. Jeśli szukasz funkcji premium, sprawdź {0}.
 donations.individual: Osoba prywatna
 donations.individual_vs_business.answer: Oba typy darowizn wspierają ten sam cel. Różnica jest taka, że darowizny firmowe pozwalają podać NIP (jeśli dotyczy) i dostać fakturę PDF po finalizacji, co ułatwia księgowość.
 donations.individual_vs_business.question: Jaka jest różnica między Osobą prywatną a Firmą?
-donations.infrastructure_costs_detail: Twoja darowizna pomaga pokrywać koszty infrastruktury RdChat, w tym serwery, transfer, storage i ciągły rozwój nowych funkcji. Dzięki temu możemy utrzymywać i ulepszać platformę dla wszystkich.
+donations.infrastructure_costs_detail: Twoja darowizna pomaga pokrywać koszty infrastruktury Fluxer, w tym serwery, transfer, storage i ciągły rozwój nowych funkcji. Dzięki temu możemy utrzymywać i ulepszać platformę dla wszystkich.
 donations.minimum_donation: 'Minimalna darowizna: $5 / €5'
 donations.mobile_roadmap_sponsorship: Zasponsoruj roadmapę mobilną
 donations.send_one_time_gift: Wyślij jednorazowy datek
 donations.support_future_development: Wesprzyj dalszy rozwój
 donations.support_message: Pomóż nam zbudować niezależną platformę komunikacji. Twoja darowizna finansuje infrastrukturę i rozwój.
-donations.tax_deductible.answer: Darowizny na rzecz RdChat nie podlegają obecnie odliczeniu od podatku, ale bezpośrednio finansują naszą infrastrukturę i ciągły rozwój.
+donations.tax_deductible.answer: Darowizny na rzecz Fluxer nie podlegają obecnie odliczeniu od podatku, ale bezpośrednio finansują naszą infrastrukturę i ciągły rozwój.
 donations.tax_deductible.question: Czy moja darowizna jest odliczana od podatku?
 donations.what_it_supports: Co wspiera moja darowizna?
 donations.why_support: Pomóż nam zbudować inny rodzaj platformy komunikacji – open source, finansowaną przez społeczność i tworzoną z troską.
@@ -148,8 +148,8 @@ donations.success.message: Dziękujemy za Twoją darowiznę! Naprawdę doceniamy
 donations.success.email_notice: Wkrótce otrzymasz e-mail potwierdzający ze szczegółami darowizny i linkiem do portalu darczyńcy.
 donations.success.back_to_donate: Wróć do darowizn
 download.download: Pobierz
-download.download_app_or_open_in_browser: Pobierz aplikację albo otwórz RdChat w przeglądarce, żeby zacząć łączyć się ze swoimi społecznościami.
-download.download_fluxer: Pobierz RdChat
+download.download_app_or_open_in_browser: Pobierz aplikację albo otwórz Fluxer w przeglądarce, żeby zacząć łączyć się ze swoimi społecznościami.
+download.download_fluxer: Pobierz Fluxer
 download.download_for_prefix: 'Pobierz na '
 download.open_in_browser: Otwórz w przeglądarce
 download.screenshots_courtesy_of: 'Zrzuty ekranu dzięki uprzejmości '
@@ -160,8 +160,8 @@ footer.connect: Kontakt
 footer.donate: Wesprzyj
 footer.help_support_an_independent_communication: Wesprzyj niezależną platformę komunikacji. Twoja darowizna finansuje infrastrukturę i rozwój platformy.
 footer.download: Pobierz
-footer.fluxer: RdChat
-footer.fluxer_platform_ab_swedish_limited: '© RdChat Platform AB (szwedzka spółka z ograniczoną odpowiedzialnością: 559537-3993)'
+footer.fluxer: Fluxer
+footer.fluxer_platform_ab_swedish_limited: '© Fluxer Platform AB (szwedzka spółka z ograniczoną odpowiedzialnością: 559537-3993)'
 footer.partners: Partnerzy
 footer.plutonium_tier: Plan Plutonium
 footer.policies: Polityki
@@ -218,8 +218,8 @@ languages.list.thai: Tajski
 languages.list.turkish: Turecki
 languages.list.ukrainian: Ukraiński
 languages.list.vietnamese: Wietnamski
-launch.description: Poznaj dewelopera za RdChat, cele projektu, tech stack i co się będzie działo.
-launch.heading: Historia RdChat
+launch.description: Poznaj dewelopera za Fluxer, cele projektu, tech stack i co się będzie działo.
+launch.heading: Historia Fluxer
 launch.read_more: Przeczytaj wpis na start
 launch.view_full_roadmap: Zobacz pełną roadmapę
 misc_labels.design_and_branding: Design i branding
@@ -229,12 +229,12 @@ misc_labels.exclusive_features: Ekskluzywne funkcje
 misc_labels.feature: Funkcja
 misc_labels.get_updates: Dostawaj aktualizacje, zobacz nadchodzące funkcje, pogadaj o pomysłach i czatuj z zespołem.
 misc_labels.join_and_spread_word: Dołącz i podaj dalej
-misc_labels.join_fluxer_community_contribute: Dołącz do społeczności RdChat i pomóż budować przyszłość komunikacji dzięki open source i wkładowi społeczności.
-misc_labels.join_fluxer_hq: Dołącz do RdChat HQ
+misc_labels.join_fluxer_community_contribute: Dołącz do społeczności Fluxer i pomóż budować przyszłość komunikacji dzięki open source i wkładowi społeczności.
+misc_labels.join_fluxer_hq: Dołącz do Fluxer HQ
 misc_labels.join_multiple_devices: Dołączaj z wielu urządzeń naraz
-misc_labels.join_team_behind_fluxer: Dołącz do zespołu RdChat
+misc_labels.join_team_behind_fluxer: Dołącz do zespołu Fluxer
 misc_labels.learn_more: Dowiedz się więcej
-misc_labels.product_hunt_badge_title: RdChat - open source komunikator jak Discord i platforma VoIP | top post na Product Hunt
+misc_labels.product_hunt_badge_title: Fluxer - open source komunikator jak Discord i platforma VoIP | top post na Product Hunt
 misc_labels.profile_badge: Odznaka profilu
 misc_labels.read_the_guide: Przeczytaj poradnik
 misc_labels.ready_to_get_started: Gotowy, żeby zacząć?
@@ -253,11 +253,11 @@ navigation.on_this_page: Na tej stronie
 navigation.page_not_found.description: Ta strona nie istnieje. Ale jest tu jeszcze sporo do odkrycia.
 navigation.page_not_found.title: Nie znaleziono strony
 navigation.press.download_assets_intro: Pobierz nasze logotypy, poznaj kolory marki i skontaktuj się z naszym zespołem prasowym.
-navigation.press.download_fluxer_assets: Pobierz logotypy RdChat, materiały brandowe i skontaktuj się z naszym zespołem prasowym
+navigation.press.download_fluxer_assets: Pobierz logotypy Fluxer, materiały brandowe i skontaktuj się z naszym zespołem prasowym
 navigation.press.press_and_brand_assets: Materiały prasowe i brandowe
-partner_program.become_partner.apply_email: Zgłoś się na partners@RdChat.app
+partner_program.become_partner.apply_email: Zgłoś się na partners@fluxer.app
 partner_program.become_partner.call_to_action: Zostań partnerem
-partner_program.become_partner.heading: Zostań partnerem RdChat
+partner_program.become_partner.heading: Zostań partnerem Fluxer
 partner_program.become_partner.if_youre_a_creator_or: Jeśli tworzysz content albo prowadzisz dużą społeczność, chętnie cię poznamy.
 partner_program.become_partner.learn_about_partners: Dowiedz się o partnerach
 partner_program.become_partner.learn_more: Dowiedz się więcej
@@ -266,12 +266,12 @@ partner_program.description: Ekskluzywne perki i benefity dla twórców oraz wł
 partner_program.label: Partnerzy
 partner_program.perks.creator_monetization.description: Wczesny dostęp do funkcji monetyzacji twórców z niższymi opłatami niż u niepartnerów.
 partner_program.perks.creator_monetization.label: Monetyzacja twórców
-partner_program.perks.custom_vanity_url.description: Dostaniesz ekskluzywny vanity URL, np. RdChat.gg/twojaspolecznosc.
+partner_program.perks.custom_vanity_url.description: Dostaniesz ekskluzywny vanity URL, np. fluxer.gg/twojaspolecznosc.
 partner_program.perks.custom_vanity_url.label: Własny vanity URL
-partner_program.perks.direct_team_access.description: Dołącz do ekskluzywnej społeczności Partnerów z bezpośrednim dostępem do zespołu RdChat.
+partner_program.perks.direct_team_access.description: Dołącz do ekskluzywnej społeczności Partnerów z bezpośrednim dostępem do zespołu Fluxer.
 partner_program.perks.direct_team_access.label: Bezpośredni kontakt z zespołem
 partner_program.perks.discovery_visibility: Większa widoczność dzięki wyróżnieniu w odkrywaniu społeczności.
-partner_program.perks.exclusive_merch.description: Zgarnij merch i gadżety dostępne tylko dla partnerów RdChat.
+partner_program.perks.exclusive_merch.description: Zgarnij merch i gadżety dostępne tylko dla partnerów Fluxer.
 partner_program.perks.exclusive_merch.label: Ekskluzywny merch
 partner_program.perks.free_plutonium.description: Dostaniesz Plutonium na swoim koncie, żeby korzystać ze wszystkich funkcji premium.
 partner_program.perks.free_plutonium.label: Darmowe Plutonium
@@ -284,20 +284,20 @@ partner_program.perks.vip_voice_servers.label: Kanały głosowe VIP
 partner_program.requirements.audience_description: Krótki opis twojej publiczności i tego, czym się zajmujesz
 partner_program.requirements.links_to_content: Linki do twoich treści lub społeczności (YouTube, Twitch, Discord itd.)
 partner_program.requirements.name_and_username: Twoje imię i nazwa użytkownika na platformie
-partner_program.requirements.usage_plan: Jak planujesz używać RdChat w swojej społeczności
+partner_program.requirements.usage_plan: Jak planujesz używać Fluxer w swojej społeczności
 partner_program.who_its_for: 'Twórcy i właściciele społeczności: odblokuj ekskluzywne benefity, w tym darmowe Plutonium, odznakę Partnera, własne vanity URL-e i więcej.'
 partner_program.perks.heading: Korzyści dla partnerów
 partner_program.perks.see_perks: Zobacz korzyści
-partner_program.apply.instructions: Wyślij nam e-mail z poniższymi informacjami, aby aplikować do Programu Partnerskiego RdChat.
+partner_program.apply.instructions: Wyślij nam e-mail z poniższymi informacjami, aby aplikować do Programu Partnerskiego Fluxer.
 partner_program.apply.response_time: Przeglądamy wszystkie zgłoszenia i odpowiadamy w ciągu kilku dni.
 platform_support.desktop.available_on_desktop_and_web: Dostępne na desktopie i w przeglądarce
-platform_support.desktop.download_desktop_intro: Pobierz RdChat na Windows, macOS i Linux. Aplikacje mobilne są w drodze.
-platform_support.desktop.interface_label: Interfejs RdChat na desktopie
+platform_support.desktop.download_desktop_intro: Pobierz Fluxer na Windows, macOS i Linux. Aplikacje mobilne są w drodze.
+platform_support.desktop.interface_label: Interfejs Fluxer na desktopie
 platform_support.desktop.label: Desktop
 platform_support.desktop.use_desktop_client_mobile_soon: Korzystaj z aplikacji desktopowej (mobilka wkrótce)
-platform_support.mobile.install_as_app.add_to_home: Dodaj RdChat do ekranu głównego, żeby ukryć interfejs przeglądarki.
-platform_support.mobile.install_as_app.done_desktop: Gotowe! Możesz teraz otwierać RdChat jak zwykły program.
-platform_support.mobile.install_as_app.done_mobile: Gotowe! Możesz teraz otwierać RdChat z ekranu głównego.
+platform_support.mobile.install_as_app.add_to_home: Dodaj Fluxer do ekranu głównego, żeby ukryć interfejs przeglądarki.
+platform_support.mobile.install_as_app.done_desktop: Gotowe! Możesz teraz otwierać Fluxer jak zwykły program.
+platform_support.mobile.install_as_app.done_mobile: Gotowe! Możesz teraz otwierać Fluxer z ekranu głównego.
 platform_support.mobile.install_as_app.guides.in_chrome: ' w Chrome'
 platform_support.mobile.install_as_app.guides.in_chrome_or_another_browser: ' w Chrome albo innej przeglądarce z obsługą PWA'
 platform_support.mobile.install_as_app.guides.in_safari: ' w Safari'
@@ -309,11 +309,11 @@ platform_support.mobile.install_as_app.guides.steps.press_install_button_address
 platform_support.mobile.install_as_app.guides.steps.press_install_in_popup: 'Kliknij "Zainstaluj" w wyskakującym okienku'
 platform_support.mobile.install_as_app.guides.steps.press_more_menu: 'Kliknij przycisk "Więcej" (⋮) w prawym górnym rogu'
 platform_support.mobile.install_as_app.guides.steps.press_share_button: Kliknij przycisk udostępniania (prostokąt ze strzałką do góry)
-platform_support.mobile.install_as_app.install_fluxer_as_app: Zainstaluj RdChat jako aplikację
+platform_support.mobile.install_as_app.install_fluxer_as_app: Zainstaluj Fluxer jako aplikację
 platform_support.mobile.install_as_app.title: Jak zainstalować jako aplikację
-platform_support.mobile.interface_label: Interfejs mobilny RdChat
+platform_support.mobile.interface_label: Interfejs mobilny Fluxer
 platform_support.mobile.mobile_apps_underway: Aplikacje mobilne są w przygotowaniu
-platform_support.mobile.mobile_browser_explainer: Budujemy aplikacje na iOS i Androida. Zanim będą gotowe, RdChat działa w mobilnej przeglądarce – włożyliśmy sporo pracy, żeby wyglądał i działał jak aplikacja.
+platform_support.mobile.mobile_browser_explainer: Budujemy aplikacje na iOS i Androida. Zanim będą gotowe, Fluxer działa w mobilnej przeglądarce – włożyliśmy sporo pracy, żeby wyglądał i działał jak aplikacja.
 platform_support.mobile.not_full_replacement_yet: To jeszcze nie jest pełny zamiennik aplikacji desktopowej, a kilka rzeczy, których oczekujesz od mobilnego komunikatora, wciąż nie działa.
 platform_support.mobile.push_notifications: Dostawaj powiadomienia push, gdy nie masz otwartej aplikacji.
 platform_support.platforms.android.apk: APK
@@ -339,7 +339,7 @@ press_branding.assets.label: Logo
 press_branding.assets.logo_variants.black_logo: Logo czarne
 press_branding.assets.logo_variants.color_logo: Logo kolorowe
 press_branding.assets.logo_variants.white_logo: Logo białe
-press_branding.assets.palette_description: Starannie dobrana paleta kolorów, która reprezentuje markę RdChat.
+press_branding.assets.palette_description: Starannie dobrana paleta kolorów, która reprezentuje markę Fluxer.
 press_branding.assets.premium_quality: Jakość premium
 press_branding.assets.primary_brand_color_description: Nasz główny kolor marki. Używaj go do kluczowych elementów brandu i akcentów.
 press_branding.assets.symbol_variants.black_symbol: Symbol czarny
@@ -355,7 +355,7 @@ press_branding.assets.usage_guidance.symbol_description: Nasz samodzielny symbol
 press_branding.colors.blue_da_ba_dee: Blue Da Ba Dee
 press_branding.colors.white: Biały
 press_branding.colors.black: Czarny
-press_branding.contact.story_prompt: Masz historię o RdChat? Chętnie ją usłyszymy.
+press_branding.contact.story_prompt: Masz historię o Fluxer? Chętnie ją usłyszymy.
 press_branding.contact.response_time: Zazwyczaj odpowiadamy w ciągu 24 godzin.
 pricing_and_tiers.billing.forever: Na zawsze
 pricing_and_tiers.billing.most_popular: Najpopularniejsze
@@ -368,7 +368,7 @@ pricing_and_tiers.free.comparison_label: Za darmo vs Plutonium
 pricing_and_tiers.free.everything_in_free_plus: 'Wszystko w planie Za darmo, a do tego:'
 pricing_and_tiers.free.full_access_to_all_features: Pełny dostęp do wszystkich funkcji
 pricing_and_tiers.free.label: Za darmo
-pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Uwaga: benefity Plutonium i Visionary działają tylko na oficjalnej instancji RdChat.app, nie na instancjach zewnętrznych ani self-hostowanych.'
+pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Uwaga: benefity Plutonium i Visionary działają tylko na oficjalnej instancji Fluxer.app, nie na instancjach zewnętrznych ani self-hostowanych.'
 pricing_and_tiers.plutonium.feature_highlights: Uploady 500 MB, wiadomości do 4 000 znaków, 300 zakładek, 50 paczek emoji i dużo więcej.
 pricing_and_tiers.plutonium.features.bio_character_limit: Limit znaków w bio
 pricing_and_tiers.plutonium.features.choose_custom_4_digit_tag: Wybierz dowolny dostępny tag czterocyfrowy od #0001 do #9999, aby unikatowość twojej nazwy użytkownika była niezaprzeczalna.
@@ -383,7 +383,7 @@ pricing_and_tiers.plutonium.features.message_scheduling: Planowanie wiadomości
 pricing_and_tiers.plutonium.features.per_community_profiles: Profile dla każdej społeczności
 pricing_and_tiers.plutonium.features.saved_media: Zapisane multimedia
 pricing_and_tiers.plutonium.features.webhooks_and_bot_support: Webhooki i wsparcie dla botów
-pricing_and_tiers.plutonium.get_more_with_plutonium: Zyskaj więcej z RdChat Plutonium
+pricing_and_tiers.plutonium.get_more_with_plutonium: Zyskaj więcej z Fluxer Plutonium
 pricing_and_tiers.plutonium.get_plutonium: Zgarnij Plutonium
 pricing_and_tiers.plutonium.higher_limits_and_early_access: Wyższe limity, funkcje na wyłączność i wcześniejszy dostęp do aktualizacji
 pricing_and_tiers.plutonium.higher_limits_everywhere: Wyższe limity wszędzie
@@ -396,7 +396,7 @@ pricing_and_tiers.visionary.bundle_label: Plutonium i Operator Pass na zawsze z 
 pricing_and_tiers.visionary.communities_with_team_access: Społeczności Visionary i Operators z dostępem dla zespołu
 pricing_and_tiers.visionary.get_visionary: Zgarnij Visionary
 pricing_and_tiers.visionary.label: Visionary
-pricing_and_tiers.visionary.lifetime_offer_copy: Zgarnij Plutonium na zawsze na RdChat.app plus Operator Pass do self-hostingu. Zapłać {0} jednorazowo. Dostępne do 1 października 2026 albo do wyczerpania wszystkich miejsc.
+pricing_and_tiers.visionary.lifetime_offer_copy: Zgarnij Plutonium na zawsze na Fluxer.app plus Operator Pass do self-hostingu. Zapłać {0} jednorazowo. Dostępne do 1 października 2026 albo do wyczerpania wszystkich miejsc.
 pricing_and_tiers.visionary.lifetime_operator_pass: Operator Pass na zawsze
 pricing_and_tiers.visionary.lifetime_plutonium: Plutonium na zawsze
 pricing_and_tiers.visionary.limited_offer_note: 'Oferta limitowana: Visionary zawiera Operator Pass'
@@ -407,8 +407,8 @@ pricing_and_tiers.visionary.purchase_flow: Kup Visionary bezpośrednio w aplikac
 pricing_and_tiers.visionary.slots_left.generic: Zostało {0} z {1} miejsc
 pricing_and_tiers.visionary.slots_left.visionary_bundle: Zostało tylko {0} z {1} miejsc Visionary – Plutonium i Operator Pass na zawsze
 pricing_and_tiers.visionary.slots_left.visionary_only: Zostało {0} miejsc Visionary
-product_positioning.free_and_open_source: RdChat jest darmowy i otwartoźródłowy. Każdy może hostować własną instancję za darmo.
-product_positioning.intro: RdChat to darmowa, otwartoźródłowa platforma komunikacji i VoIP stworzona dla znajomych, grup i społeczności.
+product_positioning.free_and_open_source: Fluxer jest darmowy i otwartoźródłowy. Każdy może hostować własną instancję za darmo.
+product_positioning.intro: Fluxer to darmowa, otwartoźródłowa platforma komunikacji i VoIP stworzona dla znajomych, grup i społeczności.
 product_positioning.open_source.fully_open_source_agplv3: W pełni otwartoźródłowy (AGPLv3)
 product_positioning.open_source.label: Open source
 product_positioning.open_source.license: Open source (AGPL-3.0)
@@ -416,25 +416,25 @@ product_positioning.self_hosting.connect_from_any_client: Łącz się z dowolneg
 product_positioning.self_hosting.free_self_hosting: Darmowy self-hosting
 product_positioning.self_hosting.host_your_own_instance: Hostuj własną instancję
 product_positioning.self_hosting.label: Self-hosting
-product_positioning.self_hosting.operator_pass.access_to_operators_community: Dostęp do społeczności RdChat Operators
+product_positioning.self_hosting.operator_pass.access_to_operators_community: Dostęp do społeczności Fluxer Operators
 product_positioning.self_hosting.operator_pass.after_offer_ends_stays_available: Gdy oferta się skończy, Operator Pass zostaje dostępny osobno.
 product_positioning.self_hosting.operator_pass.label: Operator Pass
 product_positioning.self_hosting.operator_pass.note_optional: 'Operator Pass jest opcjonalny: płacisz za wsparcie i dostęp do społeczności Operatorów.'
 product_positioning.self_hosting.operator_pass.priority_support_and_operators_access: Priorytetowe wsparcie i dostęp do społeczności Operatorów dla self-hostingu
-product_positioning.self_hosting.run_backend_on_your_hardware: Uruchom backend RdChat na swoim sprzęcie i łącz się przez nasze aplikacje.
+product_positioning.self_hosting.run_backend_on_your_hardware: Uruchom backend Fluxer na swoim sprzęcie i łącz się przez nasze aplikacje.
 product_positioning.self_hosting.switch_between_instances: Przełączaj się między wieloma instancjami
 security.found_security_issue: Znalazłeś problem z bezpieczeństwem?
 security.report_vulnerabilities: Zgłaszaj luki i pomóż nam utrzymać platformę bezpieczną.
 security.responsible_disclosure_note: Doceniamy odpowiedzialne zgłaszanie przez naszą stronę bug bounty. Oferujemy kody Plutonium i odznaki Bug Hunter w zależności od wagi.
 security.security_bug_bounty: Bug bounty za luki bezpieczeństwa
 security.security_reports: Raporty bezpieczeństwa
-security.testers_access_from_reports: Zaakceptowane zgłoszenia dają dostęp do RdChat Testers, gdzie możesz zdobywać punkty na kody Plutonium i odznakę Bug Hunter.
+security.testers_access_from_reports: Zaakceptowane zgłoszenia dają dostęp do Fluxer Testers, gdzie możesz zdobywać punkty na kody Plutonium i odznakę Bug Hunter.
 social_and_feeds.bluesky.follow_us: Obserwuj nas na Bluesky
 social_and_feeds.bluesky.label: Bluesky
 social_and_feeds.bluesky.rss_feed: RSS Bluesky
-social_and_feeds.follow_fluxer: Obserwuj @RdChat.app
+social_and_feeds.follow_fluxer: Obserwuj @fluxer.app
 social_and_feeds.github: GitHub
 social_and_feeds.rss.blog_rss_feed: RSS bloga
-social_and_feeds.rss.fluxer_blog_rss: RSS bloga RdChat
+social_and_feeds.rss.fluxer_blog_rss: RSS bloga Fluxer
 social_and_feeds.rss.label: RSS
 social_and_feeds.stay_updated_cta: Bądź na bieżąco z newsami, statusem usługi i tym, co się dzieje. Możesz też zasubskrybować nasz

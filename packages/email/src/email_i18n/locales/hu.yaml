@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Ideiglenesen letiltottuk a RdChat-fiókodat
+  subject: Ideiglenesen letiltottuk a Fluxer-fiókodat
   body: |-
     Szia {username}!
 
-    Ideiglenesen letiltottuk a RdChat-fiókodat, mert gyanús aktivitást észleltünk.
+    Ideiglenesen letiltottuk a Fluxer-fiókodat, mert gyanús aktivitást észleltünk.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Ha szerinted ez tévedésből történt, vedd fel a kapcsolatot az ügyfélszolgálatunkkal.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 account_scheduled_deletion:
-  subject: A RdChat-fiókodat végleges törlésre ütemeztük
+  subject: A Fluxer-fiókodat végleges törlésre ütemeztük
   body: |-
     Szia {username}!
 
-    A RdChat-fiókodat végleges törlésre ütemeztük, mert megsértetted a felhasználási feltételeinket vagy a közösségi irányelveinket.
+    A Fluxer-fiókodat végleges törlésre ütemeztük, mert megsértetted a felhasználási feltételeinket vagy a közösségi irányelveinket.
 
     Tervezett törlés: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Közösségi irányelvek: {guidelinesUrl}
 
     Fellebbezés:
-    Ha szerinted a döntés téves vagy nem megalapozott, 60 napod van fellebbezést benyújtani. Írj az appeals@RdChat.app címre, és ezt erről az e-mail-címről tedd meg.
+    Ha szerinted a döntés téves vagy nem megalapozott, 60 napod van fellebbezést benyújtani. Írj az appeals@fluxer.app címre, és ezt erről az e-mail-címről tedd meg.
 
     A fellebbezésben:
     - Írd le egyértelműen, miért gondolod, hogy a döntés téves vagy nem megalapozott.
     - Ha tudsz, csatolj releváns bizonyítékot vagy adj meg további körülményeket.
 
-    A RdChat biztonsági csapatának egyik tagja átnézi a fellebbezést, és a végső döntésig felfüggesztheti a törlést.
+    A Fluxer biztonsági csapatának egyik tagja átnézi a fellebbezést, és a végső döntésig felfüggesztheti a törlést.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 account_temp_banned:
-  subject: Ideiglenesen felfüggesztettük a RdChat-fiókodat
+  subject: Ideiglenesen felfüggesztettük a Fluxer-fiókodat
   body: |-
     Szia {username}!
 
-    Ideiglenesen felfüggesztettük a RdChat-fiókodat, mert megsértetted a felhasználási feltételeinket vagy a közösségi irányelveinket.
+    Ideiglenesen felfüggesztettük a Fluxer-fiókodat, mert megsértetted a felhasználási feltételeinket vagy a közösségi irányelveinket.
 
     Időtartam: {durationHours, plural,
       =1 {1 óra}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Felhasználási feltételek: {termsUrl}
     - Közösségi irányelvek: {guidelinesUrl}
 
-    Ha szerinted a döntés téves vagy nem megalapozott, fellebbezhetsz az appeals@RdChat.app címen, és ezt erről az e-mail-címről tedd meg. Kérjük, írd le egyértelműen, miért gondolod, hogy a döntés téves. Átnézzük a fellebbezést, és visszajelzünk a döntésünkről.
+    Ha szerinted a döntés téves vagy nem megalapozott, fellebbezhetsz az appeals@fluxer.app címen, és ezt erről az e-mail-címről tedd meg. Kérjük, írd le egyértelműen, miért gondolod, hogy a döntés téves. Átnézzük a fellebbezést, és visszajelzünk a döntésünkről.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 donation_confirmation:
-  subject: Köszönjük a RdChat-adományodat
+  subject: Köszönjük a Fluxer-adományodat
   body: |-
     Szia!
 
-    Köszönjük a RdChat-adományodat! {interval, select,
+    Köszönjük a Fluxer-adományodat! {interval, select,
       month {Az ismétlődő adományod}
       year {Az ismétlődő adományod}
       other {Az egyszeri adományod}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    A támogatásod segít működtetni a RdChatt. Köszönjük!
+    A támogatásod segít működtetni a Fluxert. Köszönjük!
 
-    – RdChat csapata
+    – Fluxer csapata
 donation_magic_link:
-  subject: Kezeld a RdChat-adományaidat
+  subject: Kezeld a Fluxer-adományaidat
   body: |-
     Szia!
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Ha nem te kérted ezt a linket, nyugodtan hagyd figyelmen kívül ezt az e-mailt.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 dsa_report_verification:
   subject: E-mail-cím megerősítése DSA-bejelentéshez
   body: |-
     Szia!
 
-    A lenti kóddal tudod beküldeni a Digital Services Act (DSA) szerinti bejelentésedet a RdChaten:
+    A lenti kóddal tudod beküldeni a Digital Services Act (DSA) szerinti bejelentésedet a Fluxeren:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Ha nem te kérted, nyugodtan hagyd figyelmen kívül ezt az e-mailt.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 email_change_new:
-  subject: Erősítsd meg az új RdChat e-mail-címedet
+  subject: Erősítsd meg az új Fluxer e-mail-címedet
   body: |-
     Szia {username}!
 
-    Írd be ezt a kódot az appban az új RdChat e-mail-címed megerősítéséhez:
+    Írd be ezt a kódot az appban az új Fluxer e-mail-címed megerősítéséhez:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Ha nem te kérted, nyugodtan hagyd figyelmen kívül ezt az e-mailt.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 email_change_original:
-  subject: Erősítsd meg a RdChat e-mail-cím módosítását
+  subject: Erősítsd meg a Fluxer e-mail-cím módosítását
   body: |-
     Szia {username}!
 
-    Kérést kaptunk a RdChat-fiókodhoz tartozó e-mail-cím megváltoztatására.
+    Kérést kaptunk a Fluxer-fiókodhoz tartozó e-mail-cím megváltoztatására.
 
     A módosítás megerősítéséhez írd be ezt a kódot az appban:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Ha nem te kérted, azonnal gondoskodj a fiókod biztonságáról.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 email_change_revert:
-  subject: Megváltozott a RdChat e-mail-címed
+  subject: Megváltozott a Fluxer e-mail-címed
   body: |-
     Szia {username}!
 
-    A RdChat-fiókodhoz tartozó e-mail-címet erre módosítottuk: {newEmail}.
+    A Fluxer-fiókodhoz tartozó e-mail-címet erre módosítottuk: {newEmail}.
 
     Ha te végezted a módosítást, nincs teendőd. Ha nem te voltál, ezen a linken visszaállíthatod a változtatást, és biztonságba helyezheted a fiókodat:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Ez visszaállítja a korábbi e-mail-címedet, minden eszközről kijelentkeztet, eltávolítja a kapcsolt telefonszámokat, kikapcsolja a többfaktoros hitelesítést, és új jelszó beállítását kéri.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 email_verification:
-  subject: Erősítsd meg a RdChat e-mail-címedet
+  subject: Erősítsd meg a Fluxer e-mail-címedet
   body: |-
     Szia {username}!
 
-    Kérjük, erősítsd meg a RdChat-fiókodhoz tartozó e-mail-címet az alábbi linkre kattintva:
+    Kérjük, erősítsd meg a Fluxer-fiókodhoz tartozó e-mail-címet az alábbi linkre kattintva:
 
     {verifyUrl}
 
-    Ha nem te hoztál létre RdChat-fiókot, nyugodtan figyelmen kívül hagyhatod ezt az e-mailt.
+    Ha nem te hoztál létre Fluxer-fiókot, nyugodtan figyelmen kívül hagyhatod ezt az e-mailt.
 
     A link 24 órán át érvényes.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 gift_chargeback_notification:
   subject: Eltávolítottuk a beváltott ajándékhoz járó előnyöket
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Ha szerinted ez tévedés, vedd fel a kapcsolatot az ügyfélszolgálatunkkal, és írd meg, amit tudsz az ajándékkódról és a beváltás időpontjáról.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 harvest_completed:
-  subject: A RdChat-adatexportod készen áll a letöltésre
+  subject: A Fluxer-adatexportod készen áll a letöltésre
   body: |-
     Szia {username}!
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Ha nem te kérted ezt az exportot, azonnal változtasd meg a jelszavad, és vedd fel a kapcsolatot az ügyfélszolgálatunkkal.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 inactivity_warning:
-  subject: A RdChat-fiókodat inaktivitás miatt töröljük
+  subject: A Fluxer-fiókodat inaktivitás miatt töröljük
   body: |-
     Szia {username}!
 
-    Nem láttunk aktivitást a RdChat-fiókodon {lastActiveDate, date, full} óta.
+    Nem láttunk aktivitást a Fluxer-fiókodon {lastActiveDate, date, full} óta.
 
     Ha nem jelentkezel be eddig: {deletionDate, date, full} {deletionDate, time, short}, a fiókodat inaktivitás miatt véglegesen töröljük.
 
     Jelentkezz be itt:
     {loginUrl}
 
-    Ha nemrég használtad a RdChatt, azonnal vedd fel a kapcsolatot az ügyfélszolgálatunkkal.
+    Ha nemrég használtad a Fluxert, azonnal vedd fel a kapcsolatot az ügyfélszolgálatunkkal.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 ip_authorization:
   subject: Bejelentkezés jóváhagyása új IP-címről
   body: |-
     Szia {username}!
 
-    Olyan bejelentkezési próbálkozást észleltünk a RdChat-fiókodnál, amely új IP-címről történt:
+    Olyan bejelentkezési próbálkozást észleltünk a Fluxer-fiókodnál, amely új IP-címről történt:
 
     IP-cím: {ipAddress}
     Hely: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Ez a jóváhagyó link 30 percig érvényes.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 password_change_verification:
-  subject: Erősítsd meg a RdChat jelszavad módosítását
+  subject: Erősítsd meg a Fluxer jelszavad módosítását
   body: |-
     Szia {username}!
 
-    Kérést kaptunk a RdChat-fiókodhoz tartozó jelszó megváltoztatására.
+    Kérést kaptunk a Fluxer-fiókodhoz tartozó jelszó megváltoztatására.
 
     A módosítás megerősítéséhez írd be ezt a kódot az appban:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Ha nem te kérted, előfordulhat, hogy valaki hozzáfért a fiókodhoz. Azonnal változtasd meg a jelszavad, és kapcsold be a kétfaktoros hitelesítést.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 password_reset:
-  subject: Állítsd vissza a RdChat jelszavadat
+  subject: Állítsd vissza a Fluxer jelszavadat
   body: |-
     Szia {username}!
 
-    Jelszó-visszaállítást kértél a RdChathez. Az alábbi linken tudsz új jelszót beállítani:
+    Jelszó-visszaállítást kértél a Fluxerhez. Az alábbi linken tudsz új jelszót beállítani:
 
     {resetUrl}
 
@@ -292,20 +292,20 @@ password_reset:
 
     A link 1 órán át érvényes.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 registration_approved:
-  subject: Jóváhagytuk a RdChat-regisztrációdat
+  subject: Jóváhagytuk a Fluxer-regisztrációdat
   body: |-
     Szia {username}!
 
-    Jó hír: jóváhagytuk a RdChat-regisztrációdat.
+    Jó hír: jóváhagytuk a Fluxer-regisztrációdat.
 
-    Most már be tudsz jelentkezni a RdChat appba itt:
+    Most már be tudsz jelentkezni a Fluxer appba itt:
     {channelsUrl}
 
-    Üdv a RdChat közösségben.
+    Üdv a Fluxer közösségben.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 report_resolved:
   subject: Átnéztük a bejelentésedet
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Válasz a biztonsági csapattól:
     {publicComment}
 
-    Köszönjük, hogy segítesz biztonságossá tenni a RdChatt mindenkinek. Minden bejelentést komolyan veszünk, és értékeljük a közösségért tett hozzájárulásod.
+    Köszönjük, hogy segítesz biztonságossá tenni a Fluxert mindenkinek. Minden bejelentést komolyan veszünk, és értékeljük a közösségért tett hozzájárulásod.
 
-    Ha kérdésed vagy észrevételed van a döntéssel kapcsolatban, írj a safety@RdChat.app címre.
+    Ha kérdésed vagy észrevételed van a döntéssel kapcsolatban, írj a safety@fluxer.app címre.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 scheduled_deletion_notification:
-  subject: A RdChat-fiókodat végleges törlésre ütemeztük
+  subject: A Fluxer-fiókodat végleges törlésre ütemeztük
   body: |-
     Szia {username}!
 
-    A RdChat-fiókodat végleges törlésre ütemeztük.
+    A Fluxer-fiókodat végleges törlésre ütemeztük.
 
     Tervezett törlés: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     Ez egy komoly intézkedés. A fiókod adatait a megadott időpontban véglegesen töröljük.
 
-    Ha szerinted a döntés téves, fellebbezhetsz az appeals@RdChat.app címen, és ezt erről az e-mail-címről tedd meg.
+    Ha szerinted a döntés téves, fellebbezhetsz az appeals@fluxer.app címen, és ezt erről az e-mail-címről tedd meg.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata
 self_deletion_scheduled:
-  subject: Ütemeztük a RdChat-fiókod törlését
+  subject: Ütemeztük a Fluxer-fiókod törlését
   body: |-
     Szia {username}!
 
-    Te kérted a RdChat-fiókod törlését. A fiókod végleges törlésének időpontja:
+    Te kérted a Fluxer-fiókod törlését. A fiókod végleges törlésének időpontja:
 
     {deletionDate, date, full} {deletionDate, time, short}
 
     Ha nem te kérted, jelentkezz be a fiókodba a törlés lemondásához. Javasoljuk azt is, hogy változtasd meg a jelszavad, hogy biztonságban tartsd a fiókodat.
 
-    – A RdChat csapata
+    – A Fluxer csapata
 unban_notification:
-  subject: Feloldottuk a RdChat-fiókod felfüggesztését
+  subject: Feloldottuk a Fluxer-fiókod felfüggesztését
   body: |-
     Szia {username}!
 
-    Jó hír: feloldottuk a RdChat-fiókod felfüggesztését.
+    Jó hír: feloldottuk a Fluxer-fiókod felfüggesztését.
 
     {reason, select,
       null {}
       other {Indok: {reason}}
     }
 
-    Most már újra be tudsz lépni a fiókodba, és használhatod a RdChatt a megszokott módon.
+    Most már újra be tudsz lépni a fiókodba, és használhatod a Fluxert a megszokott módon.
 
-    – A RdChat biztonsági csapata
+    – A Fluxer biztonsági csapata

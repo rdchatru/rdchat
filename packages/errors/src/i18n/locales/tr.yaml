@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Sahiplenilme
 usernames_and_tags.username_invalid_characters: Kullanıcı adı yalnızca Latin harfleri (a-z, A-Z), sayılar (0-9) ve alt çizgi (_) içerebilir.
 usernames_and_tags.username_length_invalid: Kullanıcı adı {min} ile {max} karakter arasında olmalı.
 usernames_and_tags.username_not_available: Bu kullanıcı adı mevcut değil.
-usernames_and_tags.username_reserved_terms: Kullanıcı adı "RdChat" ya da "system message" içeremez.
+usernames_and_tags.username_reserved_terms: Kullanıcı adı "fluxer" ya da "system message" içeremez.
 usernames_and_tags.username_reserved_value: Kullanıcı adı "everyone" ya da "here" olamaz.
 vanity_urls.vanity_url_already_taken: Bu özel URL zaten alınmış.
 vanity_urls.vanity_url_code_already_taken: Bu özel URL kodu zaten alınmış.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Özel URL kodu "RdChat" içeremez.
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Özel URL kodu "fluxer" içeremez.
 vanity_urls.vanity_url_code_length_invalid: Özel URL kodu {min} ile {max} karakter arasında olmalı.
 vanity_urls.vanity_url_invalid_characters: Özel URL yalnızca küçük harfler (a-z), rakamlar (0-9) ve tire (-) içerebilir.
 webhooks.cannot_modify_system_webhook: Sistem iletilerini düzenleyemezsin.

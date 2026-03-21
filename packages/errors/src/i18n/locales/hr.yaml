@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Nepotvđeni 
 usernames_and_tags.username_invalid_characters: Korisničko ime smije sadržavati samo latinična slova (a-z, A-Z), brojeve (0-9) i donju crtu (_).
 usernames_and_tags.username_length_invalid: Korisničko ime mora imati između {min} i {max} znakova.
 usernames_and_tags.username_not_available: Ovo korisničko ime nije dostupno.
-usernames_and_tags.username_reserved_terms: Korisničko ime ne smije sadržavati "RdChat" ni "system message".
+usernames_and_tags.username_reserved_terms: Korisničko ime ne smije sadržavati "fluxer" ni "system message".
 usernames_and_tags.username_reserved_value: Korisničko ime ne može biti "everyone" ni "here".
 vanity_urls.vanity_url_already_taken: Ovaj vanity URL je već zauzet.
 vanity_urls.vanity_url_code_already_taken: Ovaj vanity URL kod je već zauzet.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL kod ne smije sadržavati "RdChat".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL kod ne smije sadržavati "fluxer".
 vanity_urls.vanity_url_code_length_invalid: Vanity URL kod mora imati između {min} i {max} znakova.
 vanity_urls.vanity_url_invalid_characters: Vanity URL smije sadržavati samo mala slova (a-z), znamenke (0-9) i crtice (-).
 webhooks.cannot_modify_system_webhook: Ne možeš mijenjati sistemski webhook.

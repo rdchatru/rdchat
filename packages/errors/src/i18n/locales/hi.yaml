@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Unclaimed ac
 usernames_and_tags.username_invalid_characters: Username में सिर्फ Latin letters (a-z, A-Z), numbers (0-9), और underscores (_) हो सकते हैं।
 usernames_and_tags.username_length_invalid: Username {min} से {max} characters के बीच होना चाहिए।
 usernames_and_tags.username_not_available: यह username उपलब्ध नहीं है।
-usernames_and_tags.username_reserved_terms: Username में "RdChat" या "system message" नहीं हो सकता।
+usernames_and_tags.username_reserved_terms: Username में "fluxer" या "system message" नहीं हो सकता।
 usernames_and_tags.username_reserved_value: Username "everyone" या "here" नहीं हो सकता।
 vanity_urls.vanity_url_already_taken: यह vanity URL पहले से लिया जा चुका है।
 vanity_urls.vanity_url_code_already_taken: यह vanity URL code पहले से लिया जा चुका है।
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL code में "RdChat" नहीं हो सकता।
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL code में "fluxer" नहीं हो सकता।
 vanity_urls.vanity_url_code_length_invalid: Vanity URL code {min} से {max} characters के बीच होना चाहिए।
 vanity_urls.vanity_url_invalid_characters: Vanity URL में सिर्फ lowercase letters (a-z), digits (0-9), और hyphens (-) हो सकते हैं।
 webhooks.cannot_modify_system_webhook: आप सिस्टम संदेशों को संपादित नहीं कर सकते।

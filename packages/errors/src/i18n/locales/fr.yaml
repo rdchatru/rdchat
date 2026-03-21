@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Les comptes 
 usernames_and_tags.username_invalid_characters: Le nom d'utilisateur ne peut contenir que des lettres latines (a-z, A-Z), des chiffres (0-9) et des underscores (_).
 usernames_and_tags.username_length_invalid: Le nom d'utilisateur doit contenir entre {min} et {max} caractères.
 usernames_and_tags.username_not_available: Ce nom d'utilisateur n'est pas disponible.
-usernames_and_tags.username_reserved_terms: Le nom d'utilisateur ne peut pas contenir 'RdChat' ou 'system message'.
+usernames_and_tags.username_reserved_terms: Le nom d'utilisateur ne peut pas contenir 'fluxer' ou 'system message'.
 usernames_and_tags.username_reserved_value: Le nom d'utilisateur ne peut pas être 'everyone' ou 'here'.
 vanity_urls.vanity_url_already_taken: Cette URL personnalisée est déjà prise.
 vanity_urls.vanity_url_code_already_taken: Ce code d'URL personnalisée est déjà pris.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Le code d'URL personnalisée ne peut pas contenir 'RdChat'.
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Le code d'URL personnalisée ne peut pas contenir 'fluxer'.
 vanity_urls.vanity_url_code_length_invalid: Le code d'URL personnalisée doit contenir entre {min} et {max} caractères.
 vanity_urls.vanity_url_invalid_characters: L'URL personnalisée ne peut contenir que des lettres minuscules (a-z), des chiffres (0-9) et des tirets (-).
 webhooks.cannot_modify_system_webhook: Tu ne peux pas modifier les messages système.

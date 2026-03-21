@@ -2,7 +2,7 @@ app.communities.community: Bendruomenė
 app.communities.community_support: Bendruomenių palaikymas
 app.communities.featured_in_discovery: Išskirta atradimuose
 app.communities.moderation.actions_and_tools: Moderavimo veiksmai ir įrankiai
-app.communities.moderation.report_people_or_communities: Pranešk apie žmones ar bendruomenes, kad RdChat būtų saugus visiems.
+app.communities.moderation.report_people_or_communities: Pranešk apie žmones ar bendruomenes, kad Fluxer būtų saugus visiems.
 app.communities.moderation.tools: Moderavimo įrankiai
 app.communities.roles_permissions_audit.audit_logs: Audito žurnalai skaidrumui
 app.communities.roles_permissions_audit.granular_roles_and_permissions: Detalūs vaidmenys ir leidimai
@@ -19,7 +19,7 @@ app.customization.custom_css_themes: Pasirinktinės CSS temos
 app.customization.custom_sounds.entrance_sounds: Įėjimo garsai
 app.customization.custom_sounds.notification_sounds: Pranešimų garsai
 app.customization.custom_sounds.set_personalized_join_sounds: Nusistatyk savo garsą, kai prisijungi prie balso kanalų, kad visi iškart žinotų, jog esi čia.
-app.customization.custom_sounds.upload_custom_notification_sounds: Įkelk ir naudok savo pranešimų garsus, kad RdChat jaustųsi kaip tavo.
+app.customization.custom_sounds.upload_custom_notification_sounds: Įkelk ir naudok savo pranešimų garsus, kad Fluxer jaustųsi kaip tavo.
 app.customization.custom_themes: Pasirinktinės temos
 app.customization.global_emoji_and_sticker_access: Emoji ir lipdukai visur
 app.customization.saved_media_and_css: Pridėk savo emoji, pasilik mediją vėliau ir susistylink programėlę su savo CSS.
@@ -40,7 +40,7 @@ app.messaging.features.search.label: Ieškoti žinučių istorijoje
 app.messaging.features.search.quick_switcher_shortcuts: Greitas perjungimas su klaviatūros trumpiniais
 app.messaging.features.search.search_and_quick_switcher: Paieška ir greitas perjungimas
 app.messaging.title: Žinutės
-app.open.open_fluxer: Atidaryti RdChat
+app.open.open_fluxer: Atidaryti Fluxer
 app.open.open_web_app: Atidaryti žiniatinklio programėlę
 app.profiles_identity.custom_identity: Pasirinktinis identitetas
 app.profiles_identity.customise_per_community: Susitvarkyk profilį skirtingai kiekvienai bendruomenei, kurioje esi.
@@ -62,18 +62,18 @@ beta_and_access.early_access.label: Ankstyva prieiga
 beta_and_access.featured_benefit_line: Visi pagrindai, kurių tikiesi, ir dar keli, kurių nesitikėjai.
 beta_and_access.public_beta: Vieša beta
 beta_and_access.registration_limited_during_beta: Per beta ribojame registracijas. Kai pateksi, galėsi duoti draugams kodą, kad praleistų eilę.
-beta_and_access.try_without_email: Išbandyk RdChat be el. pašto per 30 sekundžių
-community_funding_and_roles.focused_on_product: Dabar fokusuojamės į puikų produktą ir į tai, kad RdChat liktų nepriklausomas ir augtų savo jėgomis.
+beta_and_access.try_without_email: Išbandyk Fluxer be el. pašto per 30 sekundžių
+community_funding_and_roles.focused_on_product: Dabar fokusuojamės į puikų produktą ir į tai, kad Fluxer liktų nepriklausomas ir augtų savo jėgomis.
 community_funding_and_roles.future_paid_roles_heading: Mokamos rolės ateityje
-community_funding_and_roles.future_paid_roles_note: Vis dar kuriame verslo dalį aplink RdChat ir dar nesame pasiruošę mokamoms rolėms.
-community_funding_and_roles.non_paid_recurring_role: Nemokama rolė nuolatiniams prisidėjusiems, kurie padeda formuoti RdChat kartu su pagrindine komanda.
+community_funding_and_roles.future_paid_roles_note: Vis dar kuriame verslo dalį aplink Fluxer ir dar nesame pasiruošę mokamoms rolėms.
+community_funding_and_roles.non_paid_recurring_role: Nemokama rolė nuolatiniams prisidėjusiems, kurie padeda formuoti Fluxer kartu su pagrindine komanda.
 community_funding_and_roles.sustainability_note: Su tavo palaikymu tikimės, kad ši nepriklausoma komunikacijos platforma taps tvari, ir ateityje galėsime pasiūlyti mokamas roles.
 company_and_resources.blog: Tinklaraštis
-company_and_resources.careers.careers_at_fluxer: Karjera RdChat
+company_and_resources.careers.careers_at_fluxer: Karjera Fluxer
 company_and_resources.careers.label: Karjera
-company_and_resources.careers.share_a_bit_about_yourself: Parašyk truputį apie save ir kaip norėtum prisidėti, parašydamas į careers@RdChat.app
-company_and_resources.community_team.fluxer_community_team: RdChat bendruomenės komanda
-company_and_resources.community_team.share_feedback_report_bugs: Dalinkis atsiliepimais, pranešk apie klaidas ir padėk padaryti RdChat jaukų visiems.
+company_and_resources.careers.share_a_bit_about_yourself: Parašyk truputį apie save ir kaip norėtum prisidėti, parašydamas į careers@fluxer.app
+company_and_resources.community_team.fluxer_community_team: Fluxer bendruomenės komanda
+company_and_resources.community_team.share_feedback_report_bugs: Dalinkis atsiliepimais, pranešk apie klaidas ir padėk padaryti Fluxer jaukų visiems.
 company_and_resources.company: Įmonė
 company_and_resources.company_info: Informacija apie įmonę
 company_and_resources.connect: Susisiekti
@@ -89,31 +89,31 @@ company_and_resources.source_and_contribution.code_issues_docs_reviews: Kodas, u
 company_and_resources.source_and_contribution.contribute_code: Prisidėti kodu
 company_and_resources.source_and_contribution.contribute_on_github: Prisidėti GitHub
 company_and_resources.source_and_contribution.fix_bugs_ship_features: Taisyk klaidas, išleisk funkcijas arba nušlifuok patirtį mūsų pagrindiniame repozitorijoje.
-company_and_resources.source_and_contribution.fluxer_built_in_open: RdChat kuriamas atvirai. Pasirink kelią, kuris tau labiausiai tinka.
+company_and_resources.source_and_contribution.fluxer_built_in_open: Fluxer kuriamas atvirai. Pasirink kelią, kuris tau labiausiai tinka.
 company_and_resources.source_and_contribution.get_involved: Prisidėk
 company_and_resources.source_and_contribution.source_code: Šaltinio kodas
-company_and_resources.source_and_contribution.translation.help_translate: Padėk išversti RdChat ir jo dokumentaciją, kad visur jaustųsi kaip vietinė.
+company_and_resources.source_and_contribution.translation.help_translate: Padėk išversti Fluxer ir jo dokumentaciją, kad visur jaustųsi kaip vietinė.
 company_and_resources.source_and_contribution.translation.label: Vertimas ir lokalizacija
-company_and_resources.source_and_contribution.translation.llm_translation_note: Šiuo metu visi vertimai sugeneruoti LLM ir beveik neperžiūrėti žmogaus. Norėtume, kad tikri žmonės padėtų lokalizuoti RdChat į tavo kalbą. Parašyk i18n@RdChat.app ir mielai priimsime tavo indėlį.
+company_and_resources.source_and_contribution.translation.llm_translation_note: Šiuo metu visi vertimai sugeneruoti LLM ir beveik neperžiūrėti žmogaus. Norėtume, kad tikri žmonės padėtų lokalizuoti Fluxer į tavo kalbą. Parašyk i18n@fluxer.app ir mielai priimsime tavo indėlį.
 company_and_resources.source_and_contribution.translation.localization_label: Lokalizacija
 company_and_resources.source_and_contribution.view_repository: Peržiūrėti repozitoriją
-company_and_resources.source_and_contribution.want_to_help_build_fluxer: Nori padėti kurti RdChat?
+company_and_resources.source_and_contribution.want_to_help_build_fluxer: Nori padėti kurti Fluxer?
 company_and_resources.source_and_contribution.ways_to_contribute: Kaip prisidėti
 donations.business: Verslas
 donations.donate.action: Aukoti
-donations.donate.label: Paaukoti RdChat
-donations.donate.description: Paremkite RdChat vienkartine arba pasikartojančia auka
+donations.donate.label: Paaukoti Fluxer
+donations.donate.description: Paremkite Fluxer vienkartine arba pasikartojančia auka
 donations.donation_disclaimer: Aukos yra savanoriškos dovanos ir nesuteikia tau jokio produkto, paslaugos, nuosavybės ar specialių teisių. Jei ieškai premium funkcijų, užmesk akį į {0}.
 donations.individual: Privatus asmuo
 donations.individual_vs_business.answer: Abi aukos vienodai palaiko tą patį tikslą. Skirtumas tik tas, kad Verslo aukai gali nurodyti mokesčių mokėtojo kodą (jei taikoma) ir pabaigoje gauti PDF sąskaitą faktūrą, kas patogu įmonės apskaitai.
 donations.individual_vs_business.question: Kuo skiriasi Privatus asmuo ir Verslas?
-donations.infrastructure_costs_detail: Tavo auka padeda padengti RdChat infrastruktūros išlaidas, įskaitant serverius, pralaidumą, saugyklą ir nuolatinį naujų funkcijų kūrimą. Ji padeda mums išlaikyti ir gerinti platformą visiems.
+donations.infrastructure_costs_detail: Tavo auka padeda padengti Fluxer infrastruktūros išlaidas, įskaitant serverius, pralaidumą, saugyklą ir nuolatinį naujų funkcijų kūrimą. Ji padeda mums išlaikyti ir gerinti platformą visiems.
 donations.minimum_donation: 'Minimali auka: $5 / €5'
 donations.mobile_roadmap_sponsorship: Paremk mobilios versijos kelio žemėlapį
 donations.send_one_time_gift: Nusiųsti vienkartinę dovaną
 donations.support_future_development: Palaikyti tolesnį kūrimą
 donations.support_message: Padėk mums kurti nepriklausomą komunikacijos platformą. Tavo auka finansuoja platformos infrastruktūrą ir kūrimą.
-donations.tax_deductible.answer: Aukos RdChat šiuo metu nėra atskaitomos nuo mokesčių, tačiau jos tiesiogiai finansuoja mūsų infrastruktūrą ir nuolatinį kūrimą.
+donations.tax_deductible.answer: Aukos Fluxer šiuo metu nėra atskaitomos nuo mokesčių, tačiau jos tiesiogiai finansuoja mūsų infrastruktūrą ir nuolatinį kūrimą.
 donations.tax_deductible.question: Ar mano auka atskaitoma nuo mokesčių?
 donations.what_it_supports: Kam skiriama mano auka?
 donations.why_support: Padėk mums kurti kitokią komunikacijos platformą – atvirojo kodo, finansuojamą bendruomenės ir kuriamą su rūpesčiu.
@@ -148,8 +148,8 @@ donations.success.message: Ačiū už auką! Labai vertiname tavo paramą.
 donations.success.email_notice: Netrukus gausi patvirtinimo el. laišką su aukos detalėmis ir nuorodą į aukotojo portalą.
 donations.success.back_to_donate: Grįžti į aukojimą
 download.download: Atsisiųsti
-download.download_app_or_open_in_browser: Atsisiųsk programėlę arba atidaryk RdChat naršyklėje ir pradėk jungtis prie savo bendruomenių.
-download.download_fluxer: Atsisiųsti RdChat
+download.download_app_or_open_in_browser: Atsisiųsk programėlę arba atidaryk Fluxer naršyklėje ir pradėk jungtis prie savo bendruomenių.
+download.download_fluxer: Atsisiųsti Fluxer
 download.download_for_prefix: 'Atsisiųsti, skirta '
 download.open_in_browser: Atidaryti naršyklėje
 download.screenshots_courtesy_of: 'Ekrano nuotraukos suteiktos '
@@ -159,8 +159,8 @@ footer.company_information: Informacija apie įmonę
 footer.connect: Susisiekti
 footer.donate: Aukoti
 footer.download: Atsisiųsti
-footer.fluxer: RdChat
-footer.fluxer_platform_ab_swedish_limited: '© RdChat Platform AB (Švedijos ribotos atsakomybės bendrovė: 559537-3993)'
+footer.fluxer: Fluxer
+footer.fluxer_platform_ab_swedish_limited: '© Fluxer Platform AB (Švedijos ribotos atsakomybės bendrovė: 559537-3993)'
 footer.help_support_an_independent_communication: Palaikyk nepriklausomą komunikacijos platformą. Tavo auka finansuoja platformos infrastruktūrą ir kūrimą.
 footer.partners: Partneriai
 footer.plutonium_tier: Plutonium lygis
@@ -218,8 +218,8 @@ languages.list.thai: Tajų
 languages.list.turkish: Turkų
 languages.list.ukrainian: Ukrainiečių
 languages.list.vietnamese: Vietnamiečių
-launch.description: Sužinok apie RdChat kūrėją, projekto tikslus, technologijų krūvą ir ką laukia toliau.
-launch.heading: RdChat istorija
+launch.description: Sužinok apie Fluxer kūrėją, projekto tikslus, technologijų krūvą ir ką laukia toliau.
+launch.heading: Fluxer istorija
 launch.read_more: Skaityti paleidimo įrašą
 launch.view_full_roadmap: Peržiūrėti visą kelio žemėlapį
 misc_labels.design_and_branding: Dizainas ir prekės ženklo stilius
@@ -229,12 +229,12 @@ misc_labels.exclusive_features: Išskirtinės funkcijos
 misc_labels.feature: Funkcija
 misc_labels.get_updates: Gauk naujienas, pamatyk kas laukia, aptark idėjas ir pabendrauk su komanda.
 misc_labels.join_and_spread_word: Prisijunk ir paskleisk žinią
-misc_labels.join_fluxer_community_contribute: Prisijunk prie RdChat bendruomenės ir padėk kurti komunikacijos ateitį per atvirą kodą ir bendruomenės indėlį.
-misc_labels.join_fluxer_hq: Prisijunk prie RdChat HQ
+misc_labels.join_fluxer_community_contribute: Prisijunk prie Fluxer bendruomenės ir padėk kurti komunikacijos ateitį per atvirą kodą ir bendruomenės indėlį.
+misc_labels.join_fluxer_hq: Prisijunk prie Fluxer HQ
 misc_labels.join_multiple_devices: Prisijunk iš kelių įrenginių vienu metu
-misc_labels.join_team_behind_fluxer: Prisijunk prie RdChat komandos
+misc_labels.join_team_behind_fluxer: Prisijunk prie Fluxer komandos
 misc_labels.learn_more: Sužinoti daugiau
-misc_labels.product_hunt_badge_title: RdChat – atvirojo kodo Discord tipo momentinių žinučių ir VoIP platforma | Product Hunt top post
+misc_labels.product_hunt_badge_title: Fluxer – atvirojo kodo Discord tipo momentinių žinučių ir VoIP platforma | Product Hunt top post
 misc_labels.profile_badge: Profilio ženklelis
 misc_labels.read_the_guide: Skaityti gidą
 misc_labels.ready_to_get_started: Pasiruošęs pradėti?
@@ -253,11 +253,11 @@ navigation.on_this_page: Šiame puslapyje
 navigation.page_not_found.description: Šio puslapio nėra. Bet yra dar daug ką pamatyti.
 navigation.page_not_found.title: Puslapis nerastas
 navigation.press.download_assets_intro: Atsisiųsk mūsų logotipus, sužinok apie prekės ženklo spalvas ir susisiek su mūsų spaudos komanda.
-navigation.press.download_fluxer_assets: Atsisiųsk RdChat logotipus ir prekės ženklo medžiagą, arba susisiek su mūsų spaudos komanda
+navigation.press.download_fluxer_assets: Atsisiųsk Fluxer logotipus ir prekės ženklo medžiagą, arba susisiek su mūsų spaudos komanda
 navigation.press.press_and_brand_assets: Spauda ir prekės ženklo medžiaga
-partner_program.become_partner.apply_email: 'Kreipkis: partners@RdChat.app'
+partner_program.become_partner.apply_email: 'Kreipkis: partners@fluxer.app'
 partner_program.become_partner.call_to_action: Tapk partneriu
-partner_program.become_partner.heading: Tapk RdChat partneriu
+partner_program.become_partner.heading: Tapk Fluxer partneriu
 partner_program.become_partner.if_youre_a_creator_or: Jei kuri turinį arba valdai didelę bendruomenę, norėtume su tavimi susipažinti.
 partner_program.become_partner.learn_about_partners: Sužinok apie partnerius
 partner_program.become_partner.learn_more: Sužinoti daugiau
@@ -266,12 +266,12 @@ partner_program.description: Išskirtinės naudos turinio kūrėjams ir didelių
 partner_program.label: Partneriai
 partner_program.perks.creator_monetization.description: Ankstyva prieiga prie monetizacijos funkcijų su mažesniais mokesčiais nei ne partneriams.
 partner_program.perks.creator_monetization.label: Kūrėjų monetizacija
-partner_program.perks.custom_vanity_url.description: Gauk išskirtinį vanity URL, pvz., RdChat.gg/yourcommunity.
+partner_program.perks.custom_vanity_url.description: Gauk išskirtinį vanity URL, pvz., fluxer.gg/yourcommunity.
 partner_program.perks.custom_vanity_url.label: Pasirinktinis vanity URL
-partner_program.perks.direct_team_access.description: Prisijunk prie išskirtinės Partnerių bendruomenės su tiesiogine prieiga prie RdChat komandos.
+partner_program.perks.direct_team_access.description: Prisijunk prie išskirtinės Partnerių bendruomenės su tiesiogine prieiga prie Fluxer komandos.
 partner_program.perks.direct_team_access.label: Tiesioginė prieiga prie komandos
 partner_program.perks.discovery_visibility: Didesnis matomumas – tavo bendruomenę galime iškelti atradimuose.
-partner_program.perks.exclusive_merch.description: Gauk išskirtinį RdChat partneriams skirtą merch ir atributiką.
+partner_program.perks.exclusive_merch.description: Gauk išskirtinį Fluxer partneriams skirtą merch ir atributiką.
 partner_program.perks.exclusive_merch.label: Išskirtinis merch
 partner_program.perks.free_plutonium.description: Gauk Plutonium savo paskyrai ir naudok visas premium funkcijas.
 partner_program.perks.free_plutonium.label: Nemokamas Plutonium
@@ -284,20 +284,20 @@ partner_program.perks.vip_voice_servers.label: VIP balso kanalai
 partner_program.requirements.audience_description: Trumpas tavo auditorijos ir veiklos aprašymas
 partner_program.requirements.links_to_content: Nuorodos į tavo turinį ar bendruomenę (YouTube, Twitch, Discord ir pan.)
 partner_program.requirements.name_and_username: Tavo vardas ir platformos naudotojo vardas
-partner_program.requirements.usage_plan: Kaip planuoji naudoti RdChat su savo bendruomene
+partner_program.requirements.usage_plan: Kaip planuoji naudoti Fluxer su savo bendruomene
 partner_program.who_its_for: 'Turinio kūrėjai ir bendruomenių savininkai: atrakink išskirtines naudas, įskaitant nemokamą Plutonium, Partnerio ženklelį, pasirinktinius vanity URL ir dar daugiau.'
 partner_program.perks.heading: Partnerių pranašumai
 partner_program.perks.see_perks: Žiūrėti pranašumus
-partner_program.apply.instructions: Atsiųsk mums el. laišką su šia informacija, kad pretenduotum į RdChat partnerių programą.
+partner_program.apply.instructions: Atsiųsk mums el. laišką su šia informacija, kad pretenduotum į Fluxer partnerių programą.
 partner_program.apply.response_time: Peržiūrime visas paraiškas ir atsakysime per kelias dienas.
 platform_support.desktop.available_on_desktop_and_web: Prieinama darbalaukyje ir žiniatinklyje
-platform_support.desktop.download_desktop_intro: Atsisiųsk RdChat Windows, macOS ir Linux. Mobilios programėlės jau pakeliui.
-platform_support.desktop.interface_label: RdChat darbalaukio sąsaja
+platform_support.desktop.download_desktop_intro: Atsisiųsk Fluxer Windows, macOS ir Linux. Mobilios programėlės jau pakeliui.
+platform_support.desktop.interface_label: Fluxer darbalaukio sąsaja
 platform_support.desktop.label: Darbalaukis
 platform_support.desktop.use_desktop_client_mobile_soon: Naudok darbalaukio klientą (mobilioji versija jau netrukus)
-platform_support.mobile.install_as_app.add_to_home: Pridėk RdChat į pradžios ekraną, kad paslėptum naršyklės juostas.
-platform_support.mobile.install_as_app.done_desktop: Atlikta! Dabar RdChat gali atidaryti kaip įprastą programą.
-platform_support.mobile.install_as_app.done_mobile: Atlikta! Dabar RdChat gali atidaryti iš pradžios ekrano.
+platform_support.mobile.install_as_app.add_to_home: Pridėk Fluxer į pradžios ekraną, kad paslėptum naršyklės juostas.
+platform_support.mobile.install_as_app.done_desktop: Atlikta! Dabar Fluxer gali atidaryti kaip įprastą programą.
+platform_support.mobile.install_as_app.done_mobile: Atlikta! Dabar Fluxer gali atidaryti iš pradžios ekrano.
 platform_support.mobile.install_as_app.guides.in_chrome: ' Chrome'
 platform_support.mobile.install_as_app.guides.in_chrome_or_another_browser: ' Chrome ar kitoje naršyklėje su PWA palaikymu'
 platform_support.mobile.install_as_app.guides.in_safari: ' Safari'
@@ -309,11 +309,11 @@ platform_support.mobile.install_as_app.guides.steps.press_install_button_address
 platform_support.mobile.install_as_app.guides.steps.press_install_in_popup: 'Iššokusiame lange paspausk "Įdiegti"'
 platform_support.mobile.install_as_app.guides.steps.press_more_menu: 'Viršuje dešinėje paspausk "Daugiau" (⋮)'
 platform_support.mobile.install_as_app.guides.steps.press_share_button: Paspausk bendrinimo mygtuką (stačiakampis su rodykle aukštyn)
-platform_support.mobile.install_as_app.install_fluxer_as_app: Įsidiegti RdChat kaip programėlę
+platform_support.mobile.install_as_app.install_fluxer_as_app: Įsidiegti Fluxer kaip programėlę
 platform_support.mobile.install_as_app.title: Kaip įsidiegti kaip programėlę
-platform_support.mobile.interface_label: RdChat mobilioji sąsaja
+platform_support.mobile.interface_label: Fluxer mobilioji sąsaja
 platform_support.mobile.mobile_apps_underway: Mobilios programėlės jau kuriamos
-platform_support.mobile.mobile_browser_explainer: Kuriame iOS ir Android programėles. Kol jos dar neparuoštos, RdChat veikia tavo mobilioje naršyklėje, ir daug padirbėjome, kad jaustųsi kuo panašiau į programėlę.
+platform_support.mobile.mobile_browser_explainer: Kuriame iOS ir Android programėles. Kol jos dar neparuoštos, Fluxer veikia tavo mobilioje naršyklėje, ir daug padirbėjome, kad jaustųsi kuo panašiau į programėlę.
 platform_support.mobile.not_full_replacement_yet: Tai dar nėra pilnas darbalaukio programėlės pakaitalas, o kai kurių dalykų, kurių tikėtumeisi iš mobilios pokalbių programėlės, dar trūksta.
 platform_support.mobile.push_notifications: Gauk push pranešimus, kai nesi programėlėje.
 platform_support.platforms.android.apk: APK
@@ -339,7 +339,7 @@ press_branding.assets.label: Logotipas
 press_branding.assets.logo_variants.black_logo: Juodas logotipas
 press_branding.assets.logo_variants.color_logo: Spalvotas logotipas
 press_branding.assets.logo_variants.white_logo: Baltas logotipas
-press_branding.assets.palette_description: Mūsų kruopščiai atrinkta spalvų paletė, atspindinti RdChat prekės ženklą.
+press_branding.assets.palette_description: Mūsų kruopščiai atrinkta spalvų paletė, atspindinti Fluxer prekės ženklą.
 press_branding.assets.premium_quality: Aukščiausia kokybė
 press_branding.assets.primary_brand_color_description: Pagrindinė prekės ženklo spalva. Naudok ją svarbiausiems elementams ir akcentams.
 press_branding.assets.symbol_variants.black_symbol: Juodas simbolis
@@ -355,7 +355,7 @@ press_branding.assets.usage_guidance.symbol_description: Atskiras simbolis. Naud
 press_branding.colors.blue_da_ba_dee: Mėlyna Da Ba Dee
 press_branding.colors.white: Balta
 press_branding.colors.black: Juoda
-press_branding.contact.story_prompt: Turi istoriją apie RdChat? Norėtume išgirsti.
+press_branding.contact.story_prompt: Turi istoriją apie Fluxer? Norėtume išgirsti.
 press_branding.contact.response_time: Paprastai atsakome per 24 valandas.
 pricing_and_tiers.billing.forever: Amžinai
 pricing_and_tiers.billing.most_popular: Populiariausia
@@ -368,7 +368,7 @@ pricing_and_tiers.free.comparison_label: Nemokama vs Plutonium
 pricing_and_tiers.free.everything_in_free_plus: 'Viskas, kas yra Nemokamoje, ir dar:'
 pricing_and_tiers.free.full_access_to_all_features: Pilna prieiga prie visų funkcijų
 pricing_and_tiers.free.label: Nemokama
-pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Pastaba: Plutonium ir Visionary naudos galioja tik oficialioje RdChat.app instancijoje, o ne trečiųjų šalių ar savihostinamose instancijose.'
+pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Pastaba: Plutonium ir Visionary naudos galioja tik oficialioje Fluxer.app instancijoje, o ne trečiųjų šalių ar savihostinamose instancijose.'
 pricing_and_tiers.plutonium.feature_highlights: 500 MB įkėlimai, 4 000 simbolių žinutės, 300 žymių, 50 emoji paketų ir dar daug daugiau.
 pricing_and_tiers.plutonium.features.bio_character_limit: Aprašymo simbolių limitas
 pricing_and_tiers.plutonium.features.choose_custom_4_digit_tag: 'Pasirink bet kurią laisvą 4 skaitmenų žymę nuo #0001 iki #9999, kad tavo naudotojo vardas būtų iš tiesų unikalus.'
@@ -383,7 +383,7 @@ pricing_and_tiers.plutonium.features.message_scheduling: Žinučių planavimas
 pricing_and_tiers.plutonium.features.per_community_profiles: Profiliai kiekvienai bendruomenei
 pricing_and_tiers.plutonium.features.saved_media: Išsaugota medija
 pricing_and_tiers.plutonium.features.webhooks_and_bot_support: Webhook ir botų palaikymas
-pricing_and_tiers.plutonium.get_more_with_plutonium: Su RdChat Plutonium gausi daugiau
+pricing_and_tiers.plutonium.get_more_with_plutonium: Su Fluxer Plutonium gausi daugiau
 pricing_and_tiers.plutonium.get_plutonium: Įsigyti Plutonium
 pricing_and_tiers.plutonium.higher_limits_and_early_access: Didesnės ribos, išskirtinės funkcijos ir ankstyva prieiga prie naujų atnaujinimų
 pricing_and_tiers.plutonium.higher_limits_everywhere: Didesnės ribos visur
@@ -396,7 +396,7 @@ pricing_and_tiers.visionary.bundle_label: Plutonium ir Operator Pass visam gyven
 pricing_and_tiers.visionary.communities_with_team_access: Visionary ir Operators bendruomenės su komandos prieiga
 pricing_and_tiers.visionary.get_visionary: Įsigyti Visionary
 pricing_and_tiers.visionary.label: Visionary
-pricing_and_tiers.visionary.lifetime_offer_copy: Gauk Plutonium visam gyvenimui RdChat.app ir Operator Pass savihostinimui. Sumokėk {0} vieną kartą. Galioja iki 2026 m. spalio 1 d. arba kol bus paimtos visos vietos.
+pricing_and_tiers.visionary.lifetime_offer_copy: Gauk Plutonium visam gyvenimui Fluxer.app ir Operator Pass savihostinimui. Sumokėk {0} vieną kartą. Galioja iki 2026 m. spalio 1 d. arba kol bus paimtos visos vietos.
 pricing_and_tiers.visionary.lifetime_operator_pass: Operator Pass visam gyvenimui
 pricing_and_tiers.visionary.lifetime_plutonium: Plutonium visam gyvenimui
 pricing_and_tiers.visionary.limited_offer_note: 'Ribotas pasiūlymas: Visionary įtraukia Operator Pass'
@@ -407,8 +407,8 @@ pricing_and_tiers.visionary.purchase_flow: Visionary nusipirksi tiesiog program�
 pricing_and_tiers.visionary.slots_left.generic: Liko {0} iš {1} vietų
 pricing_and_tiers.visionary.slots_left.visionary_bundle: Liko tik {0} iš {1} Visionary visam gyvenimui – Plutonium ir Operator Pass
 pricing_and_tiers.visionary.slots_left.visionary_only: Liko {0} Visionary vietų
-product_positioning.free_and_open_source: RdChat yra nemokama ir atvirojo kodo. Kiekvienas gali nemokamai pasileisti savo instanciją.
-product_positioning.intro: RdChat yra nemokama ir atvirojo kodo momentinių žinučių ir VoIP platforma draugams, grupėms ir bendruomenėms.
+product_positioning.free_and_open_source: Fluxer yra nemokama ir atvirojo kodo. Kiekvienas gali nemokamai pasileisti savo instanciją.
+product_positioning.intro: Fluxer yra nemokama ir atvirojo kodo momentinių žinučių ir VoIP platforma draugams, grupėms ir bendruomenėms.
 product_positioning.open_source.fully_open_source_agplv3: Visiškai atviras šaltinis (AGPLv3)
 product_positioning.open_source.label: Atvirasis kodas
 product_positioning.open_source.license: Atvirasis kodas (AGPL-3.0)
@@ -416,25 +416,25 @@ product_positioning.self_hosting.connect_from_any_client: Junkis iš bet kurio k
 product_positioning.self_hosting.free_self_hosting: Nemokamas savihostinimas
 product_positioning.self_hosting.host_your_own_instance: Pasileisk savo instanciją
 product_positioning.self_hosting.label: Savihostinimas
-product_positioning.self_hosting.operator_pass.access_to_operators_community: Prieiga prie RdChat Operators bendruomenės
+product_positioning.self_hosting.operator_pass.access_to_operators_community: Prieiga prie Fluxer Operators bendruomenės
 product_positioning.self_hosting.operator_pass.after_offer_ends_stays_available: Pasibaigus pasiūlymui, Operator Pass bus galima įsigyti ir atskirai.
 product_positioning.self_hosting.operator_pass.label: Operator Pass
 product_positioning.self_hosting.operator_pass.note_optional: Operator Pass yra neprivalomas – sumoki už palaikymą ir prieigą prie bendruomenės.
 product_positioning.self_hosting.operator_pass.priority_support_and_operators_access: Prioritetinis palaikymas ir prieiga prie Operators bendruomenės savihostinimui
-product_positioning.self_hosting.run_backend_on_your_hardware: Paleisk RdChat backendą savo geležyje ir junkis per mūsų programėles.
+product_positioning.self_hosting.run_backend_on_your_hardware: Paleisk Fluxer backendą savo geležyje ir junkis per mūsų programėles.
 product_positioning.self_hosting.switch_between_instances: Persijunk tarp kelių instancijų
 security.found_security_issue: Radai saugumo spragą?
 security.report_vulnerabilities: Pranešk apie pažeidžiamumus ir padėk mums išlaikyti platformą saugią.
 security.responsible_disclosure_note: Vertiname atsakingą atskleidimą per mūsų saugumo klaidų programą. Pagal rimtumą skiriame Plutonium kodus ir Bug Hunter ženklelius.
 security.security_bug_bounty: Saugumo klaidų programa
 security.security_reports: Saugumo ataskaitos
-security.testers_access_from_reports: Patvirtintos ataskaitos suteikia prieigą prie RdChat Testers, kur gali rinkti taškus Plutonium kodams ir Bug Hunter ženkleliui.
+security.testers_access_from_reports: Patvirtintos ataskaitos suteikia prieigą prie Fluxer Testers, kur gali rinkti taškus Plutonium kodams ir Bug Hunter ženkleliui.
 social_and_feeds.bluesky.follow_us: Sek mus Bluesky
 social_and_feeds.bluesky.label: Bluesky
 social_and_feeds.bluesky.rss_feed: Bluesky RSS srautas
-social_and_feeds.follow_fluxer: Sek @RdChat.app
+social_and_feeds.follow_fluxer: Sek @fluxer.app
 social_and_feeds.github: GitHub
 social_and_feeds.rss.blog_rss_feed: Tinklaraščio RSS srautas
-social_and_feeds.rss.fluxer_blog_rss: RdChat tinklaraščio RSS
+social_and_feeds.rss.fluxer_blog_rss: Fluxer tinklaraščio RSS
 social_and_feeds.rss.label: RSS srautas
 social_and_feeds.stay_updated_cta: Sek naujienas, paslaugos būseną ir kas vyksta. Taip pat gali užsiprenumeruoti mūsų

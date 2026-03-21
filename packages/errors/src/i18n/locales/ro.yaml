@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Conturile ne
 usernames_and_tags.username_invalid_characters: Numele de utilizator poate conține doar litere latine (a-z, A-Z), cifre (0-9) și underscore (_).
 usernames_and_tags.username_length_invalid: Numele de utilizator trebuie să aibă între {min} și {max} caractere.
 usernames_and_tags.username_not_available: Acest nume de utilizator nu este disponibil.
-usernames_and_tags.username_reserved_terms: Numele de utilizator nu poate conține "RdChat" sau "system message".
+usernames_and_tags.username_reserved_terms: Numele de utilizator nu poate conține "fluxer" sau "system message".
 usernames_and_tags.username_reserved_value: Numele de utilizator nu poate fi "everyone" sau "here".
 vanity_urls.vanity_url_already_taken: Acest vanity URL este deja luat.
 vanity_urls.vanity_url_code_already_taken: Codul vanity URL este deja luat.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Codul de vanity URL nu poate conține "RdChat".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Codul de vanity URL nu poate conține "fluxer".
 vanity_urls.vanity_url_code_length_invalid: Codul de vanity URL trebuie să aibă între {min} și {max} caractere.
 vanity_urls.vanity_url_invalid_characters: Vanity URL-ul poate conține doar litere mici (a-z), cifre (0-9) și liniuțe (-).
 webhooks.cannot_modify_system_webhook: Nu poți edita mesaje de sistem.

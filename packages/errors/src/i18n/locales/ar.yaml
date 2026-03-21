@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: الحساب
 usernames_and_tags.username_invalid_characters: اسم المستخدم لازم يكون بحروف لاتينية (a-z, A-Z) وأرقام (0-9) وشرطة سفلية (_).
 usernames_and_tags.username_length_invalid: اسم المستخدم لازم يكون بين {min} و {max} حرف.
 usernames_and_tags.username_not_available: اسم المستخدم ما متاح.
-usernames_and_tags.username_reserved_terms: اسم المستخدم ما ينفع يحتوي "RdChat" أو "system message".
+usernames_and_tags.username_reserved_terms: اسم المستخدم ما ينفع يحتوي "fluxer" أو "system message".
 usernames_and_tags.username_reserved_value: اسم المستخدم ما ينفع يكون "everyone" أو "here".
 vanity_urls.vanity_url_already_taken: رابط الـ vanity مأخوذ.
 vanity_urls.vanity_url_code_already_taken: كود رابط الـ vanity مأخوذ.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: كود رابط الـ vanity ما ينفع يحتوي "RdChat".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: كود رابط الـ vanity ما ينفع يحتوي "fluxer".
 vanity_urls.vanity_url_code_length_invalid: كود رابط الـ vanity لازم يكون بين {min} و {max} حرف.
 vanity_urls.vanity_url_invalid_characters: رابط الـ vanity ما ينفع إلا بحروف صغيرة (a-z) وأرقام (0-9) وشرطة (-).
 webhooks.cannot_modify_system_webhook: ما تقدر تعدّل رسائل النظام.

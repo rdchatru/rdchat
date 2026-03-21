@@ -1005,8 +1005,8 @@ msgstr "<0/> hat einen Anruf gestartet."
 
 #. placeholder {0}: guild.name
 #: src/components/layout/GuildLayout.tsx:134
-msgid "<0>{0}</0> is currently only accessible to RdChat staff members"
-msgstr "<0>{0}</0> ist derzeit nur für RdChat-Mitarbeiter zugänglich"
+msgid "<0>{0}</0> is currently only accessible to Fluxer staff members"
+msgstr "<0>{0}</0> ist derzeit nur für Fluxer-Mitarbeiter zugänglich"
 
 #. placeholder {0}: targetUser.tag
 #: src/components/modals/TimeoutMemberSheet.tsx:122
@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "Alle Statusarten"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize RdChat into your language! To do so, send an email to <0>i18n@RdChat.app</0> and we'll be happy to accept your contributions."
-msgstr "Alle Übersetzungen werden derzeit von LLM generiert mit minimaler menschlicher Überarbeitung. Wir würden uns freuen, wenn echte Menschen uns helfen, RdChat in Ihre Sprache zu lokalisieren! Dazu senden Sie bitte eine E-Mail an <0>i18n@RdChat.app</0>, und wir freuen uns über Ihre Beiträge."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
+msgstr "Alle Übersetzungen werden derzeit von LLM generiert mit minimaler menschlicher Überarbeitung. Wir würden uns freuen, wenn echte Menschen uns helfen, Fluxer in Ihre Sprache zu lokalisieren! Dazu senden Sie bitte eine E-Mail an <0>i18n@fluxer.app</0>, und wir freuen uns über Ihre Beiträge."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -2321,16 +2321,16 @@ msgid "Allow flexible text channel names"
 msgstr "Flexible Textkanalnamen erlauben"
 
 #: src/components/modals/tabs/VideoTab.tsx:174
-msgid "Allow RdChat to access your camera in System Settings → Privacy & Security → Camera to preview and select devices."
-msgstr "Erlaube RdChat in Systemeinstellungen → Datenschutz & Sicherheit → Kamera auf deine Kamera zuzugreifen, um Geräte anzuzeigen und auszuwählen."
+msgid "Allow Fluxer to access your camera in System Settings → Privacy & Security → Camera to preview and select devices."
+msgstr "Erlaube Fluxer in Systemeinstellungen → Datenschutz & Sicherheit → Kamera auf deine Kamera zuzugreifen, um Geräte anzuzeigen und auszuwählen."
 
 #: src/components/modals/tabs/VoiceTab.tsx:202
-msgid "Allow RdChat to access your microphone in System Settings → Privacy & Security → Microphone."
-msgstr "Erlaube RdChat in Systemeinstellungen → Datenschutz & Sicherheit → Mikrofon auf dein Mikrofon zuzugreifen."
+msgid "Allow Fluxer to access your microphone in System Settings → Privacy & Security → Microphone."
+msgstr "Erlaube Fluxer in Systemeinstellungen → Datenschutz & Sicherheit → Mikrofon auf dein Mikrofon zuzugreifen."
 
 #: src/components/modals/tabs/VoiceTab.tsx:206
-msgid "Allow RdChat to access your microphone. Check your browser address bar or settings to enable permissions."
-msgstr "Erlaube RdChat den Zugriff auf dein Mikrofon. Überprüfe deine Browser-Adressleiste oder Einstellungen, um Berechtigungen zu aktivieren."
+msgid "Allow Fluxer to access your microphone. Check your browser address bar or settings to enable permissions."
+msgstr "Erlaube Fluxer den Zugriff auf dein Mikrofon. Überprüfe deine Browser-Adressleiste oder Einstellungen, um Berechtigungen zu aktivieren."
 
 #: src/components/modals/tabs/privacy_safety_tab/ConnectionsTab.tsx:104
 msgid "Allow for all communities"
@@ -3278,8 +3278,8 @@ msgid "Automatically play GIFs"
 msgstr "GIFs automatisch abspielen"
 
 #: src/components/modals/tabs/accessibility_tab/AnimationTab.tsx:113
-msgid "Automatically play GIFs when RdChat is focused"
-msgstr "GIFs automatisch abspielen, wenn RdChat fokussiert ist"
+msgid "Automatically play GIFs when Fluxer is focused"
+msgstr "GIFs automatisch abspielen, wenn Fluxer fokussiert ist"
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:230
 msgid "Automatically screen messages for explicit content in non-NSFW channels."
@@ -3921,16 +3921,16 @@ msgid "Buy Gift"
 msgstr "Geschenk kaufen"
 
 #: src/components/modals/AddGuildModal.tsx:360
-msgid "By creating a community, you agree to follow and uphold the <0>RdChat Community Guidelines</0>."
-msgstr "Durch das Erstellen einer Community erklärst du dich damit einverstanden, die <0>RdChat Community-Richtlinien</0> einzuhalten."
+msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Community Guidelines</0>."
+msgstr "Durch das Erstellen einer Community erklärst du dich damit einverstanden, die <0>Fluxer Community-Richtlinien</0> einzuhalten."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@RdChat.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Mit dem Kauf stimmst du unseren <0>Nutzungsbedingungen</0> und der <1>Datenschutzrichtlinie</1> zu. Alle Käufe sind innerhalb von 14 Tagen erstattbar, wenn du <2>support@RdChat.app</2> schreibst. Rückbuchungen führen zu dauerhaften Kontosperren – wenn du eine Rückerstattung möchtest, geben wir dir gerne eine, wenn du uns vorher kontaktierst! Zahlungsinformationen werden sicher von Stripe verarbeitet – wir erhalten niemals Zugriff auf deine vollständige Kartennummer."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Mit dem Kauf stimmst du unseren <0>Nutzungsbedingungen</0> und der <1>Datenschutzrichtlinie</1> zu. Alle Käufe sind innerhalb von 14 Tagen erstattbar, wenn du <2>support@fluxer.app</2> schreibst. Rückbuchungen führen zu dauerhaften Kontosperren – wenn du eine Rückerstattung möchtest, geben wir dir gerne eine, wenn du uns vorher kontaktierst! Zahlungsinformationen werden sicher von Stripe verarbeitet – wir erhalten niemals Zugriff auf deine vollständige Kartennummer."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@RdChat.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Durch den Kauf hast du unseren <0>Nutzungsbedingungen</0> und der <1>Datenschutzrichtlinie</1> zugestimmt. Alle Käufe sind innerhalb von 14 Tagen erstattbar, wenn du <2>support@RdChat.app</2> schreibst. Rückbuchungen führen zu dauerhaften Kontosperren – wenn du eine Rückerstattung möchtest, geben wir dir gerne eine, wenn du uns vorher kontaktierst! Zahlungsinformationen werden sicher von Stripe verarbeitet – wir erhalten niemals Zugriff auf deine vollständige Kartennummer."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Durch den Kauf hast du unseren <0>Nutzungsbedingungen</0> und der <1>Datenschutzrichtlinie</1> zugestimmt. Alle Käufe sind innerhalb von 14 Tagen erstattbar, wenn du <2>support@fluxer.app</2> schreibst. Rückbuchungen führen zu dauerhaften Kontosperren – wenn du eine Rückerstattung möchtest, geben wir dir gerne eine, wenn du uns vorher kontaktierst! Zahlungsinformationen werden sicher von Stripe verarbeitet – wir erhalten niemals Zugriff auf deine vollständige Kartennummer."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491
@@ -4290,12 +4290,12 @@ msgstr "Emoji ändern"
 
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:60
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:70
-msgid "Change RdChatTag"
-msgstr "RdChatTag ändern"
+msgid "Change FluxerTag"
+msgstr "FluxerTag ändern"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:163
-msgid "Change RdChatTag form"
-msgstr "RdChatTag-Formular ändern"
+msgid "Change FluxerTag form"
+msgstr "FluxerTag-Formular ändern"
 
 #: src/components/channel/direct_message/DMList.tsx:676
 #: src/components/channel/direct_message/DMList.tsx:681
@@ -4381,8 +4381,8 @@ msgid "Change your email address"
 msgstr "E-Mail-Adresse ändern"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:164
-msgid "Change Your RdChatTag"
-msgstr "Ändere deinen RdChatTag"
+msgid "Change Your FluxerTag"
+msgstr "Ändere deinen FluxerTag"
 
 #: src/hooks/useCommands.tsx:70
 msgid "Change your nickname in this community."
@@ -4646,8 +4646,8 @@ msgstr "Chat-Schriftgrößeneinstellung"
 
 #: src/components/BootstrapErrorScreen.tsx:60
 #: src/components/NetworkErrorScreen.tsx:45
-msgid "Check our <0>Bluesky (@RdChat.app)</0> for status updates."
-msgstr "Sieh dir unseren <0>Bluesky (@RdChat.app)</0> für Statusupdates an."
+msgid "Check our <0>Bluesky (@fluxer.app)</0> for status updates."
+msgstr "Sieh dir unseren <0>Bluesky (@fluxer.app)</0> für Statusupdates an."
 
 #: src/components/modals/ShareThemeModal.tsx:115
 msgid "Check out my custom theme!"
@@ -4741,12 +4741,12 @@ msgid "Choose destination for system and welcome messages"
 msgstr "Wähle Ziel für System- und Willkommensnachrichten"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:134
-msgid "Choose how RdChat selects the video codec for screen sharing."
-msgstr "Wähle, wie RdChat den Video-Codec für die Bildschirmfreigabe auswählt."
+msgid "Choose how Fluxer selects the video codec for screen sharing."
+msgstr "Wähle, wie Fluxer den Video-Codec für die Bildschirmfreigabe auswählt."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:268
-msgid "Choose how RdChat treats this community for age-gating. Age Restricted blocks access for users under 18 and shows a content warning for adults, subject to local laws."
-msgstr "Wählen Sie, wie RdChat diese Community für die Altersbeschränkung behandelt. Altersbeschränkt blockiert den Zugriff für Nutzer unter 18 Jahren und zeigt eine Inhaltswarnung für Erwachsene an, vorbehaltlich der lokalen Gesetze."
+msgid "Choose how Fluxer treats this community for age-gating. Age Restricted blocks access for users under 18 and shows a content warning for adults, subject to local laws."
+msgstr "Wählen Sie, wie Fluxer diese Community für die Altersbeschränkung behandelt. Altersbeschränkt blockiert den Zugriff für Nutzer unter 18 Jahren und zeigt eine Inhaltswarnung für Erwachsene an, vorbehaltlich der lokalen Gesetze."
 
 #: src/components/modals/tabs/AppearanceTab.tsx:85
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:133
@@ -4770,8 +4770,8 @@ msgid "Choose what {clientLabel} can do in your community. Uncheck any permissio
 msgstr "Wähle, was {clientLabel} in deiner Community darf. Deaktiviere Berechtigungen, die du nicht gewähren willst."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:109
-msgid "Choose what RdChat remembers about your window between restarts and reloads on this device."
-msgstr "Wähle, was RdChat über dein Fenster zwischen Neustarts und Neuladen auf diesem Gerät speichert."
+msgid "Choose what Fluxer remembers about your window between restarts and reloads on this device."
+msgstr "Wähle, was Fluxer über dein Fenster zwischen Neustarts und Neuladen auf diesem Gerät speichert."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:202
 msgid "Choose what members must have before they can post or DM community members."
@@ -4847,8 +4847,8 @@ msgid "Claim your account to call"
 msgstr "Fordere dein Konto an, um anzurufen"
 
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:57
-msgid "Claim your account to change your RdChatTag"
-msgstr "Beanspruche dein Konto, um deinen RdChatTag zu ändern"
+msgid "Claim your account to change your FluxerTag"
+msgstr "Beanspruche dein Konto, um deinen FluxerTag zu ändern"
 
 #: src/components/modals/tabs/applications_tab/index.tsx:147
 msgid "Claim your account to create applications."
@@ -4868,12 +4868,12 @@ msgstr "Fordere dein Konto an, um Sprachkanäle beizutreten, die du nicht besitz
 #: src/components/modals/components/plutonium/GiftSection.tsx:52
 #: src/components/modals/components/plutonium/PricingSection.tsx:54
 #: src/components/modals/components/PlutoniumContent.tsx:99
-msgid "Claim your account to purchase RdChat Plutonium."
-msgstr "Beanspruche dein Konto, um RdChat Plutonium zu kaufen."
+msgid "Claim your account to purchase Fluxer Plutonium."
+msgstr "Beanspruche dein Konto, um Fluxer Plutonium zu kaufen."
 
 #: src/components/modals/components/plutonium/SubscriptionCard.tsx:104
-msgid "Claim your account to purchase or redeem RdChat Plutonium."
-msgstr "Beanspruche dein Konto, um RdChat Plutonium zu kaufen oder einzulösen."
+msgid "Claim your account to purchase or redeem Fluxer Plutonium."
+msgstr "Beanspruche dein Konto, um Fluxer Plutonium zu kaufen oder einzulösen."
 
 #: src/components/modals/tabs/GiftInventoryTab.tsx:240
 msgid "Claim your account to redeem or manage Plutonium gift codes."
@@ -5030,8 +5030,8 @@ msgid "click"
 msgstr "Klicken"
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:76
-msgid "Click \"Open Settings\" to open System Settings, then enable RdChat in Input Monitoring."
-msgstr "Klicke auf „Einstellungen öffnen“, um die Systemeinstellungen zu öffnen, und aktiviere RdChat unter Eingabeüberwachung."
+msgid "Click \"Open Settings\" to open System Settings, then enable Fluxer in Input Monitoring."
+msgstr "Klicke auf „Einstellungen öffnen“, um die Systemeinstellungen zu öffnen, und aktiviere Fluxer unter Eingabeüberwachung."
 
 #: src/components/modals/tabs/component_gallery_tab/ButtonsTab.tsx:58
 msgid "Click any button to see toast notifications with feedback."
@@ -6042,8 +6042,8 @@ msgstr "Endpunkt kopieren"
 #: src/components/modals/tabs/BlockedUsersTab.tsx:105
 #: src/components/modals/UserProfileActionsSheet.tsx:209
 #: src/components/modals/UserProfileModal.tsx:1177
-msgid "Copy RdChatTag"
-msgstr "RdChatTag kopieren"
+msgid "Copy FluxerTag"
+msgstr "FluxerTag kopieren"
 
 #: src/components/uikit/context_menu/items/MediaMenuData.tsx:179
 msgid "Copy GIF"
@@ -6277,8 +6277,8 @@ msgid "Create and manage applications and bots for your account."
 msgstr "Erstelle und verwalte Anwendungen und Bots für dein Konto."
 
 #: src/components/modals/tabs/ExpressionPacksTab.tsx:147
-msgid "Create and share custom emoji and sticker packs with RdChat Plutonium."
-msgstr "Erstelle und teile eigene Emoji- und Stickerpakete mit RdChat Plutonium."
+msgid "Create and share custom emoji and sticker packs with Fluxer Plutonium."
+msgstr "Erstelle und teile eigene Emoji- und Stickerpakete mit Fluxer Plutonium."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:293
 msgid "create app"
@@ -6390,8 +6390,8 @@ msgid "Create Webhook"
 msgstr "Webhook erstellen"
 
 #: src/components/modals/tabs/applications_tab/ApplicationsList.tsx:44
-msgid "Create your first application to get started with the RdChat API."
-msgstr "Erstelle deine erste Anwendung, um mit der RdChat-API zu starten."
+msgid "Create your first application to get started with the Fluxer API."
+msgstr "Erstelle deine erste Anwendung, um mit der Fluxer-API zu starten."
 
 #: src/utils/PermissionUtils.tsx:258
 msgid "Create, edit, or delete channels and categories."
@@ -8001,8 +8001,8 @@ msgid "Download"
 msgstr "Herunterladen"
 
 #: src/components/modals/AddConnectionModal.tsx:283
-msgid "Download <0>RdChat-verification</0> and place it in your <1>.well-known</1> folder so we can validate the domain."
-msgstr "Lade <0>RdChat-verification</0> herunter und platziere es in deinem <1>.well-known</1>-Ordner, damit wir die Domain validieren können."
+msgid "Download <0>fluxer-verification</0> and place it in your <1>.well-known</1> folder so we can validate the domain."
+msgstr "Lade <0>fluxer-verification</0> herunter und platziere es in deinem <1>.well-known</1>-Ordner, damit wir die Domain validieren können."
 
 #: src/components/modals/tabs/PrivacySafetyTab.tsx:54
 msgid "Download a complete package of your account data, including all messages and attachment URLs"
@@ -8014,12 +8014,12 @@ msgstr "Desktop-App herunterladen"
 
 #: src/components/layout/guild_list/DownloadButton.tsx:47
 #: src/components/layout/guild_list/DownloadButton.tsx:51
-msgid "Download RdChat"
-msgstr "RdChat herunterladen"
+msgid "Download Fluxer"
+msgstr "Fluxer herunterladen"
 
 #: src/components/modals/AddConnectionModal.tsx:297
-msgid "Download RdChat-verification"
-msgstr "Lade RdChat-verification herunter"
+msgid "Download fluxer-verification"
+msgstr "Lade fluxer-verification herunter"
 
 #: src/components/channel/embeds/media/MediaContainer.tsx:133
 msgid "Download media"
@@ -8759,8 +8759,8 @@ msgid "Enter gift code..."
 msgstr "Geschenkcode eingeben..."
 
 #: src/components/auth/InstanceSelector.tsx:228
-msgid "Enter instance URL (e.g. RdChat.app)"
-msgstr "Geben Sie die Instanz-URL ein (z.B. RdChat.app)"
+msgid "Enter instance URL (e.g. fluxer.app)"
+msgstr "Geben Sie die Instanz-URL ein (z.B. fluxer.app)"
 
 #: src/components/modals/tabs/developer_options_tab/MockingTab.tsx:207
 msgid "Enter Phone"
@@ -9858,124 +9858,124 @@ msgid "Flexible text channel names"
 msgstr "Flexible Namen für Textkanäle"
 
 #: src/components/popouts/UserProfileShared.tsx:207
-msgid "RdChat"
-msgstr "RdChat"
+msgid "Fluxer"
+msgstr "Fluxer"
 
 #: src/components/icons/FluxerIcon.tsx:31
-msgid "RdChat application icon"
-msgstr "RdChat-Anwendungssymbol"
+msgid "Fluxer application icon"
+msgstr "Fluxer-Anwendungssymbol"
 
 #: src/components/icons/FluxerSymbol.tsx:31
-msgid "RdChat application symbol"
-msgstr "RdChat-Anwendungssymbol"
+msgid "Fluxer application symbol"
+msgstr "Fluxer-Anwendungssymbol"
 
 #: src/components/modals/tabs/notifications_tab/PushSettings.tsx:37
-msgid "RdChat avoids sending push notifications to your mobile devices when you are at your computer. Use this setting to control how long you need to be inactive on desktop for before you receive push notifications, ranging from 1 minute to 10 minutes."
-msgstr "RdChat vermeidet das Senden von Push-Benachrichtigungen an deine mobilen Geräte, wenn du am Computer bist. Mit dieser Einstellung legst du fest, wie lange du auf dem Desktop inaktiv sein musst, bevor du Push-Benachrichtigungen erhältst – von 1 Minute bis 10 Minuten."
+msgid "Fluxer avoids sending push notifications to your mobile devices when you are at your computer. Use this setting to control how long you need to be inactive on desktop for before you receive push notifications, ranging from 1 minute to 10 minutes."
+msgstr "Fluxer vermeidet das Senden von Push-Benachrichtigungen an deine mobilen Geräte, wenn du am Computer bist. Mit dieser Einstellung legst du fest, wie lange du auf dem Desktop inaktiv sein musst, bevor du Push-Benachrichtigungen erhältst – von 1 Minute bis 10 Minuten."
 
 #: src/components/popouts/UserProfileBadges.tsx:115
-msgid "RdChat Bug Hunter"
-msgstr "RdChat Bug Hunter"
+msgid "Fluxer Bug Hunter"
+msgstr "Fluxer Bug Hunter"
 
 #: src/components/popouts/UserProfileBadges.tsx:95
-msgid "RdChat Community Team"
-msgstr "RdChat-Community-Team"
+msgid "Fluxer Community Team"
+msgstr "Fluxer-Community-Team"
 
 #: src/components/modals/tabs/DevicesTab.tsx:99
-msgid "RdChat Desktop"
-msgstr "RdChat Desktop"
+msgid "Fluxer Desktop"
+msgstr "Fluxer Desktop"
 
 #: src/components/BootstrapErrorScreen.tsx:52
-msgid "RdChat failed to start properly. This could be due to corrupted data or a temporary issue."
-msgstr "RdChat konnte nicht korrekt gestartet werden. Dies kann an beschädigten Daten oder einem temporären Problem liegen."
+msgid "Fluxer failed to start properly. This could be due to corrupted data or a temporary issue."
+msgstr "Fluxer konnte nicht korrekt gestartet werden. Dies kann an beschädigten Daten oder einem temporären Problem liegen."
 
 #: src/stores/NewDeviceMonitoringStore.tsx:187
-msgid "RdChat has found a new audio input device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "RdChat hat ein neues Audio-Eingabegerät namens <0>{deviceName}</0> gefunden. Möchtest du wechseln?"
+msgid "Fluxer has found a new audio input device named <0>{deviceName}</0>. Do you want to switch to it?"
+msgstr "Fluxer hat ein neues Audio-Eingabegerät namens <0>{deviceName}</0> gefunden. Möchtest du wechseln?"
 
 #: src/stores/NewDeviceMonitoringStore.tsx:192
-msgid "RdChat has found a new audio output device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "RdChat hat ein neues Audio-Ausgabegerät namens <0>{deviceName}</0> gefunden. Möchtest du wechseln?"
+msgid "Fluxer has found a new audio output device named <0>{deviceName}</0>. Do you want to switch to it?"
+msgstr "Fluxer hat ein neues Audio-Ausgabegerät namens <0>{deviceName}</0> gefunden. Möchtest du wechseln?"
 
 #: src/components/popouts/UserProfileShared.tsx:238
-msgid "RdChat Member Since"
-msgstr "RdChat-Mitglied seit"
+msgid "Fluxer Member Since"
+msgstr "Fluxer-Mitglied seit"
 
 #: src/components/modals/tabs/VoiceTab.tsx:212
-msgid "RdChat needs access to list the available microphones and speakers."
-msgstr "RdChat benötigt Zugriff, um die verfügbaren Mikrofone und Lautsprecher aufzulisten."
+msgid "Fluxer needs access to list the available microphones and speakers."
+msgstr "Fluxer benötigt Zugriff, um die verfügbaren Mikrofone und Lautsprecher aufzulisten."
 
 #: src/components/alerts/ScreenRecordingPermissionDeniedModal.tsx:31
-msgid "RdChat needs access to screen recording. Open System Settings → Privacy & Security → Screen Recording, allow RdChat, and then try again."
-msgstr "RdChat benötigt Zugriff auf Bildschirmaufnahmen. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Bildschirmaufnahme, erlaube RdChat und versuche es erneut."
+msgid "Fluxer needs access to screen recording. Open System Settings → Privacy & Security → Screen Recording, allow Fluxer, and then try again."
+msgstr "Fluxer benötigt Zugriff auf Bildschirmaufnahmen. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Bildschirmaufnahme, erlaube Fluxer und versuche es erneut."
 
 #: src/components/modals/tabs/VideoTab.tsx:179
-msgid "RdChat needs access to your camera before we can list it here."
-msgstr "RdChat benötigt Zugriff auf deine Kamera, bevor wir sie hier auflisten können."
+msgid "Fluxer needs access to your camera before we can list it here."
+msgstr "Fluxer benötigt Zugriff auf deine Kamera, bevor wir sie hier auflisten können."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:43
-msgid "RdChat needs access to your camera to enable video chat. Please grant camera permission in your browser settings and try again."
-msgstr "RdChat benötigt Zugriff auf deine Kamera, um Videochat zu ermöglichen. Bitte erteile die Kameraberechtigung in deinen Browsereinstellungen und versuche es erneut."
+msgid "Fluxer needs access to your camera to enable video chat. Please grant camera permission in your browser settings and try again."
+msgstr "Fluxer benötigt Zugriff auf deine Kamera, um Videochat zu ermöglichen. Bitte erteile die Kameraberechtigung in deinen Browsereinstellungen und versuche es erneut."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:42
-msgid "RdChat needs access to your camera. Allow camera access in your operating system privacy settings and restart the app."
-msgstr "RdChat benötigt Zugriff auf deine Kamera. Erlaube den Kamerazugriff in den Datenschutzeinstellungen deines Betriebssystems und starte die App neu."
+msgid "Fluxer needs access to your camera. Allow camera access in your operating system privacy settings and restart the app."
+msgstr "Fluxer benötigt Zugriff auf deine Kamera. Erlaube den Kamerazugriff in den Datenschutzeinstellungen deines Betriebssystems und starte die App neu."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:32
-msgid "RdChat needs access to your camera. Open System Settings → Privacy & Security → Camera, allow RdChat, and then restart the app."
-msgstr "RdChat benötigt Zugriff auf deine Kamera. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Kamera, erlaube RdChat und starte die App neu."
+msgid "Fluxer needs access to your camera. Open System Settings → Privacy & Security → Camera, allow Fluxer, and then restart the app."
+msgstr "Fluxer benötigt Zugriff auf deine Kamera. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Kamera, erlaube Fluxer und starte die App neu."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:44
-msgid "RdChat needs access to your microphone to enable voice chat. Please grant microphone permission in your browser settings and try again."
-msgstr "RdChat benötigt Zugriff auf dein Mikrofon, um Sprachchat zu ermöglichen. Bitte erteile die Mikrofonberechtigung in deinen Browsereinstellungen und versuche es erneut."
+msgid "Fluxer needs access to your microphone to enable voice chat. Please grant microphone permission in your browser settings and try again."
+msgstr "Fluxer benötigt Zugriff auf dein Mikrofon, um Sprachchat zu ermöglichen. Bitte erteile die Mikrofonberechtigung in deinen Browsereinstellungen und versuche es erneut."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:43
-msgid "RdChat needs access to your microphone. Allow microphone access in your operating system privacy settings and restart the app."
-msgstr "RdChat benötigt Zugriff auf dein Mikrofon. Erlaube den Mikrofonzugriff in den Datenschutzeinstellungen deines Betriebssystems und starte die App neu."
+msgid "Fluxer needs access to your microphone. Allow microphone access in your operating system privacy settings and restart the app."
+msgstr "Fluxer benötigt Zugriff auf dein Mikrofon. Erlaube den Mikrofonzugriff in den Datenschutzeinstellungen deines Betriebssystems und starte die App neu."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:33
-msgid "RdChat needs access to your microphone. Open System Settings → Privacy & Security → Microphone, allow RdChat, and then restart the app."
-msgstr "RdChat benötigt Zugriff auf dein Mikrofon. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Mikrofon, erlaube RdChat und starte die App neu."
+msgid "Fluxer needs access to your microphone. Open System Settings → Privacy & Security → Microphone, allow Fluxer, and then restart the app."
+msgstr "Fluxer benötigt Zugriff auf dein Mikrofon. Öffne Systemeinstellungen → Datenschutz & Sicherheit → Mikrofon, erlaube Fluxer und starte die App neu."
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:69
-msgid "RdChat needs Input Monitoring permission to keep push-to-talk and global shortcuts working while the window is in the background."
-msgstr "RdChat benötigt die Eingabeüberwachungsberechtigung, damit Push-to-Talk und globale Shortcuts auch funktionieren, wenn das Fenster im Hintergrund ist."
+msgid "Fluxer needs Input Monitoring permission to keep push-to-talk and global shortcuts working while the window is in the background."
+msgstr "Fluxer benötigt die Eingabeüberwachungsberechtigung, damit Push-to-Talk und globale Shortcuts auch funktionieren, wenn das Fenster im Hintergrund ist."
 
 #: src/components/modals/InputMonitoringCTAModal.tsx:77
-msgid "RdChat needs permission to monitor keyboard and mouse input so that <0>Push-to-Talk</0> and <1>Global Shortcuts</1> work even when you're in another app or game."
-msgstr "RdChat benötigt die Berechtigung zur Überwachung von Tastatur- und Mauseingaben, damit <0>Push-to-Talk</0> und <1>Globale Shortcuts</1> auch dann funktionieren, wenn du eine andere App oder ein Spiel nutzt."
+msgid "Fluxer needs permission to monitor keyboard and mouse input so that <0>Push-to-Talk</0> and <1>Global Shortcuts</1> work even when you're in another app or game."
+msgstr "Fluxer benötigt die Berechtigung zur Überwachung von Tastatur- und Mauseingaben, damit <0>Push-to-Talk</0> und <1>Globale Shortcuts</1> auch dann funktionieren, wenn du eine andere App oder ein Spiel nutzt."
 
 #: src/components/popouts/UserProfileBadges.tsx:105
-msgid "RdChat Partner"
-msgstr "RdChat-Partner"
+msgid "Fluxer Partner"
+msgstr "Fluxer-Partner"
 
 #: src/components/modals/components/PlutoniumContent.tsx:165
 #: src/components/modals/PremiumModal.tsx:34
 #: src/components/modals/utils/SettingsConstants.tsx:124
 #: src/components/popouts/UserProfileBadges.tsx:121
-msgid "RdChat Plutonium"
-msgstr "RdChat Plutonium"
+msgid "Fluxer Plutonium"
+msgstr "Fluxer Plutonium"
 
 #: src/components/popouts/UserProfileBadges.tsx:85
-msgid "RdChat Staff"
-msgstr "RdChat-Team"
+msgid "Fluxer Staff"
+msgstr "Fluxer-Team"
 
 #: src/components/modals/tabs/notifications_tab/Notifications.tsx:113
-msgid "RdChat uses push notifications when installed as a mobile PWA. Registering ensures the gateway can reach your device even when the browser is backgrounded."
-msgstr "RdChat verwendet Push-Benachrichtigungen, wenn es als mobile PWA installiert ist. Die Registrierung stellt sicher, dass das Gateway dein Gerät erreicht, auch wenn der Browser im Hintergrund läuft."
+msgid "Fluxer uses push notifications when installed as a mobile PWA. Registering ensures the gateway can reach your device even when the browser is backgrounded."
+msgstr "Fluxer verwendet Push-Benachrichtigungen, wenn es als mobile PWA installiert ist. Die Registrierung stellt sicher, dass das Gateway dein Gerät erreicht, auch wenn der Browser im Hintergrund läuft."
 
 #: src/components/modals/FluxerTagChangeModal.tsx:190
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:103
-msgid "RdChatTag"
-msgstr "RdChatTag"
+msgid "FluxerTag"
+msgstr "FluxerTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:107
-msgid "RdChatTag already taken"
-msgstr "RdChatTag bereits vergeben"
+msgid "FluxerTag already taken"
+msgstr "FluxerTag bereits vergeben"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:149
-msgid "RdChatTag updated"
-msgstr "RdChatTag aktualisiert"
+msgid "FluxerTag updated"
+msgstr "FluxerTag aktualisiert"
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:269
 msgid "focus"
@@ -10266,8 +10266,8 @@ msgid "Free vs Plutonium"
 msgstr "Kostenlos vs. Plutonium"
 
 #: src/components/modals/tabs/VideoTab.tsx:237
-msgid "Freezes your preview while RdChat is in the background to save resources."
-msgstr "Hält deine Vorschau an, während RdChat im Hintergrund läuft, um Ressourcen zu sparen."
+msgid "Freezes your preview while Fluxer is in the background to save resources."
+msgstr "Hält deine Vorschau an, während Fluxer im Hintergrund läuft, um Ressourcen zu sparen."
 
 #: src/utils/LocaleUtils.tsx:49
 msgid "French"
@@ -10313,8 +10313,8 @@ msgid "Friend Requests"
 msgstr "Freundschaftsanfragen"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:156
-msgid "Friend's RdChatTag"
-msgstr "RdChatTag des Freundes"
+msgid "Friend's FluxerTag"
+msgstr "FluxerTag des Freundes"
 
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:170
 msgid "Friendly bot"
@@ -10517,8 +10517,8 @@ msgid "Get prompted when new audio devices are connected"
 msgstr "Bei neuen Audiogeräten aufgefordert werden"
 
 #: src/components/layout/app_layout/nagbars/DesktopDownloadNagbar.tsx:50
-msgid "Get the RdChat desktop app for system-wide push-to-talk and a few other goodies."
-msgstr "Hol dir die RdChat-Desktop-App für systemweites Push-to-Talk und einige weitere Extras."
+msgid "Get the Fluxer desktop app for system-wide push-to-talk and a few other goodies."
+msgstr "Hol dir die Fluxer-Desktop-App für systemweites Push-to-Talk und einige weitere Extras."
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:280
 msgid "gif"
@@ -11604,8 +11604,8 @@ msgid "In Voice"
 msgstr "In Voice"
 
 #: src/components/modals/tabs/VoiceTab.tsx:142
-msgid "In your browser, Push-to-Talk will only work when the RdChat tab is focused. For system-wide Push-to-Talk that works even when gaming or using other apps, download the desktop app."
-msgstr "Im Browser funktioniert Push-to-Talk nur, wenn der RdChat-Tab aktiv ist. Für systemweites Push-to-Talk, das auch beim Spielen oder Verwenden anderer Apps läuft, lade die Desktop-App herunter."
+msgid "In your browser, Push-to-Talk will only work when the Fluxer tab is focused. For system-wide Push-to-Talk that works even when gaming or using other apps, download the desktop app."
+msgstr "Im Browser funktioniert Push-to-Talk nur, wenn der Fluxer-Tab aktiv ist. Für systemweites Push-to-Talk, das auch beim Spielen oder Verwenden anderer Apps läuft, lade die Desktop-App herunter."
 
 #: src/utils/SearchUtils.tsx:267
 msgid "in:"
@@ -11808,8 +11808,8 @@ msgid "Install Emoji Pack"
 msgstr "Emoji-Paket installieren"
 
 #: src/components/layout/app_layout/nagbars/MobileDownloadNagbar.tsx:50
-msgid "Install RdChat on your phone as a home screen app to receive notifications on the go!"
-msgstr "Installiere RdChat auf deinem Telefon als App für den Startbildschirm, um unterwegs Benachrichtigungen zu erhalten!"
+msgid "Install Fluxer on your phone as a home screen app to receive notifications on the go!"
+msgstr "Installiere Fluxer auf deinem Telefon als App für den Startbildschirm, um unterwegs Benachrichtigungen zu erhalten!"
 
 #: src/components/channel/InviteEmbed.tsx:223
 #: src/components/modals/InviteAcceptModal.tsx:160
@@ -12219,12 +12219,12 @@ msgid "Join community form"
 msgstr "Community-Beitrittsformular"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:101
-msgid "Join RdChat HQ"
-msgstr "Tritt RdChat HQ bei"
+msgid "Join Fluxer HQ"
+msgstr "Tritt Fluxer HQ bei"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:98
-msgid "Join RdChat HQ to chat with the team and stay up to date on the latest!"
-msgstr "Tritt RdChat HQ bei, um mit dem Team zu chatten und auf dem Laufenden zu bleiben!"
+msgid "Join Fluxer HQ to chat with the team and stay up to date on the latest!"
+msgstr "Tritt Fluxer HQ bei, um mit dem Team zu chatten und auf dem Laufenden zu bleiben!"
 
 #: src/components/channel/InviteEmbed.tsx:214
 msgid "Join Group"
@@ -12288,8 +12288,8 @@ msgid "Joined"
 msgstr "Beigetreten"
 
 #: src/components/channel/GuildMembersPage.tsx:986
-msgid "Joined RdChat"
-msgstr "RdChat beigetreten"
+msgid "Joined Fluxer"
+msgstr "Fluxer beigetreten"
 
 #. placeholder {0}: bannerConfig.minWidth
 #. placeholder {1}: bannerConfig.minHeight
@@ -12608,8 +12608,8 @@ msgid "Latvia"
 msgstr "Lettland"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:92
-msgid "Launch RdChat at Login"
-msgstr "RdChat beim Login starten"
+msgid "Launch Fluxer at Login"
+msgstr "Fluxer beim Login starten"
 
 #: src/components/modals/tabs/component_gallery_tab/MessagesTab.tsx:361
 msgid "Layouts for 1-10 image attachments using CDN assets."
@@ -12798,8 +12798,8 @@ msgid "Link expired. Your IP address was likely already authorized."
 msgstr "Link abgelaufen. Deine IP-Adresse wurde wahrscheinlich bereits autorisiert."
 
 #: src/components/modals/tabs/LinkedAccountsTab.tsx:284
-msgid "Link external accounts and domains to your RdChat profile. Verified connections will be displayed on your profile for others to see."
-msgstr "Verlinke externe Konten und Domains zu deinem RdChat-Profil. Verifizierte Verbindungen werden in deinem Profil angezeigt, damit andere sie sehen können."
+msgid "Link external accounts and domains to your Fluxer profile. Verified connections will be displayed on your profile for others to see."
+msgstr "Verlinke externe Konten und Domains zu deinem Fluxer-Profil. Verifizierte Verbindungen werden in deinem Profil angezeigt, damit andere sie sehen können."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:321
 msgid "Link external accounts and domains to your profile"
@@ -13202,8 +13202,8 @@ msgid "Manage Subscription"
 msgstr "Abonnement verwalten"
 
 #: src/components/modals/tabs/account_security_tab/AccountTab.tsx:58
-msgid "Manage the email address you use to sign in to RdChat"
-msgstr "Verwalte die E-Mail-Adresse, mit der du dich bei RdChat anmeldest"
+msgid "Manage the email address you use to sign in to Fluxer"
+msgstr "Verwalte die E-Mail-Adresse, mit der du dich bei Fluxer anmeldest"
 
 #: src/utils/PermissionUtils.tsx:294
 #: src/utils/PermissionUtils.tsx:449
@@ -15025,8 +15025,8 @@ msgid "No Unread Messages"
 msgstr "Keine ungelesenen Nachrichten"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:90
-msgid "No user found with that RdChatTag."
-msgstr "Kein Benutzer mit diesem RdChatTag gefunden."
+msgid "No user found with that FluxerTag."
+msgstr "Kein Benutzer mit diesem FluxerTag gefunden."
 
 #: src/components/modals/guild_tabs/GuildBansTab.tsx:180
 msgid "No users are currently banned from this community."
@@ -15545,8 +15545,8 @@ msgid "Open DMs Only"
 msgstr "Nur DMs öffnen"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:118
-msgid "Open RdChat"
-msgstr "RdChat öffnen"
+msgid "Open Fluxer"
+msgstr "Fluxer öffnen"
 
 #: src/components/channel/embeds/attachments/AttachmentGridItem.tsx:311
 #: src/components/channel/embeds/media/EmbedGifv.tsx:253
@@ -15564,8 +15564,8 @@ msgid "Open in Community"
 msgstr "In Community öffnen"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:105
-msgid "Open in RdChat for desktop"
-msgstr "In RdChat für Desktop öffnen"
+msgid "Open in Fluxer for desktop"
+msgstr "In Fluxer für Desktop öffnen"
 
 #: src/components/channel/embeds/media/EmbedYouTube.tsx:118
 msgid "Open in new tab"
@@ -16365,16 +16365,16 @@ msgstr "Bitte überprüfe dein Postfach auf eine Bestätigungs-E-Mail."
 
 #: src/components/modals/InputMonitoringCTAModal.tsx:53
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:52
-msgid "Please enable RdChat in System Settings → Privacy & Security → Input Monitoring."
-msgstr "Bitte aktiviere RdChat in den Systemeinstellungen → Datenschutz & Sicherheit → Eingabeüberwachung."
+msgid "Please enable Fluxer in System Settings → Privacy & Security → Input Monitoring."
+msgstr "Bitte aktiviere Fluxer in den Systemeinstellungen → Datenschutz & Sicherheit → Eingabeüberwachung."
 
 #: src/components/pages/ReportPage.tsx:216
 msgid "Please enter a valid email address."
 msgstr "Bitte gib eine gültige E-Mail-Adresse ein."
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:93
-msgid "Please enter a valid RdChatTag (Username#0000)."
-msgstr "Bitte gib einen gültigen RdChatTag ein (Benutzername#0000)."
+msgid "Please enter a valid FluxerTag (Username#0000)."
+msgstr "Bitte gib einen gültigen FluxerTag ein (Benutzername#0000)."
 
 #: src/components/pages/ReportPage.tsx:341
 msgid "Please enter a valid message link URL."
@@ -16418,8 +16418,8 @@ msgstr "Bitte versuche es später erneut."
 
 #: src/components/channel/UnknownMessage.tsx:73
 #: src/components/channel/UnknownMessage.tsx:127
-msgid "Please update RdChat to view this message."
-msgstr "Bitte aktualisiere RdChat, um diese Nachricht zu sehen."
+msgid "Please update Fluxer to view this message."
+msgstr "Bitte aktualisiere Fluxer, um diese Nachricht zu sehen."
 
 #: src/actions/InviteActionCreators.tsx:184
 msgid "Please verify your account by setting an email and password before joining communities."
@@ -16588,8 +16588,8 @@ msgid "Preview"
 msgstr "Vorschau"
 
 #: src/components/modals/tabs/developer_options_tab/TypographyTab.tsx:135
-msgid "Preview all available fonts, weights, and styles across different languages supported by RdChat."
-msgstr "Vorschau aller verfügbaren Schriftarten, -gewichte und -stile in den von RdChat unterstützten Sprachen."
+msgid "Preview all available fonts, weights, and styles across different languages supported by Fluxer."
+msgstr "Vorschau aller verfügbaren Schriftarten, -gewichte und -stile in den von Fluxer unterstützten Sprachen."
 
 #: src/components/modals/tabs/AccessibilityTab.tsx:113
 msgid "Preview Button"
@@ -16794,8 +16794,8 @@ msgid "Protect your account with two-factor authentication and passkeys"
 msgstr "Schütze dein Konto mit Zwei-Faktor-Authentifizierung und Passkeys"
 
 #: src/components/layout/app_layout/nagbars/VisionaryMfaNagbar.tsx:52
-msgid "Protect your Visionary account by enabling two-factor authentication. Thanks for supporting RdChat!"
-msgstr "Schütze dein Visionary-Konto, indem du die Zwei-Faktor-Authentifizierung aktivierst. Danke, dass du RdChat unterstützt!"
+msgid "Protect your Visionary account by enabling two-factor authentication. Thanks for supporting Fluxer!"
+msgstr "Schütze dein Visionary-Konto, indem du die Zwei-Faktor-Authentifizierung aktivierst. Danke, dass du Fluxer unterstützt!"
 
 #: src/components/modals/IARModal.tsx:244
 msgid "Provide any additional context that may help our Safety Team..."
@@ -16806,8 +16806,8 @@ msgid "Provide at least a user ID or a user tag."
 msgstr "Gib mindestens eine Benutzer-ID oder einen Benutzertag an."
 
 #: src/components/pages/ReportPage.tsx:359
-msgid "Provide either a user ID or a RdChatTag for the person you are reporting."
-msgstr "Gib entweder eine Benutzer-ID oder einen RdChatTag für die Person an, die du meldest."
+msgid "Provide either a user ID or a FluxerTag for the person you are reporting."
+msgstr "Gib entweder eine Benutzer-ID oder einen FluxerTag für die Person an, die du meldest."
 
 #: src/components/pages/ReportPage.tsx:310
 msgid "Provide your full legal name for the declaration."
@@ -17037,8 +17037,8 @@ msgid "Read the community's audit log of changes and moderation actions."
 msgstr "Lies das Audit-Log der Community über Änderungen und Moderationsaktionen."
 
 #: src/components/modals/tabs/applications_tab/index.tsx:161
-msgid "Read the Documentation (RdChat.dev)"
-msgstr "Lies die Dokumentation (RdChat.dev)"
+msgid "Read the Documentation (fluxer.dev)"
+msgstr "Lies die Dokumentation (fluxer.dev)"
 
 #: src/stores/KeybindStore.tsx:371
 msgid "Read the focused message aloud"
@@ -17700,8 +17700,8 @@ msgid "Renews on <0>{renewalDate}</0>."
 msgstr "Erneuert sich am <0>{renewalDate}</0>."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:120
-msgid "Reopen in maximized mode if that’s how you last used RdChat."
-msgstr "Wieder im maximierten Modus öffnen, wenn du RdChat zuletzt so verwendet hast."
+msgid "Reopen in maximized mode if that’s how you last used Fluxer."
+msgstr "Wieder im maximierten Modus öffnen, wenn du Fluxer zuletzt so verwendet hast."
 
 #: src/components/modals/BackgroundImageGalleryModal.tsx:280
 #: src/components/modals/BackgroundImageGalleryModal.tsx:396
@@ -18275,12 +18275,12 @@ msgid "Ruby"
 msgstr "Ruby"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:89
-msgid "Run RdChat automatically when your computer starts. Or don't. Your choice!"
-msgstr "Starte RdChat automatisch beim Hochfahren deines Rechners. Oder auch nicht. Deine Entscheidung!"
+msgid "Run Fluxer automatically when your computer starts. Or don't. Your choice!"
+msgstr "Starte Fluxer automatisch beim Hochfahren deines Rechners. Oder auch nicht. Deine Entscheidung!"
 
 #: src/components/modals/tabs/KeybindsTab.tsx:94
-msgid "Run this shortcut even when RdChat is not focused."
-msgstr "Führe diese Verknüpfung aus, auch wenn RdChat nicht im Fokus ist."
+msgid "Run this shortcut even when Fluxer is not focused."
+msgstr "Führe diese Verknüpfung aus, auch wenn Fluxer nicht im Fokus ist."
 
 #: src/utils/LocaleUtils.tsx:64
 msgid "Russian"
@@ -20908,8 +20908,8 @@ msgid "System DMs cannot host voice calls."
 msgstr "System-DMs können keine Sprachgespräche hosten."
 
 #: src/components/channel/barriers/BarrierComponents.tsx:249
-msgid "System DMs deliver important announcements from RdChat staff. Replies and interactions are disabled in this conversation."
-msgstr "System-DMs liefern wichtige Ankündigungen vom RdChat-Team. Antworten und Interaktionen sind in diesem Gespräch deaktiviert."
+msgid "System DMs deliver important announcements from Fluxer staff. Replies and interactions are disabled in this conversation."
+msgstr "System-DMs liefern wichtige Ankündigungen vom Fluxer-Team. Antworten und Interaktionen sind in diesem Gespräch deaktiviert."
 
 #: src/components/modals/tabs/LanguageTab.tsx:81
 msgid "System locale ({browserLocale}): {format}"
@@ -21081,12 +21081,12 @@ msgid "Thai"
 msgstr "Thailändisch"
 
 #: src/components/modals/IARModal.tsx:220
-msgid "Thank you for helping keep RdChat safe. Reports are reviewed by our Safety Team. False reports may result in action against your account."
-msgstr "Danke, dass du dazu beiträgst, RdChat sicher zu halten. Berichte werden von unserem Sicherheitsteam geprüft. Falsche Meldungen können Maßnahmen gegen dein Konto zur Folge haben."
+msgid "Thank you for helping keep Fluxer safe. Reports are reviewed by our Safety Team. False reports may result in action against your account."
+msgstr "Danke, dass du dazu beiträgst, Fluxer sicher zu halten. Berichte werden von unserem Sicherheitsteam geprüft. Falsche Meldungen können Maßnahmen gegen dein Konto zur Folge haben."
 
 #: src/components/pages/report/ReportStepComplete.tsx:37
-msgid "Thank you for helping keep RdChat safe. We'll review your report as soon as possible."
-msgstr "Danke, dass du hilfst, RdChat sicher zu halten. Wir werden deinen Bericht so schnell wie möglich überprüfen."
+msgid "Thank you for helping keep Fluxer safe. We'll review your report as soon as possible."
+msgstr "Danke, dass du hilfst, Fluxer sicher zu halten. Wir werden deinen Bericht so schnell wie möglich überprüfen."
 
 #: src/components/form/ColorPickerField.tsx:277
 msgid "That doesn't look like a valid color. Try hex, rgb(), hsl(), or a CSS color name."
@@ -21154,8 +21154,8 @@ msgid "The file you're trying to upload exceeds the maximum size limit of {maxSi
 msgstr "Die Datei, die Sie hochladen möchten, überschreitet die maximale Größenbeschränkung von {maxSizeFormatted}."
 
 #: src/components/modals/FluxerTagChangeModal.tsx:111
-msgid "The RdChatTag <0>{RdChatTag}</0> is already taken. Continuing will reroll your discriminator automatically."
-msgstr "Der RdChatTag <0>{RdChatTag}</0> ist bereits vergeben. Wenn du fortfährst, wird dein Discriminator automatisch neu zugewiesen."
+msgid "The FluxerTag <0>{fluxerTag}</0> is already taken. Continuing will reroll your discriminator automatically."
+msgstr "Der FluxerTag <0>{fluxerTag}</0> ist bereits vergeben. Wenn du fortfährst, wird dein Discriminator automatisch neu zugewiesen."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataDeletionTab.tsx:80
 msgid "The job starts 24 hours after you confirm and can be canceled or restarted anytime"
@@ -21203,8 +21203,8 @@ msgid "The timeout cannot exceed 365 days (31536000 seconds)."
 msgstr "Die Auszeit darf 365 Tage (31.536.000 Sekunden) nicht überschreiten."
 
 #: src/components/auth/BrowserLoginHandoffModal.tsx:104
-msgid "The URL of the RdChat instance you want to sign in to."
-msgstr "Die URL der RdChat-Instanz, bei der du dich anmelden möchtest."
+msgid "The URL of the Fluxer instance you want to sign in to."
+msgstr "Die URL der Fluxer-Instanz, bei der du dich anmelden möchtest."
 
 #: src/components/modals/channel_tabs/ChannelOverviewTab.tsx:496
 msgid "The URL this link channel points to."
@@ -21254,7 +21254,7 @@ msgstr "Design nicht verfügbar"
 msgid "There are no channels available to create an invite for."
 msgstr "Es sind keine Kanäle verfügbar, für die eine Einladung erstellt werden kann."
 
-#. placeholder {0}: /* * Copyright (C) 2026 RdChat Contributors * * This file is part of RdChat. * * RdChat is free software: you can redistribute it and/or modify * it under the terms of the GNU Affero General Public License as published by * the Free Software Foundation, either version 3 of the License, or * (at your option) any later version. * * RdChat is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the * GNU Affero General Public License for more details. * * You should have received a copy of the GNU Affero General Public License * along with RdChat. If not, see <https://www.gnu.org/licenses/>. */ import * as ContextMenuActionCreators from '@app/actions/ContextMenuActionCreators'; import * as GuildMemberActionCreators from '@app/actions/GuildMemberActionCreators'; import * as ModalActionCreators from '@app/actions/ModalActionCreators'; import {modal} from '@app/actions/ModalActionCreators'; import styles from '@app/components/guild/RoleManagement.module.css'; import {ConfirmModal} from '@app/components/modals/ConfirmModal'; import {GuildSettingsModal} from '@app/components/modals/GuildSettingsModal'; import profileStyles from '@app/components/popouts/UserProfilePopout.module.css'; import {CheckboxItem} from '@app/components/uikit/context_menu/ContextMenu'; import itemStyles from '@app/components/uikit/context_menu/items/MenuItems.module.css'; import {MenuGroup} from '@app/components/uikit/context_menu/MenuGroup'; import {MenuItem} from '@app/components/uikit/context_menu/MenuItem'; import FocusRing from '@app/components/uikit/focus_ring/FocusRing'; import {MenuBottomSheet, type MenuGroupType} from '@app/components/uikit/menu_bottom_sheet/MenuBottomSheet'; import {Tooltip} from '@app/components/uikit/tooltip/Tooltip'; import {useRoleHierarchy} from '@app/hooks/useRoleHierarchy'; import type {GuildRoleRecord} from '@app/records/GuildRoleRecord'; import GuildMemberStore from '@app/stores/GuildMemberStore'; import GuildSettingsModalStore from '@app/stores/GuildSettingsModalStore'; import GuildStore from '@app/stores/GuildStore'; import MobileLayoutStore from '@app/stores/MobileLayoutStore'; import * as ColorUtils from '@app/utils/ColorUtils'; import {Trans, useLingui} from '@lingui/react/macro'; import {PlusIcon, XIcon} from '@phosphor-icons/react'; import {clsx} from 'clsx'; import {observer} from 'mobx-react-lite'; import type React from 'react'; import {useCallback, useMemo, useState} from 'react'; const RoleBadge: React.FC<{ role: GuildRoleRecord; canRemove: boolean; guildId: string; userId: string; }> = observer(function RoleBadge({role, canRemove, guildId, userId}) { const {t} = useLingui(); const roleColor = ColorUtils.int2rgb(role.color); const iconColor = ColorUtils.getBestContrastColor(role.color); const handleRemoveRole = () => { GuildMemberActionCreators.removeRole(guildId, userId, role.id); }; const roleIndicator = <span className={styles.roleIndicator} style={{backgroundColor: roleColor}} />; return ( <div key={role.id} className={clsx(styles.roleBadge, profileStyles.role)}> {canRemove ? ( <Tooltip text={t`Remove role`} position="top"> <FocusRing offset={-2}> <button type="button" className={styles.roleRemoveButton} onClick={handleRemoveRole}> <XIcon weight="bold" className={clsx(styles.roleRemoveIconContainer, profileStyles.roleRemoveIcon)} style={{color: iconColor}} /> {roleIndicator} </button> </FocusRing> </Tooltip> ) : ( <div className={styles.roleRemoveButtonContainer}>{roleIndicator}</div> )} <div aria-hidden={true} className={styles.roleName}> {role.name} </div> </div> ); }); export const RoleList: React.FC<{ guildId: string; userId: string; roles: Array<GuildRoleRecord>; canManage: boolean; }> = observer(function RoleList({guildId, userId, roles, canManage}) { const {canManageRole} = useRoleHierarchy(GuildStore.getGuild(guildId)); if (roles.length === 0 && !canManage) { return null; } return ( <div className={styles.roleListContainer}> {roles.map((role) => { const canRemoveRole = canManage && canManageRole({ id: role.id, position: role.position, permissions: role.permissions, }); return <RoleBadge key={role.id} role={role} canRemove={canRemoveRole} guildId={guildId} userId={userId} />; })} </div> ); }); interface ManageRolesMenuContentProps { guildId: string; userId: string; onClose: () => void; } const ManageRolesMenuContent: React.FC<ManageRolesMenuContentProps> = observer(function ManageRolesMenuContent({ guildId, userId, onClose, }) { const guild = GuildStore.getGuild(guildId); const currentMember = GuildMemberStore.getMember(guildId, userId); const {canManageRole} = useRoleHierarchy(guild); const handleOpenGuildSettings = useCallback(() => { onClose(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, [guildId, onClose]); const allRoles = useMemo(() => { if (!guild) return []; return Object.values(guild.roles) .filter((role) => !role.isEveryone) .sort((a, b) => b.position - a.position) .map((role) => ({ role, canManage: canManageRole({id: role.id, position: role.position, permissions: role.permissions}), })); }, [guild, canManageRole]); const handleToggleRole = useCallback( async (roleId: string, hasRole: boolean, canManage: boolean) => { if (!canManage) return; if (hasRole) { await GuildMemberActionCreators.removeRole(guildId, userId, roleId); } else { await GuildMemberActionCreators.addRole(guildId, userId, roleId); } }, [guildId, userId], ); if (allRoles.length === 0) { return ( <MenuGroup> <MenuItem onClick={handleOpenGuildSettings}> <Trans>No roles yet, add roles in Community Settings</Trans> </MenuItem> </MenuGroup> ); } return ( <MenuGroup> {allRoles.map(({role, canManage}) => { const hasRole = currentMember?.roles.has(role.id) ?? false; return ( <CheckboxItem key={role.id} checked={hasRole} disabled={!canManage} onCheckedChange={() => handleToggleRole(role.id, hasRole, canManage)} closeOnChange={false} > <div className={itemStyles.roleContainer}> <div className={itemStyles.roleIcon} style={{backgroundColor: ColorUtils.int2rgb(role.color)}} /> <span className={clsx(itemStyles.roleName, !canManage && itemStyles.roleDisabled)}>{role.name}</span> </div> </CheckboxItem> ); })} </MenuGroup> ); }); interface ManageRolesBottomSheetProps { isOpen: boolean; onClose: () => void; guildId: string; userId: string; } export const ManageRolesBottomSheet: React.FC<ManageRolesBottomSheetProps> = observer(function ManageRolesBottomSheet({ isOpen, onClose, guildId, userId, }) { const {t} = useLingui(); const guild = GuildStore.getGuild(guildId); const currentMember = GuildMemberStore.getMember(guildId, userId); const {canManageRole} = useRoleHierarchy(guild); const handleOpenGuildSettings = useCallback(() => { onClose(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, [guildId, onClose]); const allRoles = useMemo(() => { if (!guild) return []; return Object.values(guild.roles) .filter((role) => !role.isEveryone) .sort((a, b) => b.position - a.position) .map((role) => ({ role, canManage: canManageRole({id: role.id, position: role.position, permissions: role.permissions}), })); }, [guild, canManageRole]); const menuGroups: Array<MenuGroupType> = useMemo(() => { if (allRoles.length === 0) { return [ { items: [ { icon: <PlusIcon weight="bold" className={styles.iconSize} />, label: t`No roles yet, add roles in Community Settings`, onClick: handleOpenGuildSettings, }, ], }, ]; } return [ { items: allRoles.map(({role, canManage}) => { const hasRole = currentMember?.roles.has(role.id) ?? false; return { label: role.name, checked: hasRole, disabled: !canManage, onChange: async () => { if (!canManage) return; if (hasRole) { await GuildMemberActionCreators.removeRole(guildId, userId, role.id); } else { await GuildMemberActionCreators.addRole(guildId, userId, role.id); } }, icon: ( <div className={styles.roleColorIndicator} style={{backgroundColor: ColorUtils.int2rgb(role.color)}} /> ), }; }), }, ]; }, [allRoles, currentMember, guildId, userId, handleOpenGuildSettings]); return <MenuBottomSheet isOpen={isOpen} onClose={onClose} title={t`Manage Roles`} groups={menuGroups} />; }); function openNoRolesModal(guildId: string) { function NoRolesModalDescription() { const {t} = useLingui(); const handleOpenRolesSettings = useCallback(() => { ModalActionCreators.pop(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, []); return ( <Trans> There are no roles to assign in this community at this time, but you can create a new role in{' '} <button type="button" className={styles.noRolesLink} onClick={handleOpenRolesSettings}> {t`Community Settings > Roles & Permissions`} </button> . </Trans> ); } ModalActionCreators.push( modal(() => ( <ConfirmModal title={<Trans>No Roles Available</Trans>} description={<NoRolesModalDescription />} primaryText={<Trans>OK</Trans>} primaryVariant="primary" secondaryText={false} onPrimary={() => {}} /> )), ); } export const AddRoleButton: React.FC<{ guildId: string; userId: string; }> = observer(function AddRoleButton({guildId, userId}) { const {t} = useLingui(); const guild = GuildStore.getGuild(guildId); const member = GuildMemberStore.getMember(guildId, userId); const isMobile = MobileLayoutStore.enabled; const [showBottomSheet, setShowBottomSheet] = useState(false); const hasRoles = useMemo(() => { if (!guild) return false; return Object.values(guild.roles).some((r) => !r.isEveryone); }, [guild]); const handleClick = useCallback( (event: React.MouseEvent<HTMLButtonElement>) => { if (!hasRoles) { openNoRolesModal(guildId); return; } if (isMobile) { setShowBottomSheet(true); } else { ContextMenuActionCreators.openFromEvent(event, ({onClose}) => ( <ManageRolesMenuContent guildId={guildId} userId={userId} onClose={onClose} /> )); } }, [guildId, userId, isMobile, hasRoles], ); if (!guild || !member) return null; return ( <> <Tooltip text={t`Add Role`}> <FocusRing offset={-2}> <button type="button" className={clsx(styles.addRoleButton, styles.addRoleButtonIcon)} onClick={handleClick}> <PlusIcon weight="bold" className={styles.iconSize} /> </button> </FocusRing> </Tooltip> {isMobile && ( <ManageRolesBottomSheet isOpen={showBottomSheet} onClose={() => setShowBottomSheet(false)} guildId={guildId} userId={userId} /> )} </> ); }); 
+#. placeholder {0}: /* * Copyright (C) 2026 Fluxer Contributors * * This file is part of Fluxer. * * Fluxer is free software: you can redistribute it and/or modify * it under the terms of the GNU Affero General Public License as published by * the Free Software Foundation, either version 3 of the License, or * (at your option) any later version. * * Fluxer is distributed in the hope that it will be useful, * but WITHOUT ANY WARRANTY; without even the implied warranty of * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the * GNU Affero General Public License for more details. * * You should have received a copy of the GNU Affero General Public License * along with Fluxer. If not, see <https://www.gnu.org/licenses/>. */ import * as ContextMenuActionCreators from '@app/actions/ContextMenuActionCreators'; import * as GuildMemberActionCreators from '@app/actions/GuildMemberActionCreators'; import * as ModalActionCreators from '@app/actions/ModalActionCreators'; import {modal} from '@app/actions/ModalActionCreators'; import styles from '@app/components/guild/RoleManagement.module.css'; import {ConfirmModal} from '@app/components/modals/ConfirmModal'; import {GuildSettingsModal} from '@app/components/modals/GuildSettingsModal'; import profileStyles from '@app/components/popouts/UserProfilePopout.module.css'; import {CheckboxItem} from '@app/components/uikit/context_menu/ContextMenu'; import itemStyles from '@app/components/uikit/context_menu/items/MenuItems.module.css'; import {MenuGroup} from '@app/components/uikit/context_menu/MenuGroup'; import {MenuItem} from '@app/components/uikit/context_menu/MenuItem'; import FocusRing from '@app/components/uikit/focus_ring/FocusRing'; import {MenuBottomSheet, type MenuGroupType} from '@app/components/uikit/menu_bottom_sheet/MenuBottomSheet'; import {Tooltip} from '@app/components/uikit/tooltip/Tooltip'; import {useRoleHierarchy} from '@app/hooks/useRoleHierarchy'; import type {GuildRoleRecord} from '@app/records/GuildRoleRecord'; import GuildMemberStore from '@app/stores/GuildMemberStore'; import GuildSettingsModalStore from '@app/stores/GuildSettingsModalStore'; import GuildStore from '@app/stores/GuildStore'; import MobileLayoutStore from '@app/stores/MobileLayoutStore'; import * as ColorUtils from '@app/utils/ColorUtils'; import {Trans, useLingui} from '@lingui/react/macro'; import {PlusIcon, XIcon} from '@phosphor-icons/react'; import {clsx} from 'clsx'; import {observer} from 'mobx-react-lite'; import type React from 'react'; import {useCallback, useMemo, useState} from 'react'; const RoleBadge: React.FC<{ role: GuildRoleRecord; canRemove: boolean; guildId: string; userId: string; }> = observer(function RoleBadge({role, canRemove, guildId, userId}) { const {t} = useLingui(); const roleColor = ColorUtils.int2rgb(role.color); const iconColor = ColorUtils.getBestContrastColor(role.color); const handleRemoveRole = () => { GuildMemberActionCreators.removeRole(guildId, userId, role.id); }; const roleIndicator = <span className={styles.roleIndicator} style={{backgroundColor: roleColor}} />; return ( <div key={role.id} className={clsx(styles.roleBadge, profileStyles.role)}> {canRemove ? ( <Tooltip text={t`Remove role`} position="top"> <FocusRing offset={-2}> <button type="button" className={styles.roleRemoveButton} onClick={handleRemoveRole}> <XIcon weight="bold" className={clsx(styles.roleRemoveIconContainer, profileStyles.roleRemoveIcon)} style={{color: iconColor}} /> {roleIndicator} </button> </FocusRing> </Tooltip> ) : ( <div className={styles.roleRemoveButtonContainer}>{roleIndicator}</div> )} <div aria-hidden={true} className={styles.roleName}> {role.name} </div> </div> ); }); export const RoleList: React.FC<{ guildId: string; userId: string; roles: Array<GuildRoleRecord>; canManage: boolean; }> = observer(function RoleList({guildId, userId, roles, canManage}) { const {canManageRole} = useRoleHierarchy(GuildStore.getGuild(guildId)); if (roles.length === 0 && !canManage) { return null; } return ( <div className={styles.roleListContainer}> {roles.map((role) => { const canRemoveRole = canManage && canManageRole({ id: role.id, position: role.position, permissions: role.permissions, }); return <RoleBadge key={role.id} role={role} canRemove={canRemoveRole} guildId={guildId} userId={userId} />; })} </div> ); }); interface ManageRolesMenuContentProps { guildId: string; userId: string; onClose: () => void; } const ManageRolesMenuContent: React.FC<ManageRolesMenuContentProps> = observer(function ManageRolesMenuContent({ guildId, userId, onClose, }) { const guild = GuildStore.getGuild(guildId); const currentMember = GuildMemberStore.getMember(guildId, userId); const {canManageRole} = useRoleHierarchy(guild); const handleOpenGuildSettings = useCallback(() => { onClose(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, [guildId, onClose]); const allRoles = useMemo(() => { if (!guild) return []; return Object.values(guild.roles) .filter((role) => !role.isEveryone) .sort((a, b) => b.position - a.position) .map((role) => ({ role, canManage: canManageRole({id: role.id, position: role.position, permissions: role.permissions}), })); }, [guild, canManageRole]); const handleToggleRole = useCallback( async (roleId: string, hasRole: boolean, canManage: boolean) => { if (!canManage) return; if (hasRole) { await GuildMemberActionCreators.removeRole(guildId, userId, roleId); } else { await GuildMemberActionCreators.addRole(guildId, userId, roleId); } }, [guildId, userId], ); if (allRoles.length === 0) { return ( <MenuGroup> <MenuItem onClick={handleOpenGuildSettings}> <Trans>No roles yet, add roles in Community Settings</Trans> </MenuItem> </MenuGroup> ); } return ( <MenuGroup> {allRoles.map(({role, canManage}) => { const hasRole = currentMember?.roles.has(role.id) ?? false; return ( <CheckboxItem key={role.id} checked={hasRole} disabled={!canManage} onCheckedChange={() => handleToggleRole(role.id, hasRole, canManage)} closeOnChange={false} > <div className={itemStyles.roleContainer}> <div className={itemStyles.roleIcon} style={{backgroundColor: ColorUtils.int2rgb(role.color)}} /> <span className={clsx(itemStyles.roleName, !canManage && itemStyles.roleDisabled)}>{role.name}</span> </div> </CheckboxItem> ); })} </MenuGroup> ); }); interface ManageRolesBottomSheetProps { isOpen: boolean; onClose: () => void; guildId: string; userId: string; } export const ManageRolesBottomSheet: React.FC<ManageRolesBottomSheetProps> = observer(function ManageRolesBottomSheet({ isOpen, onClose, guildId, userId, }) { const {t} = useLingui(); const guild = GuildStore.getGuild(guildId); const currentMember = GuildMemberStore.getMember(guildId, userId); const {canManageRole} = useRoleHierarchy(guild); const handleOpenGuildSettings = useCallback(() => { onClose(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, [guildId, onClose]); const allRoles = useMemo(() => { if (!guild) return []; return Object.values(guild.roles) .filter((role) => !role.isEveryone) .sort((a, b) => b.position - a.position) .map((role) => ({ role, canManage: canManageRole({id: role.id, position: role.position, permissions: role.permissions}), })); }, [guild, canManageRole]); const menuGroups: Array<MenuGroupType> = useMemo(() => { if (allRoles.length === 0) { return [ { items: [ { icon: <PlusIcon weight="bold" className={styles.iconSize} />, label: t`No roles yet, add roles in Community Settings`, onClick: handleOpenGuildSettings, }, ], }, ]; } return [ { items: allRoles.map(({role, canManage}) => { const hasRole = currentMember?.roles.has(role.id) ?? false; return { label: role.name, checked: hasRole, disabled: !canManage, onChange: async () => { if (!canManage) return; if (hasRole) { await GuildMemberActionCreators.removeRole(guildId, userId, role.id); } else { await GuildMemberActionCreators.addRole(guildId, userId, role.id); } }, icon: ( <div className={styles.roleColorIndicator} style={{backgroundColor: ColorUtils.int2rgb(role.color)}} /> ), }; }), }, ]; }, [allRoles, currentMember, guildId, userId, handleOpenGuildSettings]); return <MenuBottomSheet isOpen={isOpen} onClose={onClose} title={t`Manage Roles`} groups={menuGroups} />; }); function openNoRolesModal(guildId: string) { function NoRolesModalDescription() { const {t} = useLingui(); const handleOpenRolesSettings = useCallback(() => { ModalActionCreators.pop(); if (GuildSettingsModalStore.navigateToTab(guildId, 'roles')) { return; } ModalActionCreators.push(modal(() => <GuildSettingsModal guildId={guildId} initialTab="roles" />)); }, []); return ( <Trans> There are no roles to assign in this community at this time, but you can create a new role in{' '} <button type="button" className={styles.noRolesLink} onClick={handleOpenRolesSettings}> {t`Community Settings > Roles & Permissions`} </button> . </Trans> ); } ModalActionCreators.push( modal(() => ( <ConfirmModal title={<Trans>No Roles Available</Trans>} description={<NoRolesModalDescription />} primaryText={<Trans>OK</Trans>} primaryVariant="primary" secondaryText={false} onPrimary={() => {}} /> )), ); } export const AddRoleButton: React.FC<{ guildId: string; userId: string; }> = observer(function AddRoleButton({guildId, userId}) { const {t} = useLingui(); const guild = GuildStore.getGuild(guildId); const member = GuildMemberStore.getMember(guildId, userId); const isMobile = MobileLayoutStore.enabled; const [showBottomSheet, setShowBottomSheet] = useState(false); const hasRoles = useMemo(() => { if (!guild) return false; return Object.values(guild.roles).some((r) => !r.isEveryone); }, [guild]); const handleClick = useCallback( (event: React.MouseEvent<HTMLButtonElement>) => { if (!hasRoles) { openNoRolesModal(guildId); return; } if (isMobile) { setShowBottomSheet(true); } else { ContextMenuActionCreators.openFromEvent(event, ({onClose}) => ( <ManageRolesMenuContent guildId={guildId} userId={userId} onClose={onClose} /> )); } }, [guildId, userId, isMobile, hasRoles], ); if (!guild || !member) return null; return ( <> <Tooltip text={t`Add Role`}> <FocusRing offset={-2}> <button type="button" className={clsx(styles.addRoleButton, styles.addRoleButtonIcon)} onClick={handleClick}> <PlusIcon weight="bold" className={styles.iconSize} /> </button> </FocusRing> </Tooltip> {isMobile && ( <ManageRolesBottomSheet isOpen={showBottomSheet} onClose={() => setShowBottomSheet(false)} guildId={guildId} userId={userId} /> )} </> ); }); 
 #: src/components/guild/RoleManagement.tsx:291
 msgid "There are no roles to assign in this community at this time, but you can create a new role in <0>{0}</0>."
 msgstr "Es gibt derzeit keine Rollen, die in dieser Community zugewiesen werden können, aber Sie können eine neue Rolle in <0>{0}</0> erstellen."
@@ -21289,8 +21289,8 @@ msgid "There's nothing more to see here."
 msgstr "Hier gibt es nichts Weiteres zu sehen."
 
 #: src/components/modals/tabs/AuthorizedAppsTab.tsx:146
-msgid "These applications have been granted access to your RdChat account."
-msgstr "Diesen Anwendungen wurde Zugriff auf dein RdChat-Konto gewährt."
+msgid "These applications have been granted access to your Fluxer account."
+msgstr "Diesen Anwendungen wurde Zugriff auf dein Fluxer-Konto gewährt."
 
 #: src/components/modals/tabs/VoiceTab.tsx:405
 msgid "These settings use browser-native audio processing to improve call quality. For best results, keep all options enabled."
@@ -21558,8 +21558,8 @@ msgid "This is a custom emoji from a community. Ask the author for an invite to 
 msgstr "Dies ist ein benutzerdefiniertes Emoji aus einer Community. Bitte den Autor um eine Einladung, um dieses Emoji nutzen zu können."
 
 #: src/components/emojis/EmojiAttributionSubtext.tsx:102
-msgid "This is a default emoji on RdChat."
-msgstr "Dies ist ein Standard-Emoji auf RdChat."
+msgid "This is a default emoji on Fluxer."
+msgstr "Dies ist ein Standard-Emoji auf Fluxer."
 
 #: src/components/modals/tabs/component_gallery_tab/InputsTab.tsx:147
 msgid "This is an error message"
@@ -24401,8 +24401,8 @@ msgid "We'll verify your new email with a one-time code."
 msgstr "Wir verifizieren deine neue E-Mail mit einem Einmalcode."
 
 #: src/components/NetworkErrorScreen.tsx:39
-msgid "We're having trouble connecting to RdChat's servers. This could be a temporary network issue or scheduled maintenance."
-msgstr "Wir haben Probleme, eine Verbindung zu RdChats Servern herzustellen. Dies könnte ein temporäres Netzwerkproblem oder eine geplante Wartung sein."
+msgid "We're having trouble connecting to Fluxer's servers. This could be a temporary network issue or scheduled maintenance."
+msgstr "Wir haben Probleme, eine Verbindung zu Fluxers Servern herzustellen. Dies könnte ein temporäres Netzwerkproblem oder eine geplante Wartung sein."
 
 #: src/components/modals/tabs/DevicesTab.tsx:234
 msgid "We're having trouble connecting to the space-time continuum. Please check your connection and try again."
@@ -24414,28 +24414,28 @@ msgid "We're indexing this channel for the first time. This might take a little 
 msgstr "Wir indexieren diesen Kanal zum ersten Mal. Das kann eine Weile dauern..."
 
 #: src/components/modals/RequiredActionModal.tsx:166
-msgid "We've detected suspicious activity on your account. Please reverify your email address or phone number to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse oder Telefonnummer erneut, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please reverify your email address or phone number to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse oder Telefonnummer erneut, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/modals/RequiredActionModal.tsx:158
-msgid "We've detected suspicious activity on your account. Please reverify your email address to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse erneut, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please reverify your email address to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse erneut, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/modals/RequiredActionModal.tsx:162
-msgid "We've detected suspicious activity on your account. Please reverify your phone number to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine Telefonnummer erneut, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please reverify your phone number to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine Telefonnummer erneut, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/modals/RequiredActionModal.tsx:167
-msgid "We've detected suspicious activity on your account. Please verify your email address or phone number to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse oder Telefonnummer, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please verify your email address or phone number to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse oder Telefonnummer, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/modals/RequiredActionModal.tsx:159
-msgid "We've detected suspicious activity on your account. Please verify your email address to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please verify your email address to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine E-Mail-Adresse, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/modals/RequiredActionModal.tsx:163
-msgid "We've detected suspicious activity on your account. Please verify your phone number to continue using RdChat."
-msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine Telefonnummer, um RdChat weiterhin nutzen zu können."
+msgid "We've detected suspicious activity on your account. Please verify your phone number to continue using Fluxer."
+msgstr "Wir haben verdächtige Aktivitäten auf deinem Konto festgestellt. Bitte überprüfe deine Telefonnummer, um Fluxer weiterhin nutzen zu können."
 
 #: src/components/pages/ForgotPasswordPage.tsx:65
 msgid "We've sent password reset instructions to your email address. Please check your inbox and follow the link to reset your password."
@@ -24510,8 +24510,8 @@ msgid "Welcome to Favorites"
 msgstr "Willkommen bei Favoriten"
 
 #: src/components/layout/app_layout/nagbars/PremiumOnboardingNagbar.tsx:52
-msgid "Welcome to RdChat Plutonium! Explore your premium features and manage your subscription."
-msgstr "Willkommen bei RdChat Plutonium! Entdecke deine Premium-Funktionen und verwalte dein Abo."
+msgid "Welcome to Fluxer Plutonium! Explore your premium features and manage your subscription."
+msgstr "Willkommen bei Fluxer Plutonium! Entdecke deine Premium-Funktionen und verwalte dein Abo."
 
 #: src/utils/SystemMessageUtils.tsx:46
 msgid "Welcome, {username}! Don't forget to park your DeLorean."
@@ -24590,8 +24590,8 @@ msgid "When enabled, quickly tapping your push-to-talk shortcut will keep your m
 msgstr "Wenn aktiviert, hält ein kurzer Tastendruck auf dein Push-to-Talk-Kürzel dein Mikrofon an, bis du erneut drückst."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:160
-msgid "When enabled, reveals debugging menus throughout the app to inspect and copy raw JSON objects of internal data structures like messages, channels, users, and communities. Also includes tools to debug the RdChat Markdown parser performance and AST for any given message."
-msgstr "Wenn aktiviert, werden Debug-Menüs in der ganzen App sichtbar, mit denen du rohe JSON-Objekte interner Datenstrukturen wie Nachrichten, Kanäle, Benutzer und Communities inspizieren und kopieren kannst. Enthält auch Werkzeuge zur Fehlersuche für die RdChat Markdown-Parser-Leistung und AST für jede Nachricht."
+msgid "When enabled, reveals debugging menus throughout the app to inspect and copy raw JSON objects of internal data structures like messages, channels, users, and communities. Also includes tools to debug the Fluxer Markdown parser performance and AST for any given message."
+msgstr "Wenn aktiviert, werden Debug-Menüs in der ganzen App sichtbar, mit denen du rohe JSON-Objekte interner Datenstrukturen wie Nachrichten, Kanäle, Benutzer und Communities inspizieren und kopieren kannst. Enthält auch Werkzeuge zur Fehlersuche für die Fluxer Markdown-Parser-Leistung und AST für jede Nachricht."
 
 #: src/components/modals/tabs/appearance_tab/InterfaceTab.tsx:135
 msgid "When enabled, shortcut badges are hidden in tooltip popups."
@@ -24646,8 +24646,8 @@ msgid "When they hit 88mph, they'll appear right here."
 msgstr "Wenn sie 88 mph erreichen, erscheinen sie genau hier."
 
 #: src/components/modals/tabs/chat_settings_tab/DisplayTab.tsx:73
-msgid "When uploaded directly to RdChat"
-msgstr "Wenn direkt zu RdChat hochgeladen"
+msgid "When uploaded directly to Fluxer"
+msgstr "Wenn direkt zu Fluxer hochgeladen"
 
 #: src/components/shared/ChannelPinsContent.tsx:158
 msgid "Whenever someone pins a message, it'll appear here."
@@ -24787,8 +24787,8 @@ msgid "You already have this connection."
 msgstr "Sie haben bereits diese Verbindung."
 
 #: src/components/modals/ExternalLinkWarningModal.tsx:74
-msgid "You are about to leave RdChat"
-msgstr "Du bist dabei, RdChat zu verlassen"
+msgid "You are about to leave Fluxer"
+msgstr "Du bist dabei, Fluxer zu verlassen"
 
 #. placeholder {0}: targetUser.username
 #: src/components/modals/TransferOwnershipModal.tsx:75
@@ -24812,8 +24812,8 @@ msgid "You are now a developer!"
 msgstr "Du bist jetzt Entwickler!"
 
 #: src/components/modals/components/plutonium/hooks/useCheckoutActions.tsx:107
-msgid "You are now navigating to Stripe to complete the payment. Return to RdChat once you've completed it!"
-msgstr "Du wirst jetzt zu Stripe weitergeleitet, um die Zahlung abzuschließen. Kehre zu RdChat zurück, sobald du fertig bist!"
+msgid "You are now navigating to Stripe to complete the payment. Return to Fluxer once you've completed it!"
+msgstr "Du wirst jetzt zu Stripe weitergeleitet, um die Zahlung abzuschließen. Kehre zu Fluxer zurück, sobald du fertig bist!"
 
 #. placeholder {0}: displayUser.username
 #. placeholder {0}: user.username
@@ -24848,8 +24848,8 @@ msgid "You can add comments before uploading. Hold shift to upload directly."
 msgstr "Du kannst vor dem Hochladen Kommentare hinzufügen. Halte Shift gedrückt, um direkt hochzuladen."
 
 #: src/components/channel/direct_message/AddFriendView.tsx:35
-msgid "You can add friends with their RdChatTag."
-msgstr "Du kannst Freunde mit ihrem RdChatTag hinzufügen."
+msgid "You can add friends with their FluxerTag."
+msgstr "Du kannst Freunde mit ihrem FluxerTag hinzufügen."
 
 #. placeholder {0}: modalLogic.maxSelections
 #: src/components/bottomsheets/CreateDMBottomSheet.tsx:109
@@ -25152,8 +25152,8 @@ msgid "You haven't created any packs yet."
 msgstr "Du hast noch keine Pakete erstellt."
 
 #: src/components/modals/KeyboardModeIntroModal.tsx:46
-msgid "You just pressed Tab. Keyboard Mode is now on so you can navigate RdChat without a mouse."
-msgstr "Du hast gerade Tab gedrückt. Der Tastaturmodus ist jetzt aktiviert, damit du RdChat ohne Maus navigieren kannst."
+msgid "You just pressed Tab. Keyboard Mode is now on so you can navigate Fluxer without a mouse."
+msgstr "Du hast gerade Tab gedrückt. Der Tastaturmodus ist jetzt aktiviert, damit du Fluxer ohne Maus navigieren kannst."
 
 #: src/utils/ExpressionPermissionUtils.tsx:111
 msgid "You lack permission to use external emojis in this channel"
@@ -25482,8 +25482,8 @@ msgid "Your current email <0>{0}</0> could not receive messages. Enter a differe
 msgstr "Ihre aktuelle E-Mail <0>{0}</0> konnte keine Nachrichten empfangen. Geben Sie eine andere E-Mail-Adresse ein, um fortzufahren."
 
 #: src/components/modals/RequiredActionModal.tsx:155
-msgid "Your current email address couldn't receive messages. Please update it to continue using RdChat."
-msgstr "Ihre aktuelle E-Mail-Adresse konnte keine Nachrichten empfangen. Bitte aktualisieren Sie sie, um RdChat weiterhin zu nutzen."
+msgid "Your current email address couldn't receive messages. Please update it to continue using Fluxer."
+msgstr "Ihre aktuelle E-Mail-Adresse konnte keine Nachrichten empfangen. Bitte aktualisieren Sie sie, um Fluxer weiterhin zu nutzen."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataExportTab.tsx:52
 msgid "Your data export will include all your user information, messages, and URLs to download any attachments."
@@ -25510,8 +25510,8 @@ msgid "Your export request will be processed"
 msgstr "Deine Exportanfrage wird bearbeitet"
 
 #: src/components/pages/report/ReportStepDetails.tsx:213
-msgid "Your RdChatTag (Optional)"
-msgstr "Dein RdChatTag (Optional)"
+msgid "Your FluxerTag (Optional)"
+msgstr "Dein FluxerTag (Optional)"
 
 #: src/components/channel/friends/views/FriendsList.tsx:87
 msgid "Your friends are currently stuck in another timeline"

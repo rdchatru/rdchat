@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Nevyzvednut�
 usernames_and_tags.username_invalid_characters: Uživatelské jméno může obsahovat jen latinku (a-z, A-Z), číslice (0-9) a podtržítka (_).
 usernames_and_tags.username_length_invalid: Uživatelské jméno musí mít mezi {min} a {max} znaky.
 usernames_and_tags.username_not_available: Tenhle uživatelský jméno není dostupné.
-usernames_and_tags.username_reserved_terms: Uživatelské jméno nesmí obsahovat "RdChat" ani "system message".
+usernames_and_tags.username_reserved_terms: Uživatelské jméno nesmí obsahovat "fluxer" ani "system message".
 usernames_and_tags.username_reserved_value: Uživatelské jméno nesmí být "everyone" ani "here".
 vanity_urls.vanity_url_already_taken: Tahle vanity URL už je zabraná.
 vanity_urls.vanity_url_code_already_taken: Tenhle kód vanity URL už je zabraný.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Kód vanity URL nesmí obsahovat "RdChat".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Kód vanity URL nesmí obsahovat "fluxer".
 vanity_urls.vanity_url_code_length_invalid: Kód vanity URL musí mít mezi {min} a {max} znaky.
 vanity_urls.vanity_url_invalid_characters: Vanity URL může obsahovat jen malá písmena (a-z), číslice (0-9) a spojovníky (-).
 webhooks.cannot_modify_system_webhook: Systémový webhook nelze upravovat.
