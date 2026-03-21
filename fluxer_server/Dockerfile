@@ -95,7 +95,7 @@ COPY fluxer_media_proxy/data/model.onnx ./fluxer_media_proxy/data/model.onnx
 
 RUN cd fluxer_server && pnpm typecheck
 
-FROM erlang:28-slim AS gateway-build
+FROM hexpm/erlang:28.4-debian-bookworm-20260223-slim AS gateway-build
 
 ARG LOGGER_LEVEL=info
 
