@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Nepatvirtint
 usernames_and_tags.username_invalid_characters: Naudotojo varde gali buti tik lotyniskos raides (a-z, A-Z), skaiciai (0-9) ir pabraukimas (_).
 usernames_and_tags.username_length_invalid: Naudotojo vardas turi būti nuo {min} iki {max} simbolių.
 usernames_and_tags.username_not_available: Šis naudotojo vardas nepasiekiamas.
-usernames_and_tags.username_reserved_terms: Naudotojo varde negali buti "fluxer" arba "system message".
+usernames_and_tags.username_reserved_terms: Naudotojo varde negali buti "RdChat" arba "system message".
 usernames_and_tags.username_reserved_value: Naudotojo vardas negali buti "everyone" arba "here".
 vanity_urls.vanity_url_already_taken: Sis vanity URL jau uzimtas.
 vanity_urls.vanity_url_code_already_taken: Sis vanity URL kodas jau uzimtas.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL kode negali buti "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL kode negali buti "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Vanity URL kodas turi būti nuo {min} iki {max} simbolių.
 vanity_urls.vanity_url_invalid_characters: Vanity URL gali tureti tik mazasias raides (a-z), skaitmenis (0-9) ir bruksnelius (-).
 webhooks.cannot_modify_system_webhook: Negali keisti sistemos webhooko.

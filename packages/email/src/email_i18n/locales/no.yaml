@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Din Fluxer-konto er midlertidig deaktivert
+  subject: Din RdChat-konto er midlertidig deaktivert
   body: |-
     Hei {username},
 
-    Vi har midlertidig deaktivert Fluxer-kontoen din fordi vi har registrert mistenkelig aktivitet.
+    Vi har midlertidig deaktivert RdChat-kontoen din fordi vi har registrert mistenkelig aktivitet.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Hvis du mener at dette er en feil, ta kontakt med support.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 account_scheduled_deletion:
-  subject: Din Fluxer-konto blir slettet
+  subject: Din RdChat-konto blir slettet
   body: |-
     Hei {username},
 
-    Fluxer-kontoen din er planlagt slettet permanent fordi du har brutt vilkårene våre eller fellesskapsreglene våre.
+    RdChat-kontoen din er planlagt slettet permanent fordi du har brutt vilkårene våre eller fellesskapsreglene våre.
 
     Planlagt sletting: {deletionDate, date, full} kl. {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Fellesskapsregler: {guidelinesUrl}
 
     Slik klager du:
-    Hvis du mener at denne avgjørelsen er feil eller urimelig, kan du klage innen 60 dager. Send en e-post til appeals@fluxer.app, og den må sendes fra denne e-postadressen.
+    Hvis du mener at denne avgjørelsen er feil eller urimelig, kan du klage innen 60 dager. Send en e-post til appeals@RdChat.app, og den må sendes fra denne e-postadressen.
 
     I klagen din bør du:
     - Forklare tydelig hvorfor du mener at avgjørelsen er feil eller urimelig.
     - Legge ved relevant dokumentasjon eller ekstra kontekst, hvis mulig.
 
-    Et medlem av Fluxer-sikkerhetsteamet går gjennom klagen din og kan sette den planlagte slettingen på pause til det er tatt en endelig avgjørelse.
+    Et medlem av RdChat-sikkerhetsteamet går gjennom klagen din og kan sette den planlagte slettingen på pause til det er tatt en endelig avgjørelse.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 account_temp_banned:
-  subject: Din Fluxer-konto er midlertidig suspendert
+  subject: Din RdChat-konto er midlertidig suspendert
   body: |-
     Hei {username},
 
-    Fluxer-kontoen din er midlertidig suspendert fordi du har brutt vilkårene våre eller fellesskapsreglene våre.
+    RdChat-kontoen din er midlertidig suspendert fordi du har brutt vilkårene våre eller fellesskapsreglene våre.
 
     Varighet: {durationHours, plural,
       =1 {1 time}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Vilkår for bruk: {termsUrl}
     - Fellesskapsregler: {guidelinesUrl}
 
-    Hvis du mener at denne avgjørelsen er feil eller urimelig, kan du sende inn en klage til appeals@fluxer.app. Klagen må sendes fra denne e-postadressen. Forklar tydelig hvorfor du mener at avgjørelsen er feil. Vi går gjennom klagen og svarer med avgjørelsen vår.
+    Hvis du mener at denne avgjørelsen er feil eller urimelig, kan du sende inn en klage til appeals@RdChat.app. Klagen må sendes fra denne e-postadressen. Forklar tydelig hvorfor du mener at avgjørelsen er feil. Vi går gjennom klagen og svarer med avgjørelsen vår.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 donation_confirmation:
-  subject: Takk for donasjonen din til Fluxer
+  subject: Takk for donasjonen din til RdChat
   body: |-
     Hei,
 
-    Takk for donasjonen din til Fluxer! {interval, select,
+    Takk for donasjonen din til RdChat! {interval, select,
       month {Den gjentakende donasjonen din}
       year {Den gjentakende donasjonen din}
       other {Engangsdonasjonen din}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Støtten din bidrar til å holde Fluxer i gang. Takk!
+    Støtten din bidrar til å holde RdChat i gang. Takk!
 
-    – Fluxer-teamet
+    – RdChat-teamet
 donation_magic_link:
-  subject: Administrer donasjonene dine til Fluxer
+  subject: Administrer donasjonene dine til RdChat
   body: |-
     Hei,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Hvis du ikke ba om denne lenken, kan du trygt se bort fra denne e-posten.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 dsa_report_verification:
   subject: Bekreft e-postadressen din for en DSA-rapport
   body: |-
     Hei,
 
-    Bruk koden nedenfor for å sende inn rapporten din etter Digital Services Act (DSA) hos Fluxer:
+    Bruk koden nedenfor for å sende inn rapporten din etter Digital Services Act (DSA) hos RdChat:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Hvis du ikke ba om dette, kan du se bort fra denne e-posten.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 email_change_new:
-  subject: Bekreft den nye Fluxer-e-postadressen din
+  subject: Bekreft den nye RdChat-e-postadressen din
   body: |-
     Hei {username},
 
-    Skriv inn koden i appen for å bekrefte den nye Fluxer-e-postadressen din:
+    Skriv inn koden i appen for å bekrefte den nye RdChat-e-postadressen din:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Hvis du ikke ba om dette, kan du se bort fra denne e-posten.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 email_change_original:
-  subject: Bekreft endring av e-postadresse på Fluxer-kontoen din
+  subject: Bekreft endring av e-postadresse på RdChat-kontoen din
   body: |-
     Hei {username},
 
-    Vi har mottatt en forespørsel om å endre e-postadressen på Fluxer-kontoen din.
+    Vi har mottatt en forespørsel om å endre e-postadressen på RdChat-kontoen din.
 
     For å bekrefte endringen, skriv inn koden i appen:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Hvis du ikke ba om dette, bør du sikre kontoen din med en gang.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 email_change_revert:
-  subject: E-postadressen til Fluxer-kontoen din ble endret
+  subject: E-postadressen til RdChat-kontoen din ble endret
   body: |-
     Hei {username},
 
-    E-postadressen til Fluxer-kontoen din ble endret til {newEmail}.
+    E-postadressen til RdChat-kontoen din ble endret til {newEmail}.
 
     Hvis det var deg, trenger du ikke å gjøre noe. Hvis ikke, kan du angre endringen og sikre kontoen din via denne lenken:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Dette gjenoppretter den forrige e-postadressen din, logger deg ut overalt, fjerner tilknyttede telefonnumre, deaktiverer tofaktorautentisering og krever at du setter et nytt passord.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 email_verification:
-  subject: Bekreft e-postadressen din på Fluxer
+  subject: Bekreft e-postadressen din på RdChat
   body: |-
     Hei {username},
 
-    Bekreft e-postadressen til Fluxer-kontoen din ved å klikke på lenken nedenfor:
+    Bekreft e-postadressen til RdChat-kontoen din ved å klikke på lenken nedenfor:
 
     {verifyUrl}
 
-    Hvis du ikke har opprettet en Fluxer-konto, kan du trygt se bort fra denne e-posten.
+    Hvis du ikke har opprettet en RdChat-konto, kan du trygt se bort fra denne e-posten.
 
     Lenken er gyldig i 24 timer.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 gift_chargeback_notification:
   subject: Fordelene fra den innløste gaven din er fjernet
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Hvis du mener at dette er en feil, ta kontakt med support og ta med alle opplysninger du har om gavekoden og tidspunktet for innløsningen.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 harvest_completed:
-  subject: Fluxer-dataeksporten din er klar til nedlasting
+  subject: RdChat-dataeksporten din er klar til nedlasting
   body: |-
     Hei {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Hvis du ikke ba om denne eksporten, bør du endre passordet ditt med en gang og ta kontakt med support.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 inactivity_warning:
-  subject: Din Fluxer-konto blir slettet på grunn av inaktivitet
+  subject: Din RdChat-konto blir slettet på grunn av inaktivitet
   body: |-
     Hei {username},
 
-    Vi har ikke registrert noen aktivitet på Fluxer-kontoen din siden {lastActiveDate, date, full}.
+    Vi har ikke registrert noen aktivitet på RdChat-kontoen din siden {lastActiveDate, date, full}.
 
     Hvis du ikke logger inn senest den {deletionDate, date, full} kl. {deletionDate, time, short}, blir kontoen din slettet permanent på grunn av inaktivitet.
 
     Logg inn her:
     {loginUrl}
 
-    Hvis du har brukt Fluxer nylig, bør du ta kontakt med support med en gang.
+    Hvis du har brukt RdChat nylig, bør du ta kontakt med support med en gang.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 ip_authorization:
   subject: Godkjenn innlogging fra en ny IP-adresse
   body: |-
     Hei {username},
 
-    Vi har registrert et innloggingsforsøk på Fluxer-kontoen din fra en ny IP-adresse:
+    Vi har registrert et innloggingsforsøk på RdChat-kontoen din fra en ny IP-adresse:
 
     IP-adresse: {ipAddress}
     Sted: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Lenken er gyldig i 30 minutter.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 password_change_verification:
-  subject: Bekreft endring av Fluxer-passord
+  subject: Bekreft endring av RdChat-passord
   body: |-
     Hei {username},
 
-    Vi har mottatt en forespørsel om å endre passordet på Fluxer-kontoen din.
+    Vi har mottatt en forespørsel om å endre passordet på RdChat-kontoen din.
 
     For å bekrefte endringen, skriv inn koden i appen:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Hvis du ikke ba om dette, kan det hende at noen har fått tilgang til kontoen din. Endre passordet ditt med en gang og aktiver tofaktorautentisering.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 password_reset:
-  subject: Tilbakestill Fluxer-passordet ditt
+  subject: Tilbakestill RdChat-passordet ditt
   body: |-
     Hei {username},
 
-    Vi har mottatt en forespørsel om å tilbakestille Fluxer-passordet ditt. Bruk lenken nedenfor for å velge et nytt passord:
+    Vi har mottatt en forespørsel om å tilbakestille RdChat-passordet ditt. Bruk lenken nedenfor for å velge et nytt passord:
 
     {resetUrl}
 
@@ -292,41 +292,41 @@ password_reset:
 
     Lenken er gyldig i 1 time.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 registration_approved:
-  subject: Registreringen din på Fluxer er godkjent
+  subject: Registreringen din på RdChat er godkjent
   body: |-
     Hei {username},
 
-    Gode nyheter: registreringen din på Fluxer er godkjent.
+    Gode nyheter: registreringen din på RdChat er godkjent.
 
-    Du kan nå logge inn i Fluxer-appen her:
+    Du kan nå logge inn i RdChat-appen her:
     {channelsUrl}
 
-    Velkommen til Fluxer-fellesskapet.
+    Velkommen til RdChat-fellesskapet.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 report_resolved:
-  subject: Rapporten din på Fluxer er gjennomgått
+  subject: Rapporten din på RdChat er gjennomgått
   body: |-
     Hei {username},
 
-    Rapporten din (ID: {reportId}) er gjennomgått av Fluxer-sikkerhetsteamet.
+    Rapporten din (ID: {reportId}) er gjennomgått av RdChat-sikkerhetsteamet.
 
     Svar fra sikkerhetsteamet:
     {publicComment}
 
-    Takk for at du bidrar til å holde Fluxer trygt for alle. Vi tar alle rapporter på alvor og setter pris på at du sier ifra.
+    Takk for at du bidrar til å holde RdChat trygt for alle. Vi tar alle rapporter på alvor og setter pris på at du sier ifra.
 
-    Hvis du har spørsmål eller innvendinger til utfallet, kan du kontakte safety@fluxer.app.
+    Hvis du har spørsmål eller innvendinger til utfallet, kan du kontakte safety@RdChat.app.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 scheduled_deletion_notification:
-  subject: Din Fluxer-konto blir slettet
+  subject: Din RdChat-konto blir slettet
   body: |-
     Hei {username},
 
-    Fluxer-kontoen din er planlagt slettet permanent.
+    RdChat-kontoen din er planlagt slettet permanent.
 
     Planlagt sletting: {deletionDate, date, full} kl. {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     Dette er et alvorlig tiltak. Kontodataene dine blir slettet permanent på den planlagte datoen.
 
-    Hvis du mener at denne avgjørelsen er feil, kan du sende inn en klage til appeals@fluxer.app. Klagen må sendes fra denne e-postadressen.
+    Hvis du mener at denne avgjørelsen er feil, kan du sende inn en klage til appeals@RdChat.app. Klagen må sendes fra denne e-postadressen.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet
 self_deletion_scheduled:
-  subject: Sletting av Fluxer-kontoen din er planlagt
+  subject: Sletting av RdChat-kontoen din er planlagt
   body: |-
     Hei {username},
 
-    Du har bedt om å slette Fluxer-kontoen din. Kontoen din blir slettet permanent den:
+    Du har bedt om å slette RdChat-kontoen din. Kontoen din blir slettet permanent den:
 
     {deletionDate, date, full} kl. {deletionDate, time, short}
 
     Hvis du ikke ba om dette, kan du logge inn på kontoen din for å avbryte slettingen. Vi anbefaler også at du endrer passordet ditt for å sikre kontoen din.
 
-    – Fluxer-teamet
+    – RdChat-teamet
 unban_notification:
-  subject: Suspensjonen av Fluxer-kontoen din er opphevet
+  subject: Suspensjonen av RdChat-kontoen din er opphevet
   body: |-
     Hei {username},
 
-    Gode nyheter: suspensjonen av Fluxer-kontoen din er opphevet.
+    Gode nyheter: suspensjonen av RdChat-kontoen din er opphevet.
 
     {reason, select,
       null {}
       other {Årsak: {reason}}
     }
 
-    Du kan nå logge inn igjen og fortsette å bruke Fluxer som normalt.
+    Du kan nå logge inn igjen og fortsette å bruke RdChat som normalt.
 
-    – Fluxer-sikkerhetsteamet
+    – RdChat-sikkerhetsteamet

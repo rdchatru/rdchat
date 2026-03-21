@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Tavo Fluxer paskyra laikinai išjungta
+  subject: Tavo RdChat paskyra laikinai išjungta
   body: |-
     Labas, {username},
 
-    Tavo Fluxer paskyra laikinai išjungta, nes užfiksavome įtartiną veiklą.
+    Tavo RdChat paskyra laikinai išjungta, nes užfiksavome įtartiną veiklą.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Jei manai, kad tai įvyko per klaidą, susisiek su mūsų pagalbos komanda.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 account_scheduled_deletion:
-  subject: Tavo Fluxer paskyra bus ištrinta
+  subject: Tavo RdChat paskyra bus ištrinta
   body: |-
     Labas, {username},
 
-    Tavo Fluxer paskyros ištrynimas visam laikui buvo suplanuotas, nes pažeidei mūsų paslaugų teikimo sąlygas arba bendruomenės gaires.
+    Tavo RdChat paskyros ištrynimas visam laikui buvo suplanuotas, nes pažeidei mūsų paslaugų teikimo sąlygas arba bendruomenės gaires.
 
     Numatyta ištrynimo data: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - Bendruomenės gaires: {guidelinesUrl}
 
     Apeliacija:
-    Jei manai, kad šis sprendimas neteisingas arba nepagrįstas, per 60 dienų gali pateikti apeliaciją el. paštu appeals@fluxer.app, ir tai turi būti padaryta iš šio el. pašto adreso.
+    Jei manai, kad šis sprendimas neteisingas arba nepagrįstas, per 60 dienų gali pateikti apeliaciją el. paštu appeals@RdChat.app, ir tai turi būti padaryta iš šio el. pašto adreso.
 
     Apeliacijoje:
     - Aiškiai paaiškink, kodėl manai, kad sprendimas neteisingas arba nepagrįstas
     - Jei įmanoma, pateik susijusius įrodymus ar papildomą kontekstą
 
-    Fluxer saugumo komandos narys peržiūrės tavo apeliaciją ir gali sustabdyti planuojamą ištrynimą, kol bus priimtas galutinis sprendimas.
+    RdChat saugumo komandos narys peržiūrės tavo apeliaciją ir gali sustabdyti planuojamą ištrynimą, kol bus priimtas galutinis sprendimas.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 account_temp_banned:
-  subject: Tavo Fluxer paskyra laikinai sustabdyta
+  subject: Tavo RdChat paskyra laikinai sustabdyta
   body: |-
     Labas, {username},
 
-    Tavo Fluxer paskyra laikinai sustabdyta, nes pažeidei mūsų paslaugų teikimo sąlygas arba bendruomenės gaires.
+    Tavo RdChat paskyra laikinai sustabdyta, nes pažeidei mūsų paslaugų teikimo sąlygas arba bendruomenės gaires.
 
     Trukmė: {durationHours, plural,
       =1 {1 valanda}
@@ -73,15 +73,15 @@ account_temp_banned:
     - Paslaugų teikimo sąlygas: {termsUrl}
     - Bendruomenės gaires: {guidelinesUrl}
 
-    Jei manai, kad šis sprendimas neteisingas arba nepagrįstas, gali pateikti apeliaciją el. paštu appeals@fluxer.app, ir tai turi būti padaryta iš šio el. pašto adreso. Aiškiai paaiškink, kodėl manai, kad sprendimas klaidingas. Apeliaciją peržiūrėsime ir informuosime apie galutinį sprendimą.
+    Jei manai, kad šis sprendimas neteisingas arba nepagrįstas, gali pateikti apeliaciją el. paštu appeals@RdChat.app, ir tai turi būti padaryta iš šio el. pašto adreso. Aiškiai paaiškink, kodėl manai, kad sprendimas klaidingas. Apeliaciją peržiūrėsime ir informuosime apie galutinį sprendimą.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 donation_confirmation:
-  subject: Ačiū už jūsų auką Fluxer
+  subject: Ačiū už jūsų auką RdChat
   body: |-
     Sveikas,
 
-    Ačiū už jūsų auką Fluxer! Jūsų {interval, select,
+    Ačiū už jūsų auką RdChat! Jūsų {interval, select,
       month {pasikartojanti auka}
       year {pasikartojanti auka}
       other {vienkartinė auka}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Jūsų parama padeda Fluxer veikti. Ačiū!
+    Jūsų parama padeda RdChat veikti. Ačiū!
 
-    – Fluxer komanda
+    – RdChat komanda
 donation_magic_link:
-  subject: Tvarkyk savo Fluxer aukas
+  subject: Tvarkyk savo RdChat aukas
   body: |-
     Labas,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Jei to neprašei, gali ramiai ignoruoti šį laišką.
 
-    – Fluxer komanda
+    – RdChat komanda
 dsa_report_verification:
   subject: Patvirtink el. paštą DSA pranešimui
   body: |-
     Labas,
 
-    Naudok žemiau pateiktą kodą, kad pateiktum pranešimą pagal Skaitmeninių paslaugų aktą (DSA) per Fluxer:
+    Naudok žemiau pateiktą kodą, kad pateiktum pranešimą pagal Skaitmeninių paslaugų aktą (DSA) per RdChat:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Jei to neprašei, gali ignoruoti šį laišką.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 email_change_new:
-  subject: Patvirtink naują Fluxer el. pašto adresą
+  subject: Patvirtink naują RdChat el. pašto adresą
   body: |-
     Labas, {username},
 
-    Įvesk šį kodą programėlėje, kad patvirtintum naują Fluxer el. pašto adresą:
+    Įvesk šį kodą programėlėje, kad patvirtintum naują RdChat el. pašto adresą:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Jei to neprašei, gali ignoruoti šį laišką.
 
-    – Fluxer komanda
+    – RdChat komanda
 email_change_original:
-  subject: Patvirtink Fluxer el. pašto adreso pakeitimą
+  subject: Patvirtink RdChat el. pašto adreso pakeitimą
   body: |-
     Labas, {username},
 
-    Gavome prašymą pakeisti el. pašto adresą tavo Fluxer paskyroje.
+    Gavome prašymą pakeisti el. pašto adresą tavo RdChat paskyroje.
 
     Kad patvirtintum pakeitimą, įvesk šį kodą programėlėje:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Jei to neprašei, nedelsdamas pasirūpink savo paskyros saugumu.
 
-    – Fluxer komanda
+    – RdChat komanda
 email_change_revert:
-  subject: Pakeistas tavo Fluxer el. pašto adresas
+  subject: Pakeistas tavo RdChat el. pašto adresas
   body: |-
     Labas, {username},
 
-    Tavo Fluxer paskyros el. pašto adresas buvo pakeistas į {newEmail}.
+    Tavo RdChat paskyros el. pašto adresas buvo pakeistas į {newEmail}.
 
     Jei tai darei tu, nieko daryti nereikia. Jei ne, gali atšaukti pakeitimą ir apsaugoti paskyrą paspaudęs šią nuorodą:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Tai atkurs ankstesnį el. pašto adresą, atjungs tave visuose įrenginiuose, pašalins susietus telefono numerius, išjungs MFA ir pareikalaus nustatyti naują slaptažodį.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 email_verification:
-  subject: Patvirtink savo Fluxer el. pašto adresą
+  subject: Patvirtink savo RdChat el. pašto adresą
   body: |-
     Labas, {username},
 
-    Patvirtink el. pašto adresą savo Fluxer paskyrai paspaudęs žemiau esančią nuorodą:
+    Patvirtink el. pašto adresą savo RdChat paskyrai paspaudęs žemiau esančią nuorodą:
 
     {verifyUrl}
 
-    Jei Fluxer paskyros nekūrei, gali ramiai ignoruoti šį laišką.
+    Jei RdChat paskyros nekūrei, gali ramiai ignoruoti šį laišką.
 
     Nuoroda galioja 24 valandas.
 
-    – Fluxer komanda
+    – RdChat komanda
 gift_chargeback_notification:
   subject: Pašalinti privalumai iš tavo panaudotos dovanos
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Jei manai, kad tai klaida, susisiek su mūsų pagalbos komanda ir pateik visą informaciją, kurią turi apie dovanos kodą ir jo panaudojimo laiką.
 
-    – Fluxer komanda
+    – RdChat komanda
 harvest_completed:
-  subject: Tavo Fluxer duomenų eksportas paruoštas atsisiųsti
+  subject: Tavo RdChat duomenų eksportas paruoštas atsisiųsti
   body: |-
     Labas, {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Jei šio eksporto neprašei, nedelsdamas pakeisk slaptažodį ir susisiek su mūsų pagalbos komanda.
 
-    – Fluxer komanda
+    – RdChat komanda
 inactivity_warning:
-  subject: Tavo Fluxer paskyra bus ištrinta dėl neaktyvumo
+  subject: Tavo RdChat paskyra bus ištrinta dėl neaktyvumo
   body: |-
     Labas, {username},
 
-    Nuo {lastActiveDate, date, full} nematėme jokios veiklos tavo Fluxer paskyroje.
+    Nuo {lastActiveDate, date, full} nematėme jokios veiklos tavo RdChat paskyroje.
 
     Jei neprisijungsi iki {deletionDate, date, full} {deletionDate, time, short}, tavo paskyra bus negrįžtamai ištrinta dėl neaktyvumo.
 
     Prisijunk čia:
     {loginUrl}
 
-    Jei Fluxer naudojaisi neseniai, nedelsdamas susisiek su mūsų pagalbos komanda.
+    Jei RdChat naudojaisi neseniai, nedelsdamas susisiek su mūsų pagalbos komanda.
 
-    – Fluxer komanda
+    – RdChat komanda
 ip_authorization:
   subject: Patvirtink prisijungimą iš naujo IP adreso
   body: |-
     Labas, {username},
 
-    Užfiksavome bandymą prisijungti prie tavo Fluxer paskyros iš naujo IP adreso:
+    Užfiksavome bandymą prisijungti prie tavo RdChat paskyros iš naujo IP adreso:
 
     IP adresas: {ipAddress}
     Vieta: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Ši patvirtinimo nuoroda galioja 30 minučių.
 
-    – Fluxer komanda
+    – RdChat komanda
 password_change_verification:
-  subject: Patvirtink savo Fluxer slaptažodžio pakeitimą
+  subject: Patvirtink savo RdChat slaptažodžio pakeitimą
   body: |-
     Labas, {username},
 
-    Gavome prašymą pakeisti slaptažodį tavo Fluxer paskyroje.
+    Gavome prašymą pakeisti slaptažodį tavo RdChat paskyroje.
 
     Kad patvirtintum šį pakeitimą, įvesk šį kodą programėlėje:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Jei to neprašei, gali būti, kad kas norsturi prieigą prie tavo paskyros. Nedelsdamas pakeisk slaptažodį ir įjunk dviejų veiksnių autentifikaciją.
 
-    – Fluxer komanda
+    – RdChat komanda
 password_reset:
-  subject: Nustatyk iš naujo Fluxer slaptažodį
+  subject: Nustatyk iš naujo RdChat slaptažodį
   body: |-
     Labas, {username},
 
-    Gavome prašymą nustatyti iš naujo tavo Fluxer slaptažodį. Paspausk žemiau esančią nuorodą ir nustatyk naują slaptažodį:
+    Gavome prašymą nustatyti iš naujo tavo RdChat slaptažodį. Paspausk žemiau esančią nuorodą ir nustatyk naują slaptažodį:
 
     {resetUrl}
 
@@ -292,20 +292,20 @@ password_reset:
 
     Ši nuoroda galioja 1 valandą.
 
-    – Fluxer komanda
+    – RdChat komanda
 registration_approved:
-  subject: Tavo Fluxer registracija patvirtinta
+  subject: Tavo RdChat registracija patvirtinta
   body: |-
     Labas, {username},
 
-    Gera žinia: tavo Fluxer registracija patvirtinta.
+    Gera žinia: tavo RdChat registracija patvirtinta.
 
-    Dabar gali prisijungti prie Fluxer programėlės čia:
+    Dabar gali prisijungti prie RdChat programėlės čia:
     {channelsUrl}
 
-    Sveikas atvykęs į Fluxer bendruomenę.
+    Sveikas atvykęs į RdChat bendruomenę.
 
-    – Fluxer komanda
+    – RdChat komanda
 report_resolved:
   subject: Tavo pranešimas peržiūrėtas
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Saugumo komandos atsakymas:
     {publicComment}
 
-    Ačiū, kad padedi Fluxer išlikti saugiam visiems. Į visus pranešimus žiūrime rimtai ir vertiname tavo indėlį į bendruomenę.
+    Ačiū, kad padedi RdChat išlikti saugiam visiems. Į visus pranešimus žiūrime rimtai ir vertiname tavo indėlį į bendruomenę.
 
-    Jei turi klausimų ar abejonių dėl šio sprendimo, parašyk safety@fluxer.app.
+    Jei turi klausimų ar abejonių dėl šio sprendimo, parašyk safety@RdChat.app.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 scheduled_deletion_notification:
-  subject: Tavo Fluxer paskyra bus ištrinta
+  subject: Tavo RdChat paskyra bus ištrinta
   body: |-
     Labas, {username},
 
-    Tavo Fluxer paskyros ištrynimas visam laikui buvo suplanuotas.
+    Tavo RdChat paskyros ištrynimas visam laikui buvo suplanuotas.
 
     Numatyta ištrynimo data: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     Tai rimta priemonė. Tavo paskyros duomenys bus negrįžtamai ištrinti nurodytą dieną.
 
-    Jei manai, kad šis sprendimas neteisingas, gali pateikti apeliaciją el. paštu appeals@fluxer.app, ir tai turi būti padaryta iš šio el. pašto adreso.
+    Jei manai, kad šis sprendimas neteisingas, gali pateikti apeliaciją el. paštu appeals@RdChat.app, ir tai turi būti padaryta iš šio el. pašto adreso.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda
 self_deletion_scheduled:
-  subject: Suplanuotas tavo Fluxer paskyros ištrynimas
+  subject: Suplanuotas tavo RdChat paskyros ištrynimas
   body: |-
     Labas, {username},
 
-    Paprašei ištrinti savo Fluxer paskyrą. Tavo paskyra bus negrįžtamai ištrinta:
+    Paprašei ištrinti savo RdChat paskyrą. Tavo paskyra bus negrįžtamai ištrinta:
 
     {deletionDate, date, full} {deletionDate, time, short}
 
     Jei to neprašei, prisijunk prie savo paskyros, kad atšauktum ištrynimą. Taip pat rekomenduojame pakeisti slaptažodį, kad apsaugotum paskyrą.
 
-    – Fluxer komanda
+    – RdChat komanda
 unban_notification:
-  subject: Tavo Fluxer paskyros sustabdymas panaikintas
+  subject: Tavo RdChat paskyros sustabdymas panaikintas
   body: |-
     Labas, {username},
 
-    Gera žinia: tavo Fluxer paskyros sustabdymas panaikintas.
+    Gera žinia: tavo RdChat paskyros sustabdymas panaikintas.
 
     {reason, select,
       null {}
       other {Priežastis: {reason}}
     }
 
-    Dabar gali vėl prisijungti prie paskyros ir toliau naudotis Fluxer kaip įprastai.
+    Dabar gali vėl prisijungti prie paskyros ir toliau naudotis RdChat kaip įprastai.
 
-    – Fluxer saugumo komanda
+    – RdChat saugumo komanda

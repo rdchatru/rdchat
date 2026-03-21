@@ -2,7 +2,7 @@ app.communities.community: Közösség
 app.communities.community_support: Közösségi támogatás
 app.communities.featured_in_discovery: Kiemelt a felfedezésben
 app.communities.moderation.actions_and_tools: Moderációs műveletek és eszközök
-app.communities.moderation.report_people_or_communities: Jelents embereket vagy közösségeket, hogy a Fluxer biztonságos maradjon mindenkinek.
+app.communities.moderation.report_people_or_communities: Jelents embereket vagy közösségeket, hogy a RdChat biztonságos maradjon mindenkinek.
 app.communities.moderation.tools: Moderációs eszközök
 app.communities.roles_permissions_audit.audit_logs: Audit naplók az átláthatóságért
 app.communities.roles_permissions_audit.granular_roles_and_permissions: Részletes szerepkörök és jogosultságok
@@ -19,7 +19,7 @@ app.customization.custom_css_themes: Egyedi CSS témák
 app.customization.custom_sounds.entrance_sounds: Egyedi belépőhangok
 app.customization.custom_sounds.notification_sounds: Egyedi értesítési hangok
 app.customization.custom_sounds.set_personalized_join_sounds: Állíts be személyre szabott hangokat, amikor belépsz hangcsatornákba, hogy mindenki tudja, hogy megérkeztél.
-app.customization.custom_sounds.upload_custom_notification_sounds: Töltsd fel és használd a saját értesítési hangjaidat, hogy személyre szabd a Fluxer élményt.
+app.customization.custom_sounds.upload_custom_notification_sounds: Töltsd fel és használd a saját értesítési hangjaidat, hogy személyre szabd a RdChat élményt.
 app.customization.custom_themes: Egyedi témák
 app.customization.global_emoji_and_sticker_access: Globális emoji- és matricahozzáférés
 app.customization.saved_media_and_css: Adj hozzá egyedi emojikat, ments médiát későbbre, és formázd az appot egyedi CSS-sel.
@@ -40,7 +40,7 @@ app.messaging.features.search.label: Üzenetelőzmények keresése
 app.messaging.features.search.quick_switcher_shortcuts: Gyorsváltó billentyűparancsokkal
 app.messaging.features.search.search_and_quick_switcher: Keresés és gyorsváltó
 app.messaging.title: Üzenetküldés
-app.open.open_fluxer: Fluxer megnyitása
+app.open.open_fluxer: RdChat megnyitása
 app.open.open_web_app: Webapp megnyitása
 app.profiles_identity.custom_identity: Egyedi identitás
 app.profiles_identity.customise_per_community: Szabd testre a profilod másképp minden közösségben, aminek a része vagy.
@@ -62,18 +62,18 @@ beta_and_access.early_access.label: Korai hozzáférés
 beta_and_access.featured_benefit_line: Minden alap, amit elvársz, plusz pár dolog, amire nem számítanál.
 beta_and_access.public_beta: Nyilvános béta
 beta_and_access.registration_limited_during_beta: A béta alatt korlátozzuk a regisztrációkat. Ha bejutottál, adhatsz a barátaidnak egy kódot, amivel átugorhatják a sort.
-beta_and_access.try_without_email: Próbáld ki a Fluxert email nélkül 30 másodperc alatt
-community_funding_and_roles.focused_on_product: Most arra koncentrálunk, hogy szállítsunk egy szuper terméket, és hogy a Fluxer független maradjon, saját erőből.
+beta_and_access.try_without_email: Próbáld ki a RdChatt email nélkül 30 másodperc alatt
+community_funding_and_roles.focused_on_product: Most arra koncentrálunk, hogy szállítsunk egy szuper terméket, és hogy a RdChat független maradjon, saját erőből.
 community_funding_and_roles.future_paid_roles_heading: A fizetett szerepkörök jövője
-community_funding_and_roles.future_paid_roles_note: Még építjük a Fluxer körüli üzleti modellt, és még nem állunk készen a fizetett szerepkörökre.
-community_funding_and_roles.non_paid_recurring_role: Egy nem fizetett szerepkör rendszeres közreműködőknek, akik a core csapattal együtt formálják a Fluxert.
+community_funding_and_roles.future_paid_roles_note: Még építjük a RdChat körüli üzleti modellt, és még nem állunk készen a fizetett szerepkörökre.
+community_funding_and_roles.non_paid_recurring_role: Egy nem fizetett szerepkör rendszeres közreműködőknek, akik a core csapattal együtt formálják a RdChatt.
 community_funding_and_roles.sustainability_note: A támogatásoddal reméljük, hogy fenntarthatóvá tesszük ezt a független kommunikációs platformot, és később fizetett szerepköröket is tudunk majd kínálni.
 company_and_resources.blog: Blog
-company_and_resources.careers.careers_at_fluxer: Karrier a Fluxernél
+company_and_resources.careers.careers_at_fluxer: Karrier a RdChatnél
 company_and_resources.careers.label: Karrier
-company_and_resources.careers.share_a_bit_about_yourself: 'Írj pár szót magadról és arról, hogyan szeretnél hozzájárulni – email: careers@fluxer.app'
-company_and_resources.community_team.fluxer_community_team: Fluxer közösségi csapat
-company_and_resources.community_team.share_feedback_report_bugs: Oszd meg a visszajelzésed, jelents hibákat, és segíts, hogy a Fluxer mindenki számára barátságos legyen.
+company_and_resources.careers.share_a_bit_about_yourself: 'Írj pár szót magadról és arról, hogyan szeretnél hozzájárulni – email: careers@RdChat.app'
+company_and_resources.community_team.fluxer_community_team: RdChat közösségi csapat
+company_and_resources.community_team.share_feedback_report_bugs: Oszd meg a visszajelzésed, jelents hibákat, és segíts, hogy a RdChat mindenki számára barátságos legyen.
 company_and_resources.company: Cég
 company_and_resources.company_info: Céginfó
 company_and_resources.connect: Kapcsolat
@@ -89,31 +89,31 @@ company_and_resources.source_and_contribution.code_issues_docs_reviews: Kód, is
 company_and_resources.source_and_contribution.contribute_code: Kód hozzájárulása
 company_and_resources.source_and_contribution.contribute_on_github: Hozzájárulás GitHubon
 company_and_resources.source_and_contribution.fix_bugs_ship_features: Javíts hibákat, szállíts funkciókat, vagy csiszold az élményt a fő repónkban.
-company_and_resources.source_and_contribution.fluxer_built_in_open: A Fluxer nyíltan készül. Válaszd azt az utat, ami neked a legjobban fekszik.
+company_and_resources.source_and_contribution.fluxer_built_in_open: A RdChat nyíltan készül. Válaszd azt az utat, ami neked a legjobban fekszik.
 company_and_resources.source_and_contribution.get_involved: Kapcsolódj be
 company_and_resources.source_and_contribution.source_code: Forráskód
-company_and_resources.source_and_contribution.translation.help_translate: Segíts lefordítani a Fluxert és a dokumentációt, hogy mindenhol igazán natívnak hasson.
+company_and_resources.source_and_contribution.translation.help_translate: Segíts lefordítani a RdChatt és a dokumentációt, hogy mindenhol igazán natívnak hasson.
 company_and_resources.source_and_contribution.translation.label: Fordítás és lokalizáció
-company_and_resources.source_and_contribution.translation.llm_translation_note: Minden fordítás jelenleg LLM-mel készült, minimális emberi átnézéssel. Szeretnénk, ha valódi emberek segítenének a Fluxer lokalizálásában a nyelvedre. Írj az i18n@fluxer.app címre, és örömmel fogadjuk a hozzájárulásod.
+company_and_resources.source_and_contribution.translation.llm_translation_note: Minden fordítás jelenleg LLM-mel készült, minimális emberi átnézéssel. Szeretnénk, ha valódi emberek segítenének a RdChat lokalizálásában a nyelvedre. Írj az i18n@RdChat.app címre, és örömmel fogadjuk a hozzájárulásod.
 company_and_resources.source_and_contribution.translation.localization_label: Lokalizáció
 company_and_resources.source_and_contribution.view_repository: Repo megtekintése
-company_and_resources.source_and_contribution.want_to_help_build_fluxer: Beszállnál a Fluxer építésébe?
+company_and_resources.source_and_contribution.want_to_help_build_fluxer: Beszállnál a RdChat építésébe?
 company_and_resources.source_and_contribution.ways_to_contribute: Hogyan tudsz segíteni
 donations.business: Vállalkozás
 donations.donate.action: Adományozz
-donations.donate.label: Adományozz a Fluxernek
-donations.donate.description: Támogasd a Fluxert egyszeri vagy ismétlődő adománnyal
+donations.donate.label: Adományozz a RdChatnek
+donations.donate.description: Támogasd a RdChatt egyszeri vagy ismétlődő adománnyal
 donations.donation_disclaimer: 'Az adományok önkéntes ajándékok, és nem adnak neked semmilyen terméket, szolgáltatást, tulajdonjogot vagy különleges jogokat. Ha prémium funkciókat keresel, nézd meg: {0}.'
 donations.individual: Magánszemély
 donations.individual_vs_business.answer: Mindkét adománytípus ugyanúgy támogatja a célt. A különbség csak annyi, hogy a Vállalkozás adományoknál megadhatsz adószámot (ha van), és a véglegesítés után PDF számlát kapsz, ami hasznos lehet a könyveléshez.
 donations.individual_vs_business.question: Mi a különbség a Magánszemély és a Vállalkozás között?
-donations.infrastructure_costs_detail: Az adományod segít fedezni a Fluxer infrastruktúra-költségeit, többek közt a szervereket, sávszélességet, tárhelyet, és az új funkciók folyamatos fejlesztését. Segít, hogy a platformot mindenkinek fenntarthassuk és továbbfejlesszük.
+donations.infrastructure_costs_detail: Az adományod segít fedezni a RdChat infrastruktúra-költségeit, többek közt a szervereket, sávszélességet, tárhelyet, és az új funkciók folyamatos fejlesztését. Segít, hogy a platformot mindenkinek fenntarthassuk és továbbfejlesszük.
 donations.minimum_donation: 'Minimum adomány: $5 / €5'
 donations.mobile_roadmap_sponsorship: Szponzoráld a mobilos roadmapet
 donations.send_one_time_gift: Küldj egyszeri támogatást
 donations.support_future_development: Támogasd a jövőbeli fejlesztést
 donations.support_message: Segíts felépíteni egy független kommunikációs platformot. Az adományod a platform infrastruktúráját és fejlesztését finanszírozza.
-donations.tax_deductible.answer: A Fluxernek küldött adományok jelenleg nem adólevonhatók, de közvetlenül az infrastruktúránkat és a folyamatos fejlesztést finanszírozzák.
+donations.tax_deductible.answer: A RdChatnek küldött adományok jelenleg nem adólevonhatók, de közvetlenül az infrastruktúránkat és a folyamatos fejlesztést finanszírozzák.
 donations.tax_deductible.question: Levonható az adomány az adóból?
 donations.what_it_supports: Mire megy az adományom?
 donations.why_support: Segíts felépíteni egy másfajta kommunikációs platformot – nyílt forráskódú, közösségi finanszírozású, és gondosan készül.
@@ -148,8 +148,8 @@ donations.success.message: Köszönjük az adományodat! Nagyon értékeljük a 
 donations.success.email_notice: Hamarosan kapsz egy megerősítő emailt az adományod részleteivel és egy linket az adományozói portálodhoz.
 donations.success.back_to_donate: Vissza az adományozáshoz
 download.download: Letöltés
-download.download_app_or_open_in_browser: Töltsd le az appot, vagy nyisd meg a Fluxert a böngésződben, és kezdj el kapcsolódni a közösségeidhez.
-download.download_fluxer: Fluxer letöltése
+download.download_app_or_open_in_browser: Töltsd le az appot, vagy nyisd meg a RdChatt a böngésződben, és kezdj el kapcsolódni a közösségeidhez.
+download.download_fluxer: RdChat letöltése
 download.download_for_prefix: 'Letöltés ehhez: '
 download.open_in_browser: Megnyitás böngészőben
 download.screenshots_courtesy_of: 'Képernyőképek: '
@@ -159,8 +159,8 @@ footer.company_information: Céginformációk
 footer.connect: Kapcsolat
 footer.donate: Adományozz
 footer.download: Letöltés
-footer.fluxer: Fluxer
-footer.fluxer_platform_ab_swedish_limited: '© Fluxer Platform AB (svéd korlátolt felelősségű társaság: 559537-3993)'
+footer.fluxer: RdChat
+footer.fluxer_platform_ab_swedish_limited: '© RdChat Platform AB (svéd korlátolt felelősségű társaság: 559537-3993)'
 footer.help_support_an_independent_communication: Támogatsd egy független kommunikációs platformot. Az adományod a platform infrastruktúráját és fejlesztését finanszírozza.
 footer.partners: Partnerek
 footer.plutonium_tier: Plutonium csomag
@@ -218,8 +218,8 @@ languages.list.thai: Thai
 languages.list.turkish: Török
 languages.list.ukrainian: Ukrán
 languages.list.vietnamese: Vietnámi
-launch.description: Ismerd meg a Fluxer mögött álló fejlesztőt, a projekt céljait, a tech stacket, és hogy mi jön legközelebb.
-launch.heading: A Fluxer története
+launch.description: Ismerd meg a RdChat mögött álló fejlesztőt, a projekt céljait, a tech stacket, és hogy mi jön legközelebb.
+launch.heading: A RdChat története
 launch.read_more: Olvasd el az induló blogposztot
 launch.view_full_roadmap: Teljes roadmap megtekintése
 misc_labels.design_and_branding: Dizájn és márka
@@ -229,12 +229,12 @@ misc_labels.exclusive_features: Exkluzív funkciók
 misc_labels.feature: Funkció
 misc_labels.get_updates: Kapj frissítéseket, nézd meg a közelgő funkciókat, beszéljétek át az ötleteket, és csevegj a csapattal.
 misc_labels.join_and_spread_word: Csatlakozz, és add tovább
-misc_labels.join_fluxer_community_contribute: Csatlakozz a Fluxer közösséghez, és segíts felépíteni a kommunikáció jövőjét nyílt forráskóddal és közösségi hozzájárulásokkal.
-misc_labels.join_fluxer_hq: Csatlakozz a Fluxer HQ-hoz
+misc_labels.join_fluxer_community_contribute: Csatlakozz a RdChat közösséghez, és segíts felépíteni a kommunikáció jövőjét nyílt forráskóddal és közösségi hozzájárulásokkal.
+misc_labels.join_fluxer_hq: Csatlakozz a RdChat HQ-hoz
 misc_labels.join_multiple_devices: Csatlakozz egyszerre több eszközről
-misc_labels.join_team_behind_fluxer: Csatlakozz a Fluxer mögötti csapathoz
+misc_labels.join_team_behind_fluxer: Csatlakozz a RdChat mögötti csapathoz
 misc_labels.learn_more: Tudj meg többet
-misc_labels.product_hunt_badge_title: Fluxer - nyílt forráskódú, Discord-szerű azonnali üzenetküldő és VoIP platform | Product Hunt top poszt
+misc_labels.product_hunt_badge_title: RdChat - nyílt forráskódú, Discord-szerű azonnali üzenetküldő és VoIP platform | Product Hunt top poszt
 misc_labels.profile_badge: Profiljelvény
 misc_labels.read_the_guide: Olvasd el az útmutatót
 misc_labels.ready_to_get_started: Kezdhetjük?
@@ -253,11 +253,11 @@ navigation.on_this_page: Ezen az oldalon
 navigation.page_not_found.description: Ez az oldal nem létezik. De van még mit felfedezni.
 navigation.page_not_found.title: Az oldal nem található
 navigation.press.download_assets_intro: Töltsd le a logóinkat, ismerd meg a márkaszíneinket, és vedd fel a kapcsolatot a sajtócsapatunkkal.
-navigation.press.download_fluxer_assets: Töltsd le a Fluxer logókat és márkaanyagokat, és vedd fel a kapcsolatot a sajtócsapatunkkal
+navigation.press.download_fluxer_assets: Töltsd le a RdChat logókat és márkaanyagokat, és vedd fel a kapcsolatot a sajtócsapatunkkal
 navigation.press.press_and_brand_assets: Sajtó és márkaanyagok
-partner_program.become_partner.apply_email: 'Jelentkezés: partners@fluxer.app'
+partner_program.become_partner.apply_email: 'Jelentkezés: partners@RdChat.app'
 partner_program.become_partner.call_to_action: Legyél partner
-partner_program.become_partner.heading: Legyél Fluxer partner
+partner_program.become_partner.heading: Legyél RdChat partner
 partner_program.become_partner.if_youre_a_creator_or: Ha tartalomkészítő vagy, vagy nagy közösséget vezetsz, szívesen hallunk rólad.
 partner_program.become_partner.learn_about_partners: Ismerd meg a partnerséget
 partner_program.become_partner.learn_more: Tudj meg többet
@@ -266,12 +266,12 @@ partner_program.description: Exkluzív extrák és előnyök tartalomkészítők
 partner_program.label: Partnerek
 partner_program.perks.creator_monetization.description: Korai hozzáférés a monetizációs funkciókhoz, alacsonyabb platformdíjakkal, mint a nem partnereknél.
 partner_program.perks.creator_monetization.label: Tartalomkészítői monetizáció
-partner_program.perks.custom_vanity_url.description: Kapj egy exkluzív vanity URL-t, pl. fluxer.gg/aközösséged.
+partner_program.perks.custom_vanity_url.description: Kapj egy exkluzív vanity URL-t, pl. RdChat.gg/aközösséged.
 partner_program.perks.custom_vanity_url.label: Egyedi vanity URL
-partner_program.perks.direct_team_access.description: Csatlakozz az exkluzív Partners közösséghez közvetlen hozzáféréssel a Fluxer csapathoz.
+partner_program.perks.direct_team_access.description: Csatlakozz az exkluzív Partners közösséghez közvetlen hozzáféréssel a RdChat csapathoz.
 partner_program.perks.direct_team_access.label: Közvetlen hozzáférés a csapathoz
 partner_program.perks.discovery_visibility: Nagyobb láthatóság, kiemelés a közösségfelfedezésben.
-partner_program.perks.exclusive_merch.description: Exkluzív, csak Fluxer Partneres merch és swag.
+partner_program.perks.exclusive_merch.description: Exkluzív, csak RdChat Partneres merch és swag.
 partner_program.perks.exclusive_merch.label: Exkluzív merch
 partner_program.perks.free_plutonium.description: Kapj ingyen Plutoniumot a fiókodhoz, hogy élvezhesd az összes prémium funkciót.
 partner_program.perks.free_plutonium.label: Ingyenes Plutonium
@@ -284,20 +284,20 @@ partner_program.perks.vip_voice_servers.label: VIP hangcsatornák
 partner_program.requirements.audience_description: Rövid leírás a közönségedről és arról, mivel foglalkozol
 partner_program.requirements.links_to_content: Linkek a tartalmaidhoz vagy közösségedhez (YouTube, Twitch, Discord stb.)
 partner_program.requirements.name_and_username: A neved és a platformos felhasználóneved
-partner_program.requirements.usage_plan: Hogyan tervezed használni a Fluxert a közösségeddel
+partner_program.requirements.usage_plan: Hogyan tervezed használni a RdChatt a közösségeddel
 partner_program.who_its_for: 'Tartalomkészítőknek és közösségtulajdonosoknak: nyiss exkluzív előnyöket, többek közt ingyen Plutoniumot, Partner jelvényt, egyedi vanity URL-eket, és még sok mást.'
 partner_program.perks.heading: Partneri előnyök
 partner_program.perks.see_perks: Előnyök megtekintése
-partner_program.apply.instructions: Küldj nekünk egy emailt az alábbi információkkal, hogy jelentkezz a Fluxer Partner Programba.
+partner_program.apply.instructions: Küldj nekünk egy emailt az alábbi információkkal, hogy jelentkezz a RdChat Partner Programba.
 partner_program.apply.response_time: Minden jelentkezést átnézünk, és pár napon belül válaszolunk.
 platform_support.desktop.available_on_desktop_and_web: Elérhető asztali gépen és a weben
-platform_support.desktop.download_desktop_intro: Töltsd le a Fluxert Windowsra, macOS-re és Linuxra. A mobilappok készülnek.
-platform_support.desktop.interface_label: Fluxer asztali felület
+platform_support.desktop.download_desktop_intro: Töltsd le a RdChatt Windowsra, macOS-re és Linuxra. A mobilappok készülnek.
+platform_support.desktop.interface_label: RdChat asztali felület
 platform_support.desktop.label: Asztali
 platform_support.desktop.use_desktop_client_mobile_soon: Használd az asztali klienst (mobil hamarosan)
-platform_support.mobile.install_as_app.add_to_home: Add hozzá a Fluxert a kezdőképernyődhöz, hogy eltűnjön a böngésző UI.
-platform_support.mobile.install_as_app.done_desktop: Kész! Mostantól úgy nyithatod meg a Fluxert, mintha egy rendes program lenne.
-platform_support.mobile.install_as_app.done_mobile: Kész! Mostantól a kezdőképernyődről nyithatod meg a Fluxert.
+platform_support.mobile.install_as_app.add_to_home: Add hozzá a RdChatt a kezdőképernyődhöz, hogy eltűnjön a böngésző UI.
+platform_support.mobile.install_as_app.done_desktop: Kész! Mostantól úgy nyithatod meg a RdChatt, mintha egy rendes program lenne.
+platform_support.mobile.install_as_app.done_mobile: Kész! Mostantól a kezdőképernyődről nyithatod meg a RdChatt.
 platform_support.mobile.install_as_app.guides.in_chrome: ' Chrome-ban'
 platform_support.mobile.install_as_app.guides.in_chrome_or_another_browser: ' Chrome-ban vagy más, PWA-t támogató böngészőben'
 platform_support.mobile.install_as_app.guides.in_safari: ' Safariban'
@@ -309,11 +309,11 @@ platform_support.mobile.install_as_app.guides.steps.press_install_button_address
 platform_support.mobile.install_as_app.guides.steps.press_install_in_popup: 'Nyomd meg a felugró ablakban a "Telepítés" gombot'
 platform_support.mobile.install_as_app.guides.steps.press_more_menu: 'Nyomd meg a "Továbbiak" (⋮) gombot a jobb felső sarokban'
 platform_support.mobile.install_as_app.guides.steps.press_share_button: Nyomd meg a megosztás gombot (téglalap felfelé mutató nyíllal)
-platform_support.mobile.install_as_app.install_fluxer_as_app: Fluxer telepítése alkalmazásként
+platform_support.mobile.install_as_app.install_fluxer_as_app: RdChat telepítése alkalmazásként
 platform_support.mobile.install_as_app.title: Telepítés alkalmazásként
-platform_support.mobile.interface_label: Fluxer mobil felület
+platform_support.mobile.interface_label: RdChat mobil felület
 platform_support.mobile.mobile_apps_underway: A mobilappok készülnek
-platform_support.mobile.mobile_browser_explainer: iOS-re és Androidra is építjük az appokat. Amíg nem készülnek el, a Fluxer működik a mobilböngésződben, és sokat dolgoztunk azon, hogy minél inkább appnak érződjön.
+platform_support.mobile.mobile_browser_explainer: iOS-re és Androidra is építjük az appokat. Amíg nem készülnek el, a RdChat működik a mobilböngésződben, és sokat dolgoztunk azon, hogy minél inkább appnak érződjön.
 platform_support.mobile.not_full_replacement_yet: Ez még nem teljes értékű helyettesítője az asztali appnak, és néhány dolog, amit egy mobil chatapptól várnál, még hiányzik.
 platform_support.mobile.push_notifications: Kapj push értesítéseket, amikor nem vagy az appban.
 platform_support.platforms.android.apk: APK
@@ -339,7 +339,7 @@ press_branding.assets.label: Logó
 press_branding.assets.logo_variants.black_logo: Fekete logó
 press_branding.assets.logo_variants.color_logo: Színes logó
 press_branding.assets.logo_variants.white_logo: Fehér logó
-press_branding.assets.palette_description: Gondosan válogatott színpalettánk, ami a Fluxer márkát képviseli.
+press_branding.assets.palette_description: Gondosan válogatott színpalettánk, ami a RdChat márkát képviseli.
 press_branding.assets.premium_quality: Prémium minőség
 press_branding.assets.primary_brand_color_description: A fő márkaszínünk. Használd kulcselemekhez és kiemelésekhez.
 press_branding.assets.symbol_variants.black_symbol: Fekete szimbólum
@@ -355,7 +355,7 @@ press_branding.assets.usage_guidance.symbol_description: Az önálló szimbólum
 press_branding.colors.blue_da_ba_dee: Blue Da Ba Dee
 press_branding.colors.white: Fehér
 press_branding.colors.black: Fekete
-press_branding.contact.story_prompt: Van egy történeted a Fluxerről? Szívesen hallanánk.
+press_branding.contact.story_prompt: Van egy történeted a RdChatről? Szívesen hallanánk.
 press_branding.contact.response_time: Általában 24 órán belül válaszolunk.
 pricing_and_tiers.billing.forever: Örökre
 pricing_and_tiers.billing.most_popular: Legnépszerűbb
@@ -368,7 +368,7 @@ pricing_and_tiers.free.comparison_label: Ingyenes vs Plutonium
 pricing_and_tiers.free.everything_in_free_plus: 'Minden, ami az Ingyenesben van, plusz:'
 pricing_and_tiers.free.full_access_to_all_features: Teljes hozzáférés minden funkcióhoz
 pricing_and_tiers.free.label: Ingyenes
-pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Megjegyzés: a Plutonium és a Visionary előnyök csak a hivatalos Fluxer.app példányra érvényesek, nem harmadik fél vagy saját hosztolt példányokra.'
+pricing_and_tiers.plutonium.benefits_note_official_instance_only: 'Megjegyzés: a Plutonium és a Visionary előnyök csak a hivatalos RdChat.app példányra érvényesek, nem harmadik fél vagy saját hosztolt példányokra.'
 pricing_and_tiers.plutonium.feature_highlights: 500 MB feltöltések, 4 000 karakteres üzenetek, 300 könyvjelző, 50 emojicsomag, és még sok más.
 pricing_and_tiers.plutonium.features.bio_character_limit: Bio karakterlimit
 pricing_and_tiers.plutonium.features.choose_custom_4_digit_tag: Válasszon bármilyen elérhető 4 jegyű címkét #0001-től #9999-ig, hogy valóban egyedivé tegye felhasználónevét.
@@ -383,7 +383,7 @@ pricing_and_tiers.plutonium.features.message_scheduling: Üzenetütemezés
 pricing_and_tiers.plutonium.features.per_community_profiles: Közösségenkénti profilok
 pricing_and_tiers.plutonium.features.saved_media: Mentett média
 pricing_and_tiers.plutonium.features.webhooks_and_bot_support: Webhookok és bot támogatás
-pricing_and_tiers.plutonium.get_more_with_plutonium: Hozz ki többet a Fluxerből Plutoniummal
+pricing_and_tiers.plutonium.get_more_with_plutonium: Hozz ki többet a RdChatből Plutoniummal
 pricing_and_tiers.plutonium.get_plutonium: Szerezd meg a Plutoniumot
 pricing_and_tiers.plutonium.higher_limits_and_early_access: Magasabb limitek, exkluzív funkciók és korai hozzáférés az új frissítésekhez
 pricing_and_tiers.plutonium.higher_limits_everywhere: Magasabb limitek mindenhol
@@ -396,7 +396,7 @@ pricing_and_tiers.visionary.bundle_label: Élethosszig Plutonium és Operator Pa
 pricing_and_tiers.visionary.communities_with_team_access: Visionary és Operators közösségek csapat-hozzáféréssel
 pricing_and_tiers.visionary.get_visionary: Szerezd meg a Visionaryt
 pricing_and_tiers.visionary.label: Visionary
-pricing_and_tiers.visionary.lifetime_offer_copy: Szerezz élethosszig tartó Plutoniumot a Fluxer.appon plusz egy Operator Passt önhostoláshoz. Fizess {0} egyszer. Elérhető 2026. október 1-ig vagy amíg minden hely be nem telik.
+pricing_and_tiers.visionary.lifetime_offer_copy: Szerezz élethosszig tartó Plutoniumot a RdChat.appon plusz egy Operator Passt önhostoláshoz. Fizess {0} egyszer. Elérhető 2026. október 1-ig vagy amíg minden hely be nem telik.
 pricing_and_tiers.visionary.lifetime_operator_pass: Élethosszig Operator Pass
 pricing_and_tiers.visionary.lifetime_plutonium: Élethosszig Plutonium
 pricing_and_tiers.visionary.limited_offer_note: 'Korlátozott ajánlat: a Visionary tartalmazza az Operator Passt'
@@ -407,8 +407,8 @@ pricing_and_tiers.visionary.purchase_flow: A Visionaryt közvetlenül az appban 
 pricing_and_tiers.visionary.slots_left.generic: '{0} / {1} hely maradt'
 pricing_and_tiers.visionary.slots_left.visionary_bundle: Már csak {0} / {1} Visionary élethosszig csomag maradt – élethosszig Plutonium és Operator Pass
 pricing_and_tiers.visionary.slots_left.visionary_only: '{0} Visionary hely maradt'
-product_positioning.free_and_open_source: A Fluxer ingyenes és nyílt forráskódú. Bárki ingyen üzemeltetheti saját maga.
-product_positioning.intro: A Fluxer egy ingyenes, nyílt forráskódú azonnali üzenetküldő és VoIP platform barátoknak, csoportoknak és közösségeknek.
+product_positioning.free_and_open_source: A RdChat ingyenes és nyílt forráskódú. Bárki ingyen üzemeltetheti saját maga.
+product_positioning.intro: A RdChat egy ingyenes, nyílt forráskódú azonnali üzenetküldő és VoIP platform barátoknak, csoportoknak és közösségeknek.
 product_positioning.open_source.fully_open_source_agplv3: Teljes mértékben nyílt forráskódú (AGPLv3)
 product_positioning.open_source.label: Nyílt forráskód
 product_positioning.open_source.license: Nyílt forráskód (AGPL-3.0)
@@ -416,25 +416,25 @@ product_positioning.self_hosting.connect_from_any_client: Csatlakozás bármelyi
 product_positioning.self_hosting.free_self_hosting: Ingyenes saját hosztolás
 product_positioning.self_hosting.host_your_own_instance: Üzemeltesd a saját példányod
 product_positioning.self_hosting.label: Saját hosztolás
-product_positioning.self_hosting.operator_pass.access_to_operators_community: Hozzáférés a Fluxer Operators közösséghez
+product_positioning.self_hosting.operator_pass.access_to_operators_community: Hozzáférés a RdChat Operators közösséghez
 product_positioning.self_hosting.operator_pass.after_offer_ends_stays_available: Az ajánlat vége után az Operator Pass önállóan is elérhető marad.
 product_positioning.self_hosting.operator_pass.label: Operator Pass
 product_positioning.self_hosting.operator_pass.note_optional: 'Az Operator Pass opcionális: fizess a támogatásért és a közösségi hozzáférésért.'
 product_positioning.self_hosting.operator_pass.priority_support_and_operators_access: Elsőbbségi támogatás és hozzáférés az Operators közösséghez saját hosztoláshoz
-product_positioning.self_hosting.run_backend_on_your_hardware: Futtasd a Fluxer backendet a saját hardvereden, és csatlakozz az appjainkkal.
+product_positioning.self_hosting.run_backend_on_your_hardware: Futtasd a RdChat backendet a saját hardvereden, és csatlakozz az appjainkkal.
 product_positioning.self_hosting.switch_between_instances: Váltás több példány között
 security.found_security_issue: Találtál egy biztonsági hibát?
 security.report_vulnerabilities: Jelents sérülékenységeket, és segíts, hogy a platform biztonságos maradjon.
 security.responsible_disclosure_note: Köszönjük a felelős bejelentést a bug bounty oldalunkon. A súlyosságtól függően Plutonium kódokat és Bug Hunter jelvényeket adunk.
 security.security_bug_bounty: Biztonsági bug bounty
 security.security_reports: Biztonsági jelentések
-security.testers_access_from_reports: A jóváhagyott jelentések hozzáférést adnak a Fluxer Testershez, ahol pontokat gyűjthetsz Plutonium kódokért és a Bug Hunter jelvényért.
+security.testers_access_from_reports: A jóváhagyott jelentések hozzáférést adnak a RdChat Testershez, ahol pontokat gyűjthetsz Plutonium kódokért és a Bug Hunter jelvényért.
 social_and_feeds.bluesky.follow_us: Kövess minket Blueskyon
 social_and_feeds.bluesky.label: Bluesky
 social_and_feeds.bluesky.rss_feed: Bluesky RSS feed
-social_and_feeds.follow_fluxer: 'Kövesd: @fluxer.app'
+social_and_feeds.follow_fluxer: 'Kövesd: @RdChat.app'
 social_and_feeds.github: GitHub
 social_and_feeds.rss.blog_rss_feed: Blog RSS feed
-social_and_feeds.rss.fluxer_blog_rss: Fluxer blog RSS
+social_and_feeds.rss.fluxer_blog_rss: RdChat blog RSS
 social_and_feeds.rss.label: RSS feed
 social_and_feeds.stay_updated_cta: Maradj képben a hírekkel, a szolgáltatás állapotával és az újdonságokkal. Fel is iratkozhatsz a(z)

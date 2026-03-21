@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Unclaimed ac
 usernames_and_tags.username_invalid_characters: שם המשתמש יכול לכלול רק אותיות לטיניות (a-z, A-Z), ספרות (0-9) וקווים תחתונים (_).
 usernames_and_tags.username_length_invalid: שם המשתמש חייב להיות בין {min} ל-{max} תווים.
 usernames_and_tags.username_not_available: שם המשתמש הזה לא זמין.
-usernames_and_tags.username_reserved_terms: שם המשתמש לא יכול להכיל "fluxer" או "system message".
+usernames_and_tags.username_reserved_terms: שם המשתמש לא יכול להכיל "RdChat" או "system message".
 usernames_and_tags.username_reserved_value: שם המשתמש לא יכול להיות "everyone" או "here".
 vanity_urls.vanity_url_already_taken: ה-Vanity URL הזה כבר תפוס.
 vanity_urls.vanity_url_code_already_taken: קוד ה-Vanity URL כבר תפוס.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: קוד ה-Vanity URL לא יכול להכיל "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: קוד ה-Vanity URL לא יכול להכיל "RdChat".
 vanity_urls.vanity_url_code_length_invalid: קוד ה-Vanity URL חייב להיות בין {min} ל-{max} תווים.
 vanity_urls.vanity_url_invalid_characters: ה-Vanity URL יכול לכלול רק אותיות קטנות (a-z), ספרות (0-9) ומקפים (-).
 webhooks.cannot_modify_system_webhook: אי אפשר לערוך הודעות של המערכת.

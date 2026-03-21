@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Uopfordrede 
 usernames_and_tags.username_invalid_characters: Brugernavn kan kun indeholde latinske bogstaver (a-z, A-Z), tal (0-9) og understreger (_).
 usernames_and_tags.username_length_invalid: Brugernavn skal være mellem {min} og {max} tegn.
 usernames_and_tags.username_not_available: Brugernavnet er ikke tilgængeligt.
-usernames_and_tags.username_reserved_terms: Brugernavn kan ikke indeholde "fluxer" eller "system message".
+usernames_and_tags.username_reserved_terms: Brugernavn kan ikke indeholde "RdChat" eller "system message".
 usernames_and_tags.username_reserved_value: Brugernavn kan ikke være "everyone" eller "here".
 vanity_urls.vanity_url_already_taken: Denne vanity URL er allerede taget.
 vanity_urls.vanity_url_code_already_taken: Denne vanity URL-kode er allerede taget.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL-koden må ikke indeholde "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL-koden må ikke indeholde "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Vanity URL-koden skal være mellem {min} og {max} tegn.
 vanity_urls.vanity_url_invalid_characters: Vanity URL'en kan kun indeholde små bogstaver (a-z), cifre (0-9) og bindestreger (-).
 webhooks.cannot_modify_system_webhook: Du kan ikke ændre system-webhooken.

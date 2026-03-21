@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: 未領取的
 usernames_and_tags.username_invalid_characters: 使用者名稱只能包含拉丁字母 (a-z, A-Z)、數字 (0-9) 和底線 (_) 。
 usernames_and_tags.username_length_invalid: 使用者名稱長度必須在 {min} 到 {max} 個字元之間。
 usernames_and_tags.username_not_available: 這個使用者名稱無法使用。
-usernames_and_tags.username_reserved_terms: 使用者名稱不能包含 "fluxer" 或 "system message"。
+usernames_and_tags.username_reserved_terms: 使用者名稱不能包含 "RdChat" 或 "system message"。
 usernames_and_tags.username_reserved_value: 使用者名稱不能是 "everyone" 或 "here"。
 vanity_urls.vanity_url_already_taken: 這個自訂網址已被使用。
 vanity_urls.vanity_url_code_already_taken: 自訂網址代碼已被使用。
-vanity_urls.vanity_url_code_cannot_contain_fluxer: 自訂網址代碼不能包含 "fluxer"。
+vanity_urls.vanity_url_code_cannot_contain_fluxer: 自訂網址代碼不能包含 "RdChat"。
 vanity_urls.vanity_url_code_length_invalid: 自訂網址代碼長度必須在 {min} 到 {max} 個字元之間。
 vanity_urls.vanity_url_invalid_characters: 自訂網址只能包含小寫字母 (a-z)、數字 (0-9) 和連字號 (-)。
 webhooks.cannot_modify_system_webhook: 你不能修改系統 webhook。

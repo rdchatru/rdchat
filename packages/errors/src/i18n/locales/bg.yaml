@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Неакти
 usernames_and_tags.username_invalid_characters: Потребителското име може да съдържа само латински букви (a–z, A–Z), цифри (0–9) и долни черти (_).
 usernames_and_tags.username_length_invalid: Потребителското име трябва да е между {min} и {max} знака.
 usernames_and_tags.username_not_available: Това потребителско име не е налично.
-usernames_and_tags.username_reserved_terms: Потребителското име не може да съдържа "fluxer" или "system message".
+usernames_and_tags.username_reserved_terms: Потребителското име не може да съдържа "RdChat" или "system message".
 usernames_and_tags.username_reserved_value: Потребителското име не може да е "everyone" или "here".
 vanity_urls.vanity_url_already_taken: Този vanity URL вече е зает.
 vanity_urls.vanity_url_code_already_taken: Този vanity URL код вече е зает.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL кодът не може да съдържа "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL кодът не може да съдържа "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Vanity URL кодът трябва да е между {min} и {max} знака.
 vanity_urls.vanity_url_invalid_characters: Vanity URL може да съдържа само малки латински букви (a–z), цифри (0–9) и тирета (-).
 webhooks.cannot_modify_system_webhook: Не можеш да редактираш системни съобщения.

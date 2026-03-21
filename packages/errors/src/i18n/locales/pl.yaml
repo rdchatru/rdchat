@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Niepotwierdz
 usernames_and_tags.username_invalid_characters: Nazwa użytkownika może zawierać tylko litery łacińskie (a-z, A-Z), cyfry (0-9) i podkreślenia (_).
 usernames_and_tags.username_length_invalid: Nazwa użytkownika musi mieć od {min} do {max} znaków.
 usernames_and_tags.username_not_available: Ta nazwa użytkownika jest niedostępna.
-usernames_and_tags.username_reserved_terms: Nazwa użytkownika nie może zawierać "fluxer" ani "system message".
+usernames_and_tags.username_reserved_terms: Nazwa użytkownika nie może zawierać "RdChat" ani "system message".
 usernames_and_tags.username_reserved_value: Nazwa użytkownika nie może być "everyone" ani "here".
 vanity_urls.vanity_url_already_taken: Ten vanity URL jest już zajęty.
 vanity_urls.vanity_url_code_already_taken: Ten kod vanity URL jest już zajęty.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Kod vanity URL nie może zawierać "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Kod vanity URL nie może zawierać "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Kod vanity URL musi mieć od {min} do {max} znaków.
 vanity_urls.vanity_url_invalid_characters: Vanity URL może zawierać tylko małe litery (a-z), cyfry (0-9) i myślniki (-).
 webhooks.cannot_modify_system_webhook: Nie możesz modyfikować systemowego webhooka.

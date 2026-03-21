@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: 未登録の
 usernames_and_tags.username_invalid_characters: ユーザー名に使えるのは英字(a-z, A-Z)、数字(0-9)、アンダースコア(_)だけだよ。
 usernames_and_tags.username_length_invalid: ユーザー名は{min}～{max}文字にしてね。
 usernames_and_tags.username_not_available: そのユーザー名は使えないよ。
-usernames_and_tags.username_reserved_terms: ユーザー名に"fluxer"や"system message"は含められないよ。
+usernames_and_tags.username_reserved_terms: ユーザー名に"RdChat"や"system message"は含められないよ。
 usernames_and_tags.username_reserved_value: ユーザー名に"everyone"や"here"は使えないよ。
 vanity_urls.vanity_url_already_taken: そのバニティURLはもう使われてるよ。
 vanity_urls.vanity_url_code_already_taken: そのバニティURLコードはもう使われてるよ。
-vanity_urls.vanity_url_code_cannot_contain_fluxer: バニティURLコードに"fluxer"は入れられないよ。
+vanity_urls.vanity_url_code_cannot_contain_fluxer: バニティURLコードに"RdChat"は入れられないよ。
 vanity_urls.vanity_url_code_length_invalid: バニティURLコードは{min}～{max}文字にしてね。
 vanity_urls.vanity_url_invalid_characters: バニティURLに使えるのは小文字(a-z)、数字(0-9)、ハイフン(-)だけだよ。
 webhooks.cannot_modify_system_webhook: システムメッセージは編集できません。

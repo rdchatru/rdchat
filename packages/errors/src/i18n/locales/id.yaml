@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Akun yang be
 usernames_and_tags.username_invalid_characters: Username hanya boleh berisi huruf Latin (a-z, A-Z), angka (0-9), dan underscore (_).
 usernames_and_tags.username_length_invalid: Username harus antara {min} dan {max} karakter.
 usernames_and_tags.username_not_available: Username ini tidak tersedia.
-usernames_and_tags.username_reserved_terms: Username tidak boleh mengandung "fluxer" atau "system message".
+usernames_and_tags.username_reserved_terms: Username tidak boleh mengandung "RdChat" atau "system message".
 usernames_and_tags.username_reserved_value: Username tidak boleh "everyone" atau "here".
 vanity_urls.vanity_url_already_taken: Vanity URL ini sudah dipakai.
 vanity_urls.vanity_url_code_already_taken: Kode vanity URL ini sudah dipakai.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Kode vanity URL tidak boleh mengandung "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Kode vanity URL tidak boleh mengandung "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Kode vanity URL harus antara {min} dan {max} karakter.
 vanity_urls.vanity_url_invalid_characters: Vanity URL hanya boleh berisi huruf kecil (a-z), angka (0-9), dan tanda hubung (-).
 webhooks.cannot_modify_system_webhook: Kamu tidak bisa mengubah webhook sistem.

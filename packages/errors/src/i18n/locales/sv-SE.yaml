@@ -484,11 +484,11 @@ usernames_and_tags.unclaimed_accounts_can_only_set_email_via_token: Okrävda kon
 usernames_and_tags.username_invalid_characters: Användarnamnet får bara innehålla latinska bokstäver (a-z, A-Z), siffror (0-9) och understreck (_).
 usernames_and_tags.username_length_invalid: Användarnamnet måste vara mellan {min} och {max} tecken.
 usernames_and_tags.username_not_available: Det här användarnamnet är inte tillgängligt.
-usernames_and_tags.username_reserved_terms: Användarnamnet får inte innehålla "fluxer" eller "system message".
+usernames_and_tags.username_reserved_terms: Användarnamnet får inte innehålla "RdChat" eller "system message".
 usernames_and_tags.username_reserved_value: Användarnamnet får inte vara "everyone" eller "here".
 vanity_urls.vanity_url_already_taken: Den här vanity URL:en är redan tagen.
 vanity_urls.vanity_url_code_already_taken: Den här vanity URL-koden är redan tagen.
-vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL-koden får inte innehålla "fluxer".
+vanity_urls.vanity_url_code_cannot_contain_fluxer: Vanity URL-koden får inte innehålla "RdChat".
 vanity_urls.vanity_url_code_length_invalid: Vanity URL-koden måste vara mellan {min} och {max} tecken.
 vanity_urls.vanity_url_invalid_characters: Vanity URL:en får bara innehålla små bokstäver (a-z), siffror (0-9) och bindestreck (-).
 webhooks.cannot_modify_system_webhook: Du kan inte redigera systemmeddelanden.

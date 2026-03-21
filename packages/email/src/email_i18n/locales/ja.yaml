@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Fluxerアカウントを一時的に無効にしました
+  subject: RdChatアカウントを一時的に無効にしました
   body: |-
     {username}さん、こんにちは。
 
-    不審な動きを確認したため、あなたのFluxerアカウントを一時的に無効にしました。
+    不審な動きを確認したため、あなたのRdChatアカウントを一時的に無効にしました。
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     心当たりがない場合は、サポートまでご連絡ください。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 account_scheduled_deletion:
-  subject: Fluxerアカウントの削除が予定されています
+  subject: RdChatアカウントの削除が予定されています
   body: |-
     {username}さん、こんにちは。
 
-    利用規約またはコミュニティガイドラインへの違反が確認されたため、あなたのFluxerアカウントは永久削除の対象として削除が予定されています。
+    利用規約またはコミュニティガイドラインへの違反が確認されたため、あなたのRdChatアカウントは永久削除の対象として削除が予定されています。
 
     削除予定日時: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -40,21 +40,21 @@ account_scheduled_deletion:
     - コミュニティガイドライン: {guidelinesUrl}
 
     異議申し立て:
-    この対応が誤り、または正当ではないと思われる場合は、60日以内にこのメールアドレスから appeals@fluxer.app へ異議申し立てを送信してください。
+    この対応が誤り、または正当ではないと思われる場合は、60日以内にこのメールアドレスから appeals@RdChat.app へ異議申し立てを送信してください。
 
     異議申し立てには、以下を含めてください:
     - なぜ誤り、または正当ではないと思うのかを具体的に説明してください
     - 関連する証拠や状況があれば添えてください
 
-    Fluxer安全チームが内容を確認し、最終判断が出るまで削除を一時停止する場合があります。
+    RdChat安全チームが内容を確認し、最終判断が出るまで削除を一時停止する場合があります。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 account_temp_banned:
-  subject: Fluxerアカウントを一時停止しました
+  subject: RdChatアカウントを一時停止しました
   body: |-
     {username}さん、こんにちは。
 
-    利用規約またはコミュニティガイドラインへの違反が確認されたため、あなたのFluxerアカウントは一時停止されました。
+    利用規約またはコミュニティガイドラインへの違反が確認されたため、あなたのRdChatアカウントは一時停止されました。
 
     停止期間: {durationHours, plural,
       =1 {1時間}
@@ -73,15 +73,15 @@ account_temp_banned:
     - 利用規約: {termsUrl}
     - コミュニティガイドライン: {guidelinesUrl}
 
-    この対応が誤り、または正当ではないと思われる場合は、このメールアドレスから appeals@fluxer.app へ異議申し立てを送信してください。なぜ誤りだと思うのかを具体的に記載してください。内容を確認のうえ、結果を返信します。
+    この対応が誤り、または正当ではないと思われる場合は、このメールアドレスから appeals@RdChat.app へ異議申し立てを送信してください。なぜ誤りだと思うのかを具体的に記載してください。内容を確認のうえ、結果を返信します。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 donation_confirmation:
-  subject: Fluxerへのご寄付をいただきありがとうございます
+  subject: RdChatへのご寄付をいただきありがとうございます
   body: |-
     こんにちは、
 
-    Fluxerへのご寄付をいただきありがとうございます。{interval, select,
+    RdChatへのご寄付をいただきありがとうございます。{interval, select,
       month {定期的なご寄付}
       year {定期的なご寄付}
       other {1回限りのご寄付}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Fluxerを支えていただきありがとうございます!
+    RdChatを支えていただきありがとうございます!
 
-    – Fluxerチーム
+    – RdChatチーム
 donation_magic_link:
-  subject: Fluxerへの寄付を管理してください
+  subject: RdChatへの寄付を管理してください
   body: |-
     こんにちは、
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     心当たりがない場合は、このメールを無視してください。
 
-    – Fluxerチーム
+    – RdChatチーム
 dsa_report_verification:
   subject: DSA通報のためのメールアドレス確認
   body: |-
     こんにちは。
 
-    FluxerでDigital Services Act (DSA) に基づく通報を送信するには、以下の確認コードを入力してください。
+    RdChatでDigital Services Act (DSA) に基づく通報を送信するには、以下の確認コードを入力してください。
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     心当たりがない場合は、このメールを無視してください。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 email_change_new:
-  subject: 新しいFluxerメールアドレスを確認してください
+  subject: 新しいRdChatメールアドレスを確認してください
   body: |-
     {username}さん、こんにちは。
 
-    新しいFluxerメールアドレスを確認するには、アプリで以下のコードを入力してください。
+    新しいRdChatメールアドレスを確認するには、アプリで以下のコードを入力してください。
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     心当たりがない場合は、このメールを無視してください。
 
-    – Fluxerチーム
+    – RdChatチーム
 email_change_original:
-  subject: Fluxerのメールアドレス変更を確認してください
+  subject: RdChatのメールアドレス変更を確認してください
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントに登録されているメールアドレスを変更するリクエストを受け取りました。
+    あなたのRdChatアカウントに登録されているメールアドレスを変更するリクエストを受け取りました。
 
     変更を確定するには、アプリで以下のコードを入力してください。
 
@@ -170,13 +170,13 @@ email_change_original:
 
     心当たりがない場合は、すぐにアカウントのセキュリティをご確認ください。
 
-    – Fluxerチーム
+    – RdChatチーム
 email_change_revert:
-  subject: Fluxerのメールアドレスが変更されました
+  subject: RdChatのメールアドレスが変更されました
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントのメールアドレスが {newEmail} に変更されました。
+    あなたのRdChatアカウントのメールアドレスが {newEmail} に変更されました。
 
     あなたが変更した場合は、対応は不要です。心当たりがない場合は、以下のリンクから変更を取り消してアカウントを保護できます。
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     これにより、以前のメールアドレスに戻ります。また、すべての端末からログアウトされ、連携済みの電話番号は削除され、MFAは無効になり、新しいパスワードの設定が必要になります。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 email_verification:
-  subject: Fluxerのメールアドレスを確認してください
+  subject: RdChatのメールアドレスを確認してください
   body: |-
     {username}さん、こんにちは。
 
-    以下のリンクをクリックして、Fluxerアカウントのメールアドレスを確認してください。
+    以下のリンクをクリックして、RdChatアカウントのメールアドレスを確認してください。
 
     {verifyUrl}
 
-    Fluxerアカウントを作成していない場合は、このメールを無視してください。
+    RdChatアカウントを作成していない場合は、このメールを無視してください。
 
     このリンクは24時間で無効になります。
 
-    – Fluxerチーム
+    – RdChatチーム
 gift_chargeback_notification:
   subject: 引き換えたギフトの特典が取り消されました
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     誤りと思われる場合は、サポートまでご連絡ください。ギフトコードに関する情報と、引き換えた日時について分かる範囲でお知らせください。
 
-    – Fluxerチーム
+    – RdChatチーム
 harvest_completed:
-  subject: Fluxerのデータエクスポートをダウンロードできます
+  subject: RdChatのデータエクスポートをダウンロードできます
   body: |-
     {username}さん、こんにちは。
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     心当たりがない場合は、すぐにパスワードを変更し、サポートまでご連絡ください。
 
-    – Fluxerチーム
+    – RdChatチーム
 inactivity_warning:
-  subject: 非アクティブのためFluxerアカウントの削除が予定されています
+  subject: 非アクティブのためRdChatアカウントの削除が予定されています
   body: |-
     {username}さん、こんにちは。
 
-    {lastActiveDate, date, full} 以降、あなたのFluxerアカウントでのアクティビティが確認できていません。
+    {lastActiveDate, date, full} 以降、あなたのRdChatアカウントでのアクティビティが確認できていません。
 
     {deletionDate, date, full} {deletionDate, time, short} までにログインがない場合、非アクティブのためアカウントは永久に削除されます。
 
     こちらからログイン:
     {loginUrl}
 
-    最近Fluxerを利用している場合は、すぐにサポートまでご連絡ください。
+    最近RdChatを利用している場合は、すぐにサポートまでご連絡ください。
 
-    – Fluxerチーム
+    – RdChatチーム
 ip_authorization:
   subject: 新しいIPアドレスからのログインを許可してください
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントで、新しいIPアドレスからのログイン試行を検知しました。
+    あなたのRdChatアカウントで、新しいIPアドレスからのログイン試行を検知しました。
 
     IPアドレス: {ipAddress}
     場所: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     この許可リンクは30分で無効になります。
 
-    – Fluxerチーム
+    – RdChatチーム
 password_change_verification:
-  subject: Fluxerのパスワード変更を確認してください
+  subject: RdChatのパスワード変更を確認してください
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントのパスワードを変更するリクエストを受け取りました。
+    あなたのRdChatアカウントのパスワードを変更するリクエストを受け取りました。
 
     変更を確定するには、アプリで以下のコードを入力してください。
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     心当たりがない場合は、誰かがあなたのアカウントにアクセスしている可能性があります。すぐにパスワードを変更し、二段階認証を有効にしてください。
 
-    – Fluxerチーム
+    – RdChatチーム
 password_reset:
-  subject: Fluxerのパスワードをリセットしてください
+  subject: RdChatのパスワードをリセットしてください
   body: |-
     {username}さん、こんにちは。
 
-    Fluxerのパスワードリセットがリクエストされました。以下のリンクから新しいパスワードを設定してください。
+    RdChatのパスワードリセットがリクエストされました。以下のリンクから新しいパスワードを設定してください。
 
     {resetUrl}
 
@@ -292,41 +292,41 @@ password_reset:
 
     このリンクは1時間で無効になります。
 
-    – Fluxerチーム
+    – RdChatチーム
 registration_approved:
-  subject: Fluxerの登録が承認されました
+  subject: RdChatの登録が承認されました
   body: |-
     {username}さん、こんにちは。
 
-    Fluxerの登録が承認されました。
+    RdChatの登録が承認されました。
 
-    こちらからFluxerアプリにログインできます:
+    こちらからRdChatアプリにログインできます:
     {channelsUrl}
 
-    Fluxerへようこそ。
+    RdChatへようこそ。
 
-    – Fluxerチーム
+    – RdChatチーム
 report_resolved:
-  subject: Fluxerへの通報を確認しました
+  subject: RdChatへの通報を確認しました
   body: |-
     {username}さん、こんにちは。
 
-    あなたの通報 (ID: {reportId}) はFluxer安全チームが確認しました。
+    あなたの通報 (ID: {reportId}) はRdChat安全チームが確認しました。
 
     安全チームからの回答:
     {publicComment}
 
-    Fluxerをみんなにとって安全な場所にするためのご協力ありがとうございます。私たちはすべての通報を真剣に確認しており、コミュニティへの貢献に感謝しています。
+    RdChatをみんなにとって安全な場所にするためのご協力ありがとうございます。私たちはすべての通報を真剣に確認しており、コミュニティへの貢献に感謝しています。
 
-    この結果について質問や不安がある場合は、safety@fluxer.app までご連絡ください。
+    この結果について質問や不安がある場合は、safety@RdChat.app までご連絡ください。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 scheduled_deletion_notification:
-  subject: Fluxerアカウントの削除が予定されています
+  subject: RdChatアカウントの削除が予定されています
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントは永久削除の対象として削除が予定されています。
+    あなたのRdChatアカウントは永久削除の対象として削除が予定されています。
 
     削除予定日時: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -337,33 +337,33 @@ scheduled_deletion_notification:
 
     これは重大な対応です。予定日時になると、アカウントデータは完全に削除されます。
 
-    この対応が誤りだと思われる場合は、60日以内にこのメールアドレスから appeals@fluxer.app へ異議申し立てを送信できます。
+    この対応が誤りだと思われる場合は、60日以内にこのメールアドレスから appeals@RdChat.app へ異議申し立てを送信できます。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
 self_deletion_scheduled:
-  subject: Fluxerアカウントの削除が予約されました
+  subject: RdChatアカウントの削除が予約されました
   body: |-
     {username}さん、こんにちは。
 
-    Fluxerアカウントの削除がリクエストされました。アカウントは次の日時に永久削除される予定です。
+    RdChatアカウントの削除がリクエストされました。アカウントは次の日時に永久削除される予定です。
 
     {deletionDate, date, full} {deletionDate, time, short}
 
     心当たりがない場合は、アカウントにログインして削除をキャンセルしてください。あわせて、パスワードを変更してアカウントを保護することをおすすめします。
 
-    – Fluxerチーム
+    – RdChatチーム
 unban_notification:
-  subject: Fluxerアカウントの停止が解除されました
+  subject: RdChatアカウントの停止が解除されました
   body: |-
     {username}さん、こんにちは。
 
-    あなたのFluxerアカウントの停止は解除されました。
+    あなたのRdChatアカウントの停止は解除されました。
 
     {reason, select,
       null {}
       other {理由: {reason}}
     }
 
-    これで、再びアカウントにログインしてFluxerを利用できます。
+    これで、再びアカウントにログインしてRdChatを利用できます。
 
-    – Fluxer安全チーム
+    – RdChat安全チーム
