@@ -204,7 +204,7 @@ export const UserProfileMembershipInfo: React.FC<{profile: ProfileRecord; user: 
 					</span>
 					<div className={styles.membershipDates}>
 						<div className={styles.membershipDate}>
-							<Tooltip text={t`Fluxer`}>
+							<Tooltip text={t`RdChat`}>
 								<div className={styles.membershipIcon}>
 									<FluxerIcon className={clsx(styles.iconSmall, styles.textChat)} />
 								</div>
