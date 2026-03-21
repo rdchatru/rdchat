@@ -94,3 +94,5 @@ geoip_data
 next-env.d.ts
 .github/agents
 .github/prompts
+docker-compose.override.yml
+config/certs
