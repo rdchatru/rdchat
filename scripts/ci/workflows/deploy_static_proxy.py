@@ -49,7 +49,7 @@ services:
         parallelism: 1
         delay: 10s
       labels:
-        - 'caddy=http://fluxerstatic.com'
+        - 'caddy=http://static.rdchat.ru'
         - 'caddy.reverse_proxy={{upstreams 8080}}'
         - 'caddy.header.X-Robots-Tag="noindex, nofollow, nosnippet, noimageindex"'
         - 'caddy.header.Strict-Transport-Security="max-age=31536000; includeSubDomains; preload"'

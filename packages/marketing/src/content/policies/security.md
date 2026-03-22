@@ -19,7 +19,7 @@ Fluxer websites, applications, and services operated by Fluxer Platform AB, incl
 - `fluxerapp.com`
 - `fluxer.dev`
 - `fluxerusercontent.com`
-- `fluxerstatic.com`
+- `static.rdchat.ru`
 - `fluxer.media`
 - `fluxer.app`
 

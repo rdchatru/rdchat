@@ -30,7 +30,7 @@ const EMOJI_SPRITES = {
 } as const;
 
 const EMOJI_SIZE = 32;
-const TWEMOJI_CDN = 'https://fluxerstatic.com/emoji';
+const TWEMOJI_CDN = 'https://static.rdchat.ru/emoji';
 const SPRITE_SCALES = [1, 2] as const;
 
 interface EmojiObject {

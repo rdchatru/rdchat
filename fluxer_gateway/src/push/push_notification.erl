@@ -113,7 +113,7 @@ build_notification_payload(
         <<"title">> => Title,
         <<"body">> => ContentPreview,
         <<"icon">> => AuthorAvatarUrl,
-        <<"badge">> => <<"https://fluxerstatic.com/web/apple-touch-icon.png">>,
+        <<"badge">> => <<"https://static.rdchat.ru/web/apple-touch-icon.png">>,
         <<"data">> =>
             #{
                 <<"channel_id">> => integer_to_binary(ChannelId),

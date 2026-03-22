@@ -120,7 +120,7 @@ module.exports = {
 	},
 
 	squirrelWindows: {
-		iconUrl: `https://fluxerstatic.com/desktop/${iconDir}/icon.ico`,
+		iconUrl: `https://static.rdchat.ru/desktop/${iconDir}/icon.ico`,
 		name: packageName,
 	},
 

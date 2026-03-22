@@ -34,7 +34,7 @@
 			"static_cdn_domain": {
 				"type": "string",
 				"description": "Separate domain for static CDN assets (optional).",
-				"default": "fluxerstatic.com"
+				"default": "static.rdchat.ru"
 			},
 			"invite_domain": {
 				"type": "string",

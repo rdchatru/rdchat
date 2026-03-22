@@ -35,7 +35,7 @@ import {Trans} from '@lingui/react/macro';
 import {observer} from 'mobx-react-lite';
 import {useEffect, useState} from 'react';
 
-const FLUXER_HQ_INVITE_CODE = 'fluxer-hq';
+const FLUXER_HQ_INVITE_CODE = 'hq';
 
 export const GuildMembershipCtaNagbar = observer(({isMobile}: {isMobile: boolean}) => {
 	const isSelfHosted = RuntimeConfigStore.isSelfHosted();

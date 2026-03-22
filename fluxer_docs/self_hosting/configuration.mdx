@@ -141,7 +141,7 @@ Global authentication configuration.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| bluesky? | [bluesky](#bluesky) | Bluesky OAuth client configuration. Default: `{"enabled":true,"client_name":"Fluxer","client_uri":"","logo_uri":"https://fluxerstatic.com/web/apple-touch-icon.png","tos_uri":"https://fluxer.app/terms","policy_uri":"https://fluxer.app/privacy","keys":[]}` |
+| bluesky? | [bluesky](#bluesky) | Bluesky OAuth client configuration. Default: `{"enabled":true,"client_name":"Fluxer","client_uri":"","logo_uri":"https://static.rdchat.ru/web/apple-touch-icon.png","tos_uri":"https://fluxer.app/terms","policy_uri":"https://fluxer.app/privacy","keys":[]}` |
 | connection_initiation_secret | string | Secret key for signing connection initiation tokens. |
 | passkeys? | [passkeys](#passkeys) | Passkey configuration. Default: `{}` |
 | sudo_mode_secret | string | Secret key for verifying sudo mode tokens. |
@@ -215,7 +215,7 @@ Bluesky OAuth client configuration.
 | client_uri? | string | URI describing the client application. Default: `""` |
 | enabled? | boolean | Whether Bluesky OAuth connections are enabled. Default: `true` |
 | keys? | array&lt;[bluesky_key](#bluesky-key)&gt; | Key definitions used to sign private key JWT assertions. Default: `[]` |
-| logo_uri? | string | Optional logo presented during authorization. Default: `https://fluxerstatic.com/web/apple-touch-icon.png` |
+| logo_uri? | string | Optional logo presented during authorization. Default: `https://static.rdchat.ru/web/apple-touch-icon.png` |
 | policy_uri? | string | Privacy policy URI exposed to Bluesky. Default: `https://fluxer.app/privacy` |
 | tos_uri? | string | Terms of service URI exposed to Bluesky. Default: `https://fluxer.app/terms` |
 
@@ -226,7 +226,7 @@ Bluesky OAuth client configuration.
   "client_uri": "",
   "enabled": true,
   "keys": [],
-  "logo_uri": "https://fluxerstatic.com/web/apple-touch-icon.png",
+  "logo_uri": "https://static.rdchat.ru/web/apple-touch-icon.png",
   "policy_uri": "https://fluxer.app/privacy",
   "tos_uri": "https://fluxer.app/terms"
 }
@@ -416,7 +416,7 @@ Configuration for domains and ports used to construct public URLs.
 | invite_domain? | string | Domain for short invite links (optional). Default: `""` |
 | public_port? | number | The public-facing port number. Default: `8088` |
 | public_scheme? | enum&lt;`http`, `https`&gt; | The URL scheme for public endpoints. Default: `http` |
-| static_cdn_domain? | string | Separate domain for static CDN assets (optional). Default: `fluxerstatic.com` |
+| static_cdn_domain? | string | Separate domain for static CDN assets (optional). Default: `static.rdchat.ru` |
 
 <Expandable title="Example JSON">
 ```json
@@ -428,7 +428,7 @@ Configuration for domains and ports used to construct public URLs.
   "invite_domain": "",
   "public_port": 8088,
   "public_scheme": "http",
-  "static_cdn_domain": "fluxerstatic.com"
+  "static_cdn_domain": "static.rdchat.ru"
 }
 ```
 </Expandable>

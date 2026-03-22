@@ -36,7 +36,7 @@ interface SpriteSheetVariant {
 	retina: string;
 }
 
-const SPRITE_BASE = 'https://fluxerstatic.com/emoji';
+const SPRITE_BASE = 'https://static.rdchat.ru/emoji';
 const SPRITE_VERSION = '2';
 
 const buildVersionedSpriteUrl = (fileName: string): string => {

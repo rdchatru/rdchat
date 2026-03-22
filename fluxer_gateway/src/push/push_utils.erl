@@ -47,7 +47,7 @@ construct_avatar_url(UserId, Hash) ->
 get_default_avatar_url(UserId) ->
     Index = avatar_index(UserId),
     iolist_to_binary([
-        <<"https://fluxerstatic.com/avatars/">>,
+        <<"https://static.rdchat.ru/avatars/">>,
         integer_to_binary(Index),
         <<".png">>
     ]).
@@ -264,7 +264,7 @@ extract_origin_test() ->
 get_default_avatar_url_test() ->
     Url = get_default_avatar_url(<<"123">>),
     ?assert(is_binary(Url)),
-    ?assertMatch(<<"https://fluxerstatic.com/avatars/", _/binary>>, Url).
+    ?assertMatch(<<"https://static.rdchat.ru/avatars/", _/binary>>, Url).
 
 avatar_index_test() ->
     ?assertEqual(0, avatar_index(<<"0">>)),

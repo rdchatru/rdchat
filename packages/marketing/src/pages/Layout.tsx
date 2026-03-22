@@ -48,9 +48,9 @@ export function renderLayout(
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{buildMetaTags(ctx, pageMeta, pageUrl)}
 				<title>{pageMeta.title}</title>
-				<link rel="preconnect" href="https://fluxerstatic.com" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/ibm-plex.css" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/bricolage.css" />
+				<link rel="preconnect" href="https://static.rdchat.ru" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/ibm-plex.css" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/bricolage.css" />
 				<link rel="stylesheet" href={cacheBustedAsset(ctx, '/static/app.css')} />
 				{buildIconLinks(ctx.staticCdnEndpoint)}
 				{mainPageScript()}
@@ -83,9 +83,9 @@ export function renderDocsLayout(
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{buildMetaTags(ctx, pageMeta, pageUrl)}
 				<title>{pageMeta.title}</title>
-				<link rel="preconnect" href="https://fluxerstatic.com" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/ibm-plex.css" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/bricolage.css" />
+				<link rel="preconnect" href="https://static.rdchat.ru" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/ibm-plex.css" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/bricolage.css" />
 				<link rel="stylesheet" href={cacheBustedAsset(ctx, '/static/app.css')} />
 				{buildIconLinks(ctx.staticCdnEndpoint)}
 				{docsPageScript()}
@@ -122,9 +122,9 @@ export function renderBlogLayout(
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{buildMetaTags(ctx, pageMeta, pageUrl)}
 				<title>{pageMeta.title}</title>
-				<link rel="preconnect" href="https://fluxerstatic.com" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/ibm-plex.css" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/bricolage.css" />
+				<link rel="preconnect" href="https://static.rdchat.ru" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/ibm-plex.css" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/bricolage.css" />
 				<link rel="stylesheet" href={cacheBustedAsset(ctx, '/static/app.css')} />
 				{buildIconLinks(ctx.staticCdnEndpoint)}
 				{docsPageScript()}
@@ -160,9 +160,9 @@ export function renderBlogPostLayout(
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{buildMetaTags(ctx, pageMeta, pageUrl)}
 				<title>{pageMeta.title}</title>
-				<link rel="preconnect" href="https://fluxerstatic.com" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/ibm-plex.css" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/bricolage.css" />
+				<link rel="preconnect" href="https://static.rdchat.ru" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/ibm-plex.css" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/bricolage.css" />
 				<link rel="stylesheet" href={cacheBustedAsset(ctx, '/static/app.css')} />
 				{buildIconLinks(ctx.staticCdnEndpoint)}
 				{docsPageScript()}
@@ -201,9 +201,9 @@ export function renderContentLayout(
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 				{buildMetaTags(ctx, pageMeta, pageUrl)}
 				<title>{pageMeta.title}</title>
-				<link rel="preconnect" href="https://fluxerstatic.com" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/ibm-plex.css" />
-				<link rel="stylesheet" href="https://fluxerstatic.com/fonts/bricolage.css" />
+				<link rel="preconnect" href="https://static.rdchat.ru" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/ibm-plex.css" />
+				<link rel="stylesheet" href="https://static.rdchat.ru/fonts/bricolage.css" />
 				<link rel="stylesheet" href={cacheBustedAsset(ctx, '/static/app.css')} />
 				{buildIconLinks(ctx.staticCdnEndpoint)}
 				{docsPageScript()}

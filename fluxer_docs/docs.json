@@ -143,8 +143,8 @@
 		}
 	},
 	"logo": {
-		"light": "https://fluxerstatic.com/marketing/branding/logo-color.svg",
-		"dark": "https://fluxerstatic.com/marketing/branding/logo-white.svg"
+		"light": "https://static.rdchat.ru/marketing/branding/logo-color.svg",
+		"dark": "https://static.rdchat.ru/marketing/branding/logo-white.svg"
 	},
 	"footer": {
 		"socials": {

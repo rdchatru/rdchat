@@ -47,7 +47,7 @@ export class HackerNewsResolver extends BaseResolver {
 	private readonly API_BASE = 'https://hacker-news.firebaseio.com/v0';
 	private readonly SITE_BASE = 'https://news.ycombinator.com';
 	private readonly HN_COLOR = 0xff6600;
-	private readonly HN_ICON = 'https://fluxerstatic.com/embeds/icons/hn.webp';
+	private readonly HN_ICON = 'https://static.rdchat.ru/embeds/icons/hn.webp';
 	private readonly MAX_DESCRIPTION_LENGTH = 400;
 
 	match(url: URL, mimeType: string, _content: Uint8Array): boolean {
