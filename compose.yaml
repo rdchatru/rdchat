@@ -6,8 +6,6 @@ x-logging: &default-logging
 
 services:
 
-services:
-
   minio:
     image: minio/minio:latest
     container_name: minio
