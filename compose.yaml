@@ -6,50 +6,6 @@ x-logging: &default-logging
 
 services:
 
-  minio:
-    image: minio/minio:latest
-    container_name: minio
-    restart: unless-stopped
-    command: server /data --console-address ":9001"
-    ports:
-      - "9000:9000"
-      - "9001:9001"          
-    environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
-    volumes:
-      - ./data/minio:/data   
-    healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:9000/minio/health/live"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-    logging: *default-logging
-
-  minio-setup:
-    image: minio/mc:latest
-    container_name: minio-setup
-    depends_on:
-      minio:
-        condition: service_healthy
-    environment:
-      MINIO_ROOT_USER: ${MINIO_ROOT_USER}
-      MINIO_ROOT_PASSWORD: ${MINIO_ROOT_PASSWORD}
-    entrypoint: >
-      /bin/sh -c "
-      mc alias set myminio http://minio:9000 $$MINIO_ROOT_USER $$MINIO_ROOT_PASSWORD;
-      mc mb myminio/fluxer --ignore-existing;
-      mc mb myminio/fluxer-downloads --ignore-existing;
-      mc mb myminio/fluxer-harvests --ignore-existing;
-      mc mb myminio/fluxer-reports --ignore-existing;
-      mc mb myminio/fluxer-static --ignore-existing;
-      mc mb myminio/fluxer-uploads --ignore-existing;
-      echo 'All buckets created';
-      exit 0;
-      "
-    restart: "no"
-    logging: *default-logging
-
   fluxer-nats-core:
     image: nats:2.10-alpine
     container_name: fluxer-nats-core
@@ -99,7 +55,7 @@ services:
         condition: service_healthy
     volumes:
       - ./config:/usr/src/app/config:ro
-      - ./data:/data
+      - ./data:/usr/src/app/data
     healthcheck:
       test: ['CMD-SHELL', 'curl -fsS http://127.0.0.1:8080/_health || exit 1']
       interval: 15s
