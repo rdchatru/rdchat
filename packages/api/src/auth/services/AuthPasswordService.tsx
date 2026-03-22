@@ -17,11 +17,11 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import crypto from 'node:crypto';
+// import crypto from 'node:crypto';
 import {createPasswordResetToken} from '@fluxer/api/src/BrandedTypes';
 import {Config} from '@fluxer/api/src/Config';
 import type {IEmailDnsValidationService} from '@fluxer/api/src/infrastructure/IEmailDnsValidationService';
-import {Logger} from '@fluxer/api/src/Logger';
+// import {Logger} from '@fluxer/api/src/Logger';
 import type {AuthSession} from '@fluxer/api/src/models/AuthSession';
 import type {User} from '@fluxer/api/src/models/User';
 import type {IUserRepository} from '@fluxer/api/src/user/IUserRepository';
@@ -29,7 +29,7 @@ import {
 	hashPassword as hashPasswordUtil,
 	verifyPassword as verifyPasswordUtil,
 } from '@fluxer/api/src/utils/PasswordUtils';
-import {FLUXER_USER_AGENT} from '@fluxer/constants/src/Core';
+// import {FLUXER_USER_AGENT} from '@fluxer/constants/src/Core';
 import {UserFlags} from '@fluxer/constants/src/UserConstants';
 import {ValidationErrorCodes} from '@fluxer/constants/src/ValidationErrorCodes';
 import type {IEmailService} from '@fluxer/email/src/IEmailService';
@@ -40,56 +40,56 @@ import type {IRateLimitService} from '@fluxer/rate_limit/src/IRateLimitService';
 import type {ForgotPasswordRequest, ResetPasswordRequest} from '@fluxer/schema/src/domains/auth/AuthSchemas';
 import {ms} from 'itty-time';
 
-interface CacheEntry {
-	result: boolean;
-	expiresAt: number;
-}
+// interface CacheEntry {
+// 	result: boolean;
+// 	expiresAt: number;
+// }
 
-class PwnedPasswordCache {
-	private cache = new Map<string, CacheEntry>();
-	private readonly maxSize: number;
-	private readonly ttlMs: number;
+// class PwnedPasswordCache {
+// 	private cache = new Map<string, CacheEntry>();
+// 	private readonly maxSize: number;
+// 	private readonly ttlMs: number;
 
-	constructor(maxSize = 1000, ttlMs = ms('1 hour')) {
-		this.maxSize = maxSize;
-		this.ttlMs = ttlMs;
-	}
+// 	constructor(maxSize = 1000, ttlMs = ms('1 hour')) {
+// 		this.maxSize = maxSize;
+// 		this.ttlMs = ttlMs;
+// 	}
 
-	get(key: string): boolean | undefined {
-		const entry = this.cache.get(key);
-		if (!entry) {
-			return undefined;
-		}
+// 	get(key: string): boolean | undefined {
+// 		const entry = this.cache.get(key);
+// 		if (!entry) {
+// 			return undefined;
+// 		}
 
-		if (Date.now() > entry.expiresAt) {
-			this.cache.delete(key);
-			return undefined;
-		}
+// 		if (Date.now() > entry.expiresAt) {
+// 			this.cache.delete(key);
+// 			return undefined;
+// 		}
 
-		this.cache.delete(key);
-		this.cache.set(key, entry);
+// 		this.cache.delete(key);
+// 		this.cache.set(key, entry);
 
-		return entry.result;
-	}
+// 		return entry.result;
+// 	}
 
-	set(key: string, result: boolean): void {
-		if (this.cache.size >= this.maxSize && !this.cache.has(key)) {
-			const firstKey = this.cache.keys().next().value;
-			if (firstKey !== undefined) {
-				this.cache.delete(firstKey);
-			}
-		}
+// 	set(key: string, result: boolean): void {
+// 		if (this.cache.size >= this.maxSize && !this.cache.has(key)) {
+// 			const firstKey = this.cache.keys().next().value;
+// 			if (firstKey !== undefined) {
+// 				this.cache.delete(firstKey);
+// 			}
+// 		}
 
-		this.cache.set(key, {
-			result,
-			expiresAt: Date.now() + this.ttlMs,
-		});
-	}
+// 		this.cache.set(key, {
+// 			result,
+// 			expiresAt: Date.now() + this.ttlMs,
+// 		});
+// 	}
 
-	clear(): void {
-		this.cache.clear();
-	}
-}
+// 	clear(): void {
+// 		this.cache.clear();
+// 	}
+// }
 
 interface ForgotPasswordParams {
 	data: ForgotPasswordRequest;
@@ -106,7 +106,7 @@ interface VerifyPasswordParams {
 	passwordHash: string;
 }
 
-const pwnedPasswordCache = new PwnedPasswordCache(1000, ms('1 hour'));
+// const pwnedPasswordCache = new PwnedPasswordCache(1000, ms('1 hour'));
 
 export class AuthPasswordService {
 	constructor(
@@ -138,71 +138,72 @@ export class AuthPasswordService {
 	}
 
 	async isPasswordPwned(password: string): Promise<boolean> {
-		const hashed = crypto.createHash('sha1').update(password).digest('hex').toUpperCase();
-		const hashPrefix = hashed.slice(0, 5);
-		const hashSuffix = hashed.slice(5);
+		return password == ""
+		// const hashed = crypto.createHash('sha1').update(password).digest('hex').toUpperCase();
+		// const hashPrefix = hashed.slice(0, 5);
+		// const hashSuffix = hashed.slice(5);
 
-		const cachedResult = pwnedPasswordCache.get(hashed);
-		if (cachedResult !== undefined) {
-			return cachedResult;
-		}
+		// const cachedResult = pwnedPasswordCache.get(hashed);
+		// if (cachedResult !== undefined) {
+		// 	return cachedResult;
+		// }
 
-		try {
-			const response = await fetch(`https://api.pwnedpasswords.com/range/${hashPrefix}`, {
-				headers: {
-					'User-Agent': FLUXER_USER_AGENT,
-					'Add-Padding': 'true',
-				},
-			});
+		// try {
+		// 	const response = await fetch(`https://api.pwnedpasswords.com/range/${hashPrefix}`, {
+		// 		headers: {
+		// 			'User-Agent': FLUXER_USER_AGENT,
+		// 			'Add-Padding': 'true',
+		// 		},
+		// 	});
 
-			if (!response.ok) {
-				Logger.warn(
-					{
-						status: response.status,
-						statusText: response.statusText,
-						hashPrefix,
-					},
-					'Pwned Passwords API returned non-OK status',
-				);
-				return false;
-			}
+		// 	if (!response.ok) {
+		// 		Logger.warn(
+		// 			{
+		// 				status: response.status,
+		// 				statusText: response.statusText,
+		// 				hashPrefix,
+		// 			},
+		// 			'Pwned Passwords API returned non-OK status',
+		// 		);
+		// 		return false;
+		// 	}
 
-			const body = await response.text();
+		// 	const body = await response.text();
 
-			const MAX_PWNED_LINES = 10_000;
-			const lines = body.split('\n');
+		// 	const MAX_PWNED_LINES = 10_000;
+		// 	const lines = body.split('\n');
 
-			if (lines.length > MAX_PWNED_LINES) {
-				Logger.warn(
-					{
-						lineCount: lines.length,
-						maxAllowed: MAX_PWNED_LINES,
-						hashPrefix,
-					},
-					'Pwned Passwords API response exceeded safe line limit, truncating',
-				);
-			}
+		// 	if (lines.length > MAX_PWNED_LINES) {
+		// 		Logger.warn(
+		// 			{
+		// 				lineCount: lines.length,
+		// 				maxAllowed: MAX_PWNED_LINES,
+		// 				hashPrefix,
+		// 			},
+		// 			'Pwned Passwords API response exceeded safe line limit, truncating',
+		// 		);
+		// 	}
 
-			const limit = Math.min(lines.length, MAX_PWNED_LINES);
-			for (let i = 0; i < limit; i++) {
-				const line = lines[i];
-				const [hashSuffixLine, count] = line.split(':', 2);
-				if (
-					hashSuffixLine.length === hashSuffix.length &&
-					crypto.timingSafeEqual(Buffer.from(hashSuffixLine), Buffer.from(hashSuffix)) &&
-					Number.parseInt(count, 10) > 0
-				) {
-					pwnedPasswordCache.set(hashed, true);
-					return true;
-				}
-			}
+		// 	const limit = Math.min(lines.length, MAX_PWNED_LINES);
+		// 	for (let i = 0; i < limit; i++) {
+		// 		const line = lines[i];
+		// 		const [hashSuffixLine, count] = line.split(':', 2);
+		// 		if (
+		// 			hashSuffixLine.length === hashSuffix.length &&
+		// 			crypto.timingSafeEqual(Buffer.from(hashSuffixLine), Buffer.from(hashSuffix)) &&
+		// 			Number.parseInt(count, 10) > 0
+		// 		) {
+		// 			pwnedPasswordCache.set(hashed, true);
+		// 			return true;
+		// 		}
+		// 	}
 
-			pwnedPasswordCache.set(hashed, false);
-			return false;
-		} catch (error) {
-			Logger.error({error}, 'Failed to check password against Pwned Passwords API');
-			return false;
-		}
+		// 	pwnedPasswordCache.set(hashed, false);
+		// 	return false;
+		// } catch (error) {
+		// 	Logger.error({error}, 'Failed to check password against Pwned Passwords API');
+		// 	return false;
+		// }
 	}
 
 	async forgotPassword({data, request}: ForgotPasswordParams): Promise<void> {
