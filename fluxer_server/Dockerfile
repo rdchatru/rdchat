@@ -173,6 +173,7 @@ WORKDIR /usr/src/app
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
         ffmpeg \
+        libimage-exiftool-perl \
         && rm -rf /var/lib/apt/lists/*
 
 RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
