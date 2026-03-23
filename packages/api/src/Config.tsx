@@ -211,7 +211,7 @@ export function buildAPIConfigFromMaster(master: MasterConfig): APIConfig {
 						port: master.integrations.email.smtp.port,
 						username: master.integrations.email.smtp.username,
 						password: master.integrations.email.smtp.password,
-						secure: master.integrations.email.smtp.secure ?? true,
+						secure: false,
 					}
 				: undefined,
 		},

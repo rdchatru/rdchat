@@ -7898,7 +7898,7 @@ msgstr "Хочешь отправить этот закреп в будущее?
 #: src/components/modals/tabs/AccessibilityTab.tsx:148
 #: src/components/modals/tabs/MyProfileTab.tsx:767
 msgid "Doc, I'm from the future. I came here in a time machine that you invented. Now, I need your help to get back to the year 1985."
-msgstr "Док, я из будущего. Я приехал сюда на машине времени, которую ты изобрёл. Теперь мне нужна твоя помощь, чтобы вернуться в 1985 год."
+msgstr "Доктор фримен, что вы тут делаете?"
 
 #: src/utils/AttachmentPreviewUtils.tsx:197
 msgid "Dockerfile"

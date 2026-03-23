@@ -17,8 +17,8 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import type {EmailMessage, IEmailProvider} from '@fluxer/email/src/EmailProviderTypes';
-import {createLogger} from '@fluxer/logger/src/Logger';
+import type { EmailMessage, IEmailProvider } from '@fluxer/email/src/EmailProviderTypes';
+import { createLogger } from '@fluxer/logger/src/Logger';
 import nodemailer from 'nodemailer';
 
 const logger = createLogger('@fluxer/email/src/SmtpEmailProvider');
@@ -41,10 +41,13 @@ export class SmtpEmailProvider implements IEmailProvider {
 		this.transporter = nodemailer.createTransport({
 			host: config.host,
 			port: config.port,
-			secure: config.secure ?? true,
+			secure: false,
 			auth: {
 				user: config.username,
 				pass: config.password,
+			},
+			tls: {
+				rejectUnauthorized: false
 			},
 			connectionTimeout: config.connectionTimeoutMs,
 			greetingTimeout: config.greetingTimeoutMs,
@@ -52,19 +55,35 @@ export class SmtpEmailProvider implements IEmailProvider {
 		});
 	}
 
-	async sendEmail(message: EmailMessage): Promise<boolean> {
-		try {
+async sendEmail(message: EmailMessage, retries = 3): Promise<boolean> {
+    for (let attempt = 1; attempt <= retries; attempt++) {
+        try {
 			await this.transporter.sendMail({
 				to: message.to,
 				from: `${message.from.name} <${message.from.email}>`,
+				envelope: {
+					from: message.from.email, // This explicitly sets the MAIL FROM
+					to: message.to
+				},
 				subject: message.subject,
 				text: message.text,
 			});
-			logger.debug({to: message.to}, 'Email sent via SMTP');
-			return true;
-		} catch (error) {
-			logger.error({error}, 'SMTP send failed');
-			return false;
-		}
-	}
+            return true;
+        } catch (error: any) {
+            // Check if it's a temporary 4xx error
+            const isTemporary = error.responseCode >= 400 && error.responseCode < 500;
+            
+            if (isTemporary && attempt < retries) {
+                const delay = attempt * 1000; // Exponential backoff
+                logger.warn({ attempt, delay }, 'Temporary SMTP error, retrying...');
+                await new Promise(resolve => setTimeout(resolve, delay));
+                continue;
+            }
+
+            logger.error({ error }, 'SMTP send failed permanently');
+            return false;
+        }
+    }
+    return false;
+}
 }
