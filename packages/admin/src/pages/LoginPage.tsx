@@ -37,7 +37,7 @@ export function LoginPage({config, errorMessage}: LoginPageProps) {
 			<head>
 				<meta charset="UTF-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-				<title>Login ~ Fluxer Admin</title>
+				<title>Login ~ RdChat Admin</title>
 				<link rel="stylesheet" href={`${config.basePath}/static/app.css`} />
 			</head>
 			<body class="flex min-h-screen items-center justify-center bg-neutral-50 p-4">

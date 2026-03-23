@@ -65,7 +65,7 @@ export async function renderNotFoundPage(c: Context, ctx: MarketingContext): Pro
 	];
 
 	const meta = pageMeta(
-		`Fluxer | ${ctx.i18n.getMessage('navigation.page_not_found.title', ctx.locale)}`,
+		`RdChat | ${ctx.i18n.getMessage('navigation.page_not_found.title', ctx.locale)}`,
 		subtitle,
 		'website',
 	);

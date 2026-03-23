@@ -33,7 +33,7 @@ export interface PageMeta {
 
 export function defaultPageMeta(): PageMeta {
 	return {
-		title: 'Fluxer: A chat app that puts you first',
+		title: 'RdChat: A chat app that puts you first',
 		description:
 			'Fluxer is a free and open source instant messaging and VoIP platform built for friends, groups, and communities.',
 		ogType: 'website',
@@ -56,7 +56,7 @@ export function pageMeta(title: string, description: string, ogType: string): Pa
 
 export function articlePageMeta(title: string, description: string): PageMeta {
 	return {
-		title: `Fluxer | ${title}`,
+		title: `RdChat | ${title}`,
 		description,
 		ogType: 'article',
 		ogImageUrl: null,
@@ -79,7 +79,7 @@ export function withModifiedTime(meta: PageMeta, isoDatetime: string): PageMeta 
 
 export function formatPageTitle(baseTitle: string): string {
 	// if (baseTitle === 'Fluxer') return 'Fluxer';
-	// return `Fluxer | ${baseTitle}`;
+	// return `RdChat | ${baseTitle}`;
 	return "RdChat";
 }
 

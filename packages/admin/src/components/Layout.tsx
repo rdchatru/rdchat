@@ -59,7 +59,7 @@ const Head: FC<{
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		{autoRefresh && <meta http-equiv="refresh" content="3" />}
-		<title>{title} ~ Fluxer Admin</title>
+		<title>{title} ~ RdChat Admin</title>
 		<link rel="stylesheet" href={`${staticCdnEndpoint}/fonts/ibm-plex.css`} />
 		<link rel="stylesheet" href={`${staticCdnEndpoint}/fonts/bricolage.css`} />
 		<link rel="stylesheet" href={cacheBustedAsset(basePath, assetVersion, '/static/app.css')} />

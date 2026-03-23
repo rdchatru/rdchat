@@ -54,7 +54,7 @@ export async function renderHelpIndexPage(c: Context, ctx: MarketingContext): Pr
 	const content: ReadonlyArray<JSX.Element> = [renderHelpIndexBody(ctx, articles)];
 
 	const meta = pageMeta(
-		`Fluxer | ${ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}`,
+		`RdChat | ${ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}`,
 		ctx.i18n.getMessage('company_and_resources.help.help_center_description', ctx.locale),
 		'website',
 	);
