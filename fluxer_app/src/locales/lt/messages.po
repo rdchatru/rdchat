@@ -1006,7 +1006,7 @@ msgstr "<0/> pradėjo skambutį."
 #. placeholder {0}: guild.name
 #: src/components/layout/GuildLayout.tsx:134
 msgid "<0>{0}</0> is currently only accessible to Fluxer staff members"
-msgstr "<0>{0}</0> šiuo metu prieinamas tik Fluxer darbuotojams"
+msgstr "<0>{0}</0> šiuo metu prieinamas tik RdChat darbuotojams"
 
 #. placeholder {0}: targetUser.tag
 #: src/components/modals/TimeoutMemberSheet.tsx:122
@@ -2241,7 +2241,7 @@ msgstr "Visų būsenų tipai"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
 msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Visos vertimai šiuo metu yra sugeneruoti LLM su minimaliu žmogaus redagavimu. Mes norėtume, kad tikri žmonės padėtų lokalizuoti Fluxer į jūsų kalbą! Tam siųskite el. laišką adresu <0>i18n@fluxer.app</0> ir mes džiaugiamės galėdami priimti jūsų indėlį."
+msgstr "Visos vertimai šiuo metu yra sugeneruoti LLM su minimaliu žmogaus redagavimu. Mes norėtume, kad tikri žmonės padėtų lokalizuoti RdChat į jūsų kalbą! Tam siųskite el. laišką adresu <0>i18n@fluxer.app</0> ir mes džiaugiamės galėdami priimti jūsų indėlį."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -2322,15 +2322,15 @@ msgstr "Leisti lanksčius teksto kanalo pavadinimus"
 
 #: src/components/modals/tabs/VideoTab.tsx:174
 msgid "Allow Fluxer to access your camera in System Settings → Privacy & Security → Camera to preview and select devices."
-msgstr "Leiskite Fluxer pasiekti jūsų kamerą Sistemos nustatymuose → Privatumas ir saugumas → Kamera, kad peržiūrėtumėte ir pasirinktumėte įrenginius."
+msgstr "Leiskite RdChat pasiekti jūsų kamerą Sistemos nustatymuose → Privatumas ir saugumas → Kamera, kad peržiūrėtumėte ir pasirinktumėte įrenginius."
 
 #: src/components/modals/tabs/VoiceTab.tsx:202
 msgid "Allow Fluxer to access your microphone in System Settings → Privacy & Security → Microphone."
-msgstr "Leiskite Fluxer pasiekti jūsų mikrofoną Sistemos nustatymuose → Privatumas ir saugumas → Mikrofonas."
+msgstr "Leiskite RdChat pasiekti jūsų mikrofoną Sistemos nustatymuose → Privatumas ir saugumas → Mikrofonas."
 
 #: src/components/modals/tabs/VoiceTab.tsx:206
 msgid "Allow Fluxer to access your microphone. Check your browser address bar or settings to enable permissions."
-msgstr "Leiskite Fluxer pasiekti jūsų mikrofoną. Patikrinkite savo naršyklės adreso juostą arba nustatymus, kad įgalintumėte leidimus."
+msgstr "Leiskite RdChat pasiekti jūsų mikrofoną. Patikrinkite savo naršyklės adreso juostą arba nustatymus, kad įgalintumėte leidimus."
 
 #: src/components/modals/tabs/privacy_safety_tab/ConnectionsTab.tsx:104
 msgid "Allow for all communities"
@@ -3279,7 +3279,7 @@ msgstr "Automatiškai leisti GIF"
 
 #: src/components/modals/tabs/accessibility_tab/AnimationTab.tsx:113
 msgid "Automatically play GIFs when Fluxer is focused"
-msgstr "Automatiškai leisti GIF, kai Fluxer yra aktyvus"
+msgstr "Automatiškai leisti GIF, kai RdChat yra aktyvus"
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:230
 msgid "Automatically screen messages for explicit content in non-NSFW channels."
@@ -3922,7 +3922,7 @@ msgstr "Pirkti dovaną"
 
 #: src/components/modals/AddGuildModal.tsx:360
 msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Community Guidelines</0>."
-msgstr "Sukurdami bendruomenę, sutinkate laikytis ir palaikyti <0>Fluxer bendruomenės gairių</0>."
+msgstr "Sukurdami bendruomenę, sutinkate laikytis ir palaikyti <0>RdChat bendruomenės gairių</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
 msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
@@ -4291,11 +4291,11 @@ msgstr "Keisti emodži"
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:60
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:70
 msgid "Change FluxerTag"
-msgstr "Keisti FluxerTag"
+msgstr "Keisti RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:163
 msgid "Change FluxerTag form"
-msgstr "FluxerTag keitimo forma"
+msgstr "RdChatTag keitimo forma"
 
 #: src/components/channel/direct_message/DMList.tsx:676
 #: src/components/channel/direct_message/DMList.tsx:681
@@ -4382,7 +4382,7 @@ msgstr "Pakeisti savo el. pašto adresą"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:164
 msgid "Change Your FluxerTag"
-msgstr "Pakeisti savo FluxerTag"
+msgstr "Pakeisti savo RdChatTag"
 
 #: src/hooks/useCommands.tsx:70
 msgid "Change your nickname in this community."
@@ -4742,11 +4742,11 @@ msgstr "Pasirinkite paskirties vietą sisteminėms ir pasveikinimo žinutėms"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:134
 msgid "Choose how Fluxer selects the video codec for screen sharing."
-msgstr "Pasirinkite, kaip Fluxer pasirenka vaizdo kodeką ekrano dalijimuisi."
+msgstr "Pasirinkite, kaip RdChat pasirenka vaizdo kodeką ekrano dalijimuisi."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:268
 msgid "Choose how Fluxer treats this community for age-gating. Age Restricted blocks access for users under 18 and shows a content warning for adults, subject to local laws."
-msgstr "Pasirinkite, kaip Fluxer tvarko šią bendruomenę dėl amžiaus apribojimų. Amžiaus apribota blokuoja prieigą vartotojams, jaunesniems nei 18 metų, ir rodo turinio įspėjimą suaugusiems, atsižvelgiant į vietinius įstatymus."
+msgstr "Pasirinkite, kaip RdChat tvarko šią bendruomenę dėl amžiaus apribojimų. Amžiaus apribota blokuoja prieigą vartotojams, jaunesniems nei 18 metų, ir rodo turinio įspėjimą suaugusiems, atsižvelgiant į vietinius įstatymus."
 
 #: src/components/modals/tabs/AppearanceTab.tsx:85
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:133
@@ -4771,7 +4771,7 @@ msgstr "Pasirinkite, ką {clientLabel} gali daryti jūsų bendruomenėje. Atžym
 
 #: src/components/modals/tabs/AdvancedTab.tsx:109
 msgid "Choose what Fluxer remembers about your window between restarts and reloads on this device."
-msgstr "Pasirinkite, ką Fluxer prisimena apie jūsų langą tarp perkrovimų ir paleidimų šiame įrenginyje."
+msgstr "Pasirinkite, ką RdChat prisimena apie jūsų langą tarp perkrovimų ir paleidimų šiame įrenginyje."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:202
 msgid "Choose what members must have before they can post or DM community members."
@@ -4848,7 +4848,7 @@ msgstr "Patvirtinkite savo paskyrą, kad galėtumėte skambinti"
 
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:57
 msgid "Claim your account to change your FluxerTag"
-msgstr "Pareikškite savo paskyrą, kad pakeistumėte savo FluxerTag"
+msgstr "Pareikškite savo paskyrą, kad pakeistumėte savo RdChatTag"
 
 #: src/components/modals/tabs/applications_tab/index.tsx:147
 msgid "Claim your account to create applications."
@@ -4869,11 +4869,11 @@ msgstr "Patvirtinkite savo paskyrą, kad prisijungtumėte prie balso kanalų, ku
 #: src/components/modals/components/plutonium/PricingSection.tsx:54
 #: src/components/modals/components/PlutoniumContent.tsx:99
 msgid "Claim your account to purchase Fluxer Plutonium."
-msgstr "Paimk savo paskyrą, kad įsigytum Fluxer Plutonium."
+msgstr "Paimk savo paskyrą, kad įsigytum RdChat Plutonium."
 
 #: src/components/modals/components/plutonium/SubscriptionCard.tsx:104
 msgid "Claim your account to purchase or redeem Fluxer Plutonium."
-msgstr "Paimk savo paskyrą, kad įsigytum arba išpirktum Fluxer Plutonium."
+msgstr "Paimk savo paskyrą, kad įsigytum arba išpirktum RdChat Plutonium."
 
 #: src/components/modals/tabs/GiftInventoryTab.tsx:240
 msgid "Claim your account to redeem or manage Plutonium gift codes."
@@ -5031,7 +5031,7 @@ msgstr "spustelėti"
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:76
 msgid "Click \"Open Settings\" to open System Settings, then enable Fluxer in Input Monitoring."
-msgstr "Spustelėkite „Atidaryti nustatymus“, kad atidarytumėte sistemos nustatymus, tada įjunkite Fluxer įvesties stebėjime."
+msgstr "Spustelėkite „Atidaryti nustatymus“, kad atidarytumėte sistemos nustatymus, tada įjunkite RdChat įvesties stebėjime."
 
 #: src/components/modals/tabs/component_gallery_tab/ButtonsTab.tsx:58
 msgid "Click any button to see toast notifications with feedback."
@@ -6043,7 +6043,7 @@ msgstr "Kopijuoti galutinį tašką"
 #: src/components/modals/UserProfileActionsSheet.tsx:209
 #: src/components/modals/UserProfileModal.tsx:1177
 msgid "Copy FluxerTag"
-msgstr "Kopijuoti FluxerTag"
+msgstr "Kopijuoti RdChatTag"
 
 #: src/components/uikit/context_menu/items/MediaMenuData.tsx:179
 msgid "Copy GIF"
@@ -6278,7 +6278,7 @@ msgstr "Kurkite ir tvarkykite programas bei botus savo paskyrai."
 
 #: src/components/modals/tabs/ExpressionPacksTab.tsx:147
 msgid "Create and share custom emoji and sticker packs with Fluxer Plutonium."
-msgstr "Kurkite ir dalinkitės pasirinktiniais emoji bei lipdukų rinkiniais su Fluxer Plutonium."
+msgstr "Kurkite ir dalinkitės pasirinktiniais emoji bei lipdukų rinkiniais su RdChat Plutonium."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:293
 msgid "create app"
@@ -6391,7 +6391,7 @@ msgstr "Sukurti webhook'ą"
 
 #: src/components/modals/tabs/applications_tab/ApplicationsList.tsx:44
 msgid "Create your first application to get started with the Fluxer API."
-msgstr "Sukurkite savo pirmąją programėlę, kad pradėtumėte naudoti Fluxer API."
+msgstr "Sukurkite savo pirmąją programėlę, kad pradėtumėte naudoti RdChat API."
 
 #: src/utils/PermissionUtils.tsx:258
 msgid "Create, edit, or delete channels and categories."
@@ -8015,7 +8015,7 @@ msgstr "Atsisiųsti darbastalio programą"
 #: src/components/layout/guild_list/DownloadButton.tsx:47
 #: src/components/layout/guild_list/DownloadButton.tsx:51
 msgid "Download Fluxer"
-msgstr "Atsisiųsti Fluxer"
+msgstr "Atsisiųsti RdChat"
 
 #: src/components/modals/AddConnectionModal.tsx:297
 msgid "Download fluxer-verification"
@@ -9859,123 +9859,123 @@ msgstr "Lankstūs tekstinių kanalų pavadinimai"
 
 #: src/components/popouts/UserProfileShared.tsx:207
 msgid "Fluxer"
-msgstr "Fluxer"
+msgstr "RdChat"
 
 #: src/components/icons/FluxerIcon.tsx:31
 msgid "Fluxer application icon"
-msgstr "Fluxer programėlės piktograma"
+msgstr "RdChat programėlės piktograma"
 
 #: src/components/icons/FluxerSymbol.tsx:31
 msgid "Fluxer application symbol"
-msgstr "Fluxer programėlės simbolis"
+msgstr "RdChat programėlės simbolis"
 
 #: src/components/modals/tabs/notifications_tab/PushSettings.tsx:37
 msgid "Fluxer avoids sending push notifications to your mobile devices when you are at your computer. Use this setting to control how long you need to be inactive on desktop for before you receive push notifications, ranging from 1 minute to 10 minutes."
-msgstr "Fluxer vengia siųsti pranešimus į jūsų mobiliuosius įrenginius, kai esate prie kompiuterio. Naudokite šį nustatymą, norėdami nustatyti, kiek laiko turite būti neaktyvus prie darbalaukio, kol gausite pranešimus, nuo 1 minutės iki 10 minučių."
+msgstr "RdChat vengia siųsti pranešimus į jūsų mobiliuosius įrenginius, kai esate prie kompiuterio. Naudokite šį nustatymą, norėdami nustatyti, kiek laiko turite būti neaktyvus prie darbalaukio, kol gausite pranešimus, nuo 1 minutės iki 10 minučių."
 
 #: src/components/popouts/UserProfileBadges.tsx:115
 msgid "Fluxer Bug Hunter"
-msgstr "Fluxer Bug Hunter"
+msgstr "RdChat Bug Hunter"
 
 #: src/components/popouts/UserProfileBadges.tsx:95
 msgid "Fluxer Community Team"
-msgstr "Fluxer Community Team"
+msgstr "RdChat Community Team"
 
 #: src/components/modals/tabs/DevicesTab.tsx:99
 msgid "Fluxer Desktop"
-msgstr "Fluxer Desktop"
+msgstr "RdChat Desktop"
 
 #: src/components/BootstrapErrorScreen.tsx:52
 msgid "Fluxer failed to start properly. This could be due to corrupted data or a temporary issue."
-msgstr "Fluxer nepavyko tinkamai paleisti. Tai gali būti dėl sugadintų duomenų ar laikinos problemos."
+msgstr "RdChat nepavyko tinkamai paleisti. Tai gali būti dėl sugadintų duomenų ar laikinos problemos."
 
 #: src/stores/NewDeviceMonitoringStore.tsx:187
 msgid "Fluxer has found a new audio input device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer rado naują garso įvesties įrenginį pavadinimu <0>{deviceName}</0>. Ar norite perjungti į jį?"
+msgstr "RdChat rado naują garso įvesties įrenginį pavadinimu <0>{deviceName}</0>. Ar norite perjungti į jį?"
 
 #: src/stores/NewDeviceMonitoringStore.tsx:192
 msgid "Fluxer has found a new audio output device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer rado naują garso išvesties įrenginį pavadinimu <0>{deviceName}</0>. Ar norite perjungti į jį?"
+msgstr "RdChat rado naują garso išvesties įrenginį pavadinimu <0>{deviceName}</0>. Ar norite perjungti į jį?"
 
 #: src/components/popouts/UserProfileShared.tsx:238
 msgid "Fluxer Member Since"
-msgstr "Fluxer narys nuo"
+msgstr "RdChat narys nuo"
 
 #: src/components/modals/tabs/VoiceTab.tsx:212
 msgid "Fluxer needs access to list the available microphones and speakers."
-msgstr "Fluxer reikia prieigos, kad galėtų išvardyti prieinamus mikrofonus ir garsiakalbius."
+msgstr "RdChat reikia prieigos, kad galėtų išvardyti prieinamus mikrofonus ir garsiakalbius."
 
 #: src/components/alerts/ScreenRecordingPermissionDeniedModal.tsx:31
 msgid "Fluxer needs access to screen recording. Open System Settings → Privacy & Security → Screen Recording, allow Fluxer, and then try again."
-msgstr "Fluxer reikia prieigos prie ekrano įrašymo. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Ekrano įrašymas, leiskite Fluxer ir bandykite dar kartą."
+msgstr "RdChat reikia prieigos prie ekrano įrašymo. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Ekrano įrašymas, leiskite RdChat ir bandykite dar kartą."
 
 #: src/components/modals/tabs/VideoTab.tsx:179
 msgid "Fluxer needs access to your camera before we can list it here."
-msgstr "Fluxer reikia prieigos prie jūsų kameros, kad galėtume ją čia išvardyti."
+msgstr "RdChat reikia prieigos prie jūsų kameros, kad galėtume ją čia išvardyti."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your camera to enable video chat. Please grant camera permission in your browser settings and try again."
-msgstr "Fluxer reikia prieigos prie jūsų kameros, kad galėtų įjungti vaizdo pokalbį. Suteikite kameros leidimą naršyklės nustatymuose ir bandykite dar kartą."
+msgstr "RdChat reikia prieigos prie jūsų kameros, kad galėtų įjungti vaizdo pokalbį. Suteikite kameros leidimą naršyklės nustatymuose ir bandykite dar kartą."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:42
 msgid "Fluxer needs access to your camera. Allow camera access in your operating system privacy settings and restart the app."
-msgstr "Fluxer reikia prieigos prie jūsų kameros. Leiskite prieigą prie kameros operacinės sistemos privatumo nustatymuose ir paleiskite programėlę iš naujo."
+msgstr "RdChat reikia prieigos prie jūsų kameros. Leiskite prieigą prie kameros operacinės sistemos privatumo nustatymuose ir paleiskite programėlę iš naujo."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:32
 msgid "Fluxer needs access to your camera. Open System Settings → Privacy & Security → Camera, allow Fluxer, and then restart the app."
-msgstr "Fluxer reikia prieigos prie jūsų kameros. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Kamera, leiskite Fluxer ir paleiskite programėlę iš naujo."
+msgstr "RdChat reikia prieigos prie jūsų kameros. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Kamera, leiskite RdChat ir paleiskite programėlę iš naujo."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:44
 msgid "Fluxer needs access to your microphone to enable voice chat. Please grant microphone permission in your browser settings and try again."
-msgstr "Fluxer reikia prieigos prie jūsų mikrofono, kad galėtų įjungti balso pokalbį. Suteikite mikrofono leidimą naršyklės nustatymuose ir bandykite dar kartą."
+msgstr "RdChat reikia prieigos prie jūsų mikrofono, kad galėtų įjungti balso pokalbį. Suteikite mikrofono leidimą naršyklės nustatymuose ir bandykite dar kartą."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your microphone. Allow microphone access in your operating system privacy settings and restart the app."
-msgstr "Fluxer reikia prieigos prie jūsų mikrofono. Leiskite prieigą prie mikrofono operacinės sistemos privatumo nustatymuose ir paleiskite programėlę iš naujo."
+msgstr "RdChat reikia prieigos prie jūsų mikrofono. Leiskite prieigą prie mikrofono operacinės sistemos privatumo nustatymuose ir paleiskite programėlę iš naujo."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:33
 msgid "Fluxer needs access to your microphone. Open System Settings → Privacy & Security → Microphone, allow Fluxer, and then restart the app."
-msgstr "Fluxer reikia prieigos prie jūsų mikrofono. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Mikrofonas, leiskite Fluxer ir paleiskite programėlę iš naujo."
+msgstr "RdChat reikia prieigos prie jūsų mikrofono. Atidarykite Sistemos nustatymai → Privatumas ir saugumas → Mikrofonas, leiskite RdChat ir paleiskite programėlę iš naujo."
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:69
 msgid "Fluxer needs Input Monitoring permission to keep push-to-talk and global shortcuts working while the window is in the background."
-msgstr "Fluxer reikia Įvesties stebėjimo leidimo, kad spustelėk-kalbėk ir globalūs sparčiuosius klavišus veiktų, kai langas yra fone."
+msgstr "RdChat reikia Įvesties stebėjimo leidimo, kad spustelėk-kalbėk ir globalūs sparčiuosius klavišus veiktų, kai langas yra fone."
 
 #: src/components/modals/InputMonitoringCTAModal.tsx:77
 msgid "Fluxer needs permission to monitor keyboard and mouse input so that <0>Push-to-Talk</0> and <1>Global Shortcuts</1> work even when you're in another app or game."
-msgstr "Fluxer reikia leidimo stebėti klaviatūros ir pelės įvestį, kad <0>Spustelėk-kalbėk</0> ir <1>Globalūs sparčieji klavišai</1> veiktų net kai esate kitame programoje ar žaidime."
+msgstr "RdChat reikia leidimo stebėti klaviatūros ir pelės įvestį, kad <0>Spustelėk-kalbėk</0> ir <1>Globalūs sparčieji klavišai</1> veiktų net kai esate kitame programoje ar žaidime."
 
 #: src/components/popouts/UserProfileBadges.tsx:105
 msgid "Fluxer Partner"
-msgstr "Fluxer Partneris"
+msgstr "RdChat Partneris"
 
 #: src/components/modals/components/PlutoniumContent.tsx:165
 #: src/components/modals/PremiumModal.tsx:34
 #: src/components/modals/utils/SettingsConstants.tsx:124
 #: src/components/popouts/UserProfileBadges.tsx:121
 msgid "Fluxer Plutonium"
-msgstr "Fluxer Plutonium"
+msgstr "RdChat Plutonium"
 
 #: src/components/popouts/UserProfileBadges.tsx:85
 msgid "Fluxer Staff"
-msgstr "Fluxer Personalas"
+msgstr "RdChat Personalas"
 
 #: src/components/modals/tabs/notifications_tab/Notifications.tsx:113
 msgid "Fluxer uses push notifications when installed as a mobile PWA. Registering ensures the gateway can reach your device even when the browser is backgrounded."
-msgstr "Fluxer naudoja pranešimus, kai įdiegtas kaip mobilusis PWA. Registracija užtikrina, kad šliuzas gali pasiekti jūsų įrenginį net kai naršyklė yra fone."
+msgstr "RdChat naudoja pranešimus, kai įdiegtas kaip mobilusis PWA. Registracija užtikrina, kad šliuzas gali pasiekti jūsų įrenginį net kai naršyklė yra fone."
 
 #: src/components/modals/FluxerTagChangeModal.tsx:190
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:103
 msgid "FluxerTag"
-msgstr "FluxerTag"
+msgstr "RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:107
 msgid "FluxerTag already taken"
-msgstr "FluxerTag jau užimtas"
+msgstr "RdChatTag jau užimtas"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:149
 msgid "FluxerTag updated"
-msgstr "FluxerTag atnaujintas"
+msgstr "RdChatTag atnaujintas"
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:269
 msgid "focus"
@@ -10267,7 +10267,7 @@ msgstr "Nemokama vs Plutonium"
 
 #: src/components/modals/tabs/VideoTab.tsx:237
 msgid "Freezes your preview while Fluxer is in the background to save resources."
-msgstr "Užšaldo jūsų peržiūrą, kol Fluxer yra fone, kad sutaupytų išteklių."
+msgstr "Užšaldo jūsų peržiūrą, kol RdChat yra fone, kad sutaupytų išteklių."
 
 #: src/utils/LocaleUtils.tsx:49
 msgid "French"
@@ -10314,7 +10314,7 @@ msgstr "Draugystės prašymai"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:156
 msgid "Friend's FluxerTag"
-msgstr "Draugo FluxerTag"
+msgstr "Draugo RdChatTag"
 
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:170
 msgid "Friendly bot"
@@ -10518,7 +10518,7 @@ msgstr "Gaukite užklausą, kai prijungiami nauji garso įrenginiai"
 
 #: src/components/layout/app_layout/nagbars/DesktopDownloadNagbar.tsx:50
 msgid "Get the Fluxer desktop app for system-wide push-to-talk and a few other goodies."
-msgstr "Gaukite Fluxer darbalaukio programą visos sistemos paspausti-kalbėti funkcijai ir keliems kitiems dalykams."
+msgstr "Gaukite RdChat darbalaukio programą visos sistemos paspausti-kalbėti funkcijai ir keliems kitiems dalykams."
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:280
 msgid "gif"
@@ -11605,7 +11605,7 @@ msgstr "Balsu"
 
 #: src/components/modals/tabs/VoiceTab.tsx:142
 msgid "In your browser, Push-to-Talk will only work when the Fluxer tab is focused. For system-wide Push-to-Talk that works even when gaming or using other apps, download the desktop app."
-msgstr "Naršyklėje mygtukas \"Kalba spaustuką\" veiks tik tada, kai Fluxer skirtukas yra aktyvus. Norėdami naudoti sistemiškai veikiantį mygtuką \"Kalba spaustuką\", kuris veikia net žaidžiant ar naudojant kitas programas, atsisiųskite darbastalio programą."
+msgstr "Naršyklėje mygtukas \"Kalba spaustuką\" veiks tik tada, kai RdChat skirtukas yra aktyvus. Norėdami naudoti sistemiškai veikiantį mygtuką \"Kalba spaustuką\", kuris veikia net žaidžiant ar naudojant kitas programas, atsisiųskite darbastalio programą."
 
 #: src/utils/SearchUtils.tsx:267
 msgid "in:"
@@ -11809,7 +11809,7 @@ msgstr "Įdiegti jaustukų rinkinį"
 
 #: src/components/layout/app_layout/nagbars/MobileDownloadNagbar.tsx:50
 msgid "Install Fluxer on your phone as a home screen app to receive notifications on the go!"
-msgstr "Įdiekite Fluxer savo telefone kaip pagrindinę ekrano programėlę, kad gautumėte pranešimus kelyje!"
+msgstr "Įdiekite RdChat savo telefone kaip pagrindinę ekrano programėlę, kad gautumėte pranešimus kelyje!"
 
 #: src/components/channel/InviteEmbed.tsx:223
 #: src/components/modals/InviteAcceptModal.tsx:160
@@ -12220,11 +12220,11 @@ msgstr "Prisijungimo prie bendruomenės forma"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:101
 msgid "Join Fluxer HQ"
-msgstr "Prisijunk prie Fluxer HQ"
+msgstr "Prisijunk prie RdChat HQ"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:98
 msgid "Join Fluxer HQ to chat with the team and stay up to date on the latest!"
-msgstr "Prisijunk prie Fluxer HQ, kad pasikalbėtum su komanda ir būtum informuotas apie naujienas!"
+msgstr "Prisijunk prie RdChat HQ, kad pasikalbėtum su komanda ir būtum informuotas apie naujienas!"
 
 #: src/components/channel/InviteEmbed.tsx:214
 msgid "Join Group"
@@ -12289,7 +12289,7 @@ msgstr "Prisijungta"
 
 #: src/components/channel/GuildMembersPage.tsx:986
 msgid "Joined Fluxer"
-msgstr "Prisijungė prie Fluxer"
+msgstr "Prisijungė prie RdChat"
 
 #. placeholder {0}: bannerConfig.minWidth
 #. placeholder {1}: bannerConfig.minHeight
@@ -12609,7 +12609,7 @@ msgstr "Latvija"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:92
 msgid "Launch Fluxer at Login"
-msgstr "Paleisti Fluxer prisijungus"
+msgstr "Paleisti RdChat prisijungus"
 
 #: src/components/modals/tabs/component_gallery_tab/MessagesTab.tsx:361
 msgid "Layouts for 1-10 image attachments using CDN assets."
@@ -12799,7 +12799,7 @@ msgstr "Nuoroda nebegalioja. Jūsų IP adresas greičiausiai jau autorizuotas."
 
 #: src/components/modals/tabs/LinkedAccountsTab.tsx:284
 msgid "Link external accounts and domains to your Fluxer profile. Verified connections will be displayed on your profile for others to see."
-msgstr "Susiekite išorines paskyras ir domenus su savo Fluxer profiliu. Patvirtinti ryšiai bus rodomi jūsų profilyje kitiems."
+msgstr "Susiekite išorines paskyras ir domenus su savo RdChat profiliu. Patvirtinti ryšiai bus rodomi jūsų profilyje kitiems."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:321
 msgid "Link external accounts and domains to your profile"
@@ -13203,7 +13203,7 @@ msgstr "Tvarkyti prenumeratą"
 
 #: src/components/modals/tabs/account_security_tab/AccountTab.tsx:58
 msgid "Manage the email address you use to sign in to Fluxer"
-msgstr "Tvarkykite el. pašto adresą, kurį naudojate prisijungti prie Fluxer"
+msgstr "Tvarkykite el. pašto adresą, kurį naudojate prisijungti prie RdChat"
 
 #: src/utils/PermissionUtils.tsx:294
 #: src/utils/PermissionUtils.tsx:449
@@ -15026,7 +15026,7 @@ msgstr "Nėra neperskaitytų pranešimų"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:90
 msgid "No user found with that FluxerTag."
-msgstr "Nerasta naudotojo su tokiu FluxerTag."
+msgstr "Nerasta naudotojo su tokiu RdChatTag."
 
 #: src/components/modals/guild_tabs/GuildBansTab.tsx:180
 msgid "No users are currently banned from this community."
@@ -15546,7 +15546,7 @@ msgstr "Atidaryti tik asmenines žinutes"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:118
 msgid "Open Fluxer"
-msgstr "Atidaryti Fluxer"
+msgstr "Atidaryti RdChat"
 
 #: src/components/channel/embeds/attachments/AttachmentGridItem.tsx:311
 #: src/components/channel/embeds/media/EmbedGifv.tsx:253
@@ -15565,7 +15565,7 @@ msgstr "Atidaryti bendruomenėje"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:105
 msgid "Open in Fluxer for desktop"
-msgstr "Atidaryti Fluxer kompiuteriui"
+msgstr "Atidaryti RdChat kompiuteriui"
 
 #: src/components/channel/embeds/media/EmbedYouTube.tsx:118
 msgid "Open in new tab"
@@ -16366,7 +16366,7 @@ msgstr "Patikrinkite savo el. pašto gautuosius dėl patvirtinimo laiško."
 #: src/components/modals/InputMonitoringCTAModal.tsx:53
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:52
 msgid "Please enable Fluxer in System Settings → Privacy & Security → Input Monitoring."
-msgstr "Įjunkite Fluxer sistemos nustatymuose → Privatumas ir saugumas → Įvesties stebėjimas."
+msgstr "Įjunkite RdChat sistemos nustatymuose → Privatumas ir saugumas → Įvesties stebėjimas."
 
 #: src/components/pages/ReportPage.tsx:216
 msgid "Please enter a valid email address."
@@ -16374,7 +16374,7 @@ msgstr "Prašome įvesti galiojantį el. pašto adresą."
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:93
 msgid "Please enter a valid FluxerTag (Username#0000)."
-msgstr "Įveskite tinkamą FluxerTag (VartotojoVardas#0000)."
+msgstr "Įveskite tinkamą RdChatTag (VartotojoVardas#0000)."
 
 #: src/components/pages/ReportPage.tsx:341
 msgid "Please enter a valid message link URL."
@@ -16419,7 +16419,7 @@ msgstr "Bandykite vėliau."
 #: src/components/channel/UnknownMessage.tsx:73
 #: src/components/channel/UnknownMessage.tsx:127
 msgid "Please update Fluxer to view this message."
-msgstr "Atnaujinkite Fluxer, kad pamatytumėte šią žinutę."
+msgstr "Atnaujinkite RdChat, kad pamatytumėte šią žinutę."
 
 #: src/actions/InviteActionCreators.tsx:184
 msgid "Please verify your account by setting an email and password before joining communities."
@@ -16589,7 +16589,7 @@ msgstr "Peržiūra"
 
 #: src/components/modals/tabs/developer_options_tab/TypographyTab.tsx:135
 msgid "Preview all available fonts, weights, and styles across different languages supported by Fluxer."
-msgstr "Peržiūrėkite visus prieinamus šriftus, storių ir stilius skirtingose Fluxer palaikomose kalbose."
+msgstr "Peržiūrėkite visus prieinamus šriftus, storių ir stilius skirtingose RdChat palaikomose kalbose."
 
 #: src/components/modals/tabs/AccessibilityTab.tsx:113
 msgid "Preview Button"
@@ -16795,7 +16795,7 @@ msgstr "Apsaugokite savo paskyrą naudodami dviejų faktorių autentifikaciją i
 
 #: src/components/layout/app_layout/nagbars/VisionaryMfaNagbar.tsx:52
 msgid "Protect your Visionary account by enabling two-factor authentication. Thanks for supporting Fluxer!"
-msgstr "Apsaugokite savo Visionary paskyrą įjungdami dviejų faktorių autentifikavimą. Ačiū, kad palaikote Fluxer!"
+msgstr "Apsaugokite savo Visionary paskyrą įjungdami dviejų faktorių autentifikavimą. Ačiū, kad palaikote RdChat!"
 
 #: src/components/modals/IARModal.tsx:244
 msgid "Provide any additional context that may help our Safety Team..."
@@ -16807,7 +16807,7 @@ msgstr "Pateikite bent vartotojo ID arba vartotojo žymą."
 
 #: src/components/pages/ReportPage.tsx:359
 msgid "Provide either a user ID or a FluxerTag for the person you are reporting."
-msgstr "Pateikite vartotojo ID arba FluxerTag asmeniui, kurį pranešate."
+msgstr "Pateikite vartotojo ID arba RdChatTag asmeniui, kurį pranešate."
 
 #: src/components/pages/ReportPage.tsx:310
 msgid "Provide your full legal name for the declaration."
@@ -17701,7 +17701,7 @@ msgstr "Atnaujinama <0>{renewalDate}</0>."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:120
 msgid "Reopen in maximized mode if that’s how you last used Fluxer."
-msgstr "Atidarykite vėl didžiausiu režimu, jei taip paskutinį kartą naudojote Fluxer."
+msgstr "Atidarykite vėl didžiausiu režimu, jei taip paskutinį kartą naudojote RdChat."
 
 #: src/components/modals/BackgroundImageGalleryModal.tsx:280
 #: src/components/modals/BackgroundImageGalleryModal.tsx:396
@@ -18276,11 +18276,11 @@ msgstr "Ruby"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:89
 msgid "Run Fluxer automatically when your computer starts. Or don't. Your choice!"
-msgstr "Paleiskite Fluxer automatiškai, kai įsijungia jūsų kompiuteris. Arba ne. Jūsų pasirinkimas!"
+msgstr "Paleiskite RdChat automatiškai, kai įsijungia jūsų kompiuteris. Arba ne. Jūsų pasirinkimas!"
 
 #: src/components/modals/tabs/KeybindsTab.tsx:94
 msgid "Run this shortcut even when Fluxer is not focused."
-msgstr "Vykdykite šį sparčiąją nuorodą net kai Fluxer nėra aktyvus."
+msgstr "Vykdykite šį sparčiąją nuorodą net kai RdChat nėra aktyvus."
 
 #: src/utils/LocaleUtils.tsx:64
 msgid "Russian"
@@ -20909,7 +20909,7 @@ msgstr "Sistema DM negali rengti balso skambučių."
 
 #: src/components/channel/barriers/BarrierComponents.tsx:249
 msgid "System DMs deliver important announcements from Fluxer staff. Replies and interactions are disabled in this conversation."
-msgstr "Sistema DM siunčia svarbius pranešimus iš Fluxer darbuotojų. Atsakymai ir sąveikos yra išjungti šiame pokalbyje."
+msgstr "Sistema DM siunčia svarbius pranešimus iš RdChat darbuotojų. Atsakymai ir sąveikos yra išjungti šiame pokalbyje."
 
 #: src/components/modals/tabs/LanguageTab.tsx:81
 msgid "System locale ({browserLocale}): {format}"
@@ -21082,11 +21082,11 @@ msgstr "Tajų"
 
 #: src/components/modals/IARModal.tsx:220
 msgid "Thank you for helping keep Fluxer safe. Reports are reviewed by our Safety Team. False reports may result in action against your account."
-msgstr "Ačiū, kad padedate išlaikyti Fluxer saugų. Pranešimus peržiūri mūsų Saugumo komanda. Klaidingi pranešimai gali lemti veiksmų prieš jūsų paskyrą."
+msgstr "Ačiū, kad padedate išlaikyti RdChat saugų. Pranešimus peržiūri mūsų Saugumo komanda. Klaidingi pranešimai gali lemti veiksmų prieš jūsų paskyrą."
 
 #: src/components/pages/report/ReportStepComplete.tsx:37
 msgid "Thank you for helping keep Fluxer safe. We'll review your report as soon as possible."
-msgstr "Ačiū, kad padedate išlaikyti Fluxer saugų. Mes peržiūrėsime jūsų pranešimą kuo greičiau."
+msgstr "Ačiū, kad padedate išlaikyti RdChat saugų. Mes peržiūrėsime jūsų pranešimą kuo greičiau."
 
 #: src/components/form/ColorPickerField.tsx:277
 msgid "That doesn't look like a valid color. Try hex, rgb(), hsl(), or a CSS color name."
@@ -21155,7 +21155,7 @@ msgstr "Failas, kurį bandote įkelti, viršija maksimalų dydžio limitą: {max
 
 #: src/components/modals/FluxerTagChangeModal.tsx:111
 msgid "The FluxerTag <0>{fluxerTag}</0> is already taken. Continuing will reroll your discriminator automatically."
-msgstr "FluxerTag <0>{fluxerTag}</0> jau užimtas. Tęsdami jūsų diskriminatorius bus automatiškai pergeneruotas."
+msgstr "RdChatTag <0>{fluxerTag}</0> jau užimtas. Tęsdami jūsų diskriminatorius bus automatiškai pergeneruotas."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataDeletionTab.tsx:80
 msgid "The job starts 24 hours after you confirm and can be canceled or restarted anytime"
@@ -21204,7 +21204,7 @@ msgstr "Laiko limitas negali viršyti 365 dienų (31536000 sekundžių)."
 
 #: src/components/auth/BrowserLoginHandoffModal.tsx:104
 msgid "The URL of the Fluxer instance you want to sign in to."
-msgstr "Fluxer instancijos URL, prie kurios norite prisijungti."
+msgstr "RdChat instancijos URL, prie kurios norite prisijungti."
 
 #: src/components/modals/channel_tabs/ChannelOverviewTab.tsx:496
 msgid "The URL this link channel points to."
@@ -21290,7 +21290,7 @@ msgstr "Čia daugiau nieko nėra."
 
 #: src/components/modals/tabs/AuthorizedAppsTab.tsx:146
 msgid "These applications have been granted access to your Fluxer account."
-msgstr "Šios programos gavo prieigą prie jūsų Fluxer paskyros."
+msgstr "Šios programos gavo prieigą prie jūsų RdChat paskyros."
 
 #: src/components/modals/tabs/VoiceTab.tsx:405
 msgid "These settings use browser-native audio processing to improve call quality. For best results, keep all options enabled."
@@ -21559,7 +21559,7 @@ msgstr "Tai yra tinkintas emodži iš bendruomenės. Paprašykite autoriaus pakv
 
 #: src/components/emojis/EmojiAttributionSubtext.tsx:102
 msgid "This is a default emoji on Fluxer."
-msgstr "Tai yra numatytasis emodži Fluxer."
+msgstr "Tai yra numatytasis emodži RdChat."
 
 #: src/components/modals/tabs/component_gallery_tab/InputsTab.tsx:147
 msgid "This is an error message"
@@ -24402,7 +24402,7 @@ msgstr "Mes patikrinsime jūsų naują el. paštą vienkartiniu kodu."
 
 #: src/components/NetworkErrorScreen.tsx:39
 msgid "We're having trouble connecting to Fluxer's servers. This could be a temporary network issue or scheduled maintenance."
-msgstr "Turime problemų prisijungti prie Fluxer serverių. Tai gali būti laikina tinklo problema arba suplanuota priežiūra."
+msgstr "Turime problemų prisijungti prie RdChat serverių. Tai gali būti laikina tinklo problema arba suplanuota priežiūra."
 
 #: src/components/modals/tabs/DevicesTab.tsx:234
 msgid "We're having trouble connecting to the space-time continuum. Please check your connection and try again."
@@ -24415,27 +24415,27 @@ msgstr "Pirmą kartą indeksuojame šį kanalą. Tai gali šiek tiek užtrukti..
 
 #: src/components/modals/RequiredActionModal.tsx:166
 msgid "We've detected suspicious activity on your account. Please reverify your email address or phone number to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo el. pašto adresą arba telefono numerį, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo el. pašto adresą arba telefono numerį, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:158
 msgid "We've detected suspicious activity on your account. Please reverify your email address to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo el. pašto adresą, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo el. pašto adresą, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:162
 msgid "We've detected suspicious activity on your account. Please reverify your phone number to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo telefono numerį, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome dar kartą patvirtinti savo telefono numerį, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:167
 msgid "We've detected suspicious activity on your account. Please verify your email address or phone number to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo el. pašto adresą arba telefono numerį, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo el. pašto adresą arba telefono numerį, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:159
 msgid "We've detected suspicious activity on your account. Please verify your email address to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo el. pašto adresą, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo el. pašto adresą, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:163
 msgid "We've detected suspicious activity on your account. Please verify your phone number to continue using Fluxer."
-msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo telefono numerį, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Pastebėjome įtartiną veiklą jūsų paskyroje. Prašome patvirtinti savo telefono numerį, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/pages/ForgotPasswordPage.tsx:65
 msgid "We've sent password reset instructions to your email address. Please check your inbox and follow the link to reset your password."
@@ -24511,7 +24511,7 @@ msgstr "Sveiki atvykę į Mėgstamiausius"
 
 #: src/components/layout/app_layout/nagbars/PremiumOnboardingNagbar.tsx:52
 msgid "Welcome to Fluxer Plutonium! Explore your premium features and manage your subscription."
-msgstr "Sveiki atvykę į Fluxer Plutonium! Naršykite savo premium funkcijas ir tvarkykite savo prenumeratą."
+msgstr "Sveiki atvykę į RdChat Plutonium! Naršykite savo premium funkcijas ir tvarkykite savo prenumeratą."
 
 #: src/utils/SystemMessageUtils.tsx:46
 msgid "Welcome, {username}! Don't forget to park your DeLorean."
@@ -24591,7 +24591,7 @@ msgstr "Kai įjungta, greitai paspaudus jūsų 'kalbėti paspaudus' sparčiąją
 
 #: src/components/modals/tabs/AdvancedTab.tsx:160
 msgid "When enabled, reveals debugging menus throughout the app to inspect and copy raw JSON objects of internal data structures like messages, channels, users, and communities. Also includes tools to debug the Fluxer Markdown parser performance and AST for any given message."
-msgstr "Kai įjungta, atskleidžia derinimo meniu visoje programėlėje, kad galėtumėte apžiūrėti ir nukopijuoti neapdorotus JSON objektus vidinių duomenų struktūrų, tokių kaip žinutės, kanalai, vartotojai ir bendruomenės. Taip pat apima įrankius, skirtus derinti Fluxer Markdown analizatoriaus veikimą ir AST bet kuriai nurodytai žinutei."
+msgstr "Kai įjungta, atskleidžia derinimo meniu visoje programėlėje, kad galėtumėte apžiūrėti ir nukopijuoti neapdorotus JSON objektus vidinių duomenų struktūrų, tokių kaip žinutės, kanalai, vartotojai ir bendruomenės. Taip pat apima įrankius, skirtus derinti RdChat Markdown analizatoriaus veikimą ir AST bet kuriai nurodytai žinutei."
 
 #: src/components/modals/tabs/appearance_tab/InterfaceTab.tsx:135
 msgid "When enabled, shortcut badges are hidden in tooltip popups."
@@ -24647,7 +24647,7 @@ msgstr "Kai jie pasieks 88 mylių per valandą, jie atsiras čia pat."
 
 #: src/components/modals/tabs/chat_settings_tab/DisplayTab.tsx:73
 msgid "When uploaded directly to Fluxer"
-msgstr "Kai įkelta tiesiogiai į Fluxer"
+msgstr "Kai įkelta tiesiogiai į RdChat"
 
 #: src/components/shared/ChannelPinsContent.tsx:158
 msgid "Whenever someone pins a message, it'll appear here."
@@ -24788,7 +24788,7 @@ msgstr "Jau turite šį ryšį."
 
 #: src/components/modals/ExternalLinkWarningModal.tsx:74
 msgid "You are about to leave Fluxer"
-msgstr "Jūs ketinate palikti Fluxer"
+msgstr "Jūs ketinate palikti RdChat"
 
 #. placeholder {0}: targetUser.username
 #: src/components/modals/TransferOwnershipModal.tsx:75
@@ -24813,7 +24813,7 @@ msgstr "Dabar jūs esate kūrėjas!"
 
 #: src/components/modals/components/plutonium/hooks/useCheckoutActions.tsx:107
 msgid "You are now navigating to Stripe to complete the payment. Return to Fluxer once you've completed it!"
-msgstr "Dabar jūs nukreipiate į Stripe, kad užbaigtumėte mokėjimą. Grįžkite į Fluxer, kai jį užbaigsite!"
+msgstr "Dabar jūs nukreipiate į Stripe, kad užbaigtumėte mokėjimą. Grįžkite į RdChat, kai jį užbaigsite!"
 
 #. placeholder {0}: displayUser.username
 #. placeholder {0}: user.username
@@ -24849,7 +24849,7 @@ msgstr "Prieš įkeliant galite pridėti komentarų. Paspauskite shift, kad įke
 
 #: src/components/channel/direct_message/AddFriendView.tsx:35
 msgid "You can add friends with their FluxerTag."
-msgstr "Galite pridėti draugų naudodami jų FluxerTag."
+msgstr "Galite pridėti draugų naudodami jų RdChatTag."
 
 #. placeholder {0}: modalLogic.maxSelections
 #: src/components/bottomsheets/CreateDMBottomSheet.tsx:109
@@ -25153,7 +25153,7 @@ msgstr "Jūs dar nesukūrėte jokių rinkinių."
 
 #: src/components/modals/KeyboardModeIntroModal.tsx:46
 msgid "You just pressed Tab. Keyboard Mode is now on so you can navigate Fluxer without a mouse."
-msgstr "Ką tik paspaudėte Tab. Dabar įjungtas klaviatūros režimas, kad galėtumėte naršyti Fluxer be pelės."
+msgstr "Ką tik paspaudėte Tab. Dabar įjungtas klaviatūros režimas, kad galėtumėte naršyti RdChat be pelės."
 
 #: src/utils/ExpressionPermissionUtils.tsx:111
 msgid "You lack permission to use external emojis in this channel"
@@ -25483,7 +25483,7 @@ msgstr "Jūsų dabartinis el. paštas <0>{0}</0> negali gauti žinučių. Įvesk
 
 #: src/components/modals/RequiredActionModal.tsx:155
 msgid "Your current email address couldn't receive messages. Please update it to continue using Fluxer."
-msgstr "Jūsų dabartinis el. pašto adresas negali gauti žinučių. Prašome jį atnaujinti, kad galėtumėte toliau naudotis Fluxer."
+msgstr "Jūsų dabartinis el. pašto adresas negali gauti žinučių. Prašome jį atnaujinti, kad galėtumėte toliau naudotis RdChat."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataExportTab.tsx:52
 msgid "Your data export will include all your user information, messages, and URLs to download any attachments."
@@ -25511,7 +25511,7 @@ msgstr "Tavo eksporto užklausa bus apdorota"
 
 #: src/components/pages/report/ReportStepDetails.tsx:213
 msgid "Your FluxerTag (Optional)"
-msgstr "Jūsų FluxerTag (Pasirinktinai)"
+msgstr "Jūsų RdChatTag (Pasirinktinai)"
 
 #: src/components/channel/friends/views/FriendsList.tsx:87
 msgid "Your friends are currently stuck in another timeline"

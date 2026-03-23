@@ -1006,7 +1006,7 @@ msgstr "<0/> memulai panggilan."
 #. placeholder {0}: guild.name
 #: src/components/layout/GuildLayout.tsx:134
 msgid "<0>{0}</0> is currently only accessible to Fluxer staff members"
-msgstr "<0>{0}</0> saat ini hanya dapat diakses oleh anggota staf Fluxer"
+msgstr "<0>{0}</0> saat ini hanya dapat diakses oleh anggota staf RdChat"
 
 #. placeholder {0}: targetUser.tag
 #: src/components/modals/TimeoutMemberSheet.tsx:122
@@ -2241,7 +2241,7 @@ msgstr "Semua Jenis Status"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
 msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Semua terjemahan saat ini dihasilkan oleh LLM dengan sedikit revisi manusia. Kami sangat ingin mendapatkan bantuan dari orang-orang nyata untuk melokalisasi Fluxer ke dalam bahasa Anda! Untuk melakukannya, kirim email ke <0>i18n@fluxer.app</0> dan kami akan senang menerima kontribusi Anda."
+msgstr "Semua terjemahan saat ini dihasilkan oleh LLM dengan sedikit revisi manusia. Kami sangat ingin mendapatkan bantuan dari orang-orang nyata untuk melokalisasi RdChat ke dalam bahasa Anda! Untuk melakukannya, kirim email ke <0>i18n@fluxer.app</0> dan kami akan senang menerima kontribusi Anda."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -2322,15 +2322,15 @@ msgstr "Izinkan nama saluran teks yang fleksibel"
 
 #: src/components/modals/tabs/VideoTab.tsx:174
 msgid "Allow Fluxer to access your camera in System Settings → Privacy & Security → Camera to preview and select devices."
-msgstr "Izinkan Fluxer mengakses kamera Anda di Pengaturan Sistem → Privasi & Keamanan → Kamera untuk melihat pratinjau dan memilih perangkat."
+msgstr "Izinkan RdChat mengakses kamera Anda di Pengaturan Sistem → Privasi & Keamanan → Kamera untuk melihat pratinjau dan memilih perangkat."
 
 #: src/components/modals/tabs/VoiceTab.tsx:202
 msgid "Allow Fluxer to access your microphone in System Settings → Privacy & Security → Microphone."
-msgstr "Izinkan Fluxer mengakses mikrofon Anda di Pengaturan Sistem → Privasi & Keamanan → Mikrofon."
+msgstr "Izinkan RdChat mengakses mikrofon Anda di Pengaturan Sistem → Privasi & Keamanan → Mikrofon."
 
 #: src/components/modals/tabs/VoiceTab.tsx:206
 msgid "Allow Fluxer to access your microphone. Check your browser address bar or settings to enable permissions."
-msgstr "Izinkan Fluxer mengakses mikrofon Anda. Periksa bilah alamat atau pengaturan browser Anda untuk mengaktifkan izin."
+msgstr "Izinkan RdChat mengakses mikrofon Anda. Periksa bilah alamat atau pengaturan browser Anda untuk mengaktifkan izin."
 
 #: src/components/modals/tabs/privacy_safety_tab/ConnectionsTab.tsx:104
 msgid "Allow for all communities"
@@ -3279,7 +3279,7 @@ msgstr "Putar GIF secara otomatis"
 
 #: src/components/modals/tabs/accessibility_tab/AnimationTab.tsx:113
 msgid "Automatically play GIFs when Fluxer is focused"
-msgstr "Putar GIF secara otomatis saat Fluxer difokuskan"
+msgstr "Putar GIF secara otomatis saat RdChat difokuskan"
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:230
 msgid "Automatically screen messages for explicit content in non-NSFW channels."
@@ -3922,7 +3922,7 @@ msgstr "Beli Hadiah"
 
 #: src/components/modals/AddGuildModal.tsx:360
 msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Community Guidelines</0>."
-msgstr "Dengan membuat komunitas, Anda setuju untuk mengikuti dan menjunjung <0>Panduan Komunitas Fluxer</0>."
+msgstr "Dengan membuat komunitas, Anda setuju untuk mengikuti dan menjunjung <0>Panduan Komunitas RdChat</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
 msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
@@ -4291,11 +4291,11 @@ msgstr "Ubah emoji"
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:60
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:70
 msgid "Change FluxerTag"
-msgstr "Ubah FluxerTag"
+msgstr "Ubah RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:163
 msgid "Change FluxerTag form"
-msgstr "Formulir Ubah FluxerTag"
+msgstr "Formulir Ubah RdChatTag"
 
 #: src/components/channel/direct_message/DMList.tsx:676
 #: src/components/channel/direct_message/DMList.tsx:681
@@ -4382,7 +4382,7 @@ msgstr "Ubah alamat email Anda"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:164
 msgid "Change Your FluxerTag"
-msgstr "Ubah FluxerTag Anda"
+msgstr "Ubah RdChatTag Anda"
 
 #: src/hooks/useCommands.tsx:70
 msgid "Change your nickname in this community."
@@ -4742,11 +4742,11 @@ msgstr "Pilih tujuan untuk pesan sistem dan selamat datang"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:134
 msgid "Choose how Fluxer selects the video codec for screen sharing."
-msgstr "Pilih bagaimana Fluxer memilih codec video untuk berbagi layar."
+msgstr "Pilih bagaimana RdChat memilih codec video untuk berbagi layar."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:268
 msgid "Choose how Fluxer treats this community for age-gating. Age Restricted blocks access for users under 18 and shows a content warning for adults, subject to local laws."
-msgstr "Pilih bagaimana Fluxer memperlakukan komunitas ini untuk pembatasan usia. Terbatas usia memblokir akses untuk pengguna di bawah 18 tahun dan menampilkan peringatan konten untuk orang dewasa, sesuai dengan hukum setempat."
+msgstr "Pilih bagaimana RdChat memperlakukan komunitas ini untuk pembatasan usia. Terbatas usia memblokir akses untuk pengguna di bawah 18 tahun dan menampilkan peringatan konten untuk orang dewasa, sesuai dengan hukum setempat."
 
 #: src/components/modals/tabs/AppearanceTab.tsx:85
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:133
@@ -4771,7 +4771,7 @@ msgstr "Pilih apa yang dapat dilakukan {clientLabel} di komunitas Anda. Hapus ce
 
 #: src/components/modals/tabs/AdvancedTab.tsx:109
 msgid "Choose what Fluxer remembers about your window between restarts and reloads on this device."
-msgstr "Pilih apa yang diingat Fluxer tentang jendela Anda di antara restart dan muat ulang di perangkat ini."
+msgstr "Pilih apa yang diingat RdChat tentang jendela Anda di antara restart dan muat ulang di perangkat ini."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:202
 msgid "Choose what members must have before they can post or DM community members."
@@ -4848,7 +4848,7 @@ msgstr "Klaim akunmu untuk menelepon"
 
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:57
 msgid "Claim your account to change your FluxerTag"
-msgstr "Klaim akun Anda untuk mengubah FluxerTag Anda"
+msgstr "Klaim akun Anda untuk mengubah RdChatTag Anda"
 
 #: src/components/modals/tabs/applications_tab/index.tsx:147
 msgid "Claim your account to create applications."
@@ -4869,11 +4869,11 @@ msgstr "Klaim akunmu untuk bergabung dengan kanal suara yang bukan milikmu."
 #: src/components/modals/components/plutonium/PricingSection.tsx:54
 #: src/components/modals/components/PlutoniumContent.tsx:99
 msgid "Claim your account to purchase Fluxer Plutonium."
-msgstr "Klaim akun Anda untuk membeli Fluxer Plutonium."
+msgstr "Klaim akun Anda untuk membeli RdChat Plutonium."
 
 #: src/components/modals/components/plutonium/SubscriptionCard.tsx:104
 msgid "Claim your account to purchase or redeem Fluxer Plutonium."
-msgstr "Klaim akun Anda untuk membeli atau menukarkan Fluxer Plutonium."
+msgstr "Klaim akun Anda untuk membeli atau menukarkan RdChat Plutonium."
 
 #: src/components/modals/tabs/GiftInventoryTab.tsx:240
 msgid "Claim your account to redeem or manage Plutonium gift codes."
@@ -5031,7 +5031,7 @@ msgstr "klik"
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:76
 msgid "Click \"Open Settings\" to open System Settings, then enable Fluxer in Input Monitoring."
-msgstr "Klik \"Buka Pengaturan\" untuk membuka Pengaturan Sistem, lalu aktifkan Fluxer di Pemantauan Masukan."
+msgstr "Klik \"Buka Pengaturan\" untuk membuka Pengaturan Sistem, lalu aktifkan RdChat di Pemantauan Masukan."
 
 #: src/components/modals/tabs/component_gallery_tab/ButtonsTab.tsx:58
 msgid "Click any button to see toast notifications with feedback."
@@ -6043,7 +6043,7 @@ msgstr "Salin endpoint"
 #: src/components/modals/UserProfileActionsSheet.tsx:209
 #: src/components/modals/UserProfileModal.tsx:1177
 msgid "Copy FluxerTag"
-msgstr "Salin FluxerTag"
+msgstr "Salin RdChatTag"
 
 #: src/components/uikit/context_menu/items/MediaMenuData.tsx:179
 msgid "Copy GIF"
@@ -6278,7 +6278,7 @@ msgstr "Buat dan kelola aplikasi dan bot untuk akun Anda."
 
 #: src/components/modals/tabs/ExpressionPacksTab.tsx:147
 msgid "Create and share custom emoji and sticker packs with Fluxer Plutonium."
-msgstr "Buat dan bagikan emoji kustom dan paket stiker dengan Fluxer Plutonium."
+msgstr "Buat dan bagikan emoji kustom dan paket stiker dengan RdChat Plutonium."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:293
 msgid "create app"
@@ -6391,7 +6391,7 @@ msgstr "Buat Webhook"
 
 #: src/components/modals/tabs/applications_tab/ApplicationsList.tsx:44
 msgid "Create your first application to get started with the Fluxer API."
-msgstr "Buat aplikasi pertama Anda untuk memulai dengan API Fluxer."
+msgstr "Buat aplikasi pertama Anda untuk memulai dengan API RdChat."
 
 #: src/utils/PermissionUtils.tsx:258
 msgid "Create, edit, or delete channels and categories."
@@ -8015,7 +8015,7 @@ msgstr "Unduh Aplikasi Desktop"
 #: src/components/layout/guild_list/DownloadButton.tsx:47
 #: src/components/layout/guild_list/DownloadButton.tsx:51
 msgid "Download Fluxer"
-msgstr "Unduh Fluxer"
+msgstr "Unduh RdChat"
 
 #: src/components/modals/AddConnectionModal.tsx:297
 msgid "Download fluxer-verification"
@@ -9859,123 +9859,123 @@ msgstr "Nama kanal teks yang fleksibel"
 
 #: src/components/popouts/UserProfileShared.tsx:207
 msgid "Fluxer"
-msgstr "Fluxer"
+msgstr "RdChat"
 
 #: src/components/icons/FluxerIcon.tsx:31
 msgid "Fluxer application icon"
-msgstr "Ikon aplikasi Fluxer"
+msgstr "Ikon aplikasi RdChat"
 
 #: src/components/icons/FluxerSymbol.tsx:31
 msgid "Fluxer application symbol"
-msgstr "Simbol aplikasi Fluxer"
+msgstr "Simbol aplikasi RdChat"
 
 #: src/components/modals/tabs/notifications_tab/PushSettings.tsx:37
 msgid "Fluxer avoids sending push notifications to your mobile devices when you are at your computer. Use this setting to control how long you need to be inactive on desktop for before you receive push notifications, ranging from 1 minute to 10 minutes."
-msgstr "Fluxer menghindari mengirim notifikasi push ke perangkat seluler Anda saat Anda berada di komputer. Gunakan pengaturan ini untuk mengontrol berapa lama Anda perlu tidak aktif di desktop sebelum menerima notifikasi push, mulai dari 1 menit hingga 10 menit."
+msgstr "RdChat menghindari mengirim notifikasi push ke perangkat seluler Anda saat Anda berada di komputer. Gunakan pengaturan ini untuk mengontrol berapa lama Anda perlu tidak aktif di desktop sebelum menerima notifikasi push, mulai dari 1 menit hingga 10 menit."
 
 #: src/components/popouts/UserProfileBadges.tsx:115
 msgid "Fluxer Bug Hunter"
-msgstr "Fluxer Bug Hunter"
+msgstr "RdChat Bug Hunter"
 
 #: src/components/popouts/UserProfileBadges.tsx:95
 msgid "Fluxer Community Team"
-msgstr "Tim Komunitas Fluxer"
+msgstr "Tim Komunitas RdChat"
 
 #: src/components/modals/tabs/DevicesTab.tsx:99
 msgid "Fluxer Desktop"
-msgstr "Fluxer Desktop"
+msgstr "RdChat Desktop"
 
 #: src/components/BootstrapErrorScreen.tsx:52
 msgid "Fluxer failed to start properly. This could be due to corrupted data or a temporary issue."
-msgstr "Fluxer gagal memulai dengan benar. Ini mungkin disebabkan oleh data yang rusak atau masalah sementara."
+msgstr "RdChat gagal memulai dengan benar. Ini mungkin disebabkan oleh data yang rusak atau masalah sementara."
 
 #: src/stores/NewDeviceMonitoringStore.tsx:187
 msgid "Fluxer has found a new audio input device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer telah menemukan perangkat input audio baru bernama <0>{deviceName}</0>. Apakah Anda ingin beralih ke sana?"
+msgstr "RdChat telah menemukan perangkat input audio baru bernama <0>{deviceName}</0>. Apakah Anda ingin beralih ke sana?"
 
 #: src/stores/NewDeviceMonitoringStore.tsx:192
 msgid "Fluxer has found a new audio output device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer telah menemukan perangkat output audio baru bernama <0>{deviceName}</0>. Apakah Anda ingin beralih ke sana?"
+msgstr "RdChat telah menemukan perangkat output audio baru bernama <0>{deviceName}</0>. Apakah Anda ingin beralih ke sana?"
 
 #: src/components/popouts/UserProfileShared.tsx:238
 msgid "Fluxer Member Since"
-msgstr "Anggota Fluxer Sejak"
+msgstr "Anggota RdChat Sejak"
 
 #: src/components/modals/tabs/VoiceTab.tsx:212
 msgid "Fluxer needs access to list the available microphones and speakers."
-msgstr "Fluxer memerlukan akses untuk mendaftarkan mikrofon dan speaker yang tersedia."
+msgstr "RdChat memerlukan akses untuk mendaftarkan mikrofon dan speaker yang tersedia."
 
 #: src/components/alerts/ScreenRecordingPermissionDeniedModal.tsx:31
 msgid "Fluxer needs access to screen recording. Open System Settings → Privacy & Security → Screen Recording, allow Fluxer, and then try again."
-msgstr "Fluxer memerlukan akses ke rekaman layar. Buka Pengaturan Sistem → Privasi & Keamanan → Rekaman Layar, izinkan Fluxer, lalu coba lagi."
+msgstr "RdChat memerlukan akses ke rekaman layar. Buka Pengaturan Sistem → Privasi & Keamanan → Rekaman Layar, izinkan RdChat, lalu coba lagi."
 
 #: src/components/modals/tabs/VideoTab.tsx:179
 msgid "Fluxer needs access to your camera before we can list it here."
-msgstr "Fluxer memerlukan akses ke kamera Anda sebelum kami dapat mendaftarkannya di sini."
+msgstr "RdChat memerlukan akses ke kamera Anda sebelum kami dapat mendaftarkannya di sini."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your camera to enable video chat. Please grant camera permission in your browser settings and try again."
-msgstr "Fluxer memerlukan akses ke kamera Anda untuk mengaktifkan obrolan video. Berikan izin kamera di pengaturan browser Anda dan coba lagi."
+msgstr "RdChat memerlukan akses ke kamera Anda untuk mengaktifkan obrolan video. Berikan izin kamera di pengaturan browser Anda dan coba lagi."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:42
 msgid "Fluxer needs access to your camera. Allow camera access in your operating system privacy settings and restart the app."
-msgstr "Fluxer memerlukan akses ke kamera Anda. Izinkan akses kamera di pengaturan privasi sistem operasi Anda dan mulai ulang aplikasi."
+msgstr "RdChat memerlukan akses ke kamera Anda. Izinkan akses kamera di pengaturan privasi sistem operasi Anda dan mulai ulang aplikasi."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:32
 msgid "Fluxer needs access to your camera. Open System Settings → Privacy & Security → Camera, allow Fluxer, and then restart the app."
-msgstr "Fluxer memerlukan akses ke kamera Anda. Buka Pengaturan Sistem → Privasi & Keamanan → Kamera, izinkan Fluxer, lalu mulai ulang aplikasi."
+msgstr "RdChat memerlukan akses ke kamera Anda. Buka Pengaturan Sistem → Privasi & Keamanan → Kamera, izinkan RdChat, lalu mulai ulang aplikasi."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:44
 msgid "Fluxer needs access to your microphone to enable voice chat. Please grant microphone permission in your browser settings and try again."
-msgstr "Fluxer memerlukan akses ke mikrofon Anda untuk mengaktifkan obrolan suara. Berikan izin mikrofon di pengaturan browser Anda dan coba lagi."
+msgstr "RdChat memerlukan akses ke mikrofon Anda untuk mengaktifkan obrolan suara. Berikan izin mikrofon di pengaturan browser Anda dan coba lagi."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your microphone. Allow microphone access in your operating system privacy settings and restart the app."
-msgstr "Fluxer memerlukan akses ke mikrofon Anda. Izinkan akses mikrofon di pengaturan privasi sistem operasi Anda dan mulai ulang aplikasi."
+msgstr "RdChat memerlukan akses ke mikrofon Anda. Izinkan akses mikrofon di pengaturan privasi sistem operasi Anda dan mulai ulang aplikasi."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:33
 msgid "Fluxer needs access to your microphone. Open System Settings → Privacy & Security → Microphone, allow Fluxer, and then restart the app."
-msgstr "Fluxer memerlukan akses ke mikrofon Anda. Buka Pengaturan Sistem → Privasi & Keamanan → Mikrofon, izinkan Fluxer, lalu mulai ulang aplikasi."
+msgstr "RdChat memerlukan akses ke mikrofon Anda. Buka Pengaturan Sistem → Privasi & Keamanan → Mikrofon, izinkan RdChat, lalu mulai ulang aplikasi."
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:69
 msgid "Fluxer needs Input Monitoring permission to keep push-to-talk and global shortcuts working while the window is in the background."
-msgstr "Fluxer memerlukan izin Pemantauan Input agar push-to-talk dan pintasan global tetap berfungsi saat jendela berada di latar belakang."
+msgstr "RdChat memerlukan izin Pemantauan Input agar push-to-talk dan pintasan global tetap berfungsi saat jendela berada di latar belakang."
 
 #: src/components/modals/InputMonitoringCTAModal.tsx:77
 msgid "Fluxer needs permission to monitor keyboard and mouse input so that <0>Push-to-Talk</0> and <1>Global Shortcuts</1> work even when you're in another app or game."
-msgstr "Fluxer memerlukan izin untuk memantau input keyboard dan mouse agar <0>Push-to-Talk</0> dan <1>Pintasan Global</1> tetap berfungsi bahkan saat Anda berada di aplikasi atau game lain."
+msgstr "RdChat memerlukan izin untuk memantau input keyboard dan mouse agar <0>Push-to-Talk</0> dan <1>Pintasan Global</1> tetap berfungsi bahkan saat Anda berada di aplikasi atau game lain."
 
 #: src/components/popouts/UserProfileBadges.tsx:105
 msgid "Fluxer Partner"
-msgstr "Mitra Fluxer"
+msgstr "Mitra RdChat"
 
 #: src/components/modals/components/PlutoniumContent.tsx:165
 #: src/components/modals/PremiumModal.tsx:34
 #: src/components/modals/utils/SettingsConstants.tsx:124
 #: src/components/popouts/UserProfileBadges.tsx:121
 msgid "Fluxer Plutonium"
-msgstr "Fluxer Plutonium"
+msgstr "RdChat Plutonium"
 
 #: src/components/popouts/UserProfileBadges.tsx:85
 msgid "Fluxer Staff"
-msgstr "Staf Fluxer"
+msgstr "Staf RdChat"
 
 #: src/components/modals/tabs/notifications_tab/Notifications.tsx:113
 msgid "Fluxer uses push notifications when installed as a mobile PWA. Registering ensures the gateway can reach your device even when the browser is backgrounded."
-msgstr "Fluxer menggunakan notifikasi push saat diinstal sebagai PWA seluler. Pendaftaran memastikan gateway dapat menjangkau perangkat Anda bahkan saat browser di latar belakang."
+msgstr "RdChat menggunakan notifikasi push saat diinstal sebagai PWA seluler. Pendaftaran memastikan gateway dapat menjangkau perangkat Anda bahkan saat browser di latar belakang."
 
 #: src/components/modals/FluxerTagChangeModal.tsx:190
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:103
 msgid "FluxerTag"
-msgstr "FluxerTag"
+msgstr "RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:107
 msgid "FluxerTag already taken"
-msgstr "FluxerTag sudah digunakan"
+msgstr "RdChatTag sudah digunakan"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:149
 msgid "FluxerTag updated"
-msgstr "FluxerTag diperbarui"
+msgstr "RdChatTag diperbarui"
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:269
 msgid "focus"
@@ -10267,7 +10267,7 @@ msgstr "Gratis vs Plutonium"
 
 #: src/components/modals/tabs/VideoTab.tsx:237
 msgid "Freezes your preview while Fluxer is in the background to save resources."
-msgstr "Membekukan pratinjau Anda sementara Fluxer berada di latar belakang untuk menghemat sumber daya."
+msgstr "Membekukan pratinjau Anda sementara RdChat berada di latar belakang untuk menghemat sumber daya."
 
 #: src/utils/LocaleUtils.tsx:49
 msgid "French"
@@ -10314,7 +10314,7 @@ msgstr "Permintaan Pertemanan"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:156
 msgid "Friend's FluxerTag"
-msgstr "FluxerTag Teman"
+msgstr "RdChatTag Teman"
 
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:170
 msgid "Friendly bot"
@@ -10518,7 +10518,7 @@ msgstr "Dapatkan peringatan saat perangkat audio baru terhubung"
 
 #: src/components/layout/app_layout/nagbars/DesktopDownloadNagbar.tsx:50
 msgid "Get the Fluxer desktop app for system-wide push-to-talk and a few other goodies."
-msgstr "Dapatkan aplikasi desktop Fluxer untuk push-to-talk di seluruh sistem dan beberapa fitur menarik lainnya."
+msgstr "Dapatkan aplikasi desktop RdChat untuk push-to-talk di seluruh sistem dan beberapa fitur menarik lainnya."
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:280
 msgid "gif"
@@ -11605,7 +11605,7 @@ msgstr "Dalam Suara"
 
 #: src/components/modals/tabs/VoiceTab.tsx:142
 msgid "In your browser, Push-to-Talk will only work when the Fluxer tab is focused. For system-wide Push-to-Talk that works even when gaming or using other apps, download the desktop app."
-msgstr "Di browser Anda, Push-to-Talk hanya akan berfungsi saat tab Fluxer difokuskan. Untuk Push-to-Talk sistem-wide yang berfungsi bahkan saat bermain game atau menggunakan aplikasi lain, unduh aplikasi desktop."
+msgstr "Di browser Anda, Push-to-Talk hanya akan berfungsi saat tab RdChat difokuskan. Untuk Push-to-Talk sistem-wide yang berfungsi bahkan saat bermain game atau menggunakan aplikasi lain, unduh aplikasi desktop."
 
 #: src/utils/SearchUtils.tsx:267
 msgid "in:"
@@ -11809,7 +11809,7 @@ msgstr "Pasang Paket Emoji"
 
 #: src/components/layout/app_layout/nagbars/MobileDownloadNagbar.tsx:50
 msgid "Install Fluxer on your phone as a home screen app to receive notifications on the go!"
-msgstr "Instal Fluxer di ponsel Anda sebagai aplikasi layar utama untuk menerima notifikasi saat bepergian!"
+msgstr "Instal RdChat di ponsel Anda sebagai aplikasi layar utama untuk menerima notifikasi saat bepergian!"
 
 #: src/components/channel/InviteEmbed.tsx:223
 #: src/components/modals/InviteAcceptModal.tsx:160
@@ -12220,11 +12220,11 @@ msgstr "Formulir bergabung komunitas"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:101
 msgid "Join Fluxer HQ"
-msgstr "Bergabung dengan Fluxer HQ"
+msgstr "Bergabung dengan RdChat HQ"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:98
 msgid "Join Fluxer HQ to chat with the team and stay up to date on the latest!"
-msgstr "Bergabung dengan Fluxer HQ untuk mengobrol dengan tim dan tetap terkini dengan berita terbaru!"
+msgstr "Bergabung dengan RdChat HQ untuk mengobrol dengan tim dan tetap terkini dengan berita terbaru!"
 
 #: src/components/channel/InviteEmbed.tsx:214
 msgid "Join Group"
@@ -12289,7 +12289,7 @@ msgstr "Bergabung"
 
 #: src/components/channel/GuildMembersPage.tsx:986
 msgid "Joined Fluxer"
-msgstr "Bergabung dengan Fluxer"
+msgstr "Bergabung dengan RdChat"
 
 #. placeholder {0}: bannerConfig.minWidth
 #. placeholder {1}: bannerConfig.minHeight
@@ -12609,7 +12609,7 @@ msgstr "Latvia"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:92
 msgid "Launch Fluxer at Login"
-msgstr "Luncurkan Fluxer saat Masuk"
+msgstr "Luncurkan RdChat saat Masuk"
 
 #: src/components/modals/tabs/component_gallery_tab/MessagesTab.tsx:361
 msgid "Layouts for 1-10 image attachments using CDN assets."
@@ -12799,7 +12799,7 @@ msgstr "Tautan kedaluwarsa. Alamat IP Anda kemungkinan sudah diotorisasi."
 
 #: src/components/modals/tabs/LinkedAccountsTab.tsx:284
 msgid "Link external accounts and domains to your Fluxer profile. Verified connections will be displayed on your profile for others to see."
-msgstr "Tautkan akun eksternal dan domain ke profil Fluxer Anda. Koneksi yang terverifikasi akan ditampilkan di profil Anda untuk dilihat orang lain."
+msgstr "Tautkan akun eksternal dan domain ke profil RdChat Anda. Koneksi yang terverifikasi akan ditampilkan di profil Anda untuk dilihat orang lain."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:321
 msgid "Link external accounts and domains to your profile"
@@ -13203,7 +13203,7 @@ msgstr "Kelola Langganan"
 
 #: src/components/modals/tabs/account_security_tab/AccountTab.tsx:58
 msgid "Manage the email address you use to sign in to Fluxer"
-msgstr "Kelola alamat email yang Anda gunakan untuk masuk ke Fluxer"
+msgstr "Kelola alamat email yang Anda gunakan untuk masuk ke RdChat"
 
 #: src/utils/PermissionUtils.tsx:294
 #: src/utils/PermissionUtils.tsx:449
@@ -15026,7 +15026,7 @@ msgstr "Tidak ada Pesan yang Belum Dibaca"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:90
 msgid "No user found with that FluxerTag."
-msgstr "Tidak ada pengguna ditemukan dengan FluxerTag tersebut."
+msgstr "Tidak ada pengguna ditemukan dengan RdChatTag tersebut."
 
 #: src/components/modals/guild_tabs/GuildBansTab.tsx:180
 msgid "No users are currently banned from this community."
@@ -15546,7 +15546,7 @@ msgstr "Buka Hanya DM"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:118
 msgid "Open Fluxer"
-msgstr "Buka Fluxer"
+msgstr "Buka RdChat"
 
 #: src/components/channel/embeds/attachments/AttachmentGridItem.tsx:311
 #: src/components/channel/embeds/media/EmbedGifv.tsx:253
@@ -15565,7 +15565,7 @@ msgstr "Buka di Komunitas"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:105
 msgid "Open in Fluxer for desktop"
-msgstr "Buka di Fluxer untuk desktop"
+msgstr "Buka di RdChat untuk desktop"
 
 #: src/components/channel/embeds/media/EmbedYouTube.tsx:118
 msgid "Open in new tab"
@@ -16366,7 +16366,7 @@ msgstr "Silakan periksa kotak masuk Anda untuk email verifikasi."
 #: src/components/modals/InputMonitoringCTAModal.tsx:53
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:52
 msgid "Please enable Fluxer in System Settings → Privacy & Security → Input Monitoring."
-msgstr "Silakan aktifkan Fluxer di Pengaturan Sistem → Privasi & Keamanan → Pemantauan Input."
+msgstr "Silakan aktifkan RdChat di Pengaturan Sistem → Privasi & Keamanan → Pemantauan Input."
 
 #: src/components/pages/ReportPage.tsx:216
 msgid "Please enter a valid email address."
@@ -16374,7 +16374,7 @@ msgstr "Silakan masukkan alamat email yang valid."
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:93
 msgid "Please enter a valid FluxerTag (Username#0000)."
-msgstr "Silakan masukkan FluxerTag yang valid (Username#0000)."
+msgstr "Silakan masukkan RdChatTag yang valid (Username#0000)."
 
 #: src/components/pages/ReportPage.tsx:341
 msgid "Please enter a valid message link URL."
@@ -16419,7 +16419,7 @@ msgstr "Silakan coba lagi nanti."
 #: src/components/channel/UnknownMessage.tsx:73
 #: src/components/channel/UnknownMessage.tsx:127
 msgid "Please update Fluxer to view this message."
-msgstr "Silakan perbarui Fluxer untuk melihat pesan ini."
+msgstr "Silakan perbarui RdChat untuk melihat pesan ini."
 
 #: src/actions/InviteActionCreators.tsx:184
 msgid "Please verify your account by setting an email and password before joining communities."
@@ -16589,7 +16589,7 @@ msgstr "Pratinjau"
 
 #: src/components/modals/tabs/developer_options_tab/TypographyTab.tsx:135
 msgid "Preview all available fonts, weights, and styles across different languages supported by Fluxer."
-msgstr "Pratinjau semua font, ketebalan, dan gaya yang tersedia di berbagai bahasa yang didukung oleh Fluxer."
+msgstr "Pratinjau semua font, ketebalan, dan gaya yang tersedia di berbagai bahasa yang didukung oleh RdChat."
 
 #: src/components/modals/tabs/AccessibilityTab.tsx:113
 msgid "Preview Button"
@@ -16795,7 +16795,7 @@ msgstr "Lindungi akun Anda dengan autentikasi dua faktor dan passkey"
 
 #: src/components/layout/app_layout/nagbars/VisionaryMfaNagbar.tsx:52
 msgid "Protect your Visionary account by enabling two-factor authentication. Thanks for supporting Fluxer!"
-msgstr "Lindungi akun Visionary Anda dengan mengaktifkan autentikasi dua faktor. Terima kasih telah mendukung Fluxer!"
+msgstr "Lindungi akun Visionary Anda dengan mengaktifkan autentikasi dua faktor. Terima kasih telah mendukung RdChat!"
 
 #: src/components/modals/IARModal.tsx:244
 msgid "Provide any additional context that may help our Safety Team..."
@@ -16807,7 +16807,7 @@ msgstr "Berikan setidaknya ID pengguna atau tag pengguna."
 
 #: src/components/pages/ReportPage.tsx:359
 msgid "Provide either a user ID or a FluxerTag for the person you are reporting."
-msgstr "Berikan ID pengguna atau FluxerTag untuk orang yang Anda laporkan."
+msgstr "Berikan ID pengguna atau RdChatTag untuk orang yang Anda laporkan."
 
 #: src/components/pages/ReportPage.tsx:310
 msgid "Provide your full legal name for the declaration."
@@ -17701,7 +17701,7 @@ msgstr "Diperbarui pada <0>{renewalDate}</0>."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:120
 msgid "Reopen in maximized mode if that’s how you last used Fluxer."
-msgstr "Buka kembali dalam mode diperbesar jika itu cara terakhir Anda menggunakan Fluxer."
+msgstr "Buka kembali dalam mode diperbesar jika itu cara terakhir Anda menggunakan RdChat."
 
 #: src/components/modals/BackgroundImageGalleryModal.tsx:280
 #: src/components/modals/BackgroundImageGalleryModal.tsx:396
@@ -18276,11 +18276,11 @@ msgstr "Ruby"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:89
 msgid "Run Fluxer automatically when your computer starts. Or don't. Your choice!"
-msgstr "Jalankan Fluxer secara otomatis saat komputer Anda mulai. Atau jangan. Pilihan Anda!"
+msgstr "Jalankan RdChat secara otomatis saat komputer Anda mulai. Atau jangan. Pilihan Anda!"
 
 #: src/components/modals/tabs/KeybindsTab.tsx:94
 msgid "Run this shortcut even when Fluxer is not focused."
-msgstr "Jalankan pintasan ini bahkan saat Fluxer tidak difokuskan."
+msgstr "Jalankan pintasan ini bahkan saat RdChat tidak difokuskan."
 
 #: src/utils/LocaleUtils.tsx:64
 msgid "Russian"
@@ -20909,7 +20909,7 @@ msgstr "DM sistem tidak dapat mengadakan panggilan suara."
 
 #: src/components/channel/barriers/BarrierComponents.tsx:249
 msgid "System DMs deliver important announcements from Fluxer staff. Replies and interactions are disabled in this conversation."
-msgstr "DM sistem mengirimkan pengumuman penting dari staf Fluxer. Balasan dan interaksi dinonaktifkan dalam percakapan ini."
+msgstr "DM sistem mengirimkan pengumuman penting dari staf RdChat. Balasan dan interaksi dinonaktifkan dalam percakapan ini."
 
 #: src/components/modals/tabs/LanguageTab.tsx:81
 msgid "System locale ({browserLocale}): {format}"
@@ -21082,11 +21082,11 @@ msgstr "Thai"
 
 #: src/components/modals/IARModal.tsx:220
 msgid "Thank you for helping keep Fluxer safe. Reports are reviewed by our Safety Team. False reports may result in action against your account."
-msgstr "Terima kasih telah membantu menjaga Fluxer aman. Laporan ditinjau oleh Tim Keamanan kami. Laporan palsu dapat mengakibatkan tindakan terhadap akun Anda."
+msgstr "Terima kasih telah membantu menjaga RdChat aman. Laporan ditinjau oleh Tim Keamanan kami. Laporan palsu dapat mengakibatkan tindakan terhadap akun Anda."
 
 #: src/components/pages/report/ReportStepComplete.tsx:37
 msgid "Thank you for helping keep Fluxer safe. We'll review your report as soon as possible."
-msgstr "Terima kasih telah membantu menjaga keamanan Fluxer. Kami akan meninjau laporanmu secepat mungkin."
+msgstr "Terima kasih telah membantu menjaga keamanan RdChat. Kami akan meninjau laporanmu secepat mungkin."
 
 #: src/components/form/ColorPickerField.tsx:277
 msgid "That doesn't look like a valid color. Try hex, rgb(), hsl(), or a CSS color name."
@@ -21155,7 +21155,7 @@ msgstr "File yang Anda coba unggah melebihi batas ukuran maksimum {maxSizeFormat
 
 #: src/components/modals/FluxerTagChangeModal.tsx:111
 msgid "The FluxerTag <0>{fluxerTag}</0> is already taken. Continuing will reroll your discriminator automatically."
-msgstr "FluxerTag <0>{fluxerTag}</0> sudah digunakan. Melanjutkan akan menggulir ulang diskriminator Anda secara otomatis."
+msgstr "RdChatTag <0>{fluxerTag}</0> sudah digunakan. Melanjutkan akan menggulir ulang diskriminator Anda secara otomatis."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataDeletionTab.tsx:80
 msgid "The job starts 24 hours after you confirm and can be canceled or restarted anytime"
@@ -21204,7 +21204,7 @@ msgstr "Waktu tunggu tidak boleh melebihi 365 hari (31536000 detik)."
 
 #: src/components/auth/BrowserLoginHandoffModal.tsx:104
 msgid "The URL of the Fluxer instance you want to sign in to."
-msgstr "URL instance Fluxer yang ingin Anda masuki."
+msgstr "URL instance RdChat yang ingin Anda masuki."
 
 #: src/components/modals/channel_tabs/ChannelOverviewTab.tsx:496
 msgid "The URL this link channel points to."
@@ -21290,7 +21290,7 @@ msgstr "Tidak ada lagi yang bisa dilihat di sini."
 
 #: src/components/modals/tabs/AuthorizedAppsTab.tsx:146
 msgid "These applications have been granted access to your Fluxer account."
-msgstr "Aplikasi-aplikasi ini telah diberikan akses ke akun Fluxer Anda."
+msgstr "Aplikasi-aplikasi ini telah diberikan akses ke akun RdChat Anda."
 
 #: src/components/modals/tabs/VoiceTab.tsx:405
 msgid "These settings use browser-native audio processing to improve call quality. For best results, keep all options enabled."
@@ -21559,7 +21559,7 @@ msgstr "Ini adalah emoji kustom dari komunitas. Minta undangan dari pembuatnya u
 
 #: src/components/emojis/EmojiAttributionSubtext.tsx:102
 msgid "This is a default emoji on Fluxer."
-msgstr "Ini adalah emoji default di Fluxer."
+msgstr "Ini adalah emoji default di RdChat."
 
 #: src/components/modals/tabs/component_gallery_tab/InputsTab.tsx:147
 msgid "This is an error message"
@@ -24402,7 +24402,7 @@ msgstr "Kami akan memverifikasi email baru Anda dengan kode satu kali."
 
 #: src/components/NetworkErrorScreen.tsx:39
 msgid "We're having trouble connecting to Fluxer's servers. This could be a temporary network issue or scheduled maintenance."
-msgstr "Kami mengalami masalah menghubungkan ke server Fluxer. Ini bisa jadi masalah jaringan sementara atau pemeliharaan terjadwal."
+msgstr "Kami mengalami masalah menghubungkan ke server RdChat. Ini bisa jadi masalah jaringan sementara atau pemeliharaan terjadwal."
 
 #: src/components/modals/tabs/DevicesTab.tsx:234
 msgid "We're having trouble connecting to the space-time continuum. Please check your connection and try again."
@@ -24415,27 +24415,27 @@ msgstr "Kami mengindeks kanal ini untuk pertama kalinya. Ini mungkin memerlukan 
 
 #: src/components/modals/RequiredActionModal.tsx:166
 msgid "We've detected suspicious activity on your account. Please reverify your email address or phone number to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang alamat email atau nomor telepon Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang alamat email atau nomor telepon Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:158
 msgid "We've detected suspicious activity on your account. Please reverify your email address to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang alamat email Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang alamat email Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:162
 msgid "We've detected suspicious activity on your account. Please reverify your phone number to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang nomor telepon Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi ulang nomor telepon Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:167
 msgid "We've detected suspicious activity on your account. Please verify your email address or phone number to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi alamat email atau nomor telepon Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi alamat email atau nomor telepon Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:159
 msgid "We've detected suspicious activity on your account. Please verify your email address to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi alamat email Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi alamat email Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:163
 msgid "We've detected suspicious activity on your account. Please verify your phone number to continue using Fluxer."
-msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi nomor telepon Anda untuk melanjutkan menggunakan Fluxer."
+msgstr "Kami mendeteksi aktivitas mencurigakan pada akun Anda. Silakan verifikasi nomor telepon Anda untuk melanjutkan menggunakan RdChat."
 
 #: src/components/pages/ForgotPasswordPage.tsx:65
 msgid "We've sent password reset instructions to your email address. Please check your inbox and follow the link to reset your password."
@@ -24511,7 +24511,7 @@ msgstr "Selamat datang di Favorit"
 
 #: src/components/layout/app_layout/nagbars/PremiumOnboardingNagbar.tsx:52
 msgid "Welcome to Fluxer Plutonium! Explore your premium features and manage your subscription."
-msgstr "Selamat datang di Fluxer Plutonium! Jelajahi fitur premium Anda dan kelola langganan Anda."
+msgstr "Selamat datang di RdChat Plutonium! Jelajahi fitur premium Anda dan kelola langganan Anda."
 
 #: src/utils/SystemMessageUtils.tsx:46
 msgid "Welcome, {username}! Don't forget to park your DeLorean."
@@ -24591,7 +24591,7 @@ msgstr "Saat diaktifkan, mengetuk cepat pintasan push-to-talk Anda akan membuat 
 
 #: src/components/modals/tabs/AdvancedTab.tsx:160
 msgid "When enabled, reveals debugging menus throughout the app to inspect and copy raw JSON objects of internal data structures like messages, channels, users, and communities. Also includes tools to debug the Fluxer Markdown parser performance and AST for any given message."
-msgstr "Saat diaktifkan, mengungkap menu debug di seluruh aplikasi untuk memeriksa dan menyalin objek JSON mentah dari struktur data internal seperti pesan, kanal, pengguna, dan komunitas. Juga mencakup alat untuk mendebug kinerja parser Markdown Fluxer dan AST untuk pesan apa pun."
+msgstr "Saat diaktifkan, mengungkap menu debug di seluruh aplikasi untuk memeriksa dan menyalin objek JSON mentah dari struktur data internal seperti pesan, kanal, pengguna, dan komunitas. Juga mencakup alat untuk mendebug kinerja parser Markdown RdChat dan AST untuk pesan apa pun."
 
 #: src/components/modals/tabs/appearance_tab/InterfaceTab.tsx:135
 msgid "When enabled, shortcut badges are hidden in tooltip popups."
@@ -24647,7 +24647,7 @@ msgstr "Saat mereka mencapai 88mph, mereka akan muncul di sini."
 
 #: src/components/modals/tabs/chat_settings_tab/DisplayTab.tsx:73
 msgid "When uploaded directly to Fluxer"
-msgstr "Saat diunggah langsung ke Fluxer"
+msgstr "Saat diunggah langsung ke RdChat"
 
 #: src/components/shared/ChannelPinsContent.tsx:158
 msgid "Whenever someone pins a message, it'll appear here."
@@ -24788,7 +24788,7 @@ msgstr "Anda sudah memiliki koneksi ini."
 
 #: src/components/modals/ExternalLinkWarningModal.tsx:74
 msgid "You are about to leave Fluxer"
-msgstr "Anda akan meninggalkan Fluxer"
+msgstr "Anda akan meninggalkan RdChat"
 
 #. placeholder {0}: targetUser.username
 #: src/components/modals/TransferOwnershipModal.tsx:75
@@ -24813,7 +24813,7 @@ msgstr "Anda sekarang seorang pengembang!"
 
 #: src/components/modals/components/plutonium/hooks/useCheckoutActions.tsx:107
 msgid "You are now navigating to Stripe to complete the payment. Return to Fluxer once you've completed it!"
-msgstr "Anda sekarang menavigasi ke Stripe untuk menyelesaikan pembayaran. Kembali ke Fluxer setelah Anda menyelesaikannya!"
+msgstr "Anda sekarang menavigasi ke Stripe untuk menyelesaikan pembayaran. Kembali ke RdChat setelah Anda menyelesaikannya!"
 
 #. placeholder {0}: displayUser.username
 #. placeholder {0}: user.username
@@ -24849,7 +24849,7 @@ msgstr "Anda dapat menambahkan komentar sebelum mengunggah. Tahan shift untuk me
 
 #: src/components/channel/direct_message/AddFriendView.tsx:35
 msgid "You can add friends with their FluxerTag."
-msgstr "Anda dapat menambahkan teman dengan FluxerTag mereka."
+msgstr "Anda dapat menambahkan teman dengan RdChatTag mereka."
 
 #. placeholder {0}: modalLogic.maxSelections
 #: src/components/bottomsheets/CreateDMBottomSheet.tsx:109
@@ -25153,7 +25153,7 @@ msgstr "Anda belum membuat paket apa pun."
 
 #: src/components/modals/KeyboardModeIntroModal.tsx:46
 msgid "You just pressed Tab. Keyboard Mode is now on so you can navigate Fluxer without a mouse."
-msgstr "Anda baru saja menekan Tab. Mode Keyboard sekarang aktif sehingga Anda dapat menavigasi Fluxer tanpa mouse."
+msgstr "Anda baru saja menekan Tab. Mode Keyboard sekarang aktif sehingga Anda dapat menavigasi RdChat tanpa mouse."
 
 #: src/utils/ExpressionPermissionUtils.tsx:111
 msgid "You lack permission to use external emojis in this channel"
@@ -25483,7 +25483,7 @@ msgstr "Email Anda saat ini <0>{0}</0> tidak dapat menerima pesan. Masukkan alam
 
 #: src/components/modals/RequiredActionModal.tsx:155
 msgid "Your current email address couldn't receive messages. Please update it to continue using Fluxer."
-msgstr "Alamat email Anda saat ini tidak dapat menerima pesan. Silakan perbarui untuk terus menggunakan Fluxer."
+msgstr "Alamat email Anda saat ini tidak dapat menerima pesan. Silakan perbarui untuk terus menggunakan RdChat."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataExportTab.tsx:52
 msgid "Your data export will include all your user information, messages, and URLs to download any attachments."
@@ -25511,7 +25511,7 @@ msgstr "Permintaan ekspor Anda akan diproses"
 
 #: src/components/pages/report/ReportStepDetails.tsx:213
 msgid "Your FluxerTag (Optional)"
-msgstr "FluxerTag Anda (Opsional)"
+msgstr "RdChatTag Anda (Opsional)"
 
 #: src/components/channel/friends/views/FriendsList.tsx:87
 msgid "Your friends are currently stuck in another timeline"

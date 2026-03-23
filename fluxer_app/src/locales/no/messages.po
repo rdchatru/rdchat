@@ -1006,7 +1006,7 @@ msgstr "<0/> startet en samtale."
 #. placeholder {0}: guild.name
 #: src/components/layout/GuildLayout.tsx:134
 msgid "<0>{0}</0> is currently only accessible to Fluxer staff members"
-msgstr "<0>{0}</0> er for øyeblikket kun tilgjengelig for Fluxer-ansatte"
+msgstr "<0>{0}</0> er for øyeblikket kun tilgjengelig for RdChat-ansatte"
 
 #. placeholder {0}: targetUser.tag
 #: src/components/modals/TimeoutMemberSheet.tsx:122
@@ -2241,7 +2241,7 @@ msgstr "Alle statustyper"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
 msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Alle oversettelser er for øyeblikket generert av LLM med minimal menneskelig revisjon. Vi ønsker gjerne å få ekte mennesker til å hjelpe oss med å lokaliserer Fluxer til ditt språk! For å gjøre det, send en e-post til <0>i18n@fluxer.app</0> så vil vi gjerne ta imot bidragene dine."
+msgstr "Alle oversettelser er for øyeblikket generert av LLM med minimal menneskelig revisjon. Vi ønsker gjerne å få ekte mennesker til å hjelpe oss med å lokaliserer RdChat til ditt språk! For å gjøre det, send en e-post til <0>i18n@fluxer.app</0> så vil vi gjerne ta imot bidragene dine."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -2322,15 +2322,15 @@ msgstr "Tillat fleksible tekstkanalnavn"
 
 #: src/components/modals/tabs/VideoTab.tsx:174
 msgid "Allow Fluxer to access your camera in System Settings → Privacy & Security → Camera to preview and select devices."
-msgstr "La Fluxer få tilgang til kameraet ditt i Systeminnstillinger → Personvern og sikkerhet → Kamera for å forhåndsvise og velge enheter."
+msgstr "La RdChat få tilgang til kameraet ditt i Systeminnstillinger → Personvern og sikkerhet → Kamera for å forhåndsvise og velge enheter."
 
 #: src/components/modals/tabs/VoiceTab.tsx:202
 msgid "Allow Fluxer to access your microphone in System Settings → Privacy & Security → Microphone."
-msgstr "La Fluxer få tilgang til mikrofonen din i Systeminnstillinger → Personvern og sikkerhet → Mikrofon."
+msgstr "La RdChat få tilgang til mikrofonen din i Systeminnstillinger → Personvern og sikkerhet → Mikrofon."
 
 #: src/components/modals/tabs/VoiceTab.tsx:206
 msgid "Allow Fluxer to access your microphone. Check your browser address bar or settings to enable permissions."
-msgstr "La Fluxer få tilgang til mikrofonen din. Sjekk nettleserens adressefelt eller innstillinger for å aktivere tillatelser."
+msgstr "La RdChat få tilgang til mikrofonen din. Sjekk nettleserens adressefelt eller innstillinger for å aktivere tillatelser."
 
 #: src/components/modals/tabs/privacy_safety_tab/ConnectionsTab.tsx:104
 msgid "Allow for all communities"
@@ -3279,7 +3279,7 @@ msgstr "Spill av GIF-er automatisk"
 
 #: src/components/modals/tabs/accessibility_tab/AnimationTab.tsx:113
 msgid "Automatically play GIFs when Fluxer is focused"
-msgstr "Spill av GIF-er automatisk når Fluxer er i fokus"
+msgstr "Spill av GIF-er automatisk når RdChat er i fokus"
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:230
 msgid "Automatically screen messages for explicit content in non-NSFW channels."
@@ -3922,7 +3922,7 @@ msgstr "Kjøp gave"
 
 #: src/components/modals/AddGuildModal.tsx:360
 msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Community Guidelines</0>."
-msgstr "Ved å opprette et fellesskap godtar du å følge og støtte <0>Fluxer fellesskapsretningslinjer</0>."
+msgstr "Ved å opprette et fellesskap godtar du å følge og støtte <0>RdChat fellesskapsretningslinjer</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
 msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
@@ -4291,11 +4291,11 @@ msgstr "Endre emoji"
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:60
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:70
 msgid "Change FluxerTag"
-msgstr "Endre FluxerTag"
+msgstr "Endre RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:163
 msgid "Change FluxerTag form"
-msgstr "Endre FluxerTag-skjema"
+msgstr "Endre RdChatTag-skjema"
 
 #: src/components/channel/direct_message/DMList.tsx:676
 #: src/components/channel/direct_message/DMList.tsx:681
@@ -4382,7 +4382,7 @@ msgstr "Endre e-postadressen din"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:164
 msgid "Change Your FluxerTag"
-msgstr "Endre FluxerTag-en din"
+msgstr "Endre RdChatTag-en din"
 
 #: src/hooks/useCommands.tsx:70
 msgid "Change your nickname in this community."
@@ -4742,11 +4742,11 @@ msgstr "Velg destinasjon for system- og velkomstmeldinger"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:134
 msgid "Choose how Fluxer selects the video codec for screen sharing."
-msgstr "Velg hvordan Fluxer velger videokodeken for skjermdeling."
+msgstr "Velg hvordan RdChat velger videokodeken for skjermdeling."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:268
 msgid "Choose how Fluxer treats this community for age-gating. Age Restricted blocks access for users under 18 and shows a content warning for adults, subject to local laws."
-msgstr "Velg hvordan Fluxer behandler dette fellesskapet for aldersgrense. Aldersbegrenset blokkerer tilgang for brukere under 18 og viser en innholdsadvarsel for voksne, i henhold til lokale lover."
+msgstr "Velg hvordan RdChat behandler dette fellesskapet for aldersgrense. Aldersbegrenset blokkerer tilgang for brukere under 18 og viser en innholdsadvarsel for voksne, i henhold til lokale lover."
 
 #: src/components/modals/tabs/AppearanceTab.tsx:85
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:133
@@ -4771,7 +4771,7 @@ msgstr "Velg hva {clientLabel} kan gjøre i fellesskapet ditt. Fjern avhukingen 
 
 #: src/components/modals/tabs/AdvancedTab.tsx:109
 msgid "Choose what Fluxer remembers about your window between restarts and reloads on this device."
-msgstr "Velg hva Fluxer husker om vinduet ditt mellom omstarter og oppdateringer på denne enheten."
+msgstr "Velg hva RdChat husker om vinduet ditt mellom omstarter og oppdateringer på denne enheten."
 
 #: src/components/modals/guild_tabs/GuildModerationTab.tsx:202
 msgid "Choose what members must have before they can post or DM community members."
@@ -4848,7 +4848,7 @@ msgstr "Krev kontoen din for å ringe"
 
 #: src/components/modals/tabs/my_profile_tab/UsernameSection.tsx:57
 msgid "Claim your account to change your FluxerTag"
-msgstr "Krev kontoen din for å endre FluxerTag"
+msgstr "Krev kontoen din for å endre RdChatTag"
 
 #: src/components/modals/tabs/applications_tab/index.tsx:147
 msgid "Claim your account to create applications."
@@ -4869,11 +4869,11 @@ msgstr "Krev kontoen din for å bli med i stemmekanaler du ikke eier."
 #: src/components/modals/components/plutonium/PricingSection.tsx:54
 #: src/components/modals/components/PlutoniumContent.tsx:99
 msgid "Claim your account to purchase Fluxer Plutonium."
-msgstr "Krev kontoen din for å kjøpe Fluxer Plutonium."
+msgstr "Krev kontoen din for å kjøpe RdChat Plutonium."
 
 #: src/components/modals/components/plutonium/SubscriptionCard.tsx:104
 msgid "Claim your account to purchase or redeem Fluxer Plutonium."
-msgstr "Krev kontoen din for å kjøpe eller innløse Fluxer Plutonium."
+msgstr "Krev kontoen din for å kjøpe eller innløse RdChat Plutonium."
 
 #: src/components/modals/tabs/GiftInventoryTab.tsx:240
 msgid "Claim your account to redeem or manage Plutonium gift codes."
@@ -5031,7 +5031,7 @@ msgstr "klikk"
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:76
 msgid "Click \"Open Settings\" to open System Settings, then enable Fluxer in Input Monitoring."
-msgstr "Klikk \"Åpne innstillinger\" for å åpne systeminnstillingene, og aktiver deretter Fluxer i inndatamåling."
+msgstr "Klikk \"Åpne innstillinger\" for å åpne systeminnstillingene, og aktiver deretter RdChat i inndatamåling."
 
 #: src/components/modals/tabs/component_gallery_tab/ButtonsTab.tsx:58
 msgid "Click any button to see toast notifications with feedback."
@@ -6043,7 +6043,7 @@ msgstr "Kopier endepunkt"
 #: src/components/modals/UserProfileActionsSheet.tsx:209
 #: src/components/modals/UserProfileModal.tsx:1177
 msgid "Copy FluxerTag"
-msgstr "Kopier FluxerTag"
+msgstr "Kopier RdChatTag"
 
 #: src/components/uikit/context_menu/items/MediaMenuData.tsx:179
 msgid "Copy GIF"
@@ -6278,7 +6278,7 @@ msgstr "Opprett og administrer applikasjoner og roboter for kontoen din."
 
 #: src/components/modals/tabs/ExpressionPacksTab.tsx:147
 msgid "Create and share custom emoji and sticker packs with Fluxer Plutonium."
-msgstr "Lag og del egendefinerte emoji- og klistremerkepakker med Fluxer Plutonium."
+msgstr "Lag og del egendefinerte emoji- og klistremerkepakker med RdChat Plutonium."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:293
 msgid "create app"
@@ -6391,7 +6391,7 @@ msgstr "Opprett webhook"
 
 #: src/components/modals/tabs/applications_tab/ApplicationsList.tsx:44
 msgid "Create your first application to get started with the Fluxer API."
-msgstr "Opprett din første applikasjon for å komme i gang med Fluxer API."
+msgstr "Opprett din første applikasjon for å komme i gang med RdChat API."
 
 #: src/utils/PermissionUtils.tsx:258
 msgid "Create, edit, or delete channels and categories."
@@ -8015,7 +8015,7 @@ msgstr "Last ned skrivebordsappen"
 #: src/components/layout/guild_list/DownloadButton.tsx:47
 #: src/components/layout/guild_list/DownloadButton.tsx:51
 msgid "Download Fluxer"
-msgstr "Last ned Fluxer"
+msgstr "Last ned RdChat"
 
 #: src/components/modals/AddConnectionModal.tsx:297
 msgid "Download fluxer-verification"
@@ -9859,123 +9859,123 @@ msgstr "Fleksible tekstkanalnavn"
 
 #: src/components/popouts/UserProfileShared.tsx:207
 msgid "Fluxer"
-msgstr "Fluxer"
+msgstr "RdChat"
 
 #: src/components/icons/FluxerIcon.tsx:31
 msgid "Fluxer application icon"
-msgstr "Fluxer-appikon"
+msgstr "RdChat-appikon"
 
 #: src/components/icons/FluxerSymbol.tsx:31
 msgid "Fluxer application symbol"
-msgstr "Fluxer-appsymbol"
+msgstr "RdChat-appsymbol"
 
 #: src/components/modals/tabs/notifications_tab/PushSettings.tsx:37
 msgid "Fluxer avoids sending push notifications to your mobile devices when you are at your computer. Use this setting to control how long you need to be inactive on desktop for before you receive push notifications, ranging from 1 minute to 10 minutes."
-msgstr "Fluxer unngår å sende push-varsler til mobilenhetene dine når du er ved datamaskinen. Bruk denne innstillingen for å angi hvor lenge du må være inaktiv på desktop før du får push-varsler, fra 1 til 10 minutter."
+msgstr "RdChat unngår å sende push-varsler til mobilenhetene dine når du er ved datamaskinen. Bruk denne innstillingen for å angi hvor lenge du må være inaktiv på desktop før du får push-varsler, fra 1 til 10 minutter."
 
 #: src/components/popouts/UserProfileBadges.tsx:115
 msgid "Fluxer Bug Hunter"
-msgstr "Fluxer bug-jeger"
+msgstr "RdChat bug-jeger"
 
 #: src/components/popouts/UserProfileBadges.tsx:95
 msgid "Fluxer Community Team"
-msgstr "Fluxer-fellesskapsteam"
+msgstr "RdChat-fellesskapsteam"
 
 #: src/components/modals/tabs/DevicesTab.tsx:99
 msgid "Fluxer Desktop"
-msgstr "Fluxer Desktop"
+msgstr "RdChat Desktop"
 
 #: src/components/BootstrapErrorScreen.tsx:52
 msgid "Fluxer failed to start properly. This could be due to corrupted data or a temporary issue."
-msgstr "Fluxer startet ikke riktig. Dette kan skyldes ødelagte data eller et midlertidig problem."
+msgstr "RdChat startet ikke riktig. Dette kan skyldes ødelagte data eller et midlertidig problem."
 
 #: src/stores/NewDeviceMonitoringStore.tsx:187
 msgid "Fluxer has found a new audio input device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer har funnet en ny lydinngangsenhet kalt <0>{deviceName}</0>. Vil du bytte til den?"
+msgstr "RdChat har funnet en ny lydinngangsenhet kalt <0>{deviceName}</0>. Vil du bytte til den?"
 
 #: src/stores/NewDeviceMonitoringStore.tsx:192
 msgid "Fluxer has found a new audio output device named <0>{deviceName}</0>. Do you want to switch to it?"
-msgstr "Fluxer har funnet en ny lydutgangsenhet kalt <0>{deviceName}</0>. Vil du bytte til den?"
+msgstr "RdChat har funnet en ny lydutgangsenhet kalt <0>{deviceName}</0>. Vil du bytte til den?"
 
 #: src/components/popouts/UserProfileShared.tsx:238
 msgid "Fluxer Member Since"
-msgstr "Fluxer-medlem siden"
+msgstr "RdChat-medlem siden"
 
 #: src/components/modals/tabs/VoiceTab.tsx:212
 msgid "Fluxer needs access to list the available microphones and speakers."
-msgstr "Fluxer trenger tilgang for å vise tilgjengelige mikrofoner og høyttalere."
+msgstr "RdChat trenger tilgang for å vise tilgjengelige mikrofoner og høyttalere."
 
 #: src/components/alerts/ScreenRecordingPermissionDeniedModal.tsx:31
 msgid "Fluxer needs access to screen recording. Open System Settings → Privacy & Security → Screen Recording, allow Fluxer, and then try again."
-msgstr "Fluxer trenger tilgang til skjermopptak. Åpne Systeminnstillinger → Personvern og sikkerhet → Skjermopptak, gi Fluxer tilgang og prøv igjen."
+msgstr "RdChat trenger tilgang til skjermopptak. Åpne Systeminnstillinger → Personvern og sikkerhet → Skjermopptak, gi RdChat tilgang og prøv igjen."
 
 #: src/components/modals/tabs/VideoTab.tsx:179
 msgid "Fluxer needs access to your camera before we can list it here."
-msgstr "Fluxer trenger tilgang til kameraet ditt før vi kan vise det her."
+msgstr "RdChat trenger tilgang til kameraet ditt før vi kan vise det her."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your camera to enable video chat. Please grant camera permission in your browser settings and try again."
-msgstr "Fluxer trenger tilgang til kameraet ditt for å aktivere videochat. Gi kamera-tilgang i nettleserinnstillingene og prøv igjen."
+msgstr "RdChat trenger tilgang til kameraet ditt for å aktivere videochat. Gi kamera-tilgang i nettleserinnstillingene og prøv igjen."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:42
 msgid "Fluxer needs access to your camera. Allow camera access in your operating system privacy settings and restart the app."
-msgstr "Fluxer trenger tilgang til kameraet ditt. Tillat kamera i personverninnstillingene i operativsystemet og start appen på nytt."
+msgstr "RdChat trenger tilgang til kameraet ditt. Tillat kamera i personverninnstillingene i operativsystemet og start appen på nytt."
 
 #: src/components/alerts/CameraPermissionDeniedModal.tsx:32
 msgid "Fluxer needs access to your camera. Open System Settings → Privacy & Security → Camera, allow Fluxer, and then restart the app."
-msgstr "Fluxer trenger tilgang til kameraet ditt. Åpne Systeminnstillinger → Personvern og sikkerhet → Kamera, gi Fluxer tilgang og start appen på nytt."
+msgstr "RdChat trenger tilgang til kameraet ditt. Åpne Systeminnstillinger → Personvern og sikkerhet → Kamera, gi RdChat tilgang og start appen på nytt."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:44
 msgid "Fluxer needs access to your microphone to enable voice chat. Please grant microphone permission in your browser settings and try again."
-msgstr "Fluxer trenger tilgang til mikrofonen din for å aktivere talechat. Gi mikrofon-tilgang i nettleserinnstillingene og prøv igjen."
+msgstr "RdChat trenger tilgang til mikrofonen din for å aktivere talechat. Gi mikrofon-tilgang i nettleserinnstillingene og prøv igjen."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:43
 msgid "Fluxer needs access to your microphone. Allow microphone access in your operating system privacy settings and restart the app."
-msgstr "Fluxer trenger tilgang til mikrofonen din. Tillat mikrofon i personverninnstillingene og start appen på nytt."
+msgstr "RdChat trenger tilgang til mikrofonen din. Tillat mikrofon i personverninnstillingene og start appen på nytt."
 
 #: src/components/alerts/MicrophonePermissionDeniedModal.tsx:33
 msgid "Fluxer needs access to your microphone. Open System Settings → Privacy & Security → Microphone, allow Fluxer, and then restart the app."
-msgstr "Fluxer trenger tilgang til mikrofonen din. Åpne Systeminnstillinger → Personvern og sikkerhet → Mikrofon, gi Fluxer tilgang og start appen på nytt."
+msgstr "RdChat trenger tilgang til mikrofonen din. Åpne Systeminnstillinger → Personvern og sikkerhet → Mikrofon, gi RdChat tilgang og start appen på nytt."
 
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:69
 msgid "Fluxer needs Input Monitoring permission to keep push-to-talk and global shortcuts working while the window is in the background."
-msgstr "Fluxer trenger tillatelse for inputovervåking for å holde push-to-talk og globale snarveier aktive mens vinduet er i bakgrunnen."
+msgstr "RdChat trenger tillatelse for inputovervåking for å holde push-to-talk og globale snarveier aktive mens vinduet er i bakgrunnen."
 
 #: src/components/modals/InputMonitoringCTAModal.tsx:77
 msgid "Fluxer needs permission to monitor keyboard and mouse input so that <0>Push-to-Talk</0> and <1>Global Shortcuts</1> work even when you're in another app or game."
-msgstr "Fluxer trenger tillatelse til å overvåke tastatur og mus slik at <0>Push-to-Talk</0> og <1>Globale snarveier</1> fungerer selv når du er i en annen app eller et spill."
+msgstr "RdChat trenger tillatelse til å overvåke tastatur og mus slik at <0>Push-to-Talk</0> og <1>Globale snarveier</1> fungerer selv når du er i en annen app eller et spill."
 
 #: src/components/popouts/UserProfileBadges.tsx:105
 msgid "Fluxer Partner"
-msgstr "Fluxer-partner"
+msgstr "RdChat-partner"
 
 #: src/components/modals/components/PlutoniumContent.tsx:165
 #: src/components/modals/PremiumModal.tsx:34
 #: src/components/modals/utils/SettingsConstants.tsx:124
 #: src/components/popouts/UserProfileBadges.tsx:121
 msgid "Fluxer Plutonium"
-msgstr "Fluxer Plutonium"
+msgstr "RdChat Plutonium"
 
 #: src/components/popouts/UserProfileBadges.tsx:85
 msgid "Fluxer Staff"
-msgstr "Fluxer-personale"
+msgstr "RdChat-personale"
 
 #: src/components/modals/tabs/notifications_tab/Notifications.tsx:113
 msgid "Fluxer uses push notifications when installed as a mobile PWA. Registering ensures the gateway can reach your device even when the browser is backgrounded."
-msgstr "Fluxer bruker push-varsler når installert som mobil PWA. Registrering sikrer at gatewayen når enheten din selv når nettleseren er i bakgrunnen."
+msgstr "RdChat bruker push-varsler når installert som mobil PWA. Registrering sikrer at gatewayen når enheten din selv når nettleseren er i bakgrunnen."
 
 #: src/components/modals/FluxerTagChangeModal.tsx:190
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:103
 msgid "FluxerTag"
-msgstr "FluxerTag"
+msgstr "RdChatTag"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:107
 msgid "FluxerTag already taken"
-msgstr "FluxerTag er allerede tatt"
+msgstr "RdChatTag er allerede tatt"
 
 #: src/components/modals/FluxerTagChangeModal.tsx:149
 msgid "FluxerTag updated"
-msgstr "FluxerTag oppdatert"
+msgstr "RdChatTag oppdatert"
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:269
 msgid "focus"
@@ -10267,7 +10267,7 @@ msgstr "Gratis vs Plutonium"
 
 #: src/components/modals/tabs/VideoTab.tsx:237
 msgid "Freezes your preview while Fluxer is in the background to save resources."
-msgstr "Fryser forhåndsvisningen din mens Fluxer er i bakgrunnen for å spare ressurser."
+msgstr "Fryser forhåndsvisningen din mens RdChat er i bakgrunnen for å spare ressurser."
 
 #: src/utils/LocaleUtils.tsx:49
 msgid "French"
@@ -10314,7 +10314,7 @@ msgstr "Venneforespørsler"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:156
 msgid "Friend's FluxerTag"
-msgstr "Vennens FluxerTag"
+msgstr "Vennens RdChatTag"
 
 #: src/components/modals/tabs/applications_tab/application_detail/BotProfileSection.tsx:170
 msgid "Friendly bot"
@@ -10518,7 +10518,7 @@ msgstr "Få varsel når nye lydenheter kobles til"
 
 #: src/components/layout/app_layout/nagbars/DesktopDownloadNagbar.tsx:50
 msgid "Get the Fluxer desktop app for system-wide push-to-talk and a few other goodies."
-msgstr "Skaff Fluxer-skrivebordsappen for systemomfattende push-to-talk og noen ekstra godbiter."
+msgstr "Skaff RdChat-skrivebordsappen for systemomfattende push-to-talk og noen ekstra godbiter."
 
 #: src/components/modals/utils/SettingsSectionRegistry.tsx:280
 msgid "gif"
@@ -11605,7 +11605,7 @@ msgstr "I tale"
 
 #: src/components/modals/tabs/VoiceTab.tsx:142
 msgid "In your browser, Push-to-Talk will only work when the Fluxer tab is focused. For system-wide Push-to-Talk that works even when gaming or using other apps, download the desktop app."
-msgstr "I nettleseren fungerer Push-to-Talk bare når Fluxer-fanen er aktiv. For systemomfattende Push-to-Talk som fungerer også når du spiller eller bruker andre apper, last ned skrivebordsappen."
+msgstr "I nettleseren fungerer Push-to-Talk bare når RdChat-fanen er aktiv. For systemomfattende Push-to-Talk som fungerer også når du spiller eller bruker andre apper, last ned skrivebordsappen."
 
 #: src/utils/SearchUtils.tsx:267
 msgid "in:"
@@ -11809,7 +11809,7 @@ msgstr "Installer emojipakke"
 
 #: src/components/layout/app_layout/nagbars/MobileDownloadNagbar.tsx:50
 msgid "Install Fluxer on your phone as a home screen app to receive notifications on the go!"
-msgstr "Installer Fluxer på telefonen din som en app på startskjermen for å motta varsler på farten!"
+msgstr "Installer RdChat på telefonen din som en app på startskjermen for å motta varsler på farten!"
 
 #: src/components/channel/InviteEmbed.tsx:223
 #: src/components/modals/InviteAcceptModal.tsx:160
@@ -12220,11 +12220,11 @@ msgstr "Skjema for å bli med i fellesskap"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:101
 msgid "Join Fluxer HQ"
-msgstr "Bli med i Fluxer HQ"
+msgstr "Bli med i RdChat HQ"
 
 #: src/components/layout/app_layout/nagbars/GuildMembershipCtaNagbar.tsx:98
 msgid "Join Fluxer HQ to chat with the team and stay up to date on the latest!"
-msgstr "Bli med i Fluxer HQ for å chatte med teamet og holde deg oppdatert på det nyeste!"
+msgstr "Bli med i RdChat HQ for å chatte med teamet og holde deg oppdatert på det nyeste!"
 
 #: src/components/channel/InviteEmbed.tsx:214
 msgid "Join Group"
@@ -12289,7 +12289,7 @@ msgstr "Blandet seg inn"
 
 #: src/components/channel/GuildMembersPage.tsx:986
 msgid "Joined Fluxer"
-msgstr "Blandet seg inn i Fluxer"
+msgstr "Blandet seg inn i RdChat"
 
 #. placeholder {0}: bannerConfig.minWidth
 #. placeholder {1}: bannerConfig.minHeight
@@ -12609,7 +12609,7 @@ msgstr "Latvia"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:92
 msgid "Launch Fluxer at Login"
-msgstr "Start Fluxer ved innlogging"
+msgstr "Start RdChat ved innlogging"
 
 #: src/components/modals/tabs/component_gallery_tab/MessagesTab.tsx:361
 msgid "Layouts for 1-10 image attachments using CDN assets."
@@ -12799,7 +12799,7 @@ msgstr "Lenken er utløpt. IP-adressen din ble sannsynligvis allerede autorisert
 
 #: src/components/modals/tabs/LinkedAccountsTab.tsx:284
 msgid "Link external accounts and domains to your Fluxer profile. Verified connections will be displayed on your profile for others to see."
-msgstr "Koble eksterne kontoer og domener til din Fluxer-profil. Verifiserte forbindelser vil bli vist på profilen din for andre å se."
+msgstr "Koble eksterne kontoer og domener til din RdChat-profil. Verifiserte forbindelser vil bli vist på profilen din for andre å se."
 
 #: src/components/modals/utils/SettingsSearchIndex.tsx:321
 msgid "Link external accounts and domains to your profile"
@@ -13203,7 +13203,7 @@ msgstr "Administrer abonnement"
 
 #: src/components/modals/tabs/account_security_tab/AccountTab.tsx:58
 msgid "Manage the email address you use to sign in to Fluxer"
-msgstr "Administrer e-postadressen du bruker for å logge inn på Fluxer"
+msgstr "Administrer e-postadressen du bruker for å logge inn på RdChat"
 
 #: src/utils/PermissionUtils.tsx:294
 #: src/utils/PermissionUtils.tsx:449
@@ -15026,7 +15026,7 @@ msgstr "Ingen uleste meldinger"
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:90
 msgid "No user found with that FluxerTag."
-msgstr "Ingen bruker funnet med den FluxerTag-en."
+msgstr "Ingen bruker funnet med den RdChatTag-en."
 
 #: src/components/modals/guild_tabs/GuildBansTab.tsx:180
 msgid "No users are currently banned from this community."
@@ -15546,7 +15546,7 @@ msgstr "Bare åpne DM-er"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:118
 msgid "Open Fluxer"
-msgstr "Åpne Fluxer"
+msgstr "Åpne RdChat"
 
 #: src/components/channel/embeds/attachments/AttachmentGridItem.tsx:311
 #: src/components/channel/embeds/media/EmbedGifv.tsx:253
@@ -15565,7 +15565,7 @@ msgstr "Åpne i fellesskap"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:105
 msgid "Open in Fluxer for desktop"
-msgstr "Åpne i Fluxer for skrivebord"
+msgstr "Åpne i RdChat for skrivebord"
 
 #: src/components/channel/embeds/media/EmbedYouTube.tsx:118
 msgid "Open in new tab"
@@ -16366,7 +16366,7 @@ msgstr "Sjekk innboksen din for en verifiserings-e-post."
 #: src/components/modals/InputMonitoringCTAModal.tsx:53
 #: src/components/modals/tabs/components/InputMonitoringSection.tsx:52
 msgid "Please enable Fluxer in System Settings → Privacy & Security → Input Monitoring."
-msgstr "Aktiver Fluxer i Systeminnstillinger → Personvern og sikkerhet → Inndatamonitorering."
+msgstr "Aktiver RdChat i Systeminnstillinger → Personvern og sikkerhet → Inndatamonitorering."
 
 #: src/components/pages/ReportPage.tsx:216
 msgid "Please enter a valid email address."
@@ -16374,7 +16374,7 @@ msgstr "Vennligst oppgi en gyldig e-postadresse."
 
 #: src/components/channel/direct_message/AddFriendForm.tsx:93
 msgid "Please enter a valid FluxerTag (Username#0000)."
-msgstr "Oppgi en gyldig FluxerTag (Brukernavn#0000)."
+msgstr "Oppgi en gyldig RdChatTag (Brukernavn#0000)."
 
 #: src/components/pages/ReportPage.tsx:341
 msgid "Please enter a valid message link URL."
@@ -16419,7 +16419,7 @@ msgstr "Prøv igjen senere."
 #: src/components/channel/UnknownMessage.tsx:73
 #: src/components/channel/UnknownMessage.tsx:127
 msgid "Please update Fluxer to view this message."
-msgstr "Oppdater Fluxer for å se denne meldingen."
+msgstr "Oppdater RdChat for å se denne meldingen."
 
 #: src/actions/InviteActionCreators.tsx:184
 msgid "Please verify your account by setting an email and password before joining communities."
@@ -16589,7 +16589,7 @@ msgstr "Forhåndsvisning"
 
 #: src/components/modals/tabs/developer_options_tab/TypographyTab.tsx:135
 msgid "Preview all available fonts, weights, and styles across different languages supported by Fluxer."
-msgstr "Forhåndsvis alle tilgjengelige fonter, vekter og stiler på tvers av språk Fluxer støtter."
+msgstr "Forhåndsvis alle tilgjengelige fonter, vekter og stiler på tvers av språk RdChat støtter."
 
 #: src/components/modals/tabs/AccessibilityTab.tsx:113
 msgid "Preview Button"
@@ -16795,7 +16795,7 @@ msgstr "Beskytt kontoen din med tofaktorautentisering og passkeys"
 
 #: src/components/layout/app_layout/nagbars/VisionaryMfaNagbar.tsx:52
 msgid "Protect your Visionary account by enabling two-factor authentication. Thanks for supporting Fluxer!"
-msgstr "Beskytt din Visionary-konto ved å aktivere to-faktor autentisering. Takk for at du støtter Fluxer!"
+msgstr "Beskytt din Visionary-konto ved å aktivere to-faktor autentisering. Takk for at du støtter RdChat!"
 
 #: src/components/modals/IARModal.tsx:244
 msgid "Provide any additional context that may help our Safety Team..."
@@ -16807,7 +16807,7 @@ msgstr "Oppgi minst en bruker-ID eller en brukertag."
 
 #: src/components/pages/ReportPage.tsx:359
 msgid "Provide either a user ID or a FluxerTag for the person you are reporting."
-msgstr "Oppgi enten en bruker-ID eller FluxerTag for personen du rapporterer."
+msgstr "Oppgi enten en bruker-ID eller RdChatTag for personen du rapporterer."
 
 #: src/components/pages/ReportPage.tsx:310
 msgid "Provide your full legal name for the declaration."
@@ -17701,7 +17701,7 @@ msgstr "Fornyes <0>{renewalDate}</0>."
 
 #: src/components/modals/tabs/AdvancedTab.tsx:120
 msgid "Reopen in maximized mode if that’s how you last used Fluxer."
-msgstr "Åpne på nytt i maksimerte modus hvis det er slik du sist brukte Fluxer."
+msgstr "Åpne på nytt i maksimerte modus hvis det er slik du sist brukte RdChat."
 
 #: src/components/modals/BackgroundImageGalleryModal.tsx:280
 #: src/components/modals/BackgroundImageGalleryModal.tsx:396
@@ -18276,11 +18276,11 @@ msgstr "Ruby"
 
 #: src/components/modals/tabs/AdvancedTab.tsx:89
 msgid "Run Fluxer automatically when your computer starts. Or don't. Your choice!"
-msgstr "Start Fluxer automatisk når datamaskinen starter. Eller ikke. Valget er ditt!"
+msgstr "Start RdChat automatisk når datamaskinen starter. Eller ikke. Valget er ditt!"
 
 #: src/components/modals/tabs/KeybindsTab.tsx:94
 msgid "Run this shortcut even when Fluxer is not focused."
-msgstr "Kjør denne snarveien selv når Fluxer ikke er i fokus."
+msgstr "Kjør denne snarveien selv når RdChat ikke er i fokus."
 
 #: src/utils/LocaleUtils.tsx:64
 msgid "Russian"
@@ -20909,7 +20909,7 @@ msgstr "System-DM-er kan ikke ha taleanrop."
 
 #: src/components/channel/barriers/BarrierComponents.tsx:249
 msgid "System DMs deliver important announcements from Fluxer staff. Replies and interactions are disabled in this conversation."
-msgstr "System-DM-er leverer viktige kunngjøringer fra Fluxer-ansatte. Svar og interaksjoner er deaktivert i denne samtalen."
+msgstr "System-DM-er leverer viktige kunngjøringer fra RdChat-ansatte. Svar og interaksjoner er deaktivert i denne samtalen."
 
 #: src/components/modals/tabs/LanguageTab.tsx:81
 msgid "System locale ({browserLocale}): {format}"
@@ -21082,11 +21082,11 @@ msgstr "Thai"
 
 #: src/components/modals/IARModal.tsx:220
 msgid "Thank you for helping keep Fluxer safe. Reports are reviewed by our Safety Team. False reports may result in action against your account."
-msgstr "Takk for at du hjelper til med å holde Fluxer trygt. Rapportene vurderes av vårt sikkerhetsteam. Falske rapporter kan føre til tiltak mot kontoen din."
+msgstr "Takk for at du hjelper til med å holde RdChat trygt. Rapportene vurderes av vårt sikkerhetsteam. Falske rapporter kan føre til tiltak mot kontoen din."
 
 #: src/components/pages/report/ReportStepComplete.tsx:37
 msgid "Thank you for helping keep Fluxer safe. We'll review your report as soon as possible."
-msgstr "Takk for at du hjelper til med å holde Fluxer trygt. Vi vil gjennomgå rapporten din så snart som mulig."
+msgstr "Takk for at du hjelper til med å holde RdChat trygt. Vi vil gjennomgå rapporten din så snart som mulig."
 
 #: src/components/form/ColorPickerField.tsx:277
 msgid "That doesn't look like a valid color. Try hex, rgb(), hsl(), or a CSS color name."
@@ -21155,7 +21155,7 @@ msgstr "Filene du prøver å laste opp overskrider den maksimale størrelsesgren
 
 #: src/components/modals/FluxerTagChangeModal.tsx:111
 msgid "The FluxerTag <0>{fluxerTag}</0> is already taken. Continuing will reroll your discriminator automatically."
-msgstr "FluxerTag <0>{fluxerTag}</0> er allerede tatt. Fortsetter du ruller vi automatisk på nytt på diskriminatoren."
+msgstr "RdChatTag <0>{fluxerTag}</0> er allerede tatt. Fortsetter du ruller vi automatisk på nytt på diskriminatoren."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataDeletionTab.tsx:80
 msgid "The job starts 24 hours after you confirm and can be canceled or restarted anytime"
@@ -21204,7 +21204,7 @@ msgstr "Tidsavbruddet kan ikke overstige 365 dager (31536000 sekunder)."
 
 #: src/components/auth/BrowserLoginHandoffModal.tsx:104
 msgid "The URL of the Fluxer instance you want to sign in to."
-msgstr "URL-en til Fluxer-instansen du ønsker å logge inn på."
+msgstr "URL-en til RdChat-instansen du ønsker å logge inn på."
 
 #: src/components/modals/channel_tabs/ChannelOverviewTab.tsx:496
 msgid "The URL this link channel points to."
@@ -21290,7 +21290,7 @@ msgstr "Det er ingenting mer å se her."
 
 #: src/components/modals/tabs/AuthorizedAppsTab.tsx:146
 msgid "These applications have been granted access to your Fluxer account."
-msgstr "Disse applikasjonene har fått tilgang til Fluxer-kontoen din."
+msgstr "Disse applikasjonene har fått tilgang til RdChat-kontoen din."
 
 #: src/components/modals/tabs/VoiceTab.tsx:405
 msgid "These settings use browser-native audio processing to improve call quality. For best results, keep all options enabled."
@@ -21559,7 +21559,7 @@ msgstr "Dette er en tilpasset emoji fra et fellesskap. Be forfatteren om en invi
 
 #: src/components/emojis/EmojiAttributionSubtext.tsx:102
 msgid "This is a default emoji on Fluxer."
-msgstr "Dette er en standardemoji på Fluxer."
+msgstr "Dette er en standardemoji på RdChat."
 
 #: src/components/modals/tabs/component_gallery_tab/InputsTab.tsx:147
 msgid "This is an error message"
@@ -24402,7 +24402,7 @@ msgstr "Vi verifiserer din nye e-post med en engangskode."
 
 #: src/components/NetworkErrorScreen.tsx:39
 msgid "We're having trouble connecting to Fluxer's servers. This could be a temporary network issue or scheduled maintenance."
-msgstr "Vi har problemer med å koble til Fluxers servere. Dette kan være et midlertidig nettverksproblem eller planlagt vedlikehold."
+msgstr "Vi har problemer med å koble til RdChats servere. Dette kan være et midlertidig nettverksproblem eller planlagt vedlikehold."
 
 #: src/components/modals/tabs/DevicesTab.tsx:234
 msgid "We're having trouble connecting to the space-time continuum. Please check your connection and try again."
@@ -24415,27 +24415,27 @@ msgstr "Vi indekserer denne kanalen for første gang. Det kan ta litt tid..."
 
 #: src/components/modals/RequiredActionModal.tsx:166
 msgid "We've detected suspicious activity on your account. Please reverify your email address or phone number to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser e-postadressen din eller telefonnummeret for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser e-postadressen din eller telefonnummeret for å fortsette å bruke RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:158
 msgid "We've detected suspicious activity on your account. Please reverify your email address to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser e-postadressen din for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser e-postadressen din for å fortsette å bruke RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:162
 msgid "We've detected suspicious activity on your account. Please reverify your phone number to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser telefonnummeret ditt for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst re-verifiser telefonnummeret ditt for å fortsette å bruke RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:167
 msgid "We've detected suspicious activity on your account. Please verify your email address or phone number to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser e-postadressen din eller telefonnummeret for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser e-postadressen din eller telefonnummeret for å fortsette å bruke RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:159
 msgid "We've detected suspicious activity on your account. Please verify your email address to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser e-postadressen din for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser e-postadressen din for å fortsette å bruke RdChat."
 
 #: src/components/modals/RequiredActionModal.tsx:163
 msgid "We've detected suspicious activity on your account. Please verify your phone number to continue using Fluxer."
-msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser telefonnummeret ditt for å fortsette å bruke Fluxer."
+msgstr "Vi har oppdaget mistenkelig aktivitet på kontoen din. Vennligst verifiser telefonnummeret ditt for å fortsette å bruke RdChat."
 
 #: src/components/pages/ForgotPasswordPage.tsx:65
 msgid "We've sent password reset instructions to your email address. Please check your inbox and follow the link to reset your password."
@@ -24511,7 +24511,7 @@ msgstr "Velkommen til favoritter"
 
 #: src/components/layout/app_layout/nagbars/PremiumOnboardingNagbar.tsx:52
 msgid "Welcome to Fluxer Plutonium! Explore your premium features and manage your subscription."
-msgstr "Velkommen til Fluxer Plutonium! Utforsk premiumfunksjonene og administrer abonnementet ditt."
+msgstr "Velkommen til RdChat Plutonium! Utforsk premiumfunksjonene og administrer abonnementet ditt."
 
 #: src/utils/SystemMessageUtils.tsx:46
 msgid "Welcome, {username}! Don't forget to park your DeLorean."
@@ -24591,7 +24591,7 @@ msgstr "Når aktivert, holder et raskt trykk på snarveien for push-to-talk mikr
 
 #: src/components/modals/tabs/AdvancedTab.tsx:160
 msgid "When enabled, reveals debugging menus throughout the app to inspect and copy raw JSON objects of internal data structures like messages, channels, users, and communities. Also includes tools to debug the Fluxer Markdown parser performance and AST for any given message."
-msgstr "Når aktivert, viser feilsøkingsmenyer i hele appen for å inspisere og kopiere rå JSON-objekter for interne datastrukturer som meldinger, kanaler, brukere og fellesskap. Inkluderer også verktøy for å feilsøke Fluxer Markdown-parserens ytelse og AST for enhver melding."
+msgstr "Når aktivert, viser feilsøkingsmenyer i hele appen for å inspisere og kopiere rå JSON-objekter for interne datastrukturer som meldinger, kanaler, brukere og fellesskap. Inkluderer også verktøy for å feilsøke RdChat Markdown-parserens ytelse og AST for enhver melding."
 
 #: src/components/modals/tabs/appearance_tab/InterfaceTab.tsx:135
 msgid "When enabled, shortcut badges are hidden in tooltip popups."
@@ -24647,7 +24647,7 @@ msgstr "Når de når 88 mph, vises de rett her."
 
 #: src/components/modals/tabs/chat_settings_tab/DisplayTab.tsx:73
 msgid "When uploaded directly to Fluxer"
-msgstr "Når lastet opp direkte til Fluxer"
+msgstr "Når lastet opp direkte til RdChat"
 
 #: src/components/shared/ChannelPinsContent.tsx:158
 msgid "Whenever someone pins a message, it'll appear here."
@@ -24788,7 +24788,7 @@ msgstr "Du har allerede denne tilkoblingen."
 
 #: src/components/modals/ExternalLinkWarningModal.tsx:74
 msgid "You are about to leave Fluxer"
-msgstr "Du er i ferd med å forlate Fluxer"
+msgstr "Du er i ferd med å forlate RdChat"
 
 #. placeholder {0}: targetUser.username
 #: src/components/modals/TransferOwnershipModal.tsx:75
@@ -24813,7 +24813,7 @@ msgstr "Du er nå utvikler!"
 
 #: src/components/modals/components/plutonium/hooks/useCheckoutActions.tsx:107
 msgid "You are now navigating to Stripe to complete the payment. Return to Fluxer once you've completed it!"
-msgstr "Du blir nå sendt til Stripe for å fullføre betalingen. Kom tilbake til Fluxer når du er ferdig!"
+msgstr "Du blir nå sendt til Stripe for å fullføre betalingen. Kom tilbake til RdChat når du er ferdig!"
 
 #. placeholder {0}: displayUser.username
 #. placeholder {0}: user.username
@@ -24849,7 +24849,7 @@ msgstr "Du kan legge til kommentarer før opplasting. Hold Shift for å laste op
 
 #: src/components/channel/direct_message/AddFriendView.tsx:35
 msgid "You can add friends with their FluxerTag."
-msgstr "Du kan legge til venner med FluxerTaggen deres."
+msgstr "Du kan legge til venner med RdChatTaggen deres."
 
 #. placeholder {0}: modalLogic.maxSelections
 #: src/components/bottomsheets/CreateDMBottomSheet.tsx:109
@@ -25153,7 +25153,7 @@ msgstr "Du har ikke laget noen pakker ennå."
 
 #: src/components/modals/KeyboardModeIntroModal.tsx:46
 msgid "You just pressed Tab. Keyboard Mode is now on so you can navigate Fluxer without a mouse."
-msgstr "Du trykket nettopp på Tab. Tastaturmodus er nå på slik at du kan navigere Fluxer uten mus."
+msgstr "Du trykket nettopp på Tab. Tastaturmodus er nå på slik at du kan navigere RdChat uten mus."
 
 #: src/utils/ExpressionPermissionUtils.tsx:111
 msgid "You lack permission to use external emojis in this channel"
@@ -25483,7 +25483,7 @@ msgstr "Din nåværende e-post <0>{0}</0> kunne ikke motta meldinger. Skriv inn 
 
 #: src/components/modals/RequiredActionModal.tsx:155
 msgid "Your current email address couldn't receive messages. Please update it to continue using Fluxer."
-msgstr "Din nåværende e-postadresse kunne ikke motta meldinger. Vennligst oppdater den for å fortsette å bruke Fluxer."
+msgstr "Din nåværende e-postadresse kunne ikke motta meldinger. Vennligst oppdater den for å fortsette å bruke RdChat."
 
 #: src/components/modals/tabs/privacy_safety_tab/DataExportTab.tsx:52
 msgid "Your data export will include all your user information, messages, and URLs to download any attachments."
@@ -25511,7 +25511,7 @@ msgstr "Eksportforespørselen din vil bli behandlet"
 
 #: src/components/pages/report/ReportStepDetails.tsx:213
 msgid "Your FluxerTag (Optional)"
-msgstr "Din FluxerTag (Valgfritt)"
+msgstr "Din RdChatTag (Valgfritt)"
 
 #: src/components/channel/friends/views/FriendsList.tsx:87
 msgid "Your friends are currently stuck in another timeline"
