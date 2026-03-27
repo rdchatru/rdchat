@@ -1097,6 +1097,9 @@ importers:
       '@fluxer/logger':
         specifier: workspace:*
         version: link:../packages/logger
+      '@fluxer/marketing':
+        specifier: workspace:*
+        version: link:../packages/marketing
       '@fluxer/media_proxy':
         specifier: workspace:*
         version: link:../packages/media_proxy
