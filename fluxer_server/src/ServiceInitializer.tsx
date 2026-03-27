@@ -42,6 +42,11 @@ import {createServiceTelemetry} from '@fluxer/hono/src/middleware/TelemetryAdapt
 import type {IKVProvider} from '@fluxer/kv_client/src/IKVProvider';
 import {KVClient} from '@fluxer/kv_client/src/KVClient';
 import type {Logger} from '@fluxer/logger/src/Logger';
+import type {MarketingAppResult} from '@fluxer/marketing/src/App';
+import {createMarketingApp} from '@fluxer/marketing/src/App';
+import type {MarketingConfig} from '@fluxer/marketing/src/MarketingConfig';
+import {resolveMarketingPublicDir} from '@fluxer/marketing/src/PublicDir';
+import {normalizeBasePath} from '@fluxer/marketing/src/UrlUtils';
 import type {MediaProxyAppResult} from '@fluxer/media_proxy/src/App';
 import {createMediaProxyApp} from '@fluxer/media_proxy/src/App';
 import {JetStreamConnectionManager} from '@fluxer/nats/src/JetStreamConnectionManager';
@@ -60,6 +65,7 @@ export interface InitializedServices {
 	s3?: S3AppResult;
 	jsConnectionManager?: JetStreamConnectionManager;
 	mediaProxy?: MediaProxyAppResult;
+	marketing?: MarketingAppResult;
 	admin?: AdminAppResult;
 	api?: APIAppResult;
 	appServer?: AppServerResult;
@@ -266,6 +272,54 @@ function createAdminInitializer(
 	};
 }
 
+function createMarketingInitializer(context: ServiceInitializationContext): ServiceInitializer {
+	const {config, logger} = context;
+	const componentLogger = logger.child({component: 'marketing'});
+	const marketingConfigSrc = requireValue(config.services.marketing, 'services.marketing');
+	const basePath = normalizeBasePath(marketingConfigSrc.base_path);
+	const telemetry = createServiceTelemetry({
+		serviceName: 'fluxer-marketing',
+		skipPaths: ['/_health', '/static'],
+	});
+
+	const marketingConfig: MarketingConfig = {
+		env: config.env,
+		port: marketingConfigSrc.port,
+		host: marketingConfigSrc.host,
+		secretKeyBase: requireValue(marketingConfigSrc.secret_key_base, 'services.marketing.secret_key_base'),
+		basePath,
+		apiEndpoint: requireValue(config.endpoints.api, 'endpoints.api'),
+		appEndpoint: requireValue(config.endpoints.app, 'endpoints.app'),
+		staticCdnEndpoint: requireValue(config.endpoints.static_cdn, 'endpoints.static_cdn'),
+		marketingEndpoint: stripPath(requireValue(config.endpoints.marketing, 'endpoints.marketing')),
+		geoipDbPath: requireValue(config.geoip.maxmind_db_path, 'geoip.maxmind_db_path'),
+		trustCfConnectingIp: config.proxy.trust_cf_connecting_ip,
+		releaseChannel: getBuildMetadata().releaseChannel,
+		buildTimestamp: getBuildMetadata().buildTimestamp,
+		rateLimit: null,
+	};
+
+	const marketingApp = createMarketingApp({
+		config: marketingConfig,
+		logger: componentLogger,
+		publicDir: resolveMarketingPublicDir(),
+		metricsCollector: telemetry.metricsCollector,
+		tracing: telemetry.tracing,
+	});
+
+	return {
+		name: 'Marketing',
+		initialize: () => {
+			componentLogger.info({basePath}, 'Marketing service initialized');
+		},
+		shutdown: async () => {
+			componentLogger.info('Shutting down Marketing service');
+			marketingApp.shutdown();
+		},
+		service: marketingApp,
+	};
+}
+
 function createAppServerInitializer(context: ServiceInitializationContext): ServiceInitializer {
 	const {config, logger, staticDir} = context;
 	const componentLogger = logger.child({component: 'app'});
@@ -400,6 +454,15 @@ export async function initializeAllServices(context: ServiceInitializationContex
 		initializers.push(adminInit);
 		services.admin = adminInit.service as AdminAppResult;
 
+		if (context.config.services.marketing?.enabled) {
+			rootLogger.info('Initializing Marketing service');
+			const marketingInit = createMarketingInitializer(context);
+			initializers.push(marketingInit);
+			services.marketing = marketingInit.service as MarketingAppResult;
+		} else {
+			rootLogger.info('Marketing service disabled');
+		}
+
 		rootLogger.info('Initializing API service');
 		const apiInit = await createAPIInitializer(context);
 		initializers.push(apiInit);
@@ -499,4 +562,12 @@ export async function shutdownAllServices(initializers: Array<ServiceInitializer
 	}
 
 	rootLogger.info('All services shut down');
+}
+
+function stripPath(value: string): string {
+	const url = new URL(value);
+	url.pathname = '';
+	url.search = '';
+	url.hash = '';
+	return url.toString().replace(/\/$/, '');
 }

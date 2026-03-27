@@ -77,7 +77,7 @@ export function withModifiedTime(meta: PageMeta, isoDatetime: string): PageMeta 
 	return {...meta, modifiedTime: isoDatetime};
 }
 
-export function formatPageTitle(baseTitle: string): string {
+export function formatPageTitle(_baseTitle: string): string {
 	// if (baseTitle === 'Fluxer') return 'Fluxer';
 	// return `RdChat | ${baseTitle}`;
 	return "RdChat";

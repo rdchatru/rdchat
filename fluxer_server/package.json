@@ -23,6 +23,7 @@
 		"@fluxer/ip_utils": "workspace:*",
 		"@fluxer/kv_client": "workspace:*",
 		"@fluxer/logger": "workspace:*",
+		"@fluxer/marketing": "workspace:*",
 		"@fluxer/media_proxy": "workspace:*",
 		"@fluxer/nats": "workspace:*",
 		"@fluxer/s3": "workspace:*",

@@ -28,6 +28,7 @@ import {
 	shutdownAllServices,
 	startBackgroundServices,
 } from '@app/ServiceInitializer';
+import {requireValue} from '@app/utils/ConfigUtils';
 import {getBuildMetadata} from '@fluxer/config/src/BuildMetadata';
 import {AppErrorHandler, AppNotFoundHandler} from '@fluxer/errors/src/domains/core/ErrorHandlers';
 import {applyMiddlewareStack} from '@fluxer/hono/src/middleware/MiddlewareStack';
@@ -35,6 +36,7 @@ import {createServiceTelemetry} from '@fluxer/hono/src/middleware/TelemetryAdapt
 import type {BaseHonoEnv} from '@fluxer/hono_types/src/HonoTypes';
 import {Hono} from 'hono';
 import {trimTrailingSlash} from 'hono/trailing-slash';
+import {normalizeBasePath} from '@fluxer/marketing/src/UrlUtils';
 
 export interface MountedRoutes {
 	app: Hono<BaseHonoEnv>;
@@ -129,6 +131,14 @@ export async function mountRoutes(options: MountRoutesOptions): Promise<MountedR
 			app.route('/api', apiService.app);
 			app.get('/.well-known/fluxer', (ctx) => apiService.app.fetch(ctx.req.raw));
 			logger.info('API service mounted at /api');
+		}
+
+		if (services.marketing !== undefined) {
+			const marketingBasePath = normalizeBasePath(
+				requireValue(config.services.marketing?.base_path, 'services.marketing.base_path'),
+			);
+			app.route(marketingBasePath, services.marketing.app);
+			logger.info({basePath: marketingBasePath}, 'Marketing service mounted');
 		}
 
 		const healthHandler = createHealthCheckHandler({
