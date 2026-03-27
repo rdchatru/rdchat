@@ -168,9 +168,9 @@ export function isCommand(content: string): boolean {
 export function createSystemMessage(channelId: string, content: string): MessageRecord {
 	const fluxerbotUser = new UserRecord({
 		id: FLUXERBOT_ID,
-		username: 'Fluxerbot',
+		username: 'RdChat',
 		discriminator: '0000',
-		global_name: null,
+		global_name: "RdChat",
 		avatar: null,
 		avatar_color: null,
 		bot: true,

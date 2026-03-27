@@ -97,7 +97,7 @@ export const UsernameType = withOpenApiType(
 		}, ValidationErrorCodes.USERNAME_RESERVED_VALUE)
 		.refine((value) => {
 			const lowerValue = value.toLowerCase();
-			return !lowerValue.includes('fluxer') && !lowerValue.includes('system message');
+			return !lowerValue.includes('rdchat') && !lowerValue.includes('system message');
 		}, ValidationErrorCodes.USERNAME_CANNOT_CONTAIN_RESERVED_TERMS),
 	'UsernameType',
 );
