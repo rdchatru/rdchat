@@ -44,6 +44,7 @@ export interface CreateMarketingAppOptions {
 	rateLimitService?: IRateLimitService | null;
 	metricsCollector?: MetricsCollector;
 	tracing?: TracingOptions;
+	disableNotFoundRoute?: boolean;
 }
 
 export interface MarketingAppResult {
@@ -52,7 +53,7 @@ export interface MarketingAppResult {
 }
 
 export function createMarketingApp(options: CreateMarketingAppOptions): MarketingAppResult {
-	const {logger, publicDir: publicDirOption, rateLimitService = null, metricsCollector, tracing} = options;
+	const {logger, publicDir: publicDirOption, rateLimitService = null, metricsCollector, tracing, disableNotFoundRoute} = options;
 
 	const config = normalizeMarketingSecurityConfig(options.config);
 	const publicDir = resolve(publicDirOption ?? fileURLToPath(new URL('../public', import.meta.url)));
@@ -87,6 +88,7 @@ export function createMarketingApp(options: CreateMarketingAppOptions): Marketin
 		app,
 		config,
 		contextFactory,
+		includeNotFoundRoute: !disableNotFoundRoute,
 	});
 
 	const shutdown = (): void => {

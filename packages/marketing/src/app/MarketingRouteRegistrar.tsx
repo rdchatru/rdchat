@@ -53,6 +53,7 @@ export interface RegisterMarketingRoutesOptions {
 	app: Hono;
 	config: MarketingConfig;
 	contextFactory: MarketingContextFactory;
+	includeNotFoundRoute?: boolean;
 }
 
 interface LocaleCookieSession {
@@ -92,7 +93,9 @@ export function registerMarketingRoutes(options: RegisterMarketingRoutesOptions)
 	registerPolicyRoutes(options.app, options.contextFactory);
 	registerPageRoutes(options.app, options.contextFactory);
 	registerPressDownloadRoute(options.app);
-	registerNotFoundRoute(options.app, options.contextFactory);
+	if (options.includeNotFoundRoute !== false) {
+		registerNotFoundRoute(options.app, options.contextFactory);
+	}
 }
 
 function registerLocaleRoute(app: Hono, config: MarketingConfig): void {

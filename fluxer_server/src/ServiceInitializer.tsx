@@ -273,10 +273,11 @@ function createAdminInitializer(
 }
 
 function createMarketingInitializer(context: ServiceInitializationContext): ServiceInitializer {
-	const {config, logger} = context;
+	const {config, logger, staticDir} = context;
 	const componentLogger = logger.child({component: 'marketing'});
 	const marketingConfigSrc = requireValue(config.services.marketing, 'services.marketing');
 	const basePath = normalizeBasePath(marketingConfigSrc.base_path);
+	const disableNotFoundRoute = basePath === '' && staticDir !== undefined;
 	const telemetry = createServiceTelemetry({
 		serviceName: 'fluxer-marketing',
 		skipPaths: ['/_health', '/static'],
@@ -305,12 +306,13 @@ function createMarketingInitializer(context: ServiceInitializationContext): Serv
 		publicDir: resolveMarketingPublicDir(),
 		metricsCollector: telemetry.metricsCollector,
 		tracing: telemetry.tracing,
+		disableNotFoundRoute,
 	});
 
 	return {
 		name: 'Marketing',
 		initialize: () => {
-			componentLogger.info({basePath}, 'Marketing service initialized');
+			componentLogger.info({basePath, disableNotFoundRoute}, 'Marketing service initialized');
 		},
 		shutdown: async () => {
 			componentLogger.info('Shutting down Marketing service');
