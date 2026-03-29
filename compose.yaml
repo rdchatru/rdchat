@@ -120,6 +120,7 @@ services:
       - '7881:7881'
       - '3478:3478'
       - '50000-50100:50000-50100'
+      - '5349:5349'
     healthcheck:
       test: ['CMD-SHELL', 'wget -qO- http://127.0.0.1:7880 || exit 1']
       interval: 15s
