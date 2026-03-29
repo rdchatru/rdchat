@@ -127,9 +127,17 @@ export class ApiClient {
 
 			return parseApiResponse<T>(response);
 		} catch (e) {
+			const error = e as Error;
+			const url = this.buildUrl(options.path, options.queryParams);
 			return {
 				ok: false,
-				error: {type: 'networkError', message: (e as Error).message},
+				error: {
+					type: 'networkError',
+					message: error.message,
+					method: options.method,
+					path: options.path,
+					url,
+				},
 			};
 		}
 	}

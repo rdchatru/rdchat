@@ -222,11 +222,15 @@ export function createVoiceRoutes({config, assetVersion, requireAuth}: RouteFact
 				const requiredGuildFeaturesStr = getOptionalString(formData, 'required_guild_features') || '';
 				const allowedGuildIdsStr = getOptionalString(formData, 'allowed_guild_ids') || '';
 				const allowedUserIdsStr = getOptionalString(formData, 'allowed_user_ids') || '';
+				const apiKey = getOptionalString(formData, 'api_key');
+				const apiSecret = getOptionalString(formData, 'api_secret');
 
 				const params: UpdateVoiceServerParams = {
 					region_id: getRequiredString(formData, 'region_id') || '',
 					server_id: getRequiredString(formData, 'server_id') || '',
 					endpoint: getRequiredString(formData, 'endpoint') || '',
+					...(apiKey ? {api_key: apiKey} : {}),
+					...(apiSecret ? {api_secret: apiSecret} : {}),
 					is_active: getOptionalString(formData, 'is_active') === 'true',
 					vip_only: getOptionalString(formData, 'vip_only') === 'true',
 					required_guild_features: requiredGuildFeaturesStr

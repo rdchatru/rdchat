@@ -7,7 +7,7 @@ FROM node:24-bookworm-slim AS base
 
 WORKDIR /usr/src/app
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 FROM base AS generator
 
@@ -16,7 +16,7 @@ COPY patches/ ./patches/
 COPY packages/config/ ./packages/config/
 COPY packages/constants/ ./packages/constants/
 
-RUN pnpm install --frozen-lockfile --filter @fluxer/config...
+RUN pnpm store prune && pnpm install --frozen-lockfile --filter @fluxer/config...
 RUN pnpm --filter @fluxer/config generate
 
 FROM base AS deps
@@ -37,7 +37,7 @@ COPY patches/ ./patches/
 COPY packages/ ./packages/
 COPY fluxer_media_proxy/package.json ./fluxer_media_proxy/
 
-RUN pnpm install --frozen-lockfile --prod
+RUN pnpm store prune && pnpm install --frozen-lockfile --prod
 
 FROM node:24-bookworm-slim
 
@@ -56,7 +56,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	libatomic1 && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 COPY --from=deps /usr/src/app/node_modules /usr/src/app/node_modules
 COPY --from=deps /usr/src/app/fluxer_media_proxy/node_modules ./node_modules

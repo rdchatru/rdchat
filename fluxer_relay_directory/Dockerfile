@@ -2,7 +2,7 @@ FROM node:24-bookworm-slim AS base
 
 WORKDIR /app
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 FROM base AS deps
 
@@ -14,7 +14,7 @@ COPY packages/hono/package.json ./packages/hono/
 COPY packages/schema/package.json ./packages/schema/
 
 # Install dependencies
-RUN pnpm install --frozen-lockfile --prod --filter fluxer-relay-directory...
+RUN pnpm store prune && pnpm install --frozen-lockfile --prod --filter fluxer-relay-directory...
 
 FROM node:24-bookworm-slim
 
@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 	curl && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 # Copy node_modules from deps stage
 COPY --from=deps /app/node_modules ./node_modules

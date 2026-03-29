@@ -30,7 +30,7 @@ FROM node:24-trixie-slim
 
 WORKDIR /workspace
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
 	curl \

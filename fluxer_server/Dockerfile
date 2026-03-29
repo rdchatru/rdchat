@@ -7,7 +7,7 @@ FROM node:24-slim AS base
 
 WORKDIR /usr/src/app
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
         curl \
@@ -74,7 +74,7 @@ COPY packages/worker/package.json ./packages/worker/
 COPY fluxer_server/package.json ./fluxer_server/
 COPY fluxer_app/package.json ./fluxer_app/
 
-RUN pnpm install --frozen-lockfile
+RUN pnpm store prune && pnpm install --frozen-lockfile
 
 RUN pnpm approve-builds msgpackr-extract@3.0.3 @parcel/watcher@2.5.6
 
@@ -141,6 +141,7 @@ COPY tsconfigs /usr/src/app/tsconfigs
 COPY scripts/ ./scripts/ 
 COPY packages/ ./packages/
 COPY fluxer_app/ ./fluxer_app/
+COPY fluxer_desktop/build_resources/ ./fluxer_desktop/build_resources/
 
 COPY config/config.production.template.json /tmp/fluxer-build-config.json
 
@@ -177,7 +178,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
         libimage-exiftool-perl \
         && rm -rf /var/lib/apt/lists/*
 
-RUN corepack enable && corepack prepare pnpm@10.26.0 --activate
+RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/packages ./packages

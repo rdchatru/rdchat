@@ -37,7 +37,7 @@ export type ApiError =
 	| {type: 'rateLimited'; code: string; message: string; retryAfter: number; isGlobal: boolean}
 	| {type: 'clientError'; status: number; code: string; message: string}
 	| {type: 'serverError'; status: number; code: string | null; message: string}
-	| {type: 'networkError'; message: string}
+	| {type: 'networkError'; message: string; method?: string; path?: string; url?: string}
 	| {type: 'parseError'; body: string; parseError: string};
 
 export function isUnauthorized(error: ApiError): error is {type: 'unauthorized'} {
@@ -71,7 +71,7 @@ export function getErrorMessage(error: ApiError): string {
 		case 'serverError':
 			return error.message;
 		case 'networkError':
-			return error.message;
+			return getDocumentedNetworkErrorMessage(error);
 		case 'parseError':
 			return 'Failed to parse API response';
 	}
@@ -177,7 +177,7 @@ export function getErrorSubtitle(error: ApiError): string {
 		case 'serverError':
 			return 'An internal server error occurred. Please try again later.';
 		case 'networkError':
-			return 'Could not connect to the server. Please check your connection.';
+			return 'The admin frontend could not reach the configured API server.';
 		case 'parseError':
 			return 'The server returned an invalid response.';
 	}
@@ -210,9 +210,37 @@ export function getErrorDetails(error: ApiError): Array<string> {
 			const preview = error.body.slice(0, 200).replace(/\n/g, ' ');
 			return ['Could not parse server response', `Response preview: ${preview}`];
 		}
+		case 'networkError': {
+			const details = ['The request never reached a valid API response.'];
+			if (error.method && error.path) {
+				details.push(`Request: ${error.method} ${error.path}`);
+			}
+			if (error.url) {
+				details.push(`Resolved URL: ${error.url}`);
+			}
+			return details;
+		}
 		default:
 			return [];
 	}
+}
+
+function getDocumentedNetworkErrorMessage(error: Extract<ApiError, {type: 'networkError'}>): string {
+	const requestTarget = error.path
+		? `${error.method ?? 'REQUEST'} ${error.path}`
+		: error.url
+			? error.url
+			: 'the API server';
+	const reason = error.message.trim() || 'Unknown network error';
+
+	return [
+		`Could not connect to ${requestTarget}.`,
+		`Fetch error: ${reason}.`,
+		error.url ? `Resolved URL: ${error.url}.` : null,
+		'Check that the API server is running, the admin `apiEndpoint` is correct, and any reverse proxy or TLS settings match.',
+	]
+		.filter((value): value is string => value !== null)
+		.join(' ');
 }
 
 export async function parseApiResponse<T>(

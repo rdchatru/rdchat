@@ -67,10 +67,11 @@ const EditServerForm: FC<{config: Config; region_id: string; server: VoiceServer
 	csrfToken,
 }) => {
 	const idPrefix = `voice-server-${region_id}-${server.server_id}`.replace(/[^a-zA-Z0-9_-]/g, '_');
+	const formAction = `${config.basePath}/voice-servers?region_id=${encodeURIComponent(region_id)}&action=update`;
 
 	return (
 		<VStack gap={0} class="rounded-lg bg-neutral-50 p-4">
-			<form method="post" action={`${config.basePath}/voice-servers?action=update`} class="space-y-3">
+			<form method="post" action={formAction} class="space-y-3">
 				<CsrfInput token={csrfToken} />
 				<input type="hidden" name="region_id" value={region_id} />
 				<input type="hidden" name="server_id" value={server.server_id} />
@@ -126,72 +127,77 @@ const ServerCard: FC<{config: Config; region_id: string; server: VoiceServerAdmi
 	region_id,
 	server,
 	csrfToken,
-}) => (
-	<CardElevated padding="md">
-		<HStack gap={4} align="start" class="mb-4">
-			<VStack gap={1}>
-				<Heading level={3} size="base">
-					{server.server_id}
-				</Heading>
-				<Text size="sm" color="muted">
-					{server.endpoint}
-				</Text>
-			</VStack>
-			<HStack gap={2} class="flex-wrap">
-				{server.is_active ? (
-					<Badge label="ACTIVE" tone="success" intensity="subtle" rounded="default" />
-				) : (
-					<Badge label="INACTIVE" tone="neutral" intensity="subtle" rounded="default" />
-				)}
-				<VoiceStatusBadges
-					vip_only={server.vip_only}
-					has_features={server.required_guild_features.length > 0}
-					has_guild_ids={server.allowed_guild_ids.length > 0}
-				/>
+}) => {
+	const updateAction = `${config.basePath}/voice-servers?region_id=${encodeURIComponent(region_id)}&action=update`;
+	const deleteAction = `${config.basePath}/voice-servers?region_id=${encodeURIComponent(region_id)}&action=delete`;
+
+	return (
+		<CardElevated padding="md">
+			<HStack gap={4} align="start" class="mb-4">
+				<VStack gap={1}>
+					<Heading level={3} size="base">
+						{server.server_id}
+					</Heading>
+					<Text size="sm" color="muted">
+						{server.endpoint}
+					</Text>
+				</VStack>
+				<HStack gap={2} class="flex-wrap">
+					{server.is_active ? (
+						<Badge label="ACTIVE" tone="success" intensity="subtle" rounded="default" />
+					) : (
+						<Badge label="INACTIVE" tone="neutral" intensity="subtle" rounded="default" />
+					)}
+					<VoiceStatusBadges
+						vip_only={server.vip_only}
+						has_features={server.required_guild_features.length > 0}
+						has_guild_ids={server.allowed_guild_ids.length > 0}
+					/>
+				</HStack>
 			</HStack>
-		</HStack>
-		<div class="mb-4 grid grid-cols-2 gap-4 md:grid-cols-2">
-			<InfoItem label="Region" value={server.region_id} />
-			<InfoItem label="Status" value={server.is_active ? 'Active' : 'Inactive'} />
-		</div>
-		<VoiceFeaturesList features={server.required_guild_features} />
-		<VoiceGuildIdsList guild_ids={server.allowed_guild_ids} />
-		<HStack gap={2} class="flex-wrap">
-			<form method="post" action={`${config.basePath}/voice-servers?action=update`}>
-				<CsrfInput token={csrfToken} />
-				<input type="hidden" name="region_id" value={region_id} />
-				<input type="hidden" name="server_id" value={server.server_id} />
-				<input type="hidden" name="endpoint" value={server.endpoint} />
-				<input type="hidden" name="is_active" value={server.is_active ? 'false' : 'true'} />
-				<input type="hidden" name="vip_only" value={server.vip_only ? 'true' : 'false'} />
-				<Button type="submit" variant={server.is_active ? 'danger' : 'success'} size="small">
-					{server.is_active ? 'Deactivate' : 'Activate'}
-				</Button>
-			</form>
-			<form method="post" action={`${config.basePath}/voice-servers?action=delete`}>
-				<CsrfInput token={csrfToken} />
-				<input type="hidden" name="region_id" value={region_id} />
-				<input type="hidden" name="server_id" value={server.server_id} />
-				<Button
-					type="submit"
-					variant="danger"
-					size="small"
-					onclick="return confirm('Are you sure you want to delete this server?')"
-				>
-					Delete
-				</Button>
-			</form>
-		</HStack>
-		<details class="mt-6">
-			<summary class="cursor-pointer rounded bg-blue-50 px-4 py-2 font-medium text-blue-700 text-sm transition-colors hover:bg-blue-100">
-				Edit Server
-			</summary>
-			<VStack gap={0} class="mt-3 border-neutral-200 border-t pt-3">
-				<EditServerForm config={config} region_id={region_id} server={server} csrfToken={csrfToken} />
-			</VStack>
-		</details>
-	</CardElevated>
-);
+			<div class="mb-4 grid grid-cols-2 gap-4 md:grid-cols-2">
+				<InfoItem label="Region" value={server.region_id} />
+				<InfoItem label="Status" value={server.is_active ? 'Active' : 'Inactive'} />
+			</div>
+			<VoiceFeaturesList features={server.required_guild_features} />
+			<VoiceGuildIdsList guild_ids={server.allowed_guild_ids} />
+			<HStack gap={2} class="flex-wrap">
+				<form method="post" action={updateAction}>
+					<CsrfInput token={csrfToken} />
+					<input type="hidden" name="region_id" value={region_id} />
+					<input type="hidden" name="server_id" value={server.server_id} />
+					<input type="hidden" name="endpoint" value={server.endpoint} />
+					<input type="hidden" name="is_active" value={server.is_active ? 'false' : 'true'} />
+					<input type="hidden" name="vip_only" value={server.vip_only ? 'true' : 'false'} />
+					<Button type="submit" variant={server.is_active ? 'danger' : 'success'} size="small">
+						{server.is_active ? 'Deactivate' : 'Activate'}
+					</Button>
+				</form>
+				<form method="post" action={deleteAction}>
+					<CsrfInput token={csrfToken} />
+					<input type="hidden" name="region_id" value={region_id} />
+					<input type="hidden" name="server_id" value={server.server_id} />
+					<Button
+						type="submit"
+						variant="danger"
+						size="small"
+						onclick="return confirm('Are you sure you want to delete this server?')"
+					>
+						Delete
+					</Button>
+				</form>
+			</HStack>
+			<details class="mt-6">
+				<summary class="cursor-pointer rounded bg-blue-50 px-4 py-2 font-medium text-blue-700 text-sm transition-colors hover:bg-blue-100">
+					Edit Server
+				</summary>
+				<VStack gap={0} class="mt-3 border-neutral-200 border-t pt-3">
+					<EditServerForm config={config} region_id={region_id} server={server} csrfToken={csrfToken} />
+				</VStack>
+			</details>
+		</CardElevated>
+	);
+};
 
 const ServersList: FC<{
 	config: Config;
@@ -209,51 +215,61 @@ const ServersList: FC<{
 		</VStack>
 	);
 
-const CreateForm: FC<{config: Config; region_id: string; csrfToken: string}> = ({config, region_id, csrfToken}) => (
-	<CardElevated padding="md">
-		<Heading level={2} size="base" class="mb-4">
-			Add Voice Server
-		</Heading>
-		<form method="post" action={`${config.basePath}/voice-servers?action=create`} class="space-y-4">
-			<CsrfInput token={csrfToken} />
-			<input type="hidden" name="region_id" value={region_id} />
-			<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
-				<FormFieldGroup label="Server ID" htmlFor="new-server-id" required>
-					<Input id="new-server-id" name="server_id" type="text" placeholder="livekit-us-east-1" required />
-				</FormFieldGroup>
-				<FormFieldGroup label="Endpoint" htmlFor="new-server-endpoint" required>
-					<Input id="new-server-endpoint" name="endpoint" type="url" placeholder="wss://livekit.example.com" required />
-				</FormFieldGroup>
-				<FormFieldGroup label="API Key" htmlFor="new-server-api-key" required>
-					<Input id="new-server-api-key" name="api_key" type="text" placeholder="LiveKit API key" required />
-				</FormFieldGroup>
-				<FormFieldGroup label="API Secret" htmlFor="new-server-api-secret" required>
-					<Input
-						id="new-server-api-secret"
-						name="api_secret"
-						type="password"
-						placeholder="LiveKit API secret"
-						required
-					/>
-				</FormFieldGroup>
-			</div>
-			<div class="space-y-3">
-				<Checkbox name="is_active" value="true" label="Server is active" checked />
-			</div>
-			<VoiceRestrictionFields
-				id_prefix="create"
-				restrictions={{
-					vip_only: false,
-					required_guild_features: [],
-					allowed_guild_ids: [],
-				}}
-			/>
-			<Button type="submit" variant="primary" fullWidth>
-				Add Server
-			</Button>
-		</form>
-	</CardElevated>
-);
+const CreateForm: FC<{config: Config; region_id: string; csrfToken: string}> = ({config, region_id, csrfToken}) => {
+	const formAction = `${config.basePath}/voice-servers?region_id=${encodeURIComponent(region_id)}&action=create`;
+
+	return (
+		<CardElevated padding="md">
+			<Heading level={2} size="base" class="mb-4">
+				Add Voice Server
+			</Heading>
+			<form method="post" action={formAction} class="space-y-4">
+				<CsrfInput token={csrfToken} />
+				<input type="hidden" name="region_id" value={region_id} />
+				<div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+					<FormFieldGroup label="Server ID" htmlFor="new-server-id" required>
+						<Input id="new-server-id" name="server_id" type="text" placeholder="livekit-us-east-1" required />
+					</FormFieldGroup>
+					<FormFieldGroup label="Endpoint" htmlFor="new-server-endpoint" required>
+						<Input
+							id="new-server-endpoint"
+							name="endpoint"
+							type="url"
+							placeholder="wss://livekit.example.com"
+							required
+						/>
+					</FormFieldGroup>
+					<FormFieldGroup label="API Key" htmlFor="new-server-api-key" required>
+						<Input id="new-server-api-key" name="api_key" type="text" placeholder="LiveKit API key" required />
+					</FormFieldGroup>
+					<FormFieldGroup label="API Secret" htmlFor="new-server-api-secret" required>
+						<Input
+							id="new-server-api-secret"
+							name="api_secret"
+							type="password"
+							placeholder="LiveKit API secret"
+							required
+						/>
+					</FormFieldGroup>
+				</div>
+				<div class="space-y-3">
+					<Checkbox name="is_active" value="true" label="Server is active" checked />
+				</div>
+				<VoiceRestrictionFields
+					id_prefix="create"
+					restrictions={{
+						vip_only: false,
+						required_guild_features: [],
+						allowed_guild_ids: [],
+					}}
+				/>
+				<Button type="submit" variant="primary" fullWidth>
+					Add Server
+				</Button>
+			</form>
+		</CardElevated>
+	);
+};
 
 const NoRegionView: FC<{config: Config}> = ({config}) => (
 	<VStack gap={6}>
