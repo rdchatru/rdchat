@@ -1,14 +1,14 @@
-Fluxer Visionary was a limited, one-time lifetime Plutonium offering available from **25 October 2025 to 17 February 2026**. Once roughly 1,000 copies sold out, the offer closed permanently – it won't return.
+RdChat Visionary was a limited, one-time lifetime Plutonium offering available from **25 October 2025 to 17 February 2026**. Once roughly 1,000 copies sold out, the offer closed permanently – it won't return.
 
 Each Visionary purchase cost **$299** and grants the same benefits as a Plutonium subscription, with no ongoing payments required.
 
 ## Numbered badge
 
-Every Visionary is assigned a sequence number based on when they purchased. You can choose to display a numbered badge on your public profile, letting others see how early you supported Fluxer. The badge is optional – you can toggle it in **User Settings → Profile**.
+Every Visionary is assigned a sequence number based on when they purchased. You can choose to display a numbered badge on your public profile, letting others see how early you supported RdChat. The badge is optional – you can toggle it in **User Settings → Profile**.
 
 ## Benefits
 
-Visionary grants all current and future [Plutonium](/plutonium) benefits for as long as Fluxer runs. There are no renewals and no expiry.
+Visionary grants all current and future [supporter](/donate) benefits for as long as RdChat runs. There are no renewals and no expiry.
 
 ## Frequently asked questions
 

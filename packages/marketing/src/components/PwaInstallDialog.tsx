@@ -28,7 +28,7 @@ export function renderPwaInstallTrigger(ctx: MarketingContext): JSX.Element {
 		<button
 			type="button"
 			id="pwa-install-button"
-			class="inline-flex items-center gap-2 rounded-xl bg-[#4641D9] px-5 py-3 font-medium text-sm text-white shadow-md transition-colors hover:bg-[#3832B8]"
+			class="inline-flex items-center gap-2 rounded-xl bg-[#638B6F] px-5 py-3 font-medium text-sm text-white shadow-md transition-colors hover:bg-[#4F6D58]"
 		>
 			<DevicesIcon class="h-5 w-5" />
 			{ctx.i18n.getMessage('platform_support.mobile.install_as_app.title', ctx.locale)}

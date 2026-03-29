@@ -28,6 +28,7 @@ import {
 	shutdownAllServices,
 	startBackgroundServices,
 } from '@app/ServiceInitializer';
+import {createDocsApp} from '@app/docs/DocsApp';
 import {requireValue} from '@app/utils/ConfigUtils';
 import {getBuildMetadata} from '@fluxer/config/src/BuildMetadata';
 import {AppErrorHandler, AppNotFoundHandler} from '@fluxer/errors/src/domains/core/ErrorHandlers';
@@ -125,6 +126,9 @@ export async function mountRoutes(options: MountRoutesOptions): Promise<MountedR
 			app.route('/admin', services.admin.app);
 			logger.info('Admin service mounted at /admin');
 		}
+
+		app.route('/docs', createDocsApp({logger}));
+		logger.info('Docs service mounted at /docs');
 
 		if (services.api !== undefined) {
 			const apiService = services.api;

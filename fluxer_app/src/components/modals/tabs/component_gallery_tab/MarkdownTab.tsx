@@ -102,7 +102,7 @@ export const MarkdownTab: React.FC = observer(() => {
 					{label: '[text](url)', content: '[Masked Link](https://rdchat.ru)'},
 					{label: '<url>', content: '<https://rdchat.ru>'},
 					{label: 'url', content: 'https://rdchat.ru'},
-					{label: '<email>', content: '<contact@rdchat.ru>'},
+					{label: '<email>', content: '<support@rdchat.ru>'},
 				],
 			},
 			{

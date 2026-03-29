@@ -48,7 +48,7 @@ export async function renderNotFoundPage(c: Context, ctx: MarketingContext): Pro
 				<div class="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
 					<a
 						href={href(ctx, '/')}
-						class="rounded-lg border border-white bg-white px-6 py-3 text-[#4641D9] transition-opacity hover:opacity-90"
+						class="rounded-lg border border-white bg-white px-6 py-3 text-[#638B6F] transition-opacity hover:opacity-90"
 					>
 						{ctx.i18n.getMessage('navigation.go_home', ctx.locale)}
 					</a>

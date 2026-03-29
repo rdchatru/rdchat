@@ -8,7 +8,7 @@ Your date of birth can't be edited directly in the app. If it's wrong, our suppo
 
 ## How to request a change
 
-Email support@fluxer.app from the email address linked to your Fluxer account. Include the correct date of birth, a brief reason, and a clear photo of your ID.
+Email support@rdchat.ru from the email address linked to your RdChat account. Include the correct date of birth, a brief reason, and a clear photo of your ID.
 
 ## Things to know
 

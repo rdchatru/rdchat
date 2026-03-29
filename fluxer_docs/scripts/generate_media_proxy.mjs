@@ -423,7 +423,7 @@ function generateOpenApiSpec() {
 				'Media proxy API for Fluxer. Serves avatars, icons, banners, attachments, emojis, stickers, and proxied external media.',
 			contact: {
 				name: 'Fluxer Developers',
-				email: 'developers@rdchat.ru',
+				email: 'support@rdchat.ru',
 			},
 			license: {
 				name: 'AGPL-3.0',

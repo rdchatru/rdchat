@@ -58,11 +58,11 @@ export const BootstrapErrorScreen: React.FC<BootstrapErrorScreenProps> = ({error
 				)}
 				<p className={styles.errorFallbackDescription}>
 					<Trans>
-						Check our{' '}
-						<a href="https://bsky.app/profile/rdchat.ru" target="_blank" rel="noopener noreferrer">
-							Bluesky (@rdchat.ru)
+						If this keeps happening, contact{' '}
+						<a href="mailto:support@rdchat.ru">
+							support@rdchat.ru
 						</a>{' '}
-						for status updates.
+						or reset the app data and try again.
 					</Trans>
 				</p>
 			</div>

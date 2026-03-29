@@ -29,11 +29,11 @@
 
 @layer utilities {
   .gradient-purple {
-    @apply bg-gradient-to-b from-[#4641D9] to-[#3832B8];
+    @apply bg-gradient-to-b from-[#638B6F] to-[#4F6D58];
   }
 
   .gradient-cta {
-    @apply rounded-t-3xl bg-gradient-to-b from-[#4641D9] to-[#3832B8] text-white;
+    @apply rounded-t-3xl bg-gradient-to-b from-[#638B6F] to-[#4F6D58] text-white;
   }
 }
 

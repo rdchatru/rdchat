@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "Όλοι οι τύποι κατάστασης"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Όλες οι μεταφράσεις είναι αυτή τη στιγμή παραγόμενες από LLM με ελάχιστη ανθρώπινη αναθεώρηση. Θα θέλαμε πραγματικούς ανθρώπους να μας βοηθήσουν να τοπικοποιήσουμε το RdChat στη γλώσσα σας! Για να το κάνετε αυτό, στείλτε ένα email στο <0>i18n@fluxer.app</0> και θα είμαστε χαρούμενοι να δεχτούμε τις συνεισφορές σας."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>support@rdchat.ru</0> and we'll be happy to accept your contributions."
+msgstr "Όλες οι μεταφράσεις είναι αυτή τη στιγμή παραγόμενες από LLM με ελάχιστη ανθρώπινη αναθεώρηση. Θα θέλαμε πραγματικούς ανθρώπους να μας βοηθήσουν να τοπικοποιήσουμε το RdChat στη γλώσσα σας! Για να το κάνετε αυτό, στείλτε ένα email στο <0>support@rdchat.ru</0> και θα είμαστε χαρούμενοι να δεχτούμε τις συνεισφορές σας."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -3925,12 +3925,12 @@ msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Com
 msgstr "Δημιουργώντας μια κοινότητα, συμφωνείτε να ακολουθήσετε και να τηρήσετε τις <0>Οδηγίες Κοινότητας RdChat</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Με την αγορά, συμφωνείτε με τους <0>Όρους Παροχής Υπηρεσιών</0> και την <1>Πολιτική Απορρήτου</1>. Όλες οι αγορές επιστρέφονται εντός 14 ημερών αποστέλλοντας email στο <2>support@fluxer.app</2>. Οι χρεώσεις αντιγραφής οδηγούν σε μόνιμους αποκλεισμούς λογαριασμού — αν θέλετε επιστροφή χρημάτων, θα χαρούμε να σας εξυπηρετήσουμε αν επικοινωνήσετε πρώτα μαζί μας! Τα στοιχεία πληρωμής χειρίζονται με ασφάλεια από τη Stripe — δεν έχουμε ποτέ πρόσβαση στον πλήρη αριθμό της κάρτας σας."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Με την αγορά, συμφωνείτε με τους <0>Όρους Παροχής Υπηρεσιών</0> και την <1>Πολιτική Απορρήτου</1>. Όλες οι αγορές επιστρέφονται εντός 14 ημερών αποστέλλοντας email στο <2>support@rdchat.ru</2>. Οι χρεώσεις αντιγραφής οδηγούν σε μόνιμους αποκλεισμούς λογαριασμού — αν θέλετε επιστροφή χρημάτων, θα χαρούμε να σας εξυπηρετήσουμε αν επικοινωνήσετε πρώτα μαζί μας! Τα στοιχεία πληρωμής χειρίζονται με ασφάλεια από τη Stripe — δεν έχουμε ποτέ πρόσβαση στον πλήρη αριθμό της κάρτας σας."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Με την αγορά, συμφωνήσατε με τους <0>Όρους Παροχής Υπηρεσιών</0> και την <1>Πολιτική Απορρήτου</1>. Όλες οι αγορές επιστρέφονται εντός 14 ημερών αποστέλλοντας email στο <2>support@fluxer.app</2>. Οι χρεώσεις αντιγραφής οδηγούν σε μόνιμους αποκλεισμούς λογαριασμού — αν θέλετε επιστροφή χρημάτων, θα χαρούμε να σας εξυπηρετήσουμε αν επικοινωνήσετε πρώτα μαζί μας! Τα στοιχεία πληρωμής χειρίζονται με ασφάλεια από τη Stripe — δεν έχουμε ποτέ πρόσβαση στον πλήρη αριθμό της κάρτας σας."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Με την αγορά, συμφωνήσατε με τους <0>Όρους Παροχής Υπηρεσιών</0> και την <1>Πολιτική Απορρήτου</1>. Όλες οι αγορές επιστρέφονται εντός 14 ημερών αποστέλλοντας email στο <2>support@rdchat.ru</2>. Οι χρεώσεις αντιγραφής οδηγούν σε μόνιμους αποκλεισμούς λογαριασμού — αν θέλετε επιστροφή χρημάτων, θα χαρούμε να σας εξυπηρετήσουμε αν επικοινωνήσετε πρώτα μαζί μας! Τα στοιχεία πληρωμής χειρίζονται με ασφάλεια από τη Stripe — δεν έχουμε ποτέ πρόσβαση στον πλήρη αριθμό της κάρτας σας."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491

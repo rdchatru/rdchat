@@ -64,7 +64,7 @@ const CONFIG: Config = {
 	families: {
 		neutralDark: {hue: 220, saturation: 13, useSaturationFactor: true},
 		neutralLight: {hue: 220, saturation: 10, useSaturationFactor: true},
-		brand: {hue: 242, saturation: 70, useSaturationFactor: true},
+		brand: {hue: 138, saturation: 17, useSaturationFactor: true},
 		link: {hue: 210, saturation: 100, useSaturationFactor: true},
 		accentPurple: {hue: 270, saturation: 80, useSaturationFactor: true},
 		statusOnline: {hue: 142, saturation: 76, useSaturationFactor: true},

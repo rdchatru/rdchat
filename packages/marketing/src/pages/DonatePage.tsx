@@ -48,7 +48,7 @@ function getDonationType(c: Context): 'individual' | 'business' {
 }
 
 const TAB_ACTIVE =
-	'donate-tab donate-tab-active rounded-md bg-[#4641D9] px-6 py-2 font-medium text-sm text-white transition-all';
+	'donate-tab donate-tab-active rounded-md bg-[#638B6F] px-6 py-2 font-medium text-sm text-white transition-all';
 const TAB_INACTIVE =
 	'donate-tab rounded-md px-6 py-2 font-medium text-sm text-gray-600 transition-all hover:text-gray-900';
 

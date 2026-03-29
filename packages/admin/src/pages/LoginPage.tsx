@@ -46,14 +46,14 @@ export function LoginPage({config, errorMessage}: LoginPageProps) {
 						<VStack gap={8}>
 							<VStack gap={2} align="center">
 								<Heading level={1} size="xl">
-									Fluxer Admin
+									RdChat Admin
 								</Heading>
 							</VStack>
 
 							{errorMessage && <ErrorAlert error={errorMessage} />}
 
 							<Button href={`${config.basePath}/auth/start`} variant="primary" fullWidth>
-								Sign in with Fluxer
+								Sign in with RdChat
 							</Button>
 						</VStack>
 					</Card>

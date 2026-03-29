@@ -38,7 +38,6 @@ import {renderHelpIndexPage} from '@fluxer/marketing/src/pages/HelpIndexPage';
 import {renderHomePage} from '@fluxer/marketing/src/pages/HomePage';
 import {renderNotFoundPage} from '@fluxer/marketing/src/pages/NotFoundPage';
 import {renderPartnersPage} from '@fluxer/marketing/src/pages/PartnersPage';
-import {renderPlutoniumPage} from '@fluxer/marketing/src/pages/PlutoniumPage';
 import {renderPolicyPage} from '@fluxer/marketing/src/pages/PolicyPage';
 import {renderPressPage} from '@fluxer/marketing/src/pages/PressPage';
 import {sanitizeInternalRedirectPath} from '@fluxer/marketing/src/RedirectPathUtils';
@@ -80,7 +79,6 @@ const PAGE_ROUTE_DEFINITIONS: ReadonlyArray<{
 	{path: '/donate', handler: renderDonatePage},
 	{path: '/donate/manage', handler: renderDonateManagePage},
 	{path: '/donate/success', handler: renderDonateSuccessPage},
-	{path: '/plutonium', handler: renderPlutoniumPage},
 	{path: '/partners', handler: renderPartnersPage},
 	{path: '/press', handler: renderPressPage},
 ];
@@ -121,8 +119,10 @@ function registerExternalRedirects(app: Hono): void {
 	});
 
 	app.get('/regional-restrictions', (c) => c.redirect('/help/regional-restrictions', HttpStatus.MOVED_PERMANENTLY));
-	app.get('/blog', (c) => c.redirect('https://blog.rdchat.ru', HttpStatus.FOUND));
-	app.get('/blog/*', (c) => c.redirect('https://blog.rdchat.ru', HttpStatus.FOUND));
+	app.get('/blog', (c) => c.redirect('/docs', HttpStatus.FOUND));
+	app.get('/blog/*', (c) => c.redirect('/docs', HttpStatus.FOUND));
+	app.get('/plutonium', (c) => c.redirect('/donate', HttpStatus.FOUND));
+	app.get('/plutonium/*', (c) => c.redirect('/donate', HttpStatus.FOUND));
 }
 
 function registerSystemContentRoutes(app: Hono, contextFactory: MarketingContextFactory): void {
@@ -137,7 +137,7 @@ function registerSystemContentRoutes(app: Hono, contextFactory: MarketingContext
 		const expires = `${new Date().getUTCFullYear() + 1}-01-05T13:37:00.000Z`;
 		const body = [
 			`Contact: ${securityUrl}`,
-			'Contact: mailto:security@rdchat.ru',
+			'Contact: mailto:support@rdchat.ru',
 			`Expires: ${expires}`,
 			'Preferred-Languages: en',
 			`Policy: ${securityUrl}`,

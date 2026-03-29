@@ -36,7 +36,7 @@ interface FeaturePillThemeProps {
 
 export function FeaturePill(props: FeaturePillProps): JSX.Element {
 	return (
-		<span class="inline-block rounded-lg border border-white/20 bg-white px-3 py-2 font-medium text-[#4641D9] text-sm shadow-sm sm:px-4 sm:py-3 sm:text-base">
+		<span class="inline-block rounded-lg border border-white/20 bg-white px-3 py-2 font-medium text-[#638B6F] text-sm shadow-sm sm:px-4 sm:py-3 sm:text-base">
 			{props.text}
 		</span>
 	);
@@ -45,8 +45,8 @@ export function FeaturePill(props: FeaturePillProps): JSX.Element {
 export function FeaturePillWithTheme(props: FeaturePillThemeProps): JSX.Element {
 	const pillClass =
 		props.theme === 'light'
-			? 'inline-block rounded-lg bg-[#4641D9] px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-medium text-white shadow-sm border border-gray-200'
-			: 'inline-block rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-medium text-[#4641D9] shadow-sm border border-white/20';
+			? 'inline-block rounded-lg bg-[#638B6F] px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-medium text-white shadow-sm border border-gray-200'
+			: 'inline-block rounded-lg bg-white px-3 py-2 sm:px-4 sm:py-3 text-sm sm:text-base font-medium text-[#638B6F] shadow-sm border border-white/20';
 
 	return <span class={pillClass}>{props.text}</span>;
 }

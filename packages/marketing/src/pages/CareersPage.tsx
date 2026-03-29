@@ -99,8 +99,8 @@ function renderContributeSection(ctx: MarketingContext): JSX.Element {
 						'company_and_resources.source_and_contribution.translation.help_translate',
 						ctx.locale,
 					)}
-					buttonText="i18n@rdchat.ru"
-					buttonHref="mailto:i18n@rdchat.ru"
+					buttonText="support@rdchat.ru"
+					buttonHref="mailto:support@rdchat.ru"
 				/>
 				<SupportCard
 					ctx={ctx}
@@ -110,24 +110,24 @@ function renderContributeSection(ctx: MarketingContext): JSX.Element {
 						'company_and_resources.community_team.share_feedback_report_bugs',
 						ctx.locale,
 					)}
-					buttonText={ctx.i18n.getMessage('misc_labels.join_fluxer_hq', ctx.locale)}
-					buttonHref="https://fluxer.gg/fluxer-hq"
+					buttonText="Join RdChat HQ"
+					buttonHref="https://rdchat.ru/invite/hq"
 				/>
 				<SupportCard
 					ctx={ctx}
 					icon="bug"
 					title={ctx.i18n.getMessage('security.security_reports', ctx.locale)}
 					description={ctx.i18n.getMessage('security.report_vulnerabilities', ctx.locale)}
-					buttonText={ctx.i18n.getMessage('security.security_bug_bounty', ctx.locale)}
-					buttonHref="/security"
+					buttonText="support@rdchat.ru"
+					buttonHref="mailto:support@rdchat.ru"
 				/>
 				<SupportCard
 					ctx={ctx}
 					icon="shield_check"
 					title={ctx.i18n.getMessage('misc_labels.trust_and_safety', ctx.locale)}
 					description={ctx.i18n.getMessage('app.communities.moderation.report_people_or_communities', ctx.locale)}
-					buttonText="safety@rdchat.ru"
-					buttonHref="mailto:safety@rdchat.ru"
+					buttonText="support@rdchat.ru"
+					buttonHref="mailto:support@rdchat.ru"
 				/>
 				<SupportCard
 					ctx={ctx}
@@ -156,28 +156,28 @@ function renderCommunityTeamSection(ctx: MarketingContext): JSX.Element {
 				</div>
 				<div class="mx-auto flex max-w-5xl flex-wrap justify-center gap-3 sm:gap-4 md:gap-5 lg:gap-6">
 					{renderCommunityPill(
-						<CodeIcon class="h-6 w-6 text-[#4641D9] md:h-7 md:w-7" />,
+						<CodeIcon class="h-6 w-6 text-[#638B6F] md:h-7 md:w-7" />,
 						ctx.i18n.getMessage('misc_labels.software_development', ctx.locale),
 					)}
 					{renderCommunityPill(
-						<TranslateIcon class="h-6 w-6 text-[#4641D9] md:h-7 md:w-7" />,
+						<TranslateIcon class="h-6 w-6 text-[#638B6F] md:h-7 md:w-7" />,
 						ctx.i18n.getMessage('company_and_resources.source_and_contribution.translation.label', ctx.locale),
 					)}
 					{renderCommunityPill(
-						<PaletteIcon class="h-6 w-6 text-[#4641D9] md:h-7 md:w-7" />,
+						<PaletteIcon class="h-6 w-6 text-[#638B6F] md:h-7 md:w-7" />,
 						ctx.i18n.getMessage('misc_labels.design_and_branding', ctx.locale),
 					)}
 					{renderCommunityPill(
-						<ShieldCheckIcon class="h-6 w-6 text-[#4641D9] md:h-7 md:w-7" />,
+						<ShieldCheckIcon class="h-6 w-6 text-[#638B6F] md:h-7 md:w-7" />,
 						ctx.i18n.getMessage('misc_labels.trust_and_safety', ctx.locale),
 					)}
 				</div>
 				<div class="mt-10 text-center md:mt-12">
 					<a
-						href="mailto:careers@rdchat.ru"
-						class="label inline-flex items-center justify-center rounded-xl bg-[#4641D9] px-8 py-4 text-base text-white shadow-lg transition hover:bg-opacity-90 md:text-lg"
+						href="mailto:support@rdchat.ru"
+						class="label inline-flex items-center justify-center rounded-xl bg-[#638B6F] px-8 py-4 text-base text-white shadow-lg transition hover:bg-opacity-90 md:text-lg"
 					>
-						careers@rdchat.ru
+						support@rdchat.ru
 					</a>
 				</div>
 			</div>
@@ -230,19 +230,19 @@ function renderCtaSection(ctx: MarketingContext): JSX.Element {
 					</p>
 					<div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
 						<a
-							href="mailto:careers@rdchat.ru"
-							class="label inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
+							href="mailto:support@rdchat.ru"
+							class="label inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-[#638B6F] shadow-lg transition hover:bg-gray-100"
 						>
-							careers@rdchat.ru
+							support@rdchat.ru
 						</a>
 						<a
-							href="https://fluxer.gg/fluxer-hq"
+							href="https://rdchat.ru/invite/hq"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="label inline-flex items-center justify-center gap-2 rounded-xl border border-white/25 bg-white/10 px-8 py-4 text-white hover:bg-white/15"
 						>
 							<ChatsCircleIcon class="h-5 w-5 text-white" />
-							<span>{ctx.i18n.getMessage('misc_labels.join_fluxer_hq', ctx.locale)}</span>
+							<span>Join RdChat HQ</span>
 						</a>
 					</div>
 				</div>

@@ -476,7 +476,7 @@ function labelForField(field: string): string {
 		case 'phone':
 			return 'Phone';
 		case 'fluxer_tag':
-			return 'FluxerTag';
+			return 'RdChatTag';
 		default:
 			return field;
 	}

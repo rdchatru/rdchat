@@ -29,6 +29,7 @@ import {AdminMessageShredService} from '@fluxer/api/src/admin/services/AdminMess
 import {AdminReportService} from '@fluxer/api/src/admin/services/AdminReportService';
 import {AdminSearchService} from '@fluxer/api/src/admin/services/AdminSearchService';
 import {AdminSnowflakeReservationService} from '@fluxer/api/src/admin/services/AdminSnowflakeReservationService';
+import {AdminStorageService} from '@fluxer/api/src/admin/services/AdminStorageService';
 import {AdminUserService} from '@fluxer/api/src/admin/services/AdminUserService';
 import {AdminVisionarySlotService} from '@fluxer/api/src/admin/services/AdminVisionarySlotService';
 import {AdminVoiceService} from '@fluxer/api/src/admin/services/AdminVoiceService';
@@ -91,6 +92,15 @@ import type {
 	SearchReportsRequest,
 	SystemDmJobResponse,
 } from '@fluxer/schema/src/domains/admin/AdminSchemas';
+import type {
+	CreateStorageFolderRequest,
+	DeleteStorageFolderRequest,
+	DeleteStorageObjectRequest,
+	ListStorageObjectsRequest,
+	RenameStorageFolderRequest,
+	RenameStorageObjectRequest,
+	StorageDownloadUrlRequest,
+} from '@fluxer/schema/src/domains/admin/AdminStorageSchemas';
 import type {
 	BulkScheduleUserDeletionRequest,
 	BulkUpdateUserFlagsRequest,
@@ -157,6 +167,7 @@ export class AdminService {
 	private readonly systemDmService: SystemDmService;
 	private readonly assetPurgeService: AdminAssetPurgeService;
 	private readonly snowflakeReservationService: AdminSnowflakeReservationService;
+	private readonly storageDashboardService: AdminStorageService;
 	private readonly visionarySlotService: AdminVisionarySlotService;
 
 	constructor(
@@ -270,6 +281,9 @@ export class AdminService {
 			repository: new SnowflakeReservationRepository(),
 			cacheService: this.cacheService,
 			auditService: this.auditService,
+		});
+		this.storageDashboardService = new AdminStorageService({
+			storageService: this.storageService,
 		});
 		this.visionarySlotService = new AdminVisionarySlotService({
 			repository: new VisionarySlotRepository(),
@@ -821,6 +835,46 @@ export class AdminService {
 
 	async getIndexRefreshStatus(jobId: string) {
 		return this.searchService.getIndexRefreshStatus(jobId);
+	}
+
+	async listStorageObjects(data: ListStorageObjectsRequest) {
+		return this.storageDashboardService.listObjects(data);
+	}
+
+	async getStorageDownloadUrl(data: StorageDownloadUrlRequest) {
+		return this.storageDashboardService.getDownloadUrl(data);
+	}
+
+	async createStorageFolder(data: CreateStorageFolderRequest, _adminUserId: UserID, _auditLogReason: string | null) {
+		return this.storageDashboardService.createFolder(data);
+	}
+
+	async uploadStorageObjects(
+		data: {
+			bucket: string;
+			prefix?: string;
+			files: Array<File>;
+		},
+		_adminUserId: UserID,
+		_auditLogReason: string | null,
+	) {
+		return this.storageDashboardService.uploadObjects(data);
+	}
+
+	async deleteStorageObject(data: DeleteStorageObjectRequest, _adminUserId: UserID, _auditLogReason: string | null) {
+		return this.storageDashboardService.deleteObject(data);
+	}
+
+	async deleteStorageFolder(data: DeleteStorageFolderRequest, _adminUserId: UserID, _auditLogReason: string | null) {
+		return this.storageDashboardService.deleteFolder(data);
+	}
+
+	async renameStorageObject(data: RenameStorageObjectRequest, _adminUserId: UserID, _auditLogReason: string | null) {
+		return this.storageDashboardService.renameObject(data);
+	}
+
+	async renameStorageFolder(data: RenameStorageFolderRequest, _adminUserId: UserID, _auditLogReason: string | null) {
+		return this.storageDashboardService.renameFolder(data);
 	}
 
 	async listVoiceRegions(data: ListVoiceRegionsRequest, _adminUserId: UserID, _auditLogReason: string | null) {

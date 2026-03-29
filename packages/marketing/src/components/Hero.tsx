@@ -23,7 +23,6 @@
 import {Locales} from '@fluxer/constants/src/Locales';
 import {FlagSvg} from '@fluxer/marketing/src/components/Flags';
 import {HackernewsBanner} from '@fluxer/marketing/src/components/HackernewsBanner';
-import {ArrowRightIcon} from '@fluxer/marketing/src/components/icons/ArrowRightIcon';
 import {renderSecondaryButton, renderWithOverlay} from '@fluxer/marketing/src/components/PlatformDownloadButton';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 
@@ -39,34 +38,14 @@ export function Hero(props: HeroProps): JSX.Element {
 			<div class="max-w-4xl space-y-8 text-center">
 				{ctx.locale === 'ja' ? (
 					<div class="flex justify-center">
-						<span class="font-bold text-3xl text-white">Fluxer（フラクサー）</span>
+						<span class="font-bold text-3xl text-white">RdChat</span>
 					</div>
 				) : null}
-				<div class="flex flex-wrap items-center justify-center gap-3 pb-2">
-					<a
-						href="https://blog.rdchat.ru/how-i-built-fluxer-a-discord-like-chat-app/"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 font-medium text-sm text-white transition-colors hover:bg-white/20"
-					>
-						{ctx.i18n.getMessage('launch.heading', ctx.locale)}
-						<ArrowRightIcon class="h-3.5 w-3.5" />
-					</a>
-					<a
-						href="https://blog.rdchat.ru/roadmap-2026"
-						target="_blank"
-						rel="noopener noreferrer"
-						class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 font-medium text-sm text-white transition-colors hover:bg-white/20"
-					>
-						{ctx.i18n.getMessage('launch.view_full_roadmap', ctx.locale)}
-						<ArrowRightIcon class="h-3.5 w-3.5" />
-					</a>
-				</div>
 				<h1 class="hero">{ctx.i18n.getMessage('general.tagline', ctx.locale)}</h1>
 				<div class="-mt-4 flex items-center justify-center gap-2 font-medium text-sm text-white/80">
 					<span class="inline-flex items-center gap-1.5">
-						<FlagSvg locale={Locales.SV_SE} ctx={ctx} class="h-3.5 w-3.5 rounded-sm" />
-						{ctx.i18n.getMessage('general.made_in_sweden', ctx.locale)}
+						<FlagSvg locale={Locales.RU} ctx={ctx} class="h-3.5 w-3.5 rounded-sm" />
+						Made in Russia
 					</span>
 				</div>
 				<p class="lead mx-auto max-w-2xl text-white/90">

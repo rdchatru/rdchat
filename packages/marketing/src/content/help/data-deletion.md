@@ -12,7 +12,7 @@ Mass-deletion runs in the background and completes as soon as possible relative 
 
 ## Delete specific data
 
-Email **privacy@fluxer.app** from your account's registered email address with details of what you'd like removed.
+Email **support@rdchat.ru** from your account's registered email address with details of what you'd like removed.
 
 ## Before you delete
 

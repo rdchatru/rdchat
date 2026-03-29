@@ -20,12 +20,10 @@
 /** @jsxRuntime automatic */
 /** @jsxImportSource hono/jsx */
 
-import {BlueskyIcon} from '@fluxer/marketing/src/components/icons/BlueskyIcon';
 import {DownloadIcon} from '@fluxer/marketing/src/components/icons/DownloadIcon';
 import {FluxerLogoWordmarkIcon} from '@fluxer/marketing/src/components/icons/FluxerLogoWordmarkIcon';
 import {GithubIcon} from '@fluxer/marketing/src/components/icons/GithubIcon';
 import {MenuIcon} from '@fluxer/marketing/src/components/icons/MenuIcon';
-import {RssIcon} from '@fluxer/marketing/src/components/icons/RssIcon';
 import {TranslateIcon} from '@fluxer/marketing/src/components/icons/TranslateIcon';
 import {XIcon} from '@fluxer/marketing/src/components/icons/XIcon';
 import {LocaleSelectorTrigger} from '@fluxer/marketing/src/components/LocaleSelector';
@@ -57,7 +55,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 								aria-label={ctx.i18n.getMessage('navigation.go_home', ctx.locale)}
 							>
 								<FluxerLogoWordmarkIcon class="h-8 text-gray-950 md:h-9" />
-								<span class="absolute right-0 -bottom-1.5 whitespace-nowrap rounded-full border border-white bg-[#4641D9] px-1.5 py-0.5 font-bold text-[8px] text-white leading-none">
+								<span class="absolute right-0 -bottom-1.5 whitespace-nowrap rounded-full border border-white bg-[#638B6F] px-1.5 py-0.5 font-bold text-[8px] text-white leading-none">
 									{ctx.i18n.getMessage('beta_and_access.public_beta', ctx.locale)}
 								</span>
 							</a>
@@ -69,28 +67,16 @@ export function Navigation(props: NavigationProps): JSX.Element {
 									{ctx.i18n.getMessage('download.download', ctx.locale)}
 								</a>
 								<a
-									href={href(ctx, '/plutonium')}
-									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
-								>
-									{ctx.i18n.getMessage('pricing_and_tiers.plutonium.tier_name', ctx.locale)}
-								</a>
-								<a
 									href={href(ctx, '/help')}
 									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
 								>
 									{ctx.i18n.getMessage('company_and_resources.help.label', ctx.locale)}
 								</a>
 								<a
-									href="https://docs.rdchat.ru"
+									href="/docs"
 									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
 								>
 									{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
-								</a>
-								<a
-									href="https://blog.rdchat.ru"
-									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
-								>
-									{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
 								</a>
 								<a
 									href={href(ctx, '/donate')}
@@ -102,35 +88,17 @@ export function Navigation(props: NavigationProps): JSX.Element {
 						</div>
 						<div class="flex items-center gap-1 xl:gap-2">
 							<a
-								href="https://bsky.app/profile/rdchat.ru"
-								class="hidden items-center rounded-lg p-2 text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] lg:flex"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label={ctx.i18n.getMessage('social_and_feeds.bluesky.label', ctx.locale)}
-							>
-								<BlueskyIcon class="h-5 w-5" />
-							</a>
-							<a
 								href="https://github.com/fluxerapp/fluxer"
-								class="hidden items-center rounded-lg p-2 text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] lg:flex"
+								class="hidden items-center rounded-lg p-2 text-[#638B6F] transition-colors hover:bg-gray-100 hover:text-[#4F6D58] lg:flex"
 								target="_blank"
 								rel="noopener noreferrer"
 								aria-label={ctx.i18n.getMessage('social_and_feeds.github', ctx.locale)}
 							>
 								<GithubIcon class="h-5 w-5" />
 							</a>
-							<a
-								href="https://blog.rdchat.ru/rss/"
-								class="marketing-nav-rss hidden items-center rounded-lg p-2 text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] xl:flex"
-								target="_blank"
-								rel="noopener noreferrer"
-								aria-label={ctx.i18n.getMessage('social_and_feeds.rss.label', ctx.locale)}
-							>
-								<RssIcon class="h-5 w-5" />
-							</a>
 							<LocaleSelectorTrigger
 								ctx={ctx}
-								className="hidden text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] lg:flex"
+								className="hidden text-[#638B6F] transition-colors hover:bg-gray-100 hover:text-[#4F6D58] lg:flex"
 							/>
 							<MarketingButton
 								href={`${ctx.appEndpoint}/channels/@me`}
@@ -185,12 +153,6 @@ export function Navigation(props: NavigationProps): JSX.Element {
 										{ctx.i18n.getMessage('download.download', ctx.locale)}
 									</a>
 									<a
-										href={href(ctx, '/plutonium')}
-										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
-									>
-										{ctx.i18n.getMessage('pricing_and_tiers.plutonium.tier_name', ctx.locale)}
-									</a>
-									<a
 										href={href(ctx, '/partners')}
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 									>
@@ -210,17 +172,10 @@ export function Navigation(props: NavigationProps): JSX.Element {
 										{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 									</a>
 									<a
-										href="https://docs.rdchat.ru"
+										href="/docs"
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 									>
 										{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
-									</a>
-									<a
-										href="https://blog.rdchat.ru"
-										class="flex items-center gap-2 rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
-									>
-										{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
-										<RssIcon class="h-4 w-4 text-gray-500" />
 									</a>
 									<a
 										href={href(ctx, '/press')}
@@ -235,14 +190,6 @@ export function Navigation(props: NavigationProps): JSX.Element {
 									{ctx.i18n.getMessage('company_and_resources.connect', ctx.locale)}
 								</p>
 								<div class="flex flex-col gap-1">
-									<a
-										href="https://bsky.app/profile/rdchat.ru"
-										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
-										target="_blank"
-										rel="noopener noreferrer"
-									>
-										{ctx.i18n.getMessage('social_and_feeds.bluesky.label', ctx.locale)}
-									</a>
 									<a
 										href="https://github.com/fluxerapp/fluxer"
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"

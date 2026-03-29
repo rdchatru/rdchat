@@ -21,7 +21,6 @@
 /** @jsxImportSource hono/jsx */
 
 import {defaultHeroPadding} from '@fluxer/marketing/src/components/HeroBase';
-import {CoinsIcon} from '@fluxer/marketing/src/components/icons/CoinsIcon';
 import {DownloadIcon} from '@fluxer/marketing/src/components/icons/DownloadIcon';
 import {GithubIcon} from '@fluxer/marketing/src/components/icons/GithubIcon';
 import {HeartIcon} from '@fluxer/marketing/src/components/icons/HeartIcon';
@@ -100,19 +99,19 @@ function renderMobileSection(ctx: MarketingContext): JSX.Element {
 				<div class="rounded-2xl border border-gray-200 bg-white p-8 shadow-md md:p-10">
 					<ul class="space-y-4">
 						<li class="flex items-start gap-3">
-							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#4641D9]" />
+							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#638B6F]" />
 							<span class="body-lg text-gray-900">
 								{ctx.i18n.getMessage('platform_support.mobile.install_as_app.add_to_home', ctx.locale)}
 							</span>
 						</li>
 						<li class="flex items-start gap-3">
-							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#4641D9]" />
+							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#638B6F]" />
 							<span class="body-lg text-gray-900">
 								{ctx.i18n.getMessage('app.customization.app_icon_badges', ctx.locale)}
 							</span>
 						</li>
 						<li class="flex items-start gap-3">
-							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#4641D9]" />
+							<span class="mt-[.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-[#638B6F]" />
 							<span class="body-lg text-gray-900">
 								{ctx.i18n.getMessage('platform_support.mobile.push_notifications', ctx.locale)}
 							</span>
@@ -141,10 +140,10 @@ function renderSupportSection(ctx: MarketingContext): JSX.Element {
 			>
 				<div class="flex flex-col gap-6 sm:flex-row sm:justify-center">
 					{renderSupportCard(
-						href(ctx, '/plutonium'),
-						<CoinsIcon class="h-8 w-8 text-white" />,
-						ctx.i18n.getMessage('pricing_and_tiers.plutonium.tier_name', ctx.locale),
-						ctx.i18n.getMessage('donations.support_future_development', ctx.locale),
+						'/docs',
+						<DownloadIcon class="h-8 w-8 text-white" />,
+						ctx.i18n.getMessage('company_and_resources.docs', ctx.locale),
+						'Read installation guides, release notes, and project documentation.',
 						false,
 					)}
 					{renderSupportCard(

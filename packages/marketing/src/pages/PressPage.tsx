@@ -157,7 +157,7 @@ function renderColorsSection(ctx: MarketingContext): JSX.Element {
 				<div class="grid gap-6 md:grid-cols-3 md:gap-8">
 					{renderColorCard(
 						ctx.i18n.getMessage('press_branding.colors.blue_da_ba_dee', ctx.locale),
-						'#4641D9',
+						'#638B6F',
 						ctx.i18n.getMessage('press_branding.assets.primary_brand_color_description', ctx.locale),
 					)}
 					{renderColorCard(
@@ -188,10 +188,10 @@ function renderContactSection(ctx: MarketingContext): JSX.Element {
 						{ctx.i18n.getMessage('press_branding.contact.story_prompt', ctx.locale)}
 					</p>
 					<a
-						href="mailto:press@rdchat.ru"
-						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
+						href="mailto:support@rdchat.ru"
+						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#638B6F] shadow-lg transition hover:bg-gray-100"
 					>
-						press@rdchat.ru
+						support@rdchat.ru
 					</a>
 					<p class="body-sm mt-6 text-white/80">
 						{ctx.i18n.getMessage('press_branding.contact.response_time', ctx.locale)}
@@ -227,7 +227,7 @@ function renderAssetCard(
 					href={downloadUrl}
 					download={asset.filename}
 					aria-label={ctx.i18n.getMessage('download.download', ctx.locale)}
-					class="flex items-center justify-center rounded-lg bg-[#4641D9] p-3 text-white hover:bg-[#3d38c7]"
+					class="flex items-center justify-center rounded-lg bg-[#638B6F] p-3 text-white hover:bg-[#4F6D58]"
 				>
 					<DownloadArrowIcon class="h-5 w-5" />
 				</a>

@@ -3,9 +3,9 @@
 	"theme": "maple",
 	"name": "Fluxer",
 	"colors": {
-		"primary": "#5865F2",
-		"light": "#7289DA",
-		"dark": "#4752C4"
+		"primary": "#638B6F",
+		"light": "#89A792",
+		"dark": "#4F6D58"
 	},
 	"favicon": "favicon.png",
 	"navigation": {
@@ -97,11 +97,6 @@
 		"global": {
 			"anchors": [
 				{
-					"anchor": "Blog",
-					"icon": "pencil",
-					"href": "https://blog.rdchat.ru"
-				},
-				{
 					"anchor": "Help center",
 					"icon": "life-ring",
 					"href": "https://rdchat.ru/help"
@@ -120,11 +115,6 @@
 					"anchor": "Security",
 					"icon": "shield-check",
 					"href": "https://rdchat.ru/security"
-				},
-				{
-					"anchor": "Bluesky",
-					"icon": "butterfly",
-					"href": "https://bsky.app/profile/rdchat.ru"
 				}
 			]
 		}
@@ -133,7 +123,7 @@
 		"links": [
 			{
 				"label": "Support",
-				"href": "mailto:developers@rdchat.ru"
+				"href": "mailto:support@rdchat.ru"
 			}
 		],
 		"primary": {

@@ -32,8 +32,8 @@ export function HackernewsBanner(props: HackernewsBannerProps): JSX.Element {
 
 	return (
 		<a
-			href="https://fluxer.gg/fluxer-hq"
-			class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 font-medium text-[#4641D9] text-sm transition-opacity hover:opacity-90"
+			href="https://rdchat.ru/invite/hq"
+			class="mt-6 inline-flex items-center gap-2 rounded-full bg-white px-4 py-1.5 font-medium text-[#638B6F] text-sm transition-opacity hover:opacity-90"
 		>
 			<span>{ctx.i18n.getMessage('beta_and_access.try_without_email', ctx.locale)}</span>
 			<ArrowRightIcon class="h-4 w-4" />

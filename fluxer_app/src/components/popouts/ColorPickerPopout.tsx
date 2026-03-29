@@ -43,7 +43,7 @@ export const ColorPickerPopout = observer(
 		onChange: (color: string) => void;
 		onReset: () => void;
 	}) => {
-		const hasCustomColor = color !== null && color !== '#4641D9';
+		const hasCustomColor = color !== null && color !== '#638B6F';
 
 		const handleColorChange = useCallback(
 			(newColor: Color) => {
@@ -56,7 +56,7 @@ export const ColorPickerPopout = observer(
 			try {
 				return parseColor(color).toFormat('hsb');
 			} catch {
-				return parseColor('#4641D9').toFormat('hsb');
+				return parseColor('#638B6F').toFormat('hsb');
 			}
 		}, [color]);
 

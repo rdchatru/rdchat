@@ -263,7 +263,7 @@ function extractSectionReferences(text: string): SectionReferenceExtraction {
 function restoreSectionReferences(html: string, references: Map<string, {text: string; anchor: string}>): string {
 	let result = html;
 	for (const [placeholder, {text, anchor}] of references) {
-		const link = `<a class="text-[#4641D9] hover:underline" href="${escapeHtmlAttribute(anchor)}">${escapeHtmlContent(text)}</a>`;
+		const link = `<a class="text-[#638B6F] hover:underline" href="${escapeHtmlAttribute(anchor)}">${escapeHtmlContent(text)}</a>`;
 		result = result.replaceAll(placeholder, link);
 	}
 	return result;

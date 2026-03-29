@@ -43,11 +43,11 @@ export const NetworkErrorScreen = () => {
 				</p>
 				<p className={styles.errorFallbackDescription}>
 					<Trans>
-						Check our{' '}
-						<a href="https://bsky.app/profile/rdchat.ru" target="_blank" rel="noopener noreferrer">
-							Bluesky (@rdchat.ru)
+						If this keeps happening, contact{' '}
+						<a href="mailto:support@rdchat.ru">
+							support@rdchat.ru
 						</a>{' '}
-						for status updates.
+						or try again in a few minutes.
 					</Trans>
 				</p>
 			</div>

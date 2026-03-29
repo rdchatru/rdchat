@@ -1,20 +1,20 @@
 /*
- * Copyright (C) 2026 Fluxer Contributors
+ * Copyright (C) 2026 RdChat Contributors
  *
- * This file is part of Fluxer.
+ * This file is part of RdChat.
  *
- * Fluxer is free software: you can redistribute it and/or modify
+ * RdChat is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Fluxer is distributed in the hope that it will be useful,
+ * RdChat is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
+ * along with RdChat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 /** @jsxRuntime automatic */
@@ -32,40 +32,38 @@ export const POLICY_METADATA: ReadonlyArray<PolicyMetadata> = [
 	{
 		slug: 'terms',
 		title: 'Terms of Service',
-		description: 'The legal agreement between you and Fluxer that governs your use of our platform and services.',
+		description: 'The legal agreement between you and RdChat Open Project that governs your use of the platform.',
 		category: 'Legal',
-		lastUpdated: '2026-02-13',
+		lastUpdated: '2026-03-29',
 	},
 	{
 		slug: 'privacy',
 		title: 'Privacy Policy',
-		description:
-			'How we collect, use, and protect your personal information when you use Fluxer. Your privacy matters to us.',
+		description: 'How RdChat Open Project collects, uses, and protects your information when you use RdChat.',
 		category: 'Legal',
-		lastUpdated: '2026-02-18',
+		lastUpdated: '2026-03-29',
 	},
 	{
 		slug: 'guidelines',
 		title: 'Community Guidelines',
 		description:
-			'The rules and expectations for participating in the Fluxer community. Help us keep Fluxer safe and welcoming.',
+			'The rules and expectations for participating in the RdChat community. Help us keep RdChat safe and welcoming.',
 		category: 'Community',
 		lastUpdated: '2026-02-21',
 	},
 	{
 		slug: 'security',
-		title: 'Security Bug Bounty',
-		description:
-			'Information about responsible disclosure and our security bug bounty program. Help us keep Fluxer secure.',
+		title: 'Security Policy',
+		description: 'Information about responsible disclosure and how to report security issues affecting RdChat.',
 		category: 'Security',
-		lastUpdated: '2026-02-13',
+		lastUpdated: '2026-03-29',
 	},
 	{
 		slug: 'company-information',
 		title: 'Company Information',
-		description: 'Legal information about Fluxer Platform AB, including our registered address and contact details.',
+		description: 'Contact and organizational information for RdChat Open Project.',
 		category: 'Legal',
-		lastUpdated: '2026-02-13',
+		lastUpdated: '2026-03-29',
 	},
 ];
 

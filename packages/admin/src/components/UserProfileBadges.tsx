@@ -51,7 +51,7 @@ export function UserProfileBadges({config, user, size = 'sm', class: className}:
 		badges.push({
 			key: 'staff',
 			iconUrl: `${staticCdnEndpoint}/badges/staff.svg`,
-			tooltip: 'Fluxer Staff',
+			tooltip: 'RdChat Staff',
 		});
 	}
 
@@ -59,7 +59,7 @@ export function UserProfileBadges({config, user, size = 'sm', class: className}:
 		badges.push({
 			key: 'ctp',
 			iconUrl: `${staticCdnEndpoint}/badges/ctp.svg`,
-			tooltip: 'Fluxer Community Team',
+			tooltip: 'RdChat Community Team',
 		});
 	}
 
@@ -67,7 +67,7 @@ export function UserProfileBadges({config, user, size = 'sm', class: className}:
 		badges.push({
 			key: 'partner',
 			iconUrl: `${staticCdnEndpoint}/badges/partner.svg`,
-			tooltip: 'Fluxer Partner',
+			tooltip: 'RdChat Partner',
 		});
 	}
 
@@ -75,23 +75,23 @@ export function UserProfileBadges({config, user, size = 'sm', class: className}:
 		badges.push({
 			key: 'bug_hunter',
 			iconUrl: `${staticCdnEndpoint}/badges/bug-hunter.svg`,
-			tooltip: 'Fluxer Bug Hunter',
+			tooltip: 'RdChat Bug Hunter',
 		});
 	}
 
 	if (!isSelfHosted && user.premium_type && user.premium_type !== UserPremiumTypes.NONE) {
-		let tooltip = 'Fluxer Plutonium';
+		let tooltip = 'RdChat Plutonium';
 
 		if (user.premium_type === UserPremiumTypes.LIFETIME) {
 			if (user.premium_since) {
 				const premiumSince = getFormattedShortDate(user.premium_since);
-				tooltip = `Fluxer Visionary since ${premiumSince}`;
+				tooltip = `RdChat Visionary since ${premiumSince}`;
 			} else {
-				tooltip = 'Fluxer Visionary';
+				tooltip = 'RdChat Visionary';
 			}
 		} else if (user.premium_since) {
 			const premiumSince = getFormattedShortDate(user.premium_since);
-			tooltip = `Fluxer Plutonium subscriber since ${premiumSince}`;
+			tooltip = `RdChat Plutonium subscriber since ${premiumSince}`;
 		}
 
 		badges.push({

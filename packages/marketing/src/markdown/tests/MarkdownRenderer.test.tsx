@@ -271,7 +271,7 @@ describe('MarkdownRenderer', () => {
 		it('applies correct styling to section reference links', () => {
 			const markdown = '[Click here](#target)';
 			const result = renderMarkdownWithBase(markdown, baseUrl, appEndpoint, {allowSectionReferences: true});
-			expect(result).toContain('class="text-[#4641D9] hover:underline"');
+			expect(result).toContain('class="text-[#638B6F] hover:underline"');
 		});
 
 		it('escapes HTML in section reference text', () => {

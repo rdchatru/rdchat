@@ -58,7 +58,6 @@ function generateUrls(baseUrl: string): ReadonlyArray<UrlEntry> {
 		{loc: `${baseUrl}/company-information`, changefreq: 'monthly', priority: '0.4'},
 		{loc: `${baseUrl}/careers`, changefreq: 'weekly', priority: '0.6'},
 		{loc: `${baseUrl}/download`, changefreq: 'weekly', priority: '0.9'},
-		{loc: `${baseUrl}/plutonium`, changefreq: 'weekly', priority: '0.8'},
 		{loc: `${baseUrl}/partners`, changefreq: 'monthly', priority: '0.6'},
 		{loc: `${baseUrl}/press`, changefreq: 'monthly', priority: '0.5'},
 	];

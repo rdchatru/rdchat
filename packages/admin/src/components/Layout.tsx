@@ -110,7 +110,7 @@ const Sidebar: FC<{
 		>
 			<div class="flex items-center justify-between gap-3 border-neutral-800 border-b p-6">
 				<a href={`${basePath}/users`}>
-					<h1 class="font-semibold text-base">Fluxer Admin</h1>
+					<h1 class="font-semibold text-base">RdChat Admin</h1>
 				</a>
 				<button
 					type="button"

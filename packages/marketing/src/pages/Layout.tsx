@@ -56,7 +56,7 @@ export function renderLayout(
 				{mainPageScript()}
 				{downloadScript()}
 			</head>
-			<body class="flex min-h-screen flex-col bg-[#4641D9] font-sans text-white">
+			<body class="flex min-h-screen flex-col bg-[#638B6F] font-sans text-white">
 				<Navigation ctx={ctx} request={req} />
 				<div class="flex grow flex-col">{content}</div>
 				<Footer ctx={ctx} />

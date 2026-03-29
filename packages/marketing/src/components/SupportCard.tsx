@@ -29,9 +29,9 @@ type SupportIcon =
 	| 'rocket_launch'
 	| 'fluxer_partner'
 	| 'chat_centered_text'
-	| 'bluesky'
 	| 'bug'
 	| 'code'
+	| 'server'
 	| 'translate'
 	| 'shield_check';
 
@@ -58,7 +58,7 @@ export function SupportCard(props: SupportCardProps): JSX.Element {
 			<div class="mb-8 text-center">
 				<div
 					class={`mb-6 inline-flex h-20 w-20 items-center justify-center rounded-3xl md:h-24 md:w-24 ${
-						theme === 'dark' ? 'bg-white/20' : 'bg-[#4641D9]'
+						theme === 'dark' ? 'bg-white/20' : 'bg-[#638B6F]'
 					}`}
 				>
 					<Icon
@@ -80,7 +80,7 @@ export function SupportCard(props: SupportCardProps): JSX.Element {
 					target={linkProps.target}
 					rel={linkProps.rel}
 					class={`label w-full text-center shadow-md md:text-lg ${
-						theme === 'dark' ? 'bg-white text-[#4641D9] hover:bg-gray-100' : ''
+						theme === 'dark' ? 'bg-white text-[#638B6F] hover:bg-gray-100' : ''
 					}`}
 				>
 					{props.buttonText}

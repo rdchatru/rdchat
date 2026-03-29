@@ -1,11 +1,11 @@
-Fluxer respects the intellectual property of every creator and expects the same from the whole community.
+RdChat respects the intellectual property of every creator and expects the same from the whole community.
 
 ## Filing a copyright complaint
 
-Use our report form at <% app report %> and choose the copyright or intellectual property option, or email **dmca@fluxer.app** with the subject line "DMCA Takedown Request." Your notice should include:
+Use our report form at <% app report %> and choose the copyright or intellectual property option, or email **support@rdchat.ru** with the subject line "DMCA Takedown Request." Your notice should include:
 
 - A description of the copyrighted work you believe has been infringed.
-- The precise location of the infringing material on Fluxer (message links, channel IDs, etc.).
+- The precise location of the infringing material on RdChat (message links, channel IDs, etc.).
 - A good faith statement that the disputed use is not authorised by you, your agent, or the law, and that the information in the notice is accurate.
 - A statement under penalty of perjury that you are the rights holder or authorised to act on their behalf.
 - Your contact information (mailing address, telephone number, and/or email).
@@ -15,7 +15,7 @@ Do not file false or malicious reports, submit duplicates, or ask others to repo
 
 ## Counter-notices
 
-If you believe content was removed by mistake, send a counter-notice to **dmca@fluxer.app** containing:
+If you believe content was removed by mistake, send a counter-notice to **support@rdchat.ru** containing:
 
 - Identification of the removed content and its location before removal (message links, channel IDs, etc.).
 - A good faith statement that it was removed because of a mistake or misidentification.

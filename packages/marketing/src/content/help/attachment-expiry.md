@@ -1,4 +1,4 @@
-Fluxer automatically expires older attachments. Smaller files stay available longer; bigger ones expire sooner. If people view a message with a file when it is close to expiring, we extend it so it stays available.
+RdChat automatically expires older attachments. Smaller files stay available longer; bigger ones expire sooner. If people view a message with a file when it is close to expiring, we extend it so it stays available.
 
 ## How expiry is decided
 

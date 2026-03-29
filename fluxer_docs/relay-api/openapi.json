@@ -6,7 +6,7 @@
 		"description": "API for discovering and managing Fluxer relay servers for federation. The relay directory service maintains a registry of available relay servers that clients can use to connect to Fluxer instances through encrypted tunnels.",
 		"contact": {
 			"name": "Fluxer Developers",
-			"email": "developers@rdchat.ru"
+			"email": "support@rdchat.ru"
 		},
 		"license": {
 			"name": "AGPL-3.0",

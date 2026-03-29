@@ -1,8 +1,8 @@
-## Welcome to Fluxer
+## Welcome to RdChat
 
-Fluxer is a platform designed for communication, connection, and community building. These community guidelines help ensure that everyone can use the platform safely and respectfully. They form an integral part of our Terms of Service, and violations may result in warnings, content removal, restrictions, or account suspension or termination.
+RdChat is a platform designed for communication, connection, and community building. These community guidelines help ensure that everyone can use the platform safely and respectfully. They form an integral part of our Terms of Service, and violations may result in warnings, content removal, restrictions, or account suspension or termination.
 
-These guidelines apply to all users of Fluxer without exception. They govern all interactions on the platform, including (but not limited to):
+These guidelines apply to all users of RdChat without exception. They govern all interactions on the platform, including (but not limited to):
 
 - direct messages;
 - community communications;
@@ -16,11 +16,11 @@ Individual Communities may adopt their own rules, but those rules must always be
 
 **Treat others with respect and consideration. If you would not want something done or said to you, do not do or say it to someone else.**
 
-Fluxer is built for real people. Behind every username is a person who deserves to be treated with basic dignity.
+RdChat is built for real people. Behind every username is a person who deserves to be treated with basic dignity.
 
 ## Positive Participation
 
-We want Fluxer to be safe, welcoming, and constructive. You can help by:
+We want RdChat to be safe, welcoming, and constructive. You can help by:
 
 - **Assuming good intent:** When something is unclear, ask for clarification before reacting.
 
@@ -43,7 +43,7 @@ We want Fluxer to be safe, welcoming, and constructive. You can help by:
 
 These rules apply platform-wide. Communities can set stricter rules, but never more permissive ones.
 
-The following behaviors are strictly prohibited on Fluxer and may result in enforcement action, including content removal, account restrictions, or bans.
+The following behaviors are strictly prohibited on RdChat and may result in enforcement action, including content removal, account restrictions, or bans.
 
 ### 1. Harassment and Bullying
 
@@ -115,7 +115,7 @@ We have a zero-tolerance stance on child sexual exploitation.
 
 ### 5. Illegal Activities
 
-Do not use Fluxer to facilitate, promote, or engage in illegal activities. This includes, but is not limited to:
+Do not use RdChat to facilitate, promote, or engage in illegal activities. This includes, but is not limited to:
 
 - distribution or promotion of malware, viruses, or harmful software;
 - fraud, scams, or deceptive practices (including phishing, impersonation, and financial scams);
@@ -123,19 +123,19 @@ Do not use Fluxer to facilitate, promote, or engage in illegal activities. This 
 - copyright infringement or other intellectual property violations at scale or in a clearly abusive way;
 - hacking, unauthorized access, or cyberattacks;
 - money laundering, terrorist financing, or similar activities;
-- evasion of lawful blocks or sanctions using the service (for example, using Fluxer where export control or sanctions laws prohibit it); or
+- evasion of lawful blocks or sanctions using the service (for example, using RdChat where export control or sanctions laws prohibit it); or
 - any other activity that violates applicable local, national, or international law.
 
 We may cooperate with law enforcement where required by law or where we believe it is necessary to protect individuals from serious harm.
 
 ### 6. Spam and Platform Abuse
 
-Do not abuse or misuse the Fluxer platform in the following ways:
+Do not abuse or misuse the RdChat platform in the following ways:
 
 - sending spam, bulk messages, or unsolicited commercial content;
 - creating fake accounts or impersonating other individuals or entities;
 - artificially inflating community member counts, engagement metrics, or reactions;
-- buying, selling, renting, or trading Fluxer accounts or Communities;
+- buying, selling, renting, or trading RdChat accounts or Communities;
 - abusing our free tier as unlimited cloud storage rather than for legitimate communication;
 - initiating fraudulent chargebacks or payment disputes to obtain free services or benefits; or
 - using automation, bots, scrapers, or scripts to:
@@ -144,7 +144,7 @@ Do not abuse or misuse the Fluxer platform in the following ways:
   - mass-create accounts; or
   - disrupt normal user experiences.
 
-Limited automation that complies with our policies and applicable law may be allowed where explicitly permitted by Fluxer. Otherwise, automated abuse is prohibited.
+Limited automation that complies with our policies and applicable law may be allowed where explicitly permitted by RdChat. Otherwise, automated abuse is prohibited.
 
 ### 7. Harmful Misinformation
 
@@ -169,7 +169,7 @@ Respect the privacy rights of all users. Do not:
 
 - record voice or video communications without consent where legally required;
 - circumvent, bypass, or attempt to defeat privacy settings, user blocks, or safety features; or
-- engage in stalking, doxxing, surveillance, or other invasive monitoring of users on or off the platform in connection with their use of Fluxer.
+- engage in stalking, doxxing, surveillance, or other invasive monitoring of users on or off the platform in connection with their use of RdChat.
 
 If you are unsure whether something violates someone's privacy, err on the side of caution and do not share it.
 
@@ -178,7 +178,7 @@ If you are unsure whether something violates someone's privacy, err on the side 
 If you observe conduct or content that appears to violate these guidelines or our Terms of Service, please report it. You can:
 
 - use the in-app reporting features available throughout the platform; and/or
-- email our safety team at safety@fluxer.app.
+- email our safety team at support@rdchat.ru.
 
 When possible, please include:
 
@@ -236,7 +236,7 @@ If you believe we made an error in enforcing these guidelines against your accou
 
 To appeal:
 
-1. Send an email to appeals@fluxer.app from the email address associated with your Fluxer account.
+1. Send an email to support@rdchat.ru from the email address associated with your RdChat account.
 2. Clearly state:
    - the enforcement action you are appealing (for example, "7-day suspension on [date]" or "Community deletion"); and
    - why you believe the decision was incorrect, incomplete, or disproportionate.
@@ -260,7 +260,7 @@ After review, our decision on the appeal is generally final. However, we may rev
 
 ### For Teenage Users
 
-Users must meet the **Minimum Age** to use Fluxer as described in our [Terms of Service](/terms) and [Privacy Policy](/privacy). This Minimum Age is typically 13 but may be higher in some countries.
+Users must meet the **Minimum Age** to use RdChat as described in our [Terms of Service](/terms) and [Privacy Policy](/privacy). This Minimum Age is typically 13 but may be higher in some countries.
 
 We determine eligibility based on your approximate geographic location and applicable laws. Users who are above the Minimum Age but under the age of legal majority in their jurisdiction (for example, under 18 in many countries) are treated as younger users for safety purposes.
 
@@ -269,7 +269,7 @@ We determine eligibility based on your approximate geographic location and appli
 - Communities focused on dating or romantic relationships between minors, or that sexualize minors in any way, are strictly prohibited.
 - We maintain heightened vigilance regarding the safety of underage users and may take swift action in response to reports involving minors.
 
-If you are under 18, please be especially cautious about sharing personal information, and do not meet people from Fluxer in person without involving a trusted adult and ensuring your safety.
+If you are under 18, please be especially cautious about sharing personal information, and do not meet people from RdChat in person without involving a trusted adult and ensuring your safety.
 
 ### For Community Owners
 
@@ -281,19 +281,19 @@ If you own, create, or administer a Community:
   - content and membership controls; and
   - age gates, labels, and clear descriptions for 18+ or sensitive spaces.
 - Set clear, visible rules that are aligned with these guidelines and with the law, and enforce them fairly.
-- You may set stricter rules than Fluxer's baseline, but not more permissive ones.
+- You may set stricter rules than RdChat's baseline, but not more permissive ones.
 - Failure to moderate or address serious, repeated violations can lead to:
   - restrictions on your Community;
   - removal of your Community; and/or
   - enforcement action against your account.
 
-If you are unsure how to handle a safety issue that affects your Community, you can always report it to us or contact safety@fluxer.app for guidance.
+If you are unsure how to handle a safety issue that affects your Community, you can always report it to us or contact support@rdchat.ru for guidance.
 
 ### For Parents and Guardians
 
 We understand that online safety is especially important for younger users.
 
-- We provide safety resources and guidance on our website to help parents and guardians understand how Fluxer works and how to support young users.
+- We provide safety resources and guidance on our website to help parents and guardians understand how RdChat works and how to support young users.
 - If you have concerns about your teenager's account, you can contact our support team. We may need to verify your relationship to the user before we can discuss or take action on a specific account.
 - We take child safety extremely seriously and maintain strict policies to protect young users, including zero tolerance for child sexual exploitation and grooming.
 
@@ -307,10 +307,10 @@ If you believe a child is in immediate danger, please contact local emergency se
   - encourage or pressure anyone to harm themselves; or
   - shame, harass, or attack people who are struggling.
 - If you see content that suggests someone may be at imminent risk of self-harm or harm to others:
-  - report it via in-app tools or email safety@fluxer.app; and
+  - report it via in-app tools or email support@rdchat.ru; and
   - if you know the person and can safely do so, encourage them to seek professional support or contact local emergency services.
 
-Fluxer is not a substitute for professional mental health care or emergency services.
+RdChat is not a substitute for professional mental health care or emergency services.
 
 ## Updates to These Guidelines
 
@@ -325,11 +325,11 @@ If we make significant changes:
 - we will provide at least 30 days' notice where reasonably practicable, for example via email or in-app notifications; and
 - we will maintain a changelog or archive of prior versions for reference.
 
-Your continued use of Fluxer after updated guidelines take effect constitutes your acceptance of those changes. If you do not agree with updated guidelines, you should stop using Fluxer and may delete your account.
+Your continued use of RdChat after updated guidelines take effect constitutes your acceptance of those changes. If you do not agree with updated guidelines, you should stop using RdChat and may delete your account.
 
 ## Final Thoughts
 
-The vast majority of Fluxer users engage with our platform responsibly and never have any issues with these guidelines.
+The vast majority of RdChat users engage with our platform responsibly and never have any issues with these guidelines.
 
 If you:
 
@@ -339,17 +339,17 @@ If you:
 
 you are very unlikely to experience any enforcement action from us.
 
-Thank you for helping us keep Fluxer a safe, welcoming, and enjoyable place to connect and communicate.
+Thank you for helping us keep RdChat a safe, welcoming, and enjoyable place to connect and communicate.
 
 ## Need Help?
 
 ### General Questions
 
-- **Email:** support@fluxer.app
+- **Email:** support@rdchat.ru
 
 ### Safety Concerns
 
-- **Email:** safety@fluxer.app
+- **Email:** support@rdchat.ru
 
 If you are unsure whether something violates these guidelines, you can ask our support or safety teams for clarification.
 
@@ -359,7 +359,7 @@ We recognize that law enforcement and other authorities may, in some circumstanc
 
 For more detailed information about how we handle such requests, please see the "Law Enforcement and Legal Requests" section of our [Privacy Policy](/privacy).
 
-- Direct lawful process and urgent preservation requests to legal@fluxer.app.
+- Direct lawful process and urgent preservation requests to support@rdchat.ru.
 - Requests must clearly identify the requesting authority, the legal basis, and the specific data requested.
 - We may notify affected users of requests when permitted by law and where doing so would not pose a risk to safety, security, or legal obligations.
 - We may reject or narrow overbroad, unsupported, or non-compliant requests.
@@ -368,8 +368,8 @@ For more detailed information about how we handle such requests, please see the 
 ## Safety and Crisis Resources
 
 - If you or someone else is in **immediate danger**, contact your local emergency services first.
-- For other urgent safety concerns on Fluxer (for example, threats, self-harm indications, or serious harassment), please:
+- For other urgent safety concerns on RdChat (for example, threats, self-harm indications, or serious harassment), please:
   - use in-app reporting tools; and/or
-  - email safety@fluxer.app with as much detail as possible so we can review quickly.
+  - email support@rdchat.ru with as much detail as possible so we can review quickly.
 
-Fluxer cannot provide medical, psychological, or legal advice. However, we will do our best to respond to safety-related reports promptly and, where appropriate, may work with relevant services or authorities consistent with applicable law.
+RdChat cannot provide medical, psychological, or legal advice. However, we will do our best to respond to safety-related reports promptly and, where appropriate, may work with relevant services or authorities consistent with applicable law.

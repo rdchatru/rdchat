@@ -1,20 +1,20 @@
 /*
- * Copyright (C) 2026 Fluxer Contributors
+ * Copyright (C) 2026 RdChat Contributors
  *
- * This file is part of Fluxer.
+ * This file is part of RdChat.
  *
- * Fluxer is free software: you can redistribute it and/or modify
+ * RdChat is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Fluxer is distributed in the hope that it will be useful,
+ * RdChat is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
+ * along with RdChat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 /** @jsxRuntime automatic */
@@ -33,7 +33,7 @@ export const HELP_ARTICLE_METADATA: ReadonlyArray<HelpArticleMetadata> = [
 		slug: 'regional-restrictions',
 		title: 'Regional restrictions',
 		description:
-			'How regional age verification laws affect your access to Fluxer, which regions are currently affected, and what restrictions apply.',
+			'How regional age verification laws affect your access to RdChat, which regions are currently affected, and what restrictions apply.',
 		category: 'Platform',
 		lastUpdated: '2026-02-16',
 	},
@@ -47,64 +47,64 @@ export const HELP_ARTICLE_METADATA: ReadonlyArray<HelpArticleMetadata> = [
 	{
 		slug: 'delete-account',
 		title: 'How to delete or disable your account',
-		description: 'How to permanently delete or temporarily disable your Fluxer account, and what happens to your data.',
+		description: 'How to permanently delete or temporarily disable your RdChat account, and what happens to your data.',
 		category: 'Account',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'data-deletion',
 		title: 'Requesting data deletion',
-		description: 'How to delete your messages and other data from Fluxer.',
+		description: 'How to delete your messages and other data from RdChat.',
 		category: 'Account',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'data-export',
 		title: 'Exporting your account data',
-		description: 'How to request and download a complete export of your Fluxer data.',
+		description: 'How to request and download a complete export of your RdChat data.',
 		category: 'Account',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'change-date-of-birth',
 		title: 'How to change your date of birth',
-		description: 'How to update your date of birth on Fluxer by contacting our support team.',
+		description: 'How to update your date of birth on RdChat by contacting our support team.',
 		category: 'Account',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'report-bug',
 		title: 'Reporting a bug',
-		description: 'How to file clear, high-quality bug reports for Fluxer Support or our GitHub.',
+		description: 'How to file clear, high-quality bug reports for RdChat Support or our GitHub.',
 		category: 'Support',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'copyright',
 		title: 'Copyright and IP policy',
-		description: 'How to report suspected copyright or intellectual property violations on Fluxer.',
+		description: 'How to report suspected copyright or intellectual property violations on RdChat.',
 		category: 'Legal',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'data-retention',
-		title: 'How long Fluxer keeps your information',
-		description: 'How long Fluxer retains different types of information and why we keep it.',
+		title: 'How long RdChat keeps your information',
+		description: 'How long RdChat retains different types of information and why we keep it.',
 		category: 'Privacy',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'dsa-dispute-resolution',
 		title: 'EU DSA dispute resolution options',
-		description: 'How EU users covered by the Digital Services Act can exercise their rights on Fluxer.',
+		description: 'How EU users covered by the Digital Services Act can exercise their rights on RdChat.',
 		category: 'Legal',
 		lastUpdated: '2026-02-16',
 	},
 	{
 		slug: 'visionary',
-		title: 'What was Fluxer Visionary?',
+		title: 'What was RdChat Visionary?',
 		description:
-			'Fluxer Visionary was a limited lifetime Plutonium offering that sold out in February 2026. Learn about the numbered badge and what Visionary includes.',
+			'RdChat Visionary was a limited lifetime Plutonium offering that sold out in February 2026. Learn about the numbered badge and what Visionary includes.',
 		category: 'Premium',
 		lastUpdated: '2026-02-17',
 	},

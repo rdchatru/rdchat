@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "כל סוגי המצב"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "כל התרגומים נוצרו כרגע על ידי LLM עם מינימום תיקון אנושי. נשמח לקבל אנשים אמיתיים שיביעו עזרה בתרגום RdChat לשפה שלך! לשם כך, שלח אימייל ל-<0>i18n@fluxer.app</0> ונשמח לקבל את התרומות שלך."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>support@rdchat.ru</0> and we'll be happy to accept your contributions."
+msgstr "כל התרגומים נוצרו כרגע על ידי LLM עם מינימום תיקון אנושי. נשמח לקבל אנשים אמיתיים שיביעו עזרה בתרגום RdChat לשפה שלך! לשם כך, שלח אימייל ל-<0>support@rdchat.ru</0> ונשמח לקבל את התרומות שלך."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -3925,12 +3925,12 @@ msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Com
 msgstr "בהקמת קהילה אתה מסכים לעקוב ולשמור על <0>כללי הקהילה של RdChat</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "ברכישה אתה מסכים ל־<0>תנאי השירות</0> ול־<1>מדיניות הפרטיות</1>. כל הרכישות ניתנות להחזר תוך 14 יום על ידי שליחת אימייל ל־<2>support@fluxer.app</2>. חסימות חיוב מובילות לחסימה קבועה של החשבון — אם אתה רוצה החזר נשמח לספק אחד אם תפנה אלינו קודם! מידע תשלום מטופל בצורה מאובטחת על ידי Stripe — אין לנו גישה למספר הכרטיס המלא שלך."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "ברכישה אתה מסכים ל־<0>תנאי השירות</0> ול־<1>מדיניות הפרטיות</1>. כל הרכישות ניתנות להחזר תוך 14 יום על ידי שליחת אימייל ל־<2>support@rdchat.ru</2>. חסימות חיוב מובילות לחסימה קבועה של החשבון — אם אתה רוצה החזר נשמח לספק אחד אם תפנה אלינו קודם! מידע תשלום מטופל בצורה מאובטחת על ידי Stripe — אין לנו גישה למספר הכרטיס המלא שלך."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "ברכישה אישרת את <0>תנאי השירות</0> ואת <1>מדיניות הפרטיות</1>. כל הרכישות ניתנות להחזר תוך 14 יום על ידי שליחת אימייל ל־<2>support@fluxer.app</2>. חסימות חיוב מובילות לחסימה קבועה של החשבון — אם אתה רוצה החזר נשמח לספק אחד אם תפנה אלינו קודם! מידע תשלום מטופל בצורה מאובטחת על ידי Stripe — אין לנו גישה למספר הכרטיס המלא שלך."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "ברכישה אישרת את <0>תנאי השירות</0> ואת <1>מדיניות הפרטיות</1>. כל הרכישות ניתנות להחזר תוך 14 יום על ידי שליחת אימייל ל־<2>support@rdchat.ru</2>. חסימות חיוב מובילות לחסימה קבועה של החשבון — אם אתה רוצה החזר נשמח לספק אחד אם תפנה אלינו קודם! מידע תשלום מטופל בצורה מאובטחת על ידי Stripe — אין לנו גישה למספר הכרטיס המלא שלך."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491

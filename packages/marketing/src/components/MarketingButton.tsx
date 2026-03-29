@@ -51,7 +51,7 @@ export function MarketingButton({
 }: PropsWithChildren<MarketingButtonProps>): JSX.Element {
 	const sizeClass = marketingButtonSizeClasses[size];
 	const marketingClasses =
-		`rounded-xl bg-[#4641D9] font-semibold text-white shadow-lg transition hover:bg-[#3832B8] ${sizeClass} ${className}`.trim();
+		`rounded-xl bg-[#638B6F] font-semibold text-white shadow-lg transition hover:bg-[#4F6D58] ${sizeClass} ${className}`.trim();
 
 	if (href) {
 		return (
@@ -78,7 +78,7 @@ export function MarketingButtonSecondary({
 }: PropsWithChildren<MarketingButtonProps>): JSX.Element {
 	const sizeClass = marketingButtonSizeClasses[size];
 	const combinedClasses =
-		`inline-flex items-center gap-2 rounded-xl border-2 border-[#4641D9] font-semibold text-[#4641D9] shadow-lg transition hover:bg-[#4641D9]/10 ${sizeClass} ${className}`.trim();
+		`inline-flex items-center gap-2 rounded-xl border-2 border-[#638B6F] font-semibold text-[#638B6F] shadow-lg transition hover:bg-[#638B6F]/10 ${sizeClass} ${className}`.trim();
 
 	return (
 		<a href={href} class={combinedClasses} target={target} rel={rel}>
@@ -97,7 +97,7 @@ export function MarketingButtonInverted({
 }: PropsWithChildren<MarketingButtonProps>): JSX.Element {
 	const sizeClass = marketingButtonSizeClasses[size];
 	const combinedClasses =
-		`inline-flex items-center justify-center gap-2 rounded-2xl bg-white font-semibold text-[#4641D9] shadow-lg transition hover:bg-white/90 ${sizeClass} ${className}`.trim();
+		`inline-flex items-center justify-center gap-2 rounded-2xl bg-white font-semibold text-[#638B6F] shadow-lg transition hover:bg-white/90 ${sizeClass} ${className}`.trim();
 
 	return (
 		<a href={href} class={combinedClasses} target={target} rel={rel}>

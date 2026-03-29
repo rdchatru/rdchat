@@ -72,11 +72,11 @@ function renderPerksSection(ctx: MarketingContext): JSX.Element {
 				<div class="grid gap-6 md:grid-cols-2 md:gap-8 lg:grid-cols-3">
 					{renderPerkCard(
 						ctx,
-						'fluxer_premium',
-						ctx.i18n.getMessage('partner_program.perks.free_plutonium.label', ctx.locale),
-						ctx.i18n.getMessage('partner_program.perks.free_plutonium.description', ctx.locale),
+						'link',
+						ctx.i18n.getMessage('company_and_resources.docs', ctx.locale),
+						'Read project docs, release notes, and contributor resources.',
 						false,
-						'/plutonium',
+						'/docs',
 					)}
 					{renderPerkCard(
 						ctx,
@@ -200,21 +200,21 @@ function renderPerkCard(
 	return (
 		<div class="relative flex h-full flex-col rounded-2xl border border-gray-200/80 bg-white p-6 shadow-lg md:p-7">
 			{comingSoon ? (
-				<div class="caption absolute -top-2 -right-2 rounded-full bg-[#4641D9] px-3 py-1 text-white">
+				<div class="caption absolute -top-2 -right-2 rounded-full bg-[#638B6F] px-3 py-1 text-white">
 					{ctx.i18n.getMessage('general.coming_soon.label', ctx.locale)}
 				</div>
 			) : null}
 			{hasLink ? (
 				<a
 					href={href(ctx, link)}
-					class="caption absolute top-2 right-2 flex items-center gap-1 rounded-full bg-[#4641D9] px-3 py-1 text-white transition hover:bg-[#3d38c7]"
+					class="caption absolute top-2 right-2 flex items-center gap-1 rounded-full bg-[#638B6F] px-3 py-1 text-white transition hover:bg-[#4F6D58]"
 				>
 					{ctx.i18n.getMessage('partner_program.perks.see_perks', ctx.locale)}
 					<ArrowRightIcon class="h-3 w-3" />
 				</a>
 			) : null}
-			<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#4641D9]/10">
-				<Icon name={iconName} class="h-8 w-8 text-[#4641D9]" />
+			<div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[#638B6F]/10">
+				<Icon name={iconName} class="h-8 w-8 text-[#638B6F]" />
 			</div>
 			<h3 class="title-sm mb-2 text-black">{title}</h3>
 			<p class="body text-gray-600">{description}</p>
@@ -254,8 +254,8 @@ function renderCtaSection(ctx: MarketingContext): JSX.Element {
 						</ul>
 					</div>
 					<a
-						href="mailto:partners@rdchat.ru"
-						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
+						href="mailto:support@rdchat.ru"
+						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#638B6F] shadow-lg transition hover:bg-gray-100"
 					>
 						{ctx.i18n.getMessage('partner_program.become_partner.apply_email', ctx.locale)}
 					</a>

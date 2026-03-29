@@ -57,7 +57,7 @@ function renderSuccessContent(ctx: MarketingContext): JSX.Element {
 
 				<a
 					href={href(ctx, '/donate')}
-					class="inline-block rounded-xl bg-[#4641D9] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#3d38c7]"
+					class="inline-block rounded-xl bg-[#638B6F] px-8 py-3 font-semibold text-white transition-colors hover:bg-[#4F6D58]"
 				>
 					{ctx.i18n.getMessage('donations.success.back_to_donate', ctx.locale)}
 				</a>

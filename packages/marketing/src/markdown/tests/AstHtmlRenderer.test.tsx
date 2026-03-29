@@ -198,7 +198,7 @@ describe('AstHtmlRenderer', () => {
 			const result = renderAstToHtml(nodes);
 			expect(result).toContain('&quot;');
 			expect(result).toBe(
-				'<p><a class="text-[#4641D9] hover:underline" href="&quot; onclick=&quot;alert(1)">Click</a></p>',
+				'<p><a class="text-[#638B6F] hover:underline" href="&quot; onclick=&quot;alert(1)">Click</a></p>',
 			);
 		});
 

@@ -51,6 +51,13 @@ export function getStringArray(body: ParsedBody, key: string): Array<string> {
 	return items.flatMap((item) => (typeof item === 'string' && item !== '' ? [item] : []));
 }
 
+export function getFiles(body: ParsedBody, key: string): Array<File> {
+	const value = body[key];
+	if (value === undefined) return [];
+	const items = Array.isArray(value) ? value : [value];
+	return items.flatMap((item) => (item instanceof File ? [item] : []));
+}
+
 export function parseDelimitedStringList(value: string | undefined): Array<string> {
 	if (!value) return [];
 	return value

@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "Todos os tipos de status"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Todas as traduções são atualmente geradas por LLM com revisão humana mínima. Adoraríamos contar com pessoas reais para nos ajudar a localizar o RdChat para o seu idioma! Para isso, envie um e-mail para <0>i18n@fluxer.app</0> e ficaremos felizes em aceitar suas contribuições."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>support@rdchat.ru</0> and we'll be happy to accept your contributions."
+msgstr "Todas as traduções são atualmente geradas por LLM com revisão humana mínima. Adoraríamos contar com pessoas reais para nos ajudar a localizar o RdChat para o seu idioma! Para isso, envie um e-mail para <0>support@rdchat.ru</0> e ficaremos felizes em aceitar suas contribuições."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -3925,12 +3925,12 @@ msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Com
 msgstr "Ao criar uma comunidade, você concorda em seguir e defender as <0>Diretrizes da Comunidade RdChat</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Ao comprar, você concorda com nossos <0>Termos de Serviço</0> e <1>Política de Privacidade</1>. Todas as compras são reembolsáveis dentro de 14 dias enviando um e-mail para <2>support@fluxer.app</2>. Estornos resultam em banimentos permanentes de conta — se você quiser um reembolso, ficaremos felizes em dar um se você entrar em contato primeiro! As informações de pagamento são tratadas com segurança pelo Stripe — nunca temos acesso ao número completo do seu cartão."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Ao comprar, você concorda com nossos <0>Termos de Serviço</0> e <1>Política de Privacidade</1>. Todas as compras são reembolsáveis dentro de 14 dias enviando um e-mail para <2>support@rdchat.ru</2>. Estornos resultam em banimentos permanentes de conta — se você quiser um reembolso, ficaremos felizes em dar um se você entrar em contato primeiro! As informações de pagamento são tratadas com segurança pelo Stripe — nunca temos acesso ao número completo do seu cartão."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Ao comprar, você concordou com nossos <0>Termos de Serviço</0> e <1>Política de Privacidade</1>. Todas as compras são reembolsáveis dentro de 14 dias enviando um e-mail para <2>support@fluxer.app</2>. Estornos resultam em banimentos permanentes de conta — se você quiser um reembolso, ficaremos felizes em dar um se você entrar em contato primeiro! As informações de pagamento são tratadas com segurança pelo Stripe — nunca temos acesso ao número completo do seu cartão."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Ao comprar, você concordou com nossos <0>Termos de Serviço</0> e <1>Política de Privacidade</1>. Todas as compras são reembolsáveis dentro de 14 dias enviando um e-mail para <2>support@rdchat.ru</2>. Estornos resultam em banimentos permanentes de conta — se você quiser um reembolso, ficaremos felizes em dar um se você entrar em contato primeiro! As informações de pagamento são tratadas com segurança pelo Stripe — nunca temos acesso ao número completo do seu cartão."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491

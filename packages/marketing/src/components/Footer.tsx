@@ -23,7 +23,6 @@
 import {ArrowRightIcon} from '@fluxer/marketing/src/components/icons/ArrowRightIcon';
 import {FluxerLogoWordmarkIcon} from '@fluxer/marketing/src/components/icons/FluxerLogoWordmarkIcon';
 import {HeartIcon} from '@fluxer/marketing/src/components/icons/HeartIcon';
-import {RssIcon} from '@fluxer/marketing/src/components/icons/RssIcon';
 import {MarketingButtonInverted} from '@fluxer/marketing/src/components/MarketingButton';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 import {href} from '@fluxer/marketing/src/UrlUtils';
@@ -101,42 +100,17 @@ export function Footer(props: FooterProps): JSX.Element {
 				</div>
 
 				<div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10 md:gap-x-12 md:gap-y-10 min-[480px]:grid-cols-2 min-[480px]:gap-x-6 min-[480px]:gap-y-8">
-					<FooterSection title={ctx.i18n.getMessage('footer.fluxer', ctx.locale)}>
-						<FooterLink href={link('/plutonium')}>
-							{ctx.i18n.getMessage('footer.plutonium_tier', ctx.locale)}
-						</FooterLink>
+					<FooterSection title="RdChat">
 						<FooterLink href={link('/partners')}>{ctx.i18n.getMessage('footer.partners', ctx.locale)}</FooterLink>
 						<FooterLink href={link('/download')}>{ctx.i18n.getMessage('footer.download', ctx.locale)}</FooterLink>
 						<FooterLink href="https://github.com/fluxerapp/fluxer">
 							{ctx.i18n.getMessage('footer.source_code', ctx.locale)}
 						</FooterLink>
-						<FooterLink href="https://bsky.app/profile/rdchat.ru">
-							{ctx.i18n.getMessage('footer.bluesky_social_media', ctx.locale)}
-						</FooterLink>
-						<li>
-							<div class="flex items-center gap-2">
-								<a href="https://blog.rdchat.ru" class={linkClass}>
-									{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
-								</a>
-								<a
-									href="https://blog.rdchat.ru/rss/"
-									title={ctx.i18n.getMessage('footer.rss_feed', ctx.locale)}
-									target="_blank"
-									rel="noopener noreferrer"
-									class="text-white/90 transition-colors hover:text-white"
-								>
-									<RssIcon class="h-[1em] w-[1em]" />
-								</a>
-							</div>
-						</li>
-						<FooterLink href="https://blog.rdchat.ru/roadmap-2026">
-							{ctx.i18n.getMessage('footer.roadmap', ctx.locale)}
-						</FooterLink>
 						<FooterLink href={link('/help')}>
 							{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/press')}>{ctx.i18n.getMessage('footer.press', ctx.locale)}</FooterLink>
-						<FooterLink href="https://docs.rdchat.ru">
+						<FooterLink href="/docs">
 							{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/careers')}>
@@ -150,9 +124,6 @@ export function Footer(props: FooterProps): JSX.Element {
 						<FooterLink href={link('/guidelines')}>
 							{ctx.i18n.getMessage('footer.community_guidelines', ctx.locale)}
 						</FooterLink>
-						<FooterLink href={link('/security')}>
-							{ctx.i18n.getMessage('footer.security_bug_bounty', ctx.locale)}
-						</FooterLink>
 						<FooterLink href={link('/company-information')}>
 							{ctx.i18n.getMessage('footer.company_information', ctx.locale)}
 						</FooterLink>
@@ -162,7 +133,6 @@ export function Footer(props: FooterProps): JSX.Element {
 						title={ctx.i18n.getMessage('footer.connect', ctx.locale)}
 						class="sm:col-span-1 min-[480px]:col-span-2"
 					>
-						<FooterLink href="mailto:press@rdchat.ru">press@rdchat.ru</FooterLink>
 						<FooterLink href="mailto:support@rdchat.ru">support@rdchat.ru</FooterLink>
 						<FooterLink href={link('/help/report-bug')}>
 							{ctx.i18n.getMessage('footer.report_a_bug', ctx.locale)}
@@ -171,9 +141,7 @@ export function Footer(props: FooterProps): JSX.Element {
 				</div>
 
 				<div class="mt-12 pt-8">
-					<p class="body-sm text-white/80">
-						{ctx.i18n.getMessage('footer.fluxer_platform_ab_swedish_limited', ctx.locale)}
-					</p>
+					<p class="body-sm text-white/80">© RdChat Open Project</p>
 				</div>
 			</div>
 		</footer>

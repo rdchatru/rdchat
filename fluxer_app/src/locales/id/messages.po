@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "Semua Jenis Status"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "Semua terjemahan saat ini dihasilkan oleh LLM dengan sedikit revisi manusia. Kami sangat ingin mendapatkan bantuan dari orang-orang nyata untuk melokalisasi RdChat ke dalam bahasa Anda! Untuk melakukannya, kirim email ke <0>i18n@fluxer.app</0> dan kami akan senang menerima kontribusi Anda."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>support@rdchat.ru</0> and we'll be happy to accept your contributions."
+msgstr "Semua terjemahan saat ini dihasilkan oleh LLM dengan sedikit revisi manusia. Kami sangat ingin mendapatkan bantuan dari orang-orang nyata untuk melokalisasi RdChat ke dalam bahasa Anda! Untuk melakukannya, kirim email ke <0>support@rdchat.ru</0> dan kami akan senang menerima kontribusi Anda."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -3925,12 +3925,12 @@ msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Com
 msgstr "Dengan membuat komunitas, Anda setuju untuk mengikuti dan menjunjung <0>Panduan Komunitas RdChat</0>."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Dengan membeli, Anda setuju dengan <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami. Semua pembelian dapat dikembalikan dalam 14 hari dengan mengirim email ke <2>support@fluxer.app</2>. Chargeback mengakibatkan larangan akun permanen — jika Anda ingin pengembalian dana, kami dengan senang hati memberikannya jika Anda menghubungi kami terlebih dahulu! Informasi pembayaran ditangani dengan aman oleh Stripe — kami tidak pernah memiliki akses ke nomor kartu lengkap Anda."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Dengan membeli, Anda setuju dengan <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami. Semua pembelian dapat dikembalikan dalam 14 hari dengan mengirim email ke <2>support@rdchat.ru</2>. Chargeback mengakibatkan larangan akun permanen — jika Anda ingin pengembalian dana, kami dengan senang hati memberikannya jika Anda menghubungi kami terlebih dahulu! Informasi pembayaran ditangani dengan aman oleh Stripe — kami tidak pernah memiliki akses ke nomor kartu lengkap Anda."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "Dengan membeli, Anda setuju dengan <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami. Semua pembelian dapat dikembalikan dalam 14 hari dengan mengirim email ke <2>support@fluxer.app</2>. Chargeback mengakibatkan larangan akun permanen — jika Anda ingin pengembalian dana, kami dengan senang hati memberikannya jika Anda menghubungi kami terlebih dahulu! Informasi pembayaran ditangani dengan aman oleh Stripe — kami tidak pernah memiliki akses ke nomor kartu lengkap Anda."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "Dengan membeli, Anda setuju dengan <0>Ketentuan Layanan</0> dan <1>Kebijakan Privasi</1> kami. Semua pembelian dapat dikembalikan dalam 14 hari dengan mengirim email ke <2>support@rdchat.ru</2>. Chargeback mengakibatkan larangan akun permanen — jika Anda ingin pengembalian dana, kami dengan senang hati memberikannya jika Anda menghubungi kami terlebih dahulu! Informasi pembayaran ditangani dengan aman oleh Stripe — kami tidak pernah memiliki akses ke nomor kartu lengkap Anda."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491

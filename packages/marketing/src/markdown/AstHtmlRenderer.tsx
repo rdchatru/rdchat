@@ -306,9 +306,9 @@ function renderLinkNode(node: LinkNode): string {
 	const escapedUrl = escapeHtml(node.url);
 	if (node.text) {
 		const textContent = renderInlineNode(node.text);
-		return `<a class="text-[#4641D9] hover:underline" href="${escapedUrl}">${textContent}</a>`;
+		return `<a class="text-[#638B6F] hover:underline" href="${escapedUrl}">${textContent}</a>`;
 	}
-	return `<a class="text-[#4641D9] hover:underline" href="${escapedUrl}">${escapedUrl}</a>`;
+	return `<a class="text-[#638B6F] hover:underline" href="${escapedUrl}">${escapedUrl}</a>`;
 }
 
 function renderTableNode(node: TableNode): string {
@@ -445,7 +445,7 @@ function autoLinkEmails(html: string): string {
 				return part.content;
 			}
 			return part.content.replace(emailRegex, (email) => {
-				return `<a class="text-[#4641D9] hover:underline" href="mailto:${email}">${email}</a>`;
+				return `<a class="text-[#638B6F] hover:underline" href="mailto:${email}">${email}</a>`;
 			});
 		})
 		.join('');

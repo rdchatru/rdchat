@@ -30,7 +30,7 @@ export type ApiResult<T> = {ok: true; data: T} | {ok: false; error: ApiError};
 export interface RequestOptions {
 	method: 'GET' | 'POST' | 'PATCH' | 'PUT' | 'DELETE';
 	path: string;
-	body?: JsonValue | string;
+	body?: JsonValue | string | FormData;
 	queryParams?: Record<string, string | number | boolean | undefined | null>;
 	auditLogReason?: string;
 }
@@ -49,11 +49,14 @@ export class ApiClient {
 		});
 	}
 
-	private buildHeaders(auditLogReason?: string): Record<string, string> {
+	private buildHeaders(auditLogReason?: string, includeJsonContentType = true): Record<string, string> {
 		const headers: Record<string, string> = {
 			Authorization: `Bearer ${this.session.accessToken}`,
-			'Content-Type': 'application/json',
 		};
+
+		if (includeJsonContentType) {
+			headers['Content-Type'] = 'application/json';
+		}
 
 		if (auditLogReason) {
 			headers['X-Audit-Log-Reason'] = auditLogReason;
@@ -83,7 +86,8 @@ export class ApiClient {
 	async request<T>(options: RequestOptions): Promise<ApiResult<T>> {
 		try {
 			const url = this.buildUrl(options.path, options.queryParams);
-			const headers = this.buildHeaders(options.auditLogReason);
+			const isFormData = typeof FormData !== 'undefined' && options.body instanceof FormData;
+			const headers = this.buildHeaders(options.auditLogReason, !isFormData);
 
 			const fetchOptions: RequestInit = {
 				method: options.method,
@@ -91,10 +95,13 @@ export class ApiClient {
 			};
 
 			if (options.body !== undefined && options.method !== 'GET') {
-				if (typeof options.body === 'string') {
-					fetchOptions.body = options.body;
+				const body = options.body;
+				if (isFormData && body instanceof FormData) {
+					fetchOptions.body = body;
+				} else if (typeof body === 'string') {
+					fetchOptions.body = body;
 				} else {
-					fetchOptions.body = JSON.stringify(options.body);
+					fetchOptions.body = JSON.stringify(body);
 				}
 			}
 
@@ -143,6 +150,15 @@ export class ApiClient {
 			method: 'POST',
 			path,
 			...(body !== undefined ? {body} : {}),
+			...(auditLogReason !== undefined ? {auditLogReason} : {}),
+		});
+	}
+
+	async postForm<T>(path: string, body: FormData, auditLogReason?: string): Promise<ApiResult<T>> {
+		return this.request<T>({
+			method: 'POST',
+			path,
+			body,
 			...(auditLogReason !== undefined ? {auditLogReason} : {}),
 		});
 	}

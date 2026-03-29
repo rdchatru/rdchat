@@ -75,6 +75,8 @@ export const AdminACLs = {
 	METRICS_VIEW: 'metrics:view',
 	REPORT_RESOLVE: 'report:resolve',
 	REPORT_VIEW: 'report:view',
+	STORAGE_MANAGE: 'storage:manage',
+	STORAGE_VIEW: 'storage:view',
 	SYSTEM_DM_SEND: 'system_dm:send',
 	USER_CANCEL_BULK_MESSAGE_DELETION: 'user:cancel:bulk_message_deletion',
 	USER_DELETE: 'user:delete',

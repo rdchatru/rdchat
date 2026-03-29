@@ -98,19 +98,6 @@ export function CurrentFeaturesSection(props: CurrentFeaturesSectionProps): JSX.
 						ctx.i18n.getMessage('app.customization.compact_mode', ctx.locale),
 					]}
 				/>
-				<FeatureCard
-					ctx={ctx}
-					icon="server"
-					title={ctx.i18n.getMessage('product_positioning.self_hosting.label', ctx.locale)}
-					description={ctx.i18n.getMessage('product_positioning.self_hosting.run_backend_on_your_hardware', ctx.locale)}
-					features={[
-						ctx.i18n.getMessage('product_positioning.open_source.fully_open_source_agplv3', ctx.locale),
-						ctx.i18n.getMessage('product_positioning.self_hosting.host_your_own_instance', ctx.locale),
-						ctx.i18n.getMessage('platform_support.desktop.use_desktop_client_mobile_soon', ctx.locale),
-						ctx.i18n.getMessage('product_positioning.self_hosting.switch_between_instances', ctx.locale),
-					]}
-					learnMoreLink="https://docs.rdchat.ru/self-hosting"
-				/>
 			</div>
 		</Section>
 	);

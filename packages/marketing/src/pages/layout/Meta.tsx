@@ -34,8 +34,7 @@ export interface PageMeta {
 export function defaultPageMeta(): PageMeta {
 	return {
 		title: 'RdChat: A chat app that puts you first',
-		description:
-			'Fluxer is a free and open source instant messaging and VoIP platform built for friends, groups, and communities.',
+		description: 'RdChat is a chat platform built for friends, groups, and communities.',
 		ogType: 'website',
 		ogImageUrl: null,
 		publishedTime: null,
@@ -102,15 +101,9 @@ export function buildMetaTags(ctx: MarketingContext, meta: PageMeta, pageUrl: st
 		<meta name="twitter:description" content={meta.description} />,
 		<meta name="twitter:image" content={ogImageUrl} />,
 		<meta name="robots" content="index,follow" />,
-		<meta name="theme-color" content="#4641D9" />,
-		<meta name="author" content="Fluxer Team" />,
+		<meta name="theme-color" content="#638B6F" />,
+		<meta name="author" content="RdChat Team" />,
 		<link rel="canonical" href={pageUrl} />,
-		<link
-			rel="alternate"
-			type="application/rss+xml"
-			title={ctx.i18n.getMessage('social_and_feeds.rss.fluxer_blog_rss', ctx.locale)}
-			href="https://blog.rdchat.ru/rss/"
-		/>,
 		...articleTimeMeta(meta),
 	];
 }

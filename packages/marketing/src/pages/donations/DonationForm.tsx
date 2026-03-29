@@ -84,7 +84,7 @@ export function renderDonationForm(
 						type="email"
 						id={`donation-email-${type}`}
 						placeholder={i18n.emailPlaceholder}
-						class="w-full rounded-lg border border-gray-200 px-4 py-3 text-foreground focus:border-[#4641D9] focus:outline-none"
+						class="w-full rounded-lg border border-gray-200 px-4 py-3 text-foreground focus:border-[#638B6F] focus:outline-none"
 					/>
 				</div>
 
@@ -98,8 +98,8 @@ export function renderDonationForm(
 								onclick={`selectDonationAmount('${type}', ${amount})`}
 								class={
 									amount === 25
-										? 'donation-amount-btn rounded-lg border border-[#4641D9] px-4 py-2 font-medium text-[#4641D9] transition hover:border-[#4641D9] hover:text-[#4641D9]'
-										: 'donation-amount-btn rounded-lg border border-gray-200 px-4 py-2 font-medium text-gray-700 transition hover:border-[#4641D9] hover:text-[#4641D9]'
+										? 'donation-amount-btn rounded-lg border border-[#638B6F] px-4 py-2 font-medium text-[#638B6F] transition hover:border-[#638B6F] hover:text-[#638B6F]'
+										: 'donation-amount-btn rounded-lg border border-gray-200 px-4 py-2 font-medium text-gray-700 transition hover:border-[#638B6F] hover:text-[#638B6F]'
 								}
 							>
 								${amount}
@@ -109,7 +109,7 @@ export function renderDonationForm(
 							type="button"
 							id={`amount-btn-${type}-custom`}
 							onclick={`showCustomDonationAmount('${type}')`}
-							class="donation-amount-btn rounded-lg border border-gray-200 px-4 py-2 font-medium text-gray-700 transition hover:border-[#4641D9] hover:text-[#4641D9]"
+							class="donation-amount-btn rounded-lg border border-gray-200 px-4 py-2 font-medium text-gray-700 transition hover:border-[#638B6F] hover:text-[#638B6F]"
 						>
 							{i18n.amountOther}
 						</button>
@@ -131,7 +131,7 @@ export function renderDonationForm(
 							type="button"
 							id={`donation-type-${type}-once`}
 							onclick={`selectDonationType('${type}', 'once')`}
-							class="donation-type-btn flex-1 rounded-lg border-2 border-[#4641D9] bg-[#4641D9] px-4 py-2 font-medium text-white"
+							class="donation-type-btn flex-1 rounded-lg border-2 border-[#638B6F] bg-[#638B6F] px-4 py-2 font-medium text-white"
 						>
 							{i18n.oneTime}
 						</button>
@@ -161,7 +161,7 @@ export function renderDonationForm(
 							type="button"
 							id={`currency-${type}-usd`}
 							onclick={`selectDonationCurrency('${type}', 'usd')`}
-							class="donation-currency-btn flex-1 rounded-lg border-2 border-[#4641D9] bg-[#4641D9] px-4 py-2 font-medium text-white"
+							class="donation-currency-btn flex-1 rounded-lg border-2 border-[#638B6F] bg-[#638B6F] px-4 py-2 font-medium text-white"
 						>
 							$ USD
 						</button>
@@ -180,7 +180,7 @@ export function renderDonationForm(
 					type="button"
 					id={`donate-btn-${type}`}
 					onclick={`submitDonation('${type}')`}
-					class="w-full rounded-xl bg-[#4641D9] py-3 font-semibold text-white transition-colors hover:bg-[#3d38c7]"
+					class="w-full rounded-xl bg-[#638B6F] py-3 font-semibold text-white transition-colors hover:bg-[#4F6D58]"
 				>
 					{i18n.donate}
 				</button>
@@ -225,12 +225,12 @@ function selectDonationAmount(type, amount) {
   customInput.classList.add('hidden');
   var buttons = document.querySelectorAll('[id^="amount-btn-' + type + '-"]');
   buttons.forEach(function(btn) {
-    btn.classList.remove('border-[#4641D9]', 'text-[#4641D9]');
+    btn.classList.remove('border-[#638B6F]', 'text-[#638B6F]');
     btn.classList.add('border-gray-200', 'text-gray-700');
   });
   var selected = document.getElementById('amount-btn-' + type + '-' + amount);
   if (selected) {
-    selected.classList.add('border-[#4641D9]', 'text-[#4641D9]');
+    selected.classList.add('border-[#638B6F]', 'text-[#638B6F]');
     selected.classList.remove('border-gray-200', 'text-gray-700');
   }
 }
@@ -241,11 +241,11 @@ function showCustomDonationAmount(type) {
   customInput.classList.remove('hidden');
   var buttons = document.querySelectorAll('[id^="amount-btn-' + type + '-"]');
   buttons.forEach(function(btn) {
-    btn.classList.remove('border-[#4641D9]', 'text-[#4641D9]');
+    btn.classList.remove('border-[#638B6F]', 'text-[#638B6F]');
     btn.classList.add('border-gray-200', 'text-gray-700');
   });
   var customBtn = document.getElementById('amount-btn-' + type + '-custom');
-  customBtn.classList.add('border-[#4641D9]', 'text-[#4641D9]');
+  customBtn.classList.add('border-[#638B6F]', 'text-[#638B6F]');
   customBtn.classList.remove('border-gray-200', 'text-gray-700');
 }
 
@@ -253,11 +253,11 @@ function selectDonationType(type, donationType) {
   donationState[type].donationType = donationType;
   var buttons = document.querySelectorAll('[id^="donation-type-' + type + '-"]');
   buttons.forEach(function(btn) {
-    btn.classList.remove('border-[#4641D9]', 'bg-[#4641D9]', 'text-white');
+    btn.classList.remove('border-[#638B6F]', 'bg-[#638B6F]', 'text-white');
     btn.classList.add('border-gray-200', 'text-gray-700');
   });
   var selected = document.getElementById('donation-type-' + type + '-' + donationType);
-  selected.classList.add('border-[#4641D9]', 'bg-[#4641D9]', 'text-white');
+  selected.classList.add('border-[#638B6F]', 'bg-[#638B6F]', 'text-white');
   selected.classList.remove('border-gray-200', 'text-gray-700');
 }
 
@@ -265,11 +265,11 @@ function selectDonationCurrency(type, currency) {
   donationState[type].currency = currency;
   var buttons = document.querySelectorAll('[id^="currency-' + type + '-"]');
   buttons.forEach(function(btn) {
-    btn.classList.remove('border-[#4641D9]', 'bg-[#4641D9]', 'text-white');
+    btn.classList.remove('border-[#638B6F]', 'bg-[#638B6F]', 'text-white');
     btn.classList.add('border-gray-200', 'text-gray-700');
   });
   var selected = document.getElementById('currency-' + type + '-' + currency);
-  selected.classList.add('border-[#4641D9]', 'bg-[#4641D9]', 'text-white');
+  selected.classList.add('border-[#638B6F]', 'bg-[#638B6F]', 'text-white');
   selected.classList.remove('border-gray-200', 'text-gray-700');
 }
 

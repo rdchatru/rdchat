@@ -2240,8 +2240,8 @@ msgid "All Status Types"
 msgstr "모든 상태 유형"
 
 #: src/components/modals/tabs/LanguageTab.tsx:190
-msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>i18n@fluxer.app</0> and we'll be happy to accept your contributions."
-msgstr "현재 모든 번역은 최소한의 인간 수정으로 LLM에 의해 생성되었습니다. RdChat를 귀하의 언어로 현지화하는 데 도움을 줄 실제 사람을 찾고 싶습니다! 그렇게 하려면 <0>i18n@fluxer.app</0>로 이메일을 보내주시면 기꺼이 기여를 받아들입니다."
+msgid "All translations are currently LLM-generated with minimal human revision. We'd love to get real people to help us localize Fluxer into your language! To do so, send an email to <0>support@rdchat.ru</0> and we'll be happy to accept your contributions."
+msgstr "현재 모든 번역은 최소한의 인간 수정으로 LLM에 의해 생성되었습니다. RdChat를 귀하의 언어로 현지화하는 데 도움을 줄 실제 사람을 찾고 싶습니다! 그렇게 하려면 <0>support@rdchat.ru</0>로 이메일을 보내주시면 기꺼이 기여를 받아들입니다."
 
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:232
 #: src/components/modals/guild_tabs/GuildAuditLogTab.tsx:394
@@ -3925,12 +3925,12 @@ msgid "By creating a community, you agree to follow and uphold the <0>Fluxer Com
 msgstr "커뮤니티를 생성함으로써 <0>RdChat 커뮤니티 가이드라인</0>을 준수하고 지킬 것에 동의합니다."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:39
-msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "구매함으로써 <0>서비스 약관</0>과 <1>개인정보 처리방침</1>에 동의합니다. 모든 구매는 <2>support@fluxer.app</2>로 이메일을 보내면 14일 이내에 환불됩니다. 차지백은 계정 영구 정지로 이어집니다 — 환불을 원하시면 먼저 연락해 주시면 기꺼이 처리해 드립니다! 결제 정보는 Stripe에서 안전하게 처리하며 전체 카드 번호에 접근하지 않습니다."
+msgid "By purchasing, you agree to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "구매함으로써 <0>서비스 약관</0>과 <1>개인정보 처리방침</1>에 동의합니다. 모든 구매는 <2>support@rdchat.ru</2>로 이메일을 보내면 14일 이내에 환불됩니다. 차지백은 계정 영구 정지로 이어집니다 — 환불을 원하시면 먼저 연락해 주시면 기꺼이 처리해 드립니다! 결제 정보는 Stripe에서 안전하게 처리하며 전체 카드 번호에 접근하지 않습니다."
 
 #: src/components/modals/components/PurchaseDisclaimer.tsx:31
-msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@fluxer.app</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
-msgstr "구매함으로써 <0>서비스 약관</0>과 <1>개인정보 처리방침</1>에 동의했습니다. 모든 구매는 <2>support@fluxer.app</2>로 이메일을 보내면 14일 이내에 환불됩니다. 차지백은 계정 영구 정지로 이어집니다 — 환불을 원하시면 먼저 연락해 주시면 기꺼이 처리해 드립니다! 결제 정보는 Stripe에서 안전하게 처리하며 전체 카드 번호에 접근하지 않습니다."
+msgid "By purchasing, you agreed to our <0>Terms of Service</0> and <1>Privacy Policy</1>. All purchases are refundable within 14 days by emailing <2>support@rdchat.ru</2>. Chargebacks result in permanent account bans — if you want a refund, we're more than happy to give you one if you contact us first! Payment information is securely handled by Stripe — we never have access to your full card number."
+msgstr "구매함으로써 <0>서비스 약관</0>과 <1>개인정보 처리방침</1>에 동의했습니다. 모든 구매는 <2>support@rdchat.ru</2>로 이메일을 보내면 14일 이내에 환불됩니다. 차지백은 계정 영구 정지로 이어집니다 — 환불을 원하시면 먼저 연락해 주시면 기꺼이 처리해 드립니다! 결제 정보는 Stripe에서 안전하게 처리하며 전체 카드 번호에 접근하지 않습니다."
 
 #: src/utils/PermissionUtils.tsx:356
 #: src/utils/PermissionUtils.tsx:491

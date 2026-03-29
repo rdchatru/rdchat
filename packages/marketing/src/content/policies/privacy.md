@@ -1,541 +1,240 @@
 ## Privacy Policy Summary
 
-We take your privacy seriously and are committed to protecting your personal information. This Privacy Policy explains what data we collect, how we use it, and the choices you have.
+We take privacy seriously. This Privacy Policy explains what information we collect, how we use it, and what choices you have when using RdChat.
 
 In summary:
 
-- We do not sell, rent, or trade your personal data to third parties. We also do not "sell" or "share" personal information for cross-context behavioral advertising as defined by the CCPA/CPRA in relation to Fluxer. When you interact with third-party content such as embedded YouTube videos, those third parties may collect and use information under their own privacy policies, which may include advertising in their own services.
-- The service is not end-to-end encrypted, but we use strong encryption for data in transit and at rest.
-- We aim to collect only the minimum data necessary to provide, secure, and improve our service.
-- We do not train AI models on your messages, files, or any other content you create or share on Fluxer.
-- You can export, manage, and delete your data through your privacy dashboard and related tools.
-- We handle personal data in line with applicable privacy laws, such as GDPR in the EEA/UK and CCPA/CPRA in California, based on your location and use of our services.
-- We log limited feature usage and operational events to keep the service reliable and secure. We do not use this data for behavioral advertising or cross-site tracking.
-- Where we use automated systems that significantly affect your access to Fluxer (for example, regional eligibility checks based on IP geolocation), we do so in line with applicable law and describe your rights in this policy.
+- We do not sell your personal data or use your messages for targeted advertising.
+- We do not train AI models on your messages, files, or other private content.
+- RdChat is not an end-to-end encrypted service.
+- We collect the information needed to operate, secure, and improve the hosted service.
+- We use limited logging, abuse prevention, and regional eligibility checks to keep the platform safe.
+- You can request access, correction, deletion, export, and other privacy actions as described below.
 
-This summary is provided for convenience. You should read the full policy below to understand how we handle your information.
+This summary is for convenience only. The full policy below controls.
 
 ## 1. Who We Are
 
-We are **Fluxer Platform AB**, a Swedish limited liability company (Swedish organization number: 559537-3993). We operate the Fluxer chat platform and related services.
+**RdChat Open Project** operates the hosted RdChat platform and related services described in this policy.
 
-Fluxer Platform AB is the "data controller" for your personal data when you use Fluxer, meaning we determine how and why your personal data is processed.
+For the hosted service, RdChat Open Project acts as the controller or responsible operator for the personal data described here. If you use third-party services linked from RdChat, those services may act as separate controllers for the data they collect.
 
-As a company based in Sweden, we are subject to and comply with European Union data protection laws, including the General Data Protection Regulation (GDPR).
-
-You can find our contact details and our privacy contact's details in [Section 16](#16-contact-us).
+You can find our contact information in [Section 16](#16-contact-us).
 
 ## 2. Information We Collect
 
-We collect information in three main ways: (1) information you provide to us, (2) information we collect automatically, and (3) information we receive from other sources.
+We collect information in three main ways: information you provide directly, information collected automatically when you use the Services, and information we receive from other sources.
 
 ### 2.1 Information You Provide to Us
 
-This includes:
+This may include:
 
-- **Account information:** Email address, username, password (stored using a modern, secure password hashing algorithm, currently Argon2id), date of birth, and optionally your phone number for two-factor authentication (2FA) or account recovery where available.
-
-- **Content and communications:** Messages, files, images, voice and video communications (where supported), community information, reactions, and profile data (such as avatar, bio, and other information you choose to display). This also includes information about Communities you create or administer.
-
-- **Support and correspondence:** Information you provide when you contact our support team or interact with customer service, including the content of messages, attachments, and any additional details you choose to provide.
-
-- **Payment information:** If you purchase premium features (such as Fluxer Plutonium), payment processing is handled securely by Stripe. We do not store your full payment card details. Stripe provides us with limited information necessary to record and manage your purchases (for example, billing country, partial card details, payment status, and timestamps).
-
-We do not require you to provide special categories of personal data (such as information about your health, religion, or political beliefs). If you choose to share such information in your messages or profile, you do so at your own discretion.
+- account information such as email address, username, password hash, date of birth, and optional phone number;
+- profile information such as avatar, bio, pronouns, and display preferences;
+- content and communications such as messages, files, reactions, community settings, and support emails;
+- payment and subscription information provided through our payment processors, such as billing country, partial payment metadata, plan type, and transaction status; and
+- information you send when reporting bugs, abuse, security issues, or account problems.
 
 ### 2.2 Information We Collect Automatically
 
-When you use Fluxer, we automatically collect certain technical and usage information, including:
+When you use RdChat, we may automatically collect:
 
-- **Device and technical information:** IP address, browser type and version, operating system, device type, device identifiers, language settings, and similar technical data.
+- device and browser information;
+- IP address and coarse geolocation;
+- app, client, and operating system version data;
+- authentication, security, and audit events;
+- service performance and crash diagnostics; and
+- feature usage and operational metrics needed to maintain and improve the platform.
 
-- **Usage information:** Information about how you interact with Fluxer, such as:
-  - pages and screens visited within the app or site;
-  - features used (for example, voice calls, file uploads, reactions);
-  - timestamps and duration of sessions;
-  - approximate counts and types of events (for example, messages sent, communities joined), without reading message content for analytics; and
-  - crash reports and performance metrics.
-
-- **Security and operational logs:** Data generated by our systems to maintain security and reliability, such as:
-  - login attempts and authentication events;
-  - changes to account settings;
-  - rate limits, API errors, and system errors;
-  - IP-based signals related to spam, abuse, or unusual behavior.
-
-We use this information to secure the service, detect and prevent abuse, improve performance, and understand which features are being used so we can prioritize support and improvements. We do not use this information for behavioral advertising or cross-site tracking.
+We do not use this information for behavioral advertising or cross-site profiling.
 
 ### 2.3 Information From Other Sources
 
-We may also receive information about you from:
+We may receive information from:
 
-- **Other users:** When other users mention you, add you to Communities, send you messages, share content involving you, or otherwise interact with your account.
-
-- **Service providers:** Limited operational information from our service providers, such as transactional email records from Sweego, account verification records from Twilio, payment confirmations from Stripe, or security-related alerts from infrastructure providers.
-
-- **Public or third-party sources:** In some cases, we may receive information from publicly available sources or trusted partners for security, anti-fraud, or compliance purposes (for example, checking whether an IP address is associated with known abuse).
-
-We combine this information with the information we collect directly and automatically to help operate, secure, and improve our services.
+- other users who invite, mention, message, or report you;
+- service providers that help us operate the service;
+- payment, email, SMS, anti-abuse, and infrastructure providers; and
+- trusted security or compliance sources that help us detect fraud or abuse.
 
 ## 3. How We Use Your Information
 
-We use your information for the following purposes:
+We use information we collect to:
 
-- To provide, operate, and maintain the Fluxer platform and services.
-- To create and manage your account.
-- To deliver your messages, media, and other content to the intended recipients.
-- To secure your account and prevent unauthorized access.
-- To detect, investigate, and prevent abuse, fraud, spam, and violations of our terms or community guidelines.
-- To send important service updates, security alerts, and administrative messages.
-- To process payments, manage subscriptions, and handle financial transactions.
-- To understand which features are used and how the service performs, so we can prioritize support, fix issues, and plan improvements.
-- To comply with legal obligations and respond to lawful requests.
-- To protect the safety, rights, and property of our users, the public, and Fluxer.
+- provide, operate, and maintain RdChat;
+- create and secure Accounts;
+- deliver messages, files, notifications, and other features;
+- detect abuse, fraud, spam, and policy violations;
+- troubleshoot, improve reliability, and plan future work;
+- process purchases and subscriptions;
+- comply with legal obligations; and
+- protect users, the public, and the service.
 
-We do not use your messages, files, or any other content you create or share on Fluxer for targeted advertising or for training AI models.
+We do not use your messages, files, or other private content for AI training or targeted advertising.
 
-### 3.1 Lawful Bases for Processing (GDPR)
+### 3.1 Lawful Bases for Processing
 
-If you are in the EEA, UK, or another jurisdiction with similar requirements, our legal bases for processing your personal data include:
+Where privacy law requires a lawful basis, we typically rely on one or more of the following:
 
-- **Contract necessity:** We process data that is necessary to provide the services you have requested under our Terms of Service, such as delivering messages, operating Communities, maintaining your account, and providing support.
-
-- **Legitimate interests:** We process data based on our legitimate interests, such as:
-  - securing the platform and preventing fraud and abuse;
-  - maintaining and improving service reliability and performance;
-  - understanding how features are used at an aggregate level; and
-  - communicating with you about changes to our services or policies.
-  When we rely on legitimate interests, we balance our interests against your rights and expectations and implement safeguards to protect your privacy.
-
-- **Legal obligations:** We process data when necessary to comply with legal obligations, such as:
-  - accounting, tax, and record-keeping;
-  - child protection and CSAM reporting obligations;
-  - responding to lawful requests from public authorities; and
-  - complying with applicable data protection, security, and consumer laws.
-
-- **Consent:** In limited cases, we may rely on your consent, for example:
-  - where required to send certain types of optional communications; or
-  - where local law requires consent for specific processing or cookie use on our marketing site.
-  Where we rely on consent, you can withdraw it at any time in your settings or by contacting us. Withdrawing consent does not affect the lawfulness of processing that took place before the withdrawal.
+- **Contract**: processing needed to provide the Services you requested.
+- **Legitimate interests**: processing needed to secure, maintain, and improve the platform.
+- **Legal obligations**: processing needed for compliance, record-keeping, safety, or lawful requests.
+- **Consent**: processing based on your permission where the law requires it.
 
 ### 3.2 IP Address Geolocation
 
-We may geolocate your IP address at a coarse level (city, state/region, and country) for the following purposes:
+We may use coarse IP geolocation to:
 
-- providing security alerts when logins occur from new or unusual locations;
-- showing you where your account is currently logged in for security monitoring;
-- preventing fraud, detecting abuse, and protecting platform integrity;
-- determining regional age requirements and access eligibility based on local laws; and
-- meeting legal obligations related to export control and sanctions.
+- secure your Account and show recent login locations;
+- detect suspicious or abusive behavior;
+- apply region-based legal or product restrictions;
+- determine whether access is available in a region; and
+- support sanctions, export, and compliance screening.
 
-We use IP geolocation databases that run locally on our servers for internal platform functions. To determine whether you can access the platform based on your region, we also use a Cloudflare Worker that we control, which returns MaxMind geolocation data provided by Cloudflare based on your IP address. This runs on Cloudflare's infrastructure using code we control and is used solely for regional access eligibility checks.
-
-Some regions have enacted laws that require online platforms to verify users' ages using methods we are not able or willing to implement (for example, government ID uploads or biometric scans). The type and scope of these laws vary significantly between regions. Depending on what a given law requires, we may fully restrict platform access, or restrict only age-restricted content (such as NSFW channels and communities) while leaving the rest of the platform accessible. These restrictions are enforced using automated systems that rely primarily on IP geolocation and similar signals.
-
-For full details on how these restrictions work, which regions are currently affected, and what each restriction means in practice, see our [Regional Restrictions](/regional-restrictions) page.
-
-We generally do not manually override these automated determinations, but you may contact us at privacy@fluxer.app if you believe your access has been restricted in error (for example, if you are travelling or using a VPN and your IP address does not reflect your actual location). Where applicable data protection laws grant you rights in relation to automated decision-making (for example, under GDPR), we will honor those rights as described in [Section 10](#10-your-privacy-rights).
+These checks are designed to use limited location information rather than precise tracking. In some situations they are automated. If a privacy law applicable to you grants rights regarding automated decisions, see [Section 10](#10-your-privacy-rights).
 
 ## 4. Who We Share Information With
 
-We do not sell your personal data. We share information only in the following limited circumstances:
+We do not sell your personal data. We share information only in the following situations.
 
-### 4.1 When You Direct Us to Share
+### 4.1 With Other Users and Communities
 
-We share your information when you intentionally interact with others on Fluxer, for example:
+Information you choose to share on RdChat may be visible to:
 
-- when you send messages to other users;
-- when you join or participate in Communities;
-- when you share content publicly or with specific groups;
-- when your profile information is visible to others according to your settings; and
-- when you choose to connect to or use integrations or third-party services (where available).
-
-In these cases, other users can see the information you choose to share, and they may further share or store it outside Fluxer. We encourage you to be mindful about the content you share and with whom.
+- people you message;
+- communities you join;
+- moderators or administrators of those communities; and
+- users who can view your profile based on your settings and activity.
 
 ### 4.2 With Service Providers
 
-We work with trusted third-party service providers who process data on our behalf to help us operate Fluxer. These providers include:
+We use service providers that help us run the platform, including infrastructure, storage, content delivery, monitoring, payments, email, SMS, support, and safety tooling.
 
-#### Infrastructure and Data Storage
+Examples may include hosting providers, CDN providers, backup providers, payment processors, email providers, SMS providers, error monitoring services, and abuse prevention services. These providers process information on our behalf or under their own terms where you directly interact with them.
 
-- **OVHcloud** – primary hosting of our servers in Vint Hill, Virginia, USA.
-- **Backblaze** – encrypted backups stored in Amsterdam, Netherlands.
-- **Cloudflare** – content delivery network (CDN) for delivery and caching of user-generated content on the `fluxerusercontent.com` domain.
+### 4.3 For Legal, Safety, and Security Reasons
 
-#### Security and Safety
+We may disclose information where we reasonably believe it is necessary to:
 
-- **Cloudflare** – limited services, including:
-  - Turnstile CAPTCHA for bot prevention (primary CAPTCHA provider; see also hCaptcha below); and
-  - a Cloudflare Worker we control that returns MaxMind geolocation data for regional platform access eligibility checks.
-- **hCaptcha** – backup CAPTCHA provider; users can choose hCaptcha instead of Cloudflare Turnstile for bot prevention challenges.
-- **Arachnid Shield API** – CSAM scanning for user-uploaded media, operated by the Canadian Centre for Child Protection (C3P), as described in [Section 5](#5-content-scanning-for-safety).
+- comply with law, regulation, or valid legal process;
+- enforce our Terms or Community Guidelines;
+- investigate fraud, abuse, or security incidents; or
+- protect the rights, safety, or property of users, the public, or RdChat Open Project.
 
-#### Observability and error reporting
+### 4.4 Business or Project Changes
 
-- **Sentry** – application error monitoring. We send error and crash diagnostics directly to Sentry over HTTPS so we can investigate reliability and security issues. This may include stack traces, runtime metadata (for example browser, OS, and device details), release/build identifiers, and account identifiers associated with the active session (for example user ID, username, and email). We do not use this data for advertising, and routine error reports do not include private message content or uploaded file attachments.
-
-#### Third-Party Content
-
-- **Google** – YouTube embeds.
-- **KLIPY** – GIF search.
-
-To protect your privacy, we route all traffic to KLIPY through our servers, whether for search queries or for embedding their media in the app. This means your IP address and device identifiers are not visible to KLIPY for either search requests or when GIFs are displayed in Fluxer. For YouTube embeds, we fetch metadata server-side and only load a YouTube iframe from your device if and when you choose to play a video.
-
-#### Payment and Communications
-
-- **Stripe** – payment processing for subscriptions and other purchases.
-- **Sweego** – transactional email services.
-- **Twilio** – SMS-based account verification services.
-- **Fastmail** – support email infrastructure.
-
-#### Other Services
-
-- **Porkbun** – domain registration services.
-
-Many of these providers (for example, OVHcloud, Backblaze, Cloudflare, Stripe, Sweego, Twilio, Fastmail, and Porkbun in its role as registrar) act as processors and process personal data only on our behalf, according to our instructions.
-
-Other providers, such as Google (for YouTube videos), Cloudflare Turnstile, and hCaptcha, may also process some data as independent controllers when you interact directly with their services (for example, when you play an embedded YouTube video or complete a CAPTCHA). In those cases, your use of those services is also governed by their own terms and privacy policies.
-
-Where required by law, we have data processing agreements and standard contractual clauses or equivalent safeguards in place with providers that process personal data on our behalf, and we take steps to minimize the amount of personal data shared with all providers (for example, by proxying GIF searches through our servers for KLIPY, and fetching YouTube metadata server-side).
-
-### 4.3 When Required by Law or to Protect Rights
-
-We may disclose your information if we reasonably believe it is necessary to:
-
-- comply with a valid legal obligation, legal process, or enforceable governmental request;
-- enforce our Terms of Service or other agreements;
-- protect the safety, rights, or property of our users, the public, or Fluxer; or
-- detect, prevent, or otherwise address fraud, security, or technical issues.
-
-Where legally permitted and appropriate, we will attempt to notify you before disclosing your information in response to legal requests, especially if the request concerns your account or content.
-
-### 4.4 Business Transfers
-
-If we are involved in a merger, acquisition, reorganization, sale of assets, or similar transaction, your information may be transferred as part of that transaction. We will continue to protect your information in accordance with this policy and will notify you of any significant changes to how your data is handled.
+If the hosted service is reorganized, transferred, or substantially restructured, relevant information may be transferred as part of that change, subject to this policy or an updated policy provided to users.
 
 ## 5. Content Scanning for Safety
 
-We use automated tools and, in limited circumstances, human review to help keep Fluxer safe and compliant with the law.
+We use limited automated systems and, where necessary, authorized human review to help protect the platform and comply with the law.
 
 ### 5.1 CSAM Scanning
 
-We use the Arachnid Shield API, operated by the Canadian Centre for Child Protection (C3P), to help identify and block child sexual abuse material (CSAM) in user-uploaded media. This scanning is performed as follows:
+User-uploaded media may be checked against trusted child-safety databases to detect known child sexual abuse material (CSAM). If a match is detected, the upload may be blocked, preserved for compliance purposes where required, and reported to relevant authorities or child-safety organizations as required by law.
 
-- **How it works:** When media is uploaded, we securely transmit the full image or video file to the Arachnid Shield API over HTTPS for analysis. The API checks the file against C3P's database of known CSAM, which contains material that has been identified and confirmed by law enforcement and child safety organizations worldwide. This scanning happens synchronously during upload – if a match is detected, the upload is immediately rejected and the content is not delivered to any user. Where required or permitted by law, we may preserve a copy of the matched media and relevant account and technical information solely for reporting, legal compliance, and evidence preservation.
-- **No AI or content analysis:** This process does not use artificial intelligence, machine learning, or any form of automated content analysis. It only detects exact or near-exact matches of media that has already been identified and confirmed as CSAM by law enforcement or child safety organizations. Novel content that has not been previously identified cannot be detected by this system.
-- **Secure file submission:** Image and video files are securely transmitted to the Arachnid Shield API over HTTPS for scanning. Files are processed in real-time and are not retained by C3P after processing.
-- **What is scanned:** All user-uploaded media (for example, avatars, emojis, stickers, and file attachments) is subject to CSAM scanning before storage.
-- **What is not scanned:** Text messages and the main Fluxer application traffic are not scanned by this tool.
-- **Evidence retention:** If a match is detected, we may retain the matched media (or a limited evidentiary record, such as hashes, metadata, and logs) in a secure evidence store for the period required by law or as otherwise necessary for reporting and compliance. Evidence may be retained longer if subject to a legal hold or active investigation.
+This process is used for safety and legal compliance. It is not used for advertising.
 
-When a match is detected:
+### 5.2 Other Abuse and Security Detection
 
-- The upload is immediately rejected and the content is not delivered to any user.
-- We take appropriate action, which may include immediate account suspension.
-- We are legally obligated to report confirmed CSAM to the National Center for Missing & Exploited Children (NCMEC), which may share reports with law enforcement agencies worldwide.
-- Where required or permitted by law, we preserve the matched media and related records for reporting and evidence preservation, and disclose them to NCMEC and law enforcement as required.
+We may use automated systems to detect:
 
-### 5.2 Other Safety and Abuse Detection
+- spam, malware, phishing, and coordinated abuse;
+- suspicious login activity;
+- platform misuse and evasion behavior; and
+- patterns that indicate fraud, scraping, or service disruption.
 
-In addition to CSAM scanning, we may use automated systems to:
-
-- detect and block malware, phishing, spam, and other harmful or abusive content;
-- prevent and mitigate harassment, raiding, or coordinated abuse;
-- detect suspicious login attempts or access patterns; and
-- enforce our Terms of Service and Community Guidelines.
-
-These systems primarily rely on metadata, patterns, and signals such as frequency of messages, links, and other non-content indicators. We do not use your private messages or files to build behavioral advertising profiles.
-
-Where necessary for enforcing our policies, ensuring safety, or responding to user reports, authorized staff may review specific content, subject to strict access controls and audit logging.
+Where necessary for enforcement or safety, authorized staff may review limited content or metadata related to specific incidents.
 
 ## 6. Data Storage and International Transfers
 
-### 6.1 Where Your Data Is Stored
+We may store and process data in multiple regions, including the United States, the European Union or EEA, and global CDN locations used to deliver content efficiently.
 
-We store and process data in multiple locations in order to provide a reliable and performant service:
-
-- **Primary servers:** OVHcloud data center in Vint Hill, Virginia, USA.
-
-- **Encrypted backups:** Backblaze data center in Amsterdam, Netherlands.
-
-- **User-generated content CDN:** Cloudflare edge locations worldwide (for content on the `fluxerusercontent.com` domain).
-
-### 6.2 International Data Transfers
-
-Because we operate globally and use service providers located in different countries, your data may be transferred to and processed in countries outside your own, including the United States. These countries may have data protection laws that are different from the laws of your country.
-
-Where required by law (for example, under GDPR), we ensure that appropriate safeguards are in place for international transfers, such as:
-
-- standard contractual clauses approved by the European Commission or UK authorities;
-- data processing agreements with appropriate security and privacy commitments; and
-- additional technical and organizational measures, such as encryption and access controls.
-
-We do not transfer your data to third parties for their own independent advertising or marketing purposes without your explicit consent.
-
-You can contact us for more information about the safeguards we use for international data transfers (see [Section 16](#16-contact-us)).
+When data is transferred internationally, we use reasonable contractual, technical, and organizational safeguards appropriate to the nature of the transfer and applicable law.
 
 ## 7. Data Retention
 
-We retain your personal data only for as long as necessary to fulfill the purposes described in this policy, to comply with legal obligations, to resolve disputes, and to enforce our agreements.
+We keep personal data only as long as reasonably necessary for the purposes described in this policy, including:
 
-### 7.1 Active Accounts
+- operating active Accounts;
+- maintaining security and abuse-prevention logs;
+- complying with legal, tax, accounting, and reporting obligations;
+- resolving disputes and enforcing our agreements; and
+- preserving evidence related to fraud, abuse, or safety incidents where required.
 
-For active accounts, we generally keep your personal data for as long as you use Fluxer. This includes your messages, Communities, and other User Content while your account remains active, unless you delete specific content yourself.
-
-### 7.2 Attachments and Expiry
-
-Attachments may remain available only for a limited time. Their availability can depend on factors such as file size, age, and how often they are accessed.
-
-Saved Media (your personal library of pinned files) is handled differently and is not subject to the same expiry rules as regular attachments.
-
-For the current details of how attachment availability, expiry, and Saved Media work, see our [help article on attachment expiry](/help/attachment-expiry).
-
-### 7.3 Deleted Content
-
-When you delete messages or other content:
-
-- We remove them from our active systems within a reasonable period of time.
-- Deleted data may remain in our backup systems and certain logs for a limited period before being permanently removed, except where we are required by law to retain specific data for longer.
-
-For user-generated content cached on Cloudflare's edge network, we use Cloudflare's cache purge API to invalidate cached attachments as soon as possible after deletion. In practice, there may be short delays due to rate limits and global propagation.
-
-Current retention periods for deleted messages, account data, and related backups are described in [the guide to deleting or disabling an account](/help/delete-account) and [the article about requesting data deletion](/help/data-deletion).
-
-### 7.4 Inactive Accounts and Account Deletion
-
-We may delete accounts that are inactive for an extended period, and we also delete accounts when you request it or following certain enforcement actions, in line with our deletion procedures.
-
-- For information about how we define inactivity, the steps that occur before deletion (including any notice periods), and what happens when you delete your account, see [the guide to deleting or disabling an account](/help/delete-account).
-- For information about bulk deletion of your messages and other content before or after account deletion, see [the article about requesting data deletion](/help/data-deletion).
-
-When an account is deleted:
-
-- you lose access to the account and its associated data; and
-- messages and content you posted in Communities or direct messages may remain visible to other users unless you delete them first (for example, via your Privacy Dashboard or the tools described in [the article about requesting data deletion](/help/data-deletion)).
-
-### 7.5 Payment and Transaction Data
-
-We retain transaction records and related data for the period required by accounting, tax, and other legal obligations. We do not store full payment card numbers. Stripe and other payment providers may retain payment data in accordance with their own legal obligations and policies.
-
-### 7.6 Logs and Security Data
-
-Security logs, audit logs, and usage logs are retained only for as long as necessary for security, fraud prevention, troubleshooting, and compliance, and are then deleted or anonymized. We may retain certain logs longer where necessary to investigate security incidents, comply with legal obligations, or resolve disputes. Where relevant, we describe retention periods for particular types of data in our help articles.
+Deleted content may remain in backups, logs, or caches for a limited period before permanent removal.
 
 ## 8. Your Privacy Controls
 
-You have several tools and settings to help you manage your data and privacy on Fluxer.
+Depending on the tools available in the product, you may be able to:
 
-### 8.1 Privacy Dashboard and In-App Controls
+- update profile information and account settings;
+- request or download an export of your data;
+- delete individual content or your entire Account;
+- manage notifications and visibility settings; and
+- contact support for account-specific privacy help.
 
-Through your Privacy Dashboard and account settings, you can:
-
-- **Request a data export:** Request a full export of your account data (including messages and URLs to download attachments) via the Data Export tab. See [the help article on exporting your account data](/help/data-export) for current limits and details.
-
-- **Download attachments:** Use the URLs in your data export to download attachments before deleting related messages or before attachments expire.
-
-- **Delete messages:** Delete individual messages in-app. When you delete a message, any attachments in that message are also deleted from active systems and eventually from caches and backups, as described above.
-
-- **Bulk deletion:** Delete all of your messages via the Data Deletion tab in the Privacy Dashboard. Processing may run in the background and can take time for large accounts. See [the article about requesting data deletion](/help/data-deletion) for details.
-
-- **Account deletion:** Schedule deletion of your account, which completes after a grace period unless you sign in during that period to cancel. See [the guide to deleting or disabling an account](/help/delete-account) for how this works.
-
-Attachments have expiry windows; if you want to keep specific files, download or move them (or save them to Saved Media) before they expire.
-
-### 8.2 Requests by Email
-
-If you need specific data removed or modified without deleting everything:
-
-- Email privacy@fluxer.app from the email address associated with your Fluxer account.
-- Clearly describe what you want us to do (for example, delete specific content, correct account information, or provide a data copy).
-- We may ask for additional information to verify your identity and confirm that you control the account.
-
-If you want a copy of your data before deleting messages or your account, request an export first and wait for the export to complete.
+For sensitive requests, we may ask you to contact us from the email address associated with your Account or provide other reasonable verification.
 
 ## 9. Data Security
 
-We implement technical and organizational measures to protect your personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure, or access.
+We use technical and organizational measures designed to protect data, including access controls, encryption in transit, encryption at rest where appropriate, monitoring, and logging.
 
-These measures include:
-
-- industry-standard encryption for data in transit (TLS);
-- strong encryption for data at rest on our servers and backups;
-- secure, professionally managed data centers with physical security controls;
-- regular security updates, patch management, and infrastructure hardening;
-- rate limiting, anomaly detection, and other protections against abuse and attacks;
-- strict access controls so that only authorized staff can access user data, on a need-to-know basis and for limited purposes; and
-- regular encrypted backups for disaster recovery.
-
-No online service can guarantee perfect security. We work continuously to improve our security posture and reduce risks.
-
-### 9.1 Responsible Disclosure and Security Reports
-
-If you discover a potential security vulnerability or issue:
-
-- Visit our [Security Bug Bounty page](/security) and follow the reporting instructions there so we have enough detail to reproduce the issue.
-- Do not publicly disclose the vulnerability before we have had a reasonable opportunity to investigate and address it.
-- We appreciate responsible disclosure and may acknowledge your contribution if you wish (subject to your consent).
-
-### 9.2 Data Breaches
-
-If we become aware of a data breach that has a material impact on your personal data, we will:
-
-- investigate and take appropriate remedial steps;
-- notify you without undue delay when legally required; and
-- notify relevant supervisory authorities when required by law.
-
-Notifications will include information about what happened, what data may be affected, and steps you can take to protect yourself.
+No service can guarantee perfect security. You should use a strong password, enable additional account protection when available, and avoid sharing sensitive information you would not want disclosed.
 
 ## 10. Your Privacy Rights
 
-Depending on where you live, you may have certain rights regarding your personal data. These rights may include, for example under GDPR (EEA/UK) or CCPA/CPRA (California):
+Depending on where you live, you may have rights such as:
 
-- **Right of access:** Request confirmation of whether we process your personal data and, if so, receive a copy.
+- access to the personal data we hold about you;
+- correction of inaccurate information;
+- deletion of personal data;
+- export or portability of certain data;
+- objection to or restriction of certain processing;
+- withdrawal of consent where processing is based on consent;
+- appeal or human review for certain automated decisions where required by law; and
+- the right to file a complaint with a supervisory or regulatory authority.
 
-- **Right to rectification:** Request correction of inaccurate or incomplete personal data.
+If you are a California resident, you may also have rights related to knowledge, deletion, correction, and non-discrimination under applicable California privacy law. RdChat does not sell personal information or share it for cross-context behavioral advertising.
 
-- **Right to deletion ("right to be forgotten"):** Request deletion of your personal data in certain circumstances, for example where it is no longer necessary for the purposes for which it was collected.
+To exercise your rights, contact us using the details in [Section 16](#16-contact-us). We may deny or limit a request where the law allows, including where we cannot verify identity or where the request would affect the rights of others.
 
-- **Right to restriction:** Request that we restrict processing of your personal data in certain circumstances (for example, while we verify its accuracy or assess an objection).
+## 11. Cookies and Similar Technologies
 
-- **Right to object:** Object to certain processing of your personal data, including processing based on legitimate interests, and we will consider your objection in line with applicable law.
+We may use cookies, local storage, and similar technologies to:
 
-- **Right to data portability:** Request a copy of certain personal data in a structured, commonly used, machine-readable format and ask us to transmit it to another controller where technically feasible.
+- keep you signed in;
+- remember preferences;
+- protect against abuse or fraud;
+- measure service performance; and
+- support essential website functionality.
 
-- **Right to withdraw consent:** Where processing is based on your consent, you can withdraw that consent at any time. This will not affect the lawfulness of processing that took place before you withdrew consent.
+We do not use these technologies to build cross-site advertising profiles from your private activity on RdChat.
 
-- **Rights under CCPA/CPRA (for California residents):** The following rights apply:
-  - right to know what personal information we collect, use, disclose, and share;
-  - right to delete personal information in certain circumstances;
-  - right to correct inaccurate personal information;
-  - right to opt out of the sale or sharing of personal information (we do not sell or share personal information for cross-context behavioral advertising in relation to Fluxer); and
-  - right to be free from discrimination for exercising your rights.
+## 12. Children's Privacy
 
-### 10.1 Exercising Your Rights
+RdChat is not directed to children below the minimum age required in the user's jurisdiction. If we learn that we collected personal data in violation of applicable age rules, we may remove the data, disable the Account, or take other appropriate action.
 
-You can exercise many of your rights directly through your Privacy Dashboard and account settings (for example, export, deletion, and correction of certain information).
+## 13. Third-Party Content and Links
 
-You can also contact us at privacy@fluxer.app to exercise your rights. When you do so:
+RdChat may include links, embeds, or integrations involving third-party services. Those third parties may collect information under their own privacy policies once you interact with them. We are not responsible for third-party privacy practices.
 
-- we may need to verify your identity (for example, by asking you to reply from your registered email or provide additional details);
-- we will respond as required by applicable law (typically within 30 days, or up to 45 days where permitted and necessary); and
-- if we cannot fully comply with your request (for example, due to legal obligations, technical limitations, or the rights of others), we will explain why and what options you still have.
+## 14. Changes to This Policy
 
-You may also authorize an agent to submit requests on your behalf where permitted by law. We may require proof that the agent is validly authorized.
+We may update this Privacy Policy from time to time. When changes are material, we may provide notice through the website, app, email, or other reasonable means.
 
-### 10.2 Complaints to Supervisory Authorities
+The "last updated" date shown on the policy page reflects the current version.
 
-If you are in the EEA, UK, or another jurisdiction with a data protection authority, you have the right to lodge a complaint with your local supervisory authority if you believe your privacy rights have been violated.
+## 15. Complaints and Questions
 
-If you are in Sweden, the relevant authority is the Swedish Authority for Privacy Protection (Integritetsskyddsmyndigheten). You can also contact your local authority in your country of residence.
-
-We encourage you to contact us first so we can try to resolve your concerns directly.
-
-### 10.3 Automated Decision-Making
-
-We use automated systems in certain limited ways that may affect your use of Fluxer, such as:
-
-- determining whether your approximate location is in a region where access to Fluxer is permitted based on IP geolocation and applicable laws; and
-- detecting potential fraud, spam, or abusive behavior.
-
-These systems can influence, for example, whether you can access Fluxer from a given region or whether certain actions are temporarily blocked while we investigate potential abuse.
-
-Where applicable law (such as GDPR) grants you rights related to automated decision-making – such as the right to obtain human review, to express your point of view, or to contest certain decisions – you can contact us at privacy@fluxer.app. We will handle such requests in line with those laws and our legal obligations.
-
-## 11. Children's Privacy
-
-Users must meet the minimum age requirement in their region to create and use a Fluxer account. We determine eligibility based on your self-reported information and your approximate geographic location.
-
-For the purposes of this policy and our Terms of Service:
-
-- the **minimum age to use Fluxer** (the "Minimum Age") is the lowest age at which applicable law in your country permits you to use an online service like Fluxer. This is typically 13 years old, but it varies by country and may be higher in certain jurisdictions; and
-- users who are **above the Minimum Age but under the age of legal majority** in their jurisdiction (for example, under 18 in many countries) may use Fluxer, but our Terms require a parent or guardian to review and agree to them on the user's behalf.
-
-We use IP geolocation and similar signals to determine whether access is allowed from your region and to apply regional age-related rules.
-
-Some jurisdictions require age verification methods that we are not able or willing to implement (for example, requiring government ID uploads or biometric scanning). Where such requirements apply, we restrict access as described in [Section 3.2](#32-ip-address-geolocation) and on our [Regional Restrictions](/regional-restrictions) page. Depending on the scope of the law, this may mean full platform inaccessibility or restriction of age-restricted content only.
-
-We generally do not manually override these automated regional determinations, but you may contact us at privacy@fluxer.app if you believe your access has been restricted in error (for example, due to inaccurate geolocation). Where applicable law grants minors or their guardians specific rights regarding automated decisions, we will comply with those obligations.
-
-We do not knowingly collect personal information from children under the Minimum Age in their region. If we become aware that we have inadvertently collected personal information from a child who does not meet the Minimum Age requirement, we will take steps to delete that information and, where appropriate, delete the account.
-
-If you are a parent or legal guardian and believe that your child has used Fluxer without your consent or does not meet the Minimum Age requirement, you may contact privacy@fluxer.app from the child's registered email address (or with sufficient proof of guardianship) to request deletion of their account and associated data.
-
-## 12. Cookies and Similar Technologies
-
-### 12.1 Fluxer Application
-
-We do not use third-party advertising or tracking cookies for our own analytics or advertising in the Fluxer application. Any cookies we set are strictly necessary for the operation and security of the service. We also do not run advertising trackers or analytics SDKs in the app. Operational logging and limited feature-usage telemetry are stored server-side to keep the service reliable and secure and to understand which features are used. This server-side data is not used for advertising or cross-site profiling.
-
-When you interact with embedded third-party content in the app (for example, a YouTube video or a CAPTCHA challenge), those third parties may set their own cookies or similar technologies under their own privacy policies.
-
-### 12.2 Marketing Site
-
-On our marketing website (`fluxer.app`):
-
-- we set a single language-preference cookie to remember your language choice; and
-- we do not use third-party advertising trackers or fingerprinting technologies.
-
-If we introduce additional analytics on the site in the future, we will update this notice and, where required, seek your consent (for example, via a cookie banner or similar interface).
-
-You can control cookie usage through your browser settings, which may allow you to block or delete cookies. Note that some site functionality may be affected if you disable cookies entirely.
-
-## 13. Third-Party Services and Links
-
-Fluxer may contain links to third-party websites, services, or content (for example, YouTube videos, GIF search, or other embedded content). When you use these features:
-
-- we route requests through our servers where technically possible to reduce the amount of data sent directly from your device to third parties;
-- for GIF search through KLIPY, both search queries and GIF embedding are routed through our servers, so this provider does not see your IP address or device identifiers for searches or when GIFs are displayed in Fluxer;
-- for YouTube links, we fetch basic metadata from the YouTube API on our servers so we can render previews without your device contacting YouTube until you choose to play the video; and
-- if you play an embedded YouTube video or interact with other embedded third-party content, that content is loaded directly from the third party (for example, in an iframe), and the third party may collect information from your device under its own terms and privacy policy.
-
-Third-party services may have their own privacy policies and data practices that are separate from ours. We are not responsible for the privacy practices, content, or security of third-party services, and we encourage you to review the privacy policies of any third-party services you use.
-
-## 14. Law Enforcement and Legal Requests
-
-We take the privacy and security of our users seriously and carefully consider all legal requests for data.
-
-- We respond to valid legal processes and requests that comply with applicable law, which may include court orders, warrants, or other legally binding requests.
-- Requests should be directed to legal@fluxer.app and should clearly identify the requesting authority, legal basis, and scope of data requested.
-- We may refuse or narrow requests that are overly broad, not legally valid, or inconsistent with applicable law.
-- Where legally permitted and where it would not create a risk to safety, security, or legal obligations, we will attempt to notify affected users before disclosing their data so they have an opportunity to object.
-
-We may disclose data without notice where we reasonably believe it is necessary to prevent harm, protect the safety of individuals, or respond to emergencies, in accordance with applicable law.
-
-For additional operational details on how law enforcement requests interact with community safety and enforcement, you can also refer to the "Law Enforcement Requests" section of our [Community Guidelines](/guidelines).
-
-## 15. Changes to This Privacy Policy
-
-We may update this Privacy Policy from time to time to reflect changes in our practices, services, or legal obligations.
-
-If we make significant changes, we will:
-
-- provide at least 30 days' advance notice, where reasonably practicable, via email, in-app notifications, or notices on our website; and
-- indicate the effective date at the top of this policy.
-
-We maintain a changelog or archive of prior versions of this Privacy Policy for reference.
-
-Your continued use of Fluxer after the updated policy takes effect constitutes your acceptance of the changes. If you do not agree with the updated policy, you should stop using Fluxer and, if you wish, delete your account.
+If you have a privacy concern, please contact us first so we can try to resolve it. If you believe we have not addressed your concern appropriately, you may have the right to complain to a regulator or supervisory authority in your jurisdiction.
 
 ## 16. Contact Us
 
-For account-related and privacy-related requests, you should contact us from the email address associated with your Fluxer account wherever possible. This helps us verify your identity and protect your account.
+For privacy questions or requests, contact:
 
-### Privacy and Data Protection Contact
+- **Email:** `support@rdchat.ru`
+- **Website:** [https://rdchat.ru](https://rdchat.ru)
+- **Community:** [RdChat HQ](https://rdchat.ru/invite/hq)
 
-- Email: privacy@fluxer.app
-- Contact person: Hampus Kraft, founder and CEO
-- This is our primary contact point for privacy and data protection questions. We have not formally appointed a Data Protection Officer under GDPR.
-
-You can use this address to exercise your privacy rights, ask questions about this policy, or raise concerns about how your data is handled.
-
-### General Support
-
-- Email: support@fluxer.app
-- Website: [https://fluxer.app](https://fluxer.app)
-
-### Postal Address
-
-Fluxer Platform AB
-Norra Kronans Gata 430
-136 76 Brandbergen
-Stockholm County, Sweden
-Organization number: 559537-3993
+For account-specific requests, contact us from the email address associated with your Account whenever possible.

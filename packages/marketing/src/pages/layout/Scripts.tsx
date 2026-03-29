@@ -400,7 +400,7 @@ ${LOCALE_SELECTOR_SCRIPT}
 
       const active = linkById.get(id);
       if (active) {
-        active.style.color = '#4641D9';
+        active.style.color = '#638B6F';
         active.classList.remove('text-muted-foreground');
       }
     };

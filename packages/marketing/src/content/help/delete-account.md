@@ -19,7 +19,7 @@ Your messages remain on the platform unless you delete them first:
 
 - **Bulk delete**: Use the Privacy Dashboard to delete all messages at once. See [Requesting data deletion](/help/data-deletion).
 - **Export first**: Export your data before deleting anything. See [Exporting your account data](/help/data-export).
-- **Specific deletion**: Email **privacy@fluxer.app** from your registered address to request deletion of specific data.
+- **Specific deletion**: Email **support@rdchat.ru** from your registered address to request deletion of specific data.
 
 You cannot delete your messages after your account is deleted – handle your data first.
 

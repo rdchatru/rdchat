@@ -21,8 +21,8 @@ Include anything that shows the issue – screenshots, short videos, logs, or sa
 
 ## Submit your report
 
-Email support@fluxer.app with the filled template. A concise yet descriptive subject helps us triage faster. If you prefer GitHub, feel free to file issues in the [Fluxer GitHub repository](https://github.com/fluxerapp/fluxer).
+Email support@rdchat.ru with the filled template. A concise yet descriptive subject helps us triage faster. If you prefer GitHub, feel free to file issues in the [RdChat GitHub repository](https://github.com/fluxerapp/fluxer).
 
 ## Security issues
 
-If you believe the issue is security-related, visit our [Security Bug Bounty page](/security) instead of emailing Support. Follow the guidance there, include clear steps, why you think it is a security risk, and any impact you see. We respond quickly to assess, coordinate a fix, and discuss disclosure expectations.
+If you believe the issue is security-related, review our [Security Policy](/security) before contacting support. Include clear reproduction steps, why you believe the issue is security-sensitive, and any impact you identified.

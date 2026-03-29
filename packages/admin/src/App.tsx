@@ -29,10 +29,12 @@ import {createAuthRoutes} from '@fluxer/admin/src/routes/Auth';
 import {createBansRoutes} from '@fluxer/admin/src/routes/Bans';
 import {createCodesRoutes} from '@fluxer/admin/src/routes/Codes';
 import {createDiscoveryRoutes} from '@fluxer/admin/src/routes/Discovery';
+import {createDesktopReleasesRoutes} from '@fluxer/admin/src/routes/DesktopReleases';
 import {createGuildsRoutes} from '@fluxer/admin/src/routes/Guilds';
 import {createMessagesRoutes} from '@fluxer/admin/src/routes/Messages';
 import {createReportsRoutes} from '@fluxer/admin/src/routes/Reports';
 import type {RouteFactory} from '@fluxer/admin/src/routes/RouteTypes';
+import {createStorageRoutes} from '@fluxer/admin/src/routes/Storage';
 import {createSystemRoutes} from '@fluxer/admin/src/routes/System';
 import {createUsersRoutes} from '@fluxer/admin/src/routes/Users';
 import {createVisionarySlotsRoutes} from '@fluxer/admin/src/routes/VisionarySlots';
@@ -186,6 +188,8 @@ export function createAdminApp(options: CreateAdminAppOptions): AdminAppResult {
 		createReportsRoutes,
 		createMessagesRoutes,
 		createVoiceRoutes,
+		createStorageRoutes,
+		createDesktopReleasesRoutes,
 		createCodesRoutes,
 		createDiscoveryRoutes,
 		createVisionarySlotsRoutes,

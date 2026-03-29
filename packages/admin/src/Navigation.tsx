@@ -134,6 +134,18 @@ export function getSections(): Array<NavSection> {
 					requiredAcls: [AdminACLs.GUILD_LOOKUP],
 				},
 				{
+					title: 'S3 Dashboard',
+					path: '/storage',
+					activeKey: 's3-dashboard',
+					requiredAcls: [AdminACLs.STORAGE_VIEW, AdminACLs.STORAGE_MANAGE],
+				},
+				{
+					title: 'Desktop Releases',
+					path: '/desktop-releases',
+					activeKey: 'desktop-releases',
+					requiredAcls: [AdminACLs.STORAGE_VIEW, AdminACLs.STORAGE_MANAGE],
+				},
+				{
 					title: 'Voice Regions',
 					path: '/voice-regions',
 					activeKey: 'voice-regions',
