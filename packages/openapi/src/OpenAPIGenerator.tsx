@@ -47,7 +47,7 @@ function createGeneratorSettings(options: OpenAPIGeneratorOptions): GeneratorSet
 		title: options.title ?? 'Fluxer API',
 		version: options.version ?? '1.0.0',
 		description: options.description ?? 'The Fluxer API',
-		serverUrl: options.serverUrl ?? 'https://api.fluxer.app',
+		serverUrl: options.serverUrl ?? 'https://api.rdchat.ru',
 	};
 }
 
@@ -100,7 +100,7 @@ export class OpenAPIGenerator {
 				description: this.settings.description,
 				contact: {
 					name: 'Fluxer Developers',
-					email: 'developers@fluxer.app',
+					email: 'developers@rdchat.ru',
 				},
 				license: {
 					name: 'AGPL-3.0',

@@ -44,7 +44,7 @@ export function Hero(props: HeroProps): JSX.Element {
 				) : null}
 				<div class="flex flex-wrap items-center justify-center gap-3 pb-2">
 					<a
-						href="https://blog.fluxer.app/how-i-built-fluxer-a-discord-like-chat-app/"
+						href="https://blog.rdchat.ru/how-i-built-fluxer-a-discord-like-chat-app/"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 font-medium text-sm text-white transition-colors hover:bg-white/20"
@@ -53,7 +53,7 @@ export function Hero(props: HeroProps): JSX.Element {
 						<ArrowRightIcon class="h-3.5 w-3.5" />
 					</a>
 					<a
-						href="https://blog.fluxer.app/roadmap-2026"
+						href="https://blog.rdchat.ru/roadmap-2026"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-4 py-1.5 font-medium text-sm text-white transition-colors hover:bg-white/20"

@@ -17,9 +17,9 @@
       <li>Custom emoji and reactions</li>
     </ul>
   </description>
-  <url type="homepage">https://fluxer.app</url>
+  <url type="homepage">https://rdchat.ru</url>
   <url type="bugtracker">https://github.com/fluxerapp/fluxer/issues</url>
-  <url type="help">https://fluxer.app/help</url>
+  <url type="help">https://rdchat.ru/help</url>
   <launchable type="desktop-id">app.fluxer.desktop</launchable>
   <categories>
     <category>Network</category>

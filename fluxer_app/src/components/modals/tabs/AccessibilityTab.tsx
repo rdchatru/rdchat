@@ -88,7 +88,7 @@ export const AccessibilityTabPreview = observer(() => {
 				flags: 0,
 				pinned: false,
 				mention_everyone: false,
-				content: t`This shows how links appear: https://fluxer.app`,
+				content: t`This shows how links appear: https://rdchat.ru`,
 				timestamp: tabOpenedAt.toISOString(),
 				state: MessageStates.SENT,
 			},

@@ -32,7 +32,7 @@
 
     <key>com.apple.developer.associated-domains</key>
     <array>
-        <string>webcredentials:web.canary.fluxer.app</string>
+        <string>webcredentials:web.canary.rdchat.ru</string>
     </array>
 </dict>
 </plist>

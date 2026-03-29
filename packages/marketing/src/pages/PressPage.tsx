@@ -188,10 +188,10 @@ function renderContactSection(ctx: MarketingContext): JSX.Element {
 						{ctx.i18n.getMessage('press_branding.contact.story_prompt', ctx.locale)}
 					</p>
 					<a
-						href="mailto:press@fluxer.app"
+						href="mailto:press@rdchat.ru"
 						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
 					>
-						press@fluxer.app
+						press@rdchat.ru
 					</a>
 					<p class="body-sm mt-6 text-white/80">
 						{ctx.i18n.getMessage('press_branding.contact.response_time', ctx.locale)}

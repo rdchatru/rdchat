@@ -144,7 +144,7 @@ function generateSpec(): OpenAPISpec {
 				'that clients can use to connect to Fluxer instances through encrypted tunnels.',
 			contact: {
 				name: 'Fluxer Developers',
-				email: 'developers@fluxer.app',
+				email: 'developers@rdchat.ru',
 			},
 			license: {
 				name: 'AGPL-3.0',
@@ -153,7 +153,7 @@ function generateSpec(): OpenAPISpec {
 		},
 		servers: [
 			{
-				url: 'https://relay.fluxer.app',
+				url: 'https://relay.rdchat.ru',
 				description: 'Production relay directory',
 			},
 		],

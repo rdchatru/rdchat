@@ -109,7 +109,7 @@ export function buildMetaTags(ctx: MarketingContext, meta: PageMeta, pageUrl: st
 			rel="alternate"
 			type="application/rss+xml"
 			title={ctx.i18n.getMessage('social_and_feeds.rss.fluxer_blog_rss', ctx.locale)}
-			href="https://blog.fluxer.app/rss/"
+			href="https://blog.rdchat.ru/rss/"
 		/>,
 		...articleTimeMeta(meta),
 	];

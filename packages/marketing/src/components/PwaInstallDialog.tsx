@@ -123,7 +123,7 @@ function renderAndroidSteps(ctx: MarketingContext): JSX.Element {
 						'1',
 						<span>
 							<a
-								href="https://web.fluxer.app"
+								href="https://web.rdchat.ru"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="text-gray-900 underline hover:text-gray-700"
@@ -158,7 +158,7 @@ function renderIosSteps(ctx: MarketingContext): JSX.Element {
 						'1',
 						<span>
 							<a
-								href="https://web.fluxer.app"
+								href="https://web.rdchat.ru"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="text-gray-900 underline hover:text-gray-700"
@@ -203,7 +203,7 @@ function renderDesktopSteps(ctx: MarketingContext): JSX.Element {
 						'1',
 						<span>
 							<a
-								href="https://web.fluxer.app"
+								href="https://web.rdchat.ru"
 								target="_blank"
 								rel="noopener noreferrer"
 								class="text-gray-900 underline hover:text-gray-700"

@@ -173,7 +173,7 @@ describe('deriveEndpointsFromDomain', () => {
 
 	describe('production environment (standard HTTPS port)', () => {
 		const prodConfig: DomainConfig = {
-			base_domain: 'fluxer.app',
+			base_domain: 'rdchat.ru',
 			public_scheme: 'https',
 			internal_scheme: 'http',
 			public_port: 443,
@@ -183,23 +183,23 @@ describe('deriveEndpointsFromDomain', () => {
 		const endpoints = deriveEndpointsFromDomain(prodConfig);
 
 		test('derives api endpoint without port', () => {
-			expect(endpoints.api).toBe('https://fluxer.app/api');
+			expect(endpoints.api).toBe('https://rdchat.ru/api');
 		});
 
 		test('derives api client endpoint without port', () => {
-			expect(endpoints.api_client).toBe('https://fluxer.app/api');
+			expect(endpoints.api_client).toBe('https://rdchat.ru/api');
 		});
 
 		test('derives app endpoint without port', () => {
-			expect(endpoints.app).toBe('https://fluxer.app');
+			expect(endpoints.app).toBe('https://rdchat.ru');
 		});
 
 		test('derives gateway endpoint with wss scheme without port', () => {
-			expect(endpoints.gateway).toBe('wss://fluxer.app/gateway');
+			expect(endpoints.gateway).toBe('wss://rdchat.ru/gateway');
 		});
 
 		test('derives media endpoint without port', () => {
-			expect(endpoints.media).toBe('https://fluxer.app/media');
+			expect(endpoints.media).toBe('https://rdchat.ru/media');
 		});
 
 		test('derives static CDN endpoint without port', () => {
@@ -207,19 +207,19 @@ describe('deriveEndpointsFromDomain', () => {
 		});
 
 		test('derives admin endpoint without port', () => {
-			expect(endpoints.admin).toBe('https://fluxer.app/admin');
+			expect(endpoints.admin).toBe('https://rdchat.ru/admin');
 		});
 
 		test('derives marketing endpoint without port', () => {
-			expect(endpoints.marketing).toBe('https://fluxer.app/marketing');
+			expect(endpoints.marketing).toBe('https://rdchat.ru/marketing');
 		});
 
 		test('derives invite endpoint without port', () => {
-			expect(endpoints.invite).toBe('https://fluxer.app/invite');
+			expect(endpoints.invite).toBe('https://rdchat.ru/invite');
 		});
 
 		test('derives gift endpoint without port', () => {
-			expect(endpoints.gift).toBe('https://fluxer.app/gift');
+			expect(endpoints.gift).toBe('https://rdchat.ru/gift');
 		});
 	});
 
@@ -253,28 +253,28 @@ describe('deriveEndpointsFromDomain', () => {
 
 	describe('custom CDN domain', () => {
 		const staticCdnConfig: DomainConfig = {
-			base_domain: 'fluxer.app',
+			base_domain: 'rdchat.ru',
 			public_scheme: 'https',
 			internal_scheme: 'http',
 			public_port: 443,
-			static_cdn_domain: 'cdn.fluxer.app',
+			static_cdn_domain: 'cdn.rdchat.ru',
 		};
 
 		const endpoints = deriveEndpointsFromDomain(staticCdnConfig);
 
 		test('uses custom CDN domain', () => {
-			expect(endpoints.static_cdn).toBe('https://cdn.fluxer.app');
+			expect(endpoints.static_cdn).toBe('https://cdn.rdchat.ru');
 		});
 
 		test('other endpoints use base domain', () => {
-			expect(endpoints.api).toBe('https://fluxer.app/api');
-			expect(endpoints.app).toBe('https://fluxer.app');
+			expect(endpoints.api).toBe('https://rdchat.ru/api');
+			expect(endpoints.app).toBe('https://rdchat.ru');
 		});
 	});
 
 	describe('custom invite and gift domains', () => {
 		const customConfig: DomainConfig = {
-			base_domain: 'fluxer.app',
+			base_domain: 'rdchat.ru',
 			public_scheme: 'https',
 			internal_scheme: 'http',
 			public_port: 443,
@@ -293,8 +293,8 @@ describe('deriveEndpointsFromDomain', () => {
 		});
 
 		test('other endpoints use base domain', () => {
-			expect(endpoints.api).toBe('https://fluxer.app/api');
-			expect(endpoints.app).toBe('https://fluxer.app');
+			expect(endpoints.api).toBe('https://rdchat.ru/api');
+			expect(endpoints.app).toBe('https://rdchat.ru');
 		});
 	});
 
@@ -312,41 +312,41 @@ describe('deriveEndpointsFromDomain', () => {
 
 		test('derives wss from https', () => {
 			const config: DomainConfig = {
-				base_domain: 'fluxer.app',
+				base_domain: 'rdchat.ru',
 				public_scheme: 'https',
 				internal_scheme: 'http',
 				public_port: 443,
 			};
 			const endpoints = deriveEndpointsFromDomain(config);
-			expect(endpoints.gateway).toBe('wss://fluxer.app/gateway');
+			expect(endpoints.gateway).toBe('wss://rdchat.ru/gateway');
 		});
 	});
 
 	describe('canary environment', () => {
 		const canaryConfig: DomainConfig = {
-			base_domain: 'canary.fluxer.app',
+			base_domain: 'canary.rdchat.ru',
 			public_scheme: 'https',
 			internal_scheme: 'http',
 			public_port: 443,
-			static_cdn_domain: 'cdn-canary.fluxer.app',
+			static_cdn_domain: 'cdn-canary.rdchat.ru',
 		};
 
 		const endpoints = deriveEndpointsFromDomain(canaryConfig);
 
 		test('derives api endpoint for canary', () => {
-			expect(endpoints.api).toBe('https://canary.fluxer.app/api');
+			expect(endpoints.api).toBe('https://canary.rdchat.ru/api');
 		});
 
 		test('derives app endpoint for canary', () => {
-			expect(endpoints.app).toBe('https://canary.fluxer.app');
+			expect(endpoints.app).toBe('https://canary.rdchat.ru');
 		});
 
 		test('derives gateway endpoint for canary', () => {
-			expect(endpoints.gateway).toBe('wss://canary.fluxer.app/gateway');
+			expect(endpoints.gateway).toBe('wss://canary.rdchat.ru/gateway');
 		});
 
 		test('uses custom CDN domain for canary', () => {
-			expect(endpoints.static_cdn).toBe('https://cdn-canary.fluxer.app');
+			expect(endpoints.static_cdn).toBe('https://cdn-canary.rdchat.ru');
 		});
 	});
 

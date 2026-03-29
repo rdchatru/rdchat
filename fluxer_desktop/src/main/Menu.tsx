@@ -183,20 +183,20 @@ export function createApplicationMenu(): void {
 			{
 				label: 'Website',
 				click: async () => {
-					await shell.openExternal('https://fluxer.app');
+					await shell.openExternal('https://rdchat.ru');
 				},
 			},
 			{
 				label: 'GitHub',
 				click: async () => {
-					await shell.openExternal('https://github.com/fluxerapp/fluxer');
+					await shell.openExternal('https://github.com/rdchatru/rdchat');
 				},
 			},
 			{type: 'separator'},
 			{
 				label: 'Report Issue',
 				click: async () => {
-					await shell.openExternal('https://github.com/fluxerapp/fluxer/issues');
+					await shell.openExternal('https://github.com/rdchat/rdchatru/issues');
 				},
 			},
 		],

@@ -396,8 +396,8 @@ generate_bluesky_oauth_keys() {
     jq --arg kid "dev-key-1" \
        --arg key_path "$key_path" \
        '.auth.bluesky.logo_uri = "https://static.rdchat.ru/web/apple-touch-icon.png" |
-        .auth.bluesky.tos_uri = "https://fluxer.app/terms" |
-        .auth.bluesky.policy_uri = "https://fluxer.app/privacy" |
+        .auth.bluesky.tos_uri = "https://rdchat.ru/terms" |
+        .auth.bluesky.policy_uri = "https://rdchat.ru/privacy" |
         .auth.bluesky.token_endpoint_auth_signing_alg = "ES256" |
         .auth.bluesky.keys = [{
             "kid": $kid,

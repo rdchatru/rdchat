@@ -56,7 +56,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 								class="relative z-10 flex shrink-0 items-center transition-opacity hover:opacity-80"
 								aria-label={ctx.i18n.getMessage('navigation.go_home', ctx.locale)}
 							>
-								<FluxerLogoWordmarkIcon class="h-8 text-[#4641D9] md:h-9" />
+								<FluxerLogoWordmarkIcon class="h-8 text-gray-950 md:h-9" />
 								<span class="absolute right-0 -bottom-1.5 whitespace-nowrap rounded-full border border-white bg-[#4641D9] px-1.5 py-0.5 font-bold text-[8px] text-white leading-none">
 									{ctx.i18n.getMessage('beta_and_access.public_beta', ctx.locale)}
 								</span>
@@ -81,13 +81,13 @@ export function Navigation(props: NavigationProps): JSX.Element {
 									{ctx.i18n.getMessage('company_and_resources.help.label', ctx.locale)}
 								</a>
 								<a
-									href="https://docs.fluxer.app"
+									href="https://docs.rdchat.ru"
 									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
 								>
 									{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 								</a>
 								<a
-									href="https://blog.fluxer.app"
+									href="https://blog.rdchat.ru"
 									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
 								>
 									{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
@@ -102,7 +102,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 						</div>
 						<div class="flex items-center gap-1 xl:gap-2">
 							<a
-								href="https://bsky.app/profile/fluxer.app"
+								href="https://bsky.app/profile/rdchat.ru"
 								class="hidden items-center rounded-lg p-2 text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] lg:flex"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -120,7 +120,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 								<GithubIcon class="h-5 w-5" />
 							</a>
 							<a
-								href="https://blog.fluxer.app/rss/"
+								href="https://blog.rdchat.ru/rss/"
 								class="marketing-nav-rss hidden items-center rounded-lg p-2 text-[#4641D9] transition-colors hover:bg-gray-100 hover:text-[#3d38c7] xl:flex"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -165,7 +165,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 							class="flex items-center gap-3 rounded-xl px-2 py-1 transition-colors hover:bg-gray-50"
 							aria-label={ctx.i18n.getMessage('navigation.go_home', ctx.locale)}
 						>
-							<FluxerLogoWordmarkIcon class="h-7 text-[#4641D9]" />
+							<FluxerLogoWordmarkIcon class="h-7 text-gray-950" />
 						</a>
 						<label for="nav-toggle" class="cursor-pointer rounded-lg p-2 transition-colors hover:bg-gray-100">
 							<XIcon class="h-6 w-6 text-gray-900" />
@@ -210,13 +210,13 @@ export function Navigation(props: NavigationProps): JSX.Element {
 										{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 									</a>
 									<a
-										href="https://docs.fluxer.app"
+										href="https://docs.rdchat.ru"
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 									>
 										{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 									</a>
 									<a
-										href="https://blog.fluxer.app"
+										href="https://blog.rdchat.ru"
 										class="flex items-center gap-2 rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 									>
 										{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
@@ -236,7 +236,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 								</p>
 								<div class="flex flex-col gap-1">
 									<a
-										href="https://bsky.app/profile/fluxer.app"
+										href="https://bsky.app/profile/rdchat.ru"
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 										target="_blank"
 										rel="noopener noreferrer"

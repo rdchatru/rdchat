@@ -39,11 +39,11 @@
 				{
 					"type": "archive",
 					"only-arches": ["x86_64"],
-					"url": "https://api.fluxer.app/dl/desktop/stable/linux/x64/latest/tar_gz",
+					"url": "https://api.rdchat.ru/dl/desktop/stable/linux/x64/latest/tar_gz",
 					"sha256": "PLACEHOLDER_SHA256_X64",
 					"x-checker-data": {
 						"type": "json",
-						"url": "https://api.fluxer.app/dl/desktop/stable/linux/x64/latest",
+						"url": "https://api.rdchat.ru/dl/desktop/stable/linux/x64/latest",
 						"version-query": ".version",
 						"url-query": ".files.tar_gz.url"
 					}
@@ -51,11 +51,11 @@
 				{
 					"type": "archive",
 					"only-arches": ["aarch64"],
-					"url": "https://api.fluxer.app/dl/desktop/stable/linux/arm64/latest/tar_gz",
+					"url": "https://api.rdchat.ru/dl/desktop/stable/linux/arm64/latest/tar_gz",
 					"sha256": "PLACEHOLDER_SHA256_ARM64",
 					"x-checker-data": {
 						"type": "json",
-						"url": "https://api.fluxer.app/dl/desktop/stable/linux/arm64/latest",
+						"url": "https://api.rdchat.ru/dl/desktop/stable/linux/arm64/latest",
 						"version-query": ".version",
 						"url-query": ".files.tar_gz.url"
 					}

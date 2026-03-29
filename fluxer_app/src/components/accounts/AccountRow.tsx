@@ -32,7 +32,7 @@ import {observer} from 'mobx-react-lite';
 import type React from 'react';
 import {useCallback, useRef} from 'react';
 
-const STANDARD_INSTANCES = new Set(['web.fluxer.app', 'web.canary.fluxer.app']);
+const STANDARD_INSTANCES = new Set(['web.rdchat.ru', 'web.canary.rdchat.ru']);
 
 const logger = new Logger('AccountRow');
 

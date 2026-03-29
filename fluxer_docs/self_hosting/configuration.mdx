@@ -141,7 +141,7 @@ Global authentication configuration.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| bluesky? | [bluesky](#bluesky) | Bluesky OAuth client configuration. Default: `{"enabled":true,"client_name":"Fluxer","client_uri":"","logo_uri":"https://static.rdchat.ru/web/apple-touch-icon.png","tos_uri":"https://fluxer.app/terms","policy_uri":"https://fluxer.app/privacy","keys":[]}` |
+| bluesky? | [bluesky](#bluesky) | Bluesky OAuth client configuration. Default: `{"enabled":true,"client_name":"Fluxer","client_uri":"","logo_uri":"https://static.rdchat.ru/web/apple-touch-icon.png","tos_uri":"https://rdchat.ru/terms","policy_uri":"https://rdchat.ru/privacy","keys":[]}` |
 | connection_initiation_secret | string | Secret key for signing connection initiation tokens. |
 | passkeys? | [passkeys](#passkeys) | Passkey configuration. Default: `{}` |
 | sudo_mode_secret | string | Secret key for verifying sudo mode tokens. |
@@ -164,18 +164,18 @@ WebAuthn/Passkeys relying party settings.
 
 | Property | Type | Description |
 |----------|------|-------------|
-| additional_allowed_origins? | array&lt;string&gt; | List of allowed origins for WebAuthn registration/authentication. Default: `["https://web.fluxer.app","https://web.canary.fluxer.app"]` |
-| rp_id? | string | Relying Party ID (domain) for WebAuthn credentials. Default: `fluxer.app` |
+| additional_allowed_origins? | array&lt;string&gt; | List of allowed origins for WebAuthn registration/authentication. Default: `["https://web.rdchat.ru","https://web.canary.rdchat.ru"]` |
+| rp_id? | string | Relying Party ID (domain) for WebAuthn credentials. Default: `rdchat.ru` |
 | rp_name? | string | Relying Party name displayed to users. Default: `Fluxer` |
 
 <Expandable title="Example JSON">
 ```json
 {
   "additional_allowed_origins": [
-    "https://web.fluxer.app",
-    "https://web.canary.fluxer.app"
+    "https://web.rdchat.ru",
+    "https://web.canary.rdchat.ru"
   ],
-  "rp_id": "fluxer.app",
+  "rp_id": "rdchat.ru",
   "rp_name": "Fluxer"
 }
 ```
@@ -216,8 +216,8 @@ Bluesky OAuth client configuration.
 | enabled? | boolean | Whether Bluesky OAuth connections are enabled. Default: `true` |
 | keys? | array&lt;[bluesky_key](#bluesky-key)&gt; | Key definitions used to sign private key JWT assertions. Default: `[]` |
 | logo_uri? | string | Optional logo presented during authorization. Default: `https://static.rdchat.ru/web/apple-touch-icon.png` |
-| policy_uri? | string | Privacy policy URI exposed to Bluesky. Default: `https://fluxer.app/privacy` |
-| tos_uri? | string | Terms of service URI exposed to Bluesky. Default: `https://fluxer.app/terms` |
+| policy_uri? | string | Privacy policy URI exposed to Bluesky. Default: `https://rdchat.ru/privacy` |
+| tos_uri? | string | Terms of service URI exposed to Bluesky. Default: `https://rdchat.ru/terms` |
 
 <Expandable title="Example JSON">
 ```json
@@ -227,8 +227,8 @@ Bluesky OAuth client configuration.
   "enabled": true,
   "keys": [],
   "logo_uri": "https://static.rdchat.ru/web/apple-touch-icon.png",
-  "policy_uri": "https://fluxer.app/privacy",
-  "tos_uri": "https://fluxer.app/terms"
+  "policy_uri": "https://rdchat.ru/privacy",
+  "tos_uri": "https://rdchat.ru/terms"
 }
 ```
 </Expandable>

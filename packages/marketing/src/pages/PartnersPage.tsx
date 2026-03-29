@@ -254,7 +254,7 @@ function renderCtaSection(ctx: MarketingContext): JSX.Element {
 						</ul>
 					</div>
 					<a
-						href="mailto:partners@fluxer.app"
+						href="mailto:partners@rdchat.ru"
 						class="label inline-block rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
 					>
 						{ctx.i18n.getMessage('partner_program.become_partner.apply_email', ctx.locale)}

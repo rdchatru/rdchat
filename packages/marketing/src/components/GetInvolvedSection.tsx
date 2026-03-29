@@ -79,7 +79,7 @@ export function GetInvolvedSection(props: GetInvolvedSectionProps): JSX.Element 
 						<p class="body-lg text-gray-700 leading-relaxed">
 							{ctx.i18n.getMessage('social_and_feeds.stay_updated_cta', ctx.locale)}{' '}
 							<a
-								href="https://bsky.app/profile/fluxer.app/rss"
+								href="https://bsky.app/profile/rdchat.ru/rss"
 								class="underline hover:text-[#4641D9]"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -88,7 +88,7 @@ export function GetInvolvedSection(props: GetInvolvedSectionProps): JSX.Element 
 							</a>{' '}
 							{ctx.i18n.getMessage('general.or', ctx.locale)}{' '}
 							<a
-								href="https://blog.fluxer.app/rss/"
+								href="https://blog.rdchat.ru/rss/"
 								class="underline hover:text-[#4641D9]"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -100,7 +100,7 @@ export function GetInvolvedSection(props: GetInvolvedSectionProps): JSX.Element 
 					</div>
 					<div class="mt-auto flex flex-col items-center">
 						<MarketingButton
-							href="https://bsky.app/profile/fluxer.app"
+							href="https://bsky.app/profile/rdchat.ru"
 							size="medium"
 							target="_blank"
 							rel="noopener noreferrer"

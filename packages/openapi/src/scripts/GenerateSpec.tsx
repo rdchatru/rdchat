@@ -87,7 +87,7 @@ async function main(): Promise<void> {
 			version: '1.0.0',
 			description:
 				'API for Fluxer, a free and open source instant messaging and VoIP platform built for friends, groups, and communities.',
-			serverUrl: 'https://api.fluxer.app/v1',
+			serverUrl: 'https://api.rdchat.ru/v1',
 		});
 
 		const spec = await generator.generate();

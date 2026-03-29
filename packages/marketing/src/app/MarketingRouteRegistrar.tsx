@@ -121,8 +121,8 @@ function registerExternalRedirects(app: Hono): void {
 	});
 
 	app.get('/regional-restrictions', (c) => c.redirect('/help/regional-restrictions', HttpStatus.MOVED_PERMANENTLY));
-	app.get('/blog', (c) => c.redirect('https://blog.fluxer.app', HttpStatus.FOUND));
-	app.get('/blog/*', (c) => c.redirect('https://blog.fluxer.app', HttpStatus.FOUND));
+	app.get('/blog', (c) => c.redirect('https://blog.rdchat.ru', HttpStatus.FOUND));
+	app.get('/blog/*', (c) => c.redirect('https://blog.rdchat.ru', HttpStatus.FOUND));
 }
 
 function registerSystemContentRoutes(app: Hono, contextFactory: MarketingContextFactory): void {
@@ -137,7 +137,7 @@ function registerSystemContentRoutes(app: Hono, contextFactory: MarketingContext
 		const expires = `${new Date().getUTCFullYear() + 1}-01-05T13:37:00.000Z`;
 		const body = [
 			`Contact: ${securityUrl}`,
-			'Contact: mailto:security@fluxer.app',
+			'Contact: mailto:security@rdchat.ru',
 			`Expires: ${expires}`,
 			'Preferred-Languages: en',
 			`Policy: ${securityUrl}`,

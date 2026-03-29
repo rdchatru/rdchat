@@ -97,7 +97,7 @@ export function Footer(props: FooterProps): JSX.Element {
 				</div>
 
 				<div class="mb-10">
-					<FluxerLogoWordmarkIcon class="h-8" />
+					<FluxerLogoWordmarkIcon class="h-8 text-white" />
 				</div>
 
 				<div class="grid grid-cols-1 gap-8 sm:grid-cols-3 sm:gap-10 md:gap-x-12 md:gap-y-10 min-[480px]:grid-cols-2 min-[480px]:gap-x-6 min-[480px]:gap-y-8">
@@ -110,16 +110,16 @@ export function Footer(props: FooterProps): JSX.Element {
 						<FooterLink href="https://github.com/fluxerapp/fluxer">
 							{ctx.i18n.getMessage('footer.source_code', ctx.locale)}
 						</FooterLink>
-						<FooterLink href="https://bsky.app/profile/fluxer.app">
+						<FooterLink href="https://bsky.app/profile/rdchat.ru">
 							{ctx.i18n.getMessage('footer.bluesky_social_media', ctx.locale)}
 						</FooterLink>
 						<li>
 							<div class="flex items-center gap-2">
-								<a href="https://blog.fluxer.app" class={linkClass}>
+								<a href="https://blog.rdchat.ru" class={linkClass}>
 									{ctx.i18n.getMessage('company_and_resources.blog', ctx.locale)}
 								</a>
 								<a
-									href="https://blog.fluxer.app/rss/"
+									href="https://blog.rdchat.ru/rss/"
 									title={ctx.i18n.getMessage('footer.rss_feed', ctx.locale)}
 									target="_blank"
 									rel="noopener noreferrer"
@@ -129,14 +129,14 @@ export function Footer(props: FooterProps): JSX.Element {
 								</a>
 							</div>
 						</li>
-						<FooterLink href="https://blog.fluxer.app/roadmap-2026">
+						<FooterLink href="https://blog.rdchat.ru/roadmap-2026">
 							{ctx.i18n.getMessage('footer.roadmap', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/help')}>
 							{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/press')}>{ctx.i18n.getMessage('footer.press', ctx.locale)}</FooterLink>
-						<FooterLink href="https://docs.fluxer.app">
+						<FooterLink href="https://docs.rdchat.ru">
 							{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/careers')}>
@@ -162,8 +162,8 @@ export function Footer(props: FooterProps): JSX.Element {
 						title={ctx.i18n.getMessage('footer.connect', ctx.locale)}
 						class="sm:col-span-1 min-[480px]:col-span-2"
 					>
-						<FooterLink href="mailto:press@fluxer.app">press@fluxer.app</FooterLink>
-						<FooterLink href="mailto:support@fluxer.app">support@fluxer.app</FooterLink>
+						<FooterLink href="mailto:press@rdchat.ru">press@rdchat.ru</FooterLink>
+						<FooterLink href="mailto:support@rdchat.ru">support@rdchat.ru</FooterLink>
 						<FooterLink href={link('/help/report-bug')}>
 							{ctx.i18n.getMessage('footer.report_a_bug', ctx.locale)}
 						</FooterLink>

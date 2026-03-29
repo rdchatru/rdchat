@@ -209,7 +209,7 @@ export class AuthLoginService {
 			headers['x-fluxer-platform'] = payload.platform;
 		}
 
-		const syntheticRequest = new Request('https://api.fluxer.app/auth/ip-authorization', {
+		const syntheticRequest = new Request('https://api.rdchat.ru/auth/ip-authorization', {
 			headers,
 			method: 'POST',
 		});

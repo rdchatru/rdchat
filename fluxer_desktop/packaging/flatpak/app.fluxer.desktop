@@ -1,10 +1,10 @@
 [Desktop Entry]
-Name=Fluxer
+Name=RdChat
 Comment=Instant messaging and VoIP application
-Exec=fluxer %U
-Icon=app.fluxer
+Exec=rdchat %U
+Icon=app.rdchat
 Type=Application
 Categories=Network;InstantMessaging;
-StartupWMClass=fluxer
-MimeType=x-scheme-handler/fluxer;
+StartupWMClass=rdchat
+MimeType=x-scheme-handler/rdchat;
 Terminal=false

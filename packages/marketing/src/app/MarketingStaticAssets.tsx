@@ -32,22 +32,25 @@ export interface ApplyMarketingStaticAssetsOptions {
 }
 
 export function applyMarketingStaticAssets(options: ApplyMarketingStaticAssetsOptions): void {
-	options.app.use(
-		'/static/*',
-		serveStatic({
-			root: options.publicDir,
-			rewriteRequestPath: (path: string) => toRelativeStaticPath(stripLeadingBasePath(path, options.basePath)),
-			onNotFound: (_path) => {
-				options.logger.error(
-					{
-						publicDir: options.publicDir,
-						cwd: process.cwd(),
-					},
-					'Marketing static asset not found (expected packages/marketing/public/static/app.css to exist)',
-				);
-			},
-		}),
-	);
+	for (const route of ['/static/*', '/marketing/*', '/web/*']) {
+		options.app.use(
+			route,
+			serveStatic({
+				root: options.publicDir,
+				rewriteRequestPath: (path: string) => toRelativeStaticPath(stripLeadingBasePath(path, options.basePath)),
+				onNotFound: (_path) => {
+					options.logger.error(
+						{
+							publicDir: options.publicDir,
+							cwd: process.cwd(),
+							route,
+						},
+						'Marketing static asset not found (expected branding and web assets to exist in packages/marketing/public)',
+					);
+				},
+			}),
+		);
+	}
 }
 
 function stripLeadingBasePath(path: string, basePath: string): string {

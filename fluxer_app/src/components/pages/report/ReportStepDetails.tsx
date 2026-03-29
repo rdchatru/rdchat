@@ -108,7 +108,7 @@ export const ReportStepDetails: React.FC<Props> = ({
 								type="url"
 								value={formValues.messageLink}
 								onChange={(e) => onFieldChange('messageLink', e.target.value)}
-								placeholder="https://fluxer.app/channels/..."
+								placeholder="https://rdchat.ru/channels/..."
 								autoComplete="off"
 								error={fieldErrors.messageLink}
 								footer={

@@ -29,7 +29,7 @@ export const CSP_HOSTS = {
 		'https://challenges.cloudflare.com',
 	],
 	IMAGE: [
-		'https://*.fluxer.app',
+		'https://*.rdchat.ru',
 		'https://i.ytimg.com',
 		'https://*.youtube.com',
 		'https://fluxerusercontent.com',
@@ -38,7 +38,7 @@ export const CSP_HOSTS = {
 		'https://fluxer.media',
 	],
 	MEDIA: [
-		'https://*.fluxer.app',
+		'https://*.rdchat.ru',
 		'https://*.youtube.com',
 		'https://fluxerusercontent.com',
 		'https://static.rdchat.ru',
@@ -46,23 +46,23 @@ export const CSP_HOSTS = {
 		'https://fluxer.media',
 	],
 	SCRIPT: [
-		'https://*.fluxer.app',
+		'https://*.rdchat.ru',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com',
 		'https://challenges.cloudflare.com',
 		'https://static.rdchat.ru',
 	],
 	STYLE: [
-		'https://*.fluxer.app',
+		'https://*.rdchat.ru',
 		'https://hcaptcha.com',
 		'https://*.hcaptcha.com',
 		'https://challenges.cloudflare.com',
 		'https://static.rdchat.ru',
 	],
-	FONT: ['https://*.fluxer.app', 'https://static.rdchat.ru'],
+	FONT: ['https://*.rdchat.ru', 'https://static.rdchat.ru'],
 	CONNECT: [
-		'https://*.fluxer.app',
-		'wss://*.fluxer.app',
+		'https://*.rdchat.ru',
+		'wss://*.rdchat.ru',
 		'https://*.fluxer.media',
 		'wss://*.fluxer.media',
 		'https://hcaptcha.com',
@@ -75,8 +75,8 @@ export const CSP_HOSTS = {
 		'http://127.0.0.1:21863',
 		'http://127.0.0.1:21864',
 	],
-	WORKER: ['https://*.fluxer.app', 'https://static.rdchat.ru', 'blob:'],
-	MANIFEST: ['https://*.fluxer.app'],
+	WORKER: ['https://*.rdchat.ru', 'https://static.rdchat.ru', 'blob:'],
+	MANIFEST: ['https://*.rdchat.ru'],
 } as const;
 
 export interface CSPOptions {

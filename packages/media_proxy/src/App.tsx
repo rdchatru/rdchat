@@ -63,7 +63,7 @@ import {Hono} from 'hono';
 import {HTTPException} from 'hono/http-exception';
 import * as v from 'valibot';
 
-const FLUXER_USER_AGENT = 'Mozilla/5.0 (compatible; Fluxerbot/1.0; +https://fluxer.app)';
+const FLUXER_USER_AGENT = 'Mozilla/5.0 (compatible; Fluxerbot/1.0; +https://rdchat.ru)';
 
 export interface CreateMediaProxyAppOptions {
 	config: MediaProxyConfig;

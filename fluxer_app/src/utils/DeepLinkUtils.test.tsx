@@ -20,8 +20,8 @@
 import {parseChannelJumpLink, parseChannelUrl, parseMessageJumpLink} from '@app/utils/DeepLinkUtils';
 import {afterAll, beforeAll, describe, expect, test} from 'vitest';
 
-const CANARY_BASE = 'https://canary.fluxer.app';
-const STABLE_BASE = 'https://fluxer.app';
+const CANARY_BASE = 'https://canary.rdchat.ru';
+const STABLE_BASE = 'https://rdchat.ru';
 const CHANNEL_LINKS = [
 	`${CANARY_BASE}/channels/@me/1130650140672000000/1447659936007000077`,
 	`${CANARY_BASE}/channels/@me/1130650140672000000`,

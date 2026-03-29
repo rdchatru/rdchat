@@ -22,7 +22,7 @@ import type {Context, Next} from 'hono';
 
 export async function BlockAppOriginMiddleware(ctx: Context, next: Next) {
 	const origin = ctx.req.header('origin');
-	if (origin === 'https://web.fluxer.app' || origin === 'https://web.canary.fluxer.app') {
+	if (origin === 'https://web.rdchat.ru' || origin === 'https://web.canary.rdchat.ru') {
 		throw new InvalidApiOriginError();
 	}
 	await next();

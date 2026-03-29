@@ -99,8 +99,8 @@ function renderContributeSection(ctx: MarketingContext): JSX.Element {
 						'company_and_resources.source_and_contribution.translation.help_translate',
 						ctx.locale,
 					)}
-					buttonText="i18n@fluxer.app"
-					buttonHref="mailto:i18n@fluxer.app"
+					buttonText="i18n@rdchat.ru"
+					buttonHref="mailto:i18n@rdchat.ru"
 				/>
 				<SupportCard
 					ctx={ctx}
@@ -126,8 +126,8 @@ function renderContributeSection(ctx: MarketingContext): JSX.Element {
 					icon="shield_check"
 					title={ctx.i18n.getMessage('misc_labels.trust_and_safety', ctx.locale)}
 					description={ctx.i18n.getMessage('app.communities.moderation.report_people_or_communities', ctx.locale)}
-					buttonText="safety@fluxer.app"
-					buttonHref="mailto:safety@fluxer.app"
+					buttonText="safety@rdchat.ru"
+					buttonHref="mailto:safety@rdchat.ru"
 				/>
 				<SupportCard
 					ctx={ctx}
@@ -174,10 +174,10 @@ function renderCommunityTeamSection(ctx: MarketingContext): JSX.Element {
 				</div>
 				<div class="mt-10 text-center md:mt-12">
 					<a
-						href="mailto:careers@fluxer.app"
+						href="mailto:careers@rdchat.ru"
 						class="label inline-flex items-center justify-center rounded-xl bg-[#4641D9] px-8 py-4 text-base text-white shadow-lg transition hover:bg-opacity-90 md:text-lg"
 					>
-						careers@fluxer.app
+						careers@rdchat.ru
 					</a>
 				</div>
 			</div>
@@ -230,10 +230,10 @@ function renderCtaSection(ctx: MarketingContext): JSX.Element {
 					</p>
 					<div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
 						<a
-							href="mailto:careers@fluxer.app"
+							href="mailto:careers@rdchat.ru"
 							class="label inline-flex items-center justify-center rounded-xl bg-white px-8 py-4 text-[#4641D9] shadow-lg transition hover:bg-gray-100"
 						>
-							careers@fluxer.app
+							careers@rdchat.ru
 						</a>
 						<a
 							href="https://fluxer.gg/fluxer-hq"

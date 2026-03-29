@@ -32,8 +32,8 @@
 
     <key>com.apple.developer.associated-domains</key>
     <array>
-        <string>webcredentials:fluxer.app</string>
-        <string>webcredentials:web.fluxer.app</string>
+        <string>webcredentials:rdchat.ru</string>
+        <string>webcredentials:web.rdchat.ru</string>
     </array>
 </dict>
 </plist>

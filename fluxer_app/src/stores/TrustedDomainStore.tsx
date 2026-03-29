@@ -21,8 +21,8 @@ import UserSettingsStore from '@app/stores/UserSettingsStore';
 import {makeAutoObservable} from 'mobx';
 
 const IMPLICITLY_TRUSTED_DOMAINS = [
-	'fluxer.app',
-	'*.fluxer.app',
+	'rdchat.ru',
+	'*.rdchat.ru',
 	'fluxer.gg',
 	'fluxer.gift',
 	'fluxerusercontent.com',

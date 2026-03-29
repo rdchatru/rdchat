@@ -165,7 +165,7 @@ export async function startDeepLinkHandling(): Promise<void> {
 	}
 }
 
-const EXTRA_INTERNAL_CHANNEL_HOSTS = ['fluxer.app', 'canary.fluxer.app'];
+const EXTRA_INTERNAL_CHANNEL_HOSTS = ['rdchat.ru', 'canary.rdchat.ru'];
 
 export function isInternalChannelHost(host: string): boolean {
 	if (!host) return false;

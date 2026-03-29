@@ -6,7 +6,7 @@
     "description": "API for Fluxer, a free and open source instant messaging and VoIP platform built for friends, groups, and communities.",
     "contact": {
       "name": "Fluxer Developers",
-      "email": "developers@fluxer.app"
+      "email": "developers@rdchat.ru"
     },
     "license": {
       "name": "AGPL-3.0",
@@ -15,7 +15,7 @@
   },
   "servers": [
     {
-      "url": "https://api.fluxer.app/v1",
+      "url": "https://api.rdchat.ru/v1",
       "description": "Production API"
     }
   ],

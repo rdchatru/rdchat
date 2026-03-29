@@ -78,12 +78,12 @@ describe('DownloadService.resolveLatestDesktopRedirect', () => {
 			plat: 'darwin',
 			arch: 'x64',
 			format: 'dmg',
-			host: 'api.fluxer.app',
+			host: 'api.rdchat.ru',
 			forwardedProto: 'https',
-			requestUrl: 'https://api.fluxer.app/dl/desktop/stable/darwin/x64/latest/dmg',
+			requestUrl: 'https://api.rdchat.ru/dl/desktop/stable/darwin/x64/latest/dmg',
 		});
 
-		expect(result).toBe('https://api.fluxer.app/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg');
+		expect(result).toBe('https://api.rdchat.ru/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg');
 		expect(listObjects).toHaveBeenCalledTimes(1);
 	});
 
@@ -108,12 +108,12 @@ describe('DownloadService.resolveLatestDesktopRedirect', () => {
 			plat: 'darwin',
 			arch: 'x64',
 			format: 'dmg',
-			host: 'api.fluxer.app',
+			host: 'api.rdchat.ru',
 			forwardedProto: 'https',
-			requestUrl: 'https://api.fluxer.app/dl/desktop/stable/darwin/x64/latest/dmg',
+			requestUrl: 'https://api.rdchat.ru/dl/desktop/stable/darwin/x64/latest/dmg',
 		});
 
-		expect(result).toBe('https://api.fluxer.app/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg');
+		expect(result).toBe('https://api.rdchat.ru/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg');
 		expect(storageService.listObjectsSpy).not.toHaveBeenCalled();
 	});
 });

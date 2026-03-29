@@ -12,7 +12,7 @@ So, you're thinking about creating a Fluxer bot, huh? Think no further, for this
 - A text/code editor (such as [VS Code](https://code.visualstudio.com/)) or an integrated development environment (IDE)
 - Some basic programming skills and familiarity with JavaScript/Node.js
 - [Node.js](https://nodejs.org/en) (a recent LTS version is fine) installed on your system
-- An account registered at [Fluxer.app](https://web.fluxer.app/register) (though you're not forced to use this instance, of course!)
+- An account registered at [rdchat.ru](https://web.rdchat.ru/register) (though you're not forced to use this instance, of course!)
 - A community (referred to as a guild in the API) that you've created
 
 ### Step 1: Open "User Settings" in the bottom-left
@@ -115,7 +115,7 @@ if (!token) {
   throw new Error('You forgot the token!');
 }
 
-const rest = new REST({api: 'https://api.fluxer.app', version: '1'}).setToken(token);
+const rest = new REST({api: 'https://api.rdchat.ru', version: '1'}).setToken(token);
 
 const gateway = new WebSocketManager({
   intents: 0,

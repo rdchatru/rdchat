@@ -99,17 +99,17 @@
 				{
 					"anchor": "Blog",
 					"icon": "pencil",
-					"href": "https://blog.fluxer.app"
+					"href": "https://blog.rdchat.ru"
 				},
 				{
 					"anchor": "Help center",
 					"icon": "life-ring",
-					"href": "https://fluxer.app/help"
+					"href": "https://rdchat.ru/help"
 				},
 				{
 					"anchor": "Donate",
 					"icon": "heart",
-					"href": "https://fluxer.app/donate"
+					"href": "https://rdchat.ru/donate"
 				},
 				{
 					"anchor": "Source code",
@@ -119,12 +119,12 @@
 				{
 					"anchor": "Security",
 					"icon": "shield-check",
-					"href": "https://fluxer.app/security"
+					"href": "https://rdchat.ru/security"
 				},
 				{
 					"anchor": "Bluesky",
 					"icon": "butterfly",
-					"href": "https://bsky.app/profile/fluxer.app"
+					"href": "https://bsky.app/profile/rdchat.ru"
 				}
 			]
 		}
@@ -133,13 +133,13 @@
 		"links": [
 			{
 				"label": "Support",
-				"href": "mailto:developers@fluxer.app"
+				"href": "mailto:developers@rdchat.ru"
 			}
 		],
 		"primary": {
 			"type": "button",
 			"label": "Open Fluxer",
-			"href": "https://web.fluxer.app/channels/@me"
+			"href": "https://web.rdchat.ru/channels/@me"
 		}
 	},
 	"logo": {

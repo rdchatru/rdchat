@@ -225,7 +225,7 @@ export const InstanceSelector = observer(function InstanceSelector({
 		return null;
 	}, [discoveryStatus]);
 
-	const placeholder = t`Enter instance URL (e.g. fluxer.app)`;
+	const placeholder = t`Enter instance URL (e.g. rdchat.ru)`;
 
 	return (
 		<div className={clsx(styles.container, className)}>

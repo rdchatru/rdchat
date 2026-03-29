@@ -10,13 +10,13 @@ cask "fluxer" do
     sha256 "PLACEHOLDER_SHA256_X64"
   end
 
-  url "https://api.fluxer.app/dl/desktop/stable/darwin/#{arch}/#{version}/dmg"
+  url "https://api.rdchat.ru/dl/desktop/stable/darwin/#{arch}/#{version}/dmg"
   name "Fluxer"
   desc "Instant messaging and VoIP application"
-  homepage "https://fluxer.app"
+  homepage "https://rdchat.ru"
 
   livecheck do
-    url "https://api.fluxer.app/dl/desktop/stable/darwin/arm64/latest"
+    url "https://api.rdchat.ru/dl/desktop/stable/darwin/arm64/latest"
     strategy :json do |json|
       json["version"]
     end
@@ -25,7 +25,7 @@ cask "fluxer" do
   auto_updates true
   depends_on macos: ">= :catalina"
 
-  app "Fluxer.app"
+  app "rdchat.ru"
 
   zap trash: [
     "~/Library/Application Support/Fluxer",

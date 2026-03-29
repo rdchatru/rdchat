@@ -99,10 +99,10 @@ export const MarkdownTab: React.FC = observer(() => {
 			{
 				title: t`Links`,
 				items: [
-					{label: '[text](url)', content: '[Masked Link](https://fluxer.app)'},
-					{label: '<url>', content: '<https://fluxer.app>'},
-					{label: 'url', content: 'https://fluxer.app'},
-					{label: '<email>', content: '<contact@fluxer.app>'},
+					{label: '[text](url)', content: '[Masked Link](https://rdchat.ru)'},
+					{label: '<url>', content: '<https://rdchat.ru>'},
+					{label: 'url', content: 'https://rdchat.ru'},
+					{label: '<email>', content: '<contact@rdchat.ru>'},
 				],
 			},
 			{

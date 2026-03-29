@@ -1,10 +1,10 @@
-# Maintainer: Fluxer Contributors <developers@fluxer.app>
-pkgname=fluxer-bin
+# Maintainer: Fluxer Contributors <developers@rdchat.ru>
+pkgname=rdchat-bin
 pkgver=PLACEHOLDER_VERSION
 pkgrel=1
 pkgdesc='Instant messaging and VoIP application'
 arch=('x86_64' 'aarch64')
-url='https://fluxer.app'
+url='https://rdchat.ru'
 license=('AGPL-3.0-or-later')
 depends=('gtk3' 'libnotify' 'nss' 'libxss' 'libxtst' 'xdg-utils'
          'at-spi2-core' 'util-linux-libs' 'libsecret' 'libappindicator-gtk3')
@@ -13,11 +13,11 @@ provides=('fluxer')
 conflicts=('fluxer')
 options=('!strip' '!debug')
 
-_filename_x86_64="fluxer-stable-${pkgver}-x86_64.tar.gz"
-_filename_aarch64="fluxer-stable-${pkgver}-aarch64.tar.gz"
+_filename_x86_64="rdchat-stable-${pkgver}-x86_64.tar.gz"
+_filename_aarch64="rdchat-stable-${pkgver}-aarch64.tar.gz"
 
-source_x86_64=("${_filename_x86_64}::https://api.fluxer.app/dl/desktop/stable/linux/x64/${pkgver}/tar_gz")
-source_aarch64=("${_filename_aarch64}::https://api.fluxer.app/dl/desktop/stable/linux/arm64/${pkgver}/tar_gz")
+source_x86_64=("${_filename_x86_64}::https://api.rdchat.ru/dl/desktop/stable/linux/x64/${pkgver}/tar_gz")
+source_aarch64=("${_filename_aarch64}::https://api.rdchat.ru/dl/desktop/stable/linux/arm64/${pkgver}/tar_gz")
 sha256sums_x86_64=('PLACEHOLDER_SHA256_X64')
 sha256sums_aarch64=('PLACEHOLDER_SHA256_ARM64')
 

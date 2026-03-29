@@ -109,7 +109,7 @@ export function CurrentFeaturesSection(props: CurrentFeaturesSectionProps): JSX.
 						ctx.i18n.getMessage('platform_support.desktop.use_desktop_client_mobile_soon', ctx.locale),
 						ctx.i18n.getMessage('product_positioning.self_hosting.switch_between_instances', ctx.locale),
 					]}
-					learnMoreLink="https://docs.fluxer.app/self-hosting"
+					learnMoreLink="https://docs.rdchat.ru/self-hosting"
 				/>
 			</div>
 		</Section>
