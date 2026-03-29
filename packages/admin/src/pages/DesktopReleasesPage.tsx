@@ -25,6 +25,7 @@ import type {ApiError} from '@fluxer/admin/src/api/Errors';
 import {getErrorMessage, getErrorTitle} from '@fluxer/admin/src/api/Errors';
 import {ErrorCard} from '@fluxer/admin/src/components/ErrorDisplay';
 import {Layout} from '@fluxer/admin/src/components/Layout';
+import {Badge} from '@fluxer/admin/src/components/ui/Badge';
 import {FormFieldGroup} from '@fluxer/admin/src/components/ui/Form/FormFieldGroup';
 import {Input} from '@fluxer/admin/src/components/ui/Input';
 import {HStack} from '@fluxer/admin/src/components/ui/Layout/HStack';
@@ -60,6 +61,7 @@ interface FormatDescriptor {
 	label: string;
 	fileExtension: string;
 	archSuffixByArch: Record<DesktopArch, string>;
+	recommendedSupportFiles?: ReadonlyArray<string>;
 }
 
 const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor>> = {
@@ -72,6 +74,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x64',
 				arm64: 'arm64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 	],
 	darwin: [
@@ -83,6 +86,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x64',
 				arm64: 'arm64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 		{
 			format: 'zip',
@@ -92,6 +96,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x64',
 				arm64: 'arm64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 	],
 	linux: [
@@ -103,6 +108,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x86_64',
 				arm64: 'aarch64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 		{
 			format: 'deb',
@@ -112,6 +118,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'amd64',
 				arm64: 'arm64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 		{
 			format: 'rpm',
@@ -121,6 +128,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x86_64',
 				arm64: 'aarch64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 		{
 			format: 'tar_gz',
@@ -130,6 +138,7 @@ const FORMAT_DESCRIPTORS: Record<DesktopPlatform, ReadonlyArray<FormatDescriptor
 				x64: 'x64',
 				arm64: 'arm64',
 			},
+			recommendedSupportFiles: ['SHA256 checksum'],
 		},
 	],
 };
@@ -258,6 +267,44 @@ function buildApiBaseUrl(apiEndpoint: string): string {
 
 function getPlatformFormats(platform: DesktopPlatform): ReadonlyArray<FormatDescriptor> {
 	return FORMAT_DESCRIPTORS[platform];
+}
+
+function isFileEntry(entry: StorageEntry): boolean {
+	return entry.type === 'file';
+}
+
+interface ReleaseArtifactSlot {
+	descriptor: FormatDescriptor;
+	expectedFilename: string;
+	entry?: StorageEntry;
+}
+
+function buildArtifactSlots(
+	channel: DesktopChannel,
+	platform: DesktopPlatform,
+	arch: DesktopArch,
+	entries: Array<StorageEntry>,
+): Array<ReleaseArtifactSlot> {
+	return getPlatformFormats(platform).map((descriptor) => {
+		const expectedFilename = buildLegacyFilenameExample(channel, platform, arch, descriptor.format);
+		const entry = entries.find((item) => isFileEntry(item) && item.name === expectedFilename);
+
+		return {
+			descriptor,
+			expectedFilename,
+			entry,
+		};
+	});
+}
+
+function getManifestEntry(entries: Array<StorageEntry>): StorageEntry | undefined {
+	return entries.find((entry) => isFileEntry(entry) && entry.name === 'manifest.json');
+}
+
+function getSupportingEntries(entries: Array<StorageEntry>, artifactSlots: Array<ReleaseArtifactSlot>): Array<StorageEntry> {
+	const primaryNames = new Set(artifactSlots.map((slot) => slot.expectedFilename));
+
+	return entries.filter((entry) => isFileEntry(entry) && entry.name !== 'manifest.json' && !primaryNames.has(entry.name));
 }
 
 function buildLegacyFilenameExample(
@@ -470,37 +517,187 @@ const ReleaseInfoCard: FC<{
 	);
 };
 
-const ExpectedFilesCard: FC<{
+const PublishingChecklistCard: FC<{
+	config: Config;
+	selectedBucket: string;
 	selectedChannel: DesktopChannel;
 	selectedPlatform: DesktopPlatform;
 	selectedArch: DesktopArch;
-}> = ({selectedChannel, selectedPlatform, selectedArch}) => (
-	<Card padding="md">
-		<VStack gap={4}>
-			<div>
-				<Heading level={3} size="base">
-					Expected files
-				</Heading>
-				<Text size="sm" color="muted">
-					Upload binaries, blockmaps, and checksum files into the same prefix. The manifest should reference the binary
-					filenames exactly.
-				</Text>
-			</div>
-			<ul class="space-y-3">
-				{getPlatformFormats(selectedPlatform).map((descriptor) => (
-					<li class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
-						<Text weight="semibold" class="text-neutral-900">
-							{descriptor.label}
-						</Text>
-						<Text size="sm" color="muted" class="mt-1">
-							Example: <code class="font-mono">{buildLegacyFilenameExample(selectedChannel, selectedPlatform, selectedArch, descriptor.format)}</code>
-						</Text>
-					</li>
-				))}
-			</ul>
-		</VStack>
-	</Card>
-);
+	entries: Array<StorageEntry>;
+}> = ({config, selectedBucket, selectedChannel, selectedPlatform, selectedArch, entries}) => {
+	const artifactSlots = buildArtifactSlots(selectedChannel, selectedPlatform, selectedArch, entries);
+	const uploadedArtifacts = artifactSlots.filter((slot) => slot.entry);
+	const manifestEntry = getManifestEntry(entries);
+	const supportingEntries = getSupportingEntries(entries, artifactSlots);
+
+	return (
+		<Card padding="md">
+			<VStack gap={4}>
+				<div>
+					<Heading level={3} size="base">
+						Publishing checklist
+					</Heading>
+					<Text size="sm" color="muted">
+						Use this as the quick sanity check before users hit the desktop download page.
+					</Text>
+				</div>
+				<div class="grid gap-3 md:grid-cols-3">
+					<div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+						<HStack justify="between" class="items-start gap-3">
+							<div>
+								<Text size="xs" color="muted" class="uppercase tracking-wide">
+									Download packages
+								</Text>
+								<Text weight="semibold" class="mt-1 text-neutral-900">
+									{uploadedArtifacts.length} / {artifactSlots.length} uploaded
+								</Text>
+							</div>
+							<Badge size="sm" variant={uploadedArtifacts.length === artifactSlots.length ? 'success' : 'warning'}>
+								{uploadedArtifacts.length === artifactSlots.length ? 'Ready' : 'Missing files'}
+							</Badge>
+						</HStack>
+					</div>
+					<div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+						<HStack justify="between" class="items-start gap-3">
+							<div>
+								<Text size="xs" color="muted" class="uppercase tracking-wide">
+									Manifest
+								</Text>
+								<Text weight="semibold" class="mt-1 text-neutral-900">
+									{manifestEntry ? 'manifest.json uploaded' : 'Not uploaded yet'}
+								</Text>
+							</div>
+							<Badge size="sm" variant={manifestEntry ? 'success' : 'warning'}>
+								{manifestEntry ? 'Published' : 'Pending'}
+							</Badge>
+						</HStack>
+					</div>
+					<div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+						<HStack justify="between" class="items-start gap-3">
+							<div>
+								<Text size="xs" color="muted" class="uppercase tracking-wide">
+									Supporting files
+								</Text>
+								<Text weight="semibold" class="mt-1 text-neutral-900">
+									{supportingEntries.length} uploaded
+								</Text>
+							</div>
+							<Badge size="sm" variant={supportingEntries.length > 0 ? 'info' : 'neutral'}>
+								{supportingEntries.length > 0 ? 'Included' : 'Optional'}
+							</Badge>
+						</HStack>
+					</div>
+				</div>
+				<div class="rounded-xl border border-blue-200 bg-blue-50 p-4">
+					<Text size="sm" weight="semibold" class="text-blue-900">
+						Release flow
+					</Text>
+					<ol class="mt-3 space-y-2 pl-5 text-sm text-blue-900 list-decimal">
+						<li>Upload the actual downloadable packages for this lane, like AppImage, installer, DMG, or RPM.</li>
+						<li>Upload any matching checksum or blockmap sidecars in the same prefix.</li>
+						<li>Upload <code class="font-mono">manifest.json</code> only after the referenced files are in place.</li>
+					</ol>
+				</div>
+				<div class="flex flex-wrap gap-2">
+					<Button
+						href={buildDesktopReleasePath(config.basePath, {
+							bucket: selectedBucket,
+							channel: selectedChannel,
+							platform: selectedPlatform,
+							arch: selectedArch,
+						})}
+						variant="secondary"
+						size="small"
+					>
+						Refresh status
+					</Button>
+					<Button
+						href={`${buildApiBaseUrl(config.apiEndpoint)}/dl/desktop/${selectedChannel}/${selectedPlatform}/${selectedArch}/latest`}
+						variant="secondary"
+						size="small"
+						target="_blank"
+					>
+						Open latest metadata
+					</Button>
+				</div>
+			</VStack>
+		</Card>
+	);
+};
+
+const ExpectedFilesCard: FC<{
+	config: Config;
+	selectedBucket: string;
+	selectedChannel: DesktopChannel;
+	selectedPlatform: DesktopPlatform;
+	selectedArch: DesktopArch;
+	entries: Array<StorageEntry>;
+}> = ({config, selectedBucket, selectedChannel, selectedPlatform, selectedArch, entries}) => {
+	const artifactSlots = buildArtifactSlots(selectedChannel, selectedPlatform, selectedArch, entries);
+
+	return (
+		<Card padding="md">
+			<VStack gap={4}>
+				<div>
+					<Heading level={3} size="base">
+						Download packages
+					</Heading>
+					<Text size="sm" color="muted">
+						These are the primary files end users can download for this target. Missing items here will not have a working
+						download artifact to point at.
+					</Text>
+				</div>
+				<ul class="space-y-3">
+					{artifactSlots.map((slot) => (
+						<li class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+							<VStack gap={3}>
+								<HStack justify="between" class="items-start gap-3 flex-wrap">
+									<div>
+										<Text weight="semibold" class="text-neutral-900">
+											{slot.descriptor.label}
+										</Text>
+										<Text size="sm" color="muted" class="mt-1">
+											Upload with this exact filename:{' '}
+											<code class="font-mono">{slot.expectedFilename}</code>
+										</Text>
+									</div>
+									<Badge size="sm" variant={slot.entry ? 'success' : 'warning'}>
+										{slot.entry ? 'Uploaded' : 'Missing'}
+									</Badge>
+								</HStack>
+								{slot.descriptor.recommendedSupportFiles && slot.descriptor.recommendedSupportFiles.length > 0 && (
+									<Text size="sm" color="muted">
+										Recommended sidecars: {slot.descriptor.recommendedSupportFiles.join(', ')}.
+									</Text>
+								)}
+								{slot.entry && (
+									<div class="flex flex-wrap items-center gap-2">
+										<Text size="sm" color="muted">
+											{formatBytes(slot.entry.size)} uploaded
+										</Text>
+										<Button
+											href={buildDesktopReleaseDownloadPath(config.basePath, {
+												bucket: selectedBucket,
+												key: slot.entry.key,
+												channel: selectedChannel,
+												platform: selectedPlatform,
+												arch: selectedArch,
+											})}
+											variant="secondary"
+											size="small"
+										>
+											Download current file
+										</Button>
+									</div>
+								)}
+							</VStack>
+						</li>
+					))}
+				</ul>
+			</VStack>
+		</Card>
+	);
+};
 
 const UploadFilesCard: FC<{
 	config: Config;
@@ -511,44 +708,102 @@ const UploadFilesCard: FC<{
 	csrfToken: string;
 }> = ({config, selectedBucket, selectedChannel, selectedPlatform, selectedArch, csrfToken}) => (
 	<Card padding="md">
-		<Heading level={3} size="base" class="mb-4">
-			Upload binaries and checksum files
-		</Heading>
-		<form method="post" action={`${config.basePath}/desktop-releases?action=upload-files`} enctype="multipart/form-data">
-			<VStack gap={4}>
-				<CsrfInput token={csrfToken} />
-				<input type="hidden" name="bucket" value={selectedBucket} />
-				<input type="hidden" name="channel" value={selectedChannel} />
-				<input type="hidden" name="platform" value={selectedPlatform} />
-				<input type="hidden" name="arch" value={selectedArch} />
-				<FormFieldGroup
-					label="Files"
-					htmlFor="desktop-release-files"
-					helper="Upload release binaries, .sha256 files, blockmaps, and any other desktop release artifacts for this target."
-				>
-					<input
-						id="desktop-release-files"
-						type="file"
-						name="files"
-						multiple
-						required
-						class="block w-full rounded-lg border border-dashed border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-700"
-					/>
-				</FormFieldGroup>
-				<FormFieldGroup
-					label="Audit log reason"
-					htmlFor="desktop-release-files-audit-log-reason"
-					helper="Optional, but helpful when you're publishing a new version."
-				>
-					<Input id="desktop-release-files-audit-log-reason" name="audit_log_reason" placeholder="Release 1.2.3 desktop artifacts" />
-				</FormFieldGroup>
-				<Button type="submit" variant="brand">
-					Upload files
-				</Button>
-			</VStack>
-		</form>
+		<VStack gap={4}>
+			<div>
+				<Heading level={3} size="base">
+					Step 1: Upload downloadable files
+				</Heading>
+				<Text size="sm" color="muted">
+					Select the real release packages for this lane, plus any checksum or sidecar files that belong beside them.
+				</Text>
+			</div>
+			<div class="rounded-xl border border-neutral-200 bg-neutral-50 p-4">
+				<Text size="sm" weight="semibold" class="text-neutral-900">
+					What to upload here
+				</Text>
+				<ul class="mt-3 space-y-2 text-sm text-neutral-700">
+					{getPlatformFormats(selectedPlatform).map((descriptor) => (
+						<li>
+							{descriptor.label}: <code class="font-mono">{buildLegacyFilenameExample(selectedChannel, selectedPlatform, selectedArch, descriptor.format)}</code>
+						</li>
+					))}
+					<li>Optional sidecars such as <code class="font-mono">.sha256</code>, <code class="font-mono">.blockmap</code>, or signature files.</li>
+				</ul>
+			</div>
+			<form method="post" action={`${config.basePath}/desktop-releases?action=upload-files`} enctype="multipart/form-data">
+				<VStack gap={4}>
+					<CsrfInput token={csrfToken} />
+					<input type="hidden" name="bucket" value={selectedBucket} />
+					<input type="hidden" name="channel" value={selectedChannel} />
+					<input type="hidden" name="platform" value={selectedPlatform} />
+					<input type="hidden" name="arch" value={selectedArch} />
+					<FormFieldGroup
+						label="Files"
+						htmlFor="desktop-release-files"
+						helper="You can choose multiple files at once, for example the AppImage together with its checksum."
+					>
+						<input
+							id="desktop-release-files"
+							type="file"
+							name="files"
+							multiple
+							required
+							accept=".AppImage,.exe,.dmg,.zip,.deb,.rpm,.gz,.sha256,.blockmap,.sig,.json"
+							class="block w-full rounded-lg border border-dashed border-neutral-300 bg-neutral-50 px-4 py-3 text-sm text-neutral-700"
+						/>
+					</FormFieldGroup>
+					<FormFieldGroup
+						label="Audit log reason"
+						htmlFor="desktop-release-files-audit-log-reason"
+						helper="Optional, but helpful when you're publishing a new version."
+					>
+						<Input id="desktop-release-files-audit-log-reason" name="audit_log_reason" placeholder="Release 1.2.3 desktop artifacts" />
+					</FormFieldGroup>
+					<Button type="submit" variant="brand">
+						Upload files
+					</Button>
+				</VStack>
+			</form>
+		</VStack>
 	</Card>
 );
+
+const ManifestStatusCard: FC<{
+	entries: Array<StorageEntry>;
+	selectedChannel: DesktopChannel;
+	selectedPlatform: DesktopPlatform;
+	selectedArch: DesktopArch;
+}> = ({entries, selectedChannel, selectedPlatform, selectedArch}) => {
+	const manifestEntry = getManifestEntry(entries);
+
+	return (
+		<Card padding="md">
+			<VStack gap={4}>
+				<div>
+					<Heading level={3} size="base">
+						Manifest status
+					</Heading>
+					<Text size="sm" color="muted">
+						View-only admins can still confirm whether the release manifest exists and what shape it should have.
+					</Text>
+				</div>
+				<div class="flex flex-wrap items-center gap-3">
+					<Badge size="sm" variant={manifestEntry ? 'success' : 'warning'}>
+						{manifestEntry ? 'manifest.json uploaded' : 'manifest.json missing'}
+					</Badge>
+					{manifestEntry && (
+						<Text size="sm" color="muted">
+							Last updated {formatTimestampLocal(manifestEntry.last_modified)}
+						</Text>
+					)}
+				</div>
+				<div class="rounded-xl border border-neutral-200 bg-neutral-950 p-4 text-sm text-neutral-100">
+					<pre class="overflow-x-auto whitespace-pre-wrap">{buildManifestTemplate(selectedChannel, selectedPlatform, selectedArch)}</pre>
+				</div>
+			</VStack>
+		</Card>
+	);
+};
 
 const ManifestCard: FC<{
 	config: Config;
@@ -562,11 +817,10 @@ const ManifestCard: FC<{
 		<VStack gap={4}>
 			<div>
 				<Heading level={3} size="base">
-					Upload manifest.json
+					Step 2: Publish manifest.json
 				</Heading>
 				<Text size="sm" color="muted">
-					Paste the final manifest content or upload a physical <code class="font-mono">manifest.json</code> file using the
-					multi-file uploader.
+					Publish the metadata only after the files it references are already uploaded above.
 				</Text>
 			</div>
 			<div class="rounded-xl border border-neutral-200 bg-neutral-950 p-4 text-sm text-neutral-100">
@@ -749,15 +1003,26 @@ export async function DesktopReleasesPage({
 									selectedPlatform={selectedPlatform}
 									selectedArch={selectedArch}
 								/>
-								<ExpectedFilesCard
+								<PublishingChecklistCard
+									config={config}
+									selectedBucket={selectedBucket}
 									selectedChannel={selectedChannel}
 									selectedPlatform={selectedPlatform}
 									selectedArch={selectedArch}
+									entries={browseResult.entries}
 								/>
 							</div>
-							{canManage && (
-								<div class="grid gap-4 xl:grid-cols-2">
-									<UploadFilesCard
+							<div class="grid gap-4 xl:grid-cols-[1.3fr_.9fr]">
+								<ExpectedFilesCard
+									config={config}
+									selectedBucket={selectedBucket}
+									selectedChannel={selectedChannel}
+									selectedPlatform={selectedPlatform}
+									selectedArch={selectedArch}
+									entries={browseResult.entries}
+								/>
+								{canManage ? (
+									<ManifestCard
 										config={config}
 										selectedBucket={selectedBucket}
 										selectedChannel={selectedChannel}
@@ -765,7 +1030,18 @@ export async function DesktopReleasesPage({
 										selectedArch={selectedArch}
 										csrfToken={csrfToken}
 									/>
-									<ManifestCard
+								) : (
+									<ManifestStatusCard
+										entries={browseResult.entries}
+										selectedChannel={selectedChannel}
+										selectedPlatform={selectedPlatform}
+										selectedArch={selectedArch}
+									/>
+								)}
+							</div>
+							{canManage && (
+								<div class="grid gap-4">
+									<UploadFilesCard
 										config={config}
 										selectedBucket={selectedBucket}
 										selectedChannel={selectedChannel}

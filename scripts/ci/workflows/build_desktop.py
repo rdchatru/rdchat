@@ -1,14 +1,16 @@
 #!/usr/bin/env python3
 
 import json
+import os
 import pathlib
+import shutil
 import sys
 from datetime import datetime, timezone
 
 sys.path.append(str(pathlib.Path(__file__).resolve().parents[1]))
 
 from ci_workflow import EnvArg, parse_step_env_args
-from ci_utils import pwsh_step, require_env, run_step, write_github_output
+from ci_utils import pwsh_step, require_env, run, run_step, write_github_output
 
 
 PLATFORMS = [
@@ -74,6 +76,68 @@ def set_matrix_step(flags: dict[str, bool]) -> None:
     write_github_output({"matrix": json.dumps(matrix, separators=(",", ":"))})
 
 
+def install_dependencies_step() -> None:
+    run(["pnpm", "install", "--frozen-lockfile"])
+
+
+def update_version_step() -> None:
+    require_env(["VERSION"])
+    run(
+        [
+            "pnpm",
+            "version",
+            os.environ["VERSION"],
+            "--no-git-tag-version",
+            "--allow-same-version",
+        ]
+    )
+
+
+def set_build_channel_step() -> None:
+    run(["pnpm", "set-channel"])
+
+
+def build_electron_main_step() -> None:
+    run(["pnpm", "build"])
+
+
+def electron_builder_step(target: str) -> None:
+    require_env(["ELECTRON_ARCH"])
+    run(
+        [
+            "pnpm",
+            "exec",
+            "electron-builder",
+            "--config",
+            "electron-builder.config.cjs",
+            target,
+            f"--{os.environ['ELECTRON_ARCH']}",
+        ]
+    )
+
+
+def build_app_macos_step() -> None:
+    electron_builder_step("--mac")
+
+
+def build_app_windows_step() -> None:
+    electron_builder_step("--win")
+
+
+def build_app_linux_step() -> None:
+    electron_builder_step("--linux")
+
+
+def normalise_updater_yaml_step() -> None:
+    if os.environ.get("PLATFORM") != "macos" or os.environ.get("ARCH") != "arm64":
+        return
+
+    src = pathlib.Path("upload_staging/latest-mac.yml")
+    dst = pathlib.Path("upload_staging/latest-mac-arm64.yml")
+    if src.exists() and not dst.exists():
+        shutil.move(src, dst)
+
+
 STEPS = {
     "windows_paths": pwsh_step(
         r"""
@@ -126,11 +190,11 @@ sudo apt-get install -y \
   libpixman-1-dev libcairo2-dev libpango1.0-dev libjpeg-dev libgif-dev librsvg2-dev
 sudo gem install --no-document fpm
 """,
-    "install_dependencies": "pnpm install --frozen-lockfile\n",
-    "update_version": "pnpm version \"${VERSION}\" --no-git-tag-version --allow-same-version\n",
-    "set_build_channel": "pnpm set-channel\n",
-    "build_electron_main": "pnpm build\n",
-    "build_app_macos": "pnpm exec electron-builder --config electron-builder.config.cjs --mac --${ELECTRON_ARCH}\n",
+    "install_dependencies": install_dependencies_step,
+    "update_version": update_version_step,
+    "set_build_channel": set_build_channel_step,
+    "build_electron_main": build_electron_main_step,
+    "build_app_macos": build_app_macos_step,
     "verify_bundle_id": """
 set -euo pipefail
 DIST="dist-electron"
@@ -145,7 +209,7 @@ if [[ "${BUILD_CHANNEL:-stable}" == "canary" ]]; then expected="app.fluxer.canar
 echo "Bundle id in zip: $BID (expected: $expected)"
 test "$BID" = "$expected"
 """,
-    "build_app_windows": "pnpm exec electron-builder --config electron-builder.config.cjs --win --${ELECTRON_ARCH}\n",
+    "build_app_windows": build_app_windows_step,
     "analyse_squirrel_paths": pwsh_step(
         r"""
 $primaryDir = if ($env:ARCH -eq "arm64") { "dist-electron/squirrel-windows-arm64" } else { "dist-electron/squirrel-windows" }
@@ -205,7 +269,7 @@ Set-Content -Path $scriptPath -Value $lines -Encoding utf8
 python $scriptPath
 """
     ),
-    "build_app_linux": "pnpm exec electron-builder --config electron-builder.config.cjs --linux --${ELECTRON_ARCH}\n",
+    "build_app_linux": build_app_linux_step,
     "prepare_artifacts_windows": pwsh_step(
         r"""
 New-Item -ItemType Directory -Force upload_staging | Out-Null
@@ -259,11 +323,7 @@ cp -f "$DIST"/*.tar.gz upload_staging/ 2>/dev/null || true
 
 ls -la upload_staging/
 """,
-    "normalise_updater_yaml": """
-set -euo pipefail
-cd upload_staging
-[[ "${PLATFORM}" == "macos" && -f latest-mac.yml && ! -f latest-mac-arm64.yml ]] && mv latest-mac.yml latest-mac-arm64.yml || true
-""",
+    "normalise_updater_yaml": normalise_updater_yaml_step,
     "generate_checksums_unix": """
 set -euo pipefail
 cd upload_staging
@@ -317,8 +377,6 @@ ENV_ARGS = [
 
 
 def main() -> int:
-    import os
-
     args = parse_step_env_args(ENV_ARGS)
 
     if args.step == "set_metadata":

@@ -30,7 +30,6 @@ import type {MarketingConfig} from '@fluxer/marketing/src/MarketingConfig';
 import {sendMarketingRequest} from '@fluxer/marketing/src/MarketingHttpClient';
 import {renderCareersPage} from '@fluxer/marketing/src/pages/CareersPage';
 import {renderDonateManagePage} from '@fluxer/marketing/src/pages/DonateManagePage';
-import {renderDonatePage} from '@fluxer/marketing/src/pages/DonatePage';
 import {renderDonateSuccessPage} from '@fluxer/marketing/src/pages/DonateSuccessPage';
 import {renderDownloadPage} from '@fluxer/marketing/src/pages/DownloadPage';
 import {renderHelpArticlePage} from '@fluxer/marketing/src/pages/HelpArticlePage';
@@ -76,7 +75,6 @@ const PAGE_ROUTE_DEFINITIONS: ReadonlyArray<{
 	{path: '/', handler: renderHomePage},
 	{path: '/careers', handler: renderCareersPage},
 	{path: '/download', handler: renderDownloadPage},
-	{path: '/donate', handler: renderDonatePage},
 	{path: '/donate/manage', handler: renderDonateManagePage},
 	{path: '/donate/success', handler: renderDonateSuccessPage},
 	{path: '/partners', handler: renderPartnersPage},
@@ -111,6 +109,8 @@ function registerLocaleRoute(app: Hono, config: MarketingConfig): void {
 }
 
 function registerExternalRedirects(app: Hono): void {
+	app.get('/donate', (c) => c.redirect('https://www.donationalerts.com/r/ivan2282_bebebe', HttpStatus.FOUND));
+
 	app.get('/get/livekitctl', (c) => {
 		return c.redirect(
 			'https://raw.githubusercontent.com/fluxerapp/fluxer/main/fluxer_devops/livekitctl/scripts/install.sh',

@@ -146,10 +146,12 @@ module.exports = {
 			},
 		],
 		desktop: {
-			Name: productName,
-			Comment: 'Instant messaging and VoIP application',
-			Categories: 'Network;InstantMessaging;',
-			StartupWMClass: isCanary ? 'fluxer-canary' : 'fluxer',
+			entry: {
+				Name: productName,
+				Comment: 'Instant messaging and VoIP application',
+				Categories: 'Network;InstantMessaging;',
+				StartupWMClass: isCanary ? 'fluxer-canary' : 'fluxer',
+			},
 		},
 	},
 
