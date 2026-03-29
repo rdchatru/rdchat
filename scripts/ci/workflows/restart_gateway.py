@@ -13,7 +13,7 @@ VALIDATE_CONFIRMATION_STEP = """
 set -euo pipefail
 if [ "${CONFIRMATION}" != "RESTART" ]; then
   echo "::error::Confirmation failed. You must type 'RESTART' to proceed with a full restart."
-  echo "::error::For regular updates, use deploy-gateway.yaml instead."
+  echo "::error::This workflow is only for full restarts."
   exit 1
 fi
 """

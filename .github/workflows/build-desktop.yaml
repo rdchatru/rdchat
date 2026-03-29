@@ -63,7 +63,7 @@ on:
         type: boolean
 
 permissions:
-  contents: write
+  contents: read
 
 concurrency:
   group: desktop-${{ inputs.channel }}
@@ -76,7 +76,7 @@ env:
 jobs:
   meta:
     name: Resolve build metadata
-    runs-on: blacksmith-8vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     timeout-minutes: 25
     outputs:
       version: ${{ steps.meta.outputs.version }}
@@ -100,7 +100,7 @@ jobs:
 
   matrix:
     name: Resolve build matrix
-    runs-on: blacksmith-8vcpu-ubuntu-2404
+    runs-on: ubuntu-latest
     timeout-minutes: 25
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
@@ -355,61 +355,3 @@ jobs:
             upload_staging/*.nupkg.sha256
             upload_staging/RELEASES*
           retention-days: 30
-
-  upload:
-    name: Upload to S3 (rclone)
-    needs:
-      - meta
-      - build
-    runs-on: blacksmith-8vcpu-ubuntu-2404
-    timeout-minutes: 25
-    env:
-      CHANNEL: ${{ needs.meta.outputs.build_channel }}
-      DISPLAY_CHANNEL: ${{ needs.meta.outputs.channel }}
-      VERSION: ${{ needs.meta.outputs.version }}
-      PUB_DATE: ${{ needs.meta.outputs.pub_date }}
-      S3_ENDPOINT: https://s3.us-east-va.io.cloud.ovh.us
-      S3_BUCKET: fluxer-downloads
-      PUBLIC_DL_BASE: https://api.fluxer.app/dl
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-        with:
-          sparse-checkout: scripts/ci
-          sparse-checkout-cone-mode: false
-
-      - name: Download all artifacts
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-          pattern: fluxer-desktop-${{ needs.meta.outputs.build_channel }}-*
-
-      - name: Install rclone
-        run: >-
-          python3 scripts/ci/workflows/build_desktop.py
-          --step install_rclone
-
-      - name: Configure rclone (OVH S3)
-        run: >-
-          python3 scripts/ci/workflows/build_desktop.py
-          --step configure_rclone
-
-      - name: Build S3 payload layout (+ manifest.json)
-        env:
-          VERSION: ${{ needs.meta.outputs.version }}
-          PUB_DATE: ${{ needs.meta.outputs.pub_date }}
-        run: >-
-          python3 scripts/ci/workflows/build_desktop.py
-          --step build_payload
-
-      - name: Upload payload to S3
-        run: >-
-          python3 scripts/ci/workflows/build_desktop.py
-          --step upload_payload
-
-      - name: Build summary
-        run: >-
-          python3 scripts/ci/workflows/build_desktop.py
-          --step build_summary
