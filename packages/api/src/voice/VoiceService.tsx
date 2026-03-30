@@ -181,6 +181,18 @@ export class VoiceService {
 			});
 
 			if (!regionId) {
+				Logger.warn(
+					{
+						guildId: guildId?.toString(),
+						channelId: channelId.toString(),
+						userId: userId.toString(),
+						preferredRegionId,
+						defaultRegionId,
+						availableRegionIds: availableRegions.map((region) => region.id),
+						accessibleRegionIds: accessibleRegions.map((region) => region.id),
+					},
+					'Voice token request failed because no region could be selected',
+				);
 				throw new FeatureTemporarilyDisabledError();
 			}
 
@@ -191,6 +203,20 @@ export class VoiceService {
 			});
 
 			if (!serverSelection) {
+				Logger.warn(
+					{
+						guildId: guildId?.toString(),
+						channelId: channelId.toString(),
+						userId: userId.toString(),
+						regionId,
+						preferredRegionId,
+						defaultRegionId,
+						channelRtcRegion: channel.rtcRegion,
+						availableRegionIds: availableRegions.map((region) => region.id),
+						accessibleRegionIds: accessibleRegions.map((region) => region.id),
+					},
+					'Voice token request failed because no accessible server was available',
+				);
 				throw new FeatureTemporarilyDisabledError();
 			}
 
@@ -202,11 +228,36 @@ export class VoiceService {
 		}
 
 		if (!serverId || !regionId || !serverEndpoint) {
+			Logger.warn(
+				{
+					guildId: guildId?.toString(),
+					channelId: channelId.toString(),
+					userId: userId.toString(),
+					regionId,
+					serverId,
+					serverEndpoint,
+					preferredRegionId,
+					channelRtcRegion: channel.rtcRegion,
+				},
+				'Voice token request resolved without a usable voice server',
+			);
 			throw new FeatureTemporarilyDisabledError();
 		}
 
 		const serverRecord = this.liveKitService.getServer(regionId, serverId);
 		if (!serverRecord) {
+			Logger.warn(
+				{
+					guildId: guildId?.toString(),
+					channelId: channelId.toString(),
+					userId: userId.toString(),
+					regionId,
+					serverId,
+					preferredRegionId,
+					channelRtcRegion: channel.rtcRegion,
+				},
+				'Voice token request resolved to a server that no longer exists in topology',
+			);
 			throw new FeatureTemporarilyDisabledError();
 		}
 

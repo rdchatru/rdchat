@@ -475,23 +475,39 @@ export class RpcService {
 				if (!this.voiceService) {
 					throw new Error('Voice is not enabled on this server');
 				}
-				const result = await this.voiceService.getVoiceToken({
-					guildId: request.guild_id !== undefined ? createGuildID(request.guild_id) : undefined,
-					channelId: createChannelID(request.channel_id),
-					userId: createUserID(request.user_id),
-					connectionId: request.connection_id,
-					region: request.rtc_region,
-					latitude: request.latitude,
-					longitude: request.longitude,
-					canSpeak: request.can_speak,
-					canStream: request.can_stream,
-					canVideo: request.can_video,
-					tokenNonce: request.token_nonce,
-				});
-				return {
-					type: 'voice_get_token',
-					data: result,
-				};
+				try {
+					const result = await this.voiceService.getVoiceToken({
+						guildId: request.guild_id !== undefined ? createGuildID(request.guild_id) : undefined,
+						channelId: createChannelID(request.channel_id),
+						userId: createUserID(request.user_id),
+						connectionId: request.connection_id,
+						region: request.rtc_region,
+						latitude: request.latitude,
+						longitude: request.longitude,
+						canSpeak: request.can_speak,
+						canStream: request.can_stream,
+						canVideo: request.can_video,
+						tokenNonce: request.token_nonce,
+					});
+					return {
+						type: 'voice_get_token',
+						data: result,
+					};
+				} catch (error) {
+					Logger.error(
+						{
+							error,
+							type: 'voice_get_token',
+							guildId: request.guild_id,
+							channelId: request.channel_id,
+							userId: request.user_id,
+							connectionId: request.connection_id,
+							rtcRegion: request.rtc_region,
+						},
+						'RPC voice_get_token failed',
+					);
+					throw error;
+				}
 			}
 			case 'voice_force_disconnect_participant': {
 				if (!this.voiceService) {
