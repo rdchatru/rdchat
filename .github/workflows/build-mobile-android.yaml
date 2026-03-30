@@ -79,7 +79,6 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
-          cache: gradle
 
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
@@ -104,6 +103,16 @@ jobs:
         with:
           workspaces: |
             fluxer_mobile/src-tauri -> target
+
+      - name: Cache Gradle dependencies
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-mobile-${{ hashFiles('pnpm-lock.yaml', 'fluxer_mobile/package.json', 'fluxer_mobile/src-tauri/tauri.conf.json') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-mobile-
 
       - name: Install workspace dependencies
         run: pnpm install --frozen-lockfile
