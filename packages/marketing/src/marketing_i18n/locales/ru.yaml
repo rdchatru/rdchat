@@ -408,7 +408,7 @@ pricing_and_tiers.visionary.slots_left.generic: Осталось {0} из {1} м
 pricing_and_tiers.visionary.slots_left.visionary_bundle: Осталось всего {0} из {1} мест Visionary – Plutonium и Operator Pass навсегда
 pricing_and_tiers.visionary.slots_left.visionary_only: Осталось {0} мест Visionary
 product_positioning.free_and_open_source: RdChat бесплатный и open source. Любой может бесплатно поднять свой инстанс.
-product_positioning.intro: RdChat – бесплатная и open source платформа для мгновенных сообщений и VoIP, сделанная для друзей, групп и сообществ.
+product_positioning.intro: RdChat – бесплатная и open source платформа для мгновенных сообщений и VoIP, сделанная для друзей, групп и сообществ, которая даже работает при белых списках:3
 product_positioning.open_source.label: Open source
 product_positioning.open_source.license: Open source (AGPL-3.0)
 product_positioning.open_source.fully_open_source_agplv3: Полностью open source (AGPLv3)
