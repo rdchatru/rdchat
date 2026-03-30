@@ -28,7 +28,7 @@ import {Icon} from '@fluxer/marketing/src/components/icons/IconRegistry';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 import {renderLayout} from '@fluxer/marketing/src/pages/Layout';
 import {pageMeta} from '@fluxer/marketing/src/pages/layout/Meta';
-import {href} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl, href} from '@fluxer/marketing/src/UrlUtils';
 import {GRADIENTS} from '@fluxer/ui/src/styles/Gradients';
 import {SPACING} from '@fluxer/ui/src/styles/Spacing';
 import type {Context} from 'hono';
@@ -76,7 +76,7 @@ function renderPerksSection(ctx: MarketingContext): JSX.Element {
 						ctx.i18n.getMessage('company_and_resources.docs', ctx.locale),
 						'Read project docs, release notes, and contributor resources.',
 						false,
-						'/docs',
+						docsUrl(),
 					)}
 					{renderPerkCard(
 						ctx,

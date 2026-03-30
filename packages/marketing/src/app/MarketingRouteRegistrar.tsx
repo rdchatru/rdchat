@@ -42,7 +42,7 @@ import {renderPressPage} from '@fluxer/marketing/src/pages/PressPage';
 import {sanitizeInternalRedirectPath} from '@fluxer/marketing/src/RedirectPathUtils';
 import type {MarketingRouteHandler} from '@fluxer/marketing/src/routes/RouteTypes';
 import {generateSitemap} from '@fluxer/marketing/src/Sitemap';
-import {prependBasePath} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl, docsUrlFromRequest, prependBasePath} from '@fluxer/marketing/src/UrlUtils';
 import type {Hono} from 'hono';
 import {setCookie} from 'hono/cookie';
 import type {MarketingContextFactory} from './MarketingContextFactory';
@@ -119,8 +119,10 @@ function registerExternalRedirects(app: Hono): void {
 	});
 
 	app.get('/regional-restrictions', (c) => c.redirect('/help/regional-restrictions', HttpStatus.MOVED_PERMANENTLY));
-	app.get('/blog', (c) => c.redirect('/docs', HttpStatus.FOUND));
-	app.get('/blog/*', (c) => c.redirect('/docs', HttpStatus.FOUND));
+	app.get('/docs', (c) => c.redirect(docsUrlFromRequest(c.req.url), HttpStatus.FOUND));
+	app.get('/docs/*', (c) => c.redirect(docsUrlFromRequest(c.req.url), HttpStatus.FOUND));
+	app.get('/blog', (c) => c.redirect(docsUrl(), HttpStatus.FOUND));
+	app.get('/blog/*', (c) => c.redirect(docsUrl(), HttpStatus.FOUND));
 	app.get('/plutonium', (c) => c.redirect('/donate', HttpStatus.FOUND));
 	app.get('/plutonium/*', (c) => c.redirect('/donate', HttpStatus.FOUND));
 }

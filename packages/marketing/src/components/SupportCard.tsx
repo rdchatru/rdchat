@@ -24,6 +24,7 @@ import {Icon} from '@fluxer/marketing/src/components/icons/IconRegistry';
 import {MarketingButton} from '@fluxer/marketing/src/components/MarketingButton';
 import {MarketingCard} from '@fluxer/marketing/src/components/MarketingCard';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
+import {DOCS_BASE_URL} from '@fluxer/marketing/src/UrlUtils';
 
 type SupportIcon =
 	| 'rocket_launch'
@@ -91,6 +92,10 @@ export function SupportCard(props: SupportCardProps): JSX.Element {
 }
 
 function getLinkProps(href: string): {target?: '_blank' | '_self' | '_parent' | '_top'; rel?: string} {
+	if (href.startsWith(DOCS_BASE_URL)) {
+		return {};
+	}
+
 	if (href.startsWith('https://') || href.startsWith('http://') || href.startsWith('mailto:')) {
 		return {target: '_blank', rel: 'noopener noreferrer'};
 	}

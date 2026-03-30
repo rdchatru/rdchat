@@ -25,7 +25,7 @@ import {FluxerLogoWordmarkIcon} from '@fluxer/marketing/src/components/icons/Flu
 import {HeartIcon} from '@fluxer/marketing/src/components/icons/HeartIcon';
 import {MarketingButtonInverted} from '@fluxer/marketing/src/components/MarketingButton';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
-import {href} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl, href} from '@fluxer/marketing/src/UrlUtils';
 import {GRADIENTS} from '@fluxer/ui/src/styles/Gradients';
 
 const linkClass = 'body-lg text-white/90 transition-colors hover:text-white hover:underline';
@@ -110,7 +110,7 @@ export function Footer(props: FooterProps): JSX.Element {
 							{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/press')}>{ctx.i18n.getMessage('footer.press', ctx.locale)}</FooterLink>
-						<FooterLink href="/docs">
+						<FooterLink href={docsUrl()}>
 							{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/careers')}>

@@ -23,6 +23,7 @@
 import {Section} from '@fluxer/marketing/src/components/Section';
 import {SupportCard} from '@fluxer/marketing/src/components/SupportCard';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
+import {docsUrl} from '@fluxer/marketing/src/UrlUtils';
 
 interface GetInvolvedSectionProps {
 	ctx: MarketingContext;
@@ -58,7 +59,7 @@ export function GetInvolvedSection(props: GetInvolvedSectionProps): JSX.Element 
 					title={ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
 					description="Read the docs, release notes, and setup guides for the project."
 					buttonText={ctx.i18n.getMessage('misc_labels.learn_more', ctx.locale)}
-					buttonHref="/docs"
+					buttonHref={docsUrl()}
 					theme="light"
 				/>
 				<SupportCard

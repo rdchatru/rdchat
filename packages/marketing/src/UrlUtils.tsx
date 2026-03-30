@@ -22,6 +22,8 @@
 
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 
+export const DOCS_BASE_URL = 'https://docs.fluxer.app';
+
 export function cacheBustedWithVersion(path: string, version: string): string {
 	const separator = path.includes('?') ? '&' : '?';
 	return `${path}${separator}t=${version}`;
@@ -44,6 +46,20 @@ export function apiUrl(ctx: MarketingContext, path: string): string {
 	return `${ctx.apiEndpoint}${path}`;
 }
 
+export function docsUrl(path = '/docs'): string {
+	const url = new URL(path, `${DOCS_BASE_URL}/`);
+	url.pathname = normalizeDocsPath(url.pathname);
+	return url.toString();
+}
+
+export function docsUrlFromRequest(requestUrl: string): string {
+	const requestUrlObject = new URL(requestUrl);
+	const url = new URL(DOCS_BASE_URL);
+	url.pathname = normalizeDocsPath(requestUrlObject.pathname);
+	url.search = requestUrlObject.search;
+	return url.toString();
+}
+
 export function isCanary(ctx: MarketingContext): boolean {
 	return ctx.releaseChannel === 'canary';
 }
@@ -56,4 +72,18 @@ export function normalizeBasePath(basePath: string): string {
 
 	if (segments.length === 0) return '';
 	return `/${segments.join('/')}`;
+}
+
+function normalizeDocsPath(path: string): string {
+	const trimmed = path.trim();
+	if (trimmed === '' || trimmed === '/' || trimmed === '/docs' || trimmed === '/docs/') {
+		return '/';
+	}
+
+	const normalized = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+	if (normalized.startsWith('/docs/')) {
+		return normalized.slice('/docs'.length);
+	}
+
+	return normalized;
 }

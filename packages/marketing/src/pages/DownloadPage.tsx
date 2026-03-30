@@ -30,7 +30,7 @@ import {Section} from '@fluxer/marketing/src/components/Section';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 import {renderLayout} from '@fluxer/marketing/src/pages/Layout';
 import {pageMeta} from '@fluxer/marketing/src/pages/layout/Meta';
-import {href} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl, href} from '@fluxer/marketing/src/UrlUtils';
 import {GRADIENTS} from '@fluxer/ui/src/styles/Gradients';
 import type {Context} from 'hono';
 
@@ -140,7 +140,7 @@ function renderSupportSection(ctx: MarketingContext): JSX.Element {
 			>
 				<div class="flex flex-col gap-6 sm:flex-row sm:justify-center">
 					{renderSupportCard(
-						'/docs',
+						docsUrl(),
 						<DownloadIcon class="h-8 w-8 text-white" />,
 						ctx.i18n.getMessage('company_and_resources.docs', ctx.locale),
 						'Read installation guides, release notes, and project documentation.',

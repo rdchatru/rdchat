@@ -101,6 +101,19 @@ def build_electron_main_step() -> None:
     run(["pnpm", "build"])
 
 
+def remove_path(path: pathlib.Path) -> None:
+    is_junction = getattr(path, "is_junction", None)
+    if path.is_symlink() or (callable(is_junction) and is_junction()):
+        path.unlink()
+        return
+
+    if path.is_dir():
+        shutil.rmtree(path)
+        return
+
+    path.unlink()
+
+
 def prune_macos_only_modules_step() -> None:
     if os.environ.get("PLATFORM") == "macos":
         return
@@ -114,14 +127,10 @@ def prune_macos_only_modules_step() -> None:
     for package_name in packages:
         top_level_package = node_modules_dir / package_name
         if top_level_package.exists() or top_level_package.is_symlink():
-            if top_level_package.is_dir() and not top_level_package.is_symlink():
-                shutil.rmtree(top_level_package)
-            else:
-                top_level_package.unlink()
+            remove_path(top_level_package)
 
         for pnpm_entry in (node_modules_dir / ".pnpm").glob(f"{package_name}@*"):
-            if pnpm_entry.is_dir():
-                shutil.rmtree(pnpm_entry)
+            remove_path(pnpm_entry)
 
 
 def electron_builder_step(target: str) -> None:

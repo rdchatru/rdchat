@@ -30,7 +30,7 @@ import {LocaleSelectorTrigger} from '@fluxer/marketing/src/components/LocaleSele
 import {MarketingButton} from '@fluxer/marketing/src/components/MarketingButton';
 import {getPlatformDownloadInfo} from '@fluxer/marketing/src/components/PlatformDownloadButton';
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
-import {href} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl, href} from '@fluxer/marketing/src/UrlUtils';
 import type {Context} from 'hono';
 
 interface NavigationProps {
@@ -73,7 +73,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 									{ctx.i18n.getMessage('company_and_resources.help.label', ctx.locale)}
 								</a>
 								<a
-									href="/docs"
+									href={docsUrl()}
 									class="body-lg font-semibold text-gray-900/90 transition-colors hover:text-gray-900"
 								>
 									{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
@@ -172,7 +172,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 										{ctx.i18n.getMessage('company_and_resources.help.help_center', ctx.locale)}
 									</a>
 									<a
-										href="/docs"
+										href={docsUrl()}
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 									>
 										{ctx.i18n.getMessage('company_and_resources.docs', ctx.locale)}
