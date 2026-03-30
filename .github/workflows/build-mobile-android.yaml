@@ -86,7 +86,7 @@ jobs:
       - name: Accept Android SDK licenses and install Android packages
         shell: bash
         run: |
-          yes | sdkmanager --licenses >/dev/null
+          { yes || true; } | sdkmanager --licenses >/dev/null
           sdkmanager \
             "platform-tools" \
             "platforms;android-34" \

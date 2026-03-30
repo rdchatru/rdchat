@@ -61,6 +61,16 @@ on:
         required: false
         default: false
         type: boolean
+      publish_to_download_server:
+        description: Upload built artifacts to the download server
+        required: false
+        default: true
+        type: boolean
+      download_bucket:
+        description: Download bucket name for uploaded desktop releases
+        required: false
+        default: fluxer-downloads
+        type: string
 
 permissions:
   contents: read
@@ -144,6 +154,7 @@ jobs:
       PLATFORM: ${{ matrix.platform }}
       ARCH: ${{ matrix.arch }}
       ELECTRON_ARCH: ${{ matrix.electron_arch }}
+      DOWNLOAD_SERVER_BUCKET: ${{ inputs.download_bucket }}
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
@@ -327,6 +338,14 @@ jobs:
         run: >-
           python3 ${{ github.workspace }}/scripts/ci/workflows/build_desktop.py
           --step generate_checksums_windows
+
+      - name: Publish to download server
+        if: ${{ inputs.publish_to_download_server && secrets.DOWNLOAD_SERVER_URL != '' && secrets.DOWNLOAD_SERVER_ADMIN_TOKEN != '' }}
+        env:
+          DOWNLOAD_SERVER_URL: ${{ secrets.DOWNLOAD_SERVER_URL }}
+          DOWNLOAD_SERVER_ADMIN_TOKEN: ${{ secrets.DOWNLOAD_SERVER_ADMIN_TOKEN }}
+        run: >-
+          python3 ${{ github.workspace }}/scripts/ci/workflows/publish_desktop_downloads.py
 
       - name: Upload artifacts
         uses: actions/upload-artifact@v4
