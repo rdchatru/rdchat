@@ -101,8 +101,32 @@ def build_electron_main_step() -> None:
     run(["pnpm", "build"])
 
 
+def prune_macos_only_modules_step() -> None:
+    if os.environ.get("PLATFORM") == "macos":
+        return
+
+    node_modules_dir = pathlib.Path("node_modules")
+    if not node_modules_dir.exists():
+        return
+
+    packages = ("node-mac-permissions", "electron-webauthn-mac")
+    print(f"Pruning macOS-only runtime modules before {os.environ.get('PLATFORM', 'non-macos')} packaging...")
+    for package_name in packages:
+        top_level_package = node_modules_dir / package_name
+        if top_level_package.exists() or top_level_package.is_symlink():
+            if top_level_package.is_dir() and not top_level_package.is_symlink():
+                shutil.rmtree(top_level_package)
+            else:
+                top_level_package.unlink()
+
+        for pnpm_entry in (node_modules_dir / ".pnpm").glob(f"{package_name}@*"):
+            if pnpm_entry.is_dir():
+                shutil.rmtree(pnpm_entry)
+
+
 def electron_builder_step(target: str) -> None:
     require_env(["ELECTRON_ARCH"])
+    prune_macos_only_modules_step()
     run(
         [
             "pnpm",
