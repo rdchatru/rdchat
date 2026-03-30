@@ -40,7 +40,7 @@ async function writeDevConfig() {
 	const baseConfig = {
 		$schema: './gen/schemas/mobile-schema.json',
 		productName: 'RdChat Mobile',
-		version: '0.0.0',
+		version: '0.0.1',
 		identifier: 'android.rdchat.ru',
 		build: {
 			devUrl,

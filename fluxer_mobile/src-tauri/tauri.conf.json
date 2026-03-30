@@ -1,7 +1,7 @@
 {
 	"$schema": "./gen/schemas/mobile-schema.json",
 	"productName": "RdChat Mobile",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"identifier": "android.rdchat.ru",
 	"build": {
 		"frontendDist": "../../fluxer_app/dist"

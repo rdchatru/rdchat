@@ -1,6 +1,6 @@
 {
 	"name": "fluxer_mobile",
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"private": true,
 	"description": "RdChat Android client powered by Tauri Mobile and fluxer_app",
 	"homepage": "https://rdchat.ru",
