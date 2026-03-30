@@ -29,8 +29,8 @@
 <p align="center">
   <a href="https://fluxer.app/donate">
     <img src="https://img.shields.io/badge/Donate-fluxer.app%2Fdonate-brightgreen" alt="Donate" /></a>
-  <a href="https://docs.fluxer.app">
-    <img src="https://img.shields.io/badge/Docs-docs.fluxer.app-blue" alt="Documentation" /></a>
+  <a href="https://fluxer.app/docs">
+    <img src="https://img.shields.io/badge/Docs-fluxer.app%2Fdocs-blue" alt="Documentation" /></a>
   <a href="./LICENSE">
     <img src="https://img.shields.io/badge/License-AGPLv3-purple" alt="AGPLv3 License" /></a>
 </p>
@@ -41,8 +41,8 @@ Fluxer is a **free and open source instant messaging and VoIP platform** for fri
 
 ## Quick links
 
-- [Self-hosting guide](https://docs.fluxer.app/self-hosting)
-- [Documentation](https://docs.fluxer.app)
+- [Self-hosting guide](https://fluxer.app/docs/self-hosting)
+- [Documentation](https://fluxer.app/docs)
 - [Donate to support development](https://fluxer.app/donate)
 - [Security](https://fluxer.app/security)
 
@@ -68,7 +68,7 @@ Fluxer is a **free and open source instant messaging and VoIP platform** for fri
 ## Self-hosting
 
 > [!NOTE]
-> New to Fluxer? Follow the [self-hosting guide](https://docs.fluxer.app/self-hosting) for step-by-step setup instructions.
+> New to Fluxer? Follow the [self-hosting guide](https://fluxer.app/docs/self-hosting) for step-by-step setup instructions.
 
 TBD
 

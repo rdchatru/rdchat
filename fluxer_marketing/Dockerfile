@@ -23,7 +23,9 @@ FROM deps AS build
 COPY tsconfigs /usr/src/app/tsconfigs
 COPY fluxer_marketing/tsconfig.json ./fluxer_marketing/
 COPY fluxer_marketing/src ./fluxer_marketing/src
+COPY fluxer_docs/ ./fluxer_docs/
 WORKDIR /usr/src/app
+RUN cd fluxer_docs && npm install && npm run build
 RUN pnpm --filter @fluxer/config generate
 RUN pnpm --filter @fluxer/marketing build:css \
 	&& mkdir -p fluxer_marketing/public/static \
@@ -64,6 +66,7 @@ COPY tsconfigs /usr/src/app/tsconfigs
 COPY --from=build /usr/src/app/fluxer_marketing/tsconfig.json ./tsconfig.json
 COPY --from=build /usr/src/app/fluxer_marketing/src ./src
 COPY --from=build /usr/src/app/fluxer_marketing/public ./public
+COPY --from=build /usr/src/app/fluxer_docs/build /usr/src/app/fluxer_docs/build
 COPY fluxer_marketing/package.json ./
 
 RUN mkdir -p /usr/src/app/.cache/corepack && \

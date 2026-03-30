@@ -198,7 +198,7 @@ jobs:
             - time: ${{ needs.meta.outputs.timestamp }}
             - channel: stable
 
-            Docs: https://docs.fluxer.app/federation
+            Docs: https://fluxer.app/docs/relay-api
 
       - name: nightly release
         if: needs.meta.outputs.channel == 'nightly'

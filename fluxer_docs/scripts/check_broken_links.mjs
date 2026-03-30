@@ -107,7 +107,7 @@ async function findMdxFiles(dir, files = []) {
 }
 
 async function main() {
-	const openapiPath = path.join(repoRoot, 'api-reference/openapi.json');
+	const openapiPath = path.join(repoRoot, 'static/api-reference/openapi.json');
 	const {validUrls, operationIdToUrl} = await buildValidUrlMap(openapiPath);
 
 	console.log(`Loaded ${validUrls.size} valid API reference URLs\n`);

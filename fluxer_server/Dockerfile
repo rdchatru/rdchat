@@ -86,6 +86,7 @@ COPY tsconfigs /usr/src/app/tsconfigs
 
 COPY packages/ ./packages/
 COPY fluxer_docs/ ./fluxer_docs/
+RUN cd fluxer_docs && npm install && npm run build
 RUN pnpm --filter @fluxer/config generate
 COPY fluxer_server/ ./fluxer_server/
 
@@ -165,7 +166,7 @@ LABEL org.opencontainers.image.description="Unified RdChat server for self-hosti
 LABEL org.opencontainers.image.vendor="RdChat Contributors"
 LABEL org.opencontainers.image.licenses="AGPL-3.0-or-later"
 LABEL org.opencontainers.image.source="https://github.com/fluxerapp/fluxer"
-LABEL org.opencontainers.image.documentation="https://rdchat.ru/docs"
+LABEL org.opencontainers.image.documentation="https://fluxer.app/docs"
 LABEL org.opencontainers.image.revision="${BUILD_SHA}"
 LABEL org.opencontainers.image.version="${BUILD_NUMBER}"
 LABEL org.opencontainers.image.created="${BUILD_TIMESTAMP}"
@@ -182,7 +183,7 @@ RUN corepack enable && corepack prepare pnpm@10.29.3 --activate
 
 COPY --from=build /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/packages ./packages
-COPY --from=build /usr/src/app/fluxer_docs ./fluxer_docs
+COPY --from=build /usr/src/app/fluxer_docs/build /usr/src/app/fluxer_docs/build
 COPY --from=build /usr/src/app/fluxer_server ./fluxer_server
 COPY --from=build /usr/src/app/tsconfigs ./tsconfigs
 COPY --from=build /usr/src/app/pnpm-workspace.yaml ./

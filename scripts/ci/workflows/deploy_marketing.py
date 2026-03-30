@@ -89,9 +89,9 @@ else
         caddy_6: "www.fluxerapp.com"
         caddy_6.redir: "https://fluxer.app{uri}"
         caddy_7: "fluxer.dev"
-        caddy_7.redir: "https://docs.fluxer.app{uri}"
+        caddy_7.redir: "https://fluxer.app/docs{uri}"
         caddy_8: "www.fluxer.dev"
-        caddy_8.redir: "https://docs.fluxer.app{uri}"
+        caddy_8.redir: "https://fluxer.app/docs{uri}"
         caddy.redir_9: "/.well-known/fluxer https://api.fluxer.app/.well-known/fluxer 301"
 COMPOSEEOF
 fi

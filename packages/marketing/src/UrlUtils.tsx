@@ -22,7 +22,7 @@
 
 import type {MarketingContext} from '@fluxer/marketing/src/MarketingContext';
 
-export const DOCS_BASE_URL = 'https://docs.fluxer.app';
+export const DOCS_BASE_URL = '/docs';
 
 export function cacheBustedWithVersion(path: string, version: string): string {
 	const separator = path.includes('?') ? '&' : '?';
@@ -47,17 +47,7 @@ export function apiUrl(ctx: MarketingContext, path: string): string {
 }
 
 export function docsUrl(path = '/docs'): string {
-	const url = new URL(path, `${DOCS_BASE_URL}/`);
-	url.pathname = normalizeDocsPath(url.pathname);
-	return url.toString();
-}
-
-export function docsUrlFromRequest(requestUrl: string): string {
-	const requestUrlObject = new URL(requestUrl);
-	const url = new URL(DOCS_BASE_URL);
-	url.pathname = normalizeDocsPath(requestUrlObject.pathname);
-	url.search = requestUrlObject.search;
-	return url.toString();
+	return normalizeDocsPublicPath(path);
 }
 
 export function isCanary(ctx: MarketingContext): boolean {
@@ -74,16 +64,16 @@ export function normalizeBasePath(basePath: string): string {
 	return `/${segments.join('/')}`;
 }
 
-function normalizeDocsPath(path: string): string {
+function normalizeDocsPublicPath(path: string): string {
 	const trimmed = path.trim();
 	if (trimmed === '' || trimmed === '/' || trimmed === '/docs' || trimmed === '/docs/') {
-		return '/';
+		return DOCS_BASE_URL;
 	}
 
 	const normalized = trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
 	if (normalized.startsWith('/docs/')) {
-		return normalized.slice('/docs'.length);
+		return normalized;
 	}
 
-	return normalized;
+	return `${DOCS_BASE_URL}${normalized}`;
 }

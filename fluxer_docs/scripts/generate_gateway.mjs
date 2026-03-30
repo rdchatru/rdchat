@@ -599,8 +599,8 @@ async function main() {
 	const dirname = path.dirname(fileURLToPath(import.meta.url));
 	const repoRoot = path.resolve(dirname, '../..');
 	const gatewayDir = path.join(repoRoot, 'fluxer_docs/gateway');
-	const schemasDir = path.join(repoRoot, 'fluxer_docs/schemas/events');
-	const openapiPath = path.join(repoRoot, 'fluxer_docs/api-reference/openapi.json');
+	const schemasDir = path.join(repoRoot, 'fluxer_docs/static/schemas/events');
+	const openapiPath = path.join(repoRoot, 'fluxer_docs/static/api-reference/openapi.json');
 
 	const openapi = await readJsonFile(openapiPath);
 	const endpointMap = buildEndpointMap(openapi);

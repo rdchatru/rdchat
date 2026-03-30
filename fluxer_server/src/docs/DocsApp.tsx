@@ -17,18 +17,11 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import {HttpStatus} from '@fluxer/constants/src/HttpConstants';
 import type {BaseHonoEnv} from '@fluxer/hono_types/src/HonoTypes';
-import {docsUrlFromRequest} from '@fluxer/marketing/src/UrlUtils';
+import {createDocsStaticApp} from '@fluxer/marketing/src/docs/DocsStaticApp';
 import type {Logger} from '@fluxer/logger/src/Logger';
-import {Hono} from 'hono';
+import type {Hono} from 'hono';
 
 export function createDocsApp(_options: {logger: Logger}): Hono<BaseHonoEnv> {
-	const app = new Hono<BaseHonoEnv>();
-
-	app.get('*', (c) => {
-		return c.redirect(docsUrlFromRequest(c.req.url), HttpStatus.FOUND);
-	});
-
-	return app;
+	return createDocsStaticApp();
 }

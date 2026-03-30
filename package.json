@@ -4,8 +4,9 @@
 	"scripts": {
 		"build": "turbo run build",
 		"dev": "sh scripts/run_dev.sh",
-		"dev:docs": "cd fluxer_docs && npx mint dev --no-open",
+		"dev:docs": "cd fluxer_docs && npm run start",
 		"dev:cassandra": "FLUXER_DATABASE=cassandra sh scripts/run_dev.sh",
+		"docs:build": "cd fluxer_docs && npm run build",
 		"docs:generate": "node fluxer_docs/scripts/generate_resources.mjs && node fluxer_docs/scripts/generate_config.mjs && node fluxer_docs/scripts/generate_media_proxy.mjs",
 		"docs:generate:config": "node fluxer_docs/scripts/generate_config.mjs",
 		"docs:generate:media-proxy": "node fluxer_docs/scripts/generate_media_proxy.mjs",

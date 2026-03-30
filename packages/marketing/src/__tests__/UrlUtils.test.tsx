@@ -17,27 +17,17 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
-import {docsUrl, docsUrlFromRequest} from '@fluxer/marketing/src/UrlUtils';
+import {docsUrl} from '@fluxer/marketing/src/UrlUtils';
 import {describe, expect, test} from 'vitest';
 
 describe('docsUrl', () => {
-	test('maps the local docs root to the Mintlify docs host', () => {
-		expect(docsUrl()).toBe('https://docs.fluxer.app/');
-		expect(docsUrl('/docs')).toBe('https://docs.fluxer.app/');
+	test('normalises the local docs root path', () => {
+		expect(docsUrl()).toBe('/docs');
+		expect(docsUrl('/docs')).toBe('/docs');
 	});
 
-	test('preserves deep links, queries, and hashes', () => {
-		expect(docsUrl('/docs/quickstart')).toBe('https://docs.fluxer.app/quickstart');
-		expect(docsUrl('/docs/resources/users?view=compact#examples')).toBe(
-			'https://docs.fluxer.app/resources/users?view=compact#examples',
-		);
-	});
-});
-
-describe('docsUrlFromRequest', () => {
-	test('rewrites incoming docs requests to the Mintlify host', () => {
-		expect(docsUrlFromRequest('https://fluxer.app/docs/gateway/events?tab=payload')).toBe(
-			'https://docs.fluxer.app/gateway/events?tab=payload',
-		);
+	test('prefixes deep links with the local docs base path', () => {
+		expect(docsUrl('/docs/quickstart')).toBe('/docs/quickstart');
+		expect(docsUrl('/resources/users?view=compact#examples')).toBe('/docs/resources/users?view=compact#examples');
 	});
 });

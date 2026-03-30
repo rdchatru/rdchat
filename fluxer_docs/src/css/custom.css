@@ -1,0 +1,120 @@
+:root {
+	--ifm-color-primary: #638b6f;
+	--ifm-color-primary-dark: #55775f;
+	--ifm-color-primary-darker: #4f6d58;
+	--ifm-color-primary-darkest: #415948;
+	--ifm-color-primary-light: #79a186;
+	--ifm-color-primary-lighter: #89a792;
+	--ifm-color-primary-lightest: #a9c1b0;
+	--ifm-background-color: #f4f7f5;
+	--ifm-font-family-base: "IBM Plex Sans", system-ui, sans-serif;
+	--ifm-code-font-size: 95%;
+}
+
+[data-theme='dark'] {
+	--ifm-color-primary: #89a792;
+	--ifm-color-primary-dark: #76997f;
+	--ifm-color-primary-darker: #6d8f76;
+	--ifm-color-primary-darkest: #597561;
+	--ifm-color-primary-light: #9cb5a4;
+	--ifm-color-primary-lighter: #a5bcac;
+	--ifm-color-primary-lightest: #c0d1c5;
+}
+
+.navbar__brand {
+	font-weight: 700;
+}
+
+.theme-doc-markdown img {
+	border-radius: 1rem;
+	box-shadow: 0 12px 30px rgba(24, 32, 25, 0.12);
+}
+
+.fluxer-card-group {
+	display: grid;
+	gap: 1rem;
+	margin: 1.5rem 0;
+}
+
+.fluxer-card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	padding: 1.25rem;
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 1rem;
+	background: var(--ifm-card-background-color);
+	box-shadow: 0 10px 30px rgba(24, 32, 25, 0.06);
+	text-decoration: none !important;
+	color: inherit;
+}
+
+.fluxer-card:hover {
+	border-color: var(--ifm-color-primary);
+	transform: translateY(-1px);
+}
+
+.fluxer-card-horizontal {
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.fluxer-card-title {
+	font-size: 1.05rem;
+	font-weight: 700;
+}
+
+.fluxer-card-body > :last-child {
+	margin-bottom: 0;
+}
+
+.fluxer-expandable {
+	margin: 1rem 0;
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 0.9rem;
+	overflow: hidden;
+	background: var(--ifm-card-background-color);
+}
+
+.fluxer-expandable > summary {
+	padding: 0.85rem 1rem;
+	font-weight: 700;
+	cursor: pointer;
+	background: var(--ifm-color-emphasis-100);
+}
+
+.fluxer-expandable-body {
+	padding: 1rem;
+}
+
+.fluxer-frame {
+	margin: 1.5rem 0;
+	padding: 1rem;
+	border: 1px solid var(--ifm-color-emphasis-200);
+	border-radius: 1rem;
+	background: var(--ifm-card-background-color);
+}
+
+.fluxer-frame-body > :last-child,
+.fluxer-frame figcaption {
+	margin-bottom: 0;
+}
+
+.fluxer-frame figcaption {
+	margin-top: 0.75rem;
+	color: var(--ifm-color-emphasis-700);
+	font-size: 0.95rem;
+	text-align: center;
+}
+
+@media (max-width: 996px) {
+	.fluxer-card-group {
+		grid-template-columns: 1fr !important;
+	}
+
+	.fluxer-card-horizontal {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

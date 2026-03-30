@@ -1048,13 +1048,13 @@ async function main() {
 
 	const openApiSpec = generateOpenApiSpec();
 	await writeFile(
-		path.join(repoRoot, 'fluxer_docs/media-proxy-api/openapi.json'),
+		path.join(repoRoot, 'fluxer_docs/static/media-proxy-api/openapi.json'),
 		JSON.stringify(openApiSpec, null, '\t'),
 	);
 
 	console.log('Generated media proxy documentation');
 	console.log('  - fluxer_docs/resources/media_proxy.mdx');
-	console.log('  - fluxer_docs/media-proxy-api/openapi.json');
+	console.log('  - fluxer_docs/static/media-proxy-api/openapi.json');
 }
 
 await main();

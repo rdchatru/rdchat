@@ -41,7 +41,7 @@ function renderErrorCodeTable(codes, descriptions) {
 async function main() {
 	const dirname = path.dirname(fileURLToPath(import.meta.url));
 	const repoRoot = path.resolve(dirname, '../..');
-	const openapiPath = path.join(repoRoot, 'fluxer_docs/api-reference/openapi.json');
+	const openapiPath = path.join(repoRoot, 'fluxer_docs/static/api-reference/openapi.json');
 	const outPath = path.join(repoRoot, 'fluxer_docs/topics/error_codes.mdx');
 
 	const openapi = await readJsonFile(openapiPath);

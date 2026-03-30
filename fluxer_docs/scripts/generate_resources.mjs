@@ -1050,7 +1050,7 @@ function renderOverviewMdx(schemaGroups, allSchemaNames, state) {
 async function main() {
 	const dirname = path.dirname(fileURLToPath(import.meta.url));
 	const repoRoot = path.resolve(dirname, '../..');
-	const openapiPath = path.join(repoRoot, 'fluxer_docs/api-reference/openapi.json');
+	const openapiPath = path.join(repoRoot, 'fluxer_docs/static/api-reference/openapi.json');
 	const outDir = path.join(repoRoot, 'fluxer_docs/resources');
 
 	const openapi = await readJsonFile(openapiPath);
