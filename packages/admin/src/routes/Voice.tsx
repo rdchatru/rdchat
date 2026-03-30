@@ -27,6 +27,7 @@ import {
 	createVoiceServer,
 	deleteVoiceRegion,
 	deleteVoiceServer,
+	resetVoiceRuntime,
 	type UpdateVoiceRegionParams,
 	type UpdateVoiceServerParams,
 	updateVoiceRegion,
@@ -67,6 +68,16 @@ export function createVoiceRoutes({config, assetVersion, requireAuth}: RouteFact
 		try {
 			const formData = (await c.req.parseBody()) as ParsedBody;
 			const action = c.req.query('action');
+
+			if (action === 'reset-runtime') {
+				const result = await resetVoiceRuntime(config, session);
+				return redirectWithFlash(c, redirectUrl, {
+					message: result.ok
+						? `Voice runtime reset: cleared ${result.data.rooms_reset} rooms, disconnected ${result.data.livekit_participants_disconnected} LiveKit participants and ${result.data.gateway_connections_disconnected} gateway connections`
+						: 'Failed to reset voice runtime',
+					type: result.ok ? 'success' : 'error',
+				});
+			}
 
 			if (action === 'create') {
 				const latitudeStr = getOptionalString(formData, 'latitude') || '0';

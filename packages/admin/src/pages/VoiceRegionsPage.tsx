@@ -20,6 +20,7 @@
 /** @jsxRuntime automatic */
 /** @jsxImportSource hono/jsx */
 
+import {hasPermission} from '@fluxer/admin/src/AccessControlList';
 import {getErrorMessage} from '@fluxer/admin/src/api/Errors';
 import {listVoiceRegions} from '@fluxer/admin/src/api/Voice';
 import {ErrorAlert} from '@fluxer/admin/src/components/ErrorDisplay';
@@ -38,6 +39,7 @@ import {
 } from '@fluxer/admin/src/components/VoiceComponents';
 import type {Session} from '@fluxer/admin/src/types/App';
 import type {AdminConfig as Config} from '@fluxer/admin/src/types/Config';
+import {AdminACLs} from '@fluxer/constants/src/AdminACLs';
 import type {Flash} from '@fluxer/hono/src/Flash';
 import type {UserAdminResponse} from '@fluxer/schema/src/domains/admin/AdminUserSchemas';
 import type {
@@ -296,6 +298,8 @@ export async function VoiceRegionsPage({
 	csrfToken,
 }: VoiceRegionsPageProps) {
 	const result = await listVoiceRegions(config, session, true);
+	const adminAcls = currentAdmin?.acls ?? [];
+	const canResetRuntime = hasPermission(adminAcls, AdminACLs.VOICE_SERVER_UPDATE);
 
 	return (
 		<Layout
@@ -314,11 +318,30 @@ export async function VoiceRegionsPage({
 						<PageHeader
 							title="Voice Regions"
 							actions={
-								<a href="#create">
-									<Button type="button">Create Region</Button>
-								</a>
+								<HStack gap={2}>
+									<a href="#create">
+										<Button type="button">Create Region</Button>
+									</a>
+									{canResetRuntime ? (
+										<form method="post" action={`${config.basePath}/voice-regions?action=reset-runtime`}>
+											<CsrfInput token={csrfToken} />
+											<Button
+												type="submit"
+												variant="danger"
+												onclick="return confirm('Disconnect every active voice session and clear pinned voice room assignments across all regions?')"
+											>
+												Reset Voice Runtime
+											</Button>
+										</form>
+									) : null}
+								</HStack>
 							}
 						/>
+						{canResetRuntime ? (
+							<Text size="sm" color="muted">
+								Use the runtime reset if a voice server gets stuck after a bad join or connection drop. It disconnects active participants and clears room-to-server pinning so the next join can allocate a fresh server.
+							</Text>
+						) : null}
 						<RegionsList config={config} regions={result.data.regions} csrfToken={csrfToken} />
 						<div id="create">
 							<CreateForm config={config} csrfToken={csrfToken} />

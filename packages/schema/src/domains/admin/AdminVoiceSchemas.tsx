@@ -205,6 +205,10 @@ export const GetVoiceServerRequest = z.object({
 
 export type GetVoiceServerRequest = z.infer<typeof GetVoiceServerRequest>;
 
+export const ResetVoiceRuntimeRequest = z.object({});
+
+export type ResetVoiceRuntimeRequest = z.infer<typeof ResetVoiceRuntimeRequest>;
+
 export const ListVoiceRegionsResponse = z.object({
 	regions: z.array(VoiceRegionAdminResponse).max(100).describe('List of voice regions'),
 });
@@ -264,3 +268,27 @@ export const DeleteVoiceResponse = z.object({
 });
 
 export type DeleteVoiceResponse = z.infer<typeof DeleteVoiceResponse>;
+
+export const ResetVoiceRuntimeResponse = z.object({
+	success: z.boolean().describe('Whether the voice runtime reset completed'),
+	rooms_discovered: z.number().int().nonnegative().describe('Number of pinned voice rooms discovered'),
+	rooms_reset: z.number().int().nonnegative().describe('Number of voice rooms cleared from runtime state'),
+	livekit_participants_disconnected: z
+		.number()
+		.int()
+		.nonnegative()
+		.describe('Number of LiveKit participants disconnected during the reset'),
+	gateway_connections_disconnected: z
+		.number()
+		.int()
+		.nonnegative()
+		.describe('Number of gateway voice entries disconnected during the reset'),
+	pending_joins_observed: z
+		.number()
+		.int()
+		.nonnegative()
+		.describe('Number of pending joins observed while clearing runtime state'),
+	errors: z.number().int().nonnegative().describe('Number of non-fatal errors encountered during the reset'),
+});
+
+export type ResetVoiceRuntimeResponse = z.infer<typeof ResetVoiceRuntimeResponse>;

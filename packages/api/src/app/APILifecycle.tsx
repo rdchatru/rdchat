@@ -22,13 +22,16 @@ import type {APIConfig} from '@fluxer/api/src/config/APIConfig';
 import {GuildDataRepository} from '@fluxer/api/src/guild/repositories/GuildDataRepository';
 import type {ILogger} from '@fluxer/api/src/ILogger';
 import {KVAccountDeletionQueueService} from '@fluxer/api/src/infrastructure/KVAccountDeletionQueueService';
-import {initializeMetricsService} from '@fluxer/api/src/infrastructure/MetricsService';
+import {getMetricsService, initializeMetricsService} from '@fluxer/api/src/infrastructure/MetricsService';
 import {InstanceConfigRepository} from '@fluxer/api/src/instance/InstanceConfigRepository';
 import {ipBanCache} from '@fluxer/api/src/middleware/IpBanMiddleware';
 import {initializeServiceSingletons, shutdownReportService} from '@fluxer/api/src/middleware/ServiceMiddleware';
 import {
 	ensureVoiceResourcesInitialized,
+	getGatewayService,
 	getKVClient,
+	getLiveKitServiceInstance,
+	getVoiceRoomStoreInstance,
 	setInjectedWorkerService,
 } from '@fluxer/api/src/middleware/ServiceRegistry';
 import {ReportRepository} from '@fluxer/api/src/report/ReportRepository';
@@ -38,6 +41,8 @@ import {warmupAdminSearchIndexes} from '@fluxer/api/src/search/SearchWarmup';
 import {VisionarySlotInitializer} from '@fluxer/api/src/stripe/VisionarySlotInitializer';
 import {UserRepository} from '@fluxer/api/src/user/repositories/UserRepository';
 import {VoiceDataInitializer} from '@fluxer/api/src/voice/VoiceDataInitializer';
+import {VoiceReconciliationWorker} from '@fluxer/api/src/voice/VoiceReconciliationWorker';
+import {VoiceRuntimeResetService} from '@fluxer/api/src/voice/VoiceRuntimeResetService';
 import {JetStreamWorkerQueue} from '@fluxer/api/src/worker/JetStreamWorkerQueue';
 import {WorkerService} from '@fluxer/api/src/worker/WorkerService';
 import {JetStreamConnectionManager} from '@fluxer/nats/src/JetStreamConnectionManager';
@@ -45,6 +50,7 @@ import {NatsConnectionManager} from '@fluxer/nats/src/NatsConnectionManager';
 
 let natsRpcListener: NatsApiRpcListener | null = null;
 let jsConnectionManager: JetStreamConnectionManager | null = null;
+let voiceReconciliationWorker: VoiceReconciliationWorker | null = null;
 
 export function createInitializer(config: APIConfig, logger: ILogger): () => Promise<void> {
 	return async (): Promise<void> => {
@@ -132,6 +138,58 @@ export function createInitializer(config: APIConfig, logger: ILogger): () => Pro
 			await voiceDataInitializer.initialize();
 			await ensureVoiceResourcesInitialized();
 			logger.info('Voice data initialized');
+
+			const liveKitService = getLiveKitServiceInstance();
+			const voiceRoomStore = getVoiceRoomStoreInstance();
+			if (!liveKitService || !voiceRoomStore) {
+				logger.warn('Voice runtime services were not available after initialization; skipping reset worker setup');
+			} else {
+				const voiceRuntimeResetService = new VoiceRuntimeResetService({
+					gatewayService: getGatewayService(),
+					liveKitService,
+					voiceRoomStore,
+					kvClient,
+					metricsService: getMetricsService(),
+					logger,
+				});
+
+				const startupResetLockKey = 'fluxer:voice:startup-reset';
+				const startupResetLockToken = randomUUID();
+				const startupResetLockTtlSeconds = 5 * 60;
+				const acquiredStartupResetLock = await kvClient.setnx(
+					startupResetLockKey,
+					startupResetLockToken,
+					startupResetLockTtlSeconds,
+				);
+
+				if (!acquiredStartupResetLock) {
+					logger.info('Another API instance is already performing startup voice runtime reset; skipping duplicate reset');
+				} else {
+					try {
+						const resetResult = await voiceRuntimeResetService.resetAllRooms({reason: 'startup'});
+						logger.info(resetResult, 'Startup voice runtime reset complete');
+					} catch (error) {
+						logger.error({error}, 'Startup voice runtime reset failed (continuing startup)');
+					} finally {
+						try {
+							await kvClient.releaseLock(startupResetLockKey, startupResetLockToken);
+						} catch (error) {
+							logger.warn({error}, 'Failed to release startup voice runtime reset lock');
+						}
+					}
+				}
+
+				voiceReconciliationWorker = new VoiceReconciliationWorker({
+					gatewayService: getGatewayService(),
+					liveKitService,
+					voiceRoomStore,
+					kvClient,
+					metricsService: getMetricsService(),
+					logger,
+				});
+				voiceReconciliationWorker.start();
+				logger.info('Voice reconciliation worker started');
+			}
 		}
 
 		if (config.dev.testModeEnabled && config.stripe.enabled) {
@@ -192,6 +250,15 @@ export function createShutdown(logger: ILogger): () => Promise<void> {
 		}
 
 		setInjectedWorkerService(undefined);
+
+		if (voiceReconciliationWorker) {
+			try {
+				voiceReconciliationWorker.stop();
+				voiceReconciliationWorker = null;
+			} catch (error) {
+				logger.error({error}, 'Error stopping voice reconciliation worker');
+			}
+		}
 
 		try {
 			await shutdownSearch();

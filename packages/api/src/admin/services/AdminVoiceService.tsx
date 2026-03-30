@@ -19,12 +19,16 @@
 
 import type {AdminAuditService} from '@fluxer/api/src/admin/services/AdminAuditService';
 import {createGuildIDSet, createUserIDSet, type UserID} from '@fluxer/api/src/BrandedTypes';
+import {Logger} from '@fluxer/api/src/Logger';
+import {getKVClient, getGatewayService, getLiveKitServiceInstance, getVoiceRoomStoreInstance} from '@fluxer/api/src/middleware/ServiceRegistry';
 import {VOICE_CONFIGURATION_CHANNEL} from '@fluxer/api/src/voice/VoiceConstants';
 import type {VoiceRegionRecord, VoiceRegionWithServers, VoiceServerRecord} from '@fluxer/api/src/voice/VoiceModel';
 import type {VoiceRepository} from '@fluxer/api/src/voice/VoiceRepository';
+import {VoiceRuntimeResetService} from '@fluxer/api/src/voice/VoiceRuntimeResetService';
 import type {ICacheService} from '@fluxer/cache/src/ICacheService';
 import {UnknownVoiceRegionError} from '@fluxer/errors/src/domains/voice/UnknownVoiceRegionError';
 import {UnknownVoiceServerError} from '@fluxer/errors/src/domains/voice/UnknownVoiceServerError';
+import {getMetricsService} from '@fluxer/api/src/infrastructure/MetricsService';
 import type {
 	CreateVoiceRegionRequest,
 	CreateVoiceServerRequest,
@@ -34,6 +38,7 @@ import type {
 	GetVoiceServerRequest,
 	ListVoiceRegionsRequest,
 	ListVoiceServersRequest,
+	ResetVoiceRuntimeResponse,
 	UpdateVoiceRegionRequest,
 	UpdateVoiceServerRequest,
 	VoiceRegionAdminResponse,
@@ -366,6 +371,52 @@ export class AdminVoiceService {
 		});
 
 		return {success: true};
+	}
+
+	async resetVoiceRuntime(adminUserId: UserID, auditLogReason: string | null): Promise<ResetVoiceRuntimeResponse> {
+		const {auditService} = this.deps;
+		const liveKitService = getLiveKitServiceInstance();
+		const voiceRoomStore = getVoiceRoomStoreInstance();
+		if (!liveKitService || !voiceRoomStore) {
+			throw new Error('Voice runtime is not initialized');
+		}
+
+		const runtimeResetService = new VoiceRuntimeResetService({
+			gatewayService: getGatewayService(),
+			liveKitService,
+			voiceRoomStore,
+			kvClient: getKVClient(),
+			metricsService: getMetricsService(),
+			logger: Logger,
+		});
+
+		const result = await runtimeResetService.resetAllRooms({reason: 'admin'});
+
+		await auditService.createAuditLog({
+			adminUserId,
+			targetType: 'voice_runtime',
+			targetId: BigInt(0),
+			action: 'reset_voice_runtime',
+			auditLogReason,
+			metadata: new Map([
+				['rooms_discovered', result.roomsDiscovered.toString()],
+				['rooms_reset', result.roomsReset.toString()],
+				['livekit_participants_disconnected', result.liveKitParticipantsDisconnected.toString()],
+				['gateway_connections_disconnected', result.gatewayConnectionsDisconnected.toString()],
+				['pending_joins_observed', result.pendingJoinsObserved.toString()],
+				['errors', result.errors.toString()],
+			]),
+		});
+
+		return {
+			success: true,
+			rooms_discovered: result.roomsDiscovered,
+			rooms_reset: result.roomsReset,
+			livekit_participants_disconnected: result.liveKitParticipantsDisconnected,
+			gateway_connections_disconnected: result.gatewayConnectionsDisconnected,
+			pending_joins_observed: result.pendingJoinsObserved,
+			errors: result.errors,
+		};
 	}
 
 	private mapVoiceRegionToAdminResponse(region: VoiceRegionRecord): VoiceRegionAdminResponse {

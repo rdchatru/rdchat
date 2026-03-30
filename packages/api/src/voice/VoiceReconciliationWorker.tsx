@@ -23,8 +23,8 @@ import type {ILogger} from '@fluxer/api/src/ILogger';
 import type {IGatewayService} from '@fluxer/api/src/infrastructure/IGatewayService';
 import type {ILiveKitService} from '@fluxer/api/src/infrastructure/ILiveKitService';
 import type {IMetricsService} from '@fluxer/api/src/infrastructure/IMetricsService';
+import type {IVoiceRoomStore} from '@fluxer/api/src/infrastructure/IVoiceRoomStore';
 import {parseParticipantIdentity, parseRoomName} from '@fluxer/api/src/infrastructure/VoiceRoomContext';
-import type {VoiceRoomStore} from '@fluxer/api/src/infrastructure/VoiceRoomStore';
 import type {IKVProvider} from '@fluxer/kv_client/src/IKVProvider';
 
 interface GatewayVoiceStateEntry {
@@ -43,7 +43,7 @@ interface GatewayPendingJoinEntry {
 interface VoiceReconciliationWorkerOptions {
 	gatewayService: IGatewayService;
 	liveKitService: ILiveKitService;
-	voiceRoomStore: VoiceRoomStore;
+	voiceRoomStore: IVoiceRoomStore;
 	kvClient: IKVProvider;
 	metricsService: IMetricsService;
 	logger: ILogger;
@@ -66,7 +66,7 @@ const ROOM_KEY_PREFIX = 'voice:room:server:';
 export class VoiceReconciliationWorker {
 	private readonly gatewayService: IGatewayService;
 	private readonly liveKitService: ILiveKitService;
-	private readonly voiceRoomStore: VoiceRoomStore;
+	private readonly voiceRoomStore: IVoiceRoomStore;
 	private readonly kvClient: IKVProvider;
 	private readonly metricsService: IMetricsService;
 	private readonly logger: ILogger;

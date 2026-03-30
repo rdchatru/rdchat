@@ -137,6 +137,7 @@ import type {
 	GetVoiceServerRequest,
 	ListVoiceRegionsRequest,
 	ListVoiceServersRequest,
+	ResetVoiceRuntimeRequest,
 	UpdateVoiceRegionRequest,
 	UpdateVoiceServerRequest,
 } from '@fluxer/schema/src/domains/admin/AdminVoiceSchemas';
@@ -915,6 +916,10 @@ export class AdminService {
 
 	async deleteVoiceServer(data: DeleteVoiceServerRequest, adminUserId: UserID, auditLogReason: string | null) {
 		return this.voiceService.deleteVoiceServer(data, adminUserId, auditLogReason);
+	}
+
+	async resetVoiceRuntime(_data: ResetVoiceRuntimeRequest, adminUserId: UserID, auditLogReason: string | null) {
+		return this.voiceService.resetVoiceRuntime(adminUserId, auditLogReason);
 	}
 
 	async generateGiftCodes(count: number, durationMonths: number) {

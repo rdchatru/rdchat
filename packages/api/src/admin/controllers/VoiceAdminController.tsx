@@ -40,6 +40,8 @@ import {
 	ListVoiceRegionsResponse,
 	ListVoiceServersRequest,
 	ListVoiceServersResponse,
+	ResetVoiceRuntimeRequest,
+	ResetVoiceRuntimeResponse,
 	UpdateVoiceRegionRequest,
 	UpdateVoiceRegionResponse,
 	UpdateVoiceServerRequest,
@@ -47,6 +49,29 @@ import {
 } from '@fluxer/schema/src/domains/admin/AdminVoiceSchemas';
 
 export function VoiceAdminController(app: HonoApp) {
+	app.post(
+		'/admin/voice/runtime/reset',
+		RateLimitMiddleware(RateLimitConfigs.ADMIN_GUILD_MODIFY),
+		requireAdminACL(AdminACLs.VOICE_SERVER_UPDATE),
+		Validator('json', ResetVoiceRuntimeRequest),
+		OpenAPI({
+			operationId: 'reset_voice_runtime',
+			summary: 'Reset active voice runtime state',
+			responseSchema: ResetVoiceRuntimeResponse,
+			statusCode: 200,
+			security: 'adminApiKey',
+			tags: 'Admin',
+			description:
+				'Disconnects active voice participants, clears stale pinned room assignments, and resets runtime voice state across all regions. Useful when a server gets stuck after failed or partial voice joins. Requires VOICE_SERVER_UPDATE permission.',
+		}),
+		async (ctx) => {
+			const adminService = ctx.get('adminService');
+			const adminUserId = ctx.get('adminUserId');
+			const auditLogReason = ctx.get('auditLogReason');
+			return ctx.json(await adminService.resetVoiceRuntime(ctx.req.valid('json'), adminUserId, auditLogReason));
+		},
+	);
+
 	app.post(
 		'/admin/voice/regions/list',
 		RateLimitMiddleware(RateLimitConfigs.ADMIN_LOOKUP),

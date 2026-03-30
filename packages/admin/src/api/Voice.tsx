@@ -29,6 +29,7 @@ import type {
 	CreateVoiceServerRequest,
 	ListVoiceRegionsResponse,
 	ListVoiceServersResponse,
+	ResetVoiceRuntimeResponse,
 	UpdateVoiceRegionRequest,
 	UpdateVoiceServerRequest,
 	VoiceRegionWithServersResponse,
@@ -214,4 +215,13 @@ export async function deleteVoiceServer(
 ): Promise<ApiResult<void>> {
 	const client = new ApiClient(config, session);
 	return client.postVoid('/admin/voice/servers/delete', {region_id, server_id}, audit_log_reason);
+}
+
+export async function resetVoiceRuntime(
+	config: Config,
+	session: Session,
+	audit_log_reason?: string,
+): Promise<ApiResult<ResetVoiceRuntimeResponse>> {
+	const client = new ApiClient(config, session);
+	return client.post<ResetVoiceRuntimeResponse>('/admin/voice/runtime/reset', {}, audit_log_reason);
 }
