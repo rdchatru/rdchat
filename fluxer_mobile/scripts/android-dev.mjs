@@ -54,8 +54,6 @@ async function writeDevConfig() {
 					title: 'RdChat',
 					fullscreen: false,
 					resizable: true,
-					initialization_script:
-						"window.__FLUXER_NATIVE_PLATFORM__ = navigator.userAgent.includes('Android') ? 'tauri-android' : 'tauri-ios';",
 				},
 			],
 			security: {

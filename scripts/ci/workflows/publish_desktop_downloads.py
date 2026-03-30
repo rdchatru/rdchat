@@ -23,6 +23,21 @@ PLATFORM_FORMATS: Final[dict[str, list[tuple[str, str]]]] = {
 
 SIDECAR_SUFFIXES: Final[tuple[str, ...]] = (".sha256", ".blockmap")
 
+ARCH_HINTS: Final[dict[str, dict[str, tuple[str, ...]]]] = {
+    "windows": {
+        "x64": ("-x64", "_x64"),
+        "arm64": ("-arm64", "_arm64"),
+    },
+    "macos": {
+        "x64": ("-x64", "_x64", "-mac-x64"),
+        "arm64": ("-arm64", "_arm64", "-mac-arm64"),
+    },
+    "linux": {
+        "x64": ("-x64", "_x64", "-x86_64", "_x86_64", ".x86_64"),
+        "arm64": ("-arm64", "_arm64", "-aarch64", "_aarch64", ".aarch64"),
+    },
+}
+
 
 def require_env(name: str) -> str:
     value = os.environ.get(name, "").strip()
@@ -54,7 +69,16 @@ def read_sha256(artifact_path: pathlib.Path) -> str | None:
     return raw.split()[0]
 
 
-def find_primary_artifacts(staging_dir: pathlib.Path, platform: str) -> dict[str, pathlib.Path]:
+def matches_arch_hint(path: pathlib.Path, platform: str, arch: str) -> bool:
+    hints = ARCH_HINTS.get(platform, {}).get(arch, ())
+    if not hints:
+        return True
+
+    lower_name = path.name.lower()
+    return any(hint in lower_name for hint in hints)
+
+
+def find_primary_artifacts(staging_dir: pathlib.Path, platform: str, arch: str) -> dict[str, pathlib.Path]:
     expected = PLATFORM_FORMATS.get(platform)
     if expected is None:
         raise SystemExit(f"Unsupported platform: {platform}")
@@ -69,6 +93,10 @@ def find_primary_artifacts(staging_dir: pathlib.Path, platform: str) -> dict[str
             if path.name.endswith(suffix)
             and not any(path.name.endswith(f"{suffix}{sidecar}") for sidecar in SIDECAR_SUFFIXES)
         ]
+        arch_matches = [path for path in matches if matches_arch_hint(path, platform, arch)]
+        if arch_matches:
+            matches = arch_matches
+
         if len(matches) != 1:
             joined = ", ".join(sorted(path.name for path in matches)) or "none"
             raise SystemExit(
@@ -211,7 +239,7 @@ def main() -> int:
         raise SystemExit(f"Upload staging directory does not exist: {staging_dir}")
 
     prefix = get_prefix(channel, platform, arch)
-    artifacts = find_primary_artifacts(staging_dir, platform)
+    artifacts = find_primary_artifacts(staging_dir, platform, arch)
 
     manifest_bytes = build_manifest(
         channel=channel,

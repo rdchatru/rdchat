@@ -84,7 +84,6 @@ declare global {
 
 	interface Window {
 		__notificationStoreCleanup?: () => void;
-		__FLUXER_NATIVE_PLATFORM__?: 'tauri-android' | 'tauri-ios';
 		_mediaEngineStore?: MediaEngineStoreInstance;
 		electron?: ElectronAPI;
 		MSStream?: unknown;
