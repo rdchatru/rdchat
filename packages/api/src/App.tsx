@@ -40,8 +40,6 @@ export interface APIAppResult {
 	shutdown: () => Promise<void>;
 }
 
-const TAURI_MOBILE_CORS_ORIGINS = ['tauri://localhost', 'http://tauri.localhost', 'https://tauri.localhost'];
-
 export async function createAPIApp(options: CreateAPIAppOptions): Promise<APIAppResult> {
 	const {config, logger, setSentryUser, isTelemetryActive} = options;
 
@@ -52,7 +50,7 @@ export async function createAPIApp(options: CreateAPIAppOptions): Promise<APIApp
 	configureMiddleware(routes, {
 		logger,
 		nodeEnv: config.nodeEnv,
-		corsOrigins: [config.endpoints.webApp, config.endpoints.marketing, ...TAURI_MOBILE_CORS_ORIGINS],
+		corsOrigins: [config.endpoints.webApp, config.endpoints.marketing],
 		setSentryUser,
 		isTelemetryActive,
 	});

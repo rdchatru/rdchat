@@ -12,6 +12,7 @@
 		"android:build:debug": "node scripts/android-build.mjs --debug",
 		"android:init": "pnpm exec tauri android init",
 		"android:init:ci": "CI=true pnpm exec tauri android init",
+		"android:signing:ci": "node scripts/configure-android-signing.mjs",
 		"tauri": "tauri"
 	},
 	"devDependencies": {

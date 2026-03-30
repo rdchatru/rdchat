@@ -22,6 +22,7 @@ import {ExponentialBackoff} from '@app/lib/ExponentialBackoff';
 import {HttpError, type HttpError as HttpErrorType} from '@app/lib/HttpError';
 import type {HttpMethod} from '@app/lib/HttpTypes';
 import {Logger} from '@app/lib/Logger';
+import {getTauriHttpFetch, shouldUseTauriNativeNetworking} from '@app/lib/TauriMobileTransport';
 import relayClient from '@app/lib/RelayClient';
 import type {ResponseInterceptor} from '@app/types/BrandedTypes';
 import type {SudoVerificationPayload} from '@app/types/Sudo';
@@ -392,6 +393,14 @@ export class HttpClient {
 		return headerMap;
 	}
 
+	private parseFetchHeaders(response: Response): Record<string, string> {
+		const headers: Record<string, string> = {};
+		response.headers.forEach((value, key) => {
+			headers[key.toLowerCase()] = value;
+		});
+		return headers;
+	}
+
 	private parseRetryAfterSeconds(body: unknown): number {
 		const retryAfter = getResponseRetryAfter(body);
 
@@ -540,7 +549,9 @@ export class HttpClient {
 			const body = this.serializeBody(effectiveConfig);
 			const fullUrl = this.resolveRequestUrl(effectiveConfig.url, effectiveConfig.query);
 
-			const response = await this.performXHRRequest<T>(method, fullUrl, headers, body, effectiveConfig, requestState);
+			const response = shouldUseTauriNativeNetworking()
+				? await this.performNativeFetchRequest<T>(method, fullUrl, headers, body, effectiveConfig)
+				: await this.performXHRRequest<T>(method, fullUrl, headers, body, effectiveConfig, requestState);
 
 			if (this.shouldRetryStatus(response.status, retryCount, effectiveConfig.retries)) {
 				const retryBackoff = this.ensureBackoff(backoff);
@@ -760,6 +771,79 @@ export class HttpClient {
 
 			xhr.send(body as XMLHttpRequestBodyInit);
 		});
+	}
+
+	private async performNativeFetchRequest<T>(
+		method: HttpMethod,
+		fullUrl: string,
+		headers: Record<string, string>,
+		body: string | FormData | Blob | ArrayBuffer | undefined,
+		config: HttpRequestConfig,
+	): Promise<HttpResponse<T>> {
+		const nativeFetch = await getTauriHttpFetch();
+		const response = await nativeFetch(fullUrl, {
+			method,
+			headers,
+			body: body as BodyInit | null | undefined,
+			signal: config.signal,
+		});
+
+		if (config.skipParsing) {
+			return {
+				ok: response.ok,
+				status: response.status,
+				statusText: response.statusText,
+				headers: this.parseFetchHeaders(response),
+				body: undefined as T,
+			};
+		}
+
+		if (response.status === 204) {
+			return {
+				ok: response.ok,
+				status: response.status,
+				statusText: response.statusText,
+				headers: this.parseFetchHeaders(response),
+				body: undefined as T,
+			};
+		}
+
+		if (config.binary) {
+			return {
+				ok: response.ok,
+				status: response.status,
+				statusText: response.statusText,
+				headers: this.parseFetchHeaders(response),
+				body: (await response.blob()) as T,
+			};
+		}
+
+		const contentType = response.headers.get('content-type') || '';
+		const text = await response.text();
+		let parsedBody: T;
+
+		if (contentType.includes('application/json')) {
+			if (!text) {
+				parsedBody = undefined as T;
+			} else {
+				try {
+					parsedBody = JSON.parse(text) as T;
+				} catch {
+					parsedBody = text as T;
+				}
+			}
+		} else {
+			parsedBody = text as T;
+		}
+
+		return {
+			ok: response.ok,
+			status: response.status,
+			statusText: response.statusText,
+			headers: this.parseFetchHeaders(response),
+			body: parsedBody,
+			text,
+		};
 	}
 
 	private async executeViaRelay<T>(method: HttpMethod, config: HttpRequestConfig): Promise<HttpResponse<T>> {

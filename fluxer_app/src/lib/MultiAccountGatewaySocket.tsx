@@ -31,6 +31,7 @@ import type {CompressionType} from '@app/lib/GatewayCompression';
 import {GatewayCompression} from '@app/lib/GatewayCompression';
 import type {GatewayPayload, GatewayPresence, GatewaySocketProperties} from '@app/lib/GatewaySocket';
 import {Logger} from '@app/lib/Logger';
+import {createAppWebSocket, type AppWebSocket} from '@app/lib/TauriMobileTransport';
 import relayClient from '@app/lib/RelayClient';
 import GeoIPStore from '@app/stores/GeoIPStore';
 import MobileLayoutStore from '@app/stores/MobileLayoutStore';
@@ -131,7 +132,7 @@ export interface MultiAccountGatewaySocketOptions {
 }
 
 export class MultiAccountGatewaySocket extends EventEmitter<MultiAccountGatewaySocketEvents> {
-	private relaySocket: WebSocket | null = null;
+	private relaySocket: AppWebSocket | null = null;
 	private relayConnectionState: RelayConnectionState = RelayConnectionState.Disconnected;
 	private relayUrl: string | null = null;
 
@@ -211,7 +212,7 @@ export class MultiAccountGatewaySocket extends EventEmitter<MultiAccountGatewayS
 
 			logger.debug('Opening multiplexed relay WebSocket:', wsUrl.toString());
 
-			this.relaySocket = new WebSocket(wsUrl.toString());
+			this.relaySocket = createAppWebSocket(wsUrl.toString());
 			this.relaySocket.binaryType = 'arraybuffer';
 
 			this.relaySocket.addEventListener('open', this.handleRelayOpen);

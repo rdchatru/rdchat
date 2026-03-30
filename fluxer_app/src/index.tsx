@@ -39,6 +39,7 @@ import {initI18n} from '@app/I18n';
 import CaptchaInterceptor from '@app/lib/CaptchaInterceptor';
 import {Logger} from '@app/lib/Logger';
 import {initializeEmojiParser} from '@app/lib/markdown/EmojiProviderSetup';
+import {installTauriFetchPolyfill} from '@app/lib/TauriMobileTransport';
 import {registerServiceWorker} from '@app/service_worker/Register';
 import AccountManager from '@app/stores/AccountManager';
 import ChannelDisplayNameStore from '@app/stores/ChannelDisplayNameStore';
@@ -69,6 +70,7 @@ const SentryErrorBoundary = Sentry.ErrorBoundary as React.ComponentType<SentryEr
 const logger = new Logger('index');
 
 preloadClientInfo();
+installTauriFetchPolyfill();
 
 async function resumePendingDesktopHandoffLogin(): Promise<void> {
 	const electronApi = getElectronAPI();

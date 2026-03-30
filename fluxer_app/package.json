@@ -73,6 +73,8 @@
 		"@radix-ui/react-switch": "catalog:",
 		"@sentry/react": "catalog:",
 		"@simplewebauthn/browser": "catalog:",
+		"@tauri-apps/plugin-http": "^2.0.0",
+		"@tauri-apps/plugin-websocket": "^2.0.0",
 		"bowser": "catalog:",
 		"clsx": "catalog:",
 		"colorjs.io": "catalog:",

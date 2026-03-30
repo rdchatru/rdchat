@@ -120,6 +120,21 @@ jobs:
       - name: Initialize Tauri Android project
         run: pnpm --filter fluxer_mobile android:init:ci
 
+      - name: Prepare Android signing
+        if: github.event_name == 'workflow_dispatch' && inputs.build_type == 'release'
+        shell: bash
+        env:
+          ANDROID_KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          ANDROID_KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+          ANDROID_STORE_PASSWORD: ${{ secrets.ANDROID_STORE_PASSWORD }}
+        run: |
+          test -n "$ANDROID_KEYSTORE_BASE64"
+          test -n "$ANDROID_KEY_ALIAS"
+          test -n "$ANDROID_KEY_PASSWORD"
+          printf '%s' "$ANDROID_KEYSTORE_BASE64" | base64 --decode > fluxer_mobile/src-tauri/gen/android/rdchat-upload.jks
+          pnpm --filter fluxer_mobile android:signing:ci
+
       - name: Build Android debug app
         if: github.event_name != 'workflow_dispatch' || inputs.build_type == 'debug'
         run: pnpm --filter fluxer_mobile android:build:debug

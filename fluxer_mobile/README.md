@@ -34,3 +34,10 @@ For a physical device, set `FLUXER_MOBILE_DEV_URL` to your machine's LAN address
 
 The Android CI build is defined in
 `.github/workflows/build-mobile-android.yaml`.
+
+For signed release builds, configure these GitHub secrets:
+
+- `ANDROID_KEYSTORE_BASE64`
+- `ANDROID_KEY_ALIAS`
+- `ANDROID_KEY_PASSWORD`
+- `ANDROID_STORE_PASSWORD`

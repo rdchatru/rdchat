@@ -22,6 +22,7 @@ import type {GatewayCustomStatusPayload} from '@app/lib/CustomStatus';
 import {ExponentialBackoff} from '@app/lib/ExponentialBackoff';
 import {type CompressionType, GatewayCompression} from '@app/lib/GatewayCompression';
 import {Logger} from '@app/lib/Logger';
+import {createAppWebSocket, type AppWebSocket} from '@app/lib/TauriMobileTransport';
 import relayClient from '@app/lib/RelayClient';
 import AuthenticationStore from '@app/stores/AuthenticationStore';
 import GeoIPStore from '@app/stores/GeoIPStore';
@@ -120,7 +121,7 @@ export class GatewaySocket extends EventEmitter<GatewaySocketEvents> {
 	private readonly log: Logger;
 	private readonly reconnectBackoff: ExponentialBackoff;
 
-	private socket: WebSocket | null = null;
+	private socket: AppWebSocket | null = null;
 	private connectionState: GatewayState = GatewayState.Disconnected;
 
 	private activeSessionId: string | null = null;
@@ -385,7 +386,7 @@ export class GatewaySocket extends EventEmitter<GatewaySocketEvents> {
 				this.log.debug(`Opening WebSocket connection to ${url}`);
 
 				try {
-					this.socket = new WebSocket(url);
+					this.socket = createAppWebSocket(url);
 
 					const compression: CompressionType = this.options.compression ?? 'zstd-stream';
 					if (compression !== 'none') {
