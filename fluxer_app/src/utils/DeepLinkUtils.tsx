@@ -42,6 +42,41 @@ type DeepLinkTarget =
 	| {type: 'gift'; code: string; preferLogin: boolean}
 	| {type: 'user'; userId: string};
 
+const escapeForRegex = (value: string): string => value.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&');
+const protocolPattern = new RegExp(`^${escapeForRegex(APP_PROTOCOL_PREFIX)}`);
+
+const normalizeChannelPath = (pathname: string): string | null => {
+	const normalizedPath = pathname.startsWith('/') ? pathname : `/${pathname}`;
+	const segments = normalizedPath.split('/').filter(Boolean);
+
+	if (segments[0] !== 'channels') return null;
+
+	const [, scope, channelId, messageId] = segments;
+	const segmentCount = segments.length;
+	const isSnowflake = (value?: string) => isProbablyAValidSnowflake(value ?? null);
+	const isDmScope = scope === ME;
+
+	let isValid = false;
+
+	if (isDmScope) {
+		if (segmentCount === 2) {
+			isValid = true;
+		} else if (segmentCount === 3 && isSnowflake(channelId)) {
+			isValid = true;
+		} else if (segmentCount === 4 && isSnowflake(channelId) && isSnowflake(messageId)) {
+			isValid = true;
+		}
+	} else {
+		if (segmentCount === 3 && isSnowflake(scope) && isSnowflake(channelId)) {
+			isValid = true;
+		} else if (segmentCount === 4 && isSnowflake(scope) && isSnowflake(channelId) && isSnowflake(messageId)) {
+			isValid = true;
+		}
+	}
+
+	return isValid ? normalizedPath : null;
+};
+
 const parseDeepLink = (rawUrl: string): DeepLinkTarget | null => {
 	const tryFromSegments = (segments: Array<string>, search?: string): DeepLinkTarget | null => {
 		const [first, second, third] = segments.filter(Boolean);
@@ -69,7 +104,6 @@ const parseDeepLink = (rawUrl: string): DeepLinkTarget | null => {
 		if (target) return target;
 	} catch {}
 
-	const protocolPattern = new RegExp(`^${APP_PROTOCOL_PREFIX.replace(/[-/\\^$*+?.()|[\]{}]/g, '\\$&')}`);
 	const sanitized = rawUrl.replace(protocolPattern, '').replace(/^\/+/, '');
 	const [pathPart, searchPart] = sanitized.split('?');
 	const target = tryFromSegments(pathPart.split('/'), searchPart ? `?${searchPart}` : undefined);
@@ -113,6 +147,12 @@ const navigateForTarget = (target: DeepLinkTarget) => {
 };
 
 export function handleDeepLinkUrl(rawUrl: string): boolean {
+	const channelPath = parseChannelUrl(rawUrl);
+	if (channelPath) {
+		RouterUtils.transitionTo(channelPath);
+		return true;
+	}
+
 	const target = parseDeepLink(rawUrl);
 	if (!target) return false;
 	navigateForTarget(target);
@@ -181,43 +221,22 @@ export function isInternalChannelHost(host: string): boolean {
 export function parseChannelUrl(url: string): string | null {
 	try {
 		const parsed = new URL(url);
-		const isInternal = isInternalChannelHost(parsed.host) && parsed.pathname.startsWith('/channels/');
-
-		if (!isInternal) return null;
-
-		const normalizedPath = parsed.pathname;
-		const segments = normalizedPath.split('/').filter(Boolean);
-
-		if (segments[0] !== 'channels') return null;
-
-		const [, scope, channelId, messageId] = segments;
-		const segmentCount = segments.length;
-		const isSnowflake = (value?: string) => isProbablyAValidSnowflake(value ?? null);
-		const isDmScope = scope === ME;
-
-		let isValid = false;
-
-		if (isDmScope) {
-			if (segmentCount === 2) {
-				isValid = true;
-			} else if (segmentCount === 3 && isSnowflake(channelId)) {
-				isValid = true;
-			} else if (segmentCount === 4 && isSnowflake(channelId) && isSnowflake(messageId)) {
-				isValid = true;
-			}
-		} else {
-			if (segmentCount === 3 && isSnowflake(scope) && isSnowflake(channelId)) {
-				isValid = true;
-			} else if (segmentCount === 4 && isSnowflake(scope) && isSnowflake(channelId) && isSnowflake(messageId)) {
-				isValid = true;
-			}
+		if (parsed.protocol === APP_PROTOCOL_PREFIX.slice(0, -2)) {
+			return normalizeChannelPath(`/${[parsed.host, ...parsed.pathname.split('/').filter(Boolean)].join('/')}`);
 		}
 
-		if (isValid) {
-			return normalizedPath;
+		if (isInternalChannelHost(parsed.host)) {
+			return normalizeChannelPath(parsed.pathname);
 		}
-	} catch {
-		return null;
+	} catch {}
+
+	if (url.startsWith('/channels/')) {
+		return normalizeChannelPath(url);
+	}
+
+	if (protocolPattern.test(url)) {
+		const [pathPart] = url.replace(protocolPattern, '').replace(/^\/+/, '').split(/[?#]/);
+		return normalizeChannelPath(pathPart);
 	}
 
 	return null;

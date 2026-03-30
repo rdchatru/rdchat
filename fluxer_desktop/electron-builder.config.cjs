@@ -43,6 +43,13 @@ module.exports = {
 		name: packageName,
 	},
 
+	protocols: [
+		{
+			name: productName,
+			schemes: ['fluxer'],
+		},
+	],
+
 	extraResources: [
 		{
 			from: `build_resources/${iconDir}/badges/`,

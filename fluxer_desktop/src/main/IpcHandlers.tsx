@@ -24,7 +24,7 @@ import https from 'node:https';
 import {createRequire} from 'node:module';
 import os from 'node:os';
 import {BUILD_CHANNEL} from '@electron/common/BuildChannel';
-import {setCustomAppUrl} from '@electron/common/DesktopConfig';
+import {buildDesktopAppUrl, setCustomAppUrl} from '@electron/common/DesktopConfig';
 import {createChildLogger} from '@electron/common/Logger';
 import type {
 	DesktopInfo,
@@ -493,7 +493,7 @@ export function registerIpcHandlers(): void {
 		setCustomAppUrl(instanceOrigin);
 
 		try {
-			await mainWindow.loadURL(instanceOrigin);
+			await mainWindow.loadURL(buildDesktopAppUrl(instanceOrigin));
 		} catch (error) {
 			setCustomAppUrl(null);
 			pendingDesktopHandoffCode = null;

@@ -31,9 +31,17 @@ const CHANNEL_LINKS = [
 	`${STABLE_BASE}/channels/@me/1130650140672000000`,
 	`${STABLE_BASE}/channels/12345678901234567/23456789012345678`,
 	`${STABLE_BASE}/channels/12345678901234567/23456789012345678/34567890123456789`,
+	'fluxer://channels/@me/1130650140672000000/1447659936007000077',
+	'fluxer://channels/@me/1130650140672000000',
+	'fluxer://channels/12345678901234567/23456789012345678',
+	'fluxer://channels/12345678901234567/23456789012345678/34567890123456789',
 ];
 const GUILD_CHANNEL = `${STABLE_BASE}/channels/12345678901234567/23456789012345678`;
 const GUILD_MESSAGE = `${STABLE_BASE}/channels/12345678901234567/23456789012345678/34567890123456789`;
+const PROTOCOL_GUILD_CHANNEL = 'fluxer://channels/12345678901234567/23456789012345678';
+const PROTOCOL_GUILD_MESSAGE = 'fluxer://channels/12345678901234567/23456789012345678/34567890123456789';
+const expectedChannelPath = (url: string) =>
+	url.startsWith('fluxer://') ? `/${url.replace(/^fluxer:\/\//, '').split(/[?#]/)[0]}` : new URL(url).pathname;
 
 describe('parseChannelUrl', () => {
 	const originalLocationHref = globalThis.location.href;
@@ -48,7 +56,7 @@ describe('parseChannelUrl', () => {
 
 	for (const url of CHANNEL_LINKS) {
 		test(`returns pathname for ${url}`, () => {
-			const expectedPath = new URL(url).pathname;
+			const expectedPath = expectedChannelPath(url);
 			expect(parseChannelUrl(url)).toBe(expectedPath);
 		});
 	}
@@ -67,6 +75,14 @@ describe('parseMessageJumpLink', () => {
 
 	test('returns channel, guild, and message info when the path points to a message', () => {
 		expect(parseMessageJumpLink(GUILD_MESSAGE)).toEqual({
+			scope: '12345678901234567',
+			channelId: '23456789012345678',
+			messageId: '34567890123456789',
+		});
+	});
+
+	test('returns channel, guild, and message info for protocol deep links', () => {
+		expect(parseMessageJumpLink(PROTOCOL_GUILD_MESSAGE)).toEqual({
 			scope: '12345678901234567',
 			channelId: '23456789012345678',
 			messageId: '34567890123456789',
@@ -95,6 +111,13 @@ describe('parseChannelJumpLink', () => {
 
 	test('returns scope and channel for a guild path', () => {
 		expect(parseChannelJumpLink(GUILD_CHANNEL)).toEqual({
+			scope: '12345678901234567',
+			channelId: '23456789012345678',
+		});
+	});
+
+	test('returns scope and channel for a protocol path', () => {
+		expect(parseChannelJumpLink(PROTOCOL_GUILD_CHANNEL)).toEqual({
 			scope: '12345678901234567',
 			channelId: '23456789012345678',
 		});

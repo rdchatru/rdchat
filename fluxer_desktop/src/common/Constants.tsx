@@ -18,6 +18,7 @@
  */
 
 export const APP_PROTOCOL = 'fluxer';
+export const APP_ENTRY_PATH = '/channels/@me';
 export const STABLE_APP_URL = 'https://rdchat.ru';
 export const CANARY_APP_URL = 'https://rdchat.ru';
 export const DEFAULT_WINDOW_WIDTH = 1280;

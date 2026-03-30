@@ -20,7 +20,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {BUILD_CHANNEL} from '@electron/common/BuildChannel';
-import {CANARY_APP_URL, STABLE_APP_URL} from '@electron/common/Constants';
+import {APP_ENTRY_PATH, CANARY_APP_URL, STABLE_APP_URL} from '@electron/common/Constants';
 import log from 'electron-log';
 
 const CONFIG_FILE_NAME = 'settings.json';
@@ -60,14 +60,21 @@ export function loadDesktopConfig(userDataPath: string): void {
 }
 
 export function getAppUrl(): string {
-	if (config.app_url) {
-		return config.app_url;
-	}
-	return BUILD_CHANNEL === 'canary' ? CANARY_APP_URL : STABLE_APP_URL;
+	return buildDesktopAppUrl(config.app_url ?? (BUILD_CHANNEL === 'canary' ? CANARY_APP_URL : STABLE_APP_URL));
 }
 
 export function getCustomAppUrl(): string | null {
 	return config.app_url ?? null;
+}
+
+export function buildDesktopAppUrl(instanceUrl: string): string {
+	const url = new URL(instanceUrl);
+	if (url.pathname === '/' || url.pathname === '') {
+		url.pathname = APP_ENTRY_PATH;
+		url.search = '';
+		url.hash = '';
+	}
+	return url.toString();
 }
 
 export function setCustomAppUrl(appUrl: string | null): void {
