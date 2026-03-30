@@ -4,7 +4,7 @@
 		"self_hosted": false
 	},
 	"domain": {
-		"base_domain": "localhost"
+		"base_domain": "rdchat.ru"
 	},
 	"database": {
 		"backend": "sqlite",
