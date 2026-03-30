@@ -1,0 +1,20 @@
+{
+	"name": "fluxer_mobile",
+	"version": "0.0.0",
+	"private": true,
+	"description": "RdChat Android client powered by Tauri Mobile and fluxer_app",
+	"homepage": "https://rdchat.ru",
+	"author": "RdChat Contributors <support@rdchat.ru>",
+	"type": "module",
+	"scripts": {
+		"android:dev": "node scripts/android-dev.mjs",
+		"android:build": "node scripts/android-build.mjs",
+		"android:build:debug": "node scripts/android-build.mjs --debug",
+		"android:init": "pnpm exec tauri android init",
+		"android:init:ci": "CI=true pnpm exec tauri android init",
+		"tauri": "tauri"
+	},
+	"devDependencies": {
+		"@tauri-apps/cli": "^2.0.0"
+	}
+}

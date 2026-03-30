@@ -21,11 +21,20 @@ const userAgent = navigator.userAgent;
 const isIOSDevice = /iPad|iPhone|iPod/i.test(userAgent);
 const isAndroidDevice = /Android/i.test(userAgent);
 const isElectron = (window as {electron?: unknown}).electron !== undefined;
+const nativePlatformTag = window.__FLUXER_NATIVE_PLATFORM__;
+const isTauriAndroid = nativePlatformTag === 'tauri-android';
+const isTauriIOS = nativePlatformTag === 'tauri-ios';
+const isTauri =
+	isTauriAndroid ||
+	isTauriIOS ||
+	(window as {__TAURI__?: unknown; __TAURI_INTERNALS__?: unknown}).__TAURI__ !== undefined ||
+	(window as {__TAURI__?: unknown; __TAURI_INTERNALS__?: unknown}).__TAURI_INTERNALS__ !== undefined;
 const isIOSWeb = isIOSDevice && !isElectron;
 const isPWA =
 	window.matchMedia?.('(display-mode: standalone)').matches ||
 	(navigator as {standalone?: boolean}).standalone === true;
-const isMobileBrowser = isIOSDevice || isAndroidDevice;
+const isNativeMobileApp = isTauriAndroid || isTauriIOS;
+const isMobileBrowser = isIOSDevice || isAndroidDevice || isNativeMobileApp;
 
 type PlatformSelector<T> = {
 	web?: T;
@@ -57,9 +66,13 @@ export const Platform = {
 	isIOS: isIOSDevice,
 	isAndroid: isAndroidDevice,
 	isElectron,
+	isTauri,
+	isTauriAndroid,
+	isTauriIOS,
 	isIOSWeb,
 	isPWA,
 	isAppleDevice: isIOSDevice,
+	isNativeMobileApp,
 	isMobileBrowser,
 	select: selectValue,
 };

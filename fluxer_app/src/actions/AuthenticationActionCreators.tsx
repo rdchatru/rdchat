@@ -26,14 +26,22 @@ import AccountManager from '@app/stores/AccountManager';
 import AuthenticationStore from '@app/stores/AuthenticationStore';
 import GatewayConnectionStore from '@app/stores/gateway/GatewayConnectionStore';
 import {getApiErrorCode} from '@app/utils/ApiErrorUtils';
-import {isDesktop} from '@app/utils/NativeUtils';
+import {isDesktop, isNativeMobileApp} from '@app/utils/NativeUtils';
 import {APIErrorCodes} from '@fluxer/constants/src/ApiErrorCodes';
 import type {ValueOf} from '@fluxer/constants/src/ValueOf';
 import type {AuthenticationResponseJSON, PublicKeyCredentialRequestOptionsJSON} from '@simplewebauthn/browser';
 
 const logger = new Logger('AuthService');
 
-const getPlatformHeaderValue = (): 'web' | 'desktop' | 'mobile' => (isDesktop() ? 'desktop' : 'web');
+const getPlatformHeaderValue = (): 'web' | 'desktop' | 'mobile' => {
+	if (isDesktop()) {
+		return 'desktop';
+	}
+	if (isNativeMobileApp()) {
+		return 'mobile';
+	}
+	return 'web';
+};
 const withPlatformHeader = (headers?: Record<string, string>): Record<string, string> => ({
 	'X-Fluxer-Platform': getPlatformHeaderValue(),
 	...(headers ?? {}),

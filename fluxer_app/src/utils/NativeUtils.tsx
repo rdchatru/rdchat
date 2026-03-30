@@ -18,6 +18,7 @@
  */
 
 import {Logger} from '@app/lib/Logger';
+import {Platform} from '@app/lib/Platform';
 import type {ElectronAPI} from '@app/types/electron.d';
 
 const logger = new Logger('NativeUtils');
@@ -33,6 +34,10 @@ export function getElectronAPI(): ElectronAPI | null {
 
 export function isDesktop(): boolean {
 	return isElectron();
+}
+
+export function isNativeMobileApp(): boolean {
+	return Platform.isNativeMobileApp;
 }
 
 export type NativePlatform = 'macos' | 'windows' | 'linux' | 'unknown';

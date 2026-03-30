@@ -1,0 +1,18 @@
+[package]
+name = "fluxer_mobile"
+version = "0.0.0"
+description = "RdChat mobile client"
+authors = ["RdChat Contributors"]
+license = "AGPL-3.0-or-later"
+repository = "https://rdchat.ru"
+edition = "2021"
+
+[lib]
+name = "fluxer_mobile_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2", features = [] }
+
+[dependencies]
+tauri = { version = "2", features = [] }

@@ -84,9 +84,12 @@ declare global {
 
 	interface Window {
 		__notificationStoreCleanup?: () => void;
+		__FLUXER_NATIVE_PLATFORM__?: 'tauri-android' | 'tauri-ios';
 		_mediaEngineStore?: MediaEngineStoreInstance;
 		electron?: ElectronAPI;
 		MSStream?: unknown;
+		__TAURI__?: unknown;
+		__TAURI_INTERNALS__?: unknown;
 		webkitAudioContext?: typeof AudioContext;
 		styleMedia: StyleMedia;
 		showSaveFilePicker?: (options?: SaveFilePickerOptions) => Promise<FileSystemFileHandle>;

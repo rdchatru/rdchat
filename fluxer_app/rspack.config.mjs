@@ -599,6 +599,7 @@ export default () => {
 		},
 
 		devServer: {
+			host: process.env.FLUXER_APP_DEV_HOST || '127.0.0.1',
 			port: Number(process.env.FLUXER_APP_DEV_PORT) || 49427,
 			hot: false,
 			liveReload: false,
