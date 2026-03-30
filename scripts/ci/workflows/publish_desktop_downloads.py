@@ -193,7 +193,7 @@ def upload_files(
         data=body,
         method="POST",
         headers={
-            "Authorization": f"Bearer {token}",
+            "Authorization": f"Admin {token}",
             "Content-Type": f"multipart/form-data; boundary={boundary}",
             "Accept": "application/json",
             "X-Audit-Log-Reason": audit_log_reason,
