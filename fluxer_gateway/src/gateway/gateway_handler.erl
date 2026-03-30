@@ -166,6 +166,8 @@ websocket_info({heartbeat_check}, State = #{heartbeat_state := HeartbeatState}) 
     handle_heartbeat_check(State, HeartbeatState);
 websocket_info({dispatch, Event, Data, Seq}, State) ->
     handle_dispatch(Event, Data, Seq, State);
+websocket_info({gateway_error, ErrorData}, State) when is_map(ErrorData) ->
+    handle_gateway_error_frame(ErrorData, State);
 websocket_info({session_backpressure_error, Details}, State) ->
     handle_session_backpressure_error(Details, State);
 websocket_info({'DOWN', _, process, Pid, _}, State = #{session_pid := Pid}) ->
@@ -242,6 +244,17 @@ handle_session_down(State) ->
 handle_session_backpressure_error(Details, State) ->
     Message = format_backpressure_close_message(Details),
     close_with_reason(ack_backpressure, Message, State).
+
+-spec handle_gateway_error_frame(map(), state()) -> ws_result().
+handle_gateway_error_frame(ErrorData, State) ->
+    Message = #{
+        <<"op">> => constants:opcode_to_num(gateway_error),
+        <<"d">> => ErrorData
+    },
+    case encode_and_compress(Message, State) of
+        {ok, Frame, NewState} -> {[Frame], NewState};
+        {error, _Reason} -> {ok, State}
+    end.
 
 -spec format_backpressure_close_message(map()) -> binary().
 format_backpressure_close_message(Details) ->
@@ -829,18 +842,36 @@ should_queue_voice_update(SessionPid) ->
 -spec process_voice_update(pid(), map(), state()) -> ws_result().
 process_voice_update(SessionPid, Data, State) ->
     try
-        gen_server:call(
+        Reply = gen_server:call(
             SessionPid,
             {voice_state_update, Data},
             5000
         ),
+        maybe_emit_voice_gateway_error(Reply),
         {ok, State}
     catch
         exit:{timeout, _} ->
+            maybe_emit_voice_gateway_error({error, timeout, timeout}),
             {ok, State};
         exit:{noproc, _} ->
+            maybe_emit_voice_gateway_error({error, unknown, unknown_error}),
             {ok, State}
     end.
+
+-spec maybe_emit_voice_gateway_error(term()) -> ok.
+maybe_emit_voice_gateway_error({error, _Category, ErrorAtom}) when is_atom(ErrorAtom) ->
+    self() ! {gateway_error, format_gateway_error(ErrorAtom)},
+    ok;
+maybe_emit_voice_gateway_error(_) ->
+    ok.
+
+-spec format_gateway_error(atom()) -> map().
+format_gateway_error(ErrorAtom) ->
+    #{
+        <<"code">> => gateway_errors:error_code(ErrorAtom),
+        <<"message">> => gateway_errors:error_message(ErrorAtom),
+        <<"source">> => <<"voice">>
+    }.
 
 -spec queue_voice_update(pid(), map()) -> ok.
 queue_voice_update(SessionPid, Data) ->
@@ -1027,5 +1058,11 @@ check_rate_limit_allows_other_ops_when_request_guild_members_is_hot_test() ->
         }
     },
     ?assertMatch({ok, _}, check_rate_limit(State, heartbeat)).
+
+format_gateway_error_test() ->
+    Error = format_gateway_error(timeout),
+    ?assertEqual(<<"TIMEOUT">>, maps:get(<<"code">>, Error)),
+    ?assertEqual(<<"Request timed out">>, maps:get(<<"message">>, Error)),
+    ?assertEqual(<<"voice">>, maps:get(<<"source">>, Error)).
 
 -endif.

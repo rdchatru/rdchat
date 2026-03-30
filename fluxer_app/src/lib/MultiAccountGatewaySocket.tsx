@@ -95,6 +95,7 @@ export interface AccountConnection {
 export interface GatewayErrorData {
 	code: GatewayErrorCode;
 	message: string;
+	source?: string;
 }
 
 export interface MultiplexedFrame {

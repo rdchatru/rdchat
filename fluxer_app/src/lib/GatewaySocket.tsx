@@ -98,6 +98,7 @@ export interface GatewaySocketOptions {
 export interface GatewayErrorData {
 	code: GatewayErrorCode;
 	message: string;
+	source?: string;
 }
 
 export interface GatewaySocketEvents {

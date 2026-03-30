@@ -410,6 +410,9 @@ handle_info({process_voice_queue}, State) ->
 handle_info(flush_reaction_buffer, State) ->
     NewState = session_dispatch:flush_reaction_buffer(State),
     {noreply, NewState};
+handle_info({voice_error, ErrorAtom}, State) when is_atom(ErrorAtom) ->
+    send_gateway_error_to_socket(ErrorAtom, State),
+    {noreply, State};
 handle_info({'DOWN', Ref, process, _Pid, Reason}, State) ->
     session_monitor:handle_process_down(Ref, Reason, State);
 handle_info(_Info, State) ->
@@ -517,6 +520,20 @@ build_ignored_events_map(Events) when is_list(Events) ->
 build_ignored_events_map(_) ->
     #{}.
 
+-spec send_gateway_error_to_socket(atom(), session_state()) -> ok.
+send_gateway_error_to_socket(ErrorAtom, State) ->
+    case maps:get(socket_pid, State, undefined) of
+        SocketPid when is_pid(SocketPid) ->
+            SocketPid ! {gateway_error, #{
+                <<"code">> => gateway_errors:error_code(ErrorAtom),
+                <<"message">> => gateway_errors:error_message(ErrorAtom),
+                <<"source">> => <<"voice">>
+            }},
+            ok;
+        _ ->
+            ok
+    end.
+
 -spec load_private_channels(map() | undefined) -> #{channel_id() => map()}.
 load_private_channels(Ready) when is_map(Ready) ->
     PrivateChannels = maps:get(<<"private_channels">>, Ready, []),
@@ -597,6 +614,17 @@ ensure_bot_ready_map_test() ->
     ),
     ?assertEqual(#{<<"guilds">> => []}, ensure_bot_ready_map(not_a_map)),
     ok.
+
+send_gateway_error_to_socket_test() ->
+    ok = send_gateway_error_to_socket(timeout, #{socket_pid => self()}),
+    receive
+        {gateway_error, Payload} ->
+            ?assertEqual(<<"TIMEOUT">>, maps:get(<<"code">>, Payload)),
+            ?assertEqual(<<"Request timed out">>, maps:get(<<"message">>, Payload)),
+            ?assertEqual(<<"voice">>, maps:get(<<"source">>, Payload))
+    after 100 ->
+        ?assert(false, gateway_error_not_sent)
+    end.
 
 serialize_state_test() ->
     State = #{

@@ -783,7 +783,7 @@ class MediaEngineFacade {
 	}
 
 	handleGatewayError(error: GatewayErrorData): void {
-		const voiceErrorCodes = new Set<GatewayErrorCode>([
+		const explicitVoiceErrorCodes = new Set<GatewayErrorCode>([
 			GatewayErrorCodes.VOICE_CONNECTION_NOT_FOUND,
 			GatewayErrorCodes.VOICE_CHANNEL_NOT_FOUND,
 			GatewayErrorCodes.VOICE_INVALID_CHANNEL_TYPE,
@@ -794,53 +794,90 @@ class MediaEngineFacade {
 			GatewayErrorCodes.VOICE_PERMISSION_DENIED,
 			GatewayErrorCodes.VOICE_CHANNEL_FULL,
 			GatewayErrorCodes.VOICE_MISSING_CONNECTION_ID,
+			GatewayErrorCodes.VOICE_CAMERA_USER_LIMIT,
+			GatewayErrorCodes.VOICE_NONCE_MISMATCH,
+			GatewayErrorCodes.VOICE_PENDING_EXPIRED,
 			GatewayErrorCodes.VOICE_TOKEN_FAILED,
 			GatewayErrorCodes.VOICE_UNCLAIMED_ACCOUNT,
+			GatewayErrorCodes.VOICE_UPDATE_RATE_LIMITED,
 		]);
+		const voiceScopedOnlyCodes = new Set<GatewayErrorCode>([
+			GatewayErrorCodes.INTERNAL_ERROR,
+			GatewayErrorCodes.TIMEOUT,
+			GatewayErrorCodes.UNKNOWN_ERROR,
+		]);
+		const isVoiceScoped = error.source === 'voice';
+		const isVoiceError =
+			explicitVoiceErrorCodes.has(error.code) || (isVoiceScoped && voiceScopedOnlyCodes.has(error.code));
 
-		if (!voiceErrorCodes.has(error.code)) {
+		if (!isVoiceError) {
 			return;
 		}
 
-		logger.warn(`Voice-related gateway error: [${error.code}] ${error.message}`);
+		logger.warn(`Voice-related gateway error: [${error.code}] ${error.message}`, {source: error.source ?? null});
 
-		if (error.code === GatewayErrorCodes.VOICE_CONNECTION_NOT_FOUND) {
-			if (VoiceConnectionManager.connecting) {
-				logger.info('Connection not found while connecting, aborting');
-				VoiceConnectionManager.abortConnection();
+		const isJoiningVoice = VoiceConnectionManager.connecting && !VoiceConnectionManager.connected;
+
+		if (isJoiningVoice) {
+			logger.info('Voice gateway error while connecting, aborting connection', {
+				code: error.code,
+				source: error.source ?? null,
+			});
+			VoiceConnectionManager.abortConnection();
+		}
+
+		if (error.code === GatewayErrorCodes.VOICE_MEMBER_TIMED_OUT) {
+			if (!this.i18n) {
+				throw new Error('MediaEngineFacade: i18n not initialized');
 			}
-		} else if (
-			error.code === GatewayErrorCodes.VOICE_PERMISSION_DENIED ||
-			error.code === GatewayErrorCodes.VOICE_CHANNEL_FULL ||
-			error.code === GatewayErrorCodes.VOICE_MEMBER_TIMED_OUT ||
-			error.code === GatewayErrorCodes.VOICE_UNCLAIMED_ACCOUNT
+			ToastActionCreators.createToast({
+				type: 'error',
+				children: this.i18n._(msg`You can't join while you're on timeout.`),
+			});
+			return;
+		}
+
+		if (error.code === GatewayErrorCodes.VOICE_UNCLAIMED_ACCOUNT) {
+			if (!this.i18n) {
+				throw new Error('MediaEngineFacade: i18n not initialized');
+			}
+			ToastActionCreators.createToast({
+				type: 'error',
+				children: this.i18n._(msg`Claim your account to join this voice channel.`),
+			});
+			return;
+		}
+
+		if (!isJoiningVoice) {
+			return;
+		}
+
+		if (error.code === GatewayErrorCodes.TIMEOUT) {
+			if (!this.i18n) {
+				throw new Error('MediaEngineFacade: i18n not initialized');
+			}
+			ToastActionCreators.createToast({
+				type: 'error',
+				children: this.i18n._(msg`Voice server timed out. Try joining again.`),
+			});
+			return;
+		}
+
+		if (
+			error.code === GatewayErrorCodes.VOICE_TOKEN_FAILED ||
+			error.code === GatewayErrorCodes.VOICE_UPDATE_RATE_LIMITED ||
+			error.code === GatewayErrorCodes.VOICE_PENDING_EXPIRED ||
+			error.code === GatewayErrorCodes.VOICE_NONCE_MISMATCH ||
+			error.code === GatewayErrorCodes.INTERNAL_ERROR ||
+			error.code === GatewayErrorCodes.UNKNOWN_ERROR
 		) {
-			if (VoiceConnectionManager.connecting && !VoiceConnectionManager.connected) {
-				logger.info('Permission denied, channel full, or timeout while connecting, aborting');
-				VoiceConnectionManager.abortConnection();
+			if (!this.i18n) {
+				throw new Error('MediaEngineFacade: i18n not initialized');
 			}
-			if (error.code === GatewayErrorCodes.VOICE_MEMBER_TIMED_OUT) {
-				if (!this.i18n) {
-					throw new Error('MediaEngineFacade: i18n not initialized');
-				}
-				ToastActionCreators.createToast({
-					type: 'error',
-					children: this.i18n._(msg`You can't join while you're on timeout.`),
-				});
-			} else if (error.code === GatewayErrorCodes.VOICE_UNCLAIMED_ACCOUNT) {
-				if (!this.i18n) {
-					throw new Error('MediaEngineFacade: i18n not initialized');
-				}
-				ToastActionCreators.createToast({
-					type: 'error',
-					children: this.i18n._(msg`Claim your account to join this voice channel.`),
-				});
-			}
-		} else if (error.code === GatewayErrorCodes.VOICE_TOKEN_FAILED) {
-			if (VoiceConnectionManager.connecting) {
-				logger.info('Token failed while connecting, aborting');
-				VoiceConnectionManager.abortConnection();
-			}
+			ToastActionCreators.createToast({
+				type: 'error',
+				children: this.i18n._(msg`Couldn't start voice on this server. Try joining again.`),
+			});
 		}
 	}
 

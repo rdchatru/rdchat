@@ -33,6 +33,8 @@
     {reply, ok, session_state()}
     | {reply, {error, term(), term()}, session_state()}.
 
+-define(GUILD_VOICE_STATE_UPDATE_TIMEOUT_MS, 4500).
+
 -spec init_voice_queue() -> #{voice_queue := queue:queue(), voice_queue_timer := undefined}.
 init_voice_queue() ->
     #{voice_queue => queue:new(), voice_queue_timer => undefined}.
@@ -351,25 +353,137 @@ handle_guild_voice_state_update(
     GuildPid,
     GuildId,
     ChannelId,
-    _UserId,
-    _ConnectionId,
-    _SessionId,
+    UserId,
+    ConnectionId,
+    SessionId,
     Request,
     _Latitude,
     _Longitude,
     SessionPid
 ) ->
-    case guild_client:voice_state_update(GuildPid, GuildId, Request, 12000) of
+    case guild_client:voice_state_update(
+        GuildPid, GuildId, Request, ?GUILD_VOICE_STATE_UPDATE_TIMEOUT_MS
+    ) of
         {ok, Reply} when is_map(Reply) ->
             maybe_dispatch_voice_server_update_from_reply(Reply, GuildId, ChannelId, SessionPid),
+            maybe_report_missing_voice_server_update(
+                Reply, GuildId, ChannelId, UserId, ConnectionId, SessionId, SessionPid
+            ),
             ok;
         {error, timeout} ->
+            logger:warning(
+                "Guild voice state update timed out",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    connection_id => ConnectionId,
+                    session_id => SessionId
+                }
+            ),
+            SessionPid ! {voice_error, timeout},
             ok;
         {error, noproc} ->
+            logger:warning(
+                "Guild voice state update failed because target process is gone",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    connection_id => ConnectionId,
+                    session_id => SessionId
+                }
+            ),
+            SessionPid ! {voice_error, unknown_error},
             ok;
-        {error, _Category, _ErrorAtom} ->
+        {error, circuit_breaker_open} ->
+            logger:warning(
+                "Guild voice state update short-circuited because the guild voice service is unhealthy",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    connection_id => ConnectionId,
+                    session_id => SessionId
+                }
+            ),
+            SessionPid ! {voice_error, internal_error},
+            ok;
+        {error, too_many_requests} ->
+            logger:warning(
+                "Guild voice state update rejected because too many voice requests are in flight",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    connection_id => ConnectionId,
+                    session_id => SessionId
+                }
+            ),
+            SessionPid ! {voice_error, voice_update_rate_limited},
+            ok;
+        {error, Category, ErrorAtom} ->
+            logger:warning(
+                "Guild voice state update failed",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    connection_id => ConnectionId,
+                    session_id => SessionId,
+                    category => Category,
+                    error => ErrorAtom
+                }
+            ),
+            SessionPid ! {voice_error, ErrorAtom},
             ok
     end.
+
+-spec maybe_report_missing_voice_server_update(
+    map(),
+    guild_id(),
+    channel_id() | null,
+    user_id(),
+    binary() | null,
+    binary(),
+    pid()
+) -> ok.
+maybe_report_missing_voice_server_update(
+    Reply,
+    GuildId,
+    ChannelId,
+    UserId,
+    null,
+    SessionId,
+    SessionPid
+) when is_integer(ChannelId), is_pid(SessionPid) ->
+    case
+        {
+            maps:get(token, Reply, undefined),
+            maps:get(endpoint, Reply, undefined),
+            maps:get(connection_id, Reply, undefined)
+        }
+    of
+        {Token, Endpoint, ConnectionId} when
+            is_binary(Token), is_binary(Endpoint), is_binary(ConnectionId)
+        ->
+            ok;
+        _ ->
+            logger:warning(
+                "Guild voice join succeeded without voice server payload",
+                #{
+                    guild_id => GuildId,
+                    channel_id => ChannelId,
+                    user_id => UserId,
+                    session_id => SessionId,
+                    reply => Reply
+                }
+            ),
+            SessionPid ! {voice_error, voice_token_failed},
+            ok
+    end;
+maybe_report_missing_voice_server_update(_, _, _, _, _, _, _) ->
+    ok.
 
 -spec maybe_dispatch_voice_server_update_from_reply(map(), guild_id(), channel_id() | null, pid()) ->
     ok.
@@ -455,5 +569,34 @@ process_voice_queue_empty_test() ->
     Result = process_voice_queue(State),
     ?assertEqual(State, Result),
     ok.
+
+maybe_report_missing_voice_server_update_missing_payload_test() ->
+    maybe_report_missing_voice_server_update(#{}, 1, 2, 3, null, <<"session">>, self()),
+    receive
+        {voice_error, voice_token_failed} -> ok
+    after 100 ->
+        ?assert(false, missing_voice_server_update_not_reported)
+    end.
+
+maybe_report_missing_voice_server_update_complete_payload_test() ->
+    maybe_report_missing_voice_server_update(
+        #{
+            token => <<"token">>,
+            endpoint => <<"wss://lk.example.test">>,
+            connection_id => <<"owl-map">>
+        },
+        1,
+        2,
+        3,
+        null,
+        <<"session">>,
+        self()
+    ),
+    receive
+        Unexpected ->
+            ?assert(false, {unexpected_message, Unexpected})
+    after 50 ->
+        ok
+    end.
 
 -endif.
