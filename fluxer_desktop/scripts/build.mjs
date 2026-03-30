@@ -83,7 +83,7 @@ async function buildMain() {
 			'process.env.NODE_ENV': JSON.stringify(isProduction ? 'production' : 'development'),
 		},
 		banner: {
-			js: `import { createRequire } from 'module'; const require = createRequire(import.meta.url);`,
+			js: `import { createRequire as __fluxerCreateRequire } from 'module'; const require = __fluxerCreateRequire(import.meta.url);`,
 		},
 	});
 
