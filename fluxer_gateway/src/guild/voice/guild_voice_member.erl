@@ -78,20 +78,42 @@ find_or_load_member_by_user_id(UserId, State) ->
 
 -spec maybe_load_member_by_user_id(integer(), guild_state()) -> {member() | undefined, guild_state()}.
 maybe_load_member_by_user_id(UserId, State) ->
-    case maps:get(voice_member_lookup_pid, State, undefined) of
-        LookupPid when is_pid(LookupPid) ->
-            case fetch_member_from_lookup_pid(UserId, LookupPid) of
-                Member when is_map(Member) ->
-                    logger:debug(
-                        "Loaded missing guild member for voice handling",
-                        #{user_id => UserId}
-                    ),
-                    {Member, store_member(Member, State)};
-                undefined ->
+    case load_member_from_permission_cache(UserId, State) of
+        Member when is_map(Member) ->
+            logger:debug(
+                "Loaded missing guild member for voice handling from permission cache",
+                #{user_id => UserId}
+            ),
+            {Member, store_member(Member, State)};
+        undefined ->
+            case maps:get(voice_member_lookup_pid, State, undefined) of
+                LookupPid when is_pid(LookupPid) ->
+                    case fetch_member_from_lookup_pid(UserId, LookupPid) of
+                        Member when is_map(Member) ->
+                            logger:debug(
+                                "Loaded missing guild member for voice handling from guild lookup",
+                                #{user_id => UserId}
+                            ),
+                            {Member, store_member(Member, State)};
+                        undefined ->
+                            {undefined, State}
+                    end;
+                _ ->
                     {undefined, State}
+            end
+    end.
+
+-spec load_member_from_permission_cache(integer(), guild_state()) -> member() | undefined.
+load_member_from_permission_cache(UserId, State) ->
+    GuildId = map_utils:get_integer(State, id, undefined),
+    case GuildId of
+        Id when is_integer(Id) ->
+            case guild_permission_cache:get_member(Id, UserId) of
+                {ok, Member} when is_map(Member) -> Member;
+                _ -> undefined
             end;
         _ ->
-            {undefined, State}
+            undefined
     end.
 
 -spec fetch_member_from_lookup_pid(integer(), pid()) -> member() | undefined.
@@ -267,6 +289,23 @@ find_or_load_member_by_user_id_loads_missing_member_test() ->
     ?assertEqual(member_fixture(77), Member),
     ?assertEqual(member_fixture(77), find_member_by_user_id(77, LoadedState)),
     stop_member_lookup_pid(LookupPid).
+
+find_or_load_member_by_user_id_uses_permission_cache_test() ->
+    GuildId = 991,
+    UserId = 88,
+    Member = member_fixture(UserId),
+    ok = guild_permission_cache:put_data(GuildId, #{<<"members">> => [Member]}),
+    try
+        State = voice_member_test_state(#{
+            id => GuildId,
+            data => #{<<"members">> => #{}}
+        }),
+        {LoadedMember, LoadedState} = find_or_load_member_by_user_id(UserId, State),
+        ?assertEqual(Member, LoadedMember),
+        ?assertEqual(Member, find_member_by_user_id(UserId, LoadedState))
+    after
+        ok = guild_permission_cache:delete(GuildId)
+    end.
 
 voice_member_test_state(Overrides) ->
     BaseData = #{

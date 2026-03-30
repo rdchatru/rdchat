@@ -47,6 +47,10 @@
     recently_disconnected_voice_states := map()
 }.
 
+-ifdef(TEST).
+-include_lib("eunit/include/eunit.hrl").
+-endif.
+
 -spec start_link(integer(), pid()) -> {ok, pid()} | {error, term()}.
 start_link(GuildId, GuildPid) ->
     gen_server:start_link(?MODULE, #{guild_id => GuildId, guild_pid => GuildPid}, []).
@@ -289,7 +293,7 @@ code_change(_OldVsn, State, _Extra) ->
 build_guild_state(#{guild_pid := GuildPid} = State) ->
     GuildData = fetch_guild_data(GuildPid),
     maps:merge(GuildData, #{
-        voice_member_lookup_pid => GuildPid,
+        voice_member_lookup_pid => member_lookup_pid(GuildData, GuildPid),
         voice_states => maps:get(voice_states, State, #{}),
         pending_voice_connections => maps:get(pending_voice_connections, State, #{}),
         recently_disconnected_voice_states =>
@@ -331,6 +335,15 @@ fetch_guild_data(GuildPid) ->
             #{}
     end.
 
+-spec member_lookup_pid(map(), pid()) -> pid().
+member_lookup_pid(GuildData, GuildPid) ->
+    case maps:get(very_large_guild_coordinator_pid, GuildData, undefined) of
+        CoordinatorPid when is_pid(CoordinatorPid) ->
+            CoordinatorPid;
+        _ ->
+            GuildPid
+    end.
+
 -spec relay_upsert_voice_state(map(), server_state()) -> server_state().
 relay_upsert_voice_state(VoiceState, State) when is_map(VoiceState) ->
     ConnectionId = maps:get(<<"connection_id">>, VoiceState, undefined),
@@ -359,3 +372,26 @@ ensure_registry() ->
         {read_concurrency, true},
         {write_concurrency, true}
     ]).
+
+-ifdef(TEST).
+
+member_lookup_pid_prefers_coordinator_test() ->
+    GuildPid = spawn(fun() ->
+        receive
+            stop -> ok
+        end
+    end),
+    try
+        ?assertEqual(
+            self(),
+            member_lookup_pid(#{very_large_guild_coordinator_pid => self()}, GuildPid)
+        )
+    after
+        GuildPid ! stop
+    end.
+
+member_lookup_pid_falls_back_to_guild_pid_test() ->
+    GuildPid = self(),
+    ?assertEqual(GuildPid, member_lookup_pid(#{}, GuildPid)).
+
+-endif.
