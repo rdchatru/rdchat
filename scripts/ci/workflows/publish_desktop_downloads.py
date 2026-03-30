@@ -219,6 +219,31 @@ def upload_files(
     return data
 
 
+def upload_files_individually(
+    *,
+    base_url: str,
+    token: str,
+    bucket: str,
+    prefix: str,
+    files: list[tuple[str, bytes, str]],
+    audit_log_reason: str,
+) -> list[str]:
+    uploaded_keys: list[str] = []
+
+    for filename, content, content_type in files:
+        result = upload_files(
+            base_url=base_url,
+            token=token,
+            bucket=bucket,
+            prefix=prefix,
+            files=[(filename, content, content_type)],
+            audit_log_reason=f"{audit_log_reason} {filename}",
+        )
+        uploaded_keys.extend(result.get("uploaded_keys", []))
+
+    return uploaded_keys
+
+
 def guess_content_type(path: pathlib.Path) -> str:
     guessed, _ = mimetypes.guess_type(path.name)
     return guessed or "application/octet-stream"
@@ -258,7 +283,7 @@ def main() -> int:
 
     audit_log_reason = f"Desktop {channel} {platform}/{arch} build {version}"
 
-    upload_files(
+    uploaded_keys = upload_files_individually(
         base_url=base_url,
         token=token,
         bucket=bucket,
@@ -266,7 +291,7 @@ def main() -> int:
         files=payload_files,
         audit_log_reason=audit_log_reason,
     )
-    upload_files(
+    manifest_result = upload_files(
         base_url=base_url,
         token=token,
         bucket=bucket,
@@ -280,7 +305,8 @@ def main() -> int:
             {
                 "bucket": bucket,
                 "prefix": prefix,
-                "uploaded_file_count": len(payload_files),
+                "uploaded_file_count": len(uploaded_keys),
+                "uploaded_manifest_keys": manifest_result.get("uploaded_keys", []),
                 "manifest_formats": sorted(artifacts.keys()),
             }
         )
