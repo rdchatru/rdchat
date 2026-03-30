@@ -2,6 +2,9 @@
 	"name": "fluxer_desktop",
 	"version": "0.0.0",
 	"private": true,
+	"description": "RdChat desktop client",
+	"homepage": "https://rdchat.ru",
+	"author": "RdChat Contributors <support@rdchat.ru>",
 	"type": "module",
 	"main": "dist/main/index.js",
 	"scripts": {

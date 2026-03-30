@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import os
+import shutil
 import subprocess
 import sys
 from typing import Callable, Iterable, Mapping, Sequence
@@ -8,11 +9,39 @@ from typing import Callable, Iterable, Mapping, Sequence
 Step = str | Callable[[], None]
 
 
-def run(cmd: Sequence[str], *, env: Mapping[str, str] | None = None) -> None:
+EMPTY_OPTIONAL_ENV_KEYS = {
+    "APPLE_APP_SPECIFIC_PASSWORD",
+    "APPLE_ID",
+    "APPLE_TEAM_ID",
+    "CSC_KEY_PASSWORD",
+    "CSC_LINK",
+}
+
+
+def build_command_env(env: Mapping[str, str] | None = None) -> dict[str, str]:
     merged_env = os.environ.copy()
     if env:
         merged_env.update(env)
-    subprocess.run(cmd, check=True, env=merged_env)
+
+    pnpm_home = merged_env.get("PNPM_HOME")
+    if pnpm_home:
+        current_path = merged_env.get("PATH", "")
+        path_parts = current_path.split(os.pathsep) if current_path else []
+        if pnpm_home not in path_parts:
+            merged_env["PATH"] = os.pathsep.join([pnpm_home, *path_parts] if path_parts else [pnpm_home])
+
+    for key in EMPTY_OPTIONAL_ENV_KEYS:
+        if merged_env.get(key) == "":
+            merged_env.pop(key, None)
+
+    return merged_env
+
+
+def run(cmd: Sequence[str], *, env: Mapping[str, str] | None = None) -> None:
+    merged_env = build_command_env(env)
+    executable = shutil.which(cmd[0], path=merged_env.get("PATH"))
+    resolved_cmd = [executable or cmd[0], *cmd[1:]]
+    subprocess.run(resolved_cmd, check=True, env=merged_env)
 
 
 def run_bash(script: str, *, env: Mapping[str, str] | None = None) -> None:

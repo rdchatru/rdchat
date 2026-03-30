@@ -127,6 +127,7 @@ module.exports = {
 	linux: {
 		icon: `build_resources/${iconDir}/icon.png`,
 		category: 'Network;InstantMessaging;',
+		maintainer: 'Fluxer Contributors <support@rdchat.ru>',
 		target: [
 			{
 				target: 'AppImage',
