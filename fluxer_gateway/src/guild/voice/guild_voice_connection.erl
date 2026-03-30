@@ -59,11 +59,11 @@ voice_state_update(Request, State) ->
             {reply, gateway_errors:error(voice_invalid_user_id), State};
         UserId ->
             VoiceStates = voice_state_utils:voice_states(State),
-            case guild_voice_member:find_member_by_user_id(UserId, State) of
-                undefined ->
-                    {reply, gateway_errors:error(voice_member_not_found), State};
-                Member ->
-                    handle_member_voice(Context, Member, VoiceStates, State)
+            case guild_voice_member:find_or_load_member_by_user_id(UserId, State) of
+                {undefined, State1} ->
+                    {reply, gateway_errors:error(voice_member_not_found), State1};
+                {Member, State1} ->
+                    handle_member_voice(Context, Member, VoiceStates, State1)
             end
     end.
 
@@ -1169,6 +1169,24 @@ replace_guild_meta_id(State, GuildIdValue) ->
     Data1 = maps:put(<<"guild">>, Guild1, Data0),
     maps:put(data, Data1, State).
 
+start_member_lookup_pid(Reply) ->
+    spawn_link(fun() -> member_lookup_loop(Reply) end).
+
+stop_member_lookup_pid(Pid) when is_pid(Pid) ->
+    Pid ! stop,
+    ok.
+
+member_lookup_loop(Reply) ->
+    receive
+        {'$gen_call', {FromPid, Tag}, {get_guild_member, #{user_id := _UserId}}} ->
+            FromPid ! {Tag, Reply},
+            member_lookup_loop(Reply);
+        stop ->
+            ok;
+        _Other ->
+            member_lookup_loop(Reply)
+    end.
+
 build_context_normalizes_fields_test() ->
     Request = #{
         user_id => <<"42">>,
@@ -1211,6 +1229,22 @@ voice_state_update_member_not_found_test() ->
     State = base_test_state(),
     {reply, {error, not_found, voice_member_not_found}, _} =
         voice_state_update(#{user_id => 99, channel_id => null}, State).
+
+voice_state_update_loads_missing_member_for_voice_join_test() ->
+    LookupPid = start_member_lookup_pid(#{success => true, member_data => base_test_member(99)}),
+    State = #{
+        id => 999,
+        data => #{
+            <<"channels">> => [base_test_channel(100)],
+            <<"members">> => []
+        },
+        voice_states => #{},
+        voice_member_lookup_pid => LookupPid,
+        test_perm_fun => fun(_) -> 0 end
+    },
+    {reply, {error, permission_denied, voice_permission_denied}, _} =
+        voice_state_update(#{user_id => 99, channel_id => 100}, State),
+    stop_member_lookup_pid(LookupPid).
 
 voice_state_update_invalid_channel_id_test() ->
     State = base_test_state(),

@@ -289,6 +289,7 @@ code_change(_OldVsn, State, _Extra) ->
 build_guild_state(#{guild_pid := GuildPid} = State) ->
     GuildData = fetch_guild_data(GuildPid),
     maps:merge(GuildData, #{
+        voice_member_lookup_pid => GuildPid,
         voice_states => maps:get(voice_states, State, #{}),
         pending_voice_connections => maps:get(pending_voice_connections, State, #{}),
         recently_disconnected_voice_states =>

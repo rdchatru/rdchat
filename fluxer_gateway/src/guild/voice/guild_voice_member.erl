@@ -19,6 +19,7 @@
 
 -export([update_member_voice/2]).
 -export([find_member_by_user_id/2]).
+-export([find_or_load_member_by_user_id/2]).
 -export([find_channel_by_id/2]).
 
 -type guild_state() :: map().
@@ -40,12 +41,12 @@ update_member_voice(Request, State) ->
     #{user_id := UserId, mute := Mute, deaf := Deaf} = Request,
     VoiceStates = voice_state_utils:voice_states(State),
     GuildId = map_utils:get_integer(State, id, 0),
-    case find_member_by_user_id(UserId, State) of
-        undefined ->
-            {reply, gateway_errors:error(voice_member_not_found), State};
-        Member ->
+    case find_or_load_member_by_user_id(UserId, State) of
+        {undefined, State1} ->
+            {reply, gateway_errors:error(voice_member_not_found), State1};
+        {Member, State1} ->
             UpdatedMember = set_member_voice_flags(Member, Mute, Deaf),
-            StateWithUpdatedMember = store_member(UpdatedMember, State),
+            StateWithUpdatedMember = store_member(UpdatedMember, State1),
             UserVoiceStates = user_voice_states(UserId, VoiceStates),
             case maps:size(UserVoiceStates) of
                 0 ->
@@ -65,6 +66,49 @@ update_member_voice(Request, State) ->
 -spec find_member_by_user_id(integer(), guild_state()) -> member() | undefined.
 find_member_by_user_id(UserId, State) ->
     guild_permissions:find_member_by_user_id(UserId, State).
+
+-spec find_or_load_member_by_user_id(integer(), guild_state()) -> {member() | undefined, guild_state()}.
+find_or_load_member_by_user_id(UserId, State) ->
+    case find_member_by_user_id(UserId, State) of
+        Member when is_map(Member) ->
+            {Member, State};
+        undefined ->
+            maybe_load_member_by_user_id(UserId, State)
+    end.
+
+-spec maybe_load_member_by_user_id(integer(), guild_state()) -> {member() | undefined, guild_state()}.
+maybe_load_member_by_user_id(UserId, State) ->
+    case maps:get(voice_member_lookup_pid, State, undefined) of
+        LookupPid when is_pid(LookupPid) ->
+            case fetch_member_from_lookup_pid(UserId, LookupPid) of
+                Member when is_map(Member) ->
+                    logger:debug(
+                        "Loaded missing guild member for voice handling",
+                        #{user_id => UserId}
+                    ),
+                    {Member, store_member(Member, State)};
+                undefined ->
+                    {undefined, State}
+            end;
+        _ ->
+            {undefined, State}
+    end.
+
+-spec fetch_member_from_lookup_pid(integer(), pid()) -> member() | undefined.
+fetch_member_from_lookup_pid(UserId, LookupPid) ->
+    try gen_server:call(LookupPid, {get_guild_member, #{user_id => UserId}}, 5000) of
+        #{success := true, member_data := Member} when is_map(Member) ->
+            Member;
+        _ ->
+            undefined
+    catch
+        exit:{timeout, _} ->
+            undefined;
+        exit:{noproc, _} ->
+            undefined;
+        exit:{normal, _} ->
+            undefined
+    end.
 
 -spec find_channel_by_id(integer(), guild_state()) -> map() | undefined.
 find_channel_by_id(ChannelId, State) ->
@@ -213,6 +257,17 @@ update_member_voice_member_not_found_test() ->
     {reply, Error, _} = update_member_voice(Request, State),
     ?assertEqual({error, not_found, voice_member_not_found}, Error).
 
+find_or_load_member_by_user_id_loads_missing_member_test() ->
+    LookupPid = start_member_lookup_pid(#{success => true, member_data => member_fixture(77)}),
+    State = voice_member_test_state(#{
+        data => #{<<"members">> => #{}},
+        voice_member_lookup_pid => LookupPid
+    }),
+    {Member, LoadedState} = find_or_load_member_by_user_id(77, State),
+    ?assertEqual(member_fixture(77), Member),
+    ?assertEqual(member_fixture(77), find_member_by_user_id(77, LoadedState)),
+    stop_member_lookup_pid(LookupPid).
+
 voice_member_test_state(Overrides) ->
     BaseData = #{
         <<"members">> => #{
@@ -243,5 +298,23 @@ voice_state_fixture(UserId, ChannelId) ->
         <<"version">> => 0,
         <<"member">> => member_fixture(UserId)
     }.
+
+start_member_lookup_pid(Reply) ->
+    spawn_link(fun() -> member_lookup_loop(Reply) end).
+
+stop_member_lookup_pid(Pid) when is_pid(Pid) ->
+    Pid ! stop,
+    ok.
+
+member_lookup_loop(Reply) ->
+    receive
+        {'$gen_call', {FromPid, Tag}, {get_guild_member, #{user_id := _UserId}}} ->
+            FromPid ! {Tag, Reply},
+            member_lookup_loop(Reply);
+        stop ->
+            ok;
+        _Other ->
+            member_lookup_loop(Reply)
+    end.
 
 -endif.
