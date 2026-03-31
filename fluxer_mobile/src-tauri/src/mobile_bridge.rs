@@ -506,6 +506,7 @@ async fn listen_to_gateway(
     let mut awaiting_heartbeat_ack = false;
 
     loop {
+        let waiting_for_hello = heartbeat.is_none();
         let heartbeat_tick = async {
             match heartbeat.as_mut() {
                 Some(interval) => {
@@ -522,7 +523,7 @@ async fn listen_to_gateway(
                     return Ok(());
                 }
             }
-            _ = &mut hello_timeout, if heartbeat.is_none() => {
+            _ = &mut hello_timeout, if waiting_for_hello => {
                 return Err("Timed out waiting for gateway HELLO".to_owned());
             }
             _ = heartbeat_tick => {

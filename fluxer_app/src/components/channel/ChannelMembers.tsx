@@ -32,6 +32,10 @@ import AuthenticationStore from '@app/stores/AuthenticationStore';
 import MemberSidebarStore from '@app/stores/MemberSidebarStore';
 import UserStore from '@app/stores/UserStore';
 import type {GroupDMMemberGroup} from '@app/utils/MemberListUtils';
+import {
+	buildMemberListLayout,
+	getTotalRowsFromLayout,
+} from '@app/utils/MemberListLayout';
 import * as MemberListUtils from '@app/utils/MemberListUtils';
 import * as NicknameUtils from '@app/utils/NicknameUtils';
 import {ChannelTypes} from '@fluxer/constants/src/ChannelConstants';
@@ -40,12 +44,7 @@ import {isOfflineStatus} from '@fluxer/constants/src/StatusConstants';
 import {useLingui} from '@lingui/react/macro';
 import clsx from 'clsx';
 import {observer} from 'mobx-react-lite';
-import type {UIEvent} from 'react';
-import {useCallback, useMemo, useState} from 'react';
-
-const MEMBER_ITEM_HEIGHT = 44;
-const INITIAL_MEMBER_RANGE: [number, number] = [0, 99];
-const SCROLL_BUFFER = 50;
+import {useEffect, useMemo} from 'react';
 
 function getSeededRandom(seed: number): number {
 	const x = Math.sin(seed) * 10000;
@@ -153,7 +152,6 @@ interface LazyMemberListProps {
 }
 
 const LazyMemberList = observer(function LazyMemberList({guild, channel}: LazyMemberListProps) {
-	const [subscribedRange, setSubscribedRange] = useState<[number, number]>(INITIAL_MEMBER_RANGE);
 	const memberListUpdatesDisabled = (guild.disabledOperations & GuildOperations.MEMBER_LIST_UPDATES) !== 0;
 
 	const {subscribe} = useMemberListSubscription({
@@ -166,23 +164,21 @@ const LazyMemberList = observer(function LazyMemberList({guild, channel}: LazyMe
 	const memberListState = MemberSidebarStore.getList(guild.id, channel.id);
 	const isLoading = !memberListState || memberListState.items.size === 0;
 
-	const handleScroll = useCallback(
-		(event: UIEvent<HTMLDivElement>) => {
-			const target = event.currentTarget;
-			const scrollTop = target.scrollTop;
-			const clientHeight = target.clientHeight;
+	useEffect(() => {
+		if (!memberListState) {
+			return;
+		}
 
-			const startIndex = Math.max(0, Math.floor(scrollTop / MEMBER_ITEM_HEIGHT) - SCROLL_BUFFER);
-			const endIndex = Math.ceil((scrollTop + clientHeight) / MEMBER_ITEM_HEIGHT) + SCROLL_BUFFER;
+		const groupLayouts = buildMemberListLayout(memberListState.groups);
+		const layoutRows = groupLayouts.length > 0 ? getTotalRowsFromLayout(groupLayouts) : memberListState.memberCount;
+		const memberAndHeaderRows = memberListState.memberCount + memberListState.groups.length;
+		const totalRows = Math.max(layoutRows, memberAndHeaderRows);
+		if (totalRows <= 0) {
+			return;
+		}
 
-			if (startIndex !== subscribedRange[0] || endIndex !== subscribedRange[1]) {
-				const nextRange: [number, number] = [startIndex, endIndex];
-				setSubscribedRange(nextRange);
-				subscribe([nextRange]);
-			}
-		},
-		[subscribedRange, subscribe],
-	);
+		subscribe([[0, totalRows - 1]]);
+	}, [memberListState, subscribe]);
 
 	if (memberListUpdatesDisabled) {
 		return (
@@ -296,7 +292,7 @@ const LazyMemberList = observer(function LazyMemberList({guild, channel}: LazyMe
 	}
 
 	return (
-		<MemberListContainer channelId={channel.id} onScroll={handleScroll}>
+		<MemberListContainer channelId={channel.id}>
 			{groups.map((group) => {
 				const members = groupedItems.get(group.id) ?? [];
 				const groupCount = groupCounts.get(group.id) ?? group.count;

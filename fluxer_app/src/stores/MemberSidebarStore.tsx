@@ -27,10 +27,7 @@ import GuildStore from '@app/stores/GuildStore';
 import GatewayConnectionStore from '@app/stores/gateway/GatewayConnectionStore';
 import WindowStore from '@app/stores/WindowStore';
 import {
-	buildMemberListLayout,
-	getGroupLayoutForRow,
 	getTotalMemberCount,
-	getTotalRowsFromLayout,
 } from '@app/utils/MemberListLayout';
 import {GuildOperations} from '@fluxer/constants/src/GuildConstants';
 import type {StatusType} from '@fluxer/constants/src/StatusConstants';
@@ -284,9 +281,8 @@ class MemberSidebarStore {
 			}
 		}
 
-		const groupLayouts = buildMemberListLayout(groups);
 		const totalMembers = Math.max(memberCount, getTotalMemberCount(groups));
-		const totalRows = groupLayouts.length > 0 ? getTotalRowsFromLayout(groupLayouts) : totalMembers;
+		const totalRows = totalMembers + groups.length;
 		const boundedRows = new Map<number, MemberListRow>();
 		for (const [index, row] of newRows) {
 			if (index < 0 || index >= totalRows) {
@@ -308,17 +304,16 @@ class MemberSidebarStore {
 			}
 
 			let memberIndex: number | null = null;
-			if (groupLayouts.length === 0) {
+			if (groups.length === 0) {
 				if (rowIndex >= totalMembers) {
 					continue;
 				}
 				memberIndex = rowIndex;
 			} else {
-				const layout = getGroupLayoutForRow(groupLayouts, rowIndex);
-				if (!layout || rowIndex === layout.headerRowIndex) {
+				const resolvedMemberIndex = this.resolveMemberIndexForRow(groups, rowIndex);
+				if (resolvedMemberIndex === null) {
 					continue;
 				}
-				const resolvedMemberIndex = layout.memberStartIndex + (rowIndex - layout.headerRowIndex - 1);
 				if (resolvedMemberIndex < 0 || resolvedMemberIndex >= totalMembers) {
 					continue;
 				}
@@ -572,6 +567,29 @@ class MemberSidebarStore {
 			return undefined;
 		}
 		return listState.customStatuses.get(userId) ?? null;
+	}
+
+	private resolveMemberIndexForRow(groups: Array<MemberListGroup>, rowIndex: number): number | null {
+		let currentRow = 0;
+		let currentMemberIndex = 0;
+
+		for (const group of groups) {
+			if (rowIndex === currentRow) {
+				return null;
+			}
+			currentRow += 1;
+
+			const groupCount = Math.max(0, group.count);
+			const groupEndRow = currentRow + groupCount - 1;
+			if (rowIndex >= currentRow && rowIndex <= groupEndRow) {
+				return currentMemberIndex + (rowIndex - currentRow);
+			}
+
+			currentRow += groupCount;
+			currentMemberIndex += groupCount;
+		}
+
+		return null;
 	}
 
 	private isMemberListUpdatesDisabled(guildId: string): boolean {
