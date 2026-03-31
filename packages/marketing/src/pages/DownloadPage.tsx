@@ -154,7 +154,7 @@ function renderSupportSection(ctx: MarketingContext): JSX.Element {
 						false,
 					)}
 					{renderSupportCard(
-						'https://github.com/fluxerapp/fluxer',
+						'https://github.com/rdchatru/rdchat',
 						<GithubIcon class="h-8 w-8 text-white" />,
 						ctx.i18n.getMessage('company_and_resources.source_and_contribution.contribute_on_github', ctx.locale),
 						ctx.i18n.getMessage('company_and_resources.source_and_contribution.code_issues_docs_reviews', ctx.locale),

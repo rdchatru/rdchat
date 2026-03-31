@@ -115,7 +115,7 @@ function registerExternalRedirects(app: Hono): void {
 
 	app.get('/get/livekitctl', (c) => {
 		return c.redirect(
-			'https://raw.githubusercontent.com/fluxerapp/fluxer/main/fluxer_devops/livekitctl/scripts/install.sh',
+			'https://raw.githubusercontent.com/rdchatru/rdchat/main/fluxer_devops/livekitctl/scripts/install.sh',
 			HttpStatus.FOUND,
 		);
 	});

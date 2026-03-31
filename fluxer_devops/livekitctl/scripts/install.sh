@@ -20,7 +20,7 @@
 set -eu
 
 INSTALL_DIR="${INSTALL_DIR:-/usr/local/bin}"
-GITHUB_REPO="fluxerapp/fluxer"
+GITHUB_REPO="rdchatru/rdchat"
 BINARY_NAME="livekitctl"
 
 info() {

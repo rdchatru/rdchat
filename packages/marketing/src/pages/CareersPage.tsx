@@ -86,7 +86,7 @@ function renderContributeSection(ctx: MarketingContext): JSX.Element {
 						ctx.locale,
 					)}
 					buttonText={ctx.i18n.getMessage('company_and_resources.source_and_contribution.view_repository', ctx.locale)}
-					buttonHref="https://github.com/fluxerapp/fluxer"
+					buttonHref="https://github.com/rdchatru/rdchat"
 				/>
 				<SupportCard
 					ctx={ctx}

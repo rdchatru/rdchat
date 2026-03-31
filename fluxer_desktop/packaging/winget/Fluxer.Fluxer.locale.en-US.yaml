@@ -3,11 +3,11 @@ PackageVersion: PLACEHOLDER_VERSION
 PackageLocale: en-US
 Publisher: Fluxer Contributors
 PublisherUrl: https://fluxer.app
-PublisherSupportUrl: https://github.com/fluxerapp/fluxer/issues
+PublisherSupportUrl: https://github.com/rdchatru/rdchat/issues
 PackageName: Fluxer
 PackageUrl: https://fluxer.app
 License: AGPL-3.0-or-later
-LicenseUrl: https://github.com/fluxerapp/fluxer/blob/main/LICENCE
+LicenseUrl: https://github.com/rdchatru/rdchat/blob/main/LICENCE
 ShortDescription: Instant messaging and VoIP application
 Description: Fluxer is a free and open-source instant messaging and voice-over-IP application. It provides text chat, voice calls, video calls, and screen sharing in a modern, privacy-respecting interface.
 Tags:

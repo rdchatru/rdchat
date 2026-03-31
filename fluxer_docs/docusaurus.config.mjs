@@ -59,7 +59,7 @@ const config = {
 					label: 'Documentation',
 				},
 				{
-					href: 'https://github.com/fluxerapp/fluxer',
+					href: 'https://github.com/rdchatru/rdchat',
 					label: 'GitHub',
 					position: 'right',
 				},
@@ -84,7 +84,7 @@ const config = {
 				{
 					title: 'Project',
 					items: [
-						{label: 'Source code', href: 'https://github.com/fluxerapp/fluxer'},
+						{label: 'Source code', href: 'https://github.com/rdchatru/rdchat'},
 						{label: 'Support', href: 'mailto:support@rdchat.ru'},
 					],
 				},

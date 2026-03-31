@@ -77,7 +77,7 @@ export function GetInvolvedSection(props: GetInvolvedSectionProps): JSX.Element 
 					title={ctx.i18n.getMessage('company_and_resources.source_and_contribution.contribute_code', ctx.locale)}
 					description={ctx.i18n.getMessage('product_positioning.open_source.fully_open_source_agplv3', ctx.locale)}
 					buttonText={ctx.i18n.getMessage('company_and_resources.source_and_contribution.view_repository', ctx.locale)}
-					buttonHref="https://github.com/fluxerapp/fluxer"
+					buttonHref="https://github.com/rdchatru/rdchat"
 					theme="light"
 				/>
 			</div>

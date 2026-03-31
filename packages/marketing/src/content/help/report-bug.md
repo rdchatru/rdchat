@@ -21,7 +21,7 @@ Include anything that shows the issue – screenshots, short videos, logs, or sa
 
 ## Submit your report
 
-Email support@rdchat.ru with the filled template. A concise yet descriptive subject helps us triage faster. If you prefer GitHub, feel free to file issues in the [RdChat GitHub repository](https://github.com/fluxerapp/fluxer).
+Email support@rdchat.ru with the filled template. A concise yet descriptive subject helps us triage faster. If you prefer GitHub, feel free to file issues in the [RdChat GitHub repository](https://github.com/rdchatru/rdchat/issues).
 
 ## Security issues
 

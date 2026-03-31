@@ -88,7 +88,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 						</div>
 						<div class="flex items-center gap-1 xl:gap-2">
 							<a
-								href="https://github.com/fluxerapp/fluxer"
+								href="https://github.com/rdchatru/rdchat"
 								class="hidden items-center rounded-lg p-2 text-[#638B6F] transition-colors hover:bg-gray-100 hover:text-[#4F6D58] lg:flex"
 								target="_blank"
 								rel="noopener noreferrer"
@@ -191,7 +191,7 @@ export function Navigation(props: NavigationProps): JSX.Element {
 								</p>
 								<div class="flex flex-col gap-1">
 									<a
-										href="https://github.com/fluxerapp/fluxer"
+										href="https://github.com/rdchatru/rdchat"
 										class="rounded-lg py-2.5 pr-3 pl-0 font-semibold text-base text-gray-900 transition-colors hover:bg-gray-100"
 										target="_blank"
 										rel="noopener noreferrer"

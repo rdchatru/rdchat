@@ -103,7 +103,7 @@ export function Footer(props: FooterProps): JSX.Element {
 					<FooterSection title="RdChat">
 						<FooterLink href={link('/partners')}>{ctx.i18n.getMessage('footer.partners', ctx.locale)}</FooterLink>
 						<FooterLink href={link('/download')}>{ctx.i18n.getMessage('footer.download', ctx.locale)}</FooterLink>
-						<FooterLink href="https://github.com/fluxerapp/fluxer">
+						<FooterLink href="https://github.com/rdchatru/rdchat">
 							{ctx.i18n.getMessage('footer.source_code', ctx.locale)}
 						</FooterLink>
 						<FooterLink href={link('/help')}>

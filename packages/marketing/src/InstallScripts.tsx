@@ -22,7 +22,7 @@
 
 import type {Context} from 'hono';
 
-const githubRawBase = 'https://raw.githubusercontent.com/fluxerapp/fluxer/main';
+const githubRawBase = 'https://raw.githubusercontent.com/rdchatru/rdchat/main';
 
 export function livekitctl(c: Context): Response {
 	return c.redirect(`${githubRawBase}/fluxer_devops/livekitctl/scripts/install.sh`, 302);

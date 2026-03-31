@@ -196,7 +196,7 @@ export function createApplicationMenu(): void {
 			{
 				label: 'Report Issue',
 				click: async () => {
-					await shell.openExternal('https://github.com/rdchat/rdchatru/issues');
+					await shell.openExternal('https://github.com/rdchatru/rdchat/issues');
 				},
 			},
 		],
