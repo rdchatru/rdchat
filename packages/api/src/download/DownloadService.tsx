@@ -69,6 +69,19 @@ type VersionInfo = {
 	files: Record<string, VersionFile>;
 };
 
+type DownloadStream = {
+	body: Readable;
+	contentLength: number;
+	contentRange?: string | null;
+	contentType?: string | null;
+	cacheControl?: string | null;
+	contentDisposition?: string | null;
+	expires?: Date | null;
+	etag?: string | null;
+	lastModified?: Date | null;
+	key: string;
+};
+
 interface LatestFilenameLookupParams {
 	channel: DesktopChannel;
 	plat: DesktopPlatform;
@@ -412,6 +425,17 @@ export class DownloadService {
 	}
 
 	async resolveDownloadRedirect(params: {path: string}): Promise<string | null> {
+		const stream = await this.streamDownload(params);
+		if (!stream) {
+			return null;
+		}
+		return this.storageService.getPresignedDownloadURL({
+			bucket: Config.s3.buckets.downloads,
+			key: stream.key,
+		});
+	}
+
+	async streamDownload(params: {path: string; range?: string}): Promise<DownloadStream | null> {
 		const key = this.buildKeyFromPath(params.path);
 		if (!key) {
 			return null;
@@ -425,12 +449,16 @@ export class DownloadService {
 
 		for (const candidateKey of keysToTry) {
 			try {
-				const metadata = await this.storageService.getObjectMetadata(Config.s3.buckets.downloads, candidateKey);
-				if (metadata) {
-					return this.storageService.getPresignedDownloadURL({
-						bucket: Config.s3.buckets.downloads,
+				const stream = await this.storageService.streamObject({
+					bucket: Config.s3.buckets.downloads,
+					key: candidateKey,
+					range: params.range,
+				});
+				if (stream) {
+					return {
+						...stream,
 						key: candidateKey,
-					});
+					};
 				}
 			} catch (error) {
 				if (error instanceof S3ServiceException && (error.name === 'NoSuchKey' || error.name === 'NotFound')) {
@@ -654,11 +682,13 @@ export class DownloadService {
 	}
 
 	private buildKeyFromPath(path: string): string | null {
-		if (!path.startsWith(DOWNLOAD_PREFIX)) {
+		const normalizedPath = posix.normalize(path);
+		const prefix = this.resolveDownloadPathPrefix(normalizedPath);
+		if (!prefix) {
 			return null;
 		}
 
-		const stripped = path.slice(DOWNLOAD_PREFIX.length);
+		const stripped = normalizedPath.slice(prefix.length);
 
 		const normalized = posix.normalize(stripped.replace(/^\/+/u, ''));
 
@@ -674,6 +704,16 @@ export class DownloadService {
 		}
 
 		return normalized.length > 0 ? normalized : null;
+	}
+
+	private resolveDownloadPathPrefix(path: string): string | null {
+		const prefixes = ['/api/v1/dl', '/v1/dl', '/api/dl', DOWNLOAD_PREFIX];
+		for (const prefix of prefixes) {
+			if (path === prefix || path.startsWith(`${prefix}/`)) {
+				return prefix;
+			}
+		}
+		return null;
 	}
 
 	private normalizePlatformArchKey(key: string): string | null {

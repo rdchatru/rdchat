@@ -18,7 +18,7 @@
  */
 
 import crypto from 'node:crypto';
-import type {Readable} from 'node:stream';
+import {Readable} from 'node:stream';
 import {S3ServiceException} from '@aws-sdk/client-s3';
 import type {IStorageService} from '@fluxer/api/src/infrastructure/IStorageService';
 import {vi} from 'vitest';
@@ -145,7 +145,36 @@ export class MockStorageService implements IStorageService {
 		lastModified?: Date | null;
 	} | null> {
 		this.streamObjectSpy(_params);
-		return null;
+		const obj = this.objects.get(_params.key);
+		if (!obj) {
+			return null;
+		}
+
+		const fullBody = Buffer.from(obj.data);
+		let body = fullBody;
+		let contentRange: string | null = null;
+
+		if (_params.range) {
+			const match = _params.range.match(/^bytes=(\d+)-(\d*)$/u);
+			if (match) {
+				const start = Number.parseInt(match[1]!, 10);
+				const end = match[2] ? Number.parseInt(match[2], 10) : fullBody.length - 1;
+				body = fullBody.subarray(start, Math.min(end + 1, fullBody.length));
+				contentRange = `bytes ${start}-${start + body.length - 1}/${fullBody.length}`;
+			}
+		}
+
+		return {
+			body: Readable.from([body]),
+			contentLength: body.length,
+			contentRange,
+			contentType: obj.contentType ?? 'application/octet-stream',
+			cacheControl: null,
+			contentDisposition: null,
+			expires: null,
+			etag: null,
+			lastModified: null,
+		};
 	}
 
 	async writeObjectToDisk(_bucket: string, _key: string, _filePath: string): Promise<void> {

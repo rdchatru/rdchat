@@ -133,8 +133,9 @@ export async function mountRoutes(options: MountRoutesOptions): Promise<MountedR
 		if (services.api !== undefined) {
 			const apiService = services.api;
 			app.route('/api', apiService.app);
+			app.get('/dl/*', (ctx) => apiService.app.fetch(ctx.req.raw));
 			app.get('/.well-known/fluxer', (ctx) => apiService.app.fetch(ctx.req.raw));
-			logger.info('API service mounted at /api');
+			logger.info('API service mounted at /api with public download alias at /dl');
 		}
 
 		if (services.marketing !== undefined) {

@@ -17,6 +17,7 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import {Readable} from 'node:stream';
 import {DESKTOP_REDIRECT_PREFIX, DOWNLOAD_PREFIX} from '@fluxer/api/src/download/DownloadService';
 import {OpenAPI} from '@fluxer/api/src/middleware/ResponseTypeMiddleware';
 import type {HonoEnv} from '@fluxer/api/src/types/HonoEnv';
@@ -163,27 +164,56 @@ export function DownloadController(routes: Hono<HonoEnv>): void {
 		},
 	);
 
-	routes.get(
+	routes.on(
+		['GET', 'HEAD'],
 		`${DOWNLOAD_PREFIX}/*`,
 		OpenAPI({
 			operationId: 'download_file',
 			summary: 'Download file',
 			responseSchema: null,
-			statusCode: 302,
+			statusCode: 200,
 			security: [],
 			tags: ['Downloads'],
-			description: 'Redirects to a presigned URL for the requested file.',
+			description: 'Streams the requested file to the client.',
 		}),
 		async (ctx) => {
-			const url = await ctx.get('downloadService').resolveDownloadRedirect({
+			const stream = await ctx.get('downloadService').streamDownload({
 				path: ctx.req.path,
+				range: ctx.req.header('range') ?? undefined,
 			});
-			if (!url) {
+			if (!stream) {
 				return ctx.text('Not Found', 404);
 			}
-			const res = ctx.redirect(url, 302);
-			res.headers.set('Cache-Control', 'public, max-age=300');
-			return res;
+
+			const headers: Record<string, string> = {
+				'Accept-Ranges': 'bytes',
+				'Cache-Control': stream.cacheControl ?? 'public, max-age=300',
+				'Content-Length': String(stream.contentLength),
+				'Content-Type': stream.contentType ?? 'application/octet-stream',
+			};
+			if (stream.contentRange) {
+				headers['Content-Range'] = stream.contentRange;
+			}
+			if (stream.contentDisposition) {
+				headers['Content-Disposition'] = stream.contentDisposition;
+			}
+			if (stream.etag) {
+				headers.ETag = stream.etag;
+			}
+			if (stream.lastModified) {
+				headers['Last-Modified'] = stream.lastModified.toUTCString();
+			}
+			if (stream.expires) {
+				headers.Expires = stream.expires.toUTCString();
+			}
+
+			const status = stream.contentRange ? 206 : 200;
+			if (ctx.req.method === 'HEAD') {
+				return ctx.body(null, status, headers);
+			}
+
+			const body = Readable.toWeb(stream.body) as ReadableStream;
+			return ctx.newResponse(body, status, headers);
 		},
 	);
 }
