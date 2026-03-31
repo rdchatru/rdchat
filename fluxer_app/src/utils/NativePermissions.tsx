@@ -17,9 +17,22 @@
  * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
  */
 
+import {Platform} from '@app/lib/Platform';
 import {getElectronAPI, isNativeMacOS} from '@app/utils/NativeUtils';
+import {
+	checkAndroidPermissions,
+	openAndroidPermissionSettings,
+	requestAndroidPermissions,
+} from '@app/utils/TauriAndroidBridge';
 
-type PermissionKind = 'microphone' | 'camera' | 'screen' | 'accessibility' | 'input-monitoring';
+type PermissionKind =
+	| 'microphone'
+	| 'camera'
+	| 'notifications'
+	| 'files'
+	| 'screen'
+	| 'accessibility'
+	| 'input-monitoring';
 
 export type NativePermissionResult = 'granted' | 'denied' | 'not-determined' | 'unsupported';
 
@@ -32,6 +45,26 @@ const permissionCache = new Map<
 >();
 
 const CACHE_DURATION = 1000;
+
+type AndroidPermissionKind = Extract<PermissionKind, 'microphone' | 'camera' | 'notifications' | 'files'>;
+
+const isAndroidPermissionKind = (kind: PermissionKind): kind is AndroidPermissionKind => {
+	return kind === 'microphone' || kind === 'camera' || kind === 'notifications' || kind === 'files';
+};
+
+const mapAndroidPermissionResult = (value?: string): NativePermissionResult => {
+	switch (value) {
+		case 'granted':
+			return 'granted';
+		case 'denied':
+			return 'denied';
+		case 'prompt':
+		case 'prompt-with-rationale':
+			return 'not-determined';
+		default:
+			return 'unsupported';
+	}
+};
 
 export function getCachedPermission(kind: PermissionKind): NativePermissionResult | null {
 	const cached = permissionCache.get(kind);
@@ -51,6 +84,13 @@ const setCachedPermission = (kind: PermissionKind, value: NativePermissionResult
 };
 
 export async function checkNativePermission(kind: PermissionKind): Promise<NativePermissionResult> {
+	if (Platform.isTauriAndroid && isAndroidPermissionKind(kind)) {
+		const permissions = await checkAndroidPermissions([kind]);
+		const result = mapAndroidPermissionResult(permissions[kind]);
+		setCachedPermission(kind, result);
+		return result;
+	}
+
 	const electronApi = getElectronAPI();
 	if (!electronApi) {
 		const result = 'unsupported';
@@ -80,6 +120,12 @@ export async function checkNativePermission(kind: PermissionKind): Promise<Nativ
 		return result;
 	}
 
+	if (kind === 'notifications' || kind === 'files') {
+		result = 'unsupported';
+		setCachedPermission(kind, result);
+		return result;
+	}
+
 	const status = await electronApi.checkMediaAccess(kind);
 	switch (status) {
 		case 'granted':
@@ -102,6 +148,13 @@ export async function checkNativePermission(kind: PermissionKind): Promise<Nativ
 }
 
 export async function requestNativePermission(kind: PermissionKind): Promise<NativePermissionResult> {
+	if (Platform.isTauriAndroid && isAndroidPermissionKind(kind)) {
+		const permissions = await requestAndroidPermissions([kind]);
+		const result = mapAndroidPermissionResult(permissions[kind]);
+		setCachedPermission(kind, result);
+		return result;
+	}
+
 	const electronApi = getElectronAPI();
 	if (!electronApi) return 'unsupported';
 
@@ -117,6 +170,10 @@ export async function requestNativePermission(kind: PermissionKind): Promise<Nat
 	if (kind === 'accessibility') {
 		const isTrusted = await electronApi.checkAccessibility(true);
 		return isTrusted ? 'granted' : 'denied';
+	}
+
+	if (kind === 'notifications' || kind === 'files') {
+		return 'unsupported';
 	}
 
 	const granted = await electronApi.requestMediaAccess(kind);
@@ -138,6 +195,11 @@ export async function ensureNativePermission(kind: PermissionKind): Promise<Nati
 }
 
 export async function openNativePermissionSettings(kind: PermissionKind): Promise<void> {
+	if (Platform.isTauriAndroid && isAndroidPermissionKind(kind)) {
+		await openAndroidPermissionSettings(kind);
+		return;
+	}
+
 	const electronApi = getElectronAPI();
 	if (!electronApi) return;
 
@@ -156,6 +218,9 @@ export async function openNativePermissionSettings(kind: PermissionKind): Promis
 		case 'camera':
 		case 'screen':
 			await electronApi.openMediaAccessSettings(kind);
+			break;
+		case 'notifications':
+		case 'files':
 			break;
 	}
 }

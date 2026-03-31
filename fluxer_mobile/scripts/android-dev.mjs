@@ -66,10 +66,10 @@ async function writeDevConfig() {
 				minSdkVersion: 24,
 			},
 			icon: [
-				'../../fluxer_desktop/build_resources/icons-stable/32x32.png',
-				'../../fluxer_desktop/build_resources/icons-stable/128x128.png',
-				'../../fluxer_desktop/build_resources/icons-stable/512x512.png',
-				'../../fluxer_desktop/build_resources/icons-stable/icon.png',
+				'icons/32x32.png',
+				'icons/128x128.png',
+				'icons/512x512.png',
+				'icons/icon.png',
 			],
 		},
 	};

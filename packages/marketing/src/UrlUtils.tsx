@@ -43,7 +43,7 @@ export function href(ctx: MarketingContext, path: string): string {
 }
 
 export function apiUrl(ctx: MarketingContext, path: string): string {
-	return `${ctx.apiEndpoint}${path}`;
+	return `${resolvePublicApiBase(ctx)}${path}`;
 }
 
 export function docsUrl(path = '/docs'): string {
@@ -76,4 +76,81 @@ function normalizeDocsPublicPath(path: string): string {
 	}
 
 	return `${DOCS_BASE_URL}${normalized}`;
+}
+
+function resolvePublicApiBase(ctx: MarketingContext): string {
+	const normalizedApiEndpoint = trimTrailingSlash(ctx.apiEndpoint);
+	const apiEndpointUrl = tryParseUrl(normalizedApiEndpoint);
+	if (!apiEndpointUrl || !isLocalOrPrivateHostname(apiEndpointUrl.hostname)) {
+		return normalizedApiEndpoint;
+	}
+
+	const marketingBaseUrl = tryParseUrl(ctx.baseUrl);
+	if (!marketingBaseUrl || isLocalOrPrivateHostname(marketingBaseUrl.hostname)) {
+		return normalizedApiEndpoint;
+	}
+
+	const apiPath = apiEndpointUrl.pathname === '/' ? '' : trimTrailingSlash(apiEndpointUrl.pathname);
+	return `${marketingBaseUrl.protocol}//${marketingBaseUrl.host}${apiPath}`;
+}
+
+function tryParseUrl(rawUrl: string): URL | null {
+	try {
+		return new URL(rawUrl);
+	} catch {
+		return null;
+	}
+}
+
+function trimTrailingSlash(value: string): string {
+	return value.endsWith('/') ? value.slice(0, -1) : value;
+}
+
+function isLocalOrPrivateHostname(hostname: string): boolean {
+	const normalizedHostname = hostname.toLowerCase().replace(/^\[(.*)\]$/u, '$1');
+	if (normalizedHostname === 'localhost' || normalizedHostname.endsWith('.localhost')) {
+		return true;
+	}
+	return isPrivateOrSpecialIpv4(normalizedHostname) || isPrivateOrSpecialIpv6(normalizedHostname);
+}
+
+function isPrivateOrSpecialIpv4(hostname: string): boolean {
+	if (!/^\d+\.\d+\.\d+\.\d+$/u.test(hostname)) {
+		return false;
+	}
+
+	const octets = hostname.split('.').map((part) => Number(part));
+	if (octets.length !== 4 || octets.some((octet) => !Number.isInteger(octet) || octet < 0 || octet > 255)) {
+		return true;
+	}
+
+	const [first, second] = octets;
+	if (first === 0 || first === 10 || first === 127) return true;
+	if (first === 169 && second === 254) return true;
+	if (first === 172 && second >= 16 && second <= 31) return true;
+	if (first === 192 && second === 168) return true;
+	if (first === 100 && second >= 64 && second <= 127) return true;
+	if (first === 198 && (second === 18 || second === 19)) return true;
+	if (first >= 224) return true;
+	return false;
+}
+
+function isPrivateOrSpecialIpv6(hostname: string): boolean {
+	if (!hostname.includes(':')) {
+		return false;
+	}
+
+	const lower = hostname.toLowerCase();
+	if (lower === '::' || lower === '::1') {
+		return true;
+	}
+
+	if (lower.startsWith('::ffff:')) {
+		return isPrivateOrSpecialIpv4(lower.slice('::ffff:'.length));
+	}
+
+	if (lower.startsWith('fe80:')) return true;
+	if (lower.startsWith('fc') || lower.startsWith('fd')) return true;
+	if (lower.startsWith('ff')) return true;
+	return false;
 }

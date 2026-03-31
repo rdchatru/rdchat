@@ -13,6 +13,8 @@ import subprocess
 import sys
 import tempfile
 from dataclasses import dataclass
+from urllib import error as urllib_error
+from urllib import request as urllib_request
 
 sys.path.append(str(pathlib.Path(__file__).resolve().parents[1]))
 
@@ -112,6 +114,75 @@ def copy_file(source: pathlib.Path, target: pathlib.Path) -> None:
     shutil.copy2(source, target)
 
 
+def post_json(
+    *,
+    api_base_url: str,
+    admin_api_key: str,
+    path: str,
+    body: dict[str, object],
+    audit_log_reason: str | None = None,
+) -> dict[str, object]:
+    payload = json.dumps(body).encode("utf-8")
+    headers = {
+        "Authorization": f"Admin {admin_api_key}",
+        "Content-Type": "application/json",
+    }
+    if audit_log_reason:
+        headers["X-Audit-Log-Reason"] = audit_log_reason
+
+    request = urllib_request.Request(
+        f"{api_base_url.rstrip('/')}{path}",
+        data=payload,
+        headers=headers,
+        method="POST",
+    )
+
+    try:
+        with urllib_request.urlopen(request) as response:
+            content = response.read().decode("utf-8")
+    except urllib_error.HTTPError as exc:
+        detail = exc.read().decode("utf-8", errors="replace")
+        raise SystemExit(f"Request failed for {path}: HTTP {exc.code} {detail}") from exc
+    except urllib_error.URLError as exc:
+        raise SystemExit(f"Request failed for {path}: {exc.reason}") from exc
+
+    try:
+        return json.loads(content or "{}")
+    except json.JSONDecodeError as exc:
+        raise SystemExit(f"Request to {path} returned invalid JSON: {exc}") from exc
+
+
+def clear_storage_prefix(
+    *,
+    api_base_url: str,
+    admin_api_key: str,
+    bucket: str,
+    prefix: str,
+    audit_log_reason: str,
+) -> int:
+    listing = post_json(
+        api_base_url=api_base_url,
+        admin_api_key=admin_api_key,
+        path="/admin/storage/list",
+        body={"bucket": bucket, "prefix": prefix},
+    )
+    entries = listing.get("entries")
+    if not isinstance(entries, list) or len(entries) == 0:
+        return 0
+
+    result = post_json(
+        api_base_url=api_base_url,
+        admin_api_key=admin_api_key,
+        path="/admin/storage/folders/delete",
+        body={"bucket": bucket, "prefix": prefix},
+        audit_log_reason=audit_log_reason,
+    )
+    affected_keys = result.get("affected_keys")
+    if isinstance(affected_keys, int):
+        return affected_keys
+    return len(entries)
+
+
 def replace_text(text: str, replacements: dict[str, str]) -> str:
     updated = text
     for original, replacement in sorted(replacements.items(), key=lambda item: len(item[0]), reverse=True):
@@ -146,6 +217,133 @@ def content_type_for_upload(path: pathlib.Path) -> str:
 
     guessed, _ = mimetypes.guess_type(str(path))
     return guessed or "application/octet-stream"
+
+
+def has_arch_marker(name: str, marker: str) -> bool:
+    pattern = rf"(?<![a-z0-9]){re.escape(marker.lower())}(?![a-z0-9])"
+    return re.search(pattern, name.lower()) is not None
+
+
+def has_any_arch_marker(name: str, markers: set[str]) -> bool:
+    return any(has_arch_marker(name, marker) for marker in markers)
+
+
+def lane_arch_markers(platform: str, arch: str) -> tuple[set[str], set[str]]:
+    descriptors = DESKTOP_FORMATS[platform]
+    expected = {descriptor.arch_suffixes[arch] for descriptor in descriptors}
+    all_markers = {marker for descriptor in descriptors for marker in descriptor.arch_suffixes.values()}
+    return expected, all_markers
+
+
+def primary_source_score(
+    path: pathlib.Path,
+    *,
+    platform: str,
+    arch: str,
+    descriptor: DesktopFormatDescriptor,
+    version: str,
+) -> tuple[int, str] | None:
+    if not is_primary_desktop_file(path, descriptor):
+        return None
+
+    name = path.name
+    lower = name.lower()
+    score = 0
+
+    if version not in name:
+        score += 50
+
+    expected_marker = descriptor.arch_suffixes[arch]
+    all_markers = set(descriptor.arch_suffixes.values())
+
+    if platform == "win32":
+        if has_any_arch_marker(name, all_markers):
+            if not has_arch_marker(name, expected_marker):
+                return None
+        else:
+            score += 5
+        if "setup" not in lower:
+            score += 1
+        return (score, name)
+
+    if has_any_arch_marker(name, all_markers):
+        if not has_arch_marker(name, expected_marker):
+            return None
+    else:
+        return None
+
+    if platform == "darwin" and "-mac-" not in lower:
+        score += 5
+    if platform == "linux" and "-linux-" not in lower:
+        score += 5
+
+    return (score, name)
+
+
+def copy_primary_artifact(source_file: pathlib.Path, target_file: pathlib.Path, replacements: dict[str, str]) -> None:
+    copy_file(source_file, target_file)
+    replacements[source_file.name] = target_file.name
+
+    sha256_source = source_file.parent / f"{source_file.name}.sha256"
+    target_sha = target_file.parent / f"{target_file.name}.sha256"
+    if sha256_source.exists():
+        copy_file(sha256_source, target_sha)
+        replacements[sha256_source.name] = target_sha.name
+    else:
+        write_sha256_file(target_file, target_sha)
+
+    blockmap_source = source_file.parent / f"{source_file.name}.blockmap"
+    if blockmap_source.exists():
+        target_blockmap = target_file.parent / f"{target_file.name}.blockmap"
+        copy_file(blockmap_source, target_blockmap)
+        replacements[blockmap_source.name] = target_blockmap.name
+
+
+def select_latest_metadata_files(files: list[pathlib.Path], *, platform: str, arch: str) -> list[pathlib.Path]:
+    latest_files = sorted(
+        path for path in files if path.name.lower().startswith("latest") and path.suffix.lower() in {".yml", ".yaml"}
+    )
+    if not latest_files:
+        return []
+
+    expected_markers, all_markers = lane_arch_markers(platform, arch)
+    marker_specific: list[pathlib.Path] = []
+    generic: list[pathlib.Path] = []
+
+    for path in latest_files:
+        if has_any_arch_marker(path.name, all_markers):
+            if all(not has_arch_marker(path.name, marker) for marker in expected_markers):
+                continue
+            marker_specific.append(path)
+        else:
+            generic.append(path)
+
+    if marker_specific:
+        return marker_specific
+    if arch == "x64":
+        return generic
+    if generic and not any(has_any_arch_marker(path.name, all_markers) for path in latest_files):
+        return generic
+    return []
+
+
+def select_windows_squirrel_files(files: list[pathlib.Path], *, arch: str) -> list[pathlib.Path]:
+    if arch != "x64":
+        return []
+
+    selected: list[pathlib.Path] = []
+    nupkgs = sorted(path for path in files if path.suffix.lower() == ".nupkg")
+    releases = sorted(path for path in files if path.name.startswith("RELEASES"))
+
+    for nupkg in nupkgs:
+        selected.append(nupkg)
+        for suffix in (".blockmap", ".sha256"):
+            sidecar = nupkg.parent / f"{nupkg.name}{suffix}"
+            if sidecar.exists():
+                selected.append(sidecar)
+
+    selected.extend(releases)
+    return selected
 
 
 def upload_file(
@@ -221,12 +419,23 @@ def is_primary_desktop_file(path: pathlib.Path, descriptor: DesktopFormatDescrip
 
 
 def find_primary_desktop_file(
-    files: list[pathlib.Path], descriptor: DesktopFormatDescriptor
+    files: list[pathlib.Path],
+    *,
+    platform: str,
+    arch: str,
+    descriptor: DesktopFormatDescriptor,
+    version: str,
 ) -> pathlib.Path | None:
-    candidates = sorted(path for path in files if is_primary_desktop_file(path, descriptor))
+    candidates = [
+        (score, path)
+        for path in files
+        for score in [primary_source_score(path, platform=platform, arch=arch, descriptor=descriptor, version=version)]
+        if score is not None
+    ]
     if not candidates:
         return None
-    return candidates[0]
+    candidates.sort(key=lambda item: item[0])
+    return candidates[0][1]
 
 
 def stage_desktop_lane(
@@ -243,10 +452,15 @@ def stage_desktop_lane(
     descriptors = DESKTOP_FORMATS[platform]
     replacements: dict[str, str] = {}
     manifest_files: dict[str, str] = {}
-    excluded_source_names: set[str] = set()
 
     for descriptor in descriptors:
-        source_file = find_primary_desktop_file(files, descriptor)
+        source_file = find_primary_desktop_file(
+            files,
+            platform=platform,
+            arch=arch,
+            descriptor=descriptor,
+            version=version,
+        )
         if source_file is None:
             continue
 
@@ -258,31 +472,19 @@ def stage_desktop_lane(
             version=version,
         )
         target_file = stage_dir / target_name
-        copy_file(source_file, target_file)
+        copy_primary_artifact(source_file, target_file, replacements)
         manifest_files[descriptor.format_name] = target_name
-        replacements[source_file.name] = target_name
-        excluded_source_names.add(source_file.name)
 
-        sha256_source = source_dir / f"{source_file.name}.sha256"
-        if sha256_source.exists():
-            target_sha = stage_dir / f"{target_name}.sha256"
-            copy_file(sha256_source, target_sha)
-            replacements[sha256_source.name] = target_sha.name
-            excluded_source_names.add(sha256_source.name)
+    for metadata_file in select_latest_metadata_files(files, platform=platform, arch=arch):
+        target_file = stage_dir / metadata_file.name
+        copy_file(metadata_file, target_file)
+        maybe_rewrite_text_file(target_file, replacements)
 
-        blockmap_source = source_dir / f"{source_file.name}.blockmap"
-        if blockmap_source.exists():
-            target_blockmap = stage_dir / f"{target_name}.blockmap"
-            copy_file(blockmap_source, target_blockmap)
-            replacements[blockmap_source.name] = target_blockmap.name
-            excluded_source_names.add(blockmap_source.name)
-
-    for source_file in files:
-        if source_file.name in excluded_source_names:
+    for squirrel_file in select_windows_squirrel_files(files, arch=arch):
+        target_file = stage_dir / squirrel_file.name
+        copy_file(squirrel_file, target_file)
+        if target_file.suffix.lower() == ".sha256":
             continue
-
-        target_file = stage_dir / source_file.name
-        copy_file(source_file, target_file)
         maybe_rewrite_text_file(target_file, replacements)
 
     manifest_path = stage_dir / "manifest.json"
@@ -366,6 +568,7 @@ def publish_desktop_step() -> None:
             prefix = f"desktop/{channel}/{platform}/{arch}/"
             stage_dir = temp_root / prefix
             stage_dir.mkdir(parents=True, exist_ok=True)
+            audit_log_reason = f"CI publish desktop {channel} {version} ({platform}/{arch})"
 
             primary_files = stage_desktop_lane(
                 source_dir=source_dir,
@@ -376,7 +579,13 @@ def publish_desktop_step() -> None:
                 version=version,
                 pub_date=pub_date,
             )
-            audit_log_reason = f"CI publish desktop {channel} {version} ({platform}/{arch})"
+            removed_keys = clear_storage_prefix(
+                api_base_url=api_base_url,
+                admin_api_key=admin_api_key,
+                bucket=bucket,
+                prefix=prefix,
+                audit_log_reason=f"CI clear desktop {channel} {version} ({platform}/{arch})",
+            )
             uploaded_files = publish_directory(
                 source_dir=stage_dir,
                 api_base_url=api_base_url,
@@ -387,7 +596,7 @@ def publish_desktop_step() -> None:
             )
             published_prefixes.append(prefix)
             print(
-                f"Published {prefix} with {len(uploaded_files)} files. Primary artifacts: "
+                f"Published {prefix} with {len(uploaded_files)} files after removing {removed_keys} existing key(s). Primary artifacts: "
                 + (", ".join(primary_files) if primary_files else "none")
             )
 
@@ -450,14 +659,23 @@ def publish_android_step() -> None:
             stage_android_alias(aab, archive_stage / aab.name)
 
         archive_prefix = f"android/{release_channel}/arm64/"
+        archive_reason = f"CI publish Android {release_channel} release archive"
+        archive_removed = clear_storage_prefix(
+            api_base_url=api_base_url,
+            admin_api_key=admin_api_key,
+            bucket=bucket,
+            prefix=archive_prefix,
+            audit_log_reason=f"CI clear Android {release_channel} release archive",
+        )
         publish_directory(
             source_dir=archive_stage,
             api_base_url=api_base_url,
             admin_api_key=admin_api_key,
             bucket=bucket,
             prefix=archive_prefix,
-            audit_log_reason=f"CI publish Android {release_channel} release archive",
+            audit_log_reason=archive_reason,
         )
+        print(f"Published {archive_prefix} after removing {archive_removed} existing key(s).")
         published_prefixes.append(archive_prefix)
 
         if release_channel == "stable":
@@ -471,6 +689,13 @@ def publish_android_step() -> None:
                 stage_android_alias(aab, public_stage / "rdchat.aab")
 
             public_prefix = "android/arm64/"
+            public_removed = clear_storage_prefix(
+                api_base_url=api_base_url,
+                admin_api_key=admin_api_key,
+                bucket=bucket,
+                prefix=public_prefix,
+                audit_log_reason="CI clear Android stable public downloads",
+            )
             publish_directory(
                 source_dir=public_stage,
                 api_base_url=api_base_url,
@@ -479,6 +704,7 @@ def publish_android_step() -> None:
                 prefix=public_prefix,
                 audit_log_reason="CI publish Android stable public downloads",
             )
+            print(f"Published {public_prefix} after removing {public_removed} existing key(s).")
             published_prefixes.append(public_prefix)
 
     summary_lines = ["## RdChat Android Publish", ""]

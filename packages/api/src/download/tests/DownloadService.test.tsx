@@ -18,6 +18,7 @@
  */
 
 import {Readable} from 'node:stream';
+import {Config} from '@fluxer/api/src/Config';
 import {DownloadService} from '@fluxer/api/src/download/DownloadService';
 import {MockStorageService} from '@fluxer/api/src/test/mocks/MockStorageService';
 import {beforeEach, describe, expect, it, vi} from 'vitest';
@@ -115,5 +116,36 @@ describe('DownloadService.resolveLatestDesktopRedirect', () => {
 
 		expect(result).toBe('https://api.rdchat.ru/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg');
 		expect(storageService.listObjectsSpy).not.toHaveBeenCalled();
+	});
+
+	it('falls back to the configured public API host when the request host is private', async () => {
+		const manifestKey = 'desktop/stable/darwin/x64/manifest.json';
+		const manifestBody = buildManifest('fluxer-stable-0.0.8-x64.dmg');
+
+		vi.spyOn(storageService, 'streamObject').mockImplementation(async (params) => {
+			if (params.key !== manifestKey) {
+				return null;
+			}
+
+			return {
+				body: Readable.from([Buffer.from(manifestBody, 'utf-8')]),
+				contentLength: manifestBody.length,
+				contentType: 'application/json',
+			};
+		});
+
+		const result = await downloadService.resolveLatestDesktopRedirect({
+			channel: 'stable',
+			plat: 'darwin',
+			arch: 'x64',
+			format: 'dmg',
+			host: '192.168.0.52',
+			forwardedProto: 'https',
+			requestUrl: 'https://192.168.0.52/dl/desktop/stable/darwin/x64/latest/dmg',
+		});
+
+		expect(result).toBe(
+			`https://${new URL(Config.endpoints.apiPublic).host}/dl/desktop/stable/darwin/x64/fluxer-stable-0.0.8-x64.dmg`,
+		);
 	});
 });

@@ -22,6 +22,7 @@ import {KeyboardModeListener} from '@app/components/layout/KeyboardModeListener'
 import {MobileBottomNav} from '@app/components/layout/MobileBottomNav';
 import {SplashScreen} from '@app/components/layout/SplashScreen';
 import {Logger} from '@app/lib/Logger';
+import {Platform} from '@app/lib/Platform';
 import {useLocation} from '@app/lib/router/React';
 import SessionManager from '@app/lib/SessionManager';
 import {Routes} from '@app/Routes';
@@ -33,10 +34,13 @@ import GatewayConnectionStore from '@app/stores/gateway/GatewayConnectionStore';
 import InitializationStore from '@app/stores/InitializationStore';
 import LocationStore from '@app/stores/LocationStore';
 import MobileLayoutStore from '@app/stores/MobileLayoutStore';
+import NotificationStore from '@app/stores/NotificationStore';
+import RuntimeConfigStore from '@app/stores/RuntimeConfigStore';
 import UserStore from '@app/stores/UserStore';
 import {navigateToWithMobileHistory} from '@app/utils/MobileNavigation';
 import {isInstalledPwa} from '@app/utils/PwaUtils';
 import * as RouterUtils from '@app/utils/RouterUtils';
+import {consumeAndroidNotificationClicks, syncAndroidPushState} from '@app/utils/TauriAndroidBridge';
 import {setPathQueryParams} from '@app/utils/UrlUtils';
 import {observer} from 'mobx-react-lite';
 import type React from 'react';
@@ -47,6 +51,13 @@ const logger = new Logger('RootComponent');
 export const RootComponent: React.FC<{children?: React.ReactNode}> = observer(({children}) => {
 	const location = useLocation();
 	const isAuthenticated = AuthenticationStore.isAuthenticated;
+	const currentUserId = AuthenticationStore.currentUserId;
+	const storedAccounts = AccountManager.orderedAccounts;
+	const browserNotificationsEnabled = NotificationStore.browserNotificationsEnabled;
+	const notificationWindowFocused = NotificationStore.focused;
+	const runtimeGatewayEndpoint = RuntimeConfigStore.gatewayEndpoint;
+	const runtimeWebAppEndpoint = RuntimeConfigStore.webAppEndpoint;
+	const runtimeRelayDirectoryUrl = RuntimeConfigStore.relayDirectoryUrl;
 	const mobileLayoutState = MobileLayoutStore;
 	const [hasRestoredLocation, setHasRestoredLocation] = useState(false);
 	const currentUser = UserStore.currentUser;
@@ -262,44 +273,55 @@ export const RootComponent: React.FC<{children?: React.ReactNode}> = observer(({
 		[mobileLayoutState.enabled],
 	);
 
+	const handleNotificationNavigationPayload = useCallback(
+		({url, targetUserId}: {url?: string | null; targetUserId?: string | null}) => {
+			const rawUrl = typeof url === 'string' ? url : null;
+			if (!rawUrl) return;
+
+			const resolvedTargetUserId = typeof targetUserId === 'string' ? targetUserId : undefined;
+			const normalizedUrl = normalizeInternalUrl(rawUrl);
+			const key = `${resolvedTargetUserId ?? ''}:${normalizedUrl}`;
+			const now = Date.now();
+			const last = lastNotificationNavRef.current;
+			if (last && last.key === key && now - last.ts < 1500) {
+				return;
+			}
+			lastNotificationNavRef.current = {ts: now, key};
+
+			void (async () => {
+				if (
+					resolvedTargetUserId &&
+					resolvedTargetUserId !== AccountManager.currentUserId &&
+					AccountManager.canSwitchAccounts
+				) {
+					try {
+						await AccountManager.switchToAccount(resolvedTargetUserId);
+					} catch (error) {
+						logger.error('Failed to switch account for notification', error);
+					}
+				}
+
+				if (mobileLayoutState.enabled) {
+					navigateWithHistoryStack(normalizedUrl);
+				} else {
+					RouterUtils.transitionTo(normalizedUrl);
+				}
+
+				setHasHandledNotificationNav(true);
+			})();
+		},
+		[mobileLayoutState.enabled, navigateWithHistoryStack, normalizeInternalUrl],
+	);
+
 	useEffect(() => {
 		if (!isAuthenticated) return;
 
 		const handleNotificationNavigate = (event: MessageEvent) => {
 			if (event.data?.type === 'NOTIFICATION_CLICK_NAVIGATE') {
-				const rawUrl = typeof event.data.url === 'string' ? event.data.url : null;
-				if (!rawUrl) return;
-
-				const targetUserId =
-					typeof event.data.targetUserId === 'string' ? (event.data.targetUserId as string) : undefined;
-
-				const normalizedUrl = normalizeInternalUrl(rawUrl);
-				const key = `${targetUserId ?? ''}:${normalizedUrl}`;
-				const now = Date.now();
-				const last = lastNotificationNavRef.current;
-				if (last && last.key === key && now - last.ts < 1500) {
-					return;
-				}
-				lastNotificationNavRef.current = {ts: now, key};
-
-				void (async () => {
-					if (targetUserId && targetUserId !== AccountManager.currentUserId && AccountManager.canSwitchAccounts) {
-						try {
-							await AccountManager.switchToAccount(targetUserId);
-						} catch (error) {
-							logger.error('Failed to switch account for notification', error);
-						}
-					}
-
-					if (mobileLayoutState.enabled) {
-						navigateWithHistoryStack(normalizedUrl);
-					} else {
-						RouterUtils.transitionTo(normalizedUrl);
-					}
-
-					setHasHandledNotificationNav(true);
-				})();
-
+				handleNotificationNavigationPayload({
+					url: typeof event.data.url === 'string' ? event.data.url : null,
+					targetUserId: typeof event.data.targetUserId === 'string' ? event.data.targetUserId : null,
+				});
 				return;
 			}
 
@@ -339,8 +361,93 @@ export const RootComponent: React.FC<{children?: React.ReactNode}> = observer(({
 		mobileLayoutState.enabled,
 		hasHandledNotificationNav,
 		location,
-		navigateWithHistoryStack,
-		normalizeInternalUrl,
+		handleNotificationNavigationPayload,
+	]);
+
+	useEffect(() => {
+		if (!isAuthenticated || !Platform.isTauriAndroid) return;
+
+		let cancelled = false;
+
+		const consumePendingClicks = async () => {
+			try {
+				const pendingClicks = await consumeAndroidNotificationClicks();
+				if (cancelled || pendingClicks.length === 0) {
+					return;
+				}
+
+				for (const click of pendingClicks) {
+					handleNotificationNavigationPayload(click);
+				}
+			} catch (error) {
+				logger.error('Failed to consume Android notification clicks', error);
+			}
+		};
+
+		const handleResume = () => {
+			if (document.hidden) {
+				return;
+			}
+			void consumePendingClicks();
+		};
+
+		void consumePendingClicks();
+		window.addEventListener('focus', handleResume);
+		document.addEventListener('visibilitychange', handleResume);
+
+		return () => {
+			cancelled = true;
+			window.removeEventListener('focus', handleResume);
+			document.removeEventListener('visibilitychange', handleResume);
+		};
+	}, [isAuthenticated, handleNotificationNavigationPayload]);
+
+	useEffect(() => {
+		if (!Platform.isTauriAndroid) return;
+
+		const accounts = storedAccounts
+			.map((account) => {
+				const useCurrentRuntime = account.userId === currentUserId;
+				const gatewayEndpoint = useCurrentRuntime
+					? runtimeGatewayEndpoint || account.instance?.gatewayEndpoint || ''
+					: account.instance?.gatewayEndpoint || '';
+				const webAppEndpoint = useCurrentRuntime
+					? runtimeWebAppEndpoint || account.instance?.webAppEndpoint || window.location.origin
+					: account.instance?.webAppEndpoint || window.location.origin;
+				const relayDirectoryUrl = useCurrentRuntime
+					? runtimeRelayDirectoryUrl ?? account.instance?.relayDirectoryUrl ?? null
+					: account.instance?.relayDirectoryUrl ?? null;
+
+				if (!account.token || !gatewayEndpoint) {
+					return null;
+				}
+
+				return {
+					userId: account.userId,
+					token: account.token,
+					gatewayEndpoint,
+					webAppEndpoint,
+					relayDirectoryUrl,
+				};
+			})
+			.filter((account): account is NonNullable<typeof account> => account != null);
+
+		void syncAndroidPushState({
+			enabled: browserNotificationsEnabled,
+			appFocused: notificationWindowFocused,
+			suppressWhileFocused: true,
+			accounts,
+		}).catch((error) => {
+			logger.error('Failed to sync Android push listener state', error);
+		});
+	}, [
+		storedAccounts,
+		currentUserId,
+		browserNotificationsEnabled,
+		notificationWindowFocused,
+		runtimeGatewayEndpoint,
+		runtimeWebAppEndpoint,
+		runtimeRelayDirectoryUrl,
 	]);
 
 	const showBottomNav =

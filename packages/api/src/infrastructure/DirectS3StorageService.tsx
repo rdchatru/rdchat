@@ -52,7 +52,7 @@ export class DirectS3StorageService implements IStorageService {
 
 	constructor(s3Service: S3Service) {
 		this.s3Service = s3Service;
-		this.presignedUrlBase = Config.s3.presignedUrlBase ?? Config.s3.endpoint;
+		this.presignedUrlBase = resolvePresignedUrlBase();
 		this.expirationManager = getExpirationManager(s3Service);
 	}
 
@@ -438,4 +438,88 @@ export class DirectS3StorageService implements IStorageService {
 	async abortMultipartUpload(params: {bucket: string; key: string; uploadId: string}): Promise<void> {
 		await this.s3Service.abortMultipartUpload(params.bucket, params.key, params.uploadId);
 	}
+}
+
+function resolvePresignedUrlBase(): string {
+	const configuredBase = Config.s3.presignedUrlBase?.trim();
+	if (configuredBase && configuredBase.length > 0) {
+		return trimTrailingSlash(configuredBase);
+	}
+
+	const endpoint = trimTrailingSlash(Config.s3.endpoint);
+	const endpointUrl = tryParseUrl(endpoint);
+	if (!endpointUrl || !isLocalOrPrivateHostname(endpointUrl.hostname)) {
+		return endpoint;
+	}
+
+	try {
+		const publicS3Url = new URL('/s3', Config.endpoints.apiPublic);
+		if (isLocalOrPrivateHostname(publicS3Url.hostname)) {
+			return endpoint;
+		}
+		return trimTrailingSlash(publicS3Url.toString());
+	} catch {
+		return endpoint;
+	}
+}
+
+function tryParseUrl(rawUrl: string): URL | null {
+	try {
+		return new URL(rawUrl);
+	} catch {
+		return null;
+	}
+}
+
+function trimTrailingSlash(value: string): string {
+	return value.endsWith('/') ? value.slice(0, -1) : value;
+}
+
+function isLocalOrPrivateHostname(hostname: string): boolean {
+	const normalizedHostname = hostname.toLowerCase().replace(/^\[(.*)\]$/u, '$1');
+	if (normalizedHostname === 'localhost' || normalizedHostname.endsWith('.localhost')) {
+		return true;
+	}
+	return isPrivateOrSpecialIpv4(normalizedHostname) || isPrivateOrSpecialIpv6(normalizedHostname);
+}
+
+function isPrivateOrSpecialIpv4(hostname: string): boolean {
+	if (!/^\d+\.\d+\.\d+\.\d+$/u.test(hostname)) {
+		return false;
+	}
+
+	const octets = hostname.split('.').map((part) => Number(part));
+	if (octets.length !== 4 || octets.some((octet) => !Number.isInteger(octet) || octet < 0 || octet > 255)) {
+		return true;
+	}
+
+	const [first, second] = octets;
+	if (first === 0 || first === 10 || first === 127) return true;
+	if (first === 169 && second === 254) return true;
+	if (first === 172 && second >= 16 && second <= 31) return true;
+	if (first === 192 && second === 168) return true;
+	if (first === 100 && second >= 64 && second <= 127) return true;
+	if (first === 198 && (second === 18 || second === 19)) return true;
+	if (first >= 224) return true;
+	return false;
+}
+
+function isPrivateOrSpecialIpv6(hostname: string): boolean {
+	if (!hostname.includes(':')) {
+		return false;
+	}
+
+	const lower = hostname.toLowerCase();
+	if (lower === '::' || lower === '::1') {
+		return true;
+	}
+
+	if (lower.startsWith('::ffff:')) {
+		return isPrivateOrSpecialIpv4(lower.slice('::ffff:'.length));
+	}
+
+	if (lower.startsWith('fe80:')) return true;
+	if (lower.startsWith('fc') || lower.startsWith('fd')) return true;
+	if (lower.startsWith('ff')) return true;
+	return false;
 }

@@ -70,8 +70,8 @@ export function getPlatformDownloadInfo(ctx: MarketingContext): PlatformDownload
 		case 'linux': {
 			const arch = defaultArchitecture(ctx, 'linux');
 			return {
-				url: desktopRedirectUrl(ctx, 'linux', arch, 'appimage'),
-				label: `${ctx.i18n.getMessage('download.download_for_prefix', ctx.locale)}${ctx.i18n.getMessage('platform_support.platforms.linux.name', ctx.locale)}`,
+				url: desktopRedirectUrl(ctx, 'linux', arch, 'deb'),
+				label: ctx.i18n.getMessage('platform_support.platforms.linux.choose_distribution', ctx.locale),
 				icon: <LinuxIcon class="h-5 w-5" />,
 			};
 		}
@@ -334,6 +334,12 @@ function linuxDownloadOptions(ctx: MarketingContext): ReadonlyArray<PlatformOpti
 	return [
 		{arch: 'x64', format: 'AppImage', url: desktopRedirectUrl(ctx, 'linux', 'x64', 'appimage')},
 		{arch: 'arm64', format: 'AppImage', url: desktopRedirectUrl(ctx, 'linux', 'arm64', 'appimage')},
+		{arch: 'x64', format: 'DEB', url: desktopRedirectUrl(ctx, 'linux', 'x64', 'deb')},
+		{arch: 'arm64', format: 'DEB', url: desktopRedirectUrl(ctx, 'linux', 'arm64', 'deb')},
+		{arch: 'x64', format: 'RPM', url: desktopRedirectUrl(ctx, 'linux', 'x64', 'rpm')},
+		{arch: 'arm64', format: 'RPM', url: desktopRedirectUrl(ctx, 'linux', 'arm64', 'rpm')},
+		{arch: 'x64', format: 'tar.gz', url: desktopRedirectUrl(ctx, 'linux', 'x64', 'tar_gz')},
+		{arch: 'arm64', format: 'tar.gz', url: desktopRedirectUrl(ctx, 'linux', 'arm64', 'tar_gz')},
 	];
 }
 

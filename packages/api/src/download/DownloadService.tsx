@@ -122,14 +122,10 @@ export class DownloadService {
 			}
 
 			const encodedFilename = encodeURIComponent(resolvedFilename);
-			const dest = new URL(params.requestUrl);
-			dest.hostname = params.host || dest.hostname;
-			const scheme = this.resolveScheme(params.forwardedProto);
-			dest.protocol = scheme.endsWith(':') ? scheme : `${scheme}:`;
-			if (scheme === 'https') {
-				dest.port = '';
-			}
+			const dest = new URL(this.buildBaseUrl(params.host, params.forwardedProto, params.requestUrl));
 			dest.pathname = `${DOWNLOAD_PREFIX}/desktop/${params.channel}/${params.plat}/${params.arch}/${encodedFilename}`;
+			dest.search = '';
+			dest.hash = '';
 
 			return dest.toString();
 		} catch (error) {
@@ -455,10 +451,25 @@ export class DownloadService {
 		const request = new URL(requestUrl);
 		const scheme = this.resolveScheme(forwardedProto);
 		const protocol = scheme.endsWith(':') ? scheme : `${scheme}:`;
-		const port = scheme === 'https' ? '' : request.port;
-		const portSuffix = port.length > 0 ? `:${port}` : '';
-		const resolvedHost = host.length > 0 ? host : request.hostname;
-		return `${protocol}//${resolvedHost}${portSuffix}`;
+		const resolvedHost = this.resolvePublicHost(host, request);
+		return `${protocol}//${resolvedHost}`;
+	}
+
+	private resolvePublicHost(host: string, request: URL): string {
+		const trimmedHost = host.trim();
+		if (trimmedHost.length > 0 && !isLocalOrPrivateHost(trimmedHost)) {
+			return trimmedHost;
+		}
+
+		if (!isLocalOrPrivateHost(request.host)) {
+			return request.host;
+		}
+
+		try {
+			return new URL(Config.endpoints.apiPublic).host;
+		} catch {
+			return trimmedHost.length > 0 ? trimmedHost : request.host;
+		}
 	}
 
 	private extractFilename(entry: DesktopManifestFileEntry): string {
@@ -674,4 +685,69 @@ export class DownloadService {
 		const [, prefix, , , arch, suffix] = match;
 		return `${prefix}/${arch}${suffix}`;
 	}
+}
+
+function isLocalOrPrivateHost(host: string): boolean {
+	const hostname = extractHostname(host);
+	if (!hostname) {
+		return false;
+	}
+	return isLocalOrPrivateHostname(hostname);
+}
+
+function extractHostname(host: string): string | null {
+	try {
+		return new URL(`http://${host}`).hostname;
+	} catch {
+		return null;
+	}
+}
+
+function isLocalOrPrivateHostname(hostname: string): boolean {
+	const normalizedHostname = hostname.toLowerCase().replace(/^\[(.*)\]$/u, '$1');
+	if (normalizedHostname === 'localhost' || normalizedHostname.endsWith('.localhost')) {
+		return true;
+	}
+	return isPrivateOrSpecialIpv4(normalizedHostname) || isPrivateOrSpecialIpv6(normalizedHostname);
+}
+
+function isPrivateOrSpecialIpv4(hostname: string): boolean {
+	if (!/^\d+\.\d+\.\d+\.\d+$/u.test(hostname)) {
+		return false;
+	}
+
+	const octets = hostname.split('.').map((part) => Number(part));
+	if (octets.length !== 4 || octets.some((octet) => !Number.isInteger(octet) || octet < 0 || octet > 255)) {
+		return true;
+	}
+
+	const [first, second] = octets;
+	if (first === 0 || first === 10 || first === 127) return true;
+	if (first === 169 && second === 254) return true;
+	if (first === 172 && second >= 16 && second <= 31) return true;
+	if (first === 192 && second === 168) return true;
+	if (first === 100 && second >= 64 && second <= 127) return true;
+	if (first === 198 && (second === 18 || second === 19)) return true;
+	if (first >= 224) return true;
+	return false;
+}
+
+function isPrivateOrSpecialIpv6(hostname: string): boolean {
+	if (!hostname.includes(':')) {
+		return false;
+	}
+
+	const lower = hostname.toLowerCase();
+	if (lower === '::' || lower === '::1') {
+		return true;
+	}
+
+	if (lower.startsWith('::ffff:')) {
+		return isPrivateOrSpecialIpv4(lower.slice('::ffff:'.length));
+	}
+
+	if (lower.startsWith('fe80:')) return true;
+	if (lower.startsWith('fc') || lower.startsWith('fd')) return true;
+	if (lower.startsWith('ff')) return true;
+	return false;
 }

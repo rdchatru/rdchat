@@ -19,6 +19,7 @@
 
 import * as NotificationActionCreators from '@app/actions/NotificationActionCreators';
 import * as SoundActionCreators from '@app/actions/SoundActionCreators';
+import {Platform} from '@app/lib/Platform';
 import AuthenticationStore from '@app/stores/AuthenticationStore';
 import SoundStore from '@app/stores/SoundStore';
 import UserStore from '@app/stores/UserStore';
@@ -26,6 +27,7 @@ import * as AvatarUtils from '@app/utils/AvatarUtils';
 import {getElectronAPI, isDesktop} from '@app/utils/NativeUtils';
 import * as RouterUtils from '@app/utils/RouterUtils';
 import {SoundType} from '@app/utils/SoundUtils';
+import {checkAndroidPermissions, requestAndroidPermissions} from '@app/utils/TauriAndroidBridge';
 import type {I18n} from '@lingui/core';
 import {msg} from '@lingui/core/macro';
 
@@ -48,11 +50,16 @@ export function ensureDesktopNotificationClickHandler(): void {
 
 export function hasNotification(): boolean {
 	if (isDesktop()) return true;
+	if (Platform.isTauriAndroid) return true;
 	return typeof Notification !== 'undefined';
 }
 
 export async function isGranted(): Promise<boolean> {
 	if (isDesktop()) return true;
+	if (Platform.isTauriAndroid) {
+		const permissions = await checkAndroidPermissions(['notifications']);
+		return permissions.notifications === 'granted';
+	}
 	return typeof Notification !== 'undefined' && Notification.permission === 'granted';
 }
 
@@ -98,6 +105,18 @@ export async function requestPermission(i18n: I18n): Promise<void> {
 			icon,
 		});
 
+		return;
+	}
+
+	if (Platform.isTauriAndroid) {
+		const result = await requestAndroidPermissions(['notifications']);
+		if (result.notifications !== 'granted') {
+			NotificationActionCreators.permissionDenied(i18n);
+			return;
+		}
+
+		NotificationActionCreators.permissionGranted();
+		playNotificationSoundIfEnabled();
 		return;
 	}
 
