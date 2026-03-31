@@ -1,4 +1,4 @@
-import {readFile, writeFile} from 'node:fs/promises';
+import {access, mkdir, readFile, writeFile} from 'node:fs/promises';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -7,16 +7,25 @@ const projectRoot = path.resolve(scriptDir, '..');
 const androidProjectRoot = path.join(projectRoot, 'src-tauri', 'gen', 'android');
 const appGradlePath = path.join(androidProjectRoot, 'app', 'build.gradle.kts');
 const keystorePropertiesPath = path.join(androidProjectRoot, 'keystore.properties');
+const defaultCiKeystorePath = path.join(androidProjectRoot, 'rdchat-upload.jks');
 
-const keystoreFile = process.env.ANDROID_KEYSTORE_FILE;
+const keystoreBase64 = process.env.ANDROID_KEYSTORE_BASE64;
+const keystoreFile = process.env.ANDROID_KEYSTORE_FILE || (keystoreBase64 ? defaultCiKeystorePath : undefined);
 const keyAlias = process.env.ANDROID_KEY_ALIAS;
 const keyPassword = process.env.ANDROID_KEY_PASSWORD;
 const storePassword = process.env.ANDROID_STORE_PASSWORD || keyPassword;
 
 if (!keystoreFile || !keyAlias || !keyPassword || !storePassword) {
 	throw new Error(
-		'ANDROID_KEYSTORE_FILE, ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD, and ANDROID_STORE_PASSWORD/ANDROID_KEY_PASSWORD must be set.',
+		'ANDROID_KEY_ALIAS, ANDROID_KEY_PASSWORD, and ANDROID_STORE_PASSWORD/ANDROID_KEY_PASSWORD must be set, plus either ANDROID_KEYSTORE_FILE or ANDROID_KEYSTORE_BASE64.',
 	);
+}
+
+if (keystoreBase64) {
+	await mkdir(path.dirname(keystoreFile), {recursive: true});
+	await writeFile(keystoreFile, Buffer.from(keystoreBase64, 'base64'));
+} else {
+	await access(keystoreFile);
 }
 
 const keystoreFileName = path.basename(keystoreFile);
