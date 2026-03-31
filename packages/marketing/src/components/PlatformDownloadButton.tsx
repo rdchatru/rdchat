@@ -217,7 +217,7 @@ function getMobileConfig(ctx: MarketingContext, platform: MarketingPlatform): Mo
 			return {
 				platformName: ctx.i18n.getMessage('platform_support.platforms.android.name', ctx.locale),
 				icon: <AndroidIcon class="h-6 w-6 shrink-0" />,
-				url: apiUrl(ctx, '/dl/android/arm64/apk'),
+				url: apiUrl(ctx, '/dl/android/arm64/rdchat.apk'),
 				helperText: ctx.i18n.getMessage('platform_support.platforms.android.apk', ctx.locale),
 			};
 		default:

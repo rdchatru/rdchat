@@ -16,6 +16,11 @@ on:
         required: false
         default: ''
         type: string
+      publish_to_rdchat:
+        description: Upload completed desktop artifacts to RdChat downloads
+        required: false
+        default: true
+        type: boolean
       skip_windows:
         description: Skip Windows builds
         required: false
@@ -354,3 +359,50 @@ jobs:
             upload_staging/*.nupkg.sha256
             upload_staging/RELEASES*
           retention-days: 30
+
+  publish:
+    name: Publish desktop artifacts to RdChat
+    needs:
+      - meta
+      - build
+    if: ${{ inputs.publish_to_rdchat }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    env:
+      RDCHAT_API_BASE_URL: ${{ vars.RDCHAT_API_BASE_URL || 'https://rdchat.ru/api' }}
+      RDCHAT_DOWNLOADS_BUCKET: ${{ vars.RDCHAT_DOWNLOADS_BUCKET || 'fluxer-downloads' }}
+    steps:
+      - name: Checkout CI scripts
+        uses: actions/checkout@v6
+        with:
+          sparse-checkout: scripts/ci
+          sparse-checkout-cone-mode: false
+
+      - name: Download desktop build artifacts
+        if: ${{ secrets.RDCHAT_ADMIN_API_KEY != '' }}
+        uses: actions/download-artifact@v4
+        with:
+          pattern: fluxer-desktop-${{ needs.meta.outputs.build_channel }}-*
+          path: artifacts/desktop
+
+      - name: Publish desktop downloads
+        if: ${{ secrets.RDCHAT_ADMIN_API_KEY != '' }}
+        env:
+          RDCHAT_ADMIN_API_KEY: ${{ secrets.RDCHAT_ADMIN_API_KEY }}
+        run: >-
+          python3 scripts/ci/workflows/publish_clients.py
+          --step desktop
+          --api-base-url "${{ env.RDCHAT_API_BASE_URL }}"
+          --admin-api-key "${{ env.RDCHAT_ADMIN_API_KEY }}"
+          --bucket "${{ env.RDCHAT_DOWNLOADS_BUCKET }}"
+          --artifacts-dir "artifacts/desktop"
+          --channel "${{ needs.meta.outputs.build_channel }}"
+          --version "${{ needs.meta.outputs.version }}"
+          --pub-date "${{ needs.meta.outputs.pub_date }}"
+
+      - name: Publish skipped (missing RdChat admin key)
+        if: ${{ secrets.RDCHAT_ADMIN_API_KEY == '' }}
+        run: >-
+          printf '%s\n' '## RdChat Desktop Publish' '' '- Skipped because `RDCHAT_ADMIN_API_KEY` is not configured.' >> "$GITHUB_STEP_SUMMARY"
