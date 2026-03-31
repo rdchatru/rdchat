@@ -373,6 +373,7 @@ jobs:
     env:
       RDCHAT_API_BASE_URL: ${{ vars.RDCHAT_API_BASE_URL || 'https://rdchat.ru/api' }}
       RDCHAT_DOWNLOADS_BUCKET: ${{ vars.RDCHAT_DOWNLOADS_BUCKET || 'fluxer-downloads' }}
+      RDCHAT_ADMIN_API_KEY: ${{ secrets.RDCHAT_ADMIN_API_KEY }}
     steps:
       - name: Checkout CI scripts
         uses: actions/checkout@v6
@@ -381,16 +382,14 @@ jobs:
           sparse-checkout-cone-mode: false
 
       - name: Download desktop build artifacts
-        if: ${{ secrets.RDCHAT_ADMIN_API_KEY != '' }}
+        if: ${{ env.RDCHAT_ADMIN_API_KEY != '' }}
         uses: actions/download-artifact@v4
         with:
           pattern: fluxer-desktop-${{ needs.meta.outputs.build_channel }}-*
           path: artifacts/desktop
 
       - name: Publish desktop downloads
-        if: ${{ secrets.RDCHAT_ADMIN_API_KEY != '' }}
-        env:
-          RDCHAT_ADMIN_API_KEY: ${{ secrets.RDCHAT_ADMIN_API_KEY }}
+        if: ${{ env.RDCHAT_ADMIN_API_KEY != '' }}
         run: >-
           python3 scripts/ci/workflows/publish_clients.py
           --step desktop
@@ -403,6 +402,6 @@ jobs:
           --pub-date "${{ needs.meta.outputs.pub_date }}"
 
       - name: Publish skipped (missing RdChat admin key)
-        if: ${{ secrets.RDCHAT_ADMIN_API_KEY == '' }}
+        if: ${{ env.RDCHAT_ADMIN_API_KEY == '' }}
         run: >-
           printf '%s\n' '## RdChat Desktop Publish' '' '- Skipped because `RDCHAT_ADMIN_API_KEY` is not configured.' >> "$GITHUB_STEP_SUMMARY"

@@ -66,6 +66,7 @@ jobs:
       GRADLE_OPTS: -Dorg.gradle.jvmargs=-Xmx4g -Dorg.gradle.daemon=false
       RDCHAT_API_BASE_URL: ${{ vars.RDCHAT_API_BASE_URL || 'https://rdchat.ru/api' }}
       RDCHAT_DOWNLOADS_BUCKET: ${{ vars.RDCHAT_DOWNLOADS_BUCKET || 'fluxer-downloads' }}
+      RDCHAT_ADMIN_API_KEY: ${{ secrets.RDCHAT_ADMIN_API_KEY }}
     steps:
       - name: Checkout source
         uses: actions/checkout@v6
@@ -161,9 +162,7 @@ jobs:
             fluxer_mobile/src-tauri/gen/android/app/build/outputs/**/mapping.txt
 
       - name: Publish Android downloads
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_type == 'release' && inputs.publish_to_rdchat && secrets.RDCHAT_ADMIN_API_KEY != '' }}
-        env:
-          RDCHAT_ADMIN_API_KEY: ${{ secrets.RDCHAT_ADMIN_API_KEY }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_type == 'release' && inputs.publish_to_rdchat && env.RDCHAT_ADMIN_API_KEY != '' }}
         run: >-
           python3 scripts/ci/workflows/publish_clients.py
           --step android
@@ -174,6 +173,6 @@ jobs:
           --release-channel "${{ inputs.release_channel }}"
 
       - name: Publish skipped (missing RdChat admin key)
-        if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_type == 'release' && inputs.publish_to_rdchat && secrets.RDCHAT_ADMIN_API_KEY == '' }}
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.build_type == 'release' && inputs.publish_to_rdchat && env.RDCHAT_ADMIN_API_KEY == '' }}
         run: >-
           printf '%s\n' '## RdChat Android Publish' '' '- Skipped because `RDCHAT_ADMIN_API_KEY` is not configured.' >> "$GITHUB_STEP_SUMMARY"
