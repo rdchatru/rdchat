@@ -71,14 +71,14 @@ class LocalPresenceStore {
 	}
 
 	updatePresence(): void {
-		const userStatus = UserSettingsStore.status;
+		const userStatus = UserSettingsStore?.status ?? StatusTypes.ONLINE;
 		const idleSince = IdleStore.getIdleSince();
 		const isMobile = MobileLayoutStore.isMobileLayout();
 		const afk = this.computeAfk(idleSince, isMobile);
 
 		const effectiveStatus = userStatus === StatusTypes.ONLINE && idleSince > 0 ? StatusTypes.IDLE : userStatus;
 
-		const normalizedCustomStatus = normalizeCustomStatus(UserSettingsStore.getCustomStatus());
+		const normalizedCustomStatus = normalizeCustomStatus(UserSettingsStore?.getCustomStatus?.() ?? null);
 		this.customStatus = normalizedCustomStatus ? {...normalizedCustomStatus} : null;
 		this.status = effectiveStatus;
 		this.since = idleSince;
@@ -107,7 +107,7 @@ class LocalPresenceStore {
 	private computeAfk(idleSince: number, isMobile: boolean): boolean {
 		if (isMobile) return this.isMobileBackgrounded();
 		if (idleSince <= 0) return false;
-		const afkTimeout = UserSettingsStore.getAfkTimeout();
+		const afkTimeout = UserSettingsStore?.getAfkTimeout?.() ?? 600;
 		return Date.now() - idleSince > afkTimeout * 1000;
 	}
 
