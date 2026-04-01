@@ -51,6 +51,7 @@
 		"sudo_mode_secret": "",
 		"connection_initiation_secret": "",
 		"vapid": {
+			"email": "noreply@localhost",
 			"public_key": "",
 			"private_key": ""
 		},

@@ -47,6 +47,7 @@ build_config(Json) ->
     Telemetry = get_map(Json, [<<"telemetry">>]),
     Sentry = get_map(Json, [<<"sentry">>]),
     Vapid = get_map(Json, [<<"auth">>, <<"vapid">>]),
+    BaseDomain = iolist_to_binary(get_string(get_map(Json, [<<"domain">>]), <<"base_domain">>, "localhost")),
     #{
         port => get_int(Service, <<"port">>, 8080),
         admin_reload_secret => get_optional_binary(Service, <<"admin_reload_secret">>),
@@ -88,7 +89,7 @@ build_config(Json) ->
         gateway_http_cleanup_max_age_ms =>
             get_int(Service, <<"gateway_http_cleanup_max_age_ms">>, 300000),
         media_proxy_endpoint => get_optional_binary(Service, <<"media_proxy_endpoint">>),
-        vapid_email => get_binary(Vapid, <<"email">>, <<>>),
+        vapid_email => get_vapid_email(Vapid, BaseDomain),
         vapid_public_key => get_optional_binary(Vapid, <<"public_key">>),
         vapid_private_key => get_optional_binary(Vapid, <<"private_key">>),
         gateway_metrics_enabled => get_optional_bool(Service, <<"gateway_metrics_enabled">>),
@@ -149,6 +150,14 @@ get_optional_binary(Map, Key) ->
     case get_value(Map, Key) of
         undefined -> undefined;
         Value -> to_binary(Value, undefined)
+    end.
+
+-spec get_vapid_email(map(), binary()) -> binary().
+get_vapid_email(Map, BaseDomain) ->
+    case get_optional_binary(Map, <<"email">>) of
+        undefined -> <<"noreply@", BaseDomain/binary>>;
+        <<>> -> <<"noreply@", BaseDomain/binary>>;
+        Email when is_binary(Email) -> Email
     end.
 
 -spec get_log_level(map(), binary(), log_level()) -> log_level().

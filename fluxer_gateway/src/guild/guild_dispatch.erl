@@ -678,13 +678,9 @@ build_push_session_eligibility(Sessions) ->
                     PrevStats = maps:get(
                         UserId,
                         Acc,
-                        #{count => 0, has_mobile => false, all_afk => true}
+                        #{all_afk => true}
                     ),
                     NewStats = #{
-                        count => maps:get(count, PrevStats, 0) + 1,
-                        has_mobile =>
-                            maps:get(has_mobile, PrevStats, false) orelse
-                                maps:get(mobile, Session, false),
                         all_afk =>
                             maps:get(all_afk, PrevStats, true) andalso
                                 maps:get(afk, Session, false)
@@ -699,7 +695,7 @@ build_push_session_eligibility(Sessions) ->
     ),
     maps:map(
         fun(_UserId, Stats) ->
-            (not maps:get(has_mobile, Stats, false)) andalso maps:get(all_afk, Stats, false)
+            maps:get(all_afk, Stats, false)
         end,
         SessionStats
     ).
@@ -975,7 +971,7 @@ build_push_session_eligibility_test() ->
     },
     Eligibility = build_push_session_eligibility(Sessions),
     ?assertEqual(true, maps:get(1, Eligibility)),
-    ?assertEqual(false, maps:get(2, Eligibility)),
+    ?assertEqual(true, maps:get(2, Eligibility)),
     ?assertEqual(false, maps:get(3, Eligibility)).
 
 push_candidate_user_ids_prefers_sessionless_and_eligible_sessions_test() ->

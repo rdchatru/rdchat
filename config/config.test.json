@@ -31,6 +31,7 @@
 		"sudo_mode_secret": "test-sudo-mode-secret-minimum-32-chars",
 		"connection_initiation_secret": "test-connection-initiation-secret-32ch",
 		"vapid": {
+			"email": "push-tests@example.com",
 			"public_key": "test-vapid-public-key",
 			"private_key": "test-vapid-private-key"
 		},

@@ -1,1 +1,0 @@
-{"default":{"identifier":"default","description":"Default capability set for the RdChat mobile app.","local":true,"windows":["main"],"permissions":["core:default","websocket:default",{"identifier":"http:default","allow":[{"url":"https://rdchat.ru"},{"url":"https://*.rdchat.ru"},{"url":"http://localhost:*"},{"url":"http://127.0.0.1:*"},{"url":"http://10.0.2.2:*"}]}]}}

@@ -558,15 +558,11 @@ is_push_eligible(Sessions) ->
         0 ->
             true;
         _ ->
-            HasMobile = lists:any(
-                fun(Session) -> maps:get(mobile, Session, false) end,
-                maps:values(Sessions)
-            ),
             AllAfk = lists:all(
                 fun(Session) -> maps:get(afk, Session, false) end,
                 maps:values(Sessions)
             ),
-            (not HasMobile) andalso AllAfk
+            AllAfk
     end.
 
 -spec maybe_update_push_eligibility(state()) -> state().
@@ -1106,6 +1102,7 @@ has_subscription_test() ->
 is_push_eligible_test() ->
     ?assertEqual(true, is_push_eligible(#{})),
     ?assertEqual(false, is_push_eligible(#{<<"s1">> => #{mobile => true, afk => false}})),
+    ?assertEqual(true, is_push_eligible(#{<<"s1">> => #{mobile => true, afk => true}})),
     ?assertEqual(true, is_push_eligible(#{<<"s1">> => #{mobile => false, afk => true}})),
     ?assertEqual(false, is_push_eligible(#{<<"s1">> => #{mobile => false, afk => false}})).
 

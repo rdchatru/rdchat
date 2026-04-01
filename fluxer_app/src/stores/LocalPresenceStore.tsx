@@ -52,6 +52,17 @@ class LocalPresenceStore {
 			() => MobileLayoutStore.isMobileLayout(),
 			() => this.updatePresence(),
 		);
+
+		if (typeof document !== 'undefined') {
+			document.addEventListener('visibilitychange', this.handleVisibilityChange);
+		}
+
+		if (typeof window !== 'undefined') {
+			window.addEventListener('focus', this.handleVisibilityChange);
+			window.addEventListener('blur', this.handleVisibilityChange);
+		}
+
+		this.updatePresence();
 	}
 
 	updatePresence(): void {
@@ -85,13 +96,23 @@ class LocalPresenceStore {
 	}
 
 	get presenceFingerprint(): string {
-		return `${this.status}|${customStatusToKey(this.customStatus)}|afk:${this.afk ? '1' : '0'}`;
+		return `${this.status}|${customStatusToKey(this.customStatus)}|afk:${this.afk ? '1' : '0'}|mobile:${this.mobile ? '1' : '0'}`;
 	}
 
 	private computeAfk(idleSince: number, isMobile: boolean): boolean {
-		if (isMobile || idleSince <= 0) return false;
+		if (isMobile) return this.isMobileBackgrounded();
+		if (idleSince <= 0) return false;
 		const afkTimeout = UserSettingsStore.getAfkTimeout();
 		return Date.now() - idleSince > afkTimeout * 1000;
+	}
+
+	private isMobileBackgrounded(): boolean {
+		if (typeof document === 'undefined') return false;
+		return document.hidden || document.visibilityState !== 'visible';
+	}
+
+	private handleVisibilityChange(): void {
+		this.updatePresence();
 	}
 }
 

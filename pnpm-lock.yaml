@@ -1028,12 +1028,6 @@ importers:
         specifier: 'catalog:'
         version: 7.0.0-dev.20260209.1
 
-  fluxer_mobile:
-    devDependencies:
-      '@tauri-apps/cli':
-        specifier: ^2.0.0
-        version: 2.10.1
-
   fluxer_relay_directory:
     dependencies:
       '@fluxer/config':

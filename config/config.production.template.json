@@ -50,6 +50,7 @@
 		"sudo_mode_secret": "GENERATE_A_64_CHAR_HEX_SECRET",
 		"connection_initiation_secret": "GENERATE_A_64_CHAR_HEX_SECRET",
 		"vapid": {
+			"email": "push@example.com",
 			"public_key": "YOUR_VAPID_PUBLIC_KEY",
 			"private_key": "YOUR_VAPID_PRIVATE_KEY"
 		}

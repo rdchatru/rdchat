@@ -8,7 +8,6 @@ packages:
   - fluxer_integration
   - fluxer_marketing
   - fluxer_media_proxy
-  - fluxer_mobile
 
   - fluxer_relay_directory
   - fluxer_server
