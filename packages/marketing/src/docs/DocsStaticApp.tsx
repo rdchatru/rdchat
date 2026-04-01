@@ -98,15 +98,15 @@ function resolveDocsFilePath(pathname: string): string | null {
 }
 
 function toDocsRelativePath(pathname: string): string | null {
-	if (pathname === '/docs' || pathname === '/docs/') {
-		return 'docs';
+	if (pathname === '/' || pathname === '/docs' || pathname === '/docs/') {
+		return '';
 	}
 
 	if (!pathname.startsWith('/docs/')) {
 		return null;
 	}
 
-	return pathname.slice(1);
+	return pathname.slice('/docs/'.length);
 }
 
 function getContentType(filePath: string): string {

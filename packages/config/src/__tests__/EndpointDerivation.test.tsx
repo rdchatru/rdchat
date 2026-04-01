@@ -159,7 +159,7 @@ describe('deriveEndpointsFromDomain', () => {
 		});
 
 		test('derives marketing endpoint with port', () => {
-			expect(endpoints.marketing).toBe('http://localhost:8088/marketing');
+			expect(endpoints.marketing).toBe('http://localhost:8088');
 		});
 
 		test('derives invite endpoint with port', () => {
@@ -211,7 +211,7 @@ describe('deriveEndpointsFromDomain', () => {
 		});
 
 		test('derives marketing endpoint without port', () => {
-			expect(endpoints.marketing).toBe('https://rdchat.ru/marketing');
+			expect(endpoints.marketing).toBe('https://rdchat.ru');
 		});
 
 		test('derives invite endpoint without port', () => {
