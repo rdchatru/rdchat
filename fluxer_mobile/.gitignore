@@ -1,4 +1,5 @@
 src-tauri/tauri.dev.conf.json
 signing/
+src-tauri/gen/android/
 src-tauri/gen/android/*.jks
 src-tauri/gen/android/keystore.properties

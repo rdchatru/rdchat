@@ -35,7 +35,7 @@ export function generatePresignedUrl(options: PresignedUrlOptions): string {
 
 	const endpointUrl = new URL(endpoint);
 	const host = endpointUrl.host;
-	const basePath = endpointUrl.pathname === '/' ? '' : endpointUrl.pathname;
+	const basePathSegments = endpointUrl.pathname === '/' ? [] : endpointUrl.pathname.split('/').filter(Boolean);
 
 	const service = 's3';
 	const algorithm = 'AWS4-HMAC-SHA256';
@@ -44,7 +44,7 @@ export function generatePresignedUrl(options: PresignedUrlOptions): string {
 	const amzDate = now.toISOString().replace(/[:-]|\.\d+/g, '');
 	const dateStamp = amzDate.slice(0, 8);
 
-	const canonicalUri = `${basePath}/${bucket}/${key}`;
+	const canonicalUri = buildCanonicalUri(basePathSegments, bucket, key);
 
 	const canonicalQuery = [
 		`X-Amz-Algorithm=${algorithm}`,
@@ -79,4 +79,13 @@ export function generatePresignedUrl(options: PresignedUrlOptions): string {
 
 	const baseUrl = `${endpointUrl.protocol}//${endpointUrl.host}`;
 	return `${baseUrl}${canonicalUri}?${canonicalQuery}&X-Amz-Signature=${signature}`;
+}
+
+function buildCanonicalUri(basePathSegments: Array<string>, bucket: string, key: string): string {
+	const segments = [...basePathSegments, bucket, ...key.split('/')];
+	return `/${segments.map(encodeUriPathSegment).join('/')}`;
+}
+
+function encodeUriPathSegment(value: string): string {
+	return encodeURIComponent(value).replace(/[!'()*]/g, (char) => `%${char.charCodeAt(0).toString(16).toUpperCase()}`);
 }

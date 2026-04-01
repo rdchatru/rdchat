@@ -10,8 +10,9 @@
 		"android:dev": "node scripts/android-dev.mjs",
 		"android:build": "node scripts/android-build.mjs",
 		"android:build:debug": "node scripts/android-build.mjs --debug",
-		"android:init": "pnpm exec tauri android init",
-		"android:init:ci": "CI=true pnpm exec tauri android init",
+		"android:icons": "node scripts/sync-android-icons.mjs",
+		"android:init": "pnpm exec tauri android init && pnpm android:icons",
+		"android:init:ci": "CI=true pnpm exec tauri android init && pnpm android:icons",
 		"android:signing:ci": "node scripts/configure-android-signing.mjs",
 		"tauri": "tauri"
 	},

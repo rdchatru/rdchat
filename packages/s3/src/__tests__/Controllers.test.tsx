@@ -20,6 +20,7 @@
 import * as fs from 'node:fs/promises';
 import {createMockLogger} from '@fluxer/logger/src/mock';
 import {createS3App} from '@fluxer/s3/src/App';
+import {generatePresignedUrl} from '@fluxer/s3/src/s3/PresignedUrlGenerator';
 import {hmacSha256, sha256} from '@fluxer/s3/src/utils/Crypto';
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 
@@ -715,6 +716,37 @@ describe('ObjectController', () => {
 			expect(res.headers.get('ETag')).toBeTruthy();
 			const body = await res.text();
 			expect(body).toBe('Hello, World!');
+		});
+
+		it('should accept a presigned download URL for keys with spaces and reserved characters', async () => {
+			const {app, initialize, getS3Service} = createS3App({
+				logger: mockLogger,
+				s3Config: {root: testRoot, buckets: ['test-bucket']},
+				authConfig,
+			});
+			await initialize();
+
+			const key = "folder/file #1+(draft)*'.txt";
+			await getS3Service().putObject('test-bucket', key, Buffer.from('Presigned content'), {
+				contentType: 'text/plain',
+			});
+
+			const url = generatePresignedUrl({
+				method: 'GET',
+				bucket: 'test-bucket',
+				key,
+				expiresIn: 300,
+				accessKey: TEST_ACCESS_KEY,
+				secretKey: TEST_SECRET_KEY,
+				endpoint: 'http://localhost',
+				region: TEST_REGION,
+			});
+
+			const res = await app.request(url, {method: 'GET'});
+
+			expect(res.status).toBe(200);
+			expect(res.headers.get('Content-Type')).toBe('text/plain');
+			expect(await res.text()).toBe('Presigned content');
 		});
 
 		it('should get object with range', async () => {

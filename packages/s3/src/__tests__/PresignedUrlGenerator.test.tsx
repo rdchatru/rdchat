@@ -175,7 +175,14 @@ describe('generatePresignedUrl', () => {
 			const opts = {...baseOptions, key: 'path/to/file with spaces.txt'};
 			const url = generatePresignedUrl(opts);
 
-			expect(url).toContain('path/to/file with spaces.txt?');
+			expect(url).toContain('path/to/file%20with%20spaces.txt?');
+		});
+
+		it('should encode reserved characters in key segments', () => {
+			const opts = {...baseOptions, key: "folder/file #1+(draft)*'.txt"};
+			const url = generatePresignedUrl(opts);
+
+			expect(url).toContain("/test-bucket/folder/file%20%231%2B%28draft%29%2A%27.txt?");
 		});
 
 		it('should handle keys with forward slashes', () => {
@@ -190,6 +197,13 @@ describe('generatePresignedUrl', () => {
 			const url = generatePresignedUrl(opts);
 
 			expect(url).toContain('/my.bucket.com/');
+		});
+
+		it('should preserve an endpoint base path', () => {
+			const opts = {...baseOptions, endpoint: 'https://example.com/s3', key: 'folder/file name.txt'};
+			const url = generatePresignedUrl(opts);
+
+			expect(url).toContain('https://example.com/s3/test-bucket/folder/file%20name.txt?');
 		});
 	});
 
