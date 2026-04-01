@@ -6,8 +6,8 @@ use std::{
     time::Duration,
 };
 use tauri::{
-    plugin::{Builder as PluginBuilder, PluginHandle, TauriPlugin},
     AppHandle, Manager, State, Wry,
+    plugin::{Builder as PluginBuilder, PluginHandle, TauriPlugin},
 };
 use tokio::sync::watch;
 
@@ -382,55 +382,56 @@ async fn sync_android_push_state(
         })
         .collect();
 
-    let mut supervisor = state
-        .supervisor
-        .lock()
-        .map_err(|_| "Failed to lock push supervisor".to_owned())?;
+    let service_enabled = {
+        let mut supervisor = state
+            .supervisor
+            .lock()
+            .map_err(|_| "Failed to lock push supervisor".to_owned())?;
 
-    let existing_user_ids: Vec<String> = supervisor.listeners.keys().cloned().collect();
-    for user_id in existing_user_ids {
-        let should_keep = supervisor
-            .listeners
-            .get(&user_id)
-            .and_then(|listener| {
-                desired_accounts
-                    .get(&user_id)
-                    .map(|desired| listener.config == *desired)
-            })
-            .unwrap_or(false);
+        let existing_user_ids: Vec<String> = supervisor.listeners.keys().cloned().collect();
+        for user_id in existing_user_ids {
+            let should_keep = supervisor
+                .listeners
+                .get(&user_id)
+                .and_then(|listener| {
+                    desired_accounts
+                        .get(&user_id)
+                        .map(|desired| listener.config == *desired)
+                })
+                .unwrap_or(false);
 
-        if !should_keep {
-            if let Some(listener) = supervisor.listeners.remove(&user_id) {
-                listener.stop();
+            if !should_keep {
+                if let Some(listener) = supervisor.listeners.remove(&user_id) {
+                    listener.stop();
+                }
             }
         }
-    }
 
-    for (user_id, config) in desired_accounts {
-        if supervisor.listeners.contains_key(&user_id) {
-            continue;
+        for (user_id, config) in desired_accounts {
+            if supervisor.listeners.contains_key(&user_id) {
+                continue;
+            }
+
+            let (stop_tx, stop_rx) = watch::channel(false);
+            let task = tauri::async_runtime::spawn(run_account_listener(
+                app.clone(),
+                plugin.clone(),
+                config.clone(),
+                stop_rx,
+            ));
+
+            supervisor.listeners.insert(
+                user_id,
+                AccountListener {
+                    config,
+                    stop_tx,
+                    task,
+                },
+            );
         }
 
-        let (stop_tx, stop_rx) = watch::channel(false);
-        let task = tauri::async_runtime::spawn(run_account_listener(
-            app.clone(),
-            plugin.clone(),
-            config.clone(),
-            stop_rx,
-        ));
-
-        supervisor.listeners.insert(
-            user_id,
-            AccountListener {
-                config,
-                stop_tx,
-                task,
-            },
-        );
-    }
-
-    let service_enabled = !supervisor.listeners.is_empty();
-    drop(supervisor);
+        !supervisor.listeners.is_empty()
+    };
 
     let _: Value = plugin
         .run_mobile_plugin_async(
