@@ -53,6 +53,11 @@ class LocalPresenceStore {
 			() => this.updatePresence(),
 		);
 
+		reaction(
+			() => IdleStore.idleSince,
+			() => this.updatePresence(),
+		);
+
 		if (typeof document !== 'undefined') {
 			document.addEventListener('visibilitychange', this.handleVisibilityChange);
 		}

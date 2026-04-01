@@ -18,7 +18,6 @@
  */
 
 import {IS_DEV} from '@app/lib/Env';
-import LocalPresenceStore from '@app/stores/LocalPresenceStore';
 import {makeAutoObservable} from 'mobx';
 
 const IDLE_DURATION_MS = 1000 * (IS_DEV ? 10 : 60 * 10);
@@ -69,8 +68,12 @@ class IdleStore {
 		return this.idle;
 	}
 
-	getIdleSince(): number {
+	get idleSince(): number {
 		return this.idle ? this.lastActivityTime : 0;
+	}
+
+	getIdleSince(): number {
+		return this.idleSince;
 	}
 
 	private updateIdleState(): void {
@@ -79,7 +82,6 @@ class IdleStore {
 		const shouldBeIdle = timeSinceActivity >= IDLE_DURATION_MS;
 		if (shouldBeIdle !== this.idle) {
 			this.idle = shouldBeIdle;
-			LocalPresenceStore.updatePresence();
 		}
 	}
 }
