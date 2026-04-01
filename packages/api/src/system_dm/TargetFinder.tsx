@@ -21,6 +21,7 @@ import {createUserID, type GuildID, type UserID} from '@fluxer/api/src/BrandedTy
 import type {IUserSearchService} from '@fluxer/api/src/search/IUserSearchService';
 import type {IUserRepository} from '@fluxer/api/src/user/IUserRepository';
 import type {UserSearchFilters} from '@fluxer/schema/src/contracts/search/SearchDocumentTypes';
+import {snowflakeToDate} from '@fluxer/snowflake/src/Snowflake';
 
 const SEARCH_BATCH_SIZE = 1000;
 
@@ -28,11 +29,13 @@ export interface SystemDmTargetFilters {
 	registrationStart?: Date;
 	registrationEnd?: Date;
 	excludedGuildIds?: Set<GuildID>;
+	targetUserIds?: Set<UserID>;
 }
 
 interface BuiltSystemDmFilters {
 	excludedGuildIds: Set<GuildID>;
 	searchFilters: UserSearchFilters;
+	targetUserIds?: Set<UserID>;
 }
 
 function buildFilters(filters: SystemDmTargetFilters): BuiltSystemDmFilters {
@@ -48,7 +51,40 @@ function buildFilters(filters: SystemDmTargetFilters): BuiltSystemDmFilters {
 		searchFilters.createdAtLessThanOrEqual = Math.floor(filters.registrationEnd.getTime() / 1000);
 	}
 
-	return {excludedGuildIds, searchFilters};
+	return {excludedGuildIds, searchFilters, targetUserIds: filters.targetUserIds};
+}
+
+function isWithinRegistrationRange(userId: UserID, searchFilters: UserSearchFilters): boolean {
+	const createdAtSec = Math.floor(snowflakeToDate(BigInt(userId)).getTime() / 1000);
+	if (
+		searchFilters.createdAtGreaterThanOrEqual !== undefined &&
+		createdAtSec < searchFilters.createdAtGreaterThanOrEqual
+	) {
+		return false;
+	}
+	if (searchFilters.createdAtLessThanOrEqual !== undefined && createdAtSec > searchFilters.createdAtLessThanOrEqual) {
+		return false;
+	}
+	return true;
+}
+
+async function resolveExplicitTargets(
+	userRepository: IUserRepository,
+	targetUserIds: Set<UserID>,
+	searchFilters: UserSearchFilters,
+	excludedGuildIds: Set<GuildID>,
+): Promise<Array<UserID>> {
+	if (targetUserIds.size === 0) {
+		return [];
+	}
+
+	const users = await userRepository.listUsers(Array.from(targetUserIds));
+	const allowed = users
+		.filter((user) => !user.isSystem)
+		.map((user) => user.id)
+		.filter((userId) => isWithinRegistrationRange(userId, searchFilters));
+
+	return filterExcludedGuilds(userRepository, allowed, excludedGuildIds);
 }
 
 async function filterExcludedGuilds(
@@ -78,8 +114,12 @@ export async function collectSystemDmTargets(
 	},
 	filters: SystemDmTargetFilters,
 ): Promise<Array<UserID>> {
-	const {excludedGuildIds, searchFilters} = buildFilters(filters);
+	const {excludedGuildIds, searchFilters, targetUserIds} = buildFilters(filters);
 	const {userRepository, userSearchService} = deps;
+
+	if (targetUserIds && targetUserIds.size > 0) {
+		return resolveExplicitTargets(userRepository, targetUserIds, searchFilters, excludedGuildIds);
+	}
 
 	const userIds: Array<UserID> = [];
 	let offset = 0;

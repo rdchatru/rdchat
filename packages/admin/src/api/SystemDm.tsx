@@ -33,6 +33,7 @@ export async function createSystemDmJob(
 	registrationStart?: string,
 	registrationEnd?: string,
 	excludedGuildIds: Array<string> = [],
+	targetUserIds: Array<string> = [],
 ): Promise<ApiResult<SystemDmJobResponse>> {
 	const client = new ApiClient(config, session);
 	const body: JsonObject = {
@@ -40,6 +41,7 @@ export async function createSystemDmJob(
 		...(registrationStart ? {registration_start: registrationStart} : {}),
 		...(registrationEnd ? {registration_end: registrationEnd} : {}),
 		...(excludedGuildIds.length > 0 ? {excluded_guild_ids: excludedGuildIds} : {}),
+		...(targetUserIds.length > 0 ? {target_user_ids: targetUserIds} : {}),
 	};
 
 	return client.post<SystemDmJobResponse>('/admin/system-dm-jobs', body);

@@ -101,6 +101,7 @@ const JobFilters: FC<{job: SystemDmJobResponse}> = ({job}) => {
 		<Stack gap="sm">
 			<Caption>Registration: {registration}</Caption>
 			{job.excluded_guild_ids.length > 0 && <Caption>Excluded guilds: {job.excluded_guild_ids.join(', ')}</Caption>}
+			{job.target_user_ids.length > 0 && <Caption>Target users: {job.target_user_ids.join(', ')}</Caption>}
 		</Stack>
 	);
 };
@@ -224,6 +225,19 @@ export async function SystemDmPage({
 									<Textarea
 										id="system-dm-excluded-guild-ids"
 										name="excluded_guild_ids"
+										rows={3}
+										placeholder="12345,67890"
+										size="sm"
+									/>
+								</FormFieldGroup>
+								<FormFieldGroup
+									label="Target user IDs"
+									helper="Optional. If set, only these users are targeted. Separate IDs with commas."
+									htmlFor="system-dm-target-user-ids"
+								>
+									<Textarea
+										id="system-dm-target-user-ids"
+										name="target_user_ids"
 										rows={3}
 										placeholder="12345,67890"
 										size="sm"

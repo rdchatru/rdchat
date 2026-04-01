@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Contul tău Fluxer a fost dezactivat temporar
+  subject: Contul tău RdChat a fost dezactivat temporar
   body: |-
     Salut {username},
 
-    Contul tău Fluxer a fost dezactivat temporar, deoarece am detectat activitate suspectă.
+    Contul tău RdChat a fost dezactivat temporar, deoarece am detectat activitate suspectă.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Dacă crezi că este o greșeală, te rugăm să contactezi echipa noastră de suport.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 account_scheduled_deletion:
-  subject: Contul tău Fluxer va fi șters definitiv
+  subject: Contul tău RdChat va fi șters definitiv
   body: |-
     Salut {username},
 
-    Contul tău Fluxer a fost programat pentru ștergere definitivă, deoarece ai încălcat termenii de utilizare sau regulile comunității.
+    Contul tău RdChat a fost programat pentru ștergere definitivă, deoarece ai încălcat termenii de utilizare sau regulile comunității.
 
     Dată programată pentru ștergere: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - Explică clar de ce consideri că decizia este greșită sau nejustificată
     - Include, dacă este posibil, dovezi sau context relevant
 
-    Un membru al echipei Fluxer de siguranță va analiza contestația și poate suspenda ștergerea programată până la o decizie finală.
+    Un membru al echipei RdChat de siguranță va analiza contestația și poate suspenda ștergerea programată până la o decizie finală.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 account_temp_banned:
-  subject: Contul tău Fluxer a fost suspendat temporar
+  subject: Contul tău RdChat a fost suspendat temporar
   body: |-
     Salut {username},
 
-    Contul tău Fluxer a fost suspendat temporar, deoarece ai încălcat termenii de utilizare sau regulile comunității.
+    Contul tău RdChat a fost suspendat temporar, deoarece ai încălcat termenii de utilizare sau regulile comunității.
 
     Durată: {durationHours, plural,
       =1 {1 oră}
@@ -75,13 +75,13 @@ account_temp_banned:
 
     Dacă crezi că această decizie este greșită sau nejustificată, poți depune o contestație: trimite un e-mail la appeals@fluxer.app, folosind această adresă de e-mail. Explică clar de ce consideri că decizia este greșită. Vom analiza contestația și îți vom răspunde cu decizia noastră.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 donation_confirmation:
-  subject: Vă mulțumim pentru donația dumneavoastră la Fluxer
+  subject: Vă mulțumim pentru donația dumneavoastră la RdChat
   body: |-
     Bună ziua,
 
-    Vă mulțumim pentru donația dumneavoastră la Fluxer! {interval, select,
+    Vă mulțumim pentru donația dumneavoastră la RdChat! {interval, select,
       month {Donația dumneavoastră recurentă}
       year {Donația dumneavoastră recurentă}
       other {Donația dumneavoastră unică}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Sprijinul dumneavoastră ajută la menținerea Fluxer în funcțiune. Vă mulțumim!
+    Sprijinul dumneavoastră ajută la menținerea RdChat în funcțiune. Vă mulțumim!
 
-    – Echipa Fluxer
+    – Echipa RdChat
 donation_magic_link:
-  subject: Gestionați donațiile dumneavoastră la Fluxer
+  subject: Gestionați donațiile dumneavoastră la RdChat
   body: |-
     Bună ziua,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Dacă nu ați solicitat acest link, puteți ignora în siguranță acest e-mail.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 dsa_report_verification:
   subject: Confirmă adresa ta de e-mail pentru o sesizare DSA
   body: |-
     Salut,
 
-    Folosește codul de mai jos ca să trimiți sesizarea ta în baza Digital Services Act (DSA) către Fluxer:
+    Folosește codul de mai jos ca să trimiți sesizarea ta în baza Digital Services Act (DSA) către RdChat:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Dacă nu ai cerut acest lucru, poți ignora acest e-mail.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 email_change_new:
-  subject: Confirmă noua ta adresă de e-mail Fluxer
+  subject: Confirmă noua ta adresă de e-mail RdChat
   body: |-
     Salut {username},
 
-    Introdu codul în aplicație ca să confirmi noua ta adresă de e-mail Fluxer:
+    Introdu codul în aplicație ca să confirmi noua ta adresă de e-mail RdChat:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Dacă nu ai cerut acest lucru, poți ignora acest e-mail.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 email_change_original:
-  subject: Confirmă schimbarea adresei tale de e-mail Fluxer
+  subject: Confirmă schimbarea adresei tale de e-mail RdChat
   body: |-
     Salut {username},
 
-    Am primit o solicitare de schimbare a adresei de e-mail pentru contul tău Fluxer.
+    Am primit o solicitare de schimbare a adresei de e-mail pentru contul tău RdChat.
 
     Ca să confirmi schimbarea, introdu codul în aplicație:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Dacă nu ai cerut acest lucru, te rugăm să îți securizezi contul imediat.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 email_change_revert:
-  subject: Adresa de e-mail a contului tău Fluxer a fost schimbată
+  subject: Adresa de e-mail a contului tău RdChat a fost schimbată
   body: |-
     Salut {username},
 
-    Adresa de e-mail a contului tău Fluxer a fost schimbată în {newEmail}.
+    Adresa de e-mail a contului tău RdChat a fost schimbată în {newEmail}.
 
     Dacă tu ai făcut schimbarea, nu trebuie să faci nimic. Dacă nu, poți anula schimbarea și îți poți securiza contul folosind linkul de mai jos:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Acest link va restaura adresa de e-mail anterioară, te va deconecta de peste tot, va elimina numerele de telefon asociate, va dezactiva MFA și îți va solicita să setezi o parolă nouă.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 email_verification:
-  subject: Confirmă adresa ta de e-mail Fluxer
+  subject: Confirmă adresa ta de e-mail RdChat
   body: |-
     Salut {username},
 
-    Te rugăm să confirmi adresa de e-mail pentru contul tău Fluxer făcând clic pe linkul de mai jos:
+    Te rugăm să confirmi adresa de e-mail pentru contul tău RdChat făcând clic pe linkul de mai jos:
 
     {verifyUrl}
 
-    Dacă nu ți-ai creat un cont Fluxer, poți ignora în siguranță acest e-mail.
+    Dacă nu ți-ai creat un cont RdChat, poți ignora în siguranță acest e-mail.
 
     Linkul este valabil 24 de ore.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 gift_chargeback_notification:
   subject: Beneficiile din cadoul tău au fost eliminate
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Dacă crezi că este o greșeală, te rugăm să contactezi echipa noastră de suport și să incluzi toate detaliile pe care le ai despre codul cadou și momentul în care l-ai folosit.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 harvest_completed:
-  subject: Exportul tău de date Fluxer este gata pentru descărcare
+  subject: Exportul tău de date RdChat este gata pentru descărcare
   body: |-
     Salut {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Dacă nu ai cerut acest export, schimbă-ți parola imediat și contactează echipa noastră de suport.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 inactivity_warning:
-  subject: Contul tău Fluxer va fi șters din cauza inactivității
+  subject: Contul tău RdChat va fi șters din cauza inactivității
   body: |-
     Salut {username},
 
-    Nu am observat activitate în contul tău Fluxer din {lastActiveDate, date, full}.
+    Nu am observat activitate în contul tău RdChat din {lastActiveDate, date, full}.
 
     Dacă nu te autentifici până la {deletionDate, date, full} la {deletionDate, time, short}, contul tău va fi șters definitiv din cauza inactivității.
 
     Autentifică-te aici:
     {loginUrl}
 
-    Dacă ai folosit Fluxer recent, contactează echipa noastră de suport imediat.
+    Dacă ai folosit RdChat recent, contactează echipa noastră de suport imediat.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 ip_authorization:
   subject: Confirmă autentificarea de la o adresă IP nouă
   body: |-
     Salut {username},
 
-    Am detectat o încercare de autentificare în contul tău Fluxer de la o adresă IP nouă:
+    Am detectat o încercare de autentificare în contul tău RdChat de la o adresă IP nouă:
 
     Adresă IP: {ipAddress}
     Locație: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Linkul de confirmare este valabil 30 de minute.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 password_change_verification:
-  subject: Confirmă schimbarea parolei Fluxer
+  subject: Confirmă schimbarea parolei RdChat
   body: |-
     Salut {username},
 
-    Am primit o solicitare de schimbare a parolei pentru contul tău Fluxer.
+    Am primit o solicitare de schimbare a parolei pentru contul tău RdChat.
 
     Ca să confirmi schimbarea, introdu codul în aplicație:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Dacă nu ai cerut acest lucru, este posibil ca cineva să aibă acces la contul tău. Schimbă-ți parola imediat și activează autentificarea în doi factori.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 password_reset:
-  subject: Resetează parola Fluxer
+  subject: Resetează parola RdChat
   body: |-
     Salut {username},
 
-    Ai cerut resetarea parolei Fluxer. Folosește linkul de mai jos ca să setezi o parolă nouă:
+    Ai cerut resetarea parolei RdChat. Folosește linkul de mai jos ca să setezi o parolă nouă:
 
     {resetUrl}
 
@@ -292,20 +292,20 @@ password_reset:
 
     Linkul este valabil 1 oră.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 registration_approved:
-  subject: Înregistrarea ta Fluxer a fost aprobată
+  subject: Înregistrarea ta RdChat a fost aprobată
   body: |-
     Salut {username},
 
-    Vești bune: înregistrarea ta Fluxer a fost aprobată.
+    Vești bune: înregistrarea ta RdChat a fost aprobată.
 
-    Te poți autentifica acum în aplicația Fluxer aici:
+    Te poți autentifica acum în aplicația RdChat aici:
     {channelsUrl}
 
-    Bun venit în comunitatea Fluxer.
+    Bun venit în comunitatea RdChat.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 report_resolved:
   subject: Sesizarea ta a fost analizată
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Răspuns din partea echipei de siguranță:
     {publicComment}
 
-    Îți mulțumim că ne ajuți să păstrăm Fluxer sigur pentru toată lumea. Tratăm toate sesizările cu seriozitate și apreciem contribuția ta la comunitate.
+    Îți mulțumim că ne ajuți să păstrăm RdChat sigur pentru toată lumea. Tratăm toate sesizările cu seriozitate și apreciem contribuția ta la comunitate.
 
     Dacă ai întrebări sau nelămuriri despre acest rezultat, scrie-ne la safety@fluxer.app.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 scheduled_deletion_notification:
-  subject: Contul tău Fluxer va fi șters definitiv
+  subject: Contul tău RdChat va fi șters definitiv
   body: |-
     Salut {username},
 
-    Contul tău Fluxer a fost programat pentru ștergere definitivă.
+    Contul tău RdChat a fost programat pentru ștergere definitivă.
 
     Dată programată pentru ștergere: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -339,31 +339,31 @@ scheduled_deletion_notification:
 
     Dacă crezi că această decizie este greșită, poți depune o contestație: trimite un e-mail la appeals@fluxer.app, folosind această adresă de e-mail.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță
 self_deletion_scheduled:
-  subject: Ștergerea contului tău Fluxer a fost programată
+  subject: Ștergerea contului tău RdChat a fost programată
   body: |-
     Salut {username},
 
-    Ai cerut ștergerea contului tău Fluxer. Contul tău va fi șters definitiv pe:
+    Ai cerut ștergerea contului tău RdChat. Contul tău va fi șters definitiv pe:
 
     {deletionDate, date, full} la {deletionDate, time, short}
 
     Dacă nu ai cerut acest lucru, autentifică-te în cont ca să anulezi ștergerea. Îți recomandăm, de asemenea, să îți schimbi parola ca să îți securizezi contul.
 
-    – Echipa Fluxer
+    – Echipa RdChat
 unban_notification:
-  subject: Suspendarea contului tău Fluxer a fost ridicată
+  subject: Suspendarea contului tău RdChat a fost ridicată
   body: |-
     Salut {username},
 
-    Vești bune: suspendarea contului tău Fluxer a fost ridicată.
+    Vești bune: suspendarea contului tău RdChat a fost ridicată.
 
     {reason, select,
       null {}
       other {Motiv: {reason}}
     }
 
-    Te poți autentifica din nou și poți continua să folosești Fluxer ca de obicei.
+    Te poți autentifica din nou și poți continua să folosești RdChat ca de obicei.
 
-    – Echipa Fluxer de siguranță
+    – Echipa RdChat de siguranță

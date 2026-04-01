@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Dein Fluxer-Konto wurde vorübergehend deaktiviert
+  subject: Dein RdChat-Konto wurde vorübergehend deaktiviert
   body: |-
     Hallo {username},
 
-    Wir haben dein Fluxer-Konto vorübergehend deaktiviert, weil wir verdächtige Aktivitäten festgestellt haben.
+    Wir haben dein RdChat-Konto vorübergehend deaktiviert, weil wir verdächtige Aktivitäten festgestellt haben.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Wenn du glaubst, dass das ein Fehler war, melde dich bitte bei unserem Support.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 account_scheduled_deletion:
-  subject: Dein Fluxer-Konto wird dauerhaft gelöscht
+  subject: Dein RdChat-Konto wird dauerhaft gelöscht
   body: |-
     Hallo {username},
 
-    Dein Fluxer-Konto wurde zur dauerhaften Löschung vorgemerkt, weil du gegen unsere Nutzungsbedingungen oder Community-Richtlinien verstoßen hast.
+    Dein RdChat-Konto wurde zur dauerhaften Löschung vorgemerkt, weil du gegen unsere Nutzungsbedingungen oder Community-Richtlinien verstoßen hast.
 
     Geplantes Löschdatum: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - Erkläre bitte klar, warum du die Entscheidung für falsch oder ungerechtfertigt hältst.
     - Füge, falls möglich, relevante Nachweise oder zusätzlichen Kontext hinzu.
 
-    Ein Mitglied des Fluxer-Safety-Teams prüft deinen Einspruch und kann die anstehende Löschung bis zur endgültigen Entscheidung aussetzen.
+    Ein Mitglied des RdChat-Safety-Teams prüft deinen Einspruch und kann die anstehende Löschung bis zur endgültigen Entscheidung aussetzen.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 account_temp_banned:
-  subject: Dein Fluxer-Konto wurde vorübergehend gesperrt
+  subject: Dein RdChat-Konto wurde vorübergehend gesperrt
   body: |-
     Hallo {username},
 
-    Dein Fluxer-Konto wurde vorübergehend gesperrt, weil du gegen unsere Nutzungsbedingungen oder Community-Richtlinien verstoßen hast.
+    Dein RdChat-Konto wurde vorübergehend gesperrt, weil du gegen unsere Nutzungsbedingungen oder Community-Richtlinien verstoßen hast.
 
     Dauer: {durationHours, plural,
       =1 {1 Stunde}
@@ -75,13 +75,13 @@ account_temp_banned:
 
     Wenn du glaubst, dass diese Entscheidung falsch oder nicht gerechtfertigt ist, kannst du Einspruch einlegen: Schicke eine E-Mail an appeals@fluxer.app, und zwar von dieser E-Mail-Adresse aus. Erkläre bitte klar, warum du die Entscheidung für falsch hältst. Wir prüfen das und melden uns mit unserer Entscheidung.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 donation_confirmation:
-  subject: Vielen Dank für deine Fluxer-Spende
+  subject: Vielen Dank für deine RdChat-Spende
   body: |-
     Hallo,
 
-    Vielen Dank für deine Spende an Fluxer! Deine {interval, select,
+    Vielen Dank für deine Spende an RdChat! Deine {interval, select,
       month {wiederkehrende Spende}
       year {wiederkehrende Spende}
       other {einmalige Spende}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Deine Unterstützung hilft, Fluxer am Laufen zu halten. Vielen Dank!
+    Deine Unterstützung hilft, RdChat am Laufen zu halten. Vielen Dank!
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 donation_magic_link:
-  subject: Verwalte deine Fluxer-Spenden
+  subject: Verwalte deine RdChat-Spenden
   body: |-
     Hallo,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Wenn du diesen Link nicht angefordert hast, kannst du diese E-Mail ignorieren.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 dsa_report_verification:
   subject: Bestätige deine E-Mail-Adresse für eine DSA-Meldung
   body: |-
     Hallo,
 
-    Nutze den Code unten, um deine Meldung nach dem Digital Services Act (DSA) bei Fluxer einzureichen:
+    Nutze den Code unten, um deine Meldung nach dem Digital Services Act (DSA) bei RdChat einzureichen:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Wenn du das nicht angefordert hast, kannst du diese E-Mail ignorieren.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 email_change_new:
-  subject: Bestätige deine neue Fluxer-E-Mail-Adresse
+  subject: Bestätige deine neue RdChat-E-Mail-Adresse
   body: |-
     Hallo {username},
 
-    Gib diesen Code in der App ein, um deine neue Fluxer-E-Mail-Adresse zu bestätigen:
+    Gib diesen Code in der App ein, um deine neue RdChat-E-Mail-Adresse zu bestätigen:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Wenn du das nicht angefordert hast, kannst du diese E-Mail ignorieren.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 email_change_original:
-  subject: Bestätige die Änderung deiner Fluxer-E-Mail-Adresse
+  subject: Bestätige die Änderung deiner RdChat-E-Mail-Adresse
   body: |-
     Hallo {username},
 
-    Wir haben eine Anfrage erhalten, die E-Mail-Adresse deines Fluxer-Kontos zu ändern.
+    Wir haben eine Anfrage erhalten, die E-Mail-Adresse deines RdChat-Kontos zu ändern.
 
     Um die Änderung zu bestätigen, gib diesen Code in der App ein:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Wenn du das nicht angefordert hast, sichere bitte sofort dein Konto.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 email_change_revert:
-  subject: Deine Fluxer-E-Mail-Adresse wurde geändert
+  subject: Deine RdChat-E-Mail-Adresse wurde geändert
   body: |-
     Hallo {username},
 
-    Die E-Mail-Adresse deines Fluxer-Kontos wurde auf {newEmail} geändert.
+    Die E-Mail-Adresse deines RdChat-Kontos wurde auf {newEmail} geändert.
 
     Wenn du das warst, musst du nichts tun. Wenn nicht, kannst du die Änderung rückgängig machen und dein Konto über diesen Link absichern:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Dadurch wird deine vorherige E-Mail-Adresse wiederhergestellt. Du wirst auf allen Geräten abgemeldet, verknüpfte Telefonnummern werden entfernt, die Mehrfaktor-Authentifizierung wird deaktiviert und du musst ein neues Passwort festlegen.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 email_verification:
-  subject: Bestätige deine Fluxer-E-Mail-Adresse
+  subject: Bestätige deine RdChat-E-Mail-Adresse
   body: |-
     Hallo {username},
 
-    Bitte bestätige die E-Mail-Adresse für dein Fluxer-Konto, indem du auf den Link unten klickst:
+    Bitte bestätige die E-Mail-Adresse für dein RdChat-Konto, indem du auf den Link unten klickst:
 
     {verifyUrl}
 
-    Wenn du kein Fluxer-Konto erstellt hast, kannst du diese E-Mail einfach ignorieren.
+    Wenn du kein RdChat-Konto erstellt hast, kannst du diese E-Mail einfach ignorieren.
 
     Dieser Link ist 24 Stunden gültig.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 gift_chargeback_notification:
   subject: Die Vorteile aus deinem eingelösten Geschenk wurden entfernt
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Wenn du glaubst, dass das ein Fehler ist, melde dich bitte bei unserem Support und nenne alle Details, die du zum Geschenkcode und zum Zeitpunkt der Einlösung hast.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 harvest_completed:
-  subject: Dein Fluxer-Datenexport steht zum Download bereit
+  subject: Dein RdChat-Datenexport steht zum Download bereit
   body: |-
     Hallo {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Wenn du diesen Export nicht angefordert hast, ändere bitte sofort dein Passwort und melde dich bei unserem Support.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 inactivity_warning:
-  subject: Dein Fluxer-Konto wird wegen Inaktivität gelöscht
+  subject: Dein RdChat-Konto wird wegen Inaktivität gelöscht
   body: |-
     Hallo {username},
 
-    Wir haben seit {lastActiveDate, date, full} keine Aktivität auf deinem Fluxer-Konto gesehen.
+    Wir haben seit {lastActiveDate, date, full} keine Aktivität auf deinem RdChat-Konto gesehen.
 
     Wenn du dich nicht bis zum {deletionDate, date, full} um {deletionDate, time, short} einloggst, wird dein Konto wegen Inaktivität dauerhaft gelöscht.
 
     Hier einloggen:
     {loginUrl}
 
-    Wenn du Fluxer kürzlich genutzt hast, melde dich bitte sofort bei unserem Support.
+    Wenn du RdChat kürzlich genutzt hast, melde dich bitte sofort bei unserem Support.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 ip_authorization:
   subject: Anmeldung von neuer IP-Adresse bestätigen
   body: |-
     Hallo {username},
 
-    Wir haben einen Anmeldeversuch für dein Fluxer-Konto von einer neuen IP-Adresse erkannt:
+    Wir haben einen Anmeldeversuch für dein RdChat-Konto von einer neuen IP-Adresse erkannt:
 
     IP-Adresse: {ipAddress}
     Standort: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Dieser Bestätigungslink ist 30 Minuten gültig.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 password_reset:
-  subject: Setze dein Fluxer-Passwort zurück
+  subject: Setze dein RdChat-Passwort zurück
   body: |-
     Hallo {username},
 
-    Du hast ein Zurücksetzen deines Fluxer-Passworts angefordert. Nutze den Link unten, um ein neues Passwort festzulegen:
+    Du hast ein Zurücksetzen deines RdChat-Passworts angefordert. Nutze den Link unten, um ein neues Passwort festzulegen:
 
     {resetUrl}
 
@@ -276,13 +276,13 @@ password_reset:
 
     Dieser Link ist 1 Stunde gültig.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 password_change_verification:
-  subject: Bestätige deine Fluxer-Passwortänderung
+  subject: Bestätige deine RdChat-Passwortänderung
   body: |-
     Hallo {username},
 
-    Wir haben eine Anfrage erhalten, das Passwort deines Fluxer-Kontos zu ändern.
+    Wir haben eine Anfrage erhalten, das Passwort deines RdChat-Kontos zu ändern.
 
     Um diese Änderung zu bestätigen, gib diesen Code in der App ein:
 
@@ -292,20 +292,20 @@ password_change_verification:
 
     Wenn du das nicht angefordert hast, hat möglicherweise jemand Zugriff auf dein Konto. Ändere sofort dein Passwort und aktiviere die Zwei-Faktor-Authentifizierung.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 registration_approved:
-  subject: Deine Fluxer-Registrierung wurde bestätigt
+  subject: Deine RdChat-Registrierung wurde bestätigt
   body: |-
     Hallo {username},
 
-    Gute Nachrichten: Deine Fluxer-Registrierung wurde freigeschaltet.
+    Gute Nachrichten: Deine RdChat-Registrierung wurde freigeschaltet.
 
-    Du kannst dich jetzt in der Fluxer-App anmelden:
+    Du kannst dich jetzt in der RdChat-App anmelden:
     {channelsUrl}
 
-    Willkommen in der Fluxer-Community.
+    Willkommen in der RdChat-Community.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 report_resolved:
   subject: Deine Meldung wurde geprüft
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Antwort vom Safety-Team:
     {publicComment}
 
-    Danke, dass du dabei hilfst, Fluxer für alle sicher zu halten. Wir nehmen alle Meldungen ernst und schätzen deinen Beitrag zur Community.
+    Danke, dass du dabei hilfst, RdChat für alle sicher zu halten. Wir nehmen alle Meldungen ernst und schätzen deinen Beitrag zur Community.
 
     Wenn du Fragen oder Bedenken zu diesem Ergebnis hast, schreib bitte an safety@fluxer.app.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 scheduled_deletion_notification:
-  subject: Dein Fluxer-Konto wird dauerhaft gelöscht
+  subject: Dein RdChat-Konto wird dauerhaft gelöscht
   body: |-
     Hallo {username},
 
-    Dein Fluxer-Konto wurde zur dauerhaften Löschung vorgemerkt.
+    Dein RdChat-Konto wurde zur dauerhaften Löschung vorgemerkt.
 
     Geplantes Löschdatum: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -339,31 +339,31 @@ scheduled_deletion_notification:
 
     Wenn du glaubst, dass diese Entscheidung falsch ist, kannst du Einspruch einlegen: Schicke eine E-Mail an appeals@fluxer.app, und zwar von dieser E-Mail-Adresse aus.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team
 self_deletion_scheduled:
-  subject: Die Löschung deines Fluxer-Kontos wurde geplant
+  subject: Die Löschung deines RdChat-Kontos wurde geplant
   body: |-
     Hallo {username},
 
-    Du hast die Löschung deines Fluxer-Kontos angefordert. Dein Konto wird dauerhaft gelöscht am:
+    Du hast die Löschung deines RdChat-Kontos angefordert. Dein Konto wird dauerhaft gelöscht am:
 
     {deletionDate, date, full} um {deletionDate, time, short}
 
     Wenn du das nicht angefordert hast, melde dich in deinem Konto an, um die Löschung abzubrechen. Wir empfehlen außerdem, dein Passwort zu ändern, um dein Konto abzusichern.
 
-    – Dein Fluxer-Team
+    – Dein RdChat-Team
 unban_notification:
-  subject: Deine Fluxer-Sperre wurde aufgehoben
+  subject: Deine RdChat-Sperre wurde aufgehoben
   body: |-
     Hallo {username},
 
-    Gute Nachrichten: Die Sperre deines Fluxer-Kontos wurde aufgehoben.
+    Gute Nachrichten: Die Sperre deines RdChat-Kontos wurde aufgehoben.
 
     {reason, select,
       null {}
       other {Grund: {reason}}
     }
 
-    Du kannst dich jetzt wieder anmelden und Fluxer ganz normal weiter nutzen.
+    Du kannst dich jetzt wieder anmelden und RdChat ganz normal weiter nutzen.
 
-    – Dein Fluxer-Safety-Team
+    – Dein RdChat-Safety-Team

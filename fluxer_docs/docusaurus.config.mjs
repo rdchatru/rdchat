@@ -65,7 +65,7 @@ const config = {
 				},
 				{
 					href: 'https://web.rdchat.ru/channels/@me',
-					label: 'Open Fluxer',
+					label: 'Open RdChat',
 					position: 'right',
 				},
 			],

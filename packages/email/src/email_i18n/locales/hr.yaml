@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Tvoj Fluxer račun je privremeno onemogućen
+  subject: Tvoj RdChat račun je privremeno onemogućen
   body: |-
     Bok {username},
 
-    Tvoj Fluxer račun je privremeno onemogućen zbog sumnjive aktivnosti.
+    Tvoj RdChat račun je privremeno onemogućen zbog sumnjive aktivnosti.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Ako smatraš da je ovo greška, javi se našem timu za podršku.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 account_scheduled_deletion:
-  subject: Tvoj Fluxer račun bit će trajno obrisan
+  subject: Tvoj RdChat račun bit će trajno obrisan
   body: |-
     Bok {username},
 
-    Tvoj Fluxer račun zakazan je za trajno brisanje zbog kršenja naših uvjeta korištenja ili smjernica zajednice.
+    Tvoj RdChat račun zakazan je za trajno brisanje zbog kršenja naših uvjeta korištenja ili smjernica zajednice.
 
     Datum brisanja: {deletionDate, date, full} u {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - Jasno objasni zašto smatraš da je odluka pogrešna ili neopravdana
     - Priloži relevantne dokaze ili dodatni kontekst, ako je moguće
 
-    Član Fluxerovog tima za sigurnost pregledat će tvoju žalbu i može privremeno zaustaviti brisanje dok ne donesemo konačnu odluku.
+    Član RdChatovog tima za sigurnost pregledat će tvoju žalbu i može privremeno zaustaviti brisanje dok ne donesemo konačnu odluku.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 account_temp_banned:
-  subject: Tvoj Fluxer račun je privremeno suspendiran
+  subject: Tvoj RdChat račun je privremeno suspendiran
   body: |-
     Bok {username},
 
-    Tvoj Fluxer račun je privremeno suspendiran zbog kršenja naših uvjeta korištenja ili smjernica zajednice.
+    Tvoj RdChat račun je privremeno suspendiran zbog kršenja naših uvjeta korištenja ili smjernica zajednice.
 
     Trajanje: {durationHours, plural,
       one {# sat}
@@ -76,13 +76,13 @@ account_temp_banned:
 
     Ako smatraš da je ova odluka pogrešna ili neopravdana, možeš poslati žalbu na appeals@fluxer.app, i to s ove e-adrese. Jasno objasni zašto smatraš da je odluka pogrešna. Pregledat ćemo žalbu i javiti ti našu odluku.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 donation_confirmation:
-  subject: Hvala na donaciji za Fluxer
+  subject: Hvala na donaciji za RdChat
   body: |-
     Bok,
 
-    Hvala na donaciji za Fluxer! Tvoja {interval, select,
+    Hvala na donaciji za RdChat! Tvoja {interval, select,
       month {ponavljajuća donacija}
       year {ponavljajuća donacija}
       other {jednokratna donacija}
@@ -109,11 +109,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Tvoja podrška pomaže Fluxeru da radi. Hvala!
+    Tvoja podrška pomaže RdChatu da radi. Hvala!
 
-    – Fluxerov tim
+    – RdChatov tim
 donation_magic_link:
-  subject: Upravljaj svojim donacijama za Fluxer
+  subject: Upravljaj svojim donacijama za RdChat
   body: |-
     Bok,
 
@@ -127,13 +127,13 @@ donation_magic_link:
 
     Ako to nisi zatražio/la, slobodno ignoriraj ovu e-poštu.
 
-    – Fluxerov tim
+    – RdChatov tim
 dsa_report_verification:
   subject: Potvrdi svoju e-adresu za DSA prijavu
   body: |-
     Bok,
 
-    Upotrijebi kod ispod da pošalješ svoju prijavu u skladu s Aktom o digitalnim uslugama (DSA) na Fluxeru:
+    Upotrijebi kod ispod da pošalješ svoju prijavu u skladu s Aktom o digitalnim uslugama (DSA) na RdChatu:
 
     {code}
 
@@ -141,13 +141,13 @@ dsa_report_verification:
 
     Ako to nisi ti, slobodno ignoriraj ovu e-poruku.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 email_change_new:
-  subject: Potvrdi svoju novu Fluxer e-adresu
+  subject: Potvrdi svoju novu RdChat e-adresu
   body: |-
     Bok {username},
 
-    Upiši ovaj kod u aplikaciju da potvrdiš svoju novu Fluxer e-adresu:
+    Upiši ovaj kod u aplikaciju da potvrdiš svoju novu RdChat e-adresu:
 
     {code}
 
@@ -155,13 +155,13 @@ email_change_new:
 
     Ako to nisi ti, slobodno ignoriraj ovu e-poruku.
 
-    – Fluxerov tim
+    – RdChatov tim
 email_change_original:
-  subject: Potvrdi promjenu Fluxer e-adrese
+  subject: Potvrdi promjenu RdChat e-adrese
   body: |-
     Bok {username},
 
-    Dobili smo zahtjev za promjenu e-adrese na tvom Fluxer računu.
+    Dobili smo zahtjev za promjenu e-adrese na tvom RdChat računu.
 
     Da potvrdiš promjenu, upiši ovaj kod u aplikaciju:
 
@@ -171,13 +171,13 @@ email_change_original:
 
     Ako to nisi ti, odmah osiguraj svoj račun.
 
-    – Fluxerov tim
+    – RdChatov tim
 email_change_revert:
-  subject: Promijenjena je e-adresa tvog Fluxer računa
+  subject: Promijenjena je e-adresa tvog RdChat računa
   body: |-
     Bok {username},
 
-    E-adresa na tvom Fluxer računu promijenjena je u {newEmail}.
+    E-adresa na tvom RdChat računu promijenjena je u {newEmail}.
 
     Ako si ti napravio/la ovu promjenu, ne trebaš ništa poduzimati. Ako nisi, možeš poništiti promjenu i osigurati svoj račun putem poveznice:
 
@@ -185,21 +185,21 @@ email_change_revert:
 
     Time se vraća tvoja prethodna e-adresa i odjavljuješ se sa svih uređaja. Također se uklanjaju povezani brojevi telefona, isključuje se višefaktorska autentifikacija (MFA) i morat ćeš postaviti novu lozinku.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 email_verification:
-  subject: Potvrdi svoju Fluxer e-adresu
+  subject: Potvrdi svoju RdChat e-adresu
   body: |-
     Bok {username},
 
-    Potvrdi e-adresu za svoj Fluxer račun klikom na poveznicu ispod:
+    Potvrdi e-adresu za svoj RdChat račun klikom na poveznicu ispod:
 
     {verifyUrl}
 
-    Ako nisi pokušao/la otvoriti Fluxer račun, slobodno ignoriraj ovu e-poruku.
+    Ako nisi pokušao/la otvoriti RdChat račun, slobodno ignoriraj ovu e-poruku.
 
     Ova poveznica vrijedi 24 sata.
 
-    – Fluxerov tim
+    – RdChatov tim
 gift_chargeback_notification:
   subject: Uklonjene su pogodnosti iz tvog iskorištenog poklona
   body: |-
@@ -211,9 +211,9 @@ gift_chargeback_notification:
 
     Ako smatraš da je ovo greška, kontaktiraj naš tim za podršku i navedi sve detalje koje imaš o poklon-kodu i vremenu iskorištavanja.
 
-    – Fluxerov tim
+    – RdChatov tim
 harvest_completed:
-  subject: Tvoj izvoz podataka iz Fluxera spreman je za preuzimanje
+  subject: Tvoj izvoz podataka iz RdChata spreman je za preuzimanje
   body: |-
     Bok {username},
 
@@ -229,28 +229,28 @@ harvest_completed:
 
     Ako nisi zatražio/la ovaj izvoz, odmah promijeni lozinku i kontaktiraj naš tim za podršku.
 
-    – Fluxerov tim
+    – RdChatov tim
 inactivity_warning:
-  subject: Tvoj Fluxer račun bit će obrisan zbog neaktivnosti
+  subject: Tvoj RdChat račun bit će obrisan zbog neaktivnosti
   body: |-
     Bok {username},
 
-    Nismo zabilježili nikakvu aktivnost na tvom Fluxer računu od {lastActiveDate, date, full}.
+    Nismo zabilježili nikakvu aktivnost na tvom RdChat računu od {lastActiveDate, date, full}.
 
     Ako se ne prijaviš do {deletionDate, date, full} u {deletionDate, time, short}, tvoj račun bit će trajno obrisan zbog neaktivnosti.
 
     Prijavi se ovdje:
     {loginUrl}
 
-    Ako si Fluxer koristio/la nedavno, odmah kontaktiraj naš tim za podršku.
+    Ako si RdChat koristio/la nedavno, odmah kontaktiraj naš tim za podršku.
 
-    – Fluxerov tim
+    – RdChatov tim
 ip_authorization:
   subject: Potvrdi prijavu s nove IP adrese
   body: |-
     Bok {username},
 
-    Otkrili smo pokušaj prijave na tvoj Fluxer račun s nove IP adrese:
+    Otkrili smo pokušaj prijave na tvoj RdChat račun s nove IP adrese:
 
     IP adresa: {ipAddress}
     Lokacija: {location}
@@ -263,13 +263,13 @@ ip_authorization:
 
     Ova poveznica za potvrdu vrijedi 30 minuta.
 
-    – Fluxerov tim
+    – RdChatov tim
 password_change_verification:
-  subject: Potvrdi promjenu Fluxer lozinke
+  subject: Potvrdi promjenu RdChat lozinke
   body: |-
     Bok {username},
 
-    Dobili smo zahtjev za promjenu lozinke na tvom Fluxer računu.
+    Dobili smo zahtjev za promjenu lozinke na tvom RdChat računu.
 
     Da potvrdiš promjenu, upiši ovaj kod u aplikaciju:
 
@@ -279,13 +279,13 @@ password_change_verification:
 
     Ako to nisi ti, netko možda ima pristup tvom računu. Odmah promijeni lozinku i omogući dvofaktorsku autentifikaciju.
 
-    – Fluxerov tim
+    – RdChatov tim
 password_reset:
-  subject: Ponovno postavi svoju Fluxer lozinku
+  subject: Ponovno postavi svoju RdChat lozinku
   body: |-
     Bok {username},
 
-    Zatraženo je ponovno postavljanje lozinke za tvoj Fluxer račun. Koristi poveznicu ispod da postaviš novu lozinku:
+    Zatraženo je ponovno postavljanje lozinke za tvoj RdChat račun. Koristi poveznicu ispod da postaviš novu lozinku:
 
     {resetUrl}
 
@@ -293,22 +293,22 @@ password_reset:
 
     Ova poveznica vrijedi 1 sat.
 
-    – Fluxerov tim
+    – RdChatov tim
 registration_approved:
-  subject: Tvoja Fluxer registracija je odobrena
+  subject: Tvoja RdChat registracija je odobrena
   body: |-
     Bok {username},
 
-    Dobre vijesti: tvoja Fluxer registracija je odobrena.
+    Dobre vijesti: tvoja RdChat registracija je odobrena.
 
-    Sada se možeš prijaviti u Fluxer aplikaciju ovdje:
+    Sada se možeš prijaviti u RdChat aplikaciju ovdje:
     {channelsUrl}
 
-    Dobro došao/la u Fluxer zajednicu.
+    Dobro došao/la u RdChat zajednicu.
 
-    – Fluxerov tim
+    – RdChatov tim
 report_resolved:
-  subject: Tvoja Fluxer prijava je pregledana
+  subject: Tvoja RdChat prijava je pregledana
   body: |-
     Bok {username},
 
@@ -317,17 +317,17 @@ report_resolved:
     Odgovor tima za sigurnost:
     {publicComment}
 
-    Hvala što pomažeš da Fluxer bude sigurniji za sve. Sve prijave shvaćamo ozbiljno i cijenimo tvoj doprinos zajednici.
+    Hvala što pomažeš da RdChat bude sigurniji za sve. Sve prijave shvaćamo ozbiljno i cijenimo tvoj doprinos zajednici.
 
     Ako imaš pitanja ili nedoumice oko ishoda, javi se na safety@fluxer.app.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 scheduled_deletion_notification:
-  subject: Tvoj Fluxer račun bit će trajno obrisan
+  subject: Tvoj RdChat račun bit će trajno obrisan
   body: |-
     Bok {username},
 
-    Tvoj Fluxer račun zakazan je za trajno brisanje.
+    Tvoj RdChat račun zakazan je za trajno brisanje.
 
     Datum brisanja: {deletionDate, date, full} u {deletionDate, time, short}
 
@@ -340,31 +340,31 @@ scheduled_deletion_notification:
 
     Ako smatraš da je ova odluka pogrešna, možeš poslati žalbu na appeals@fluxer.app, i to s ove e-adrese.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost
 self_deletion_scheduled:
-  subject: Brisanje tvog Fluxer računa je zakazano
+  subject: Brisanje tvog RdChat računa je zakazano
   body: |-
     Bok {username},
 
-    Zatraženo je brisanje tvog Fluxer računa. Račun će biti trajno obrisan:
+    Zatraženo je brisanje tvog RdChat računa. Račun će biti trajno obrisan:
 
     {deletionDate, date, full} u {deletionDate, time, short}
 
     Ako to nisi ti zatražio/la, prijavi se na svoj račun kako bi otkazao/la brisanje. Također preporučujemo da promijeniš lozinku kako bi osigurao/la svoj račun.
 
-    – Fluxerov tim
+    – RdChatov tim
 unban_notification:
-  subject: Suspenzija tvog Fluxer računa je ukinuta
+  subject: Suspenzija tvog RdChat računa je ukinuta
   body: |-
     Bok {username},
 
-    Dobre vijesti: suspenzija tvog Fluxer računa je ukinuta.
+    Dobre vijesti: suspenzija tvog RdChat računa je ukinuta.
 
     {reason, select,
       null {}
       other {Razlog: {reason}}
     }
 
-    Sada se možeš ponovno prijaviti i nastaviti koristiti Fluxer.
+    Sada se možeš ponovno prijaviti i nastaviti koristiti RdChat.
 
-    – Fluxerov tim za sigurnost
+    – RdChatov tim za sigurnost

@@ -94,6 +94,7 @@ export class SystemDmExecutor {
 			...(job.registration_start != null && {registrationStart: job.registration_start}),
 			...(job.registration_end != null && {registrationEnd: job.registration_end}),
 			excludedGuildIds: this.convertExcludedGuildIds(job.excluded_guild_ids),
+			targetUserIds: this.convertTargetUserIds(job.target_user_ids),
 		};
 
 		const recipients = await collectSystemDmTargets(
@@ -164,6 +165,24 @@ export class SystemDmExecutor {
 			} catch (error) {
 				this.logger.warn('Failed to convert excluded guild ID', {
 					guildId: id,
+					error: error instanceof Error ? error.message : String(error),
+				});
+			}
+		}
+		return result;
+	}
+
+	private convertTargetUserIds(value?: ReadonlySet<string>): Set<UserID> {
+		const result = new Set<UserID>();
+		if (!value) {
+			return result;
+		}
+		for (const id of value) {
+			try {
+				result.add(createUserID(BigInt(id)));
+			} catch (error) {
+				this.logger.warn('Failed to convert target user ID', {
+					userId: id,
 					error: error instanceof Error ? error.message : String(error),
 				});
 			}

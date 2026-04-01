@@ -18,7 +18,7 @@
  */
 
 import type {AdminService} from '@fluxer/api/src/admin/AdminService';
-import {createGuildID, type GuildID, type UserID} from '@fluxer/api/src/BrandedTypes';
+import {createGuildID, createUserID, type GuildID, type UserID} from '@fluxer/api/src/BrandedTypes';
 import {requireAdminACL} from '@fluxer/api/src/middleware/AdminMiddleware';
 import {RateLimitMiddleware} from '@fluxer/api/src/middleware/RateLimitMiddleware';
 import {OpenAPI} from '@fluxer/api/src/middleware/ResponseTypeMiddleware';
@@ -39,6 +39,13 @@ function parseGuildIds(ids: Array<bigint> | undefined): Array<GuildID> {
 		return [];
 	}
 	return ids.map((id) => createGuildID(id));
+}
+
+function parseUserIds(ids: Array<bigint> | undefined): Array<UserID> {
+	if (!ids) {
+		return [];
+	}
+	return ids.map((id) => createUserID(id));
 }
 
 export function SystemDmAdminController(app: HonoApp) {
@@ -69,6 +76,7 @@ export function SystemDmAdminController(app: HonoApp) {
 					registrationStart: payload.registration_start ? new Date(payload.registration_start) : undefined,
 					registrationEnd: payload.registration_end ? new Date(payload.registration_end) : undefined,
 					excludedGuildIds: parseGuildIds(payload.excluded_guild_ids ?? []),
+					targetUserIds: parseUserIds(payload.target_user_ids ?? []),
 				},
 				adminUserId,
 				auditLogReason,

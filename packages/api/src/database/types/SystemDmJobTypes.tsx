@@ -29,6 +29,7 @@ export interface SystemDmJobRow {
 	registration_start: Date | null;
 	registration_end: Date | null;
 	excluded_guild_ids: ReadonlySet<string>;
+	target_user_ids: ReadonlySet<string>;
 	target_count: number;
 	sent_count: number;
 	failed_count: number;
@@ -49,6 +50,7 @@ export const SYSTEM_DM_JOB_COLUMNS = [
 	'registration_start',
 	'registration_end',
 	'excluded_guild_ids',
+	'target_user_ids',
 	'target_count',
 	'sent_count',
 	'failed_count',

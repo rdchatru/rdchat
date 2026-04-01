@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Fluxer hesabın geçici olarak devre dışı bırakıldı
+  subject: RdChat hesabın geçici olarak devre dışı bırakıldı
   body: |-
     Merhaba {username},
 
-    Şüpheli etkinlik tespit ettiğimiz için Fluxer hesabını geçici olarak devre dışı bıraktık.
+    Şüpheli etkinlik tespit ettiğimiz için RdChat hesabını geçici olarak devre dışı bıraktık.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Bunun bir hata olduğunu düşünüyorsan destek ekibimizle iletişime geç.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 account_scheduled_deletion:
-  subject: Fluxer hesabın kalıcı olarak silinecek
+  subject: RdChat hesabın kalıcı olarak silinecek
   body: |-
     Merhaba {username},
 
-    Fluxer hesabın, hizmet şartlarımızı veya topluluk kurallarımızı ihlal ettiğin için kalıcı olarak silinmek üzere planlandı.
+    RdChat hesabın, hizmet şartlarımızı veya topluluk kurallarımızı ihlal ettiğin için kalıcı olarak silinmek üzere planlandı.
 
     Planlanan silinme tarihi: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - Kararın neden hatalı veya haksız olduğunu net bir şekilde açıkla
     - Varsa ilgili kanıtları veya ek bağlamı paylaş
 
-    Fluxer Güvenlik Ekibinden bir üye itirazını inceleyecek ve nihai karar verilene kadar planlanan silme işlemini durdurabilir.
+    RdChat Güvenlik Ekibinden bir üye itirazını inceleyecek ve nihai karar verilene kadar planlanan silme işlemini durdurabilir.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 account_temp_banned:
-  subject: Fluxer hesabın geçici olarak askıya alındı
+  subject: RdChat hesabın geçici olarak askıya alındı
   body: |-
     Merhaba {username},
 
-    Fluxer hesabın, hizmet şartlarımızı veya topluluk kurallarımızı ihlal ettiğin için geçici olarak askıya alındı.
+    RdChat hesabın, hizmet şartlarımızı veya topluluk kurallarımızı ihlal ettiğin için geçici olarak askıya alındı.
 
     Süre: {durationHours, plural,
       =1 {1 saat}
@@ -75,13 +75,13 @@ account_temp_banned:
 
     Bu yaptırım kararının hatalı veya haksız olduğunu düşünüyorsan, bu e-posta adresinden appeals@fluxer.app adresine itiraz edebilirsin. Lütfen kararın neden hatalı olduğunu açıkça yaz. İtirazını inceleyip kararımızı sana bildireceğiz.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 donation_confirmation:
-  subject: Fluxer bağışınız için teşekkürler
+  subject: RdChat bağışınız için teşekkürler
   body: |-
     Merhaba,
 
-    Fluxer'a bağışınız için teşekkürler! {interval, select,
+    RdChat'a bağışınız için teşekkürler! {interval, select,
       month {Düzenli bağışınız}
       year {Düzenli bağışınız}
       other {Tek seferlik bağışınız}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Desteğiniz Fluxer'in çalışmasını sağlıyor. Teşekkürler!
+    Desteğiniz RdChat'in çalışmasını sağlıyor. Teşekkürler!
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 donation_magic_link:
-  subject: Fluxer bağışlarını yönet
+  subject: RdChat bağışlarını yönet
   body: |-
     Merhaba,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Bunu sen istemediysen bu e-postayı yok sayabilirsin.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 dsa_report_verification:
   subject: DSA bildirimi için e-posta adresini doğrula
   body: |-
     Merhaba,
 
-    Fluxer'da Dijital Hizmetler Yasası (DSA) kapsamında bildirim gönderebilmek için aşağıdaki doğrulama kodunu kullan:
+    RdChat'da Dijital Hizmetler Yasası (DSA) kapsamında bildirim gönderebilmek için aşağıdaki doğrulama kodunu kullan:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Bunu sen istemediysen bu e-postayı yok sayabilirsin.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 email_change_new:
-  subject: Yeni Fluxer e-posta adresini doğrula
+  subject: Yeni RdChat e-posta adresini doğrula
   body: |-
     Merhaba {username},
 
-    Yeni Fluxer e-posta adresini doğrulamak için uygulamada bu kodu gir:
+    Yeni RdChat e-posta adresini doğrulamak için uygulamada bu kodu gir:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Bunu sen istemediysen bu e-postayı yok sayabilirsin.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 email_change_original:
-  subject: Fluxer e-posta değişikliğini onayla
+  subject: RdChat e-posta değişikliğini onayla
   body: |-
     Merhaba {username},
 
-    Fluxer hesabındaki e-posta adresini değiştirmek için bir istek aldık.
+    RdChat hesabındaki e-posta adresini değiştirmek için bir istek aldık.
 
     Bu değişikliği onaylamak için uygulamada şu kodu gir:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Bunu sen istemediysen hesabını hemen güvene al.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 email_change_revert:
-  subject: Fluxer e-posta adresin değiştirildi
+  subject: RdChat e-posta adresin değiştirildi
   body: |-
     Merhaba {username},
 
-    Fluxer hesabının e-posta adresi {newEmail} olarak değiştirildi.
+    RdChat hesabının e-posta adresi {newEmail} olarak değiştirildi.
 
     Bu değişikliği sen yaptıysan bir şey yapmana gerek yok. Yapmadıysan, aşağıdaki bağlantıyı kullanarak değişikliği geri alabilir ve hesabını güvene alabilirsin:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Bu işlem önceki e-posta adresini geri yükler, seni tüm cihazlardan çıkış yaptırır, bağlı telefon numaralarını kaldırır, çok faktörlü kimlik doğrulamayı (MFA) devre dışı bırakır ve yeni bir şifre belirlemeni zorunlu kılar.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 email_verification:
-  subject: Fluxer e-posta adresini doğrula
+  subject: RdChat e-posta adresini doğrula
   body: |-
     Merhaba {username},
 
-    Fluxer hesabının e-posta adresini doğrulamak için aşağıdaki bağlantıya tıkla:
+    RdChat hesabının e-posta adresini doğrulamak için aşağıdaki bağlantıya tıkla:
 
     {verifyUrl}
 
-    Fluxer hesabını sen açmadıysan bu e-postayı güvenle yok sayabilirsin.
+    RdChat hesabını sen açmadıysan bu e-postayı güvenle yok sayabilirsin.
 
     Bu bağlantı 24 saat boyunca geçerlidir.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 gift_chargeback_notification:
   subject: Hediye kodundan kazandığın avantajlar kaldırıldı
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Bunun bir hata olduğunu düşünüyorsan, destek ekibimizle iletişime geç ve hediye kodu ile ne zaman kullandığına dair elindeki tüm detayları paylaş.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 harvest_completed:
-  subject: Fluxer veri dışa aktarımın indirilmeye hazır
+  subject: RdChat veri dışa aktarımın indirilmeye hazır
   body: |-
     Merhaba {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Bu dışa aktarımı sen istemediysen şifreni hemen değiştir ve destek ekibimizle iletişime geç.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 inactivity_warning:
-  subject: Hareketsizlik nedeniyle Fluxer hesabın silinecek
+  subject: Hareketsizlik nedeniyle RdChat hesabın silinecek
   body: |-
     Merhaba {username},
 
-    {lastActiveDate, date, full} tarihinden beri Fluxer hesabında herhangi bir etkinlik görmedik.
+    {lastActiveDate, date, full} tarihinden beri RdChat hesabında herhangi bir etkinlik görmedik.
 
     {deletionDate, date, full} tarihinde {deletionDate, time, short} saatine kadar giriş yapmazsan, hesabın hareketsizlik nedeniyle kalıcı olarak silinecek.
 
     Buradan giriş yap:
     {loginUrl}
 
-    Fluxer'i yakın zamanda kullandıysan, hemen destek ekibimizle iletişime geç.
+    RdChat'i yakın zamanda kullandıysan, hemen destek ekibimizle iletişime geç.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 ip_authorization:
   subject: Yeni bir IP adresinden girişi onayla
   body: |-
     Merhaba {username},
 
-    Fluxer hesabına yeni bir IP adresinden giriş denemesi tespit ettik:
+    RdChat hesabına yeni bir IP adresinden giriş denemesi tespit ettik:
 
     IP adresi: {ipAddress}
     Konum: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Bu onay bağlantısı 30 dakika boyunca geçerlidir.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 password_change_verification:
-  subject: Fluxer şifre değişikliğini onayla
+  subject: RdChat şifre değişikliğini onayla
   body: |-
     Merhaba {username},
 
-    Fluxer hesabındaki şifreyi değiştirmek için bir istek aldık.
+    RdChat hesabındaki şifreyi değiştirmek için bir istek aldık.
 
     Bu değişikliği onaylamak için uygulamada şu kodu gir:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Bunu sen istemediysen, birisi hesabına erişmiş olabilir. Hemen şifreni değiştir ve iki faktörlü kimlik doğrulamayı etkinleştir.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 password_reset:
-  subject: Fluxer şifreni sıfırla
+  subject: RdChat şifreni sıfırla
   body: |-
     Merhaba {username},
 
-    Fluxer şifreni sıfırlamak için bir istekte bulundun. Yeni bir şifre belirlemek için aşağıdaki bağlantıyı kullan:
+    RdChat şifreni sıfırlamak için bir istekte bulundun. Yeni bir şifre belirlemek için aşağıdaki bağlantıyı kullan:
 
     {resetUrl}
 
@@ -292,41 +292,41 @@ password_reset:
 
     Bu bağlantı 1 saat boyunca geçerlidir.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 registration_approved:
-  subject: Fluxer kaydın onaylandı
+  subject: RdChat kaydın onaylandı
   body: |-
     Merhaba {username},
 
-    Güzel haber: Fluxer kaydın onaylandı.
+    Güzel haber: RdChat kaydın onaylandı.
 
-    Artık Fluxer uygulamasına şu adresten giriş yapabilirsin:
+    Artık RdChat uygulamasına şu adresten giriş yapabilirsin:
     {channelsUrl}
 
-    Fluxer topluluğuna hoş geldin.
+    RdChat topluluğuna hoş geldin.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 report_resolved:
-  subject: Fluxer bildirimin değerlendirildi
+  subject: RdChat bildirimin değerlendirildi
   body: |-
     Merhaba {username},
 
-    Bildirimin (ID: {reportId}) Fluxer Güvenlik Ekibi tarafından değerlendirildi.
+    Bildirimin (ID: {reportId}) RdChat Güvenlik Ekibi tarafından değerlendirildi.
 
     Güvenlik ekibinin yanıtı:
     {publicComment}
 
-    Fluxer'i herkes için güvenli tutmamıza yardımcı olduğun için teşekkürler. Tüm bildirimleri ciddiye alıyoruz ve topluluğa yaptığın katkıyı takdir ediyoruz.
+    RdChat'i herkes için güvenli tutmamıza yardımcı olduğun için teşekkürler. Tüm bildirimleri ciddiye alıyoruz ve topluluğa yaptığın katkıyı takdir ediyoruz.
 
     Bu sonuç hakkında soruların ya da endişelerin varsa safety@fluxer.app adresinden bize ulaş.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 scheduled_deletion_notification:
-  subject: Fluxer hesabın kalıcı olarak silinecek
+  subject: RdChat hesabın kalıcı olarak silinecek
   body: |-
     Merhaba {username},
 
-    Fluxer hesabın kalıcı olarak silinmek üzere planlandı.
+    RdChat hesabın kalıcı olarak silinmek üzere planlandı.
 
     Planlanan silinme tarihi: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -339,31 +339,31 @@ scheduled_deletion_notification:
 
     Bu yaptırım kararının hatalı olduğunu düşünüyorsan, bu e-posta adresinden appeals@fluxer.app adresine itiraz edebilirsin.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi
 self_deletion_scheduled:
-  subject: Fluxer hesabının silinmesi planlandı
+  subject: RdChat hesabının silinmesi planlandı
   body: |-
     Merhaba {username},
 
-    Fluxer hesabını silmek istediğini belirttin. Hesabın şu tarihte kalıcı olarak silinecek:
+    RdChat hesabını silmek istediğini belirttin. Hesabın şu tarihte kalıcı olarak silinecek:
 
     {deletionDate, date, full} tarihinde {deletionDate, time, short} saatinde
 
     Bunu sen istemediysen, silme işlemini iptal etmek için hesabına giriş yap. Hesabını güvende tutmak için şifreni değiştirmeni de öneririz.
 
-    – Fluxer Ekibi
+    – RdChat Ekibi
 unban_notification:
-  subject: Fluxer hesabının askısı kaldırıldı
+  subject: RdChat hesabının askısı kaldırıldı
   body: |-
     Merhaba {username},
 
-    Güzel haber: Fluxer hesabının askısı kaldırıldı.
+    Güzel haber: RdChat hesabının askısı kaldırıldı.
 
     {reason, select,
       null {}
       other {Neden: {reason}}
     }
 
-    Artık hesabına tekrar giriş yapıp Fluxer'i kullanmaya devam edebilirsin.
+    Artık hesabına tekrar giriş yapıp RdChat'i kullanmaya devam edebilirsin.
 
-    – Fluxer Güvenlik Ekibi
+    – RdChat Güvenlik Ekibi

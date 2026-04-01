@@ -343,6 +343,7 @@ export class AdminService {
 			registrationStart?: Date;
 			registrationEnd?: Date;
 			excludedGuildIds: Array<GuildID>;
+			targetUserIds: Array<UserID>;
 		},
 		adminUserId: UserID,
 		auditLogReason: string | null,

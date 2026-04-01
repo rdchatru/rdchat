@@ -421,6 +421,7 @@ export const CreateSystemDmJobRequest = z.object({
 	registration_start: z.string().nullish().optional().describe('Only target users registered after this date'),
 	registration_end: z.string().nullish().optional().describe('Only target users registered before this date'),
 	excluded_guild_ids: z.array(SnowflakeType).max(100).optional().describe('Guild IDs whose members should be excluded'),
+	target_user_ids: z.array(SnowflakeType).max(1000).optional().describe('Specific user IDs to target'),
 });
 
 export type CreateSystemDmJobRequest = z.infer<typeof CreateSystemDmJobRequest>;
@@ -457,6 +458,7 @@ export const SystemDmJobResponse = z.object({
 	registration_start: z.string().nullish().describe('Registration date filter start'),
 	registration_end: z.string().nullish().describe('Registration date filter end'),
 	excluded_guild_ids: z.array(z.string()).max(100).describe('List of excluded guild IDs'),
+	target_user_ids: z.array(z.string()).max(1000).describe('List of specific target user IDs'),
 	last_error: z.string().nullish().describe('Last error message if the job failed'),
 });
 

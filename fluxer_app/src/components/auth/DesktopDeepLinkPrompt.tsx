@@ -115,7 +115,7 @@ export const DesktopDeepLinkPrompt: React.FC<DesktopDeepLinkPromptProps> = ({cod
 			<Button variant="primary" onClick={handleOpen} className={styles.cta} submitting={isLoading}>
 				<ArrowSquareOutIcon size={18} weight="fill" />
 				<span>
-					<Trans>Open Fluxer</Trans>
+					<Trans>Open RdChat</Trans>
 				</span>
 			</Button>
 		</div>

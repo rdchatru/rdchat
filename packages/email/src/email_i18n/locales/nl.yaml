@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: Je Fluxer-account is tijdelijk uitgeschakeld
+  subject: Je RdChat-account is tijdelijk uitgeschakeld
   body: |-
     Hoi {username},
 
-    We hebben je Fluxer-account tijdelijk uitgeschakeld omdat we verdachte activiteit hebben vastgesteld.
+    We hebben je RdChat-account tijdelijk uitgeschakeld omdat we verdachte activiteit hebben vastgesteld.
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     Denk je dat dit een vergissing is? Neem dan contact op met onze support.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 account_scheduled_deletion:
-  subject: Je Fluxer-account wordt definitief verwijderd
+  subject: Je RdChat-account wordt definitief verwijderd
   body: |-
     Hoi {username},
 
-    Je Fluxer-account staat gepland voor definitieve verwijdering omdat je onze gebruiksvoorwaarden of communityrichtlijnen hebt geschonden.
+    Je RdChat-account staat gepland voor definitieve verwijdering omdat je onze gebruiksvoorwaarden of communityrichtlijnen hebt geschonden.
 
     Geplande verwijderdatum: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - Waarom je vindt dat de beslissing onjuist of onterecht is
     - Relevante context of bewijs, als je dat hebt
 
-    Een medewerker van het Fluxer Safety-team beoordeelt je bezwaar en kan de geplande verwijdering pauzeren totdat er een definitieve beslissing is genomen.
+    Een medewerker van het RdChat Safety-team beoordeelt je bezwaar en kan de geplande verwijdering pauzeren totdat er een definitieve beslissing is genomen.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 account_temp_banned:
-  subject: Je Fluxer-account is tijdelijk geschorst
+  subject: Je RdChat-account is tijdelijk geschorst
   body: |-
     Hoi {username},
 
-    Je Fluxer-account is tijdelijk geschorst omdat je onze gebruiksvoorwaarden of communityrichtlijnen hebt geschonden.
+    Je RdChat-account is tijdelijk geschorst omdat je onze gebruiksvoorwaarden of communityrichtlijnen hebt geschonden.
 
     Duur: {durationHours, plural,
       =1 {1 uur}
@@ -75,13 +75,13 @@ account_temp_banned:
 
     Denk je dat deze beslissing onjuist of onterecht is? Dan kun je bezwaar indienen via appeals@fluxer.app, en gebruik daarbij dit e-mailadres. Leg duidelijk uit waarom je vindt dat de beslissing niet klopt. We bekijken je bezwaar en laten je weten wat we besluiten.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 donation_confirmation:
-  subject: Bedankt voor je donatie aan Fluxer
+  subject: Bedankt voor je donatie aan RdChat
   body: |-
     Hallo,
 
-    Bedankt voor je donatie aan Fluxer! Je {interval, select,
+    Bedankt voor je donatie aan RdChat! Je {interval, select,
       month {terugkerende donatie}
       year {terugkerende donatie}
       other {eenmalige donatie}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    Jouw steun helpt om Fluxer draaiende te houden. Bedankt!
+    Jouw steun helpt om RdChat draaiende te houden. Bedankt!
 
-    – Fluxer-team
+    – RdChat-team
 donation_magic_link:
-  subject: Beheer je Fluxer-donaties
+  subject: Beheer je RdChat-donaties
   body: |-
     Hallo,
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     Heb je deze link niet aangevraagd? Dan kun je deze e-mail gewoon negeren.
 
-    – Fluxer-team
+    – RdChat-team
 dsa_report_verification:
   subject: Bevestig je e-mailadres voor een DSA-melding
   body: |-
     Hoi,
 
-    Gebruik de code hieronder om je melding onder de Digital Services Act (DSA) bij Fluxer in te dienen:
+    Gebruik de code hieronder om je melding onder de Digital Services Act (DSA) bij RdChat in te dienen:
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     Heb je dit niet aangevraagd? Dan kun je deze e-mail negeren.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 email_change_new:
-  subject: Bevestig je nieuwe Fluxer-e-mailadres
+  subject: Bevestig je nieuwe RdChat-e-mailadres
   body: |-
     Hoi {username},
 
-    Vul deze code in de app in om je nieuwe Fluxer-e-mailadres te bevestigen:
+    Vul deze code in de app in om je nieuwe RdChat-e-mailadres te bevestigen:
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     Heb je dit niet aangevraagd? Dan kun je deze e-mail negeren.
 
-    – Fluxer-team
+    – RdChat-team
 email_change_original:
-  subject: Bevestig de wijziging van je Fluxer-e-mailadres
+  subject: Bevestig de wijziging van je RdChat-e-mailadres
   body: |-
     Hoi {username},
 
-    We hebben een verzoek ontvangen om het e-mailadres van je Fluxer-account te wijzigen.
+    We hebben een verzoek ontvangen om het e-mailadres van je RdChat-account te wijzigen.
 
     Om deze wijziging te bevestigen, voer je deze code in de app in:
 
@@ -170,13 +170,13 @@ email_change_original:
 
     Heb je dit niet aangevraagd? Beveilig je account dan meteen.
 
-    – Fluxer-team
+    – RdChat-team
 email_change_revert:
-  subject: Je Fluxer-e-mailadres is gewijzigd
+  subject: Je RdChat-e-mailadres is gewijzigd
   body: |-
     Hoi {username},
 
-    Het e-mailadres van je Fluxer-account is gewijzigd naar {newEmail}.
+    Het e-mailadres van je RdChat-account is gewijzigd naar {newEmail}.
 
     Heb jij dit gedaan? Dan hoef je niets te doen. Was jij dit niet? Dan kun je de wijziging terugdraaien en je account beveiligen via deze link:
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     Daarmee herstellen we je vorige e-mailadres, word je overal uitgelogd, verwijderen we gekoppelde telefoonnummers, zetten we MFA uit en moet je een nieuw wachtwoord instellen.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 email_verification:
-  subject: Bevestig je Fluxer-e-mailadres
+  subject: Bevestig je RdChat-e-mailadres
   body: |-
     Hoi {username},
 
-    Bevestig het e-mailadres van je Fluxer-account door op de link hieronder te klikken:
+    Bevestig het e-mailadres van je RdChat-account door op de link hieronder te klikken:
 
     {verifyUrl}
 
-    Heb je geen Fluxer-account aangemaakt? Dan kun je deze e-mail gewoon negeren.
+    Heb je geen RdChat-account aangemaakt? Dan kun je deze e-mail gewoon negeren.
 
     Deze link is 24 uur geldig.
 
-    – Fluxer-team
+    – RdChat-team
 gift_chargeback_notification:
   subject: De voordelen van je ingewisselde cadeau zijn verwijderd
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     Denk je dat dit een vergissing is? Neem dan contact op met onze support en vermeld alle details die je hebt over de cadeaucode en wanneer je die hebt ingewisseld.
 
-    – Fluxer-team
+    – RdChat-team
 harvest_completed:
-  subject: Je Fluxer-data-export staat klaar om te downloaden
+  subject: Je RdChat-data-export staat klaar om te downloaden
   body: |-
     Hoi {username},
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     Heb je deze export niet aangevraagd? Wijzig dan meteen je wachtwoord en neem contact op met onze support.
 
-    – Fluxer-team
+    – RdChat-team
 inactivity_warning:
-  subject: Je Fluxer-account wordt verwijderd vanwege inactiviteit
+  subject: Je RdChat-account wordt verwijderd vanwege inactiviteit
   body: |-
     Hoi {username},
 
-    We hebben geen activiteit gezien op je Fluxer-account sinds {lastActiveDate, date, full}.
+    We hebben geen activiteit gezien op je RdChat-account sinds {lastActiveDate, date, full}.
 
     Als je niet uiterlijk op {deletionDate, date, full} om {deletionDate, time, short} inlogt, wordt je account definitief verwijderd vanwege inactiviteit.
 
     Log hier in:
     {loginUrl}
 
-    Heb je Fluxer onlangs nog gebruikt? Neem dan meteen contact op met onze support.
+    Heb je RdChat onlangs nog gebruikt? Neem dan meteen contact op met onze support.
 
-    – Fluxer-team
+    – RdChat-team
 ip_authorization:
   subject: Bevestig inloggen vanaf een nieuw IP-adres
   body: |-
     Hoi {username},
 
-    We hebben een poging gezien om in te loggen op je Fluxer-account vanaf een nieuw IP-adres:
+    We hebben een poging gezien om in te loggen op je RdChat-account vanaf een nieuw IP-adres:
 
     IP-adres: {ipAddress}
     Locatie: {location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     Deze bevestigingslink is 30 minuten geldig.
 
-    – Fluxer-team
+    – RdChat-team
 password_change_verification:
-  subject: Bevestig de wijziging van je Fluxer-wachtwoord
+  subject: Bevestig de wijziging van je RdChat-wachtwoord
   body: |-
     Hoi {username},
 
-    We hebben een verzoek ontvangen om het wachtwoord van je Fluxer-account te wijzigen.
+    We hebben een verzoek ontvangen om het wachtwoord van je RdChat-account te wijzigen.
 
     Om deze wijziging te bevestigen, voer je deze code in de app in:
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     Heb je dit niet aangevraagd? Dan heeft iemand mogelijk toegang tot je account. Wijzig je wachtwoord onmiddellijk en schakel tweefactorauthenticatie in.
 
-    – Fluxer-team
+    – RdChat-team
 password_reset:
-  subject: Stel je Fluxer-wachtwoord opnieuw in
+  subject: Stel je RdChat-wachtwoord opnieuw in
   body: |-
     Hoi {username},
 
-    Je hebt gevraagd om je Fluxer-wachtwoord opnieuw in te stellen. Gebruik de link hieronder om een nieuw wachtwoord te kiezen:
+    Je hebt gevraagd om je RdChat-wachtwoord opnieuw in te stellen. Gebruik de link hieronder om een nieuw wachtwoord te kiezen:
 
     {resetUrl}
 
@@ -292,20 +292,20 @@ password_reset:
 
     Deze link is 1 uur geldig.
 
-    – Fluxer-team
+    – RdChat-team
 registration_approved:
-  subject: Je Fluxer-registratie is goedgekeurd
+  subject: Je RdChat-registratie is goedgekeurd
   body: |-
     Hoi {username},
 
-    Goed nieuws: je Fluxer-registratie is goedgekeurd.
+    Goed nieuws: je RdChat-registratie is goedgekeurd.
 
-    Je kunt nu inloggen in de Fluxer-app via:
+    Je kunt nu inloggen in de RdChat-app via:
     {channelsUrl}
 
-    Welkom bij de Fluxer-community.
+    Welkom bij de RdChat-community.
 
-    – Fluxer-team
+    – RdChat-team
 report_resolved:
   subject: Je melding is beoordeeld
   body: |-
@@ -316,17 +316,17 @@ report_resolved:
     Reactie van het Safety-team:
     {publicComment}
 
-    Bedankt dat je helpt om Fluxer veilig te houden voor iedereen. We nemen alle meldingen serieus en waarderen je bijdrage aan de community.
+    Bedankt dat je helpt om RdChat veilig te houden voor iedereen. We nemen alle meldingen serieus en waarderen je bijdrage aan de community.
 
     Heb je vragen of zorgen over deze uitkomst? Neem dan contact op via safety@fluxer.app.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 scheduled_deletion_notification:
-  subject: Je Fluxer-account wordt definitief verwijderd
+  subject: Je RdChat-account wordt definitief verwijderd
   body: |-
     Hoi {username},
 
-    Je Fluxer-account staat gepland voor definitieve verwijdering.
+    Je RdChat-account staat gepland voor definitieve verwijdering.
 
     Geplande verwijderdatum: {deletionDate, date, full} {deletionDate, time, short}
 
@@ -339,31 +339,31 @@ scheduled_deletion_notification:
 
     Denk je dat deze beslissing onjuist is? Dan kun je bezwaar indienen via appeals@fluxer.app, en gebruik daarbij dit e-mailadres.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team
 self_deletion_scheduled:
-  subject: De verwijdering van je Fluxer-account staat gepland
+  subject: De verwijdering van je RdChat-account staat gepland
   body: |-
     Hoi {username},
 
-    Je hebt gevraagd om je Fluxer-account te verwijderen. Je account wordt definitief verwijderd op:
+    Je hebt gevraagd om je RdChat-account te verwijderen. Je account wordt definitief verwijderd op:
 
     {deletionDate, date, full} om {deletionDate, time, short}
 
     Heb je dit niet aangevraagd? Log dan in op je account om de verwijdering te annuleren. We raden ook aan om je wachtwoord te wijzigen om je account te beveiligen.
 
-    – Fluxer-team
+    – RdChat-team
 unban_notification:
-  subject: De schorsing van je Fluxer-account is opgeheven
+  subject: De schorsing van je RdChat-account is opgeheven
   body: |-
     Hoi {username},
 
-    Goed nieuws: de schorsing van je Fluxer-account is opgeheven.
+    Goed nieuws: de schorsing van je RdChat-account is opgeheven.
 
     {reason, select,
       null {}
       other {Reden: {reason}}
     }
 
-    Je kunt nu weer inloggen en Fluxer blijven gebruiken.
+    Je kunt nu weer inloggen en RdChat blijven gebruiken.
 
-    – Fluxer Safety-team
+    – RdChat Safety-team

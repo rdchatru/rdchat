@@ -15545,7 +15545,7 @@ msgid "Open DMs Only"
 msgstr "Open DMs Only"
 
 #: src/components/auth/DesktopDeepLinkPrompt.tsx:118
-msgid "Open Fluxer"
+msgid "Open RdChat"
 msgstr "Open RdChat"
 
 #: src/components/channel/embeds/attachments/AttachmentGridItem.tsx:311

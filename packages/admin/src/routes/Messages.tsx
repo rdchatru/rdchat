@@ -186,6 +186,7 @@ export function createMessagesRoutes({config, assetVersion, requireAuth}: RouteF
 				const registrationStart = getOptionalString(formData, 'registration_start');
 				const registrationEnd = getOptionalString(formData, 'registration_end');
 				const excludedGuildIdsInput = getOptionalString(formData, 'excluded_guild_ids');
+				const targetUserIdsInput = getOptionalString(formData, 'target_user_ids');
 
 				if (!content) {
 					return redirectWithFlash(c, redirectUrl, {message: 'Message content is required', type: 'error'});
@@ -193,6 +194,12 @@ export function createMessagesRoutes({config, assetVersion, requireAuth}: RouteF
 
 				const excludedGuildIds = excludedGuildIdsInput
 					? excludedGuildIdsInput
+							.split(/[\n,]/)
+							.map((id) => id.trim())
+							.filter((id) => id !== '')
+					: [];
+				const targetUserIds = targetUserIdsInput
+					? targetUserIdsInput
 							.split(/[\n,]/)
 							.map((id) => id.trim())
 							.filter((id) => id !== '')
@@ -205,6 +212,7 @@ export function createMessagesRoutes({config, assetVersion, requireAuth}: RouteF
 					registrationStart || undefined,
 					registrationEnd || undefined,
 					excludedGuildIds,
+					targetUserIds,
 				);
 
 				return redirectWithFlash(c, redirectUrl, {

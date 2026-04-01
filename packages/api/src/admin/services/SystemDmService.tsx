@@ -19,7 +19,7 @@
 
 import type {SystemDmJobRepository} from '@fluxer/api/src/admin/repositories/SystemDmJobRepository';
 import type {AdminAuditService} from '@fluxer/api/src/admin/services/AdminAuditService';
-import {createGuildID, type GuildID, type UserID} from '@fluxer/api/src/BrandedTypes';
+import {createGuildID, createUserID, type GuildID, type UserID} from '@fluxer/api/src/BrandedTypes';
 import type {SystemDmJobRow} from '@fluxer/api/src/database/types/SystemDmJobTypes';
 import type {SnowflakeService} from '@fluxer/api/src/infrastructure/SnowflakeService';
 import {Logger} from '@fluxer/api/src/Logger';
@@ -39,6 +39,7 @@ interface CreateJobInput {
 	registrationStart?: Date;
 	registrationEnd?: Date;
 	excludedGuildIds: Array<GuildID>;
+	targetUserIds: Array<UserID>;
 }
 
 export class SystemDmService {
@@ -70,6 +71,7 @@ export class SystemDmService {
 				registrationStart: data.registrationStart,
 				registrationEnd: data.registrationEnd,
 				excludedGuildIds: new Set(data.excludedGuildIds),
+				targetUserIds: new Set(data.targetUserIds),
 			},
 		);
 
@@ -85,6 +87,7 @@ export class SystemDmService {
 			registration_start: data.registrationStart ?? null,
 			registration_end: data.registrationEnd ?? null,
 			excluded_guild_ids: new Set(data.excludedGuildIds.map((id) => id.toString())),
+			target_user_ids: new Set(data.targetUserIds.map((id) => id.toString())),
 			target_count: targets.length,
 			sent_count: 0,
 			failed_count: 0,
@@ -110,6 +113,9 @@ export class SystemDmService {
 		}
 		if (data.excludedGuildIds.length > 0) {
 			metadata.set('excluded_guild_ids', data.excludedGuildIds.map((id) => id.toString()).join(','));
+		}
+		if (data.targetUserIds.length > 0) {
+			metadata.set('target_user_ids', data.targetUserIds.map((id) => id.toString()).join(','));
 		}
 
 		await this.auditService.createAuditLog({
@@ -154,6 +160,7 @@ export class SystemDmService {
 			registrationStart: job.registration_start ?? undefined,
 			registrationEnd: job.registration_end ?? undefined,
 			excludedGuildIds: this.convertExcludedGuildIds(job.excluded_guild_ids),
+			targetUserIds: this.convertTargetUserIds(job.target_user_ids),
 		};
 		const targets = await collectSystemDmTargets(
 			{
@@ -181,6 +188,9 @@ export class SystemDmService {
 		]);
 		if (job.excluded_guild_ids && job.excluded_guild_ids.size > 0) {
 			metadata.set('excluded_guild_ids', Array.from(job.excluded_guild_ids).join(','));
+		}
+		if (job.target_user_ids && job.target_user_ids.size > 0) {
+			metadata.set('target_user_ids', Array.from(job.target_user_ids).join(','));
 		}
 
 		await this.auditService.createAuditLog({
@@ -221,6 +231,7 @@ export class SystemDmService {
 			registration_start: job.registration_start?.toISOString() ?? null,
 			registration_end: job.registration_end?.toISOString() ?? null,
 			excluded_guild_ids: Array.from(job.excluded_guild_ids ?? []),
+			target_user_ids: Array.from(job.target_user_ids ?? []),
 			last_error: job.last_error,
 		};
 	}
@@ -236,6 +247,23 @@ export class SystemDmService {
 				parsed.add(createGuildID(BigInt(value)));
 			} catch (error) {
 				Logger.debug({value, error}, 'Failed to parse excluded guild ID, skipping invalid value');
+			}
+		}
+
+		return parsed;
+	}
+
+	private convertTargetUserIds(values?: ReadonlySet<string>): Set<UserID> {
+		const parsed = new Set<UserID>();
+		if (!values) {
+			return parsed;
+		}
+
+		for (const value of values) {
+			try {
+				parsed.add(createUserID(BigInt(value)));
+			} catch (error) {
+				Logger.debug({value, error}, 'Failed to parse target user ID, skipping invalid value');
 			}
 		}
 

@@ -1,9 +1,9 @@
 account_disabled_suspicious:
-  subject: 你的 Fluxer 帳號已暫時停用
+  subject: 你的 RdChat 帳號已暫時停用
   body: |-
     你好 {username}，
 
-    我們偵測到可疑活動，因此已暫時停用你的 Fluxer 帳號。
+    我們偵測到可疑活動，因此已暫時停用你的 RdChat 帳號。
 
     {reason, select,
       null {}
@@ -18,13 +18,13 @@ account_disabled_suspicious:
 
     如果你認為這是誤判，請聯絡我們的支援團隊。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 account_scheduled_deletion:
-  subject: 你的 Fluxer 帳號將被永久刪除
+  subject: 你的 RdChat 帳號將被永久刪除
   body: |-
     你好 {username}，
 
-    由於違反服務條款或社群守則，你的 Fluxer 帳號已排程永久刪除。
+    由於違反服務條款或社群守則，你的 RdChat 帳號已排程永久刪除。
 
     預計刪除時間：{deletionDate, date, full} {deletionDate, time, short}
 
@@ -46,15 +46,15 @@ account_scheduled_deletion:
     - 清楚說明你為什麼認為這項處置不正確或缺乏依據
     - 任何相關證據或補充背景（如有）
 
-    Fluxer 安全團隊會審查你的申訴，並可能在做出最終決定前暫緩刪除流程。
+    RdChat 安全團隊會審查你的申訴，並可能在做出最終決定前暫緩刪除流程。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 account_temp_banned:
-  subject: 你的 Fluxer 帳號已暫時停權
+  subject: 你的 RdChat 帳號已暫時停權
   body: |-
     你好 {username}，
 
-    由於違反服務條款或社群守則，你的 Fluxer 帳號已暫時停權。
+    由於違反服務條款或社群守則，你的 RdChat 帳號已暫時停權。
 
     停權時間：{durationHours, plural,
       =1 {1 小時}
@@ -75,13 +75,13 @@ account_temp_banned:
 
     如果你認為這項處置不正確或缺乏依據，你可以使用這個電子郵件地址寄信至 appeals@fluxer.app 提出申訴。請清楚說明你認為判定有誤的原因，我們會審查並回覆處理結果。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 donation_confirmation:
-  subject: 感謝您對 Fluxer 的捐贈
+  subject: 感謝您對 RdChat 的捐贈
   body: |-
     你好，
 
-    感謝你對 Fluxer 的捐贈！你的{interval, select,
+    感謝你對 RdChat 的捐贈！你的{interval, select,
       month {定期捐贈}
       year {定期捐贈}
       other {單筆捐贈}
@@ -108,11 +108,11 @@ donation_confirmation:
 
     {manageUrl}
 
-    感謝你的支持，讓 Fluxer 得以運作！
+    感謝你的支持，讓 RdChat 得以運作！
 
-    – Fluxer 團隊
+    – RdChat 團隊
 donation_magic_link:
-  subject: 管理你的 Fluxer 捐獻
+  subject: 管理你的 RdChat 捐獻
   body: |-
     你好，
 
@@ -126,13 +126,13 @@ donation_magic_link:
 
     如果你沒有提出申請，可以放心忽略這封信。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 dsa_report_verification:
   subject: 驗證你的 DSA 檢舉電子郵件
   body: |-
     你好，
 
-    請使用以下驗證碼，在 Fluxer 提交你的《數位服務法》（DSA）檢舉：
+    請使用以下驗證碼，在 RdChat 提交你的《數位服務法》（DSA）檢舉：
 
     {code}
 
@@ -140,13 +140,13 @@ dsa_report_verification:
 
     如果你沒有提出申請，可以直接忽略這封信。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 email_change_new:
-  subject: 驗證你的新 Fluxer 電子郵件地址
+  subject: 驗證你的新 RdChat 電子郵件地址
   body: |-
     你好 {username}，
 
-    請在 App 內輸入這組驗證碼，以驗證你的新 Fluxer 電子郵件地址：
+    請在 App 內輸入這組驗證碼，以驗證你的新 RdChat 電子郵件地址：
 
     {code}
 
@@ -154,13 +154,13 @@ email_change_new:
 
     如果你沒有提出申請，可以直接忽略這封信。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 email_change_original:
-  subject: 確認變更你的 Fluxer 電子郵件地址
+  subject: 確認變更你的 RdChat 電子郵件地址
   body: |-
     你好 {username}，
 
-    我們收到一項申請，要求變更你 Fluxer 帳號的電子郵件地址。
+    我們收到一項申請，要求變更你 RdChat 帳號的電子郵件地址。
 
     要確認這項變更，請在 App 內輸入這組驗證碼：
 
@@ -170,13 +170,13 @@ email_change_original:
 
     如果你沒有提出申請，請立刻加強保護你的帳號。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 email_change_revert:
-  subject: 你的 Fluxer 電子郵件地址已變更
+  subject: 你的 RdChat 電子郵件地址已變更
   body: |-
     你好 {username}，
 
-    你的 Fluxer 帳號電子郵件地址已變更為 {newEmail}。
+    你的 RdChat 帳號電子郵件地址已變更為 {newEmail}。
 
     如果是你本人操作，不需要做任何事。如果不是你操作，你可以使用以下連結還原變更並保護帳號：
 
@@ -184,21 +184,21 @@ email_change_revert:
 
     這會將你的電子郵件地址還原為原本的，並讓你在所有裝置登出、移除已綁定的電話號碼、停用多重要素驗證（MFA），且需要你設定新密碼。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 email_verification:
-  subject: 驗證你的 Fluxer 電子郵件地址
+  subject: 驗證你的 RdChat 電子郵件地址
   body: |-
     你好 {username}，
 
-    請點擊下方連結，驗證你的 Fluxer 帳號電子郵件地址：
+    請點擊下方連結，驗證你的 RdChat 帳號電子郵件地址：
 
     {verifyUrl}
 
-    如果你沒有註冊 Fluxer 帳號，可以放心忽略這封信。
+    如果你沒有註冊 RdChat 帳號，可以放心忽略這封信。
 
     此連結將於 24 小時後失效。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 gift_chargeback_notification:
   subject: 你兌換的禮物權益已被移除
   body: |-
@@ -210,9 +210,9 @@ gift_chargeback_notification:
 
     如果你認為這是誤判，請聯絡我們的支援團隊，並提供你掌握的任何資訊，包括禮物兌換碼以及你兌換的時間。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 harvest_completed:
-  subject: 你的 Fluxer 資料匯出已可下載
+  subject: 你的 RdChat 資料匯出已可下載
   body: |-
     你好 {username}，
 
@@ -228,28 +228,28 @@ harvest_completed:
 
     如果你沒有申請這次匯出，請立即更改密碼並聯絡我們的支援團隊。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 inactivity_warning:
-  subject: 你的 Fluxer 帳號將因長時間未使用而被刪除
+  subject: 你的 RdChat 帳號將因長時間未使用而被刪除
   body: |-
     你好 {username}，
 
-    自 {lastActiveDate, date, full} 起，我們未在你的 Fluxer 帳號上看到任何活動。
+    自 {lastActiveDate, date, full} 起，我們未在你的 RdChat 帳號上看到任何活動。
 
     如果你未在 {deletionDate, date, full} {deletionDate, time, short} 前登入，你的帳號將因長時間未使用而被永久刪除。
 
     請在此登入：
     {loginUrl}
 
-    如果你最近有使用 Fluxer，請立即聯絡我們的支援團隊。
+    如果你最近有使用 RdChat，請立即聯絡我們的支援團隊。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 ip_authorization:
   subject: 授權來自新 IP 位址的登入
   body: |-
     你好 {username}，
 
-    我們偵測到有人嘗試從新的 IP 位址登入你的 Fluxer 帳號：
+    我們偵測到有人嘗試從新的 IP 位址登入你的 RdChat 帳號：
 
     IP 位址：{ipAddress}
     位置：{location}
@@ -262,13 +262,13 @@ ip_authorization:
 
     此授權連結將於 30 分鐘後失效。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 password_change_verification:
-  subject: 確認你的 Fluxer 密碼變更
+  subject: 確認你的 RdChat 密碼變更
   body: |-
     你好 {username}，
 
-    我們收到一項申請，要求變更你 Fluxer 帳號的密碼。
+    我們收到一項申請，要求變更你 RdChat 帳號的密碼。
 
     要確認這項變更，請在 App 內輸入這組驗證碼：
 
@@ -278,13 +278,13 @@ password_change_verification:
 
     如果你沒有提出申請，可能有其他人存取了你的帳號。請立即更改密碼並啟用雙重要素驗證。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 password_reset:
-  subject: 重設你的 Fluxer 密碼
+  subject: 重設你的 RdChat 密碼
   body: |-
     你好 {username}，
 
-    我們收到你提出的 Fluxer 密碼重設申請。請使用下方連結設定新密碼：
+    我們收到你提出的 RdChat 密碼重設申請。請使用下方連結設定新密碼：
 
     {resetUrl}
 
@@ -292,22 +292,22 @@ password_reset:
 
     此連結將於 1 小時後失效。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 registration_approved:
-  subject: 你的 Fluxer 註冊已通過審核
+  subject: 你的 RdChat 註冊已通過審核
   body: |-
     你好 {username}，
 
-    好消息：你的 Fluxer 註冊已通過審核。
+    好消息：你的 RdChat 註冊已通過審核。
 
-    你現在可以在這裡登入 Fluxer App：
+    你現在可以在這裡登入 RdChat App：
     {channelsUrl}
 
-    歡迎加入 Fluxer 社群。
+    歡迎加入 RdChat 社群。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 report_resolved:
-  subject: 你的 Fluxer 檢舉已完成審查
+  subject: 你的 RdChat 檢舉已完成審查
   body: |-
     你好 {username}，
 
@@ -316,17 +316,17 @@ report_resolved:
     安全團隊回覆：
     {publicComment}
 
-    感謝你一起讓 Fluxer 對所有人更安全。我們會認真看待每一則檢舉，也很感謝你為社群付出的心力。
+    感謝你一起讓 RdChat 對所有人更安全。我們會認真看待每一則檢舉，也很感謝你為社群付出的心力。
 
     如果你對此結果有任何問題或疑慮，請聯絡 safety@fluxer.app。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 scheduled_deletion_notification:
-  subject: 你的 Fluxer 帳號將被永久刪除
+  subject: 你的 RdChat 帳號將被永久刪除
   body: |-
     你好 {username}，
 
-    你的 Fluxer 帳號已排程永久刪除。
+    你的 RdChat 帳號已排程永久刪除。
 
     預計刪除時間：{deletionDate, date, full} {deletionDate, time, short}
 
@@ -339,31 +339,31 @@ scheduled_deletion_notification:
 
     如果你認為這項處置不正確，你可以使用這個電子郵件地址寄信至 appeals@fluxer.app 提出申訴。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊
 self_deletion_scheduled:
-  subject: 你的 Fluxer 帳號刪除已排程
+  subject: 你的 RdChat 帳號刪除已排程
   body: |-
     你好 {username}，
 
-    我們已收到你提出的 Fluxer 帳號刪除申請。你的帳號已排程在以下時間永久刪除：
+    我們已收到你提出的 RdChat 帳號刪除申請。你的帳號已排程在以下時間永久刪除：
 
     {deletionDate, date, full} {deletionDate, time, short}
 
     如果這不是你本人提出的申請，請登入你的帳號以取消刪除。我們也建議你更改密碼，以加強帳號安全。
 
-    – Fluxer 團隊
+    – RdChat 團隊
 unban_notification:
-  subject: 你的 Fluxer 帳號已解除停權
+  subject: 你的 RdChat 帳號已解除停權
   body: |-
     你好 {username}，
 
-    好消息！你的 Fluxer 帳號已解除停權。
+    好消息！你的 RdChat 帳號已解除停權。
 
     {reason, select,
       null {}
       other {原因：{reason}}
     }
 
-    你現在可以重新登入並繼續使用 Fluxer。
+    你現在可以重新登入並繼續使用 RdChat。
 
-    – Fluxer 安全團隊
+    – RdChat 安全團隊

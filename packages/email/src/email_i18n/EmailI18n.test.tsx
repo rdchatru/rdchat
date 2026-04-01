@@ -1,20 +1,20 @@
 /*
- * Copyright (C) 2026 Fluxer Contributors
+ * Copyright (C) 2026 RdChat Contributors
  *
- * This file is part of Fluxer.
+ * This file is part of RdChat.
  *
- * Fluxer is free software: you can redistribute it and/or modify
+ * RdChat is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * Fluxer is distributed in the hope that it will be useful,
+ * RdChat is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
  * GNU Affero General Public License for more details.
  *
  * You should have received a copy of the GNU Affero General Public License
- * along with Fluxer. If not, see <https://www.gnu.org/licenses/>.
+ * along with RdChat. If not, see <https://www.gnu.org/licenses/>.
  */
 
 import {getEmailTemplate, hasEmailLocale} from '@fluxer/email/src/email_i18n/EmailI18n';
@@ -47,7 +47,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Verify your Fluxer email address');
+			expect(template.subject).toBe('Verify your RdChat email address');
 			expect(template.body).toContain('Hello testuser');
 			expect(template.body).toContain('https://example.com/verify');
 		});
@@ -74,7 +74,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Reset your Fluxer password');
+			expect(template.subject).toBe('Reset your RdChat password');
 			expect(template.body).toContain('Hello john');
 			expect(template.body).toContain('https://example.com/reset');
 		});
@@ -87,7 +87,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Verify your Fluxer email address');
+			expect(template.subject).toBe('Verify your RdChat email address');
 			expect(template.body).toContain('Hello testuser');
 		});
 
@@ -110,7 +110,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Verify your Fluxer email address');
+			expect(template.subject).toBe('Verify your RdChat email address');
 		});
 
 		it('falls back to en-US for unsupported locales', () => {
@@ -121,7 +121,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Verify your Fluxer email address');
+			expect(template.subject).toBe('Verify your RdChat email address');
 			expect(consoleWarnSpy).toHaveBeenCalledWith(
 				'Unsupported locale for email translations, falling back to en-US: xx-XX',
 			);
@@ -149,7 +149,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Verify your Fluxer email address');
+			expect(template.subject).toBe('Verify your RdChat email address');
 			expect(consoleWarnSpy).not.toHaveBeenCalled();
 		});
 	});
@@ -167,7 +167,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Your Fluxer account has been temporarily suspended');
+			expect(template.subject).toBe('Your RdChat account has been temporarily suspended');
 			expect(template.body).toContain('24 hours');
 			expect(template.body).toContain('January');
 		});
@@ -273,7 +273,7 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template.subject).toBe('Your Fluxer account will be permanently deleted');
+			expect(template.subject).toBe('Your RdChat account will be permanently deleted');
 			expect(template.body).toContain('Requested by user');
 		});
 	});
@@ -294,8 +294,8 @@ describe('EmailI18n', () => {
 				}),
 			);
 
-			expect(template1.subject).toBe('Verify your Fluxer email address');
-			expect(template2.subject).toBe('Reset your Fluxer password');
+			expect(template1.subject).toBe('Verify your RdChat email address');
+			expect(template2.subject).toBe('Reset your RdChat password');
 		});
 
 		it('switches between locales correctly', () => {
