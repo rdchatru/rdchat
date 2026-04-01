@@ -5,6 +5,7 @@ import android.app.Activity
 import android.app.NotificationChannel
 import android.app.NotificationManager
 import android.app.PendingIntent
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import android.os.Build
@@ -94,7 +95,7 @@ class ListenerServiceArgs {
 		)
 	]
 )
-class RdchatMobilePlugin(activity: Activity) : Plugin(activity) {
+class RdchatMobilePlugin(private val activity: Activity) : Plugin(activity) {
 	override fun load(webView: android.webkit.WebView) {
 		super.load(webView)
 		ensureNotificationChannel()
@@ -202,7 +203,8 @@ class RdchatMobilePlugin(activity: Activity) : Plugin(activity) {
 			return
 		}
 
-		val manager = activity.getSystemService(NotificationManager::class.java) ?: return
+		val manager =
+			activity.getSystemService(Context.NOTIFICATION_SERVICE) as? NotificationManager ?: return
 		val existing = manager.getNotificationChannel(MESSAGE_CHANNEL_ID)
 		if (existing != null) {
 			return
