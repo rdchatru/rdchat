@@ -527,7 +527,7 @@ const NumericFieldDescription: FC<{description: string; limitKey: string}> = ({d
 	return (
 		<Caption variant="default" class="mb-2">
 			{description}
-			{bounds && ` (Allowed: ${bounds.min}\u2013${bounds.max})`}
+			{bounds && ` (Minimum: ${bounds.min})`}
 		</Caption>
 	);
 };
@@ -546,7 +546,6 @@ const NumericInput: FC<{limitKey: string; valueStr: string; placeholder: string}
 			value={valueStr}
 			placeholder={placeholder}
 			min={bounds ? String(bounds.min) : '0'}
-			max={bounds ? String(bounds.max) : undefined}
 			class="max-w-xs"
 		/>
 	);
