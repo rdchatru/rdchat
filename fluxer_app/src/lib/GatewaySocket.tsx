@@ -379,6 +379,39 @@ export class GatewaySocket extends EventEmitter<GatewaySocketEvents> {
 		return this.connectionState === GatewayState.Connecting;
 	}
 
+	recoverOnForeground(): void {
+		if (typeof navigator !== 'undefined' && 'onLine' in navigator && navigator.onLine === false) {
+			this.log.debug('Skipping foreground recovery while offline');
+			return;
+		}
+
+		if (this.isConnected()) {
+			this.log.debug('Skipping foreground recovery: gateway is already connected');
+			return;
+		}
+
+		if (this.connectionState === GatewayState.Connecting) {
+			this.log.debug('Skipping foreground recovery: gateway connection is already in progress');
+			return;
+		}
+
+		if (this.reconnectTimeoutId != null) {
+			clearTimeout(this.reconnectTimeoutId);
+			this.reconnectTimeoutId = null;
+		}
+
+		this.shouldReconnectImmediately = true;
+
+		if (this.connectionState === GatewayState.Connected) {
+			this.log.info('Foreground recovery detected a stale gateway socket, reconnecting immediately');
+			this.updateState(GatewayState.Reconnecting);
+		} else {
+			this.log.info('Attempting immediate gateway recovery on foreground');
+		}
+
+		this.connect();
+	}
+
 	private openSocket(): void {
 		this.teardownSocket();
 

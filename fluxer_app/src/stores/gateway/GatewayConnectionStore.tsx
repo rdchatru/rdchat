@@ -66,6 +66,9 @@ class GatewayConnectionStore {
 
 	private onlineListener: (() => void) | null = null;
 	private offlineListener: (() => void) | null = null;
+	private focusListener: (() => void) | null = null;
+	private visibilityListener: (() => void) | null = null;
+	private pageShowListener: (() => void) | null = null;
 	private netInfoUnsubscribe: (() => void) | null = null;
 
 	private generation: number = 0;
@@ -175,6 +178,21 @@ class GatewayConnectionStore {
 			window.removeEventListener('offline', this.offlineListener);
 			this.offlineListener = null;
 		}
+
+		if (this.focusListener) {
+			window.removeEventListener('focus', this.focusListener);
+			this.focusListener = null;
+		}
+
+		if (this.pageShowListener) {
+			window.removeEventListener('pageshow', this.pageShowListener);
+			this.pageShowListener = null;
+		}
+
+		if (this.visibilityListener) {
+			document.removeEventListener('visibilitychange', this.visibilityListener);
+			this.visibilityListener = null;
+		}
 	}
 
 	private cleanupSocket(): void {
@@ -256,8 +274,25 @@ class GatewayConnectionStore {
 			}
 			socket.handleNetworkStatusChange(false);
 		};
+		const recoverOnForeground = () => {
+			if (!isCurrent()) {
+				return;
+			}
+
+			if (document.visibilityState === 'hidden') {
+				return;
+			}
+
+			socket.recoverOnForeground();
+		};
+		this.focusListener = recoverOnForeground;
+		this.pageShowListener = recoverOnForeground;
+		this.visibilityListener = recoverOnForeground;
 		window.addEventListener('online', this.onlineListener);
 		window.addEventListener('offline', this.offlineListener);
+		window.addEventListener('focus', this.focusListener);
+		window.addEventListener('pageshow', this.pageShowListener);
+		document.addEventListener('visibilitychange', this.visibilityListener);
 
 		socket.on(
 			'stateChange',
@@ -296,6 +331,16 @@ class GatewayConnectionStore {
 					return;
 				}
 				this.handleConnectionResumed();
+			}),
+		);
+
+		socket.on(
+			'disconnect',
+			action((event: {code: number}) => {
+				if (!isCurrent()) {
+					return;
+				}
+				this.handleConnectionClosed(event.code);
 			}),
 		);
 
